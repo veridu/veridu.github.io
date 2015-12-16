@@ -1,0 +1,31 @@
+// overrides bootstrap's progress bars default styling
+
+.progress {
+
+	background: transparent;
+	box-shadow: none;
+	height: 46px;
+	margin-bottom: 14px;
+
+	.progress-bar {
+		background-color: white;
+ 		border-right: 2px solid $brand-primary;
+ 		padding: 12px;
+ 		padding-left: 8px;
+
+		> p {
+			
+			color: black;
+			text-align: left;
+			font-size: 16px;
+
+			.attributeValue {
+				font-weight: normal;
+				font-size: 15px;
+				float: right;
+				letter-spacing: 0.5px;
+
+			}
+		}
+	}
+}

@@ -1,0 +1,12 @@
+# FireShell
+# http://getfireshell.com
+# @author Todd Motto
+
+_site
+node_modules
+bower_components
+.DS_Store
+.tmp
+.sass-cache
+*.sublime-*
+.jekyll-metadata

@@ -1,0 +1,35 @@
+// sample markup on index.html
+
+.verification-container {
+
+	@include make-row();
+
+	background: #F7F6F6;
+
+	.buttons-container {
+
+		@include clearfix();
+		div.btn-container {
+
+			float: left;
+			margin-right: 15px;
+			width: 150px;
+
+			margin-bottom: 13px;
+			
+			button {
+				padding: 23px 0;
+				width: 100%;
+				max-width: 153px;
+
+				border: 1px solid $brand-primary !important;
+
+				&:hover {
+					background: white;
+					border: 1px solid $brand-primary !important;
+					color: $brand-primary;
+				}
+			}
+		}
+	}
+}

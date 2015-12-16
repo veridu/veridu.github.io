@@ -1,0 +1,22 @@
+a {
+
+	&.white-link {
+
+		text-decoration: none;
+		color: white;
+		
+		&:hover {
+			color: white;
+		}
+	}
+
+	&.black-link {
+
+		text-decoration: none;
+		color: black;
+		
+		&:hover {
+			color: black;
+		}
+	}
+}

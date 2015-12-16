@@ -1,0 +1,172 @@
+// index  page styles
+
+.progress-container {
+
+	@include make-row();
+	min-height: 347px;
+	background: rgba(black, 0.5);
+	padding-top: 64px;
+
+	.white-link {
+		margin-left: 19px;
+		margin-top: 19px;
+
+		font-size:  15.78px;
+		line-height: 22px;
+		letter-spacing: 2px;
+		border-bottom: 1px solid #FFFFFF;
+	}
+}
+
+section.verification-container {
+	
+	@include make-row();
+	padding-left: 15px;
+	padding-top: 28px;
+	padding-bottom: 31px;
+
+	background-color: #EFEFEF;;
+
+	h4 {
+		letter-spacing: 2px;
+		margin-top: 0;
+		margin-bottom: 17px;
+		font-size: 15.78px;
+		
+	}
+
+	> a {
+
+		margin-top: 11px;
+		border-bottom: 1px solid black;
+		text-decoration: none!important;
+		letter-spacing: 2px;
+		font-size: 1.067em;	
+
+
+	}
+
+}
+
+section.veridu-list {
+	@include make-row();
+	padding-top: 50px;
+	padding-left: 35px;
+	padding-right: 50px;
+	
+	.item-container {
+		margin-bottom: 60px;
+		&:last-of-type {
+			margin-bottom: 50px;
+		}
+
+		h3 {
+			margin-top: 0;
+			font-size: 1.067em;
+			letter-spacing: 2px;
+			line-height: 22px;
+			margin-bottom: 14px;
+		}
+
+		p {
+			font-size: 1em;
+			line-height: 19px;
+		}
+		
+	}
+}
+
+section.rasmus-quote {
+	@include make-row();
+	background-image: url(/img/rasmus-01.jpg);
+	background-size: 100%;
+	background-repeat: no-repeat no-repeat;
+	height: 470px;
+	padding-top: 41px;
+
+	> div {
+		float: right;
+		width: 40%;
+		h4 {
+			width: 85%;
+			text-align: center;
+			margin-top: 0;
+			font-size: 1.6em;
+			line-height: 33px;
+			margin-bottom: 19px;
+		}
+		p {
+			font-size: 1.067em;
+			letter-spacing: 1px;
+			line-height: 22px;
+		}
+	}
+
+}
+
+section.partners-quotes {
+
+	@include make-row();
+	padding-top: 20px;
+	background-color: #EFEFEF;
+
+	.item {
+		height: 400px;
+
+		.carousel-caption {
+			font-size: 1.6em;
+			line-height: 33px;
+			margin-bottom: 19px;
+			font-style: 'Light';
+			color: black;
+			text-shadow:none;
+			font-weight: 300 !important;
+				
+			.quoted-from-container {
+
+				margin-top: 44px;
+				text-align: center;
+				position: relative;
+
+				a {
+					position: absolute;
+					top: 15px;
+					color: black;
+					text-decoration: none;
+				}
+				.carousel-nav-left {
+					left: 0;
+				}
+				.carousel-nav-right {
+					right: 0;
+				}
+
+				small {
+					font-size: 15px !important;
+					letter-spacing: 1px;
+					line-height: 22px;
+				}
+
+			}
+		}
+	}
+}
+
+section.integration,
+section.contact {
+	@include make-row();
+	padding-top: 50px;
+
+	h2 {
+		margin-top: 0;
+		margin-bottom: 50px;
+		font-size: 1.6em;
+		line-height: 33px;
+	}
+
+}
+
+section.contact {
+	padding-left: 15px;
+	background-color: #F8F8F8;
+}

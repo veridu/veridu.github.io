@@ -1,0 +1,28 @@
+{
+  "name": "veridu.github.io",
+  "version": "1.0.0",
+  "description": "veridu's website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/veridu/veridu.github.io"
+  },
+  "keywords": [
+    "veridu",
+    "website",
+    "jekyll"
+  ],
+  "author": "veridu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/veridu/veridu.github.io/issues"
+  },
+  "homepage": "https://github.com/veridu/veridu.github.io",
+  "dependencies": {
+    "animate.css": "^3.4.0",
+    "bootstrap-sass": "^3.3.6"
+  }
+}

@@ -1,0 +1,253 @@
+.container {
+  @include container-fixed;
+
+  @media (min-width: $screen-sm-min) {
+    width: $container-sm;
+  }
+  @media (min-width: $screen-md-min) {
+    width: $container-md;
+  }
+  @media (min-width: $screen-lg-min) {
+    width: $container-lg;
+  }
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+  @include container-fixed;
+}
+
+body {
+	font-family: sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.veridu {
+	> span {
+		color: #00ADEE;
+	}
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.header {
+
+	@include make-row();
+	font-weight: bold;
+
+	a {
+		color: #303030;
+	}
+
+	.menu {
+		position: relative;
+		z-index: 1;
+		@include clearfix();
+		padding-bottom: 0.5em;
+
+		> div {
+			&.menu-content {
+				float: left; 
+				margin-left: 1.45em;
+				margin-top: 0.66em;
+				margin-bottom: 0.6em;
+
+				.logo {
+
+					img {
+						&.id-img {
+							display: none;
+						}
+						&.veridu-img {
+							width: 80%;
+						}
+					}
+					a.veridu {
+						font-size: 1.8em;
+					}
+
+				}
+				.current-state {
+					display: none;
+				}
+			}
+
+			&.toggler-container {
+
+				margin-right: 2.15em;
+				margin-top: 0.8em;
+				float: right !important;
+			}
+
+			.icon-caret-right {
+				font-size: 18px;
+				margin-right: 3px;
+			}
+
+			> span {
+				display: inline-block;
+
+				&.current-state {
+					position: relative;
+					top: 2px;
+				}
+			}
+
+			#menu-toggler {
+				font-size: 30px;
+			}
+
+		}
+	}
+	.dropdown-menu {
+
+		-webkit-transition: all .25s ease-in;
+ 	    -moz-transition: all .25s ease-in;
+	    -ms-transition: all .25s ease-in;
+	    -o-transition: all .25s ease-in;
+        transition: all .25s ease-in;
+
+        // positioning
+		position: absolute;
+		left: -15px;
+		top: -100%;
+		&.visible {
+			top: 45px;
+		}
+
+		.sign-in-container {
+			display: table;
+			width: 100%;
+
+			> div {
+				button {
+					width: 90%;
+				}
+				&:first {
+					width: 40%;
+				}
+				vertical-align: middle;
+				display: table-cell;
+				
+				input {
+					margin-bottom: 5px;
+					width: 100%;
+				}
+
+			}
+		}
+
+		// box styles
+		height: 100%;
+		padding: 0 15px 15px;
+		padding-left: 50px;
+		background: white;
+		
+		z-index: 1000;
+
+		h4 {
+			padding-left: 10px;
+			margin-top: 30px;
+		}
+
+		ul {
+			list-style: none;
+			padding-left: 30px;
+
+			li {
+				font-weight: 300;
+				margin-bottom: 8px;
+				display: inline-block;
+				width: 49.0%;
+			}
+		}
+
+	}
+}
+
+.img-section {
+
+	display: table;
+	margin-bottom: 10px;
+	width: calc(100% + 30px);
+	margin-left: -15px;
+	position: relative;
+	height: 300px; 
+	background-size: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background: #333;
+
+	@include clearfix();
+
+	> div.v-aligner {
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		color: white;
+
+		> div.right-aligned {
+			@include make-xs-column(6);
+			@include make-xs-column-offset(6);
+			@media (min-width: $screen-tablet) {
+				@include make-xs-column(8);
+				@include make-xs-column-offset(2);
+			}
+		}
+		> div.left-aligned {
+			@include make-xs-column(6);
+
+			@media (min-width: $screen-tablet) {
+				@include make-xs-column(8);
+				@include make-xs-column-offset(2);
+			}
+		}
+
+		@media (min-width: $screen-tablet) {
+			
+			vertical-align: bottom;
+			font-size: 2em;
+			padding-bottom: 30px;
+
+			h3 {
+				font-size: 3em;
+			}
+
+		}
+
+
+	}
+
+	@media (min-width: $screen-tablet) {
+		
+		height: 800px;
+
+	}
+
+}
+
+footer {
+	padding-top: 50px;
+	a {
+		color: inherit;
+	}
+
+	h6 {
+		font-size: 16px;
+		letter-spacing: 0.5px;
+		line-height: 22px;
+		margin-bottom: 15px;
+		margin-top: 30px;
+		&:first-of-type{
+			margin-top: 0;
+		}
+	}
+}

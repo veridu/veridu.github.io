@@ -1,0 +1,26 @@
+{
+  "name": "veridu.github.io",
+  "description": "veridu's website",
+  "main": "index.html",
+  "authors": [
+    "veridu"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "veridu",
+    "website",
+    "jekyll"
+  ],
+  "homepage": "https://githun.com/veridu/veridu.github.io",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "wow": "wowjs#~1.1.2"
+  }
+}

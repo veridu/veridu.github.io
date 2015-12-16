@@ -1,0 +1,111 @@
+---
+layout: default
+---
+<div class="wrapper">
+  <article class="article single">
+
+    <header class="article__header">
+      <h1 class="alpha article__title" itemprop="name headline">
+        {{ page.title }}
+      </h1>
+      <span class="article__timestamp">
+      	<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+      		{{ page.date | date: "%b %-d, %Y" }}
+      	</time>
+      	{% if page.path %}
+        <a class="article__edit" href="//github.com/veridu/veridu.github.io/blob/master/_posts/{{ page.path }}">
+          <i class="fa fa-github"></i>
+          Edit this page on GitHub
+        </a>
+        {% endif %}
+      </span>
+    </header>
+
+    <main class="article__content">
+      {{ content }}
+    </main>
+
+  </article>
+
+  <div class="signup">
+    <div id="mc_embed_signup">
+      <form action="//veridu.us12.list-manage.com/subscribe/post?u=fb4d73e892f0d123a57dbd8bc&amp;id=0653182c3c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+        <p class="signup__title">Subscribe</p>
+        <p class="signup__sub">Get new article notifications, workshop discounts and more!</p>
+        <div class="mc-field-group">
+          <input type="email" placeholder="Email address" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+        </div>
+        <div id="mce-responses" class="clear">
+          <div class="response" id="mce-error-response" style="display:none"></div>
+          <div class="response" id="mce-success-response" style="display:none"></div>
+        </div>
+        <div style="position: absolute; left: -5000px;" aria-hidden="true">
+          <input type="text" name="b_fb4d73e892f0d123a57dbd8bc_0653182c3c" tabindex="-1" value=""></div>
+          <div class="clear">
+          <button type="submit" name="subscribe" id="mc-embedded-subscribe">Sign up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="social">
+    <div class="social__button">
+      <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+    </div>
+    <div class="social__button">
+      <div id="fb-root"></div>
+      <div class="fb-like" data-send="false" data-layout="button_count"
+      data-width="1" data-show-faces="false" data-action="like"></div>
+    </div>
+    <div class="social__button">
+      <g:plusone size="medium"></g:plusone>
+    </div>
+  </div>
+
+  <div class="disqus">
+    <div id="disqus_thread"></div>
+  </div>
+  <script>
+    var disqus_url = {%if page.disqus %}'{{ page.disqus }}'{%else %}'http://veridu.github.io{{ page.url }}'{% endif %};
+    var disqus_title = '{{ page.title }}';
+    var disqus_shortname = 'veridu';
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.async = dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      document.getElementsByTagName('head')[0].appendChild(dsq);
+    })();
+    (function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) {
+      return;
+    }
+    js = d.createElement(s);
+    js.id = id;
+    js.src = '//connect.facebook.net/en_GB/all.js#xfbml=1&appId=252993844735607';
+    fjs.parentNode.insertBefore(js, fjs);
+  })(document, 'script', 'facebook-jssdk');
+
+  (function(doc,s) {
+    var js, fjs = doc.getElementsByTagName(s)[0];
+    var frag = doc.createDocumentFragment();
+    var add = function (url, id) {
+      if (doc.getElementById(id)) {
+        return;
+      }
+      js = doc.createElement(s);
+      js.src = url;
+      if (id) {
+        js.id = id;
+      }
+      frag.appendChild(js);
+    };
+    add('http://connect.facebook.net/en_US/all.js#xfbml=1','facebook-jssdk');
+    add('http://platform.twitter.com/widgets.js');
+    add('https://apis.google.com/js/plusone.js');
+    fjs.parentNode.insertBefore(frag, fjs);
+  })(document,'script');
+  </script>
+
+</div>
