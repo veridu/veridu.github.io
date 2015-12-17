@@ -88,8 +88,8 @@ body {
 			}
 
 			.icon-caret-right {
-				font-size: 18px;
-				margin-right: 3px;
+				font-size: em(18);
+				margin-right: em(3);
 			}
 
 			> span {
@@ -97,12 +97,12 @@ body {
 
 				&.current-state {
 					position: relative;
-					top: 2px;
+					top: em(2);
 				}
 			}
 
 			#menu-toggler {
-				font-size: 30px;
+				font-size: em(30);
 			}
 
 		}
@@ -117,10 +117,10 @@ body {
 
         // positioning
 		position: absolute;
-		left: -15px;
+		left: -em(15);
 		top: -100%;
 		&.visible {
-			top: 45px;
+			top: em(45);
 		}
 
 		.sign-in-container {
@@ -138,7 +138,7 @@ body {
 				display: table-cell;
 				
 				input {
-					margin-bottom: 5px;
+					margin-bottom: em(5);
 					width: 100%;
 				}
 
@@ -147,24 +147,24 @@ body {
 
 		// box styles
 		height: 100%;
-		padding: 0 15px 15px;
-		padding-left: 50px;
+		padding: 0 em(15) em(15);
+		padding-left: em(50);
 		background: white;
 		
 		z-index: 1000;
 
 		h4 {
-			padding-left: 10px;
-			margin-top: 30px;
+			padding-left: em(10);
+			margin-top: em(30);
 		}
 
 		ul {
 			list-style: none;
-			padding-left: 30px;
+			padding-left: em(30);
 
 			li {
 				font-weight: 300;
-				margin-bottom: 8px;
+				margin-bottom: em(8);
 				display: inline-block;
 				width: 49.0%;
 			}
@@ -176,11 +176,11 @@ body {
 .img-section {
 
 	display: table;
-	margin-bottom: 10px;
-	width: calc(100% + 30px);
-	margin-left: -15px;
+	margin-bottom: em(10);
+	width: calc(100% + em(30));
+	margin-left: -em(15);
 	position: relative;
-	height: 300px; 
+	height: em(300); 
 	background-size: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -215,7 +215,7 @@ body {
 			
 			vertical-align: bottom;
 			font-size: 2em;
-			padding-bottom: 30px;
+			padding-bottom: em(30);
 
 			h3 {
 				font-size: 3em;
@@ -228,24 +228,24 @@ body {
 
 	@media (min-width: $screen-tablet) {
 		
-		height: 800px;
+		height: em(800);
 
 	}
 
 }
 
 footer {
-	padding-top: 50px;
+	padding-top: em(50);
 	a {
 		color: inherit;
 	}
 
 	h6 {
-		font-size: 16px;
-		letter-spacing: 0.5px;
-		line-height: 22px;
-		margin-bottom: 15px;
-		margin-top: 30px;
+		font-size: em(16);
+		letter-spacing: em(0.5);
+		line-height: em(22);
+		margin-bottom: em(15);
+		margin-top: em(30);
 		&:first-of-type{
 			margin-top: 0;
 		}

@@ -4,7 +4,7 @@
 	@include make-row();
 	
 	.item {
-		height: 193px;
+		height: em(193);
 		.overlay {
 			position: absolute;
 			top: 0;
@@ -18,16 +18,16 @@
 			position: absolute;
 			left: 10%;
 			width: 70%;
-			bottom: 20px;
+			bottom: em(20);
 
 			.carousel-caption {
 				left: 0;
 				text-shadow: none;
 				h1 {
-					letter-spacing: 2px;
+					letter-spacing: em(2);
 					font-weight: 400 !important;
-					font-size: 34px;
-					line-height: 42px;
+					font-size: em(34);
+					line-height: 1.25em;
 				}
 			}
 		}
@@ -36,10 +36,10 @@
 	.carousel-indicators {
 
 		li {
-			width: 15px;
-			height: 15px;
+			width: em(15);
+			height: em(15);
 			border-color: $brand-primary;
-			border-width: 2px;
+			border-width: em(2);
 			
 			&.active {
 				background-color: $brand-primary;

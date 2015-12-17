@@ -21,6 +21,7 @@ body {
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
+        "functions",
         "icons",
         "pages/index",
         "pages/clients-and-partners",

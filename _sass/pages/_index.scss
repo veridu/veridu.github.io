@@ -3,44 +3,44 @@
 .progress-container {
 
 	@include make-row();
-	min-height: 347px;
+	min-height: em(347);
 	background: rgba(black, 0.5);
-	padding-top: 64px;
+	padding-top: em(64);
 
 	.white-link {
-		margin-left: 19px;
-		margin-top: 19px;
+		margin-left: em(19);
+		margin-top: em(19);
 
-		font-size:  15.78px;
-		line-height: 22px;
-		letter-spacing: 2px;
-		border-bottom: 1px solid #FFFFFF;
+		font-size:  em(15.78);
+		line-height: 1.3em;
+		letter-spacing: em(2);
+		border-bottom: em(1) solid #FFFFFF;
 	}
 }
 
 section.verification-container {
 	
 	@include make-row();
-	padding-left: 15px;
-	padding-top: 28px;
-	padding-bottom: 31px;
+	padding-left: em(15);
+	padding-top: em(28);
+	padding-bottom: em(31);
 
 	background-color: #EFEFEF;;
 
 	h4 {
-		letter-spacing: 2px;
+		letter-spacing: em(2);
 		margin-top: 0;
-		margin-bottom: 17px;
-		font-size: 15.78px;
+		margin-bottom: em(17);
+		font-size: em(15.78);
 		
 	}
 
 	> a {
 
-		margin-top: 11px;
-		border-bottom: 1px solid black;
+		margin-top: em(11);
+		border-bottom: em(1) solid black;
 		text-decoration: none!important;
-		letter-spacing: 2px;
+		letter-spacing: em(2);
 		font-size: 1.067em;	
 
 
@@ -50,27 +50,27 @@ section.verification-container {
 
 section.veridu-list {
 	@include make-row();
-	padding-top: 50px;
-	padding-left: 35px;
-	padding-right: 50px;
+	padding-top: em(50);
+	padding-left: em(35);
+	padding-right: em(50);
 	
 	.item-container {
-		margin-bottom: 60px;
+		margin-bottom: em(60);
 		&:last-of-type {
-			margin-bottom: 50px;
+			margin-bottom: em(50);
 		}
 
 		h3 {
 			margin-top: 0;
 			font-size: 1.067em;
-			letter-spacing: 2px;
-			line-height: 22px;
-			margin-bottom: 14px;
+			letter-spacing: em(2);
+			line-height: em(22);
+			margin-bottom: em(14);
 		}
 
 		p {
 			font-size: 1em;
-			line-height: 19px;
+			line-height: em(19);
 		}
 		
 	}
@@ -78,27 +78,25 @@ section.veridu-list {
 
 section.rasmus-quote {
 	@include make-row();
-	background-image: url(/img/rasmus-01.jpg);
-	background-size: 100%;
+	background-image: url(/img/rasmus-big-fliph.jpg);
 	background-repeat: no-repeat no-repeat;
-	height: 470px;
-	padding-top: 41px;
+	background-position: -320px -50px ;
+	height: em(470);
+	padding-top: em(41);
 
 	> div {
 		float: right;
-		width: 40%;
+		width: 35%;
 		h4 {
-			width: 85%;
 			text-align: center;
 			margin-top: 0;
 			font-size: 1.6em;
-			line-height: 33px;
-			margin-bottom: 19px;
+			line-height: 1.6em;
+			margin-bottom: em(19);
 		}
 		p {
-			font-size: 1.067em;
-			letter-spacing: 1px;
-			line-height: 22px;
+			font-size: 1.0067em;
+			line-height: em(22);
 		}
 	}
 
@@ -107,16 +105,16 @@ section.rasmus-quote {
 section.partners-quotes {
 
 	@include make-row();
-	padding-top: 20px;
+	padding-top: em(20);
 	background-color: #EFEFEF;
 
 	.item {
-		height: 400px;
+		height: em(450);
 
 		.carousel-caption {
 			font-size: 1.6em;
-			line-height: 33px;
-			margin-bottom: 19px;
+			line-height: 1.3em;
+			margin-bottom: em(19);
 			font-style: 'Light';
 			color: black;
 			text-shadow:none;
@@ -124,13 +122,13 @@ section.partners-quotes {
 				
 			.quoted-from-container {
 
-				margin-top: 44px;
+				margin-top: em(44);
 				text-align: center;
 				position: relative;
 
 				a {
 					position: absolute;
-					top: 15px;
+					top: em(15);
 					color: black;
 					text-decoration: none;
 				}
@@ -142,9 +140,9 @@ section.partners-quotes {
 				}
 
 				small {
-					font-size: 15px !important;
-					letter-spacing: 1px;
-					line-height: 22px;
+					font-size: 14px;
+					letter-spacing: em(1);
+					line-height: em(22);
 				}
 
 			}
@@ -155,18 +153,18 @@ section.partners-quotes {
 section.integration,
 section.contact {
 	@include make-row();
-	padding-top: 50px;
+	padding-top: em(50);
 
 	h2 {
 		margin-top: 0;
-		margin-bottom: 50px;
+		margin-bottom: em(50);
 		font-size: 1.6em;
-		line-height: 33px;
+		line-height: em(33);
 	}
 
 }
 
 section.contact {
-	padding-left: 15px;
+	padding-left: em(15);
 	background-color: #F8F8F8;
 }

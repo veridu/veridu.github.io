@@ -1,6 +1,6 @@
 input {
-	border: 1px solid #B3B3B3;
-	padding: 8px;
+	border: em(1) solid #B3B3B3;
+	padding: em(8);
 	outline: 0;
 	color: $brand-primary;
 }

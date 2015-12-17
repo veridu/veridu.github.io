@@ -4,26 +4,26 @@
 
 	background: transparent;
 	box-shadow: none;
-	height: 46px;
-	margin-bottom: 14px;
+	height: em(46);
+	margin-bottom: em(14);
 
 	.progress-bar {
 		background-color: white;
- 		border-right: 2px solid $brand-primary;
- 		padding: 12px;
- 		padding-left: 8px;
+ 		border-right: em(2) solid $brand-primary;
+ 		padding: em(12);
+ 		padding-left: em(8);
 
 		> p {
 			
 			color: black;
 			text-align: left;
-			font-size: 16px;
+			font-size: em(16);
 
 			.attributeValue {
 				font-weight: normal;
-				font-size: 15px;
+				font-size: em(15);
 				float: right;
-				letter-spacing: 0.5px;
+				letter-spacing: em(0.5);
 
 			}
 		}
