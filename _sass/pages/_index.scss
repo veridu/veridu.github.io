@@ -2,7 +2,7 @@
 
 .progress-container {
 
-	@include make-row();
+	@include clearfix();
 	min-height: em(347);
 	background: rgba(black, 0.5);
 	padding-top: em(64);
@@ -20,7 +20,7 @@
 
 section.verification-container {
 	
-	@include make-row();
+	@include clearfix();
 	padding-left: 10%;
 	padding-top: em(28);
 	padding-bottom: em(31);
@@ -49,7 +49,7 @@ section.verification-container {
 }
 
 section.veridu-list {
-	@include make-row();
+	@include clearfix();
 	padding-top: em(50);
 	padding-left: 10%;
 	padding-right: em(50);
@@ -79,7 +79,8 @@ section.veridu-list {
 }
 
 section.rasmus-quote {
-	@include make-row();
+	@include clearfix();
+
 	background-image: url(/img/rasmus-big-fliph.jpg);
 	background-repeat: no-repeat no-repeat;
 	background-position: -320px -50px ;
@@ -110,7 +111,7 @@ section.rasmus-quote {
 
 section.partners-quotes {
 
-	@include make-row();
+	@include clearfix();
 	padding-top: em(20);
 	background-color: #EFEFEF;
 
@@ -157,7 +158,7 @@ section.partners-quotes {
 
 section.integration,
 section.contact {
-	@include make-row();
+	@include clearfix();
 	padding-top: em(50);
 
 	h2 {

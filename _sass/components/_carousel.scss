@@ -1,7 +1,7 @@
 // overrides bootstrap's carousel default styling
 
 #main-slider {
-	@include make-row();
+	@include clearfix();
 	
 	.item {
 		height: em(193);
