@@ -1,1 +1,6 @@
-h1{font-size:10px;}
+#main-slider .item .container .carousel-caption h1 {
+    letter-spacing: 0.13333em;
+    font-weight: 400 !important;
+    font-size: 6.26667em;
+    line-height: 1.25em;
+    }
