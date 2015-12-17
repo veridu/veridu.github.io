@@ -8,7 +8,7 @@
 	padding-top: em(64);
 
 	.white-link {
-		margin-left: em(19);
+		margin-left: 10%;
 		margin-top: em(19);
 
 		font-size:  em(15.78);
@@ -21,7 +21,7 @@
 section.verification-container {
 	
 	@include make-row();
-	padding-left: em(15);
+	padding-left: 10%;
 	padding-top: em(28);
 	padding-bottom: em(31);
 
@@ -51,7 +51,7 @@ section.verification-container {
 section.veridu-list {
 	@include make-row();
 	padding-top: em(50);
-	padding-left: em(35);
+	padding-left: 10%;
 	padding-right: em(50);
 	
 	.item-container {
@@ -112,8 +112,8 @@ section.partners-quotes {
 		height: em(450);
 
 		.carousel-caption {
-			font-size: 1.6em;
-			line-height: 1.3em;
+			font-size: em(24);
+			line-height: em(32, 24);
 			margin-bottom: em(19);
 			font-style: 'Light';
 			color: black;
@@ -140,7 +140,7 @@ section.partners-quotes {
 				}
 
 				small {
-					font-size: $base-font-size;
+					font-size: em($base-font-size, 24);
 					letter-spacing: em(1);
 					line-height: em(22);
 				}
@@ -157,14 +157,14 @@ section.contact {
 
 	h2 {
 		margin-top: 0;
-		margin-bottom: em(50);
 		font-size: em(36);
-		line-height: em(33);
+		margin-bottom: em(50, 36);
+		line-height: em(33, 36);
 	}
 
 }
 
 section.contact {
-	padding-left: em(15);
+	padding-left: 10%;
 	background-color: #F8F8F8;
 }
