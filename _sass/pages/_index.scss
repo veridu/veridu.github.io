@@ -63,7 +63,7 @@ section.veridu-list {
 		h3 {
 			margin-top: 0;
 			font-size: 1.067em;
-			font-weight: 600;
+			font-weight: 400;
 			letter-spacing: em(2);
 			line-height: em(22);
 			margin-bottom: em(14);
@@ -88,16 +88,20 @@ section.rasmus-quote {
 
 	> div {
 		float: right;
-		width: 35%;
+		width: 40%;
+
 		h4 {
+			margin-right: 20%;
 			text-align: center;
 			margin-top: 0;
 			font-size: 1.6em;
 			line-height: 1.6em;
+			font-weight: 300;
 			margin-bottom: em(19);
 		}
 		p {
-			font-size: 1.0067em;
+			font-weight: 400;
+			font-size: 1.067em;
 			line-height: em(22);
 		}
 	}
@@ -117,11 +121,10 @@ section.partners-quotes {
 			font-size: em(22);
 			line-height: em(32, 24);
 			margin-bottom: em(19);
-			font-style: 'Light';
 			color: black;
+			font-weight: 300;
 			text-shadow:none;
-			font-weight: 300 !important;
-				
+
 			.quoted-from-container {
 
 				margin-top: em(44);
