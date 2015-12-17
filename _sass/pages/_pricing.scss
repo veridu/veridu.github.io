@@ -1,0 +1,51 @@
+.header {
+	.pricing-submenu {
+		display: none;
+	}
+}
+
+// shows only on pricing page
+.header.pricing {
+
+	.pricing-submenu {
+
+		background: white;
+		padding: 0;
+		margin-left: 15px;
+		display: inline-block;
+
+		li {
+			a {
+				text-decoration: none;
+			}
+			
+			i {
+				visibility: hidden;
+			}
+
+			&:first-of-type {
+				display: block;
+			}
+
+			&:hover, &.selected {
+				i {
+					visibility: visible;
+				}
+			}
+			display: none;
+		}
+
+		&:hover {
+
+			li {
+				display: block !important;
+				&:last-of-type {
+					margin-bottom: em(30);
+				}
+			}
+		}
+		list-style: none;
+	}
+
+}
+

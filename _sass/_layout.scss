@@ -11,7 +11,15 @@
     width: $container-lg;
   }
 }
+
+.content-padding {
+	padding-left: 10%;
+	padding-right: 10%;
+} 
+
 .main-container {
+	@include make-row();
+
 	padding-top: em(56);
 }
 
@@ -21,7 +29,7 @@
 // width for fluid, full width layouts.
 
 .container-fluid {
-  @include container-fixed;
+
 }
 
 body {
@@ -40,6 +48,7 @@ body {
 	}
 }
 
+
 .header {
 	z-index: 10000;
 	position: relative;
@@ -47,16 +56,16 @@ body {
 		background: white;
 	}
 	@include make-row();
-	font-weight: bold;
 
 	a {
 		color: #303030;
 	}
-	nav {
+
+	.nav {
 		position: fixed;
-		height: 100%;
 		width: 100%;
 	}
+
 	.menu {
 		position: relative;
 		z-index: 1;
@@ -71,7 +80,8 @@ body {
 				margin-bottom: 0.6em;
 
 				.logo {
-
+					position: relative;
+					vertical-align: top;
 					img {
 						&.id-img {
 							display: none;
@@ -128,9 +138,15 @@ body {
         // positioning
 		position: absolute;
 		left: -em(15);
-		top: -100%;
+		top: -1000px;
+		background: white;
+
 		&.visible {
 			top: em(45);
+			display: table;
+			width: 100%;
+			height: 100%;
+			box-shadow: 0 4px 5px #ccc;
 		}
 
 		.sign-in-container {
@@ -178,6 +194,34 @@ body {
 				display: inline-block;
 				width: 49.0%;
 			}
+		}
+
+	}
+}
+
+
+.header.pricing {
+
+	.current-state {
+		i {
+
+		}
+		font-weight: 600;
+		display: inline-block !important;
+	}
+
+	.logo {
+
+		img {
+			&.id-img {
+				width: 80%;
+			}
+			&.veridu-img {
+				display: none;
+			}
+		}
+		a.veridu {
+			font-size: 1.8em;
 		}
 
 	}
