@@ -3,3 +3,13 @@
 .btn {
 	border: 0 !important;
 }
+
+.btn-primary {
+	
+	border: em(1) solid $brand-primary !important;
+
+	&:hover {
+		background: white !important;
+		color: $brand-primary !important;
+	}
+}

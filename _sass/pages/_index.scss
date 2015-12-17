@@ -21,7 +21,9 @@
 section.verification-container {
 	
 	@include clearfix();
+	
 	padding-left: 10%;
+	padding-right: 10%;
 	padding-top: em(28);
 	padding-bottom: em(31);
 

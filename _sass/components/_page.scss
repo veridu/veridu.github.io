@@ -6,6 +6,10 @@
 		line-height: em(68,50);
 		margin-top: 30px;
 		font-weight: 300;
-		margin-bottom: 16px;
+		margin-bottom: em(16, 50);
+	}
+
+	> header {
+		margin-bottom: em(36);
 	}
 }
