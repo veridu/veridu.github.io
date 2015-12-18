@@ -19,8 +19,6 @@ description: What company doesn't want to know their users better? These are jus
 			<h2 ng-show="ctrl.sectorsTabs.active == 'payments'" class="solution__item__title">Payments</h2>
 			<h2 ng-show="ctrl.sectorsTabs.active == 'recruiting'" class="solution__item__title">Recruiting</h2>
 			<h2 ng-show="ctrl.sectorsTabs.active == 'p2p'" class="solution__item__title">Peer to Peer</h2>
-		    <p class="solution__item_description">Build trust. Drive community engagement. Put members in control.
-		    </p>
 			<h2 ng-show="ctrl.sectorsTabs.active == 'real_estate'" class="solution__item__title">Real Estate</h2>
 			  <p class="solution__item_description">Verify identity better globally. Decline fewer transactions. Improve user experience.
 			</p>
