@@ -9,7 +9,6 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="http://carlejlers.dk/css/Rafael.css">
-  {% if page.title %}
   <meta property="og:locale" content="en_US">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <meta property="og:type" content="article">
@@ -19,11 +18,10 @@
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:image" content="http://veridu.github.io/img/og.jpg">
   <meta property="og:publisher" content="http://www.facebook.com/veridu">
-
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="@veridu">
-  <meta name="twitter:title" content="{{ page.title }}">
+  <meta name="twitter:title" content="{{ page.title || site.title }}">
   <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="twitter:image" content="http://veridu.github.io/img/og.jpg">
-  {% endif %}
+
 </head>
