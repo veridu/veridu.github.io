@@ -15,14 +15,15 @@
 			height: 100%;
 			background: rgba(black, 0.75);
 		}	
-
 		.container {
 			position: absolute;
-			left: 10%;
-			width: 70%;
+			width: 70% ;
+			margin:0 auto;
+			text-align: center;
 			bottom: em(20);
 
 			.carousel-caption {
+				right: 0;
 				left: 0;
 				text-shadow: none;
 				h1 {

@@ -1,0 +1,25 @@
+// tag styles
+
+.tag {
+	@extend .btn;
+	font-size: em(10);
+	margin-bottom: em(10, 10);
+	margin-right: em(10, 10);
+	letter-spacing: em(0.9, 10);
+
+	&.tag--purple {
+		background-color: #7D57C1
+	}
+
+	&.tag--green {
+		background-color: #8BC34A
+	}
+
+	&.tag--bluegreen {
+		background-color: #009687
+	}
+
+	&.tag--grey {
+		background-color: #9E9E9E
+	}
+}
