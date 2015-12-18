@@ -5,7 +5,17 @@
 	font-size: em(10);
 	margin-bottom: em(10, 10);
 	margin-right: em(10, 10);
+	padding: em(6,10) em(9,10);
+	line-height: em(12,10);
 	letter-spacing: em(0.9, 10);
+	cursor: default;
+	&:hover {
+		color: inherit;
+	}
+
+	&.tag--blue {
+		background-color: #311B91;	
+	}
 
 	&.tag--purple {
 		background-color: #7D57C1
@@ -21,5 +31,15 @@
 
 	&.tag--grey {
 		background-color: #9E9E9E
+	}
+
+	&.tag--lightbluegreen {
+		background-color: #009687
+	}
+	&.tag--red {
+		background-color: #FF5721
+	}
+	&.tag--lightpurple {
+		background-color: #B39DDA
 	}
 }

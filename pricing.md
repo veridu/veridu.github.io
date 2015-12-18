@@ -4,7 +4,7 @@ description: Create your tailored identity solution to see  the cost.  You'll be
 layout: page
 class: pricing
 ---
-<div ng-app="app"  ng-controller="CartCtrl as cart">
+<div  ng-controller="CartCtrl as cart">
 
 	<div class="cart-status">
 		<div>

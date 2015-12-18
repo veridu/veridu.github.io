@@ -1,3 +1,63 @@
+.header {
+	.solutions-submenu {
+		display: none;
+	}
+}
+
+// shows only on solutions page
+.header.solutions {
+
+	.veridu-img {
+		display: none;
+	}
+
+	.id-img {
+		display: inline-block !important;
+	}
+
+	.solutions-submenu {
+
+		background: white;
+		font-weight: bold;
+		padding: 0;
+		margin-left: 15px;
+		display: inline-block;
+
+		li {
+			a {
+				text-decoration: none;
+			}
+			
+			i {
+				visibility: hidden;
+			}
+
+			&:first-of-type {
+				display: block !important;
+			}
+
+			&:hover, &.selected {
+				i {
+					visibility: visible;
+				}
+			}
+			display: none;
+		}
+
+		&:hover {
+
+			li {
+				display: block !important;
+				&:last-of-type {
+					margin-bottom: em(30);
+				}
+			}
+		}
+		list-style: none;
+	}
+
+}
+
 .main-container-solutions {
 
 	background: #eee;
@@ -7,16 +67,21 @@
 		margin-bottom: em(16,36) !important1
 	}
 
-	.page__description {
-
-	}
-
 	.solution__item {
 		height: em(413);
 		background-image: url(/img/coworking.jpeg);
 		background-repeat: no-repeat no-repeat;
 		position: relative;
 		
+		&.solution__item__notfirst {
+			margin-top: em(20);
+		}		
+
+
+		.solution__item_description {
+			line-height: em(22);
+		}
+
 		.solution__item__content{			
 			position: absolute;
 			width: 100%;
@@ -26,6 +91,12 @@
 			padding: em(33) 10%;
 			background-color: rgba(#311B92, 0.8);
 			color: white;
+			
+			&.solution__item__content--purple {
+				
+				background-color: rgba(#7E57C2, 0.8);
+
+			}
 			
 			.solution__item__tags__container {
 				position: absolute;
@@ -40,5 +111,52 @@
 		}
 
 	}
+
+	.panel-controls {
+		@include clearfix();
+		> div {
+			cursor: pointer;
+			width: 50%;
+			&.panel-controls__item_block {
+				width: 100%;
+			}
+			float: left;
+			text-align: center;
+			border: 1px solid #EFEFEF;
+			background: #311B92;
+			padding-top: em(17);
+			padding-bottom: em(17);
+			color: white;
+			font-size: em(16);
+			letter-spacing: em(0.5, 16);
+			line-height: em(22, 16);
+
+			&:hover, &.selected {
+				background: transparent;
+				color: black;
+			}
+		}
+	}
+
+}
+.solution__section__container {
+	@include clearfix();
+
+	.solution__section__title {
+		font-size: em(36);
+		font-weight: 300;
+		margin-top: em(56, 36);
+		margin-bottom: em(32,36);
+		&:first-of-type {
+			margin-top: em(37,36);
+			margin-bottom: em(26,36);
+		}
+	}
+	.solution__section__description {
+		&:first-of-type {
+			margin-bottom: em(30);
+		}
+	}
+
 
 }
