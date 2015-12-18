@@ -6,18 +6,28 @@
 	.buttons-container {
 
 		@include clearfix();
+		
 		div.btn-container {
 
-			float: left;
-			margin-right: em(15);
-			width: em(150);
+			@include make-xs-column(6);
+			padding-left: 0;
 
 			margin-bottom: em(13);
+
+			&.right {
+				button {
+					float: right;
+				}
+			}
+			&.left {
+				button {
+					float: left;
+				}
+			}
 			
 			button {
 				padding: em(23) 0;
 				width: 100%;
-				max-width: em(153);
 
 				border: em(1) solid $brand-primary !important;
 
@@ -28,5 +38,12 @@
 				}
 			}
 		}
+
 	}
+	div.hidden-integrations {
+
+		display: none;
+
+	}
+
 }

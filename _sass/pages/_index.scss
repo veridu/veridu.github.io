@@ -4,8 +4,11 @@
 
 	@include clearfix();
 	min-height: em(347);
-	background: rgba(black, 0.5);
-	padding-top: em(64);
+	background-image: url(/img/carl2.jpeg) !important;
+	background-repeat: no-repeat no-repeat;
+	background-position: 0px -60px !important;
+
+	padding-top: em(64);	
 
 	.white-link {
 		margin-left: 10%;
@@ -117,6 +120,27 @@ section.partners-quotes {
 	padding-top: em(20);
 	background-color: #EFEFEF;
 
+	.carousel-inner {
+
+		a.nav {
+			position: absolute;
+			bottom: em(48);
+			color: black;
+			text-decoration: none;
+			font-size: em(24);
+			z-index: 10000;
+		}
+
+		.carousel-nav-left {
+			left:50%;
+			margin-left: - 125px;
+		}
+		.carousel-nav-right {
+			right:50%;
+			margin-right: - 125px;
+		}
+
+	}
 	.item {
 		height: em(450);
 
@@ -133,19 +157,6 @@ section.partners-quotes {
 				margin-top: em(44);
 				text-align: center;
 				position: relative;
-
-				a {
-					position: absolute;
-					top: em(15);
-					color: black;
-					text-decoration: none;
-				}
-				.carousel-nav-left {
-					left: 0;
-				}
-				.carousel-nav-right {
-					right: 0;
-				}
 
 				small {
 					font-size: em($base-font-size, 24);

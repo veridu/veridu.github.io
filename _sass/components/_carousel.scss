@@ -1,7 +1,9 @@
 // overrides bootstrap's carousel default styling
 
 #main-slider {
-	@include clearfix();
+	@include clearfix();	
+	background-image: url(/img/coworking.jpeg);
+	background-size: 100%;
 	
 	.item {
 		height: em(193);
