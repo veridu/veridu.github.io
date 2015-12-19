@@ -20,6 +20,7 @@
 
 	var app = angular.module('app', []);
 	app.controller('CartCtrl', CartCtrl);
+	app.controller('ContactCtrl', ContactCtrl);
 
 	CartCtrl.$inject = ['$scope'];
 	function CartCtrl ($scope) {
@@ -33,7 +34,6 @@
 		vm.hasItem = hasItem;
 		vm.addProduct = addProduct;
 		vm.removeProduct = removeProduct;
-		vm.sendContact = sendContact;
 
 		$scope.$watch('cart.items', function (items) {
 			
@@ -51,10 +51,6 @@
 
 		function addProduct (product) {
 			vm.items.push(product);
-		}
-
-		function sendContact () {
-			console.warn(vm.contact);
 		}
 
 		function removeProduct (key) {
@@ -76,8 +72,28 @@
 	}
 
 
+
+	ContactCtrl.$inject = ['$scope'];
+	function ContactCtrl ($scope) {
+
+		var vm = this;
+		vm.contact = {};
+
+		vm.sendContact = sendContact;
+
+		function sendContact () {
+			console.log(vm.contact);
+		}
+
+	}
+
+
+
+
+
+
     $('#main-slider').on('slide.bs.carousel', function () {
-		console.warn('oi'); 
+    	
     });
 
 })($,WOW);

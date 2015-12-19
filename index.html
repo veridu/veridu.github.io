@@ -220,14 +220,35 @@ layout: default
 
 </section>
 
-<section class="contact veridu-list">
+<section class="contact veridu-list" ng-controller="ContactCtrl as ctrl">
     <h2 class="font-light">Contact</h2>
 
-    <div class="item-container">
-        <h3>HOSTED</h3>
-        <p>Simply send users an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is.</p>
-    </div>
+    <p class="section__description">
+        Contact us to discuss your specific needs
+    </p>
 
+    <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">        
+
+            <div class="input-container">
+                <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name"> 
+            </div>
+
+            <div class="input-container">
+                <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">    
+            </div>
+
+            <div class="input-container">
+                <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">    
+            </div>              
+
+            <div class="input-container">
+                <textarea rows="5" ng-model="ctrl.contact.message" name="message" type="text" placeholder="Message"></textarea>
+            </div>              
+    
+            <div class="input-container text-right">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+    </form>
 </section>
 
 <!-- ras-quote

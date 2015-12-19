@@ -410,30 +410,29 @@ class: pricing
 		<p class="section__description">
 			Contact us to discuss your specific needs
 		</p>
+	    <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">        
+            <div class="input-container">
+                <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name"> 
+            </div>
 
-		<form  method="post" class="form-horizontal" role="form" ng-submit="cart.sendContact()">		
+            <div class="input-container">
+                <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">    
+            </div>
 
-				<div class="input-container">
-					<input ng-model="cart.contact.name" name="name" type="text" placeholder="Name">	
-				</div>
+            <div class="input-container">
+                <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">    
+            </div>              
 
-				<div class="input-container">
-					<input ng-model="cart.contact.company" name="company" type="text" placeholder="Company">	
-				</div>
+            <div class="input-container">
+                <textarea rows="5" ng-model="ctrl.contact.message" name="message" type="text" placeholder="Message"></textarea>
+            </div>              
+    
+            <div class="input-container text-right">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+	    </form>
 
-				<div class="input-container">
-					<input ng-model="cart.contact.email"  name="email" type="email" placeholder="Email">	
-				</div>				
-
-				<div class="input-container">
-					<textarea rows="5" ng-model="cart.contact.message" name="message" type="text" placeholder="Message"></textarea>
-				</div>				
-		
-				<div class="input-container text-right">
-					<button type="submit" class="btn btn-primary">Submit</button>
-				</div>
-		</form>
-	</section>
+    </section>
 
 </div>
 

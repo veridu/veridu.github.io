@@ -3,6 +3,7 @@
 .tag {
 	@extend .btn;
 	font-size: em(10);
+	color: white !important;
 	margin-bottom: em(10, 10);
 	margin-right: em(10, 10);
 	padding: em(6,10) em(9,10);
