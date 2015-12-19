@@ -20,7 +20,8 @@ description: What company doesn't want to know their users better? These are jus
 			<h2 ng-show="ctrl.sectorsTabs.active == 'recruiting'" class="solution__item__title">Recruiting</h2>
 			<h2 ng-show="ctrl.sectorsTabs.active == 'p2p'" class="solution__item__title">Peer to Peer</h2>
 			<h2 ng-show="ctrl.sectorsTabs.active == 'real_estate'" class="solution__item__title">Real Estate</h2>
-			<p class="solution__item_description">Verify identity better globally. Decline fewer transactions. Improve user experience.</p>
+			  <p class="solution__item_description">Verify identity better globally. Decline fewer transactions. Improve user experience.
+			</p>
 			<div class="solution__item__tags__container">
 				<div ng-show="ctrl.sectorsTabs.active == 'payments'">
 					<div class="tag tag--purple">World Pay</div>
@@ -98,7 +99,10 @@ description: What company doesn't want to know their users better? These are jus
 				What do they use Veridu for? <br>
 				<a href="#" class="white-link">READ MORE</a>
 			</p>
-			<p class="solution__item_description" ng-show="ctrl.partnersTabs.active == 'recruiting'">Recruiting</p>
+			<p class="solution__item_description" ng-show="ctrl.partnersTabs.active == 'recruiting'">Recruiting
+			  Enhance candidate vetting. Identify the superstars. Make clients happy. <br>
+				<a href="#" class="white-link">READ MORE</a>
+			</p>
 			<p class="solution__item_description" ng-show="ctrl.partnersTabs.active == 'p2p'">Peer to Peer</p>
 			<p class="solution__item_description" ng-show="ctrl.partnersTabs.active == 'real_estate'">Real Estate</p>
 			<div class="solution__item__tags__container">
