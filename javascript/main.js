@@ -113,7 +113,7 @@
 	})();
 
 	var landingHeight = $(window).height() -  $('.menu').height();
-	$('.landing-section').height(landingHeight);
+	$('.landing-section').css('minHeight', landingHeight);
 
 
     $('#main-slider').on('slide.bs.carousel', function () {
