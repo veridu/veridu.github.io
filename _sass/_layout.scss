@@ -12,14 +12,26 @@
   }
 }
 
+.no-styled-container {
+	max-width: 948px;
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
 .content-padding {
-	padding-left: 10%;
-	padding-right: 10%;
+
+	max-width: 948px;
+
+	@media (max-width: $screen-xs-max) {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+
 } 
 
 .main-container {
 	@include make-row();
-
 	padding-top: em(61);
 }
 
@@ -36,6 +48,25 @@ body {
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+// main 
+
+.row-sm {
+	@media (min-width: $screen-xs-max) {
+		@include make-row();
+		margin-left: 0;
+		margin-right: 0;
+	}
+}
+
+
+.container-sm {
+	@media (min-width: $screen-xs-max) {
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 948px;
+	}
 }
 
 .veridu {

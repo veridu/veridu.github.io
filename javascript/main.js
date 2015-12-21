@@ -74,6 +74,7 @@
 	}
 
 
+	// Contact controller
 
 	ContactCtrl.$inject = ['$scope'];
 	function ContactCtrl ($scope) {
@@ -111,10 +112,12 @@
 		})
 	})();
 
+	var landingHeight = $(window).height() -  $('.menu').height();
+	$('.landing-section').height(landingHeight);
 
 
     $('#main-slider').on('slide.bs.carousel', function () {
-    	
+    	console.warn('oi');
     });
 
 })($,WOW);

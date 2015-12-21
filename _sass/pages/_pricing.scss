@@ -249,7 +249,11 @@ section.onboarding {
 
 section.contact {
 	background-color: #eee;
-	@extend .content-padding;
+	
+	> div {
+		@extend .content-padding;
+	}
+
 	@include clearfix();
 	padding-bottom: em(70);
 	

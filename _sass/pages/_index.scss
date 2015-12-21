@@ -1,5 +1,7 @@
 // index  page styles
 
+
+
 .progress-container {
 
 	@include clearfix();
@@ -52,6 +54,160 @@ section.verification-container {
 	}
 
 }
+
+.c-white {
+	color: white;
+}
+
+.landing-section {
+
+	@media (min-width: $screen-xs-max) {
+		background-image: url(/img/coworking.jpeg);
+		background-size: 100% 100%;
+		position: relative;
+	}
+
+	p.slider-paragraph {
+		margin-bottom: em(50);
+		line-height: em(20);
+	}
+
+	h1 {
+		&.title-sm {
+			@extend .hidden-xs;
+			font-size: em(45);
+			font-weight: 400;
+			letter-spacing: em(2,50);
+			color: white !important;
+			margin-top: em(40, 50);
+			margin-bottom: em(40, 50);
+
+			span {
+				border-bottom: 2px solid white;
+			}
+		}
+	}
+
+	> div.row-sm {
+		position: relative;
+		z-index: 1;
+	}
+
+	.landing__overlay {
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(black, 0.8);
+	}
+	.slider-progress-container {
+		@media (min-width: $screen-xs-max) {
+			margin-left: -15px;
+			margin-right: -15px;
+			@include make-sm-column(12);
+		}
+	}
+
+	#main-slider {
+		@extend .visible-xs;
+	}
+
+	.progress__customer__picture {
+
+		@extend .hidden-xs;
+
+	}
+
+	
+	.customer-image-container {
+		@extend .hidden-xs;
+		background-color: rgba(black, 0.3);
+
+		img {
+			@extend .img-responsive;
+		}
+
+		@media (min-width: $screen-xs-max) {
+			width: 187.9px;
+			height: 187.9px;
+			background-repeat: no-repeat no-repeat;
+			background-position: left center;
+			@include make-sm-column(3);
+			padding: 0 !important;
+			padding-right: 15px !important;
+		}
+	}
+
+	.progress-container {
+		
+		@include make-sm-column(4);
+
+		@media (min-width: $screen-xs-max) {
+			background-image: none !important;
+			background-color: transparent;
+			padding-top: 0px !important;
+			padding: 0 !important;
+
+			.progress {
+				height: 36.4px;
+
+				.progress-bar {
+					padding: 0.5em !important;
+					padding-left: 0.1em !important;
+					@include opacity(1);
+					p {
+						font-size: 1.1em !important;
+					}
+				}
+			}
+			.white-link {
+				margin-left: 0;
+			}
+
+		}
+	}
+
+	.mycoisas {
+
+		list-style: none;
+
+		li {
+			border: 2px solid $brand-primary;
+			border-radius: 50%;
+			width: 14px;
+			height: 14px;
+			display: inline-block;
+		}
+	}
+
+	.verification-container {
+		@media (min-width: $screen-xs-max) {
+
+			@include make-sm-column(4);
+			padding-top: 0;
+			
+			button {
+				font-size: em(15);
+			}
+
+			background: transparent;
+			.black-link {
+				float: right;
+				color: white !important;
+				border-color: white;
+				&:hover {
+					color: white !important;
+				}
+			}
+			h4 {
+				letter-spacing: em(0.5);
+				color: white;
+			}
+
+		}
+	}
+}
+
 
 section.veridu-list {
 	@include clearfix();
