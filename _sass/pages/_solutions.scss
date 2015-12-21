@@ -1,11 +1,11 @@
 .header {
-	.solutions-submenu {
+	.pricing-submenu {
 		display: none;
 	}
 }
 
-// shows only on solutions page
-.header.solutions {
+// shows only on pricing page
+.header.pricing {
 
 	.veridu-img {
 		display: none;
@@ -14,8 +14,7 @@
 	.id-img {
 		display: inline-block !important;
 	}
-
-	.solutions-submenu {
+	.pricing-submenu {
 
 		background: white;
 		font-weight: bold;
@@ -33,13 +32,14 @@
 			}
 
 			&:first-of-type {
-				display: block !important;
+				display: block;
 			}
 
 			&:hover, &.selected {
 				i {
 					visibility: visible;
 				}
+
 			}
 			display: none;
 		}
@@ -50,6 +50,9 @@
 				display: block !important;
 				&:last-of-type {
 					margin-bottom: em(30);
+				}
+				&:first-of-type {
+					display: none !important;
 				}
 			}
 		}

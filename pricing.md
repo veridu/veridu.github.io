@@ -405,7 +405,7 @@ class: pricing
 
 
 	</section>
-	<section class="contact">
+	<section class="contact" id="CONTACT">
 		<h4>SOMETHING YOU’RE NOT SEEING?</h4>
 		<p class="section__description">
 			Contact us to discuss your specific needs
@@ -441,45 +441,69 @@ class: pricing
 
 	function submitChecks () {
 		var form = $('#form-checks');
-		console.log(form);
+
 	}		
 	
 	function load (){
 
-		bindEvents();
+		$(".menu a").click(handleScroll);
+		$(".dropdown-menu a").click(handleScroll);
 
+		function handleScroll() {
+
+			var id = $(this).attr('data-scrollTo');
+
+			if (id) {
+				$('#pricing-curent-position').text(id.replace('#',''));
+				scrollToHash(id);
+			}
+
+		}
+
+		if (window.location.hash) {
+			scrollToHash(window.location.hash);
+		}
+
+		function scrollToHash (hash) {
+		    $('html, body').animate({
+		        scrollTop: ($(hash).offset().top - 120)
+		    }, 2000);
+		}
+
+
+		(function () {
+				
+			var fixed_header = document.querySelector('.cart-status');
+			var header  =	$('#form-checks')
+
+			window.addEventListener('scroll', function  () {
+
+				var elementPosition  = header.offset();
+				var scrolled 	 = document.documentElement.scrollTop || document.body.scrollTop ;
+
+				//will show
+				if ( scrolled > elementPosition.top ){
+
+					if (fixed_header.style.display != 'block'){
+
+						fixed_header.style.display =  'block';
+
+					} 
+
+				} else { //will hide
+
+					if (fixed_header.style.display != 'none'){
+
+						fixed_header.style.display =  'none';
+
+					} 
+				} 
+			});
+			
+		})();
 
 	}
 
 	document.addEventListener('DOMContentLoaded', load);
 
-	function bindEvents () {
-		
-		var fixed_header = document.querySelector('.cart-status');
-		var header  =	$('#form-checks')
-
-		window.onscroll = function function_name () {
-
-			var elementPosition  = header.offset();
-			var scrolled 	 = document.documentElement.scrollTop || document.body.scrollTop ;
-
-			//will show
-			if ( scrolled > elementPosition.top ){
-
-				if (fixed_header.style.display != 'block'){
-
-					fixed_header.style.display =  'block';
-
-				} 
-
-			} else{ //will hide
-
-				if (fixed_header.style.display != 'none'){
-
-					fixed_header.style.display =  'none';
-
-				} 
-			} 
-		}
-	}
 </script>

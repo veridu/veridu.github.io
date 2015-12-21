@@ -98,7 +98,7 @@ layout: default
             <button class="btn btn-primary btn-lg "> Paypal </button>
         </div> 
 
-        <div class="hidden-integrations">
+        <div ng-show="showHiddenIntegrations">
             <div class="clearfix"></div>
 
             <div class="btn-container right ">
@@ -129,7 +129,8 @@ layout: default
             </div>  
         </div>    
     </div>
-    <a class="black-link" href="javascript:$('.hidden-integrations').show();" >SHOW MORE OPTIONS</a>
+    <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:void(0)" ng-click="showHiddenIntegrations = true" >SHOW MORE OPTIONS</a>
+    <a ng-show="showHiddenIntegrations" class="black-link" href="javascript:void(0)" ng-click="showHiddenIntegrations = false" >SHOW LESS</a>
 
 </section>
 

@@ -68,6 +68,7 @@ body {
 
 	.menu {
 		position: relative;
+		border-bottom: 1px solid transparent;
 		z-index: 1;
 		@include clearfix();
 		padding-bottom: 0.5em;
@@ -124,6 +125,8 @@ body {
 
 			#menu-toggler {
 				cursor: pointer;
+				position: relative;
+				top: -3px;
 				font-size: em(30);
 			}
 
@@ -138,16 +141,18 @@ body {
         transition: all .25s ease-in;
 
         // positioning
-		position: absolute;
+        overflow-y: auto;
+		position: fixed !important;
 		left: -em(15);
 		top: -1000px;
-		background: white;
+		background: white !important;
 
 		&.visible {
-			top: em(61);
+			top: 3.555em;
 			display: table;
+			z-index: 20 !important;
 			width: 100%;
-			height: 100%;
+			height: calc(100% - 3.555em) !important;
 			box-shadow: 0 4px 5px #ccc;
 		}
 

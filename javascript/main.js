@@ -6,6 +6,8 @@
 	var menuToggler  = $('#menu-toggler');
 	var dropdownMenu = $('.dropdown-menu');
 
+	dropdownMenu.find('a').click(toggleMenu);
+
 	menuToggler
 		.click(toggleMenu);
 
@@ -88,7 +90,26 @@
 	}
 
 
+	(function  () {
+		var fixed_header = document.querySelector('.menu');
+		var header  =	$('.menu')
 
+		window.addEventListener('scroll', function () {
+			console.warn('scroll');
+			var scrolled 	 = document.documentElement.scrollTop || document.body.scrollTop ;
+
+			//will show
+			if ( scrolled > 1 ){
+
+				fixed_header.style.border =  '1px solid #eee';
+
+			} else{ //will hide
+
+				fixed_header.style.border =  '1px solid transparent';
+
+			} 
+		})
+	})();
 
 
 
