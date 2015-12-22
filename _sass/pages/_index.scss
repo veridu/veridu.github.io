@@ -28,15 +28,21 @@ section.verification-container {
 	@include clearfix();
 
 	.hidden-verification-container {
-		position: relative;
-		> div {
-			position: absolute;
-			width: 100%;
-			left: 0;
-			top: 0;
+
+	}
+
+	@media (min-width: $screen-sm-min) {
+		.hidden-verification-container {
+			position: relative;
+			> div {
+				position: absolute;
+				width: 100%;
+				left: 0;
+				top: 0;
+			}
 		}
 	}
-	
+
 	padding-left: 10%;
 	padding-right: 10%;
 	padding-top: em(28);
@@ -70,7 +76,7 @@ section.verification-container {
 }
 
 .landing-section {
-
+	
 	@include clearfix();
 
 	.md-indicators {
@@ -344,6 +350,7 @@ section.veridu-list {
 		
 	}
 	&.md-cards {
+		@include clearfix();
 		@extend .tablet__gutter;
 	}
 

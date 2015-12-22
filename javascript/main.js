@@ -119,12 +119,17 @@
 	var menu = $('.menu');
 	var $window = $(window);
 
-	landingSection.css('minHeight', landingHeight);
+	landingSection.css('height', landingHeight);
 	sliderProgressCt.css('top',  - landingHeight * 0.1);
 
 	$window.resize(function() {
 		var landingHeight = $window.height() -  menu.height();
-		landingSection.css('minHeight', landingHeight);		
+		if ($window.width() > 768) {
+			landingSection.css('height', landingHeight);		
+		} else {
+			landingSection.css('height', 'auto');		
+		}
+
 	});
 	
 	angular.module('app').controller('AppCtrl', AppCtrl);
