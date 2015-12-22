@@ -3,3 +3,14 @@ $base-font-size: 15; // Default
 @function em($px, $base: $base-font-size) {
     @return ($px / $base) * 1em;
 }
+
+@mixin col($size, $base: 100%) {
+	float: left;
+    width: ($size * $base  / 12 );
+    padding-left: 8.5px;
+    padding-right: 8.5px;
+}
+
+@mixin col-offset($size, $base: 100%) {
+    margin-left: ($base * $size / 12 ) !important;
+}

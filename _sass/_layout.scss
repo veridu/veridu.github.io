@@ -50,17 +50,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-// main 
-
-.row-sm {
-	@media (min-width: $screen-xs-max) {
-		@include make-row();
-		margin-left: 0;
-		margin-right: 0;
-	}
-}
-
-
 .container-sm {
 	@media (min-width: $screen-xs-max) {
 		margin-left: auto;
@@ -373,7 +362,8 @@ footer {
 
 			section {
 				float: left;
-				margin-right: em(25);
+				width: em(141);
+				margin-right: em(17);
 			}
 		}
 	}
