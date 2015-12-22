@@ -8,7 +8,9 @@
 	
 	border: em(1) solid $brand-primary !important;
 
-	&:hover {
+	&:hover,
+	&:focus,
+	&:active {
 		background: white !important;
 		color: $brand-primary !important;
 	}

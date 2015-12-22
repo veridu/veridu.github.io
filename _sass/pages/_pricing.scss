@@ -229,7 +229,7 @@ section.onboarding {
 	padding-top: em(50);
 	@extend .content-padding;
 	@include clearfix();
-	background: #eee;
+	background: #efefef;
 	
 	ul.products {
 		padding-top: 0 !important;
@@ -243,12 +243,12 @@ section.onboarding {
 	padding-top: em(50);
 	@extend .content-padding;
 	@include clearfix();
-	background-color: #eee;
+	background-color: #efefef;
 
 }
 
 section.contact {
-	background-color: #eee;
+	background-color: #efefef;
 	
 	> div {
 		@extend .content-padding;

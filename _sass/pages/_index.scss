@@ -129,7 +129,7 @@ section.verification-container {
 			margin-bottom: em(40, 50);
 
 			span {
-				border-bottom: 2px solid white;
+				// border-bottom: 2px solid white;
 			}
 		}
 	}
@@ -484,8 +484,11 @@ section.partners-quotes {
 
 		.carousel-nav-left {
 			left:50%;
+
 			margin-left: - 125px;
+			padding: 0 15px;
 			img {
+				width: 12px;
 				-webkit-transform: rotate(180deg);
 				   -moz-transform: rotate(180deg);
 				    -ms-transform: rotate(180deg);
@@ -494,6 +497,10 @@ section.partners-quotes {
 			}
 		}
 		.carousel-nav-right {
+			padding: 0 15px;
+			img {
+				width: 12px;
+			}
 			right:50%;
 			margin-right: - 125px;
 		}
@@ -549,16 +556,21 @@ section.partners-quotes {
 				font-weight: 600;
 			}
 			.carousel-nav-left {
-				top: 25% !important;
+				top: 30% !important;
 				left: 0 !important;
+				img {
+					float: right;
+					width: 40%;
+				}
 				margin-left: 0 !important;
-				font-size: em(70) !important;
 			}
 			.carousel-nav-right {
-				top: 25% !important;
+				top: 30% !important;
 				right: 0 !important;
+				img {
+					width: 40%;
+				}
 				margin-right: 0 !important;
-				font-size: em(70) !important;
 			}
 		}
 	}
