@@ -9,6 +9,7 @@ $base-font-size: 15; // Default
     width: ($size * $base  / 12 );
     padding-left: 8.5px;
     padding-right: 8.5px;
+    min-height: 1px;
 }
 
 @mixin col-offset($size, $base: 100%) {

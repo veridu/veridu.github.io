@@ -112,11 +112,14 @@
 	})();
 
 	// sets landing height to 100%
+	
 	var landingHeight = $(window).height() -  $('.menu').height();
 	$('.landing-section').css('minHeight', landingHeight);
 
-
-
+	$( window ).resize(function() {
+		var landingHeight = $(window).height() -  $('.menu').height();
+		$('.landing-section').css('minHeight', landingHeight);
+	});
 	angular.module('app').controller('AppCtrl', AppCtrl);
 
 	AppCtrl.$inject = ['$scope'];

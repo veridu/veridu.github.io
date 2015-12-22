@@ -98,6 +98,7 @@ section.verification-container {
 	}
 
 	p.slider-paragraph {
+		@include col(12);
 		min-height: em(57);
 		margin-bottom: em(50);
 		line-height: em(20);
@@ -106,6 +107,8 @@ section.verification-container {
 	h1 {
 		&.title-sm {
 			@extend .hidden-xs;
+			@include col(12);
+			padding-left: 5px;
 			font-size: em(45);
 			font-weight: 300;
 			letter-spacing: em(2,50);
