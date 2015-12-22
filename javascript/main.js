@@ -114,12 +114,19 @@
 	// sets landing height to 100%
 	
 	var landingHeight = $(window).height() -  $('.menu').height();
-	$('.landing-section').css('minHeight', landingHeight);
+	var landingSection = $('.landing-section');
+	var sliderProgressCt = $('.slider-progress-container');
+	var menu = $('.menu');
+	var $window = $(window);
 
-	$( window ).resize(function() {
-		var landingHeight = $(window).height() -  $('.menu').height();
-		$('.landing-section').css('minHeight', landingHeight);
+	landingSection.css('minHeight', landingHeight);
+	sliderProgressCt.css('top',  - landingHeight * 0.1);
+
+	$window.resize(function() {
+		var landingHeight = $window.height() -  menu.height();
+		landingSection.css('minHeight', landingHeight);		
 	});
+	
 	angular.module('app').controller('AppCtrl', AppCtrl);
 
 	AppCtrl.$inject = ['$scope'];

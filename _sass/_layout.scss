@@ -158,21 +158,21 @@ body {
 	}
 	.dropdown-menu {
 
-		-webkit-transition: all .25s ease-in;
- 	    -moz-transition: all .25s ease-in;
-	    -ms-transition: all .25s ease-in;
-	    -o-transition: all .25s ease-in;
-        transition: all .25s ease-in;
+		-webkit-transition: top .25s ease-in;
+ 	    -moz-transition: top .25s ease-in;
+	    -ms-transition: top .25s ease-in;
+	    -o-transition: top .25s ease-in;
+        transition: top .25s ease-in;
 
         // positioning
         overflow-y: auto;
 		position: fixed !important;
-		left: -em(15);
-		top: -1000px;
+		top: -2000px !important;
 		background: white !important;
+		width: 100%;
 
 		&.visible {
-			top: 3.555em;
+			top: 3.555em !important;
 			display: table;
 			z-index: 20 !important;
 			width: 100%;
