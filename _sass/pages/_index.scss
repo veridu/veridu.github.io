@@ -6,7 +6,7 @@
 
 	@include clearfix();
 	min-height: em(347);
-	background-image: url(/img/carl2.jpeg) !important;
+	background-image: url(/img/carl2.jpeg);
 	background-repeat: no-repeat !important;
 	background-position: 0px -60px !important;
 
@@ -63,12 +63,31 @@ section.verification-container {
 
 	@include clearfix();
 
+	.md-indicators {
+		li  {
+			border-color: $brand-primary;
+			border-width: 2px;
+			width: em(13);
+			height: em(13);
+			position: relative;
+			bottom: em(100);
+			margin: em(8);
+
+			&.active {
+				margin: em(8);
+				background-color: $brand-primary;
+				border-width: 2px;
+			}
+		}
+	}
+
 	@media (min-width: $screen-xs-max) {
 		display: table;
 		width: 100%;
 		background-image: url(/img/coworking.jpeg);
 		background-size: 100% 100%;
 		position: relative;
+
 	}
 
 	.landing__content {
@@ -79,6 +98,7 @@ section.verification-container {
 	}
 
 	p.slider-paragraph {
+		min-height: em(57);
 		margin-bottom: em(50);
 		line-height: em(20);
 	}
@@ -90,7 +110,7 @@ section.verification-container {
 			font-weight: 300;
 			letter-spacing: em(2,50);
 			color: white !important;
-			margin-top: em(40, 50);
+			margin-top: 0;
 			margin-bottom: em(40, 50);
 
 			span {
@@ -115,9 +135,9 @@ section.verification-container {
 
 	.slider-progress-container {
 		@media (min-width: $screen-xs-max) {
-			margin-left: -15px;
-			margin-right: -15px;
-			@include make-sm-column(12);
+			@include clearfix();
+			z-index: 10;
+			position: relative;
 		}
 	}
 
@@ -145,7 +165,7 @@ section.verification-container {
 				width: 187.9px;
 				height: 187.9px;
 				background-repeat: no-repeat no-repeat;
-				background-position: left center;
+				background-position: center center;
 				padding: 0 !important;
 				padding-right: 15px !important;
 			}
@@ -189,7 +209,7 @@ section.verification-container {
 
 		@media (min-width: $screen-xs-max) {
 			background-image: none !important;
-			background-color: transparent;
+			background-color: transparent !important;
 			padding-top: 0px !important;
 			padding: 0 !important;
 
@@ -267,6 +287,7 @@ section.verification-container {
 
 
 section.veridu-list {
+
 	@include clearfix();
 	padding-top: em(50);
 	padding-left: 10%;
@@ -293,6 +314,36 @@ section.veridu-list {
 			line-height: em(19);
 		}
 		
+	}
+
+	// for desktop
+	@media (min-width: $screen-xs-max) {
+		&.md-cards {
+			max-width: $container-max-width;
+			margin-right: auto;
+			margin-left: auto;
+			padding-right: 0;
+			padding-left: 0;
+
+			padding-top: 0;
+			position: relative;
+			top: - em(70);
+
+			.item-container {
+				@include make-sm-column(4);
+
+				> div {
+					background: white;
+					padding: em(30) em(40);
+					height: em(229);
+					border-bottom: 4px solid #CFCFCF;
+					h3 {
+						letter-spacing: em(1, 25);
+					}
+				}
+			
+			}
+		}
 	}
 }
 
@@ -325,6 +376,46 @@ section.rasmus-quote {
 		}
 	}
 
+	// desktop styles
+
+	@media (min-width: $screen-xs-max) {
+
+		background-image: url(/img/rasmus-big.jpg);
+		background-repeat: no-repeat no-repeat;
+		background-position: right -80px !important ;
+		height: em(468);
+		background-size: 110% !important;
+		padding-top: em(41);
+
+		> div {
+			width: 100% !important;
+			padding: 0 15px !important; 
+			float: none !important;
+			max-width: $container-max-width !important;
+			margin-left: auto;
+			margin-right: auto;
+
+			h4, p {
+				text-align: left !important;
+			}
+
+			h4 {
+				margin-right: 20%;
+				margin-top: em(40) !important;
+				font-size: em(36.91) !important;
+				letter-spacing: em(1.3, 36.91);
+				line-height: em(50, 36.91);
+				font-weight: 300;
+				margin-bottom: em(19);
+			}
+			p {
+				font-weight: 400;
+				font-size: em(15);
+				letter-spacing: em(1.7);
+				line-height: em(20, 15);
+			}
+		}
+	}
 }
 
 section.partners-quotes {
@@ -380,13 +471,74 @@ section.partners-quotes {
 			}
 		}
 	}
+
+
+	// desktop styles
+
+	@media (min-width: $screen-xs-max) { 
+
+		.carousel-inner {
+			.item {
+
+				height: em(300);
+				max-width: 100% !important;
+			}
+			max-width: $container-max-width;
+			margin-right: auto;
+			margin-left: auto;
+			
+			.quoted-from-container {
+				font-weight: 600;
+			}
+			.carousel-nav-left {
+				top: 25% !important;
+				left: 0 !important;
+				margin-left: 0 !important;
+				font-size: em(70) !important;
+			}
+			.carousel-nav-right {
+				top: 25% !important;
+				right: 0 !important;
+				margin-right: 0 !important;
+				font-size: em(70) !important;
+			}
+		}
+	}
 }
 
+section.integration {
+
+	// desktop styles
+
+	@media (min-width: $screen-xs-max) { 
+		background: white;
+		padding-top: em(69) !important;
+		.items-container {
+			
+			@include clearfix();			
+			margin-bottom: em(69);
+
+			.item-container {
+				float: left;
+				margin-bottom: 0 !important;
+				width: 25%;
+				margin-right: 8%;
+				height: 200px; 
+			}
+		}
+	}
+}
 section.integration,
 section.contact {
 	@include clearfix();
 	padding-top: em(50);
 
+	> div {
+		max-width: $container-max-width;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
 	h2 {
 		margin-top: 0;
 		font-size: em(36);
@@ -394,9 +546,66 @@ section.contact {
 		line-height: em(33, 36);
 	}
 
+	// desktop styles
+	@media (min-width: $screen-xs-max) { 
+
+		padding-top: em(69) !important;
+		padding-left: 0 !important;
+		padding-right: 0 !important;
+
+		h2 {
+			margin-bottom: em(69, 36) !important;
+			line-height: em(33, 36);
+		}
+
+	}
 }
 
 section.contact {
 	padding-left: 10%;
 	background-color: #F8F8F8;
+
+	// desktop styles
+	@media (min-width: $screen-xs-max) { 
+
+		padding-bottom: em(75) !important;
+
+		.form-horizontal {
+			position: relative;
+			display: table;
+
+			.input-container {
+				display: inline-block;
+
+				input {
+					width: em(250);
+				}
+				textarea {
+					width: em(607)
+				}
+
+				&.email {
+					input {
+						width: em(515);
+					}
+				}
+				
+				margin-right: em(15); 
+
+
+			}
+
+			.submit {
+				position: absolute;
+				right: 0;
+				top: 0;
+				button {
+					padding: em(28) 0;
+					width: em(77);
+				}
+			}
+		}
+
+	}
+
 }

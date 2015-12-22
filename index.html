@@ -13,9 +13,11 @@ layout: default
                         <ol class="carousel-indicators">
                             <li data-target="#main-slider" data-slide-to="0" class="active"></li>
                             <li data-target="#main-slider" data-slide-to="1" class=""></li>
+                            <li data-target="#main-slider" data-slide-to="2" class=""></li>
+                            <li data-target="#main-slider" data-slide-to="3" class=""></li>
                         </ol>
                         <div class="carousel-inner">
-                            <div class="item active">
+                            <div class="item active" data-index="0">
                                 <div class="overlay"></div>
                                 <div class="container">
                                     <div class="carousel-caption">
@@ -23,59 +25,94 @@ layout: default
                                     </div>
                                 </div>
                             </div>
-                            <div class="item">
+                            <div class="item" data-index="1">
                                 <div class="overlay"></div>
                                 <div class="container">
                                     <div class="carousel-caption">
-                                        <h1 class="text-left">Know Your Customer</h1>
+                                        <h1 class="text-left">Know Your Customer 2</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-index="2">
+                                <div class="overlay"></div>
+                                <div class="container">
+                                    <div class="carousel-caption">
+                                        <h1 class="text-left">Know Your Customer 3</h1>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item" data-index="3">
+                                <div class="overlay"></div>
+                                <div class="container">
+                                    <div class="carousel-caption">
+                                        <h1 class="text-left">Know Your Customer 4</h1>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="row-sm">
-                        <h1 class="title-sm">Know Your <span>Customer</span></h1>  
-                        <p class="slider-paragraph c-white hidden-xs">
+                        <h1 class="title-sm">Know Your 
+                            <span ng-show=" App.slider.state() == 'customer-1' " class="animated flipInX">Customer</span>
+                            <span ng-show=" App.slider.state() == 'customer-2' " class="animated flipInX">Customer 2</span>
+                            <span ng-show=" App.slider.state() == 'customer-3' " class="animated flipInX">Customer 3</span>
+                            <span ng-show=" App.slider.state() == 'customer-4' " class="animated flipInX">Customer 4</span>
+                        </h1>  
+                        
+                        <p ng-show=" App.slider.state() == 'customer-1' " class="animated fadeIn slider-paragraph c-white hidden-xs">
                             Put a face on it. Veridu brings trust to the internet <br>
                             with consent-driven social identity verification solutions. <br>
                             Know your user better, and for less.
                         </p>
-                    </div>
+                        <p ng-show=" App.slider.state() == 'customer-2' " class="animated fadeIn slider-paragraph c-white hidden-xs">
+                            Put a face on it. Veridu brings trust to the internet. <br>
+                            Know your user better, and for less.
+                        </p>
+                        <p ng-show=" App.slider.state() == 'customer-3' " class="animated fadeIn slider-paragraph c-white hidden-xs">
+                            Put a face on it. Veridu brings trust to the internet <br>
+                            with consent-driven social identity verification solutions. <br>
+                        </p>
+                        <p ng-show=" App.slider.state() == 'customer-4' " class="animated fadeIn slider-paragraph c-white hidden-xs">
+                            Put a face on it. Veridu brings trust to the internet. 
+                        </p>
 
+                    </div>
                     <div class="row-sm">                        
                         <div class="customer-image-container">
-                            <div class="customer__image" style="background-image: url(/img/carl1.png)"></div>
+                            <div ng-show="App.slider.state() == 'customer-1'" class="animated fadeIn customer__image" style="background-image: url(/img/carl1.png);"></div>
+                            <div ng-show="App.slider.state() == 'customer-2'" class="animated fadeIn customer__image" style="background-image: url(/img/rasmus.jpg); background-position: left top;"></div>
+                            <div ng-show="App.slider.state() == 'customer-3'" class="animated fadeIn customer__image" style="background-image: url(/img/magalie.jpg);"></div>
+                            <div ng-show="App.slider.state() == 'customer-4'" class="animated fadeIn customer__image" style="background-image: url(/img/carl2.jpeg);"></div>
                             <a class="white-link" href="#">
                                 <span class="white-bottom-border"><small>£</small> <span class="big">0,086</span> / CHECK</span>
                             </a>
                         </div>
-                        <section class="progress-container">
+                        <section class="progress-container" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgStyle})">
                             <h4 class="hidden-xs">CREDIBILITY</h4>
 
                             <div class="progress">
-                              <div class="progress-bar" role="progressbar" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100" style="width: 68%;">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="({ App.slider.status().hoursPercent })" aria-valuemin="0" aria-valuemax="100" style="width: ({App.slider.status().hoursPercent})%;">
                                 <p>
-                                    +2563 hours to fake
+                                    +({App.slider.status().hours}) hours to fake
                                     <span class="attributeValue"></span>
                                 </p>
                               </div>
                             </div>
                             
                             <div class="progress" >
-                              <div class="progress-bar" role="progressbar" aria-valuenow="58" aria-valuemin="0" aria-valuemax="100" style="width: 58%;">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="({App.slider.status().namePercent})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.slider.status().namePercent})%;">
                                 <p>
-                                    Carl Ejlers
-                                    <span class="attributeValue">58%</span>
+                                    ({App.slider.status().name})
+                                    <span class="attributeValue">({App.slider.status().namePercent})%</span>
                                 </p>
                               </div>
                             </div>
 
                             <div class="progress" >
-                              <div class="progress-bar" role="progressbar" aria-valuenow="52" aria-valuemin="0" aria-valuemax="100" style="width: 52%;">
+                              <div class="progress-bar" role="progressbar" aria-valuenow="({App.slider.status().sexPercent})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.slider.status().sexPercent})%;">
                                 <p>
-                                    Male
-                                    <span class="attributeValue">52%</span>
+                                    ({App.slider.status().sex})
+                                    <span class="attributeValue">({App.slider.status().sexPercent})%</span>
                                 </p>
                               </div>
                             </div>
@@ -115,7 +152,7 @@ layout: default
                                     <button class="btn btn-primary btn-lg "> Paypal </button>
                                 </div> 
 
-                                <div ng-show="showHiddenIntegrations">
+                                <div ng-show="showHiddenIntegrations" class="animated fadeIn">
                                     <div class="clearfix"></div>
 
                                     <div class="btn-container right ">
@@ -151,36 +188,48 @@ layout: default
                         </section>
 
                     </div>
-
                 </div>
             </div>    
-        </div>                
+        </div>
+        <ol class="carousel-indicators md-indicators hidden-xs">
+            <li data-target="#main-slider" data-slide-to="0" ng-class="{active : App.slider.index == 0}"></li>
+            <li data-target="#main-slider" data-slide-to="1" ng-class="{active : App.slider.index == 1}"></li>
+            <li data-target="#main-slider" data-slide-to="2" ng-class="{active : App.slider.index == 2}"></li>
+            <li data-target="#main-slider" data-slide-to="3" ng-class="{active : App.slider.index == 3}"></li>
+        </ol> 
+
     </div>
 
 </div>
 
-<section class="veridu-list">
+<section class="veridu-list md-cards">
         
     <div class="item-container">
-        <h3>GLOBAL ID VERIFICATION</h3>
-        <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
+        <div>
+            <h3>GLOBAL ID VERIFICATION</h3>
+            <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
+        </div>
     </div>
 
     <div class="item-container">
-        <h3>GREATER INSIGHT</h3>
-        <p>Automate more fraud decisions and reduce time spent on manuel reviews with better tools and user insight.</p>
+        <div>
+            <h3>GREATER INSIGHT</h3>
+            <p>Automate more fraud decisions and reduce time spent on manuel reviews with better tools and user insight.</p>
+        </div>
     </div>
     
     <div class="item-container">
-        <h3>GAIN INSIGHT</h3>
-        <p>Break down trust barriers show your commitment to keeping your members and their possessions safe.</p>
+        <div>
+            <h3>GAIN INSIGHT</h3>
+            <p>Break down trust barriers show your commitment to keeping your members and their possessions safe.</p>
+        <div>
     </div>
 
 </section>
 
 <section class="rasmus-quote">
     <div>
-        <h4>"We bring trust to the internet"</h4>
+        <h4>"We bring trust to <br class="hidden-xs"> the internet"</h4>
         <p>
             RASMUS GROTH,
             CEO, VERIDU
@@ -202,7 +251,7 @@ layout: default
                         <p>Veridu easily integrates with online marketplaces - classifieds, tasks services etc - to provide "ID Verified" and "Trustworthy" profile badges for members"</p>
                         <div class="quoted-from-container">
                             <small>
-                                TEJINDER RAI SINGH,<br>
+                                TEJINDER RAI SINGH,<br class="visible-xs">
                                 CEO, SOOQUINI.COM
                             </small>
                         </div>
@@ -215,7 +264,7 @@ layout: default
                         <p>Veridu easily integrates with online marketplaces - classifieds, tasks services etc - to provide "ID Verified" and "Trustworthy" profile badges for members"</p>
                         <div class="quoted-from-container">
                             <small>
-                                TEJINDER RAI SINGH,<br>
+                                TEJINDER RAI SINGH,<br class="visible-xs">
                                 CEO, SOOQUINI.COM
                             </small>
                         </div>
@@ -227,55 +276,62 @@ layout: default
 </section>
 
 <section class="integration veridu-list">
-    <h2 class="font-light">Integration</h2>    
+    <div>
+        <h2 class="font-light">Integration</h2>    
         
-    <div class="item-container">
-        <h3>HOSTED</h3>
-        <p>Simply send users an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is.</p>
-    </div>
+        <div class="items-container">
+            
+            <div class="item-container">
+                <h3>HOSTED</h3>
+                <p>Simply send users an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is.</p>
+            </div>
 
-    <div class="item-container">
-        <h3>WIDGETS</h3>
-        <p>Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.</p>
+            <div class="item-container">
+                <h3>WIDGETS</h3>
+                <p>Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.</p>
+            </div>
+            
+            <div class="item-container">
+                <h3>API</h3>
+                <p>Get creative! Our API gives you complete flexibility to customise the look and flow of your identity solution for a seamless user experience completely tailored to your needs.</p>
+            </div>
+        </div>
     </div>
-    
-    <div class="item-container">
-        <h3>API</h3>
-        <p>Get creative! Our API gives you complete flexibility to customise the look and flow of your identity solution for a seamless user experience completely tailored to your needs.</p>
-    </div>
-
 </section>
 
 <section class="contact veridu-list" ng-controller="ContactCtrl as ctrl">
+    <div>
+        <h2 class="font-light">Contact <span class="hidden-xs">us</span></h2>
 
-    <h2 class="font-light">Contact</h2>
+        <p class="section__description visible-xs">
+            Contact us to discuss your specific needs
+        </p>
 
-    <p class="section__description">
-        Contact us to discuss your specific needs
-    </p>
+        <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">        
 
-    <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">        
+                <div class="input-container name">
+                    <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name"> 
+                </div>
 
-            <div class="input-container">
-                <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name"> 
-            </div>
+                <div class="input-container company">
+                    <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">    
+                </div>
+                <div class="clearfix hidden-xs"></div>
 
-            <div class="input-container">
-                <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">    
-            </div>
+                <div class="input-container email">
+                    <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">    
+                </div>              
+                <div class="clearfix hidden-xs"></div>
 
-            <div class="input-container">
-                <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">    
-            </div>              
-
-            <div class="input-container">
-                <textarea rows="5" ng-model="ctrl.contact.message" name="message" type="text" placeholder="Message"></textarea>
-            </div>              
-    
-            <div class="input-container text-right">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-    </form>
+                <div class="input-container message">
+                    <textarea rows="5" ng-model="ctrl.contact.message" name="message" type="text" placeholder="Message"></textarea>
+                </div>              
+        
+                <div class="input-container text-right submit">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+        </form>        
+    </div>
 </section>
 
 <!-- ras-quote

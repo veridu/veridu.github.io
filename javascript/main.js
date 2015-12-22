@@ -20,7 +20,9 @@
 	}
 
 
-	var app = angular.module('app', []);
+	var app = angular.module('app', []).config(function($interpolateProvider){
+    	$interpolateProvider.startSymbol('({').endSymbol('})');	
+	});
 	app.controller('CartCtrl', CartCtrl);
 	app.controller('ContactCtrl', ContactCtrl);
 
@@ -43,11 +45,9 @@
 				vm.total = (vm.items.reduce(function (a,b) {
 									return {value: a.value + b.value};
 								}, {value: 0})).value;
-				console.log(vm.total);
 			} else {
 				vm.total = 0;
 			}
-				console.log(vm.items);
 
 		}, true);
 
@@ -90,13 +90,12 @@
 
 	}
 
-
+	// menu border
 	(function  () {
 		var fixed_header = document.querySelector('.menu');
 		var header  =	$('.menu')
 
 		window.addEventListener('scroll', function () {
-			console.warn('scroll');
 			var scrolled 	 = document.documentElement.scrollTop || document.body.scrollTop ;
 
 			//will show
@@ -112,12 +111,95 @@
 		})
 	})();
 
+	// sets landing height to 100%
 	var landingHeight = $(window).height() -  $('.menu').height();
 	$('.landing-section').css('minHeight', landingHeight);
 
 
-    $('#main-slider').on('slide.bs.carousel', function () {
-    	console.warn('oi');
-    });
+
+	angular.module('app').controller('AppCtrl', AppCtrl);
+
+	AppCtrl.$inject = ['$scope'];
+	function AppCtrl ($scope) {
+
+		var vm = this;
+
+
+		init();
+		function init () {
+			
+
+			vm.slider = {
+				index : 0,
+				state: function(){ return vm.mainSliderStates[this.index]},
+				status: function(){ return vm.progressStatuses[this.index]},
+			};
+
+
+		    var i;
+
+		    $('#main-slider').on('slide.bs.carousel', function (slider) {
+		    	$scope.$apply(function () {
+		    		vm.slider.index = $(slider.relatedTarget).attr('data-index');
+		    	});
+		    });
+
+
+			vm.mainSliderStates = [ 
+				'customer-1',
+				'customer-2',
+				'customer-3',
+				'customer-4'
+			];
+
+			vm.progressStatuses = [ 
+				{
+					hours: 2263,
+					hoursPercent: 68,
+					name: 'Carl Ejlers',
+					namePercent: 48,
+					img: '/img/carl2.jpeg',
+					imgStyle: '',
+					sex: 'Male',
+					sexPercent: 62,
+					birth: 49
+				},
+				{
+					hours: 2563,
+					hoursPercent: 78,
+					name: 'Rasmus Groth',
+					img: '/img/rasmus-big-fliph.jpg',
+					imgStyle: 'background-position: left top !important;',
+					namePercent: 78,
+					sex: 'Male',
+					sexPercent: 72,
+					birth: 59
+				},
+				{
+					hours: 2063,
+					hoursPercent: 58,
+					name: 'Magalie Pimentel',
+					img: '/img/magalie.jpg',
+					imgStyle: 'background-position: right center !important; background-color:white;',
+					namePercent: 68,
+					sex: 'Female',
+					sexPercent: 52,
+					birth: 49
+				},
+				{
+					hours: 3563,
+					hoursPercent: 82,
+					name: 'Carl Ejlers',
+					namePercent: 80,
+					img: '/img/carl1.png',
+					imgStyle: 'background-position: right center !important; background-color:white;',
+					sex: 'Male',
+					sexPercent: 72,
+					birth: 89
+				},
+			];
+
+		}
+	}
 
 })($,WOW);

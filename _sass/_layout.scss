@@ -13,14 +13,14 @@
 }
 
 .no-styled-container {
-	max-width: 948px;
+	max-width: $container-max-width;
 	margin-left: auto !important;
 	margin-right: auto !important;
 }
 
 .content-padding {
 
-	max-width: 948px;
+	max-width: $container-max-width;
 
 	@media (max-width: $screen-xs-max) {
 		padding-left: 10%;
@@ -65,7 +65,7 @@ body {
 	@media (min-width: $screen-xs-max) {
 		margin-left: auto;
 		margin-right: auto;
-		max-width: 948px;
+		max-width: $container-max-width;
 	}
 }
 
@@ -161,7 +161,7 @@ body {
 				font-size: em(30);
 
 				@media (min-width: $screen-xs-max) {
-					display: none;
+					// display: none;
 				}
 			}
 
@@ -354,4 +354,29 @@ footer {
 	li {
 		font-weight: 300;
 	}
+
+	// for desktop
+	@media (min-width: $screen-xs-max) {
+		margin-bottom: 0 !important;
+		padding-left: 0 !important;
+
+		padding-bottom: em(65);
+
+		background: white;
+		@include make-row();
+
+		> div {
+			@include clearfix();
+			max-width: $container-max-width;
+			margin-left: auto !important;
+			margin-right: auto !important;
+
+			section {
+				float: left;
+				margin-right: em(25);
+			}
+		}
+	}
+
 }
+

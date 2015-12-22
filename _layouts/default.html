@@ -6,7 +6,7 @@
 <body class="container-fluid" ng-app="app">
 	{% include header.html %}
 
-	<div class="main-container main-container-{{ page.class }}">
+	<div class="main-container main-container-{{ page.class }}" ng-controller="AppCtrl as App">
 		{{ content }}
 	</div>
 
