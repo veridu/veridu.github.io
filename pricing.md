@@ -461,10 +461,12 @@ class: pricing
 		}
 
 		if (window.location.hash) {
-			scrollToHash(window.location.hash);
+			scrollToHash(window.location.hash, 1000);
 		}
 
-		function scrollToHash (hash) {
+		function scrollToHash (hash, speed) {
+			if (! speed) speed = 2000;
+			
 		    $('html, body').animate({
 		        scrollTop: ($(hash).offset().top - 120)
 		    }, 2000);

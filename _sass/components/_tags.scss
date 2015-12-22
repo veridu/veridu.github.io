@@ -2,10 +2,11 @@
 
 .tag {
 	@extend .btn;
+
 	font-size: em(10);
 	color: white !important;
 	margin-bottom: em(10, 10);
-	margin-right: em(10, 10);
+	margin-right: em(7, 10);
 	padding: em(6,10) em(9,10);
 	line-height: em(12,10);
 	letter-spacing: em(0.9, 10);
@@ -14,33 +15,33 @@
 		color: inherit;
 	}
 
-	&.tag--blue {
+	&.tag--sectors {
 		background-color: #311B91;	
 	}
 
-	&.tag--purple {
+	&.tag--partner {
 		background-color: #7D57C1
 	}
 
-	&.tag--green {
+	&.tag--sources {
 		background-color: #8BC34A
 	}
 
-	&.tag--bluegreen {
+	&.tag--scores {
 		background-color: #009687
 	}
 
-	&.tag--grey {
+	&.tag--integration {
 		background-color: #9E9E9E
 	}
 
 	&.tag--lightbluegreen {
 		background-color: #009687
 	}
-	&.tag--red {
+	&.tag--warning {
 		background-color: #FF5721
 	}
-	&.tag--lightpurple {
+	&.tag--usecases {
 		background-color: #B39DDA
 	}
 }

@@ -174,9 +174,10 @@
 					name: 'Carl Ejlers',
 					namePercent: 48,
 					img: '/img/carl2.jpeg',
-					imgStyle: '',
+					imgStyle: 'background-size: 140% auto;',
 					sex: 'Male',
 					sexPercent: 62,
+					verified: true,
 					birth: 49
 				},
 				{
@@ -188,6 +189,7 @@
 					namePercent: 78,
 					sex: 'Male',
 					sexPercent: 72,
+					verified: false,
 					birth: 59
 				},
 				{
@@ -199,6 +201,7 @@
 					namePercent: 68,
 					sex: 'Female',
 					sexPercent: 52,
+					verified: false,
 					birth: 49
 				},
 				{
@@ -210,6 +213,7 @@
 					imgStyle: 'background-position: right center !important; background-color:white;',
 					sex: 'Male',
 					sexPercent: 72,
+					verified: true,
 					birth: 89
 				},
 			];

@@ -72,8 +72,15 @@
 
 	.solution__item {
 		height: em(413);
+
+		&#sectors-tabs {
+			height: em(250);
+		}
+	
 		background-image: url(/img/coworking.jpeg);
 		background-repeat: no-repeat no-repeat;
+		background-size: 250%;
+		background-position: center center;
 		position: relative;
 		
 		&.solution__item__notfirst {
@@ -82,7 +89,9 @@
 
 
 		.solution__item_description {
+			font-size: em(14);
 			line-height: em(22);
+
 		}
 
 		.solution__item__content{			
@@ -117,6 +126,13 @@
 
 	.panel-controls {
 		@include clearfix();
+
+		&.panel-controls--purple {
+			> div {
+				background: #7E57C2;
+			}
+		}
+
 		> div {
 			cursor: pointer;
 			width: 50%;
@@ -135,7 +151,7 @@
 			line-height: em(22, 16);
 
 			&:hover, &.selected {
-				background: transparent;
+				background: white;
 				color: black;
 			}
 		}

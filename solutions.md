@@ -1,5 +1,5 @@
 ---
-title: Sectors
+title: Solutions
 layout: blank
 class: solutions
 description: What company doesn't want to know their users better? These are just some of the sectors we work with so if you don't see yours listed get in touch, we love to talk.
@@ -14,69 +14,35 @@ description: What company doesn't want to know their users better? These are jus
 	</section>
 
 
-	<section class="solution__item">
-		<div class="solution__item__content">
-			<h2 ng-show="ctrl.sectorsTabs.active == 'payments'" class="solution__item__title">Payments</h2>
-			<h2 ng-show="ctrl.sectorsTabs.active == 'recruiting'" class="solution__item__title">Recruiting</h2>
-			<h2 ng-show="ctrl.sectorsTabs.active == 'p2p'" class="solution__item__title">Peer to Peer</h2>
-			<h2 ng-show="ctrl.sectorsTabs.active == 'real_estate'" class="solution__item__title">Real Estate</h2>
-			  <p class="solution__item_description">Verify identity better globally. Decline fewer transactions. Improve user experience.
-			</p>
-			<div class="solution__item__tags__container">
-				<div ng-show="ctrl.sectorsTabs.active == 'payments'">
-					<div class="tag tag--purple">World Pay</div>
-					<div class="tag tag--purple">PayFriendz</div>
-					<div class="tag tag--purple">ZipMoney</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--green">Social Media & Online Services</div>
-					<div class="tag tag--green">Knowledge-based Authentication</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--bluegreen">Contact Info</div>
-					<div class="tag tag--bluegreen">Age</div>
-					<div class="tag tag--bluegreen">Insight</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--grey">API</div>
-				</div>
-				<div  ng-show="ctrl.sectorsTabs.active == 'recruiting'">
-					<div class="tag tag--purple">World Pay</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--green">Knowledge-based Authentication</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--bluegreen">Contact Info</div>
-					<div class="tag tag--bluegreen">Insight</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--grey">API</div>
-				</div>
-				<div  ng-show="ctrl.sectorsTabs.active == 'p2p'">
-					<div class="tag tag--purple">World Pay</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--green">Social Media & Online Services</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--bluegreen">Contact Info</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--grey">API</div>
-				</div>
-				<div  ng-show="ctrl.sectorsTabs.active == 'real_estate'">
-					<div class="tag tag--purple">ZipMoney</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--green">Social Media & Online Services</div>
-					<div class="tag tag--green">Knowledge-based Authentication</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--bluegreen">Contact Info</div>
-					<div class="tag tag--bluegreen">Age</div>
-					<div class="tag tag--bluegreen">Insight</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--grey">API</div>
-				</div>
+	<section id="sectors-tabs" class="solution__item">
+		<div class="solution__item__content">			
+			<div ng-show="ctrl.sectorsTabs.active == 'payments'" >
+				<h2  class="solution__item__title">Payments</h2>
+				<p class="solution__item_description">Verify identity better globally. Decline fewer transactions. Improve user experience.</p>
 			</div>
+
+			<div ng-show="ctrl.sectorsTabs.active == 'p2p'">
+				<h2  class="solution__item__title">Peer to Peer</h2>
+				<p class="solution__item_description">Build trust. Drive community engagement. Put members in control.</p>
+			</div>
+
+			<div ng-show="ctrl.sectorsTabs.active == 'recruiting'">
+				<h2  class="solution__item__title">Recruiting</h2>
+				<p class="solution__item_description">Enhance candidate vetting. Identify the superstars. Make clients happy.</p>
+			</div>
+
+			<div ng-show="ctrl.sectorsTabs.active == 'real_estate'">
+				<h2  class="solution__item__title">Real Estate</h2>
+				<p class="solution__item_description">Build a trusted business. Keep customers safe. Identify, vet and put a face on viewers.</p>
+			</div>			
 		</div>
 	</section>
 	<div class="panel-controls">
 
-		<div ng-class="{selected : ctrl.sectorsTabs.active == 'payments'}" ng-click="ctrl.sectorsTabs.active = 'payments'">PAYMENTS</div>
-		<div ng-class="{selected : ctrl.sectorsTabs.active == 'recruiting'}" ng-click="ctrl.sectorsTabs.active = 'recruiting'">RECRUITING</div>
-		<div ng-class="{selected : ctrl.sectorsTabs.active == 'p2p'}" ng-click="ctrl.sectorsTabs.active = 'p2p'">PEER TO PEER</div>
-		<div ng-class="{selected : ctrl.sectorsTabs.active == 'real_estate'}" ng-click="ctrl.sectorsTabs.active = 'real_estate'">REAL ESTATE</div>
+		<div ng-class="{selected : ctrl.sectorsTabs.active == 'payments'}" ng-click="ctrl.setActive('sectors', 'payments')">PAYMENTS</div>
+		<div ng-class="{selected : ctrl.sectorsTabs.active == 'recruiting'}" ng-click="ctrl.setActive('sectors', 'recruiting')">RECRUITING</div>
+		<div ng-class="{selected : ctrl.sectorsTabs.active == 'p2p'}" ng-click="ctrl.setActive('sectors', 'p2p')">PEER TO PEER</div>
+		<div ng-class="{selected : ctrl.sectorsTabs.active == 'real_estate'}" ng-click="ctrl.setActive('sectors', 'real_estate')">REAL ESTATE</div>
 		
 	</div>
 
@@ -88,75 +54,79 @@ description: What company doesn't want to know their users better? These are jus
 	</section>
 
 
-	<section class="solution__item solution__item__notfirst">
+	<section id="partners-tabs" class="solution__item solution__item__notfirst">
 		<div class="solution__item__content solution__item__content--purple">
-			<h2 ng-show="ctrl.partnersTabs.active == 'payfriendz'" class="solution__item__title">Payfriendz</h2>
-			<h2 ng-show="ctrl.partnersTabs.active == 'recruiting'" class="solution__item__title">Recruiting</h2>
-			<h2 ng-show="ctrl.partnersTabs.active == 'p2p'" class="solution__item__title">Peer to Peer</h2>
-			<h2 ng-show="ctrl.partnersTabs.active == 'real_estate'" class="solution__item__title">Real Estate</h2>
-			<p class="solution__item_description" ng-show="ctrl.partnersTabs.active == 'payfriendz'">
-				Payfriendz is a mobile app to transfer money between friends. <br> 
-				What do they use Veridu for? <br>
-				<a href="#" class="white-link">READ MORE</a>
-			</p>
-			<p class="solution__item_description" ng-show="ctrl.partnersTabs.active == 'recruiting'">Recruiting
-			  Enhance candidate vetting. Identify the superstars. Make clients happy. <br>
-				<a href="#" class="white-link">READ MORE</a>
-			</p>
-			<p class="solution__item_description" ng-show="ctrl.partnersTabs.active == 'p2p'">Peer to Peer</p>
-			<p class="solution__item_description" ng-show="ctrl.partnersTabs.active == 'real_estate'">Real Estate</p>
+						
+			<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
+				<h2 class="solution__item__title">Payfriendz</h2>			
+				<p class="solution__item_description" >
+					Payfriendz is a mobile app to transfer money between friends. <br> 
+					What do they use Veridu for? <br>
+					<a href="#" class="white-link">READ MORE</a>
+				</p>
+			</div>
+			<div ng-show="ctrl.partnersTabs.active == 'durise'">
+				<h2 class="solution__item__title">Durise</h2>			
+				<p class="solution__item_description" >
+					Durise is a Dubai based real estate crowdfunding platform. <br> 
+					What do they use Veridu for? <br>
+					<a href="#" class="white-link">READ MORE</a>
+				</p>
+			</div>
+			<div ng-show="ctrl.partnersTabs.active == 'real_asset'">
+				<h2 class="solution__item__title">Real Asset Company</h2>			
+				<p class="solution__item_description" >
+					The Real Asset Company is an innovative gold investment platform with its own cryptocurrency. <br>
+					What do they use Veridu for? <br>
+					<a href="#" class="white-link">READ MORE</a>
+				</p>
+			</div>
 			<div class="solution__item__tags__container">
 				<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
-					<div class="tag tag--blue">Payments</div>
+					<div class="tag tag--sectors">Payments</div>
 					<div class="clearfix"></div>			
-					<div class="tag tag--green">Social Media & Online Services</div>
-					<div class="tag tag--green">Knowledge-based Authentication</div>
+					<div class="tag tag--sources">Social Media & Online Services</div>
 					<div class="clearfix"></div>			
-					<div class="tag tag--bluegreen">Contact Info</div>
-					<div class="tag tag--bluegreen">Age</div>
-					<div class="tag tag--bluegreen">Insight</div>
+					<div class="tag tag--scores">Contact Info</div>
+					<div class="tag tag--scores">Insight</div>
 					<div class="clearfix"></div>			
-					<div class="tag tag--grey">API</div>
+					<div class="tag tag--partner">Payfriendz</div>
 				</div>
-				<div  ng-show="ctrl.partnersTabs.active == 'recruiting'">
-					<div class="tag tag--purple">World Pay</div>
+				<div  ng-show="ctrl.partnersTabs.active == 'durise'">
+					<div class="tag tag--sectors">Peer to Peer</div>
+					<div class="tag tag--sectors">Real Estate</div>
 					<div class="clearfix"></div>			
-					<div class="tag tag--green">Knowledge-based Authentication</div>
+					<div class="tag tag--sources">Social Media & Online Services</div>
+					<div class="tag tag--sources">Email</div>
+					<div class="tag tag--sources">SMS</div>
+					<div class="tag tag--sources">Knowledge-based Authentication</div>
 					<div class="clearfix"></div>			
-					<div class="tag tag--bluegreen">Contact Info</div>
-					<div class="tag tag--bluegreen">Insight</div>
+					<div class="tag tag--scores">Contact Info</div>
+					<div class="tag tag--scores">Age</div>
 					<div class="clearfix"></div>			
-					<div class="tag tag--grey">API</div>
+					<div class="tag tag--partner">Durise</div>
 				</div>
-				<div  ng-show="ctrl.partnersTabs.active == 'p2p'">
-					<div class="tag tag--purple">World Pay</div>
+				<div  ng-show="ctrl.partnersTabs.active == 'real_asset'">
+					<div class="tag tag--sectors">Payments</div>
 					<div class="clearfix"></div>			
-					<div class="tag tag--green">Social Media & Online Services</div>
+					<div class="tag tag--sources">Social Media & Online Services</div>
+					<div class="tag tag--sources">Email</div>
+					<div class="tag tag--sources">SMS</div>
+					<div class="tag tag--sources">Knowledge-based Authentication</div>
 					<div class="clearfix"></div>			
-					<div class="tag tag--bluegreen">Contact Info</div>
+					<div class="tag tag--scores">Contact Info</div>
+					<div class="tag tag--scores">Age</div>
 					<div class="clearfix"></div>			
-					<div class="tag tag--grey">API</div>
-				</div>
-				<div  ng-show="ctrl.partnersTabs.active == 'real_estate'">
-					<div class="tag tag--purple">ZipMoney</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--green">Social Media & Online Services</div>
-					<div class="tag tag--green">Knowledge-based Authentication</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--bluegreen">Contact Info</div>
-					<div class="tag tag--bluegreen">Age</div>
-					<div class="tag tag--bluegreen">Insight</div>
-					<div class="clearfix"></div>			
-					<div class="tag tag--grey">API</div>
+					<div class="tag tag--partner">The Real Asset Company</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<div class="panel-controls">
+	<div class="panel-controls panel-controls--purple">
 
-		<div ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.partnersTabs.active = 'payfriendz'">WORLDPAY</div>
-		<div ng-class="{selected : ctrl.partnersTabs.active == 'recruiting'}" ng-click="ctrl.partnersTabs.active = 'recruiting'">DURISE</div>
-		<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_estate'}" ng-click="ctrl.partnersTabs.active = 'real_estate'">THE REAL ASSET COMPANY</div>
+		<div ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.setActive('partners', 'payfriendz')">WORLDPAY</div>
+		<div ng-class="{selected : ctrl.partnersTabs.active == 'durise'}" ng-click="ctrl.setActive('partners', 'durise')">DURISE</div>
+		<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_asset'}" ng-click="ctrl.setActive('partners', 'real_asset')">THE REAL ASSET COMPANY</div>
 	</div>
 
 
@@ -196,6 +166,23 @@ description: What company doesn't want to know their users better? These are jus
 
 			vm.sectorsTabs = { active : 'payments' };
 			vm.partnersTabs = { active : 'payfriendz' };
+
+			this.setActive = function (tabSection, value) {
+				
+				if (tabSection == 'partners') {
+					vm.partnersTabs.active = value;
+
+					    $('html, body').animate({
+					        scrollTop: ($('#partners-tabs').offset().top - 50)
+					    }, 1000);
+
+    				} else {
+					    $('html, body').animate({
+					        scrollTop: ($('#sectors-tabs').offset().top - 50)
+					    }, 1000);
+						vm.sectorsTabs.active = value;
+					}
+			}
 		}
 
 	}
