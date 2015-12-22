@@ -26,6 +26,16 @@
 section.verification-container {
 	
 	@include clearfix();
+
+	.hidden-verification-container {
+		position: relative;
+		> div {
+			position: absolute;
+			width: 100%;
+			left: 0;
+			top: 0;
+		}
+	}
 	
 	padding-left: 10%;
 	padding-right: 10%;
@@ -91,6 +101,8 @@ section.verification-container {
 	}
 
 	.landing__content {
+		@extend .tablet__gutter;
+
 		@media (min-width: $screen-xs-max) {
 			display: table-cell;
 			vertical-align: middle;
@@ -235,7 +247,7 @@ section.verification-container {
 				}
 			}
 			.white-link {
-				margin-left: 0;
+				margin-left: em(12);
 				font-size: 1em;
 			}
 
@@ -331,6 +343,9 @@ section.veridu-list {
 		}
 		
 	}
+	&.md-cards {
+		@extend .tablet__gutter;
+	}
 
 	// for desktop
 	@media (min-width: $screen-xs-max) {
@@ -371,8 +386,10 @@ section.rasmus-quote {
 	background-position: -320px -50px ;
 	height: em(470);
 	padding-top: em(41);
+	@extend .tablet__gutter;
 
 	> div {
+
 		float: right;
 		width: 40%;
 
@@ -392,10 +409,21 @@ section.rasmus-quote {
 		}
 	}
 
-	// desktop styles
+	
 
+	// desktop styles
 	@media (min-width: $screen-xs-max) {
 
+		// tablet
+		@media (max-width: $screen-sm-max) {
+
+			> div {
+				h4 {
+					margin-top: 0 !important;
+				}
+			}
+		}
+	
 		background-image: url(/img/rasmus-big.jpg);
 		background-repeat: no-repeat no-repeat;
 		background-position: right -80px !important ;
@@ -417,12 +445,15 @@ section.rasmus-quote {
 
 			h4 {
 				margin-right: 20%;
-				margin-top: em(40) !important;
+
+				@media (min-width: $screen-sm-max) {
+					margin-top: em(25) !important;	
+				}
 				font-size: em(36.91) !important;
 				letter-spacing: em(1.3, 36.91);
 				line-height: em(50, 36.91);
 				font-weight: 300;
-				margin-bottom: em(19);
+				margin-bottom: em(15) !important;
 			}
 			p {
 				font-weight: 400;
@@ -454,6 +485,13 @@ section.partners-quotes {
 		.carousel-nav-left {
 			left:50%;
 			margin-left: - 125px;
+			img {
+				-webkit-transform: rotate(180deg);
+				   -moz-transform: rotate(180deg);
+				    -ms-transform: rotate(180deg);
+				     -o-transform: rotate(180deg);
+				        transform: rotate(180deg);
+			}
 		}
 		.carousel-nav-right {
 			right:50%;
@@ -489,11 +527,15 @@ section.partners-quotes {
 	}
 
 
+	.carousel-inner {
+		@extend .tablet__gutter;
+	}
 	// desktop styles
 
 	@media (min-width: $screen-xs-max) { 
 
 		.carousel-inner {
+
 			.item {
 
 				height: em(300);
@@ -523,6 +565,8 @@ section.partners-quotes {
 }
 
 section.integration {
+	
+	@extend .tablet__gutter;
 
 	// desktop styles
 
@@ -566,8 +610,8 @@ section.contact {
 	@media (min-width: $screen-xs-max) { 
 
 		padding-top: em(69) !important;
-		padding-left: 0 !important;
-		padding-right: 0 !important;
+		padding-left: 0;
+		padding-right: 0;
 
 		h2 {
 			margin-bottom: em(69, 36) !important;
@@ -578,7 +622,7 @@ section.contact {
 }
 
 section.contact {
-	padding-left: 10%;
+	@extend .tablet__gutter;
 	background-color: #F8F8F8;
 
 	// desktop styles

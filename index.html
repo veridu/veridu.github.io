@@ -51,28 +51,33 @@ layout: default
                             </div>
                         </div>
                     </div>
-                    <div class="row-sm"><h1 class="title-sm">Know Your 
+                    <div class="row-sm"><h1 class="title-sm">
+                            Know Your 
                             <span ng-show=" App.slider.state() == 'customer-1' " class="animated flipInX">Customer</span>
-                            <span ng-show=" App.slider.state() == 'customer-2' " class="animated flipInX">Customer 2</span>
-                            <span ng-show=" App.slider.state() == 'customer-3' " class="animated flipInX">Customer 3</span>
-                            <span ng-show=" App.slider.state() == 'customer-4' " class="animated flipInX">Customer 4</span>
+                            <span ng-show=" App.slider.state() == 'customer-2' " class="animated flipInX">Peer</span>
+                            <span ng-show=" App.slider.state() == 'customer-3' " class="animated flipInX">Candidate</span>
+                            <span ng-show=" App.slider.state() == 'customer-4' " class="animated flipInX">Tenant</span>
                         </h1>  
                         
                         <p ng-show=" App.slider.state() == 'customer-1' " class="animated fadeIn slider-paragraph c-white hidden-xs">
-                            Put a face on it. Veridu brings trust to the internet <br>
-                            with consent-driven social identity verification solutions. <br>
-                            Know your user better, and for less.
+                            You can have it all. Robust identity verification globally, <br>
+                            fewer declined transactions and an improved user experience.
                         </p>
                         <p ng-show=" App.slider.state() == 'customer-2' " class="animated fadeIn slider-paragraph c-white hidden-xs">
-                            Put a face on it. Veridu brings trust to the internet. <br>
-                            Know your user better, and for less.
+                            A trusting community is a sharing community. Drive engagement <br> 
+                            in your community by letting members proactively showcase their <br>
+                            credibility and trustworthiness.
                         </p>
                         <p ng-show=" App.slider.state() == 'customer-3' " class="animated fadeIn slider-paragraph c-white hidden-xs">
-                            Put a face on it. Veridu brings trust to the internet <br>
-                            with consent-driven social identity verification solutions. <br>
+                            Rise above the competition. Enhance your candidate vetting <br>
+                            and be confident that you always put forward the most suitable <br>
+                            person for the job.
                         </p>
                         <p ng-show=" App.slider.state() == 'customer-4' " class="animated fadeIn slider-paragraph c-white hidden-xs">
-                            Put a face on it. Veridu brings trust to the internet. 
+                            Don't be a stranger. Create trust between property owners and viewers <br>
+                            before they even meet with pre-vetting solutions that establish identity <br> 
+                            and credibility.
+
                         </p>
 
                     </div>
@@ -151,39 +156,45 @@ layout: default
                                     <button class="btn btn-primary btn-lg "> Paypal </button>
                                 </div> 
 
-                                <div ng-show="showHiddenIntegrations" class="animated fadeIn">
-                                    <div class="clearfix"></div>
+                                <div class="hidden-verification-container">
+                                    <div ng-show="showHiddenIntegrations" class="animated fadeIn ">
+                                        <div class="clearfix"></div>
 
-                                    <div class="btn-container right ">
-                                        <button class="btn btn-primary btn-lg "> Spotify </button>
-                                    </div>  
+                                        <div class="btn-container right ">
+                                            <button class="btn btn-primary btn-lg "> Spotify </button>
+                                        </div>  
 
-                                    <div class="btn-container left ">
-                                        <button class="btn btn-primary btn-lg "> Instagram </button>
-                                    </div>      
+                                        <div class="btn-container left ">
+                                            <button class="btn btn-primary btn-lg "> Instagram </button>
+                                        </div>      
 
-                                    <div class="clearfix"></div>
+                                        <div class="clearfix"></div>
 
-                                    <div class="btn-container right ">
-                                        <button class="btn btn-primary btn-lg "> Dropbox </button>
-                                    </div>  
+                                        <div class="btn-container right ">
+                                            <button class="btn btn-primary btn-lg "> Dropbox </button>
+                                        </div>  
 
-                                    <div class="btn-container left ">
-                                        <button class="btn btn-primary btn-lg "> Email </button>
-                                    </div>      
-                                    <div class="clearfix"></div>
+                                        <div class="btn-container left ">
+                                            <button class="btn btn-primary btn-lg "> Email </button>
+                                        </div>      
+                                        <div class="clearfix"></div>
 
-                                    <div class="btn-container right ">
-                                        <button class="btn btn-primary btn-lg "> SMS </button>
-                                    </div>  
+                                        <div class="btn-container right ">
+                                            <button class="btn btn-primary btn-lg "> SMS </button>
+                                        </div>  
 
-                                    <div class="btn-container left ">
-                                        <button class="btn btn-primary btn-lg "> Spot a friend </button>
-                                    </div>  
+                                        <div class="btn-container left ">
+                                            <button class="btn btn-primary btn-lg "> Spot a friend </button>
+                                        </div>  
+
+                                        <div class="clearfix"></div>
+                                        <a ng-show="showHiddenIntegrations" class="black-link" href="javascript:void(0)" ng-click="showHiddenIntegrations = false" >SHOW LESS</a>
+
+                                    </div>    
                                 </div>    
+
                             </div>
                             <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:void(0)" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a>
-                            <a ng-show="showHiddenIntegrations" class="black-link" href="javascript:void(0)" ng-click="showHiddenIntegrations = false" >SHOW LESS</a>
                         </section>
 
                     </div>
@@ -241,8 +252,8 @@ layout: default
 
     <div id="partners-carousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
-            <a class="nav carousel-nav-left"  href="#partners-carousel" data-slide="prev"><span class="icon-chevron-thin-left"></span></a>
-            <a class="nav carousel-nav-right" href="#partners-carousel" data-slide="next"><span class="icon-chevron-thin-right"></span></a>
+            <a class="nav carousel-nav-left"  href="#partners-carousel" data-slide="prev"><img src="/img/arrow-right.png"></a>
+            <a class="nav carousel-nav-right" href="#partners-carousel" data-slide="next"><img src="/img/arrow-right.png"></a>
 
             <div class="item">
                 <div class="container">

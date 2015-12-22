@@ -214,6 +214,11 @@ body {
 		h4 {
 			padding-left: em(10);
 			margin-top: em(30);
+
+			// for iphone 4
+			@media (max-width: 350px) {
+				margin-top: em(20) !important;
+			}
 		}
 
 		ul {
@@ -343,7 +348,10 @@ footer {
 	li {
 		font-weight: 300;
 	}
+	> div {
+		@extend .tablet__gutter;
 
+	}
 	// for desktop
 	@media (min-width: $screen-xs-max) {
 		margin-bottom: 0 !important;
@@ -355,6 +363,7 @@ footer {
 		@include make-row();
 
 		> div {
+
 			@include clearfix();
 			max-width: $container-max-width;
 			margin-left: auto !important;
