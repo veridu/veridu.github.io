@@ -268,6 +268,9 @@ section.verification-container {
 			.buttons-container {
 
 				.btn-container {
+					
+					padding-left: 8.5px;
+					padding-right: 8.5px;
 
 					button {
 						margin-left: 1px !important;					
@@ -281,7 +284,7 @@ section.verification-container {
 			background: transparent;
 			.black-link {
 				float: right;
-				margin-right: 15px;
+				margin-right: 8.5px;
 				color: white !important;
 				border-color: white;
 				&:hover {
@@ -289,6 +292,7 @@ section.verification-container {
 				}
 			}
 			h4 {
+				margin-left: 8.5px;
 				letter-spacing: em(0.5);
 				color: white;
 			}

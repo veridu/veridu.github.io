@@ -158,16 +158,16 @@ body {
 	}
 	.dropdown-menu {
 
-		-webkit-transition: top .25s ease-in;
- 	    -moz-transition: top .25s ease-in;
-	    -ms-transition: top .25s ease-in;
-	    -o-transition: top .25s ease-in;
-        transition: top .25s ease-in;
+		-webkit-transition: top .15s ease-out;
+ 	    -moz-transition: top .15s ease-out;
+	    -ms-transition: top .15s ease-out;
+	    -o-transition: top .15s ease-out;
+        transition: top .15s ease-out;
 
         // positioning
         overflow-y: auto;
 		position: fixed !important;
-		top: -2000px !important;
+		top: -7000px !important;
 		background: white !important;
 		width: 100%;
 
