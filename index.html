@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="landing-section">
+<div class="landing-section" ng-swipe-left="App.prevSlide()" ng-swipe-right="App.nextSlide()" >
         <div class="landing__overlay hidden-xs"></div>
         <div class="landing__content">
             <div class="row-sm no-styled-container">
@@ -93,7 +93,7 @@ layout: default
                                     <span class="white-bottom-border"><small>£</small> <span class="big">0,086</span> / CHECK</span>
                                 </a>
                             </div>
-                            <section class="progress-container" ng-swipe-left="App.prevSlide()" ng-swipe-right="App.nextSlide()" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgStyle})">
+                            <section class="progress-container" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgStyle})">
                                 <h4 class="hidden-xs">CREDIBILITY</h4>
 
                                 <div class="progress">
