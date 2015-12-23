@@ -1,11 +1,11 @@
 .header {
-	.solutions-submenu {
+	.pricing-submenu {
 		display: none;
 	}
 }
 
-// shows only on solutions page
-.header.solutions {
+// shows only on pricing page
+.header.pricing {
 
 	.veridu-img {
 		display: none;
@@ -14,7 +14,7 @@
 	.id-img {
 		display: inline-block !important;
 	}
-	.solutions-submenu {
+	.pricing-submenu {
 
 		background: white;
 		font-weight: bold;
@@ -26,7 +26,7 @@
 			a {
 				text-decoration: none;
 			}
-			
+
 			i {
 				visibility: hidden;
 			}
@@ -61,7 +61,6 @@
 
 }
 
-
 .page.pricing section {
 
 	> h2.section__title {
@@ -82,7 +81,7 @@
 
 
 	ul.products {
-	
+
 		@extend .list-unstyled;
 
 		background: #EEEEEE;
@@ -97,11 +96,11 @@
 				width: 100%;
 				display: table;
 				background: white;
-				
+
 
 				font-size: 0.8em;
 				font-weight: bold;
-				/* want to change				
+				/* want to change
 				font-weight: 300;
 
 				*/
@@ -159,7 +158,7 @@
 
 
 section.solutions__container {
-	
+
 	@include clearfix();
 	@extend .content-padding;
 	margin-bottom: em(46);
@@ -177,7 +176,7 @@ section.solutions__container {
 	height: em(49);
 	top: em(58);
 	> div {
-		
+
 		padding: em(5);
 		position: relative;
 
@@ -208,7 +207,7 @@ section.solutions__container {
 	margin-bottom: em(66);
 
 	.form-cart {
-		
+
 		> div {
 			font-weight: 300;
 			font-size: em(27);
@@ -216,7 +215,7 @@ section.solutions__container {
 			letter-spacing: em(0.27,27);
 			line-height: em(37,27);
 			text-align: justify;
-			
+
 			button {
 				font-size: 1em;
 			}
@@ -225,12 +224,12 @@ section.solutions__container {
 }
 
 section.onboarding {
-	
+
 	padding-top: em(50);
 	@extend .content-padding;
 	@include clearfix();
 	background: #efefef;
-	
+
 	ul.products {
 		padding-top: 0 !important;
 		padding-left: 0 !important;
@@ -239,7 +238,7 @@ section.onboarding {
 
 }
 section.onboarding {
-	
+
 	padding-top: em(50);
 	@extend .content-padding;
 	@include clearfix();
@@ -249,14 +248,14 @@ section.onboarding {
 
 section.contact {
 	background-color: #efefef;
-	
+
 	> div {
 		@extend .content-padding;
 	}
 
 	@include clearfix();
 	padding-bottom: em(70);
-	
+
 	> h4 {
 		margin-bottom: em(14);
 	}

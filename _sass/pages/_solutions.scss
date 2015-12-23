@@ -1,12 +1,15 @@
 .header {
-	.pricing-submenu {
+	.solutions-submenu {
 		display: none;
 	}
 }
 
-// shows only on pricing page
-.header.pricing {
+// shows only on solutions page
+.header.solutions {
 
+	.current-state {
+		display: inline-block !important;
+	}
 	.veridu-img {
 		display: none;
 	}
@@ -14,7 +17,7 @@
 	.id-img {
 		display: inline-block !important;
 	}
-	.pricing-submenu {
+	.solutions-submenu {
 
 		background: white;
 		font-weight: bold;

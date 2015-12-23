@@ -15,7 +15,7 @@ description: What company doesn't want to know their users better? These are jus
 
 
 	<section id="sectors-tabs" class="solution__item">
-		<div class="solution__item__content">			
+		<div id="sectors" class="solution__item__content">
 			<div ng-show="ctrl.sectorsTabs.active == 'payments'" >
 				<h2  class="solution__item__title">Payments</h2>
 				<p class="solution__item_description">Verify identity better globally. Decline fewer transactions. Improve user experience.</p>
@@ -34,7 +34,7 @@ description: What company doesn't want to know their users better? These are jus
 			<div ng-show="ctrl.sectorsTabs.active == 'real_estate'">
 				<h2  class="solution__item__title">Real Estate</h2>
 				<p class="solution__item_description">Build a trusted business. Keep customers safe. Identify, vet and put a face on viewers.</p>
-			</div>			
+			</div>
 		</div>
 	</section>
 	<div class="panel-controls">
@@ -43,7 +43,7 @@ description: What company doesn't want to know their users better? These are jus
 		<div ng-class="{selected : ctrl.sectorsTabs.active == 'recruiting'}" ng-click="ctrl.setActive('sectors', 'recruiting')">RECRUITING</div>
 		<div ng-class="{selected : ctrl.sectorsTabs.active == 'p2p'}" ng-click="ctrl.setActive('sectors', 'p2p')">PEER TO PEER</div>
 		<div ng-class="{selected : ctrl.sectorsTabs.active == 'real_estate'}" ng-click="ctrl.setActive('sectors', 'real_estate')">REAL ESTATE</div>
-		
+
 	</div>
 
 	<section class="solution__section__container content-padding font-light">
@@ -55,26 +55,26 @@ description: What company doesn't want to know their users better? These are jus
 
 
 	<section id="partners-tabs" class="solution__item solution__item__notfirst">
-		<div class="solution__item__content solution__item__content--purple">
-						
+		<div id="clients-partners" class="solution__item__content solution__item__content--purple">
+
 			<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
-				<h2 class="solution__item__title">Payfriendz</h2>			
+				<h2 class="solution__item__title">Payfriendz</h2>
 				<p class="solution__item_description" >
-					Payfriendz is a mobile app to transfer money between friends. <br> 
+					Payfriendz is a mobile app to transfer money between friends. <br>
 					What do they use Veridu for? <br>
 					<a href="#" class="white-link">READ MORE</a>
 				</p>
 			</div>
 			<div ng-show="ctrl.partnersTabs.active == 'durise'">
-				<h2 class="solution__item__title">Durise</h2>			
+				<h2 class="solution__item__title">Durise</h2>
 				<p class="solution__item_description" >
-					Durise is a Dubai based real estate crowdfunding platform. <br> 
+					Durise is a Dubai based real estate crowdfunding platform. <br>
 					What do they use Veridu for? <br>
 					<a href="#" class="white-link">READ MORE</a>
 				</p>
 			</div>
 			<div ng-show="ctrl.partnersTabs.active == 'real_asset'">
-				<h2 class="solution__item__title">Real Asset Company</h2>			
+				<h2 class="solution__item__title">Real Asset Company</h2>
 				<p class="solution__item_description" >
 					The Real Asset Company is an innovative gold investment platform with its own cryptocurrency. <br>
 					What do they use Veridu for? <br>
@@ -84,39 +84,39 @@ description: What company doesn't want to know their users better? These are jus
 			<div class="solution__item__tags__container">
 				<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
 					<div class="tag tag--sectors">Payments</div>
-					<div class="clearfix"></div>			
+					<div class="clearfix"></div>
 					<div class="tag tag--sources">Social Media & Online Services</div>
-					<div class="clearfix"></div>			
+					<div class="clearfix"></div>
 					<div class="tag tag--scores">Contact Info</div>
 					<div class="tag tag--scores">Insight</div>
-					<div class="clearfix"></div>			
+					<div class="clearfix"></div>
 					<div class="tag tag--partner">Payfriendz</div>
 				</div>
 				<div  ng-show="ctrl.partnersTabs.active == 'durise'">
 					<div class="tag tag--sectors">Peer to Peer</div>
 					<div class="tag tag--sectors">Real Estate</div>
-					<div class="clearfix"></div>			
+					<div class="clearfix"></div>
 					<div class="tag tag--sources">Social Media & Online Services</div>
 					<div class="tag tag--sources">Email</div>
 					<div class="tag tag--sources">SMS</div>
 					<div class="tag tag--sources">Knowledge-based Authentication</div>
-					<div class="clearfix"></div>			
+					<div class="clearfix"></div>
 					<div class="tag tag--scores">Contact Info</div>
 					<div class="tag tag--scores">Age</div>
-					<div class="clearfix"></div>			
+					<div class="clearfix"></div>
 					<div class="tag tag--partner">Durise</div>
 				</div>
 				<div  ng-show="ctrl.partnersTabs.active == 'real_asset'">
 					<div class="tag tag--sectors">Payments</div>
-					<div class="clearfix"></div>			
+					<div class="clearfix"></div>
 					<div class="tag tag--sources">Social Media & Online Services</div>
 					<div class="tag tag--sources">Email</div>
 					<div class="tag tag--sources">SMS</div>
 					<div class="tag tag--sources">Knowledge-based Authentication</div>
-					<div class="clearfix"></div>			
+					<div class="clearfix"></div>
 					<div class="tag tag--scores">Contact Info</div>
 					<div class="tag tag--scores">Age</div>
-					<div class="clearfix"></div>			
+					<div class="clearfix"></div>
 					<div class="tag tag--partner">The Real Asset Company</div>
 				</div>
 			</div>
@@ -131,8 +131,8 @@ description: What company doesn't want to know their users better? These are jus
 
 
 <section class="integration veridu-list">
-    <h2 class="font-light">Integration</h2>    
-        
+    <h2 class="font-light">Integration</h2>
+
     <div class="item-container">
         <h3>HOSTED</h3>
         <p>Simply send users an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is.</p>
@@ -142,7 +142,7 @@ description: What company doesn't want to know their users better? These are jus
         <h3>WIDGETS</h3>
         <p>Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.</p>
     </div>
-    
+
     <div class="item-container">
         <h3>API</h3>
         <p>Get creative! Our API gives you complete flexibility to customise the look and flow of your identity solution for a seamless user experience completely tailored to your needs.</p>
@@ -153,12 +153,10 @@ description: What company doesn't want to know their users better? These are jus
 </div>
 
 <script type="text/javascript">
-		
+
 	function load () {
 
-		angular
-			.module('app')
-			.controller('SolutionsCtrl', SolutionsCtrl);
+		angular.module('app').controller('SolutionsCtrl', SolutionsCtrl);
 
 		SolutionsCtrl.$inject = [];
 		function SolutionsCtrl () {
@@ -168,7 +166,7 @@ description: What company doesn't want to know their users better? These are jus
 			vm.partnersTabs = { active : 'payfriendz' };
 
 			this.setActive = function (tabSection, value) {
-				
+
 				if (tabSection == 'partners') {
 					vm.partnersTabs.active = value;
 
@@ -185,19 +183,30 @@ description: What company doesn't want to know their users better? These are jus
 			}
 		}
 
-	}
-	
-	/*
-		'payments' : {
-		label: 'Payments',
-		items: {
-			purple: ['WorldPay', 'PayFriendz', 'ZipMoney'],
-			green: ['Knowledge-based Authentication', 'Social Media & Online Services'],
-			bluegreen: ['Contact Info', 'Age', 'Insight'],
-			grey: ['API']
 
+		$(".solutions-submenu a").click(handleScroll);
+
+		// handles submenu clicks
+		function handleScroll(event) {
+			var id = $(this).attr('data-scrollTo');
+
+			if (id) {
+				event.preventDefault();
+				$('#pricing-curent-position').text(id.replace('#',''));
+				scrollToHash(id);
+			}
 		}
-	*/
+		
+	}
+
+	function scrollToHash (hash, speed) {
+		if (! speed) speed = 2000;
+
+		$('html, body').animate({
+			scrollTop: ($(hash).offset().top - 260)
+		}, 2000);
+	}
+
 	document.addEventListener('DOMContentLoaded', load);
 
 </script>

@@ -23,56 +23,7 @@
 	var app = angular.module('app', []).config(function($interpolateProvider){
     	$interpolateProvider.startSymbol('({').endSymbol('})');
 	});
-	app.controller('CartCtrl', CartCtrl);
 	app.controller('ContactCtrl', ContactCtrl);
-
-	CartCtrl.$inject = ['$scope'];
-	function CartCtrl ($scope) {
-
-		var vm = this;
-		vm.total = 0;
-		vm.currency = '£';
-		vm.checks = "1000";
-		vm.items = [];
-
-		vm.hasItem = hasItem;
-		vm.addProduct = addProduct;
-		vm.removeProduct = removeProduct;
-
-		$scope.$watch('cart.items', function (items) {
-
-			if (items.length) {
-				vm.total = (vm.items.reduce(function (a,b) {
-									return {value: a.value + b.value};
-								}, {value: 0})).value;
-			} else {
-				vm.total = 0;
-			}
-
-		}, true);
-
-		function addProduct (product) {
-			vm.items.push(product);
-		}
-
-		function removeProduct (key) {
-			vm.items.map(function  (item, index) {
-				if (item.key == key)
-					vm.items.splice(index, 1);
-			});
-
-		}
-
-		function hasItem (key) {
-			var found = false;
-			vm.items.map(function  (item) {
-				if (item.key == key)
-					found = true;
-			});
-			return found;
-		}
-	}
-
 
 	// Contact controller
 
@@ -90,6 +41,21 @@
 
 	}
 
+
+	if (window.location.hash) {
+		scrollToHash(window.location.hash, 1000);
+	}
+
+	function scrollToHash (hash, speed) {
+		if (! speed) speed = 2000;
+
+		if ($(hash).offset()) {
+			$('html, body').animate({
+				scrollTop: ($(hash).offset().top - 120)
+			}, 2000);
+		}
+	}
+
 	// menu border
 	(function  () {
 		var fixed_header = document.querySelector('.menu');
@@ -101,11 +67,11 @@
 			//will show
 			if ( scrolled > 1 ){
 
-				fixed_header.style.border =  '1px solid #eee';
+				fixed_header.style.borderBottom =  '1px solid #eee';
 
 			} else{ //will hide
 
-				fixed_header.style.border =  '1px solid transparent';
+				fixed_header.style.borderBottom =  '1px solid transparent';
 
 			}
 		})

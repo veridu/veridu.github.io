@@ -84,14 +84,71 @@ body {
 	.nav {
 		position: fixed;
 		width: 100%;
+        background: white;
+        height: em(53);
 	}
 
 	.menu {
+        @include clearfix();
+
 		position: relative;
 		border-bottom: 1px solid transparent;
 		z-index: 1;
-		@include clearfix();
 		padding-bottom: 0.5em;
+
+        @media (min-width: $screen-sm-min) {
+            max-width: $container-max-width;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0;
+            height: em(53);
+        }
+
+        .menu__links__md {
+            display: none;
+
+            @media (min-width: $screen-sm-min) {
+
+                display: inline-block;
+
+                font-size: em(16);
+                position: relative;
+                top: em(5);
+
+                .menu__links__md--left {
+                    float: left;
+                }
+                &.menu__links__md--right {
+                    float: right;
+                    li {
+                        &:last-of-type {
+                            margin-right: 0;
+                        }
+                        text-align: right !important;
+                    }
+                }
+
+                ul {
+                    padding: 0;
+                    li {
+                        margin-right: em(30);
+                        letter-spacing: em(0.5);
+
+                        &.selected {
+                            font-weight: 600;
+                        }
+
+                        a.sign-in-link {
+                            color: $brand-primary;
+                        }
+
+                    }
+                }
+
+            }
+
+
+        }
 
 		> div {
 			&.menu-content {
@@ -99,6 +156,13 @@ body {
 				margin-left: 1.45em;
 				margin-top: 0.66em;
 				margin-bottom: 0.6em;
+
+
+                @media (min-width: $screen-sm-min) {
+                    float: none;
+                    margin-left: 0;
+                    width: 100%;
+                }
 
 				.logo {
 					position: relative;
@@ -150,7 +214,7 @@ body {
 				font-size: em(30);
 
 				@media (min-width: $screen-sm-min) {
-					// display: none;
+					display: none;
 				}
 			}
 

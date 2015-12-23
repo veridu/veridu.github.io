@@ -30,7 +30,7 @@ class: pricing
 		</div>
 	</div>
 
-	<section class="solutions__container">	
+	<section class="solutions__container">
 		<ul class="products">
 			<li>
 				<div class="product__description">
@@ -42,13 +42,13 @@ class: pricing
 					</div>
 				</div>
 				<div class="product__footer green">
-					FREE 
+					FREE
 					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Social Media', value : 0, key : 'social-media'})"  
+						ng-click="cart.addProduct({ name: 'Social Media', value : 0, key : 'social-media'})"
 						ng-hide="cart.hasItem('social-media')">&#xE876;</i>
 
 					<i  class="material-icons"
-						ng-click="cart.removeProduct('social-media')" 
+						ng-click="cart.removeProduct('social-media')"
 						ng-show="cart.hasItem('social-media')">&#xE14C;</i>
 				</div>
 			</li>
@@ -64,11 +64,11 @@ class: pricing
 				<div class="product__footer green">
 					FREE
 					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Online Services', value : 0, key : 'online-services'})"  
+						ng-click="cart.addProduct({ name: 'Online Services', value : 0, key : 'online-services'})"
 						ng-hide="cart.hasItem('online-services')">&#xE876;</i>
 
 					<i  class="material-icons"
-						ng-click="cart.removeProduct('online-services')" 
+						ng-click="cart.removeProduct('online-services')"
 						ng-show="cart.hasItem('online-services')">&#xE14C;</i>
 				</div>
 			</li>
@@ -78,18 +78,18 @@ class: pricing
 						<i class="material-icons">&#xE7FB;</i>
 					</div>
 					<div class="product__name">
-						Knowledge-based Authentication 
+						Knowledge-based Authentication
 					</div>
 				</div>
 				<div class="product__footer green knowledge-based-authentication">
-					<strong ng-bind="cart.currency"></strong><strong class="value">0,035</strong> / CHECK 
+					<strong ng-bind="cart.currency"></strong><strong class="value">0,035</strong> / CHECK
 
 					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Knowledge-based Authentication', value : 0.035, key : 'knowledge-based-authentication'})"  
+						ng-click="cart.addProduct({ name: 'Knowledge-based Authentication', value : 0.035, key : 'knowledge-based-authentication'})"
 						ng-hide="cart.hasItem('knowledge-based-authentication')">&#xE876;</i>
 
 					<i  class="material-icons"
-						ng-click="cart.removeProduct('knowledge-based-authentication')" 
+						ng-click="cart.removeProduct('knowledge-based-authentication')"
 						ng-show="cart.hasItem('knowledge-based-authentication')">&#xE14C;</i>
 				</div>
 			</li>
@@ -99,17 +99,17 @@ class: pricing
 						<i class="material-icons">&#xE2C6;</i>
 					</div>
 					<div class="product__name">
-						Document Upload 
+						Document Upload
 					</div>
 				</div>
 				<div class="product__footer green">
 					FREE
 					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Document Upload', value : 0, key : 'document-upload'})"  
+						ng-click="cart.addProduct({ name: 'Document Upload', value : 0, key : 'document-upload'})"
 						ng-hide="cart.hasItem('document-upload')">&#xE876;</i>
 
 					<i  class="material-icons"
-						ng-click="cart.removeProduct('document-upload')" 
+						ng-click="cart.removeProduct('document-upload')"
 						ng-show="cart.hasItem('document-upload')">&#xE14C;</i>
 				</div>
 			</li>
@@ -126,11 +126,11 @@ class: pricing
 					FREE
 
 					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Email', value : 0, key : 'email'})"  
+						ng-click="cart.addProduct({ name: 'Email', value : 0, key : 'email'})"
 						ng-hide="cart.hasItem('email')">&#xE876;</i>
 
 					<i  class="material-icons"
-						ng-click="cart.removeProduct('email')" 
+						ng-click="cart.removeProduct('email')"
 						ng-show="cart.hasItem('email')">&#xE14C;</i>
 
 				</div>
@@ -141,18 +141,18 @@ class: pricing
 						<i class="material-icons">&#xE536;</i>
 					</div>
 					<div class="product__name">
-						Age  
+						Age
 					</div>
 				</div>
 				<div class="product__footer green knowledge-based-authentication">
-					<strong ng-bind="cart.currency"></strong><strong class="value">0,035</strong> / CHECK 
+					<strong ng-bind="cart.currency"></strong><strong class="value">0,035</strong> / CHECK
 
 					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Age', value : 0.035, key : 'age'})"  
+						ng-click="cart.addProduct({ name: 'Age', value : 0.035, key : 'age'})"
 						ng-hide="cart.hasItem('age')">&#xE876;</i>
 
 					<i  class="material-icons"
-						ng-click="cart.removeProduct('age')" 
+						ng-click="cart.removeProduct('age')"
 						ng-show="cart.hasItem('age')">&#xE14C;</i>
 				</div>
 			</li>
@@ -179,13 +179,13 @@ class: pricing
 				<span ng-bind="(cart.total * cart.checks).toFixed(2)"></span>
 				<button class="btn btn-primary btn-sm">Get started</button>
 			</div>
-		</form>	
+		</form>
 	</div>
 
 	<section  class="onboarding">
 		<h2 id="ONBOARDING" class="section__title">Onboarding & Authentication</h2>
 		<p class="section__description">
-			How do you want to onboard and authenticate users? Combine as many methods as you like according to your specific requirements.	
+			How do you want to onboard and authenticate users? Combine as many methods as you like according to your specific requirements.
 		</p>
 
 		<ul class="products">
@@ -221,7 +221,7 @@ class: pricing
 						<i class="material-icons">&#xE7FB;</i>
 					</div>
 					<div class="product__name">
-						Knowledge-based Authentication 
+						Knowledge-based Authentication
 					</div>
 				</div>
 				<div class="product__footer green knowledge-based-authentication">
@@ -234,7 +234,7 @@ class: pricing
 						<i class="material-icons">&#xE2C6;</i>
 					</div>
 					<div class="product__name">
-						Document Upload 
+						Document Upload
 					</div>
 				</div>
 				<div class="product__footer green">
@@ -260,7 +260,7 @@ class: pricing
 						<i class="material-icons">&#xE536;</i>
 					</div>
 					<div class="product__name">
-						Age  
+						Age
 					</div>
 				</div>
 				<div class="product__footer green knowledge-based-authentication">
@@ -303,10 +303,10 @@ class: pricing
 				</div>
 			</li>
 		</ul>
-		
+
 		<h2 id="INSIGHT" class="section__title">Insight</h2>
 		<p class="section__description">
-			What do you want to verify or know about your users? We use scorecards to analyse the credibility of specific user attributes depending on what you need.	
+			What do you want to verify or know about your users? We use scorecards to analyse the credibility of specific user attributes depending on what you need.
 		</p>
 		<ul class="products">
 			<li>
@@ -410,23 +410,23 @@ class: pricing
 		<p class="section__description">
 			Contact us to discuss your specific needs
 		</p>
-	    <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">        
+	    <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">
             <div class="input-container">
-                <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name"> 
+                <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name">
             </div>
 
             <div class="input-container">
-                <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">    
+                <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">
             </div>
 
             <div class="input-container">
-                <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">    
-            </div>              
+                <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">
+            </div>
 
             <div class="input-container">
                 <textarea rows="5" ng-model="ctrl.contact.message" name="message" type="text" placeholder="Message"></textarea>
-            </div>              
-    
+            </div>
+
             <div class="input-container text-right">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
@@ -442,39 +442,76 @@ class: pricing
 	function submitChecks () {
 		var form = $('#form-checks');
 
-	}		
-	
+	}
+
 	function load (){
 
-		$(".menu a").click(handleScroll);
 		$(".dropdown-menu a").click(handleScroll);
+		$(".pricing-submenu a").click(handleScroll);
 
-		function handleScroll() {
+		// handles submenu clicks
+		function handleScroll(event) {
 
 			var id = $(this).attr('data-scrollTo');
-
 			if (id) {
+				event.preventDefault();
 				$('#pricing-curent-position').text(id.replace('#',''));
 				scrollToHash(id);
 			}
 
 		}
+		angular.module('app').controller('CartCtrç', CartCtrç);
 
-		if (window.location.hash) {
-			scrollToHash(window.location.hash, 1000);
-		}
+		CartCtrl.$inject = ['$scope'];
+		function CartCtrl ($scope) {
 
-		function scrollToHash (hash, speed) {
-			if (! speed) speed = 2000;
-			
-		    $('html, body').animate({
-		        scrollTop: ($(hash).offset().top - 120)
-		    }, 2000);
+			var vm = this;
+			vm.total = 0;
+			vm.currency = '£';
+			vm.checks = "1000";
+			vm.items = [];
+
+			vm.hasItem = hasItem;
+			vm.addProduct = addProduct;
+			vm.removeProduct = removeProduct;
+
+			$scope.$watch('cart.items', function (items) {
+
+				if (items.length) {
+					vm.total = (vm.items.reduce(function (a,b) {
+										return {value: a.value + b.value};
+									}, {value: 0})).value;
+				} else {
+					vm.total = 0;
+				}
+
+			}, true);
+
+			function addProduct (product) {
+				vm.items.push(product);
+			}
+
+			function removeProduct (key) {
+				vm.items.map(function  (item, index) {
+					if (item.key == key)
+						vm.items.splice(index, 1);
+				});
+
+			}
+
+			function hasItem (key) {
+				var found = false;
+				vm.items.map(function  (item) {
+					if (item.key == key)
+						found = true;
+				});
+				return found;
+			}
 		}
 
 
 		(function () {
-				
+
 			var fixed_header = document.querySelector('.cart-status');
 			var header  =	$('#form-checks')
 
@@ -490,7 +527,7 @@ class: pricing
 
 						fixed_header.style.display =  'block';
 
-					} 
+					}
 
 				} else { //will hide
 
@@ -498,10 +535,10 @@ class: pricing
 
 						fixed_header.style.display =  'none';
 
-					} 
-				} 
+					}
+				}
 			});
-			
+
 		})();
 
 	}
