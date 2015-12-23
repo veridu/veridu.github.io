@@ -88,42 +88,44 @@ description: What company doesn't want to know their users better? These are jus
 				</p>
 			</div>
 			<div class="solution__item__tags__container">
-				<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
-					<div class="tag tag--sectors">Payments</div>
-					<div class="clearfix"></div>
-					<div class="tag tag--sources">Social Media & Online Services</div>
-					<div class="clearfix"></div>
-					<div class="tag tag--scores">Contact Info</div>
-					<div class="tag tag--scores">Insight</div>
-					<div class="clearfix"></div>
-					<div class="tag tag--partner">Payfriendz</div>
-				</div>
-				<div  ng-show="ctrl.partnersTabs.active == 'durise'">
-					<div class="tag tag--sectors">Peer to Peer</div>
-					<div class="tag tag--sectors">Real Estate</div>
-					<div class="clearfix"></div>
-					<div class="tag tag--sources">Social Media & Online Services</div>
-					<div class="tag tag--sources">Email</div>
-					<div class="tag tag--sources">SMS</div>
-					<div class="tag tag--sources">Knowledge-based Authentication</div>
-					<div class="clearfix"></div>
-					<div class="tag tag--scores">Contact Info</div>
-					<div class="tag tag--scores">Age</div>
-					<div class="clearfix"></div>
-					<div class="tag tag--partner">Durise</div>
-				</div>
-				<div  ng-show="ctrl.partnersTabs.active == 'real_asset'">
-					<div class="tag tag--sectors">Payments</div>
-					<div class="clearfix"></div>
-					<div class="tag tag--sources">Social Media & Online Services</div>
-					<div class="tag tag--sources">Email</div>
-					<div class="tag tag--sources">SMS</div>
-					<div class="tag tag--sources">Knowledge-based Authentication</div>
-					<div class="clearfix"></div>
-					<div class="tag tag--scores">Contact Info</div>
-					<div class="tag tag--scores">Age</div>
-					<div class="clearfix"></div>
-					<div class="tag tag--partner">The Real Asset Company</div>
+				<div>
+					<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
+						<div class="tag tag--sectors">Payments</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--sources">Social Media & Online Services</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--scores">Contact Info</div>
+						<div class="tag tag--scores">Insight</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--partner">Payfriendz</div>
+					</div>
+					<div  ng-show="ctrl.partnersTabs.active == 'durise'">
+						<div class="tag tag--sectors">Peer to Peer</div>
+						<div class="tag tag--sectors">Real Estate</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--sources">Social Media & Online Services</div>
+						<div class="tag tag--sources">Email</div>
+						<div class="tag tag--sources">SMS</div>
+						<div class="tag tag--sources">Knowledge-based Authentication</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--scores">Contact Info</div>
+						<div class="tag tag--scores">Age</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--partner">Durise</div>
+					</div>
+					<div  ng-show="ctrl.partnersTabs.active == 'real_asset'">
+						<div class="tag tag--sectors">Payments</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--sources">Social Media & Online Services</div>
+						<div class="tag tag--sources">Email</div>
+						<div class="tag tag--sources">SMS</div>
+						<div class="tag tag--sources">Knowledge-based Authentication</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--scores">Contact Info</div>
+						<div class="tag tag--scores">Age</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--partner">The Real Asset Company</div>
+					</div>
 				</div>
 			</div>
 		</div>

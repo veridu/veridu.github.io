@@ -82,6 +82,7 @@ body {
 	}
 
 	.nav {
+        @extend .tablet__gutter;
 		position: fixed;
 		width: 100%;
         z-index: 1000;

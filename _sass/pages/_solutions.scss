@@ -142,17 +142,29 @@
 
 			.solution__item__tags__container {
 				position: absolute;
-				width: 90%;
+				left: 0;
+				width: 100%;
+				max-width: none;
 				padding-bottom: em(33);
 				background: transparent !important;
 				bottom: 0;
 
-				> div {
-					@extend .sm-container;
+				@media (min-width: $screen-sm-min) {
+					padding-left: 0;
+					padding-right: 0;
 				}
 
 				@media (max-width: $screen-xs-max) {
-					padding-right: 10%;
+					> div {
+						padding-left: 10%;
+					}
+				}
+
+				> div {
+					width: 100%;
+					@extend .tablet__gutter;
+					@extend .sm-container;
+
 				}
 			}
 		}
