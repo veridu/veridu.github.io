@@ -163,7 +163,7 @@ description: What company doesn't want to know their users better? These are jus
 		</div>
 
 		<section id="integrations-tabs" class="solution__item solution__item__notfirst hidden-xs">
-			<div id="clients-integrations" class="solution__item__content solution__item__content--grey">
+			<div id="integration" class="solution__item__content solution__item__content--grey">
 
 				<div ng-show="ctrl.integrationsTabs.active == 'HOSTED'">
 					<h2 class="solution__item__title">HOSTED</h2>
@@ -221,6 +221,7 @@ description: What company doesn't want to know their users better? These are jus
 			vm.sectorsTabs = { active : 'payments' };
 			vm.partnersTabs = { active : 'payfriendz' };
 			vm.integrationsTabs = { active : 'HOSTED' };
+			vm.menuElement = $('.menu');
 
 			this.setActive = function (tabSection, value) {
 
@@ -229,21 +230,21 @@ description: What company doesn't want to know their users better? These are jus
 					case 'partners':
 						vm.partnersTabs.active = value;
 					    $('html, body').animate({
-					        scrollTop: ($('#partners-tabs').offset().top - 50)
+					        scrollTop: ($('#partners-tabs').offset().top - vm.menuElement.height())
 					    }, 1000);
 						break;
 
-					case 'partners':
+					case 'sectors':
 						vm.sectorsTabs.active = value;
 					    $('html, body').animate({
-					        scrollTop: ($('#sectors-tabs').offset().top - 50)
+					        scrollTop: ($('#sectors-tabs').offset().top - vm.menuElement.height())
 					    }, 1000);
 						break;
 
 					case 'integrations':
 						vm.integrationsTabs.active = value;
 					    $('html, body').animate({
-					        scrollTop: ($('#integrations-tabs').offset().top - 50)
+					        scrollTop: ($('#integrations-tabs').offset().top - vm.menuElement.height())
 					    }, 1000);
 						break;
 
