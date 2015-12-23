@@ -6,6 +6,7 @@
 	min-height: em(497);
 	background-repeat: no-repeat !important;
 	background-position: 0px -60px !important;
+	background-color: black !important;
 
 	padding-top: em(64);
 
@@ -82,6 +83,17 @@ section.verification-container {
 	}
 
 	.md-indicators {
+
+		position: relative;
+		bottom: 0;
+		top: 25px;
+
+		@media (min-width: $screen-sm-min) {
+			position: absolute;
+			bottom: 10px;
+			top: 0;
+		}
+
 		li  {
 
 			border-color: $brand-primary;
@@ -99,7 +111,6 @@ section.verification-container {
 			}
 
 			&.active {
-				margin: em(8);
 				background-color: $brand-primary;
 				border-width: 2px;
 			}

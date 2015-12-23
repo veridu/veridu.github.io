@@ -141,11 +141,28 @@
 	function AppCtrl ($scope) {
 
 		var vm = this;
-
+		vm.nextSlide = nextSlide;
+		vm.prevSlide = prevSlide;
 
 		init();
-		function init () {
 
+		function nextSlide() {
+			if (vm.slider.index == (vm.slider.length - 1)) {
+				vm.slider.index = 0;
+			} else {
+				vm.slider.index++;
+			}
+		}
+
+		function prevSlide() {
+			if (vm.slider.index == 0) {
+				vm.slider.index = 3;
+			} else {
+				vm.slider.index--;
+			}
+		}
+		
+		function init () {
 
 			vm.slider = {
 				index : 0,
@@ -154,9 +171,6 @@
 				length: 4
 			};
 
-
-		    var i;
-
 			$scope.$watch('App.slider.index' , function (value) {
 				if (value) {
 					clearInterval(vm.carouselInterval);
@@ -164,15 +178,13 @@
 				}
 			});
 
+
 			function moveCarousel() {
 		    	$scope.$apply(function () {
-					if (vm.slider.index == (vm.slider.length - 1)) {
-						vm.slider.index = 0;
-					} else {
-						vm.slider.index++;
-					}
+					vm.nextSlide();
 		    	});
 			}
+
 			vm.carouselInterval = setInterval(moveCarousel, 4000);
 
 			vm.mainSliderStates = [
@@ -234,6 +246,6 @@
 			];
 
 		}
-	}
+		}
 
 })($,WOW);

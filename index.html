@@ -93,7 +93,7 @@ layout: default
                                     <span class="white-bottom-border"><small>£</small> <span class="big">0,086</span> / CHECK</span>
                                 </a>
                             </div>
-                            <section class="progress-container" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgStyle})">
+                            <section class="progress-container" ng-swipe-left="App.prevSlide()" ng-swipe-right="App.nextSlide()" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgStyle})">
                                 <h4 class="hidden-xs">CREDIBILITY</h4>
 
                                 <div class="progress">
@@ -137,7 +137,15 @@ layout: default
                                 </div> -->
 
                                <a class="white-link" href="#">SHOW MORE</a>
-                            </section>
+
+                               <ol class="carousel-indicators md-indicators">
+                                   <li ng-click="App.slider.index = 0" ng-class="{active : App.slider.index == 0}"></li>
+                                   <li ng-click="App.slider.index = 1" ng-class="{active : App.slider.index == 1}"></li>
+                                   <li ng-click="App.slider.index = 2" ng-class="{active : App.slider.index == 2}"></li>
+                                   <li ng-click="App.slider.index = 3" ng-class="{active : App.slider.index == 3}"></li>
+
+                               </ol>
+                           </section>
 
                             <section class="verification-container">
 
@@ -207,12 +215,6 @@ layout: default
                     </div>
                 </div>
             </div>
-            <ol class="carousel-indicators md-indicators">
-                <li ng-click="App.slider.index = 0" ng-class="{active : App.slider.index == 0}"></li>
-                <li ng-click="App.slider.index = 1" ng-class="{active : App.slider.index == 1}"></li>
-                <li ng-click="App.slider.index = 2" ng-class="{active : App.slider.index == 2}"></li>
-                <li ng-click="App.slider.index = 3" ng-class="{active : App.slider.index == 3}"></li>
-            </ol>
     </div>
 </div>
 
