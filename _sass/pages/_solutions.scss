@@ -26,7 +26,7 @@
 			a {
 				text-decoration: none;
 			}
-			
+
 			i {
 				visibility: hidden;
 			}
@@ -64,28 +64,35 @@
 .main-container-solutions {
 
 	background: #eee;
-	
+
 	.page-title {
 		font-size: em(36);
 		margin-bottom: em(16,36) !important1
 	}
 
 	.solution__item {
-		height: em(413);
+
+		@media (max-width: $screen-xs-max) {
+			height: em(430);
+		}
+
+		@media (min-width: $screen-sm-min) {
+			height: em(413);
+		}
 
 		&#sectors-tabs {
 			height: em(250);
 		}
-	
+
 		background-image: url(/img/coworking.jpeg);
 		background-repeat: no-repeat no-repeat;
 		background-size: 250%;
 		background-position: center center;
 		position: relative;
-		
+
 		&.solution__item__notfirst {
 			margin-top: em(20);
-		}		
+		}
 
 
 		.solution__item_description {
@@ -94,7 +101,7 @@
 
 		}
 
-		.solution__item__content{			
+		.solution__item__content{
 			position: absolute;
 			width: 100%;
 			height: 100%;
@@ -103,20 +110,20 @@
 			padding: em(33) 10%;
 			background-color: rgba(#311B92, 0.8);
 			color: white;
-			
+
 			&.solution__item__content--purple {
-				
+
 				background-color: rgba(#7E57C2, 0.8);
 
 			}
-			
+
 			.solution__item__tags__container {
 				position: absolute;
 				padding-right: 10%;
 				padding-bottom: em(33);
 				background: transparent !important;
 				bottom: 0;
-			}	
+			}
 		}
 
 		.solution__item__content {
