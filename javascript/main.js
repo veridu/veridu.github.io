@@ -1,8 +1,8 @@
 (function ($, WoW) {
-	
+
 	// initializes
 	(new WoW).init();
-	
+
 	var menuToggler  = $('#menu-toggler');
 	var dropdownMenu = $('.dropdown-menu');
 
@@ -21,7 +21,7 @@
 
 
 	var app = angular.module('app', []).config(function($interpolateProvider){
-    	$interpolateProvider.startSymbol('({').endSymbol('})');	
+    	$interpolateProvider.startSymbol('({').endSymbol('})');
 	});
 	app.controller('CartCtrl', CartCtrl);
 	app.controller('ContactCtrl', ContactCtrl);
@@ -40,7 +40,7 @@
 		vm.removeProduct = removeProduct;
 
 		$scope.$watch('cart.items', function (items) {
-			
+
 			if (items.length) {
 				vm.total = (vm.items.reduce(function (a,b) {
 									return {value: a.value + b.value};
@@ -57,7 +57,7 @@
 
 		function removeProduct (key) {
 			vm.items.map(function  (item, index) {
-				if (item.key == key) 
+				if (item.key == key)
 					vm.items.splice(index, 1);
 			});
 
@@ -66,7 +66,7 @@
 		function hasItem (key) {
 			var found = false;
 			vm.items.map(function  (item) {
-				if (item.key == key) 
+				if (item.key == key)
 					found = true;
 			});
 			return found;
@@ -107,12 +107,12 @@
 
 				fixed_header.style.border =  '1px solid transparent';
 
-			} 
+			}
 		})
 	})();
 
 	// sets landing height to 100%
-	
+
 	var landingHeight = $(window).height() -  $('.menu').height();
 	var landingSection = $('.landing-section');
 	var sliderProgressCt = $('.slider-progress-container');
@@ -122,16 +122,19 @@
 	landingSection.css('height', landingHeight);
 	sliderProgressCt.css('top',  - landingHeight * 0.1);
 
-	$window.resize(function() {
+	$window.resize(adjustHeights);
+	adjustHeights();
+
+	function adjustHeights() {
 		var landingHeight = $window.height() -  menu.height();
 		if ($window.width() > 768) {
-			landingSection.css('height', landingHeight);		
+			landingSection.css('height', landingHeight);
 		} else {
-			landingSection.css('height', 'auto');		
+			landingSection.css('height', 'auto');
 		}
 
-	});
-	
+	}
+
 	angular.module('app').controller('AppCtrl', AppCtrl);
 
 	AppCtrl.$inject = ['$scope'];
@@ -142,39 +145,51 @@
 
 		init();
 		function init () {
-			
+
 
 			vm.slider = {
 				index : 0,
 				state: function(){ return vm.mainSliderStates[this.index]},
 				status: function(){ return vm.progressStatuses[this.index]},
+				length: 4
 			};
 
 
 		    var i;
 
-		    $('#main-slider').on('slide.bs.carousel', function (slider) {
+			$scope.$watch('App.slider.index' , function (value) {
+				if (value) {
+					clearInterval(vm.carouselInterval);
+					vm.carouselInterval = setInterval(moveCarousel, 4000);
+				}
+			});
+
+			function moveCarousel() {
 		    	$scope.$apply(function () {
-		    		vm.slider.index = $(slider.relatedTarget).attr('data-index');
+					if (vm.slider.index == (vm.slider.length - 1)) {
+						vm.slider.index = 0;
+					} else {
+						vm.slider.index++;
+					}
 		    	});
-		    });
+			}
+			vm.carouselInterval = setInterval(moveCarousel, 4000);
 
-
-			vm.mainSliderStates = [ 
+			vm.mainSliderStates = [
 				'customer-1',
 				'customer-2',
 				'customer-3',
 				'customer-4'
 			];
 
-			vm.progressStatuses = [ 
+			vm.progressStatuses = [
 				{
 					hours: 2263,
 					hoursPercent: 68,
 					name: 'Carl Ejlers',
 					namePercent: 48,
 					img: '/img/carl2.jpeg',
-					imgStyle: 'background-size: 140% auto;',
+					imgStyle: 'background-size: 200%;',
 					sex: 'Male',
 					sexPercent: 62,
 					verified: true,

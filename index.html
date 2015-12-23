@@ -7,9 +7,9 @@ layout: default
             <div class="row-sm no-styled-container">
 
                 <div class="slider-progress-container">
-                    
+
                     <div class="clearfix container-sm">
-                        <div id="main-slider" class="carousel slide" data-ride="carousel">
+                        <!-- <div id="main-slider" class="carousel slide" data-ride="carousel">
                             <ol class="carousel-indicators">
                                 <li data-target="#main-slider" data-slide-to="0" class="active"></li>
                                 <li data-target="#main-slider" data-slide-to="1" class=""></li>
@@ -50,21 +50,23 @@ layout: default
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row-sm"><h1 class="title-sm">
-                                Know Your 
+                        </div> -->
+
+                        <div class="row-sm">
+                            <h1 class="title-sm">
+                                Know Your <br class="visible-xs">
                                 <span ng-show=" App.slider.state() == 'customer-1' " class="animated flipInX">Customer</span>
                                 <span ng-show=" App.slider.state() == 'customer-2' " class="animated flipInX">Peer</span>
                                 <span ng-show=" App.slider.state() == 'customer-3' " class="animated flipInX">Candidate</span>
                                 <span ng-show=" App.slider.state() == 'customer-4' " class="animated flipInX">Tenant</span>
-                            </h1>  
-                            
-                            <p ng-show=" App.slider.state() == 'customer-1' " class="animated fadeIn slider-paragraph c-white hidden-xs">
+                            </h1>
+
+                            <p ng-show="App.slider.state() == 'customer-1' " class="animated fadeIn slider-paragraph c-white hidden-xs">
                                 You can have it all. Robust identity verification globally, <br>
                                 fewer declined transactions and an improved user experience.
                             </p>
                             <p ng-show=" App.slider.state() == 'customer-2' " class="animated fadeIn slider-paragraph c-white hidden-xs">
-                                A trusting community is a sharing community. Drive engagement <br> 
+                                A trusting community is a sharing community. Drive engagement <br>
                                 in your community by letting members proactively showcase their <br>
                                 credibility and trustworthiness.
                             </p>
@@ -75,13 +77,13 @@ layout: default
                             </p>
                             <p ng-show=" App.slider.state() == 'customer-4' " class="animated fadeIn slider-paragraph c-white hidden-xs">
                                 Don't be a stranger. Create trust between property owners and viewers <br>
-                                before they even meet with pre-vetting solutions that establish identity <br> 
+                                before they even meet with pre-vetting solutions that establish identity <br>
                                 and credibility.
 
                             </p>
 
                         </div>
-                        <div class="row-sm">                        
+                        <div class="row-sm">
                             <div class="customer-image-container">
                                 <div ng-show="App.slider.state() == 'customer-1'" class="animated fadeIn customer__image" style="background-image: url(/img/carl1.png);"></div>
                                 <div ng-show="App.slider.state() == 'customer-2'" class="animated fadeIn customer__image" style="background-image: url(/img/rasmus.jpg); background-position: left top;"></div>
@@ -102,7 +104,7 @@ layout: default
                                     </p>
                                   </div>
                                 </div>
-                                
+
                                 <div class="progress" >
                                   <div class="progress-bar" role="progressbar" aria-valuenow="({App.slider.status().namePercent})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.slider.status().namePercent})%;">
                                     <p>
@@ -129,7 +131,7 @@ layout: default
                                     </p>
                                   </div>
                                 </div>
-<!-- 
+<!--
                                 <div ng-show="App.slider.status().verified">
                                     <img src="/img/verified.png" width="150px">
                                 </div> -->
@@ -137,28 +139,28 @@ layout: default
                                <a class="white-link" href="#">SHOW MORE</a>
                             </section>
 
-                            <section class="verification-container">    
-                                
+                            <section class="verification-container">
+
                                 <h4>TRY IT NOW</h4>
                                 <div class="buttons-container">
                                     <div class="btn-container right">
                                         <button class="btn btn-primary btn-lg "> Facebook </button>
-                                    </div>  
+                                    </div>
 
                                     <div class="btn-container left">
                                         <button class="btn btn-primary btn-lg  "> LinkedIn </button>
-                                    </div>  
+                                    </div>
 
                                     <!-- breaks line -->
                                     <div class="clearfix"></div>
 
                                     <div class="btn-container right ">
                                         <button class="btn btn-primary btn-lg "> Google </button>
-                                    </div>  
+                                    </div>
 
                                     <div class="btn-container left ">
                                         <button class="btn btn-primary btn-lg "> Paypal </button>
-                                    </div> 
+                                    </div>
 
                                     <div class="hidden-verification-container">
                                         <div ng-show="showHiddenIntegrations" class="animated fadeIn ">
@@ -166,36 +168,36 @@ layout: default
 
                                             <div class="btn-container right ">
                                                 <button class="btn btn-primary btn-lg "> Spotify </button>
-                                            </div>  
+                                            </div>
 
                                             <div class="btn-container left ">
                                                 <button class="btn btn-primary btn-lg "> Instagram </button>
-                                            </div>      
+                                            </div>
 
                                             <div class="clearfix"></div>
 
                                             <div class="btn-container right ">
                                                 <button class="btn btn-primary btn-lg "> Dropbox </button>
-                                            </div>  
+                                            </div>
 
                                             <div class="btn-container left ">
                                                 <button class="btn btn-primary btn-lg "> Email </button>
-                                            </div>      
+                                            </div>
                                             <div class="clearfix"></div>
 
                                             <div class="btn-container right ">
                                                 <button class="btn btn-primary btn-lg "> SMS </button>
-                                            </div>  
+                                            </div>
 
                                             <div class="btn-container left ">
                                                 <button class="btn btn-primary btn-lg "> Spot a friend </button>
-                                            </div>  
+                                            </div>
 
                                             <div class="clearfix"></div>
                                             <a ng-show="showHiddenIntegrations" class="black-link" href="javascript:void(0)" ng-click="showHiddenIntegrations = false" >SHOW LESS</a>
 
-                                        </div>    
-                                    </div>    
+                                        </div>
+                                    </div>
 
                                 </div>
                                 <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:void(0)" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a>
@@ -203,19 +205,19 @@ layout: default
 
                         </div>
                     </div>
-                </div>    
+                </div>
             </div>
-            <ol class="carousel-indicators md-indicators hidden-xs">
-                <li data-target="#main-slider" data-slide-to="0" ng-class="{active : App.slider.index == 0}"></li>
-                <li data-target="#main-slider" data-slide-to="1" ng-class="{active : App.slider.index == 1}"></li>
-                <li data-target="#main-slider" data-slide-to="2" ng-class="{active : App.slider.index == 2}"></li>
-                <li data-target="#main-slider" data-slide-to="3" ng-class="{active : App.slider.index == 3}"></li>
-            </ol> 
+            <ol class="carousel-indicators md-indicators">
+                <li ng-click="App.slider.index = 0" ng-class="{active : App.slider.index == 0}"></li>
+                <li ng-click="App.slider.index = 1" ng-class="{active : App.slider.index == 1}"></li>
+                <li ng-click="App.slider.index = 2" ng-class="{active : App.slider.index == 2}"></li>
+                <li ng-click="App.slider.index = 3" ng-class="{active : App.slider.index == 3}"></li>
+            </ol>
     </div>
 </div>
 
 <section class="veridu-list md-cards">
-        
+
     <div class="item-container">
         <div>
             <h3>GLOBAL ID VERIFICATION</h3>
@@ -229,7 +231,7 @@ layout: default
             <p>Automate more fraud decisions and reduce time spent on manuel reviews with better tools and user insight.</p>
         </div>
     </div>
-    
+
     <div class="item-container">
         <div>
             <h3>GAIN INSIGHT</h3>
@@ -259,7 +261,7 @@ layout: default
                     </div>
                 </div>
             </div>
-            <!-- 
+            <!--
             <div class="item">
                 <div class="container">
                     <div class="carousel-caption">
@@ -272,7 +274,7 @@ layout: default
                     </div>
                 </div>
             </div>
-            
+
             <div class="item">
                 <div class="container">
                     <div class="carousel-caption">
@@ -302,10 +304,10 @@ layout: default
 
 <section class="integration veridu-list">
     <div>
-        <h2 class="font-light">Integration</h2>    
-        
+        <h2 class="font-light">Integration</h2>
+
         <div class="items-container">
-            
+
             <div class="item-container">
                 <h3>HOSTED</h3>
                 <p>Simply send users an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is.</p>
@@ -315,7 +317,7 @@ layout: default
                 <h3>WIDGETS</h3>
                 <p>Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.</p>
             </div>
-            
+
             <div class="item-container">
                 <h3>API</h3>
                 <p>Get creative! Our API gives you complete flexibility to customise the look and flow of your identity solution for a seamless user experience completely tailored to your needs.</p>
@@ -332,30 +334,30 @@ layout: default
             Contact us to discuss your specific needs
         </p>
 
-        <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">        
+        <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">
 
                 <div class="input-container name">
-                    <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name"> 
+                    <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name">
                 </div>
 
                 <div class="input-container company">
-                    <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">    
+                    <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">
                 </div>
                 <div class="clearfix hidden-xs"></div>
 
                 <div class="input-container email">
-                    <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">    
-                </div>              
+                    <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">
+                </div>
                 <div class="clearfix hidden-xs"></div>
 
                 <div class="input-container message">
                     <textarea rows="5" ng-model="ctrl.contact.message" name="message" type="text" placeholder="Message"></textarea>
-                </div>              
-        
+                </div>
+
                 <div class="input-container text-right submit">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
-        </form>        
+        </form>
     </div>
 </section>
 
@@ -364,8 +366,8 @@ layout: default
 	<div class="v-aligner">
 		<div class="right-aligned">
 			<h3>HEADLINE</h3>
-			<p>Veridu easily integrates with online marketplaces -</p> 
-			<p>classifieds, task services etc -</p> 
+			<p>Veridu easily integrates with online marketplaces -</p>
+			<p>classifieds, task services etc -</p>
 			<p>to provide “ID Verified” and “Trustworthy” profile badges for members</p>
 		</div>
 	</div>
@@ -375,8 +377,8 @@ layout: default
 	<div class="v-aligner">
 		<div class="left-aligned">
 			<h3>HEADLINE</h3>
-			<p>Veridu easily integrates with online marketplaces -</p> 
-			<p>classifieds, task services etc -</p> 
+			<p>Veridu easily integrates with online marketplaces -</p>
+			<p>classifieds, task services etc -</p>
 			<p>to provide “ID Verified” and “Trustworthy” profile badges for members</p>
 		</div>
 	</div>
