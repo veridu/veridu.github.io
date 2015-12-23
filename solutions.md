@@ -128,38 +128,81 @@ description: What company doesn't want to know their users better? These are jus
 			</div>
 		</div>
 	</section>
-	<div class="panel-controls panel-controls--purple">
-		<div>
-			<div ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.setActive('partners', 'payfriendz')">WORLDPAY</div>
+		<div class="panel-controls panel-controls--purple">
+			<div>
+				<div ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.setActive('partners', 'payfriendz')">WORLDPAY</div>
+			</div>
+			<div>
+				<div ng-class="{selected : ctrl.partnersTabs.active == 'durise'}" ng-click="ctrl.setActive('partners', 'durise')">DURISE</div>
+			</div>
+			<div>
+				<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_asset'}" ng-click="ctrl.setActive('partners', 'real_asset')">THE REAL ASSET COMPANY</div>
+			</div>
 		</div>
-		<div>
-			<div ng-class="{selected : ctrl.partnersTabs.active == 'durise'}" ng-click="ctrl.setActive('partners', 'durise')">DURISE</div>
+	</section>
+	<section class="integration veridu-list">
+	    <h2 class="font-light">Integration</h2>
+
+		<div class="visible-xs">
+		    <div class="item-container">
+		        <h3>HOSTED</h3>
+		        <p>Simply send users an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is.</p>
+		    </div>
+
+		    <div class="item-container">
+		        <h3>WIDGETS</h3>
+		        <p>Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.</p>
+		    </div>
+
+		    <div class="item-container">
+		        <h3>API</h3>
+		        <p>Get creative! Our API gives you complete flexibility to customise the look and flow of your identity solution for a seamless user experience completely tailored to your needs.</p>
+		    </div>
 		</div>
-		<div>
-			<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_asset'}" ng-click="ctrl.setActive('partners', 'real_asset')">THE REAL ASSET COMPANY</div>
+
+		<section id="integrations-tabs" class="solution__item solution__item__notfirst hidden-xs">
+			<div id="clients-integrations" class="solution__item__content solution__item__content--grey">
+
+				<div ng-show="ctrl.integrationsTabs.active == 'HOSTED'">
+					<h2 class="solution__item__title">HOSTED</h2>
+					<p class="solution__item_description" >
+						Simply send users an email link to verify themselves and <br>
+						evaluate and manage responses with our one-stop dashboard. <br>
+						It's effective, easy and no integration is.
+					</p>
+				</div>
+
+				<div ng-show="ctrl.integrationsTabs.active == 'WIDGETS'">
+					<h2 class="solution__item__title">WIDGETS</h2>
+					<p class="solution__item_description" >
+						Access our library full of beautiful widgets - you're sure to <br>
+						find one that meets your needs. Simple plug ins let you embed your chosen widget <br>
+						into your site quickly, easily and without any fuss.
+					</p>
+				</div>
+
+				<div ng-show="ctrl.integrationsTabs.active == 'API'">
+					<h2 class="solution__item__title">API</h2>
+					<p class="solution__item_description" >
+						Get creative! Our API gives you complete flexibility to customise <br>
+						the look and flow of your identity solution for a seamless user experience <br>
+						completely tailored to your needs.
+					</p>
+				</div>
+			</div>
+		</section>
+		<div class="panel-controls panel-controls--grey hidden-xs">
+			<div>
+				<div ng-class="{selected : ctrl.integrationsTabs.active == 'HOSTED'}" ng-click="ctrl.setActive('integrations', 'HOSTED')">HOSTED</div>
+			</div>
+			<div>
+				<div ng-class="{selected : ctrl.integrationsTabs.active == 'WIDGETS'}" ng-click="ctrl.setActive('integrations', 'WIDGETS')">WIDGETS</div>
+			</div>
+			<div>
+				<div class="panel-controls__item_block" ng-class="{selected : ctrl.integrationsTabs.active == 'API'}" ng-click="ctrl.setActive('integrations', 'API')">API</div>
+			</div>
 		</div>
-	</div>
-
-
-<section class="integration veridu-list">
-    <h2 class="font-light">Integration</h2>
-
-    <div class="item-container">
-        <h3>HOSTED</h3>
-        <p>Simply send users an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is.</p>
-    </div>
-
-    <div class="item-container">
-        <h3>WIDGETS</h3>
-        <p>Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.</p>
-    </div>
-
-    <div class="item-container">
-        <h3>API</h3>
-        <p>Get creative! Our API gives you complete flexibility to customise the look and flow of your identity solution for a seamless user experience completely tailored to your needs.</p>
-    </div>
-
-</section>
+	</section>
 
 </div>
 
@@ -175,22 +218,36 @@ description: What company doesn't want to know their users better? These are jus
 
 			vm.sectorsTabs = { active : 'payments' };
 			vm.partnersTabs = { active : 'payfriendz' };
+			vm.integrationsTabs = { active : 'HOSTED' };
 
 			this.setActive = function (tabSection, value) {
 
-				if (tabSection == 'partners') {
-					vm.partnersTabs.active = value;
+				switch (tabSection) {
 
+					case 'partners':
+						vm.partnersTabs.active = value;
 					    $('html, body').animate({
 					        scrollTop: ($('#partners-tabs').offset().top - 50)
 					    }, 1000);
+						break;
 
-    				} else {
+					case 'partners':
+						vm.sectorsTabs.active = value;
 					    $('html, body').animate({
 					        scrollTop: ($('#sectors-tabs').offset().top - 50)
 					    }, 1000);
-						vm.sectorsTabs.active = value;
-					}
+						break;
+
+					case 'integrations':
+						vm.integrationsTabs.active = value;
+					    $('html, body').animate({
+					        scrollTop: ($('#integrations-tabs').offset().top - 50)
+					    }, 1000);
+						break;
+
+					default:
+					break;
+				}
 			}
 		}
 

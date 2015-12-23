@@ -119,15 +119,24 @@
 
 			@media (max-width: $screen-xs-max) {
 				padding-right: 10%;
+				padding-left: 10%;
 			}
 
 			> div {
 				@extend .sm-container;
 			}
-
+			.solution__item__title {
+				font-weight: 300;
+			}
 			&.solution__item__content--purple {
 
 				background-color: rgba(#7E57C2, 0.8);
+
+			}
+
+			&.solution__item__content--grey {
+
+				background-color: #9D9D9D;
 
 			}
 
@@ -160,12 +169,26 @@
 		@extend .sm-container;
 		@extend .tablet__gutter;
 
+		&.hidden-xs {
+			margin-bottom: em(40);
+		}
+
 		&.panel-controls--purple {
 			> div > div {
 				background: #7E57C2;
 
 				@media (min-width: $screen-sm-min) {
 					border-color: #7E57C2;
+				}
+			}
+		}
+
+		&.panel-controls--grey {
+			> div > div {
+				background: #9D9D9D;
+
+				@media (min-width: $screen-sm-min) {
+					border-color: #9D9D9D;
 				}
 			}
 		}
@@ -262,7 +285,7 @@
 
 		@media (min-width: $screen-sm-min) {
 			background-color: #efefef;
-			h2 {
+			h2.font-light {
 				margin-top: em(140, 36) !important;
 			}
 		}
