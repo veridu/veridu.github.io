@@ -58,8 +58,10 @@
 
 	// menu border
 	(function  () {
-		var fixed_header = document.querySelector('.menu');
-		var header  =	$('.menu')
+		var fixed_header = $('nav.nav')[0];
+		var header  =	$('nav.nav');
+
+		console.warn(header);
 
 		window.addEventListener('scroll', function () {
 			var scrolled 	 = document.documentElement.scrollTop || document.body.scrollTop ;

@@ -84,8 +84,9 @@ body {
 	.nav {
 		position: fixed;
 		width: 100%;
+        z-index: 1000;
         background: white;
-        height: em(53);
+        height: em(54);
 	}
 
 	.menu {
