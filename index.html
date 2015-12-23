@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="landing-section" ng-swipe-left="App.prevSlide()" ng-swipe-right="App.nextSlide()" >
+<div class="landing-section">
         <div class="landing__overlay hidden-xs"></div>
         <div class="landing__content">
             <div class="row-sm no-styled-container">
@@ -9,49 +9,6 @@ layout: default
                 <div class="slider-progress-container">
 
                     <div class="clearfix container-sm">
-                        <!-- <div id="main-slider" class="carousel slide" data-ride="carousel">
-                            <ol class="carousel-indicators">
-                                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                                <li data-target="#main-slider" data-slide-to="1" class=""></li>
-                                <li data-target="#main-slider" data-slide-to="2" class=""></li>
-                                <li data-target="#main-slider" data-slide-to="3" class=""></li>
-                            </ol>
-                            <div class="carousel-inner">
-                                <div class="item active" data-index="0">
-                                    <div class="overlay"></div>
-                                    <div class="container">
-                                        <div class="carousel-caption">
-                                            <h1 class="text-left">Know Your Customer</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item" data-index="1">
-                                    <div class="overlay"></div>
-                                    <div class="container">
-                                        <div class="carousel-caption">
-                                            <h1 class="text-left">Know Your Customer 2</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item" data-index="2">
-                                    <div class="overlay"></div>
-                                    <div class="container">
-                                        <div class="carousel-caption">
-                                            <h1 class="text-left">Know Your Customer 3</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item" data-index="3">
-                                    <div class="overlay"></div>
-                                    <div class="container">
-                                        <div class="carousel-caption">
-                                            <h1 class="text-left">Know Your Customer 4</h1>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> -->
-
                         <div class="row-sm">
                             <h1 class="title-sm">
                                 Know Your <br class="visible-xs">
@@ -85,10 +42,7 @@ layout: default
                         </div>
                         <div class="row-sm">
                             <div class="customer-image-container">
-                                <div ng-show="App.slider.state() == 'customer-1'" class="animated fadeIn customer__image" style="background-image: url(/img/carl1.png);"></div>
-                                <div ng-show="App.slider.state() == 'customer-2'" class="animated fadeIn customer__image" style="background-image: url(/img/rasmus.jpg); background-position: left top;"></div>
-                                <div ng-show="App.slider.state() == 'customer-3'" class="animated fadeIn customer__image" style="background-image: url(/img/magalie.jpg);"></div>
-                                <div ng-show="App.slider.state() == 'customer-4'" class="animated fadeIn customer__image" style="background-image: url(/img/carl2.jpeg);"></div>
+                                <div  class="animated fadeIn customer__image" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgMdStyle})"></div>
                                 <a class="white-link" href="#">
                                     <span class="white-bottom-border"><small>£</small> <span class="big">0,086</span> / CHECK</span>
                                 </a>

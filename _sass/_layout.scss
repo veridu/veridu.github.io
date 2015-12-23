@@ -28,7 +28,7 @@
 	}
 
 
-} 
+}
 
 .main-container {
 	@include make-row();
@@ -51,7 +51,7 @@ body {
 }
 
 .container-sm {
-	@media (min-width: $screen-xs-max) {
+	@media (min-width: $screen-sm-min) {
 		margin-left: auto;
 		margin-right: auto;
 		max-width: $container-max-width;
@@ -95,7 +95,7 @@ body {
 
 		> div {
 			&.menu-content {
-				float: left; 
+				float: left;
 				margin-left: 1.45em;
 				margin-top: 0.66em;
 				margin-bottom: 0.6em;
@@ -149,7 +149,7 @@ body {
 				top: -3px;
 				font-size: em(30);
 
-				@media (min-width: $screen-xs-max) {
+				@media (min-width: $screen-sm-min) {
 					// display: none;
 				}
 			}
@@ -194,7 +194,7 @@ body {
 				}
 				vertical-align: middle;
 				display: table-cell;
-				
+
 				input {
 					margin-bottom: em(5);
 					width: 100%;
@@ -208,7 +208,7 @@ body {
 		padding: 0 em(15) em(15);
 		padding-left: em(50);
 		background: white;
-		
+
 		z-index: 1000;
 
 		h4 {
@@ -271,7 +271,7 @@ body {
 	width: calc(100% + em(30));
 	margin-left: -em(15);
 	position: relative;
-	height: em(300); 
+	height: em(300);
 	background-size: 100%;
 	background-position: center center;
 	background-repeat: no-repeat;
@@ -303,7 +303,7 @@ body {
 		}
 
 		@media (min-width: $screen-tablet) {
-			
+
 			vertical-align: bottom;
 			font-size: 2em;
 			padding-bottom: em(30);
@@ -318,7 +318,7 @@ body {
 	}
 
 	@media (min-width: $screen-tablet) {
-		
+
 		height: em(800);
 
 	}
@@ -353,7 +353,7 @@ footer {
 
 	}
 	// for desktop
-	@media (min-width: $screen-xs-max) {
+	@media (min-width: $screen-sm-min) {
 		margin-bottom: 0 !important;
 		padding-left: 0 !important;
 
@@ -378,4 +378,3 @@ footer {
 	}
 
 }
-

@@ -6,7 +6,6 @@
 	min-height: em(497);
 	background-repeat: no-repeat !important;
 	background-position: 0px -60px !important;
-	background-color: black !important;
 
 	padding-top: em(64);
 
@@ -76,22 +75,29 @@ section.verification-container {
 
 .landing-section {
 
-	@include clearfix();
 
 	@media (min-width: $screen-sm-min) {
 		height: auto ;
 	}
 
+	@include clearfix();
+
 	.md-indicators {
 
-		position: relative;
-		bottom: 0;
-		top: 25px;
+		@media (max-width: $screen-xs-max) {
+			position: relative;
+			top: 15px;
+		}
 
 		@media (min-width: $screen-sm-min) {
 			position: absolute;
-			bottom: 10px;
-			top: 0;
+			top: auto !important;
+			bottom: -20%;
+
+			@media (orientation: portrait) {
+				display: none !important;
+			}
+
 		}
 
 		li  {
@@ -101,9 +107,13 @@ section.verification-container {
 			width: em(13);
 			height: em(13);
 
+
+			@media (max-width: $screen-xs-max) {
+				margin: 0 em(8);
+			}
+
 			@media (min-width: $screen-sm-min) {
 				position: relative;
-				bottom: em(100);
 				margin: em(8);
 				&.active {
 					margin: em(8);
@@ -117,7 +127,7 @@ section.verification-container {
 		}
 	}
 
-	@media (min-width: $screen-xs-max) {
+	@media (min-width: $screen-sm-min) {
 		display: table;
 		width: 100%;
 		background-image: url(/img/coworking.jpeg);
@@ -129,7 +139,7 @@ section.verification-container {
 	.landing__content {
 		@extend .tablet__gutter;
 
-		@media (min-width: $screen-xs-max) {
+		@media (min-width: $screen-sm-min) {
 			display: table-cell;
 			vertical-align: middle;
 		}
@@ -137,8 +147,8 @@ section.verification-container {
 
 	p.slider-paragraph {
 		@include col(12);
-		min-height: em(57);
-		margin-bottom: em(50);
+		min-height: em(62);
+		margin-bottom: em(40);
 		line-height: em(20);
 	}
 
@@ -187,7 +197,7 @@ section.verification-container {
 	}
 
 	.slider-progress-container {
-		@media (min-width: $screen-xs-max) {
+		@media (min-width: $screen-sm-min) {
 			@include clearfix();
 			z-index: 10;
 			position: relative;
@@ -215,7 +225,7 @@ section.verification-container {
 
 		.customer__image {
 
-			@media (min-width: $screen-xs-max) {
+			@media (min-width: $screen-sm-min) {
 				background-color: rgba(black, 0.3);
 				width: 100%;
 				height: 187.9px;
@@ -260,7 +270,7 @@ section.verification-container {
 		}
 
 
-		@media (min-width: $screen-xs-max) {
+		@media (min-width: $screen-sm-min) {
 			@include col(4);
 			background-image: none !important;
 			background-color: transparent !important;
@@ -287,7 +297,7 @@ section.verification-container {
 	}
 
 	.verification-container {
-		@media (min-width: $screen-xs-max) {
+		@media (min-width: $screen-sm-min) {
 
 			@include col(4);
 			@include col-offset(1);
@@ -369,7 +379,7 @@ section.veridu-list {
 	}
 
 	// for desktop
-	@media (min-width: $screen-xs-max) {
+	@media (min-width: $screen-sm-min) {
 		&.md-cards {
 			max-width: $container-max-width;
 			margin-right: auto;
@@ -433,7 +443,7 @@ section.rasmus-quote {
 
 
 	// desktop styles
-	@media (min-width: $screen-xs-max) {
+	@media (min-width: $screen-sm-min) {
 
 		// tablet
 		@media (max-width: $screen-sm-max) {
@@ -606,7 +616,7 @@ section.integration {
 
 	// desktop styles
 
-	@media (min-width: $screen-xs-max) {
+	@media (min-width: $screen-sm-min) {
 		background: white;
 		padding-top: em(69) !important;
 		.items-container {
@@ -643,7 +653,7 @@ section.contact {
 	}
 
 	// desktop styles
-	@media (min-width: $screen-xs-max) {
+	@media (min-width: $screen-sm-min) {
 
 		padding-top: em(69) !important;
 		padding-left: 0;
@@ -662,7 +672,7 @@ section.contact {
 	background-color: #F8F8F8;
 
 	// desktop styles
-	@media (min-width: $screen-xs-max) {
+	@media (min-width: $screen-sm-min) {
 
 		padding-bottom: em(75) !important;
 

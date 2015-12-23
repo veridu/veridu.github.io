@@ -127,7 +127,7 @@
 
 	function adjustHeights() {
 		var landingHeight = $window.height() -  menu.height();
-		if ($window.width() > 768) {
+		if ($window.width() > 767) {
 			landingSection.css('height', landingHeight);
 		} else {
 			landingSection.css('height', 'auto');
@@ -143,6 +143,9 @@
 		var vm = this;
 		vm.nextSlide = nextSlide;
 		vm.prevSlide = prevSlide;
+
+		$(".landing-section").on("swiperight", nextSlide);
+		$(".landing-section").on("swipeleft", prevSlide);
 
 		init();
 
@@ -161,7 +164,7 @@
 				vm.slider.index--;
 			}
 		}
-		
+
 		function init () {
 
 			vm.slider = {
@@ -202,6 +205,7 @@
 					namePercent: 48,
 					img: '/img/carl2.jpeg',
 					imgStyle: 'background-size: 200%;',
+					imgMdStyle: 'background-size: 200% !important;',
 					sex: 'Male',
 					sexPercent: 62,
 					verified: true,
@@ -213,6 +217,7 @@
 					name: 'Rasmus Groth',
 					img: '/img/rasmus-big-fliph.jpg',
 					imgStyle: 'background-position: left top !important;',
+					imgMdStyle: 'background-size: 280% !important; background-position: left top !important;',
 					namePercent: 78,
 					sex: 'Male',
 					sexPercent: 72,
@@ -222,11 +227,12 @@
 				{
 					hours: 2063,
 					hoursPercent: 58,
-					name: 'Magalie Pimentel',
-					img: '/img/magalie.jpg',
-					imgStyle: 'background-position: right center !important; background-color:white;',
+					name: 'Carl Ejlers',
+					img: '/img/carl2.jpeg',
+					imgStyle: 'background-size: 200%;',
+					imgMdStyle: 'background-size: 200% !important;',
 					namePercent: 68,
-					sex: 'Female',
+					sex: 'Male',
 					sexPercent: 52,
 					verified: false,
 					birth: 49
@@ -234,10 +240,11 @@
 				{
 					hours: 3563,
 					hoursPercent: 82,
-					name: 'Carl Ejlers',
+					name: 'Rasmus Groth',
+					img: '/img/rasmus-big-fliph.jpg',
 					namePercent: 80,
-					img: '/img/carl1.png',
-					imgStyle: 'background-position: right center !important; background-color:white;',
+					imgStyle: 'background-position: left top !important;',
+					imgMdStyle: 'background-size: 280% !important; background-position: left top !important;',
 					sex: 'Male',
 					sexPercent: 72,
 					verified: true,
