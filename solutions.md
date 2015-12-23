@@ -38,15 +38,21 @@ description: What company doesn't want to know their users better? These are jus
 		</div>
 	</section>
 	<div class="panel-controls">
-
-		<div ng-class="{selected : ctrl.sectorsTabs.active == 'payments'}" ng-click="ctrl.setActive('sectors', 'payments')">PAYMENTS</div>
-		<div ng-class="{selected : ctrl.sectorsTabs.active == 'recruiting'}" ng-click="ctrl.setActive('sectors', 'recruiting')">RECRUITING</div>
-		<div ng-class="{selected : ctrl.sectorsTabs.active == 'p2p'}" ng-click="ctrl.setActive('sectors', 'p2p')">PEER TO PEER</div>
-		<div ng-class="{selected : ctrl.sectorsTabs.active == 'real_estate'}" ng-click="ctrl.setActive('sectors', 'real_estate')">REAL ESTATE</div>
-
+		<div >
+			<div ng-class="{selected : ctrl.sectorsTabs.active == 'payments'}" ng-click="ctrl.setActive('sectors', 'payments')">PAYMENTS</div>
+		</div>
+		<div >
+			<div ng-class="{selected : ctrl.sectorsTabs.active == 'recruiting'}" ng-click="ctrl.setActive('sectors', 'recruiting')">RECRUITING</div>
+		</div>
+		<div >
+			<div ng-class="{selected : ctrl.sectorsTabs.active == 'p2p'}" ng-click="ctrl.setActive('sectors', 'p2p')">PEER TO PEER</div>
+		</div>
+		<div >
+			<div ng-class="{selected : ctrl.sectorsTabs.active == 'real_estate'}" ng-click="ctrl.setActive('sectors', 'real_estate')">REAL ESTATE</div>
+		</div>
 	</div>
 
-	<section class="solution__section__container content-padding font-light">
+	<section class="solution__section__container solution__section__container--clients-partners content-padding font-light">
 		<h2 class="solution__section__title">Clients & Partners</h2>
 		<p class="solution__section__description">
 			We're proud to be working with some truly innovative companies, both big and growing. Here's a taster of how we're working together.
@@ -123,10 +129,15 @@ description: What company doesn't want to know their users better? These are jus
 		</div>
 	</section>
 	<div class="panel-controls panel-controls--purple">
-
-		<div ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.setActive('partners', 'payfriendz')">WORLDPAY</div>
-		<div ng-class="{selected : ctrl.partnersTabs.active == 'durise'}" ng-click="ctrl.setActive('partners', 'durise')">DURISE</div>
-		<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_asset'}" ng-click="ctrl.setActive('partners', 'real_asset')">THE REAL ASSET COMPANY</div>
+		<div>
+			<div ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.setActive('partners', 'payfriendz')">WORLDPAY</div>
+		</div>
+		<div>
+			<div ng-class="{selected : ctrl.partnersTabs.active == 'durise'}" ng-click="ctrl.setActive('partners', 'durise')">DURISE</div>
+		</div>
+		<div>
+			<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_asset'}" ng-click="ctrl.setActive('partners', 'real_asset')">THE REAL ASSET COMPANY</div>
+		</div>
 	</div>
 
 
@@ -196,7 +207,7 @@ description: What company doesn't want to know their users better? These are jus
 				scrollToHash(id);
 			}
 		}
-		
+
 	}
 
 	function scrollToHash (hash, speed) {

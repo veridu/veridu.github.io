@@ -172,7 +172,11 @@ body {
 						&.id-img {
 							display: none;
 							max-width: em(30);
-						}
+
+                            @media (min-width: $screen-sm-min) {
+                                margin-right: em(126);
+                            }
+                        }
 						&.veridu-img {
 							width: 80%;
 						}
@@ -415,9 +419,9 @@ footer {
 	}
 	> div {
 		@extend .tablet__gutter;
-
 	}
-	// for desktop
+
+	// for desktops
 	@media (min-width: $screen-sm-min) {
 		margin-bottom: 0 !important;
 		padding-left: 0 !important;

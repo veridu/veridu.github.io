@@ -1,7 +1,7 @@
 .tablet__gutter {
 
 	@media (min-width: $screen-sm-min) {
-			
+
 		@media (max-width: $screen-sm-max) {
 
 			padding-right: em(25,15) !important;
@@ -9,5 +9,13 @@
 
 		}
 
+	}
+}
+
+.sm-container {
+    @media (min-width: $screen-xs-max) {
+		max-width: $container-max-width;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
