@@ -87,7 +87,7 @@ body {
 		width: 100%;
         z-index: 1000;
         background: white;
-        min-height: em(55);
+        min-height: em(52);
 	}
 
 	.menu {
@@ -103,7 +103,11 @@ body {
             margin-left: auto;
             margin-right: auto;
             padding-bottom: 0;
-            min-height: em(53);
+            min-height: em(50);
+
+            .menu-content {
+                margin-bottom: 0 !important;
+            }
         }
 
         .menu__links__md {
