@@ -60,7 +60,7 @@
 	(function  () {
 		var fixed_header = $('nav.nav')[0];
 		var header  =	$('nav.nav');
-		
+
 		window.addEventListener('scroll', function () {
 			var scrolled 	 = document.documentElement.scrollTop || document.body.scrollTop ;
 
@@ -109,11 +109,17 @@
 		var vm = this;
 		vm.nextSlide = nextSlide;
 		vm.prevSlide = prevSlide;
+		vm.togleSignin = togleSignin;
 
 		$(".landing-section").on("swiperight", nextSlide);
 		$(".landing-section").on("swipeleft", prevSlide);
 
 		init();
+
+
+		function togleSignin() {
+			vm.showSignin = ! vm.showSignin;
+		}
 
 		function nextSlide() {
 			if (vm.slider.index == (vm.slider.length - 1)) {
