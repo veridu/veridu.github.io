@@ -716,3 +716,36 @@ section.contact {
 	}
 
 }
+
+section.contact {
+	background-color: #efefef;
+
+	@include clearfix();
+	padding-bottom: em(70);
+
+	> h4 {
+		margin-bottom: em(14);
+	}
+
+	.section__description {
+		margin-bottom: em(44);
+	}
+
+	form {
+		.input-container {
+			margin-bottom: em(16);
+
+			input, textarea {
+				width: 100%;
+				border: 0;
+				background: white;
+				color: $brand-primary;
+				padding: 8px;
+			}
+			input {
+				height: em(32);
+			}
+
+		}
+	}
+}

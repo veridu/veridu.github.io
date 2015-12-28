@@ -68,7 +68,6 @@ description: What company doesn't want to know their users better? These are jus
 				<p class="solution__item_description" >
 					Payfriendz is a mobile app to transfer money between friends. <br>
 					What do they use Veridu for? <br>
-					<a href="#" class="white-link">READ MORE</a>
 				</p>
 			</div>
 			<div ng-show="ctrl.partnersTabs.active == 'durise'">
@@ -76,7 +75,6 @@ description: What company doesn't want to know their users better? These are jus
 				<p class="solution__item_description" >
 					Durise is a Dubai based real estate crowdfunding platform. <br>
 					What do they use Veridu for? <br>
-					<a href="#" class="white-link">READ MORE</a>
 				</p>
 			</div>
 			<div ng-show="ctrl.partnersTabs.active == 'real_asset'">
@@ -84,7 +82,6 @@ description: What company doesn't want to know their users better? These are jus
 				<p class="solution__item_description" >
 					The Real Asset Company is an innovative gold investment platform with its own cryptocurrency. <br>
 					What do they use Veridu for? <br>
-					<a href="#" class="white-link">READ MORE</a>
 				</p>
 			</div>
 			<div class="solution__item__tags__container">
@@ -142,7 +139,7 @@ description: What company doesn't want to know their users better? These are jus
 			</div>
 		</div>
 	</section>
-	<section class="integration veridu-list">
+	<section class="integration veridu-list" id="integration-mobile">
 	    <h2 class="font-light">Integration</h2>
 
 		<div class="visible-xs">
@@ -263,19 +260,29 @@ description: What company doesn't want to know their users better? These are jus
 
 			if (id) {
 				event.preventDefault();
-				$('#pricing-curent-position').text(id.replace('#',''));
-				scrollToHash(id);
+				var sectionName = id.replace('#','');
+				var mobile = $(window).width() < 768;
+
+				if (mobile && sectionName == 'integration') {
+					id = "#integration-mobile";
+				}
+
+				$('#solutions-curent-position').html(this.innerHTML);
+				console.warn('oi = ' + id);
+
+				scrollToHash(id, 1000, mobile);
 			}
 		}
 
 	}
 
-	function scrollToHash (hash, speed) {
+	function scrollToHash (hash, speed, mobile) {
 		if (! speed) speed = 2000;
+		var offset = mobile ? 100 : 260;
 
 		$('html, body').animate({
-			scrollTop: ($(hash).offset().top - 260)
-		}, 2000);
+			scrollTop: ($(hash).offset().top - offset)
+		}, speed);
 	}
 
 	document.addEventListener('DOMContentLoaded', load);

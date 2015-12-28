@@ -9,6 +9,7 @@
 
 	.current-state {
 		display: inline-block !important;
+		margin-top: 3px;
 	}
 	.veridu-img {
 		display: none;
@@ -22,15 +23,17 @@
 		@media (min-width: $screen-sm-min) {
 			@include clearfix();
 			display: block !important;
+			margin-top: 5px;
 			padding-left: em(145);
 		}
 
 		.solutions-submenu {
 
 			background: white;
-			font-weight: bold;
+			font-weight: 400;
 			padding: 0;
 			margin-left: 15px;
+			margin-bottom: 0;
 			display: inline-block;
 
 			@media (min-width: $screen-sm-min) {
@@ -44,14 +47,19 @@
 				}
 
 				i {
+					position: relative;
+					top: 2px;
+					left: -3px;
 					visibility: hidden;
 				}
 
 				&:first-of-type {
 					display: block;
+					font-weight: bold;
 				}
 
 				&:hover, &.selected {
+					font-weight: bold;
 					i {
 						visibility: visible;
 					}
@@ -83,7 +91,7 @@
 					li {
 						display: block !important;
 						&:last-of-type {
-							margin-bottom: em(30);
+
 						}
 						&:first-of-type {
 							display: none !important;
@@ -115,10 +123,6 @@
 
 		@media (min-width: $screen-sm-min) {
 			height: em(413);
-		}
-
-		&#sectors-tabs {
-			height: em(250);
 		}
 
 		background-image: url(/img/coworking.jpeg);
