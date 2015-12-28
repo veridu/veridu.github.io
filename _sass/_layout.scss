@@ -30,6 +30,12 @@
 
 }
 
+.page-loading {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+}
+
 .main-container {
 	@include make-row();
 	padding-top: em(61);

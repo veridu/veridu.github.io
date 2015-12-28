@@ -104,9 +104,8 @@ section.verification-container {
 
 			border-color: $brand-primary;
 			border-width: 2px;
-			width: em(13);
-			height: em(13);
-
+			width: em(13) !important;
+			height: em(13) !important;
 
 			@media (max-width: $screen-xs-max) {
 				margin: 0 em(8);
@@ -287,6 +286,14 @@ section.verification-container {
 						font-size: 1.1em !important;
 					}
 				}
+
+				&.progress-verified {
+					img {
+						width: 165px;
+						position: relative;
+						top: 5px;
+					}
+				}
 			}
 			.white-link {
 				margin-left: em(12);
@@ -297,8 +304,8 @@ section.verification-container {
 	}
 
 	.verification-container {
-		@media (min-width: $screen-sm-min) {
 
+		@media (min-width: $screen-sm-min) {
 			@include col(4);
 			@include col-offset(1);
 
@@ -312,6 +319,7 @@ section.verification-container {
 
 					padding-left: 8.5px;
 					padding-right: 8.5px;
+					margin-bottom: em(17);
 
 					button {
 						margin-left: 1px !important;
@@ -323,8 +331,10 @@ section.verification-container {
 			}
 
 			background: transparent;
+
 			.black-link {
 				float: right;
+				margin-top: em(6);
 				margin-right: 8.5px;
 				color: white !important;
 				border-color: white;
@@ -332,6 +342,7 @@ section.verification-container {
 					color: white !important;
 				}
 			}
+
 			h4 {
 				margin-left: 8.5px;
 				letter-spacing: em(0.5);
@@ -399,6 +410,7 @@ section.veridu-list {
 					padding: em(30) em(40);
 					height: em(229);
 					border-bottom: 4px solid #CFCFCF;
+					
 					h3 {
 						letter-spacing: em(1, 25);
 					}

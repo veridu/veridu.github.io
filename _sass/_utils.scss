@@ -19,3 +19,9 @@
 		margin-right: auto;
 	}
 }
+
+.pure-container {
+	@extend .sm-container;
+	@extend .tablet__gutter;
+	@extend .content-padding;
+}

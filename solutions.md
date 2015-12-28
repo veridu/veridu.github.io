@@ -230,6 +230,7 @@ description: What company doesn't want to know their users better? These are jus
 
 		$window.resize(getSectionsHeight);
 		function getSectionsHeight() {
+			mobile = $window.width() < 768;
 			integrationsHeight = $('#integration-section').offset().top - 50;
 			clientsParntersHeight =  $('#clients-partners-section').offset().top - 50;
 
@@ -243,7 +244,7 @@ description: What company doesn't want to know their users better? These are jus
 
 			window.addEventListener('scroll', detect);
 			detect();
-			
+
 			function detect() {
 				var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;
 
@@ -317,7 +318,7 @@ description: What company doesn't want to know their users better? These are jus
 			if (id) {
 				event.preventDefault();
 				var sectionName = id.replace('#','');
-
+				console.warn(sectionName);
 				if (mobile && sectionName == 'integration') {
 					id = "#integration-section";
 				}
@@ -331,8 +332,9 @@ description: What company doesn't want to know their users better? These are jus
 
 
 	function scrollToHash (hash, speed, mobile) {
+		console.warn(hash);
 		if (! speed) speed = 2000;
-		var offset = mobile ? 240 : 260;
+		var offset = mobile ? 240 : 280;
 		if (hash == '#integration-section') {
 			offset = 20;
 		}

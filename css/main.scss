@@ -9,7 +9,7 @@ $base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 body {
     color: black !important;
     @media (min-width: 768px) {
-        background-color: #eee !important;
+        background-color: #EFEFEF !important;
     }
 }
 
@@ -44,6 +44,7 @@ body {
         "vendor/animate",
         "layout",
         "pages/solutions",
+        "pages/contact",
         "pages/article",
         "pages/pricing"
 ;

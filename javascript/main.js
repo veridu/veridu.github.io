@@ -59,7 +59,7 @@
 	// menu border
 	(function  () {
 		var fixed_header = $('nav.nav')[0];
-		
+
 		window.addEventListener('scroll', function () {
 			var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;
 			if (scrolled > 1){
@@ -166,8 +166,8 @@
 
 			vm.progressStatuses = [
 				{
-					hours: 2263,
-					hoursPercent: 68,
+					hours: 1963,
+					hoursPercent: 60,
 					name: 'Carl Ejlers',
 					namePercent: 48,
 					img: '/img/carl2.jpeg',
@@ -175,8 +175,9 @@
 					imgMdStyle: 'background-size: 200% !important;',
 					sex: 'Male',
 					sexPercent: 62,
-					verified: true,
-					birth: 49
+					verified: false,
+					birth: 'carl@veridu.com',
+					birthPercent: 49
 				},
 				{
 					hours: 2563,
@@ -188,8 +189,9 @@
 					namePercent: 78,
 					sex: 'Male',
 					sexPercent: 72,
-					verified: false,
-					birth: 59
+					verified: true,
+					birth: 'carl@veridu.com',
+					birthPercent: 59
 				},
 				{
 					hours: 2063,
@@ -199,10 +201,11 @@
 					imgStyle: 'background-size: 200%;',
 					imgMdStyle: 'background-size: 200% !important;',
 					namePercent: 68,
-					sex: 'Male',
-					sexPercent: 52,
+					sex: 'Works at Veridu Ltd.',
+					sexPercent: 72,
 					verified: false,
-					birth: 49
+					birth: 'carl@veridu.com',
+					birthPercent: 39
 				},
 				{
 					hours: 3563,
@@ -215,11 +218,14 @@
 					sex: 'Male',
 					sexPercent: 72,
 					verified: true,
-					birth: 89
+					birth: 'carl@veridu.com',
+					birthPercent: 89
 				},
 			];
 
 		}
 		}
+
+		$('.page-loading').fadeOut();
 
 })($,WOW);

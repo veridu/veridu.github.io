@@ -59,6 +59,9 @@
 			li {
 				a {
 					text-decoration: none;
+					&.active {
+						font-weight: bold;
+					}
 				}
 
 				i {
@@ -73,7 +76,7 @@
 					font-weight: bold;
 				}
 
-				&:hover, &.selected {
+				&.selected {
 					font-weight: bold;
 					i {
 						visibility: visible;
