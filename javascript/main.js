@@ -87,7 +87,12 @@
 	adjustHeights();
 
 	function adjustHeights() {
-		var landingHeight = $window.height() -  menu.height();
+		var landingHeight = $window.height() - menu.height();
+
+		// minimum height of the landing content for the contents to fit
+		if (landingHeight < 750)
+			landingHeight = 750;
+
 		if ($window.width() > 767) {
 			landingSection.css('height', landingHeight);
 		} else {
@@ -167,9 +172,9 @@
 			vm.progressStatuses = [
 				{
 					hours: 1963,
-					hoursPercent: 60,
+					hoursPercent: 70,
 					name: 'Carl Ejlers',
-					namePercent: 48,
+					namePercent: 58,
 					img: '/img/carl2.jpeg',
 					imgStyle: 'background-size: 200%;',
 					imgMdStyle: 'background-size: 200% !important;',
@@ -177,7 +182,7 @@
 					sexPercent: 62,
 					verified: false,
 					birth: 'carl@veridu.com',
-					birthPercent: 49
+					birthPercent: 89
 				},
 				{
 					hours: 2563,

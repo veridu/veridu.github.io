@@ -93,11 +93,6 @@ section.verification-container {
 			position: absolute;
 			top: auto !important;
 			bottom: -20%;
-
-			@media (orientation: portrait) {
-				display: none !important;
-			}
-
 		}
 
 		li  {
@@ -268,6 +263,21 @@ section.verification-container {
 			margin-top: 0 !important;
 		}
 
+		.progress.progress-verified {
+			background: rgba(black, 0.2);
+			border-right: 5px solid $brand-primary;
+			display: table;
+			margin: 0;
+			padding: em(7);
+			padding-right: em(10.4);
+
+			img {
+				width: em(165);
+				position: relative;
+				top: em(5);
+			}
+
+		}
 
 		@media (min-width: $screen-sm-min) {
 			@include col(4);
@@ -288,12 +298,13 @@ section.verification-container {
 				}
 
 				&.progress-verified {
-					img {
-						width: 165px;
-						position: relative;
-						top: 5px;
-					}
+					background: transparent;
+					border: 0;
+					display: block;
+					margin-bottom: em(14);
+					padding: 0;
 				}
+
 			}
 			.white-link {
 				margin-left: em(12);
@@ -410,7 +421,7 @@ section.veridu-list {
 					padding: em(30) em(40);
 					height: em(229);
 					border-bottom: 4px solid #CFCFCF;
-					
+
 					h3 {
 						letter-spacing: em(1, 25);
 					}
