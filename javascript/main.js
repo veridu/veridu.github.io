@@ -59,20 +59,15 @@
 	// menu border
 	(function  () {
 		var fixed_header = $('nav.nav')[0];
-		var header  =	$('nav.nav');
-
+		
 		window.addEventListener('scroll', function () {
-			var scrolled 	 = document.documentElement.scrollTop || document.body.scrollTop ;
-
-			//will show
-			if ( scrolled > 1 ){
-
+			var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;
+			if (scrolled > 1){
+				//will show
 				fixed_header.style.borderBottom =  '1px solid #eee';
-
-			} else{ //will hide
-
+			} else{
+				//will hide
 				fixed_header.style.borderBottom =  '1px solid transparent';
-
 			}
 		})
 	})();
@@ -149,7 +144,7 @@
 			$scope.$watch('App.slider.index' , function (value) {
 				if (value) {
 					clearInterval(vm.carouselInterval);
-					vm.carouselInterval = setInterval(moveCarousel, 4000);
+					vm.carouselInterval = setInterval(moveCarousel, 6000);
 				}
 			});
 
@@ -160,7 +155,7 @@
 		    	});
 			}
 
-			vm.carouselInterval = setInterval(moveCarousel, 4000);
+			vm.carouselInterval = setInterval(moveCarousel, 6000);
 
 			vm.mainSliderStates = [
 				'customer-1',

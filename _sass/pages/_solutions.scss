@@ -11,12 +11,27 @@
 		display: inline-block !important;
 		margin-top: 3px;
 	}
-	.veridu-img {
-		display: none;
-	}
 
-	.id-img {
-		display: inline-block !important;
+	.logo {
+
+		.veridu-img {
+			display: none;
+		}
+
+		.id-img {
+			display: inline-block;
+		}
+
+		@media (min-width: $screen-sm-min) {
+
+			.veridu-img {
+				display: inline-block;
+			}
+
+			.id-img {
+				display: none;
+			}
+		}
 	}
 	.current-state {
 
@@ -92,7 +107,7 @@
 						display: block !important;
 						&:last-of-type {
 
-						}
+							}
 						&:first-of-type {
 							display: none !important;
 						}

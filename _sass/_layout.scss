@@ -33,6 +33,9 @@
 .main-container {
 	@include make-row();
 	padding-top: em(61);
+    &.wow {
+        visibility: hidden;
+    }
 }
 
 // Fluid container
@@ -217,6 +220,18 @@ body {
 
         }
 
+        .id-img {
+                display: none;
+                max-width: em(30);
+
+                @media (min-width: $screen-sm-min) {
+                    margin-right: em(126);
+                }
+            }
+        .veridu-img {
+            width: 80%;
+        }
+
 		> div {
 			&.menu-content {
 				float: left;
@@ -234,19 +249,7 @@ body {
 				.logo {
 					position: relative;
 					vertical-align: top;
-					img {
-						&.id-img {
-							display: none;
-							max-width: em(30);
 
-                            @media (min-width: $screen-sm-min) {
-                                margin-right: em(126);
-                            }
-                        }
-						&.veridu-img {
-							width: 80%;
-						}
-					}
 					a.veridu {
 						font-size: 1.8em;
 					}
@@ -313,6 +316,10 @@ body {
 			width: 100%;
 			height: calc(100% - 3.555em) !important;
 			box-shadow: 0 4px 5px #ccc;
+
+            @media (min-width: $screen-sm-min) {
+                display: none !important;
+            }
 		}
 
 		.sign-in-container {

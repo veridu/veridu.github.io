@@ -6,7 +6,7 @@ description: What company doesn't want to know their users better? These are jus
 ---
 <div ng-controller="SolutionsCtrl as ctrl">
 
-	<section class="solution__section__container content-padding font-light">
+	<section class="solution__section__container content-padding font-light" id="sectors-section">
 		<h2 class="solution__section__title">Sectors</h2>
 		<p class="solution__section__description">
 			What company doesn't want to know their users better? These are just some of the sectors we work with so if you don't see yours listed get in touch, we love to talk.
@@ -52,7 +52,7 @@ description: What company doesn't want to know their users better? These are jus
 		</div>
 	</div>
 
-	<section class="solution__section__container solution__section__container--clients-partners content-padding font-light">
+	<section class="solution__section__container solution__section__container--clients-partners content-padding font-light" id="clients-partners-section">
 		<h2 class="solution__section__title">Clients & Partners</h2>
 		<p class="solution__section__description">
 			We're proud to be working with some truly innovative companies, both big and growing. Here's a taster of how we're working together.
@@ -139,7 +139,7 @@ description: What company doesn't want to know their users better? These are jus
 			</div>
 		</div>
 	</section>
-	<section class="integration veridu-list" id="integration-mobile">
+	<section class="integration veridu-list" id="integration-section">
 	    <h2 class="font-light">Integration</h2>
 
 		<div class="visible-xs">
@@ -211,6 +211,63 @@ description: What company doesn't want to know their users better? These are jus
 
 		angular.module('app').controller('SolutionsCtrl', SolutionsCtrl);
 
+		// cached jQuery calls for performance improvements
+		var $window = $(window);
+		var mobile = $window.width() < 768;
+		var $integration = $('#integration');
+		var $integrationMobile = $('#integration-section');
+		var $clientsParnters = $('#clients-partners');
+		var $sectors = $('#sectors');
+		var currentState;
+
+		init();
+
+
+		function init() {
+			getSectionsHeight();
+
+		}
+
+		$window.resize(getSectionsHeight);
+		function getSectionsHeight() {
+			integrationsHeight = $('#integration-section').offset().top - 50;
+			clientsParntersHeight =  $('#clients-partners-section').offset().top - 50;
+
+		}
+
+		// iife
+		// detects current viewport section
+		// #integration or #integration-section, #sectors and #clients-partners
+		(function  detectCurrentSection() {
+			var fixed_header = $('nav.nav')[0];
+
+			window.addEventListener('scroll', detect);
+			detect();
+			
+			function detect() {
+				var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;
+
+				if (scrolled < clientsParntersHeight) {
+					setActiveSection('#submenu-sectors', 'SECTORS');
+				} else
+					if(scrolled < integrationsHeight) {
+						setActiveSection('#submenu-clients-partners', 'CLIENTS & PARTNERS');
+					} else {
+						setActiveSection('#submenu-integration', 'INTEGRATION');
+					}
+
+			}
+		})();
+
+		function setActiveSection(sectionId, currentStateName) {
+			if (currentState != sectionId) {
+				$('#solutions-submenu').find('a').removeClass('active');
+				$(sectionId).addClass('active');
+				$('#solutions-curent-position').html(currentStateName);
+			}
+			currentState = sectionId;
+		}
+
 		SolutionsCtrl.$inject = [];
 		function SolutionsCtrl () {
 			var vm = this;
@@ -257,28 +314,28 @@ description: What company doesn't want to know their users better? These are jus
 		// handles submenu clicks
 		function handleScroll(event) {
 			var id = $(this).attr('data-scrollTo');
-
 			if (id) {
 				event.preventDefault();
 				var sectionName = id.replace('#','');
-				var mobile = $(window).width() < 768;
 
 				if (mobile && sectionName == 'integration') {
-					id = "#integration-mobile";
+					id = "#integration-section";
 				}
 
 				$('#solutions-curent-position').html(this.innerHTML);
-				console.warn('oi = ' + id);
-
 				scrollToHash(id, 1000, mobile);
 			}
 		}
 
 	}
 
+
 	function scrollToHash (hash, speed, mobile) {
 		if (! speed) speed = 2000;
-		var offset = mobile ? 100 : 260;
+		var offset = mobile ? 240 : 260;
+		if (hash == '#integration-section') {
+			offset = 20;
+		}
 
 		$('html, body').animate({
 			scrollTop: ($(hash).offset().top - offset)
