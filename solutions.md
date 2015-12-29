@@ -217,6 +217,9 @@ description: What company doesn't want to know their users better? These are jus
 		var $integrationMobile = $('#integration-section');
 		var $clientsParnters = $('#clients-partners');
 		var $sectors = $('#sectors');
+		var $menuContent = $('.menu-content');
+		var $nav = $('nav.nav');
+
 		var currentState;
 
 		init();
@@ -246,8 +249,6 @@ description: What company doesn't want to know their users better? These are jus
 			// jQuery query caching
 			var $window =  $(window);
 			var $menuItems = $('.menu-content .collapsibleItem');
-			var $menuContent = $('.menu-content');
-			var $nav = $('nav.nav');
 			var navHeight = $nav.height();
 			var $menuHeight = $('.menu-content');
 			var $currentState = $('.current-state');
@@ -368,7 +369,11 @@ description: What company doesn't want to know their users better? These are jus
 		}
 
 
-		$(".solutions-submenu a").click(handleScroll);
+		$(".solutions-submenu a")
+			.click(handleScroll);
+
+		$(".dropdown-menu a")
+			.click(handleScroll);
 
 		// handles submenu clicks
 		function handleScroll(event) {

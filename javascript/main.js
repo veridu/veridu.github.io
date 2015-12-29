@@ -12,11 +12,18 @@
 		.click(toggleMenu);
 
 	function toggleMenu (e) {
+
+		console.warn(dropdownMenu.hasClass('visible'));
+		e.stopPropagation();
+
 		if (dropdownMenu.hasClass('visible')) {
+			dropdownMenu.removeClass('fadeInDown');
+			dropdownMenu.addClass('fadeOutUp');
 			dropdownMenu.removeClass('visible');
 		} else {
 			dropdownMenu.addClass('visible');
 		}
+
 	}
 
 

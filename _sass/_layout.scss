@@ -303,26 +303,26 @@ body {
 		}
 	}
 	.dropdown-menu {
+        @include clearfix();
 
-		-webkit-transition: top .15s ease-out;
- 	    -moz-transition: top .15s ease-out;
-	    -ms-transition: top .15s ease-out;
-	    -o-transition: top .15s ease-out;
-        transition: top .15s ease-out;
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
 
         // positioning
-        overflow-y: auto;
-		position: fixed !important;
-		top: -7000px !important;
 		background: white !important;
+        display: table;
 		width: 100%;
 
 		&.visible {
-			top: 3.555em !important;
+            @extend .slideInDown;
+            position: fixed;
+            height: 100%;
 			display: table;
+            top: 3.555em !important;
 			z-index: 20 !important;
 			width: 100%;
-			height: calc(100% - 3.555em) !important;
 			box-shadow: 0 4px 5px #ccc;
 
             @media (min-width: $screen-sm-min) {
@@ -406,7 +406,6 @@ body {
 			li {
 				font-weight: 300;
 				margin-bottom: em(8);
-				display: inline-block;
 				width: 49.0%;
 			}
 		}
