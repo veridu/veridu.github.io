@@ -533,3 +533,94 @@ footer {
 	}
 
 }
+
+.fixed-contact__container {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    text-align: right;
+    bottom: 3px;
+    right: 3px;
+
+    @media (min-width: $screen-sm-min) {
+        bottom: 20px;
+        right: 20px;
+
+        div.fixed-contact__input-container {
+            max-width: em(350) !important;
+        }
+    }
+
+    &.active {
+        .fixed-contact__input-container {
+            display: inline-block;
+        }
+        .fixed-contact__label {
+            display: none;
+        }
+        .fixed-contact__help {
+            display: block;
+        }
+    }
+
+    .fixed-contact__help {
+        @extend .text-muted;
+        display: none;
+        font-size: 0.8em;
+        position: relative;
+        top: 3px;
+    }
+
+    button {
+        .material-icons {
+            position: relative;
+            top: 3px;
+        }
+
+        .fixed-contact__thank-you {
+            display: none;
+        }
+
+        &.sent {
+            .hideable {
+                display: none;
+            }
+            .fixed-contact__thank-you {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        .fixed-contact__label {
+            @extend .hidden-xs;
+            margin-left: em(8);
+            position: relative;
+            top: -4px;
+        }
+    }
+
+    .fixed-contact__input-container {
+        width: 100%;
+        max-width: calc(100% - 60px);
+        display: none;
+        position: relative;
+
+        .text-danger {
+            display: none;
+            position: absolute;
+            left: 0;
+            font-size: 0.9em;
+            bottom: - em(25);
+        }
+    }
+
+    input {
+        height: em(43);
+        position: relative;
+        width: 100%;
+        top: 2px;
+
+    }
+
+
+}

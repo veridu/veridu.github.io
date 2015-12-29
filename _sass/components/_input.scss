@@ -7,4 +7,10 @@ input {
 	&.no-border {
 		border: 0;
 	}
+
+	&.has-error {
+		border-color: $brand-danger;
+		color: $state-danger-text;
+	}
+
 }

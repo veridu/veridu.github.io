@@ -4,9 +4,62 @@
 	(new WoW).init();
 
 	var menuToggler  = $('#menu-toggler');
+	var $window = $(window);
 	var dropdownMenu = $('.dropdown-menu');
 
+	// fixed contact elements
+	var fixedContactForm = $('#fixed-contact-form');
+	var fixedContactContainer = $('.fixed-contact__container');
+	var fixedContactButton = $('#fixed-contact__button');
+	var fixedContactLabel = $('.fixed-contact__label');
+	var fixedContactInput = $('.fixed-contact__container input');
+
 	dropdownMenu.find('a').click(toggleMenu);
+
+	var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
+	// hides on ESC
+	$window.keydown(function(evt) {
+		if (evt.keyCode == 27) {
+			fixedContactContainer.removeClass('active');
+		}
+	});
+
+	fixedContactForm.submit(function (event) {
+		event.preventDefault();
+
+		if (fixedContactButton.hasClass('sent'))
+			return false;
+
+		if (fixedContactContainer.hasClass('active')) {
+			if (! valid(fixedContactInput.val())) {
+				// alerts user
+				fixedContactContainer.find('.text-danger').show();
+
+			} else {
+				fixedContactContainer.find('.text-danger').hide();
+				// sends e-mail
+				fixedContactContainer.toggleClass('active');
+
+
+				// hides input
+				fixedContactButton.find('.hideable').toggleClass('animated fadeOut');
+				fixedContactButton.addClass('sent');
+				fixedContactContainer.find('.thank-you').toggleClass('animated fadeIn');
+
+			}
+		} else {
+			fixedContactContainer.toggleClass('active');
+			fixedContactInput.focus();
+
+		}
+
+		function valid(value) {
+			return value && emailRegex.test(value);
+		}
+
+	});
 
 	menuToggler
 		.click(toggleMenu);
