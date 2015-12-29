@@ -208,7 +208,6 @@ description: What company doesn't want to know their users better? These are jus
 <script type="text/javascript">
 
 	function load () {
-
 		angular.module('app').controller('SolutionsCtrl', SolutionsCtrl);
 
 		// cached jQuery calls for performance improvements
@@ -243,13 +242,14 @@ description: What company doesn't want to know their users better? These are jus
 
 			// jQuery query caching
 			var $window =  $(window);
-			var $menuItems = $('.menu-content .animated');
+			var $menuItems = $('.menu-content .collapsibleItem');
 			var $menuContent = $('.menu-content');
 			var $currentState = $('.current-state');
 			var fixed_header = $('nav.nav')[0];
 			var lastScrollPos = $window.scrollTop();
 			var t0, t1;
 
+			$menuItems.addClass('animated');
 			$window.scroll(detect);
 			detect();
 
@@ -269,29 +269,34 @@ description: What company doesn't want to know their users better? These are jus
 					}
 				}
 
-				// check if scrolled up or down
-				if (lastScrollPos < scrolled) {
-					// down
-					$menuItems.removeClass('slideInDown');
-					$menuItems.addClass('slideOutUp');
-					$currentState.css('top', "-40px");
+				if (! mobile && scrolled) {
 
-					setTimeout(function () {
-						$menuContent.addClass('scrolldown');
-					}, 500);
+					// check if scrolled up or down
+					if (lastScrollPos < scrolled) {
+						// down
+						$menuItems.removeClass('slideInDown');
+						$menuItems.addClass('slideOutUp');
+						$currentState.css('top', "-40px");
 
+						setTimeout(function () {
+							$menuContent.addClass('scrolldown');
+						}, 500);
+
+					} else {
+						// up
+						$menuItems.addClass('slideInDown');
+						$menuItems.removeClass('slideOutUp');
+						$currentState.css('top', "0");
+
+						setTimeout(function () {
+							$menuContent.removeClass('scrolldown');
+						}, 500);
+					}
+
+					lastScrollPos = scrolled;
 				} else {
-					// up
-					$menuItems.addClass('slideInDown');
-					$menuItems.removeClass('slideOutUp');
-					$currentState.css('top', "0");
-
-					setTimeout(function () {
-						$menuContent.removeClass('scrolldown');
-					}, 500);
+					$menuContent.removeClass('scrolldown');
 				}
-
-				lastScrollPos = scrolled;
 			}
 		})();
 
