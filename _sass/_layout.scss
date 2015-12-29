@@ -102,6 +102,10 @@ body {
         z-index: 1000;
         background: white;
         min-height: em(52);
+
+        &.shadowed {
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
 	}
 
 	.menu {

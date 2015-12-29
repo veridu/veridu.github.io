@@ -132,16 +132,17 @@
 
 	// menu border
 	(function  () {
-		var fixed_header = $('nav.nav')[0];
+		var fixed_header = $('nav.nav');
 
 		window.addEventListener('scroll', function () {
 			var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;
 			if (scrolled > 1){
 				//will show
-				fixed_header.style.borderBottom =  '1px solid #eee';
+				fixed_header.addClass('shadowed');
 			} else{
 				//will hide
-				fixed_header.style.borderBottom =  '1px solid transparent';
+				fixed_header.removeClass('shadowed');
+
 			}
 		})
 	})();
