@@ -47,7 +47,7 @@
 					</ul>
 
 				</span>
-				<div class="signin__container--sm fadeIn">
+				<div class="signin__container--sm">
 					<div class="signin__container__integrations">
 						<div>
 							<button type="button" class="btn btn-primary">
@@ -90,11 +90,39 @@
 
 			<div class="sign-in-container">
 				<div>
-					<button class="btn btn-primary btn-lg">Sign in</button>
+					<button type="button" class="btn btn-primary btn-lg"  onclick="$('.signin-component-xs').toggleClass('visible')">Sign in</button>
 				</div>
-				<div>
-					<form>
-					</form>
+				<div class="signin-component-xs">
+					<div class="integrations-container">
+						<div>
+							<button type="button" class="btn btn-primary">
+								Facebook
+							</button>
+						</div>
+						<div>
+							<button type="button" class="btn btn-primary">
+								LinkedIn
+							</button>
+						</div>
+						<div>
+							<button type="button" class="btn btn-primary">
+								Google
+							</button>
+						</div>
+						<div>
+							<button type="button" class="btn btn-primary">
+								Paypal
+							</button>
+						</div>
+					</div>
+
+					<div class="veridu-signin">
+						<input type="text" placeholder="Email">
+						<input type="password" placeholder="Password">
+						<div>
+							<button type="button" class="btn btn-primary">Go</button>
+						</div>
+					</div>
 				</div>
 			</div>
 

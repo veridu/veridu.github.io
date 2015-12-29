@@ -130,7 +130,7 @@ body {
 
             .signin__container--sm.visible {
                 @include col(4);
-                margin-top: em(56);
+                margin-top: em(54);
                 display: block;
                 float: none;
                 position: absolute;
@@ -331,30 +331,54 @@ body {
 		}
 
 		.sign-in-container {
-			display: table;
-			width: 100%;
 
             @media (min-height: 481px) {
                 margin-top: 20%;
             }
 
-			> div {
-				button {
-					width: 100%;
-					max-width: 140px;
-				}
-				&:first {
-					width: 40%;
-				}
-				vertical-align: middle;
-				display: table-cell;
+            .signin-component-xs {
+                @include clearfix();
+                display: none;
+                margin-bottom: em(15);
 
-				input {
-					margin-bottom: em(5);
-					width: 100%;
-				}
+                &.visible {
+                    display: block;
+                }
 
-			}
+                .integrations-container {
+                    @include row();
+
+                    > div {
+                        @include col(6);
+
+                    }
+                }
+                .veridu-signin {
+                    margin-top: em(20);
+
+                    input {
+
+                        &[type="text"] {
+                            @include col(12);
+                            margin-bottom: em(17);
+                        }
+
+                        &[type="password"] {
+                            @include col(9);
+                        }
+                    }
+                    > div {
+                        @include col(3);
+                        padding-right: 0;
+
+                        button {
+                            position: relative;
+                            height: em(39);
+                            top: -10px;
+                        }
+                    }
+                }
+            }
 		}
 
 		// box styles
