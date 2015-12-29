@@ -200,12 +200,12 @@ layout: default
 
 <section class="partners-quotes">
 
-    <div id="partners-carousel" class="carousel slide" data-ride="carousel">
+    <div  class="carousel slide" >
         <div class="carousel-inner">
-            <a class="nav carousel-nav-left"  href="#partners-carousel" data-slide="prev"><img src="/img/arrow-right.png"></a>
-            <a class="nav carousel-nav-right" href="#partners-carousel" data-slide="next"><img src="/img/arrow-right.png"></a>
+            <a class="nav carousel-nav-left"  href="javascript:;" ng-click="App.prevSlide()"><img src="/img/arrow-right.png"></a>
+            <a class="nav carousel-nav-right" href="javascript:;" ng-click="App.nextSlide()"><img src="/img/arrow-right.png"></a>
 
-            <div class="item active">
+            <div class="item animated fadeIn" ng-class="{active : App.slider.index == 0 }" >
                 <div class="container">
                     <div class="carousel-caption">
                         <p>“Over half our users have verified themselves with Veridu, dramatically increasing the safety and reliability of our service.”</p>
@@ -218,7 +218,7 @@ layout: default
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item animated fadeIn" ng-class="{active : App.slider.index == 1 }">
                 <div class="container">
                     <div class="carousel-caption">
                         <p>“Veridu rocks! Especially for our customers who sell high value goods online. The team has been beyond helpful and responsive to our needs.”</p>
@@ -231,13 +231,26 @@ layout: default
                 </div>
             </div>
 
-            <div class="item">
+            <div class="item animated fadeIn" ng-class="{active : App.slider.index == 2 }">
                 <div class="container">
                     <div class="carousel-caption">
                         <p>“It’s simple: Veridu enables trust. More trust means more transactions and ultimately more revenue.”</p>
                         <div class="quoted-from-container">
                             <small>
                                 CTO, Ahandyhand
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item animated fadeIn" ng-class="{active : App.slider.index == 3 }">
+                <div class="container">
+                    <div class="carousel-caption">
+                        <p>“Veridu gives us much lower transactional risk and significantly better insight on our customers.”</p>
+                        <div class="quoted-from-container">
+                            <small>
+                                CEO, The Real Asset Company
                             </small>
                         </div>
                     </div>

@@ -47,6 +47,7 @@ section.page.article {
 					img {
 						position: relative;
 						min-width: 100%;
+						width: 100%;
 						min-height: 400px;
 						min-width: 640px;
 						z-index: 0;
@@ -112,12 +113,18 @@ section.page.article {
 					.article__title {
 						@extend .content-padding;
 						padding-right: 0;
+						@media (min-width: $screen-md-min) {
+							padding-left: 0;
+						}
 					}
 
 					.article__excerpt {
 						background: transparent;
 						font-weight: 400;
 						font-style: italic;
+						@media (min-width: $screen-md-min) {
+							padding-left: 0;
+						}
 					}
 				}
 
@@ -136,6 +143,9 @@ section.page.article {
 					@include make-xs-column(8);
 					padding-top: em(0);
 					padding-right: em(40);
+					@media (min-width: $screen-md-min) {
+						padding-left: 0;
+					}
 				}
 				.article__tags__container {
 					h5 {
