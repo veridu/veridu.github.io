@@ -420,7 +420,8 @@ section.veridu-list {
 					background: white;
 					padding: em(30) em(40);
 					height: em(229);
-					border-bottom: 4px solid #CFCFCF;
+					box-shadow: 1px 1px 3px rgba(grey, 0.5);
+
 
 					h3 {
 						letter-spacing: em(1, 25);
