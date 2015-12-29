@@ -1,17 +1,32 @@
 // make specific buttons
 
 .btn {
-	border: 0 !important;
-}
+	border: 0;
+	-webkit-transition: all .25s linear;
+	-moz-transition: all .25s linear;
+	-ms-transition: all .25s linear;
+	-o-transition: all .25s linear;
+	transition: all .25s linear;
 
-.btn-primary {
-
-	border: em(1) solid $brand-primary !important;
 
 	&:hover,
 	&:focus,
 	&:active {
-		background: white !important;
-		color: $brand-primary !important;
+		border-bottom-width: 4px;
 	}
+}
+
+.btn-primary {
+
+	border-bottom: 2px solid $brand-primary-border-color;
+
+	&:hover{
+		background-color: $brand-primary !important;
+	}
+
+	&:active,
+	&:focus{
+		background-color: $brand-primary-border-color ;
+	}
+
 }

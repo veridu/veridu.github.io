@@ -6,7 +6,7 @@
 	.buttons-container {
 
 		@include clearfix();
-		
+
 		div.btn-container {
 
 			@include make-xs-column(6);
@@ -24,18 +24,11 @@
 					float: left;
 				}
 			}
-			
+
 			button {
 				padding: em(23) 0;
 				width: 100%;
 
-				border: em(1) solid $brand-primary !important;
-
-				&:hover {
-					background: white;
-					border: em(1) solid $brand-primary !important;
-					color: $brand-primary;
-				}
 			}
 		}
 

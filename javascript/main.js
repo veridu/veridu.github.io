@@ -7,6 +7,12 @@
 	var $window = $(window);
 	var dropdownMenu = $('.dropdown-menu');
 
+	$('.btn')
+		.mouseenter(function () {
+			var $this = $(this);
+			$this.height($this.height());
+		});
+
 	// fixed contact elements
 	var fixedContactForm = $('#fixed-contact-form');
 	var fixedContactContainer = $('.fixed-contact__container');
