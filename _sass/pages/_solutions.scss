@@ -330,6 +330,7 @@
 		> div {
 			@media (min-width: $screen-sm-min) {
 				margin-top: em(28);
+
 				@include col(3);
 
 				&:first-of-type {
@@ -340,33 +341,48 @@
 				}
 			}
 
+			&:nth-child(odd) {
+				> div {
+					border-right: 1px solid #EFEFEF;
+				}
+			}
+
 			> div {
 				cursor: pointer;
 				width: 50%;
 				float: left;
 				text-align: center;
-				border: 1px solid #EFEFEF;
-				background: #311B92;
+				border-bottom: 2px solid #311B92;
+				background-color: #9FA8DA;
 				padding-top: em(17);
 				padding-bottom: em(17);
 				color: white;
+				height: 62px;
 				font-size: em(16);
 				letter-spacing: em(0.5, 16);
 				line-height: em(22, 16);
 
+
+				-webkit-transition: all .15s ease-out;
+				-moz-transition: all .15s ease-out;
+				-ms-transition: all .15s ease-out;
+				-o-transition: all .15s ease-out;
+				transition: all .15s ease-out;
+
 				@media (min-width: $screen-sm-min) {
 					width: 100%;
-					border: 0;
-					border-bottom: 8px solid #311B92;
+					border-right: 0 !important;
 				}
 
 				&.panel-controls__item_block {
 					width: 100%;
 				}
 
-				&:hover, &.selected {
-					background: white;
-					color: black;
+				&:hover {
+					border-bottom-width: 8px;
+				}
+				&.selected {
+					background: #311B92;
 				}
 			}
 		}

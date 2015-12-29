@@ -39,16 +39,16 @@ description: What company doesn't want to know their users better? These are jus
 	</section>
 	<div class="panel-controls">
 		<div >
-			<div ng-class="{selected : ctrl.sectorsTabs.active == 'payments'}" ng-click="ctrl.setActive('sectors', 'payments')">PAYMENTS</div>
+			<div ng-class="{selected : ctrl.sectorsTabs.active == 'payments'}" ng-click="ctrl.setActive('sectors', 'payments')">Payments</div>
 		</div>
 		<div >
-			<div ng-class="{selected : ctrl.sectorsTabs.active == 'recruiting'}" ng-click="ctrl.setActive('sectors', 'recruiting')">RECRUITING</div>
+			<div ng-class="{selected : ctrl.sectorsTabs.active == 'recruiting'}" ng-click="ctrl.setActive('sectors', 'recruiting')">Recruiting</div>
 		</div>
 		<div >
-			<div ng-class="{selected : ctrl.sectorsTabs.active == 'p2p'}" ng-click="ctrl.setActive('sectors', 'p2p')">PEER TO PEER</div>
+			<div ng-class="{selected : ctrl.sectorsTabs.active == 'p2p'}" ng-click="ctrl.setActive('sectors', 'p2p')">Peer to Peer</div>
 		</div>
 		<div >
-			<div ng-class="{selected : ctrl.sectorsTabs.active == 'real_estate'}" ng-click="ctrl.setActive('sectors', 'real_estate')">REAL ESTATE</div>
+			<div ng-class="{selected : ctrl.sectorsTabs.active == 'real_estate'}" ng-click="ctrl.setActive('sectors', 'real_estate')">Real Estate</div>
 		</div>
 	</div>
 
@@ -129,13 +129,13 @@ description: What company doesn't want to know their users better? These are jus
 	</section>
 		<div class="panel-controls panel-controls--purple">
 			<div>
-				<div ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.setActive('partners', 'payfriendz')">WORLDPAY</div>
+				<div ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.setActive('partners', 'payfriendz')">Payfriendz</div>
 			</div>
 			<div>
-				<div ng-class="{selected : ctrl.partnersTabs.active == 'durise'}" ng-click="ctrl.setActive('partners', 'durise')">DURISE</div>
+				<div ng-class="{selected : ctrl.partnersTabs.active == 'durise'}" ng-click="ctrl.setActive('partners', 'durise')">Durise</div>
 			</div>
 			<div>
-				<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_asset'}" ng-click="ctrl.setActive('partners', 'real_asset')">THE REAL ASSET COMPANY</div>
+				<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_asset'}" ng-click="ctrl.setActive('partners', 'real_asset')">The Real Asset Company</div>
 			</div>
 		</div>
 	</section>
