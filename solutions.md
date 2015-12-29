@@ -283,9 +283,9 @@ description: What company doesn't want to know their users better? These are jus
 						// down
 						$menuItems.removeClass('fadeIn');
 						$menuItems.addClass('fadeOut');
-						$currentState.css('top', "-41px");
-						$nav.css('min-height', "55px");
-						$menuContent.css('height', "40px");
+						$currentState.css('top', "-42px");
+						$nav.css('min-height', "25px");
+						$menuContent.css('height', "30px");
 
 						setTimeout(function () {
 							// $menuContent.addClass('scrolldown');
