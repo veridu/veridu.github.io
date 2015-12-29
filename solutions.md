@@ -236,27 +236,62 @@ description: What company doesn't want to know their users better? These are jus
 
 		}
 
-		// iife
+		// iife -  basically controll all the submenu behavior
 		// detects current viewport section
 		// #integration or #integration-section, #sectors and #clients-partners
 		(function  detectCurrentSection() {
-			var fixed_header = $('nav.nav')[0];
 
-			window.addEventListener('scroll', detect);
+			// jQuery query caching
+			var $window =  $(window);
+			var $menuItems = $('.menu-content .animated');
+			var $menuContent = $('.menu-content');
+			var $currentState = $('.current-state');
+			var fixed_header = $('nav.nav')[0];
+			var lastScrollPos = $window.scrollTop();
+			var t0, t1;
+
+			$window.scroll(detect);
 			detect();
 
 			function detect() {
-				var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;
 
+				var scrolled = $window.scrollTop();
+
+				// detects change on sections offset
+				// updates current state
 				if (scrolled < clientsParntersHeight) {
 					setActiveSection('#submenu-sectors', 'SECTORS');
-				} else
+				} else{
 					if(scrolled < integrationsHeight) {
 						setActiveSection('#submenu-clients-partners', 'CLIENTS & PARTNERS');
 					} else {
 						setActiveSection('#submenu-integration', 'INTEGRATION');
 					}
+				}
 
+				// check if scrolled up or down
+				if (lastScrollPos < scrolled) {
+					// down
+					$menuItems.removeClass('slideInDown');
+					$menuItems.addClass('slideOutUp');
+					$currentState.css('top', "-40px");
+
+					setTimeout(function () {
+						$menuContent.addClass('scrolldown');
+					}, 500);
+
+				} else {
+					// up
+					$menuItems.addClass('slideInDown');
+					$menuItems.removeClass('slideOutUp');
+					$currentState.css('top', "0");
+
+					setTimeout(function () {
+						$menuContent.removeClass('scrolldown');
+					}, 500);
+				}
+
+				lastScrollPos = scrolled;
 			}
 		})();
 
@@ -318,7 +353,7 @@ description: What company doesn't want to know their users better? These are jus
 			if (id) {
 				event.preventDefault();
 				var sectionName = id.replace('#','');
-				console.warn(sectionName);
+
 				if (mobile && sectionName == 'integration') {
 					id = "#integration-section";
 				}
@@ -332,7 +367,7 @@ description: What company doesn't want to know their users better? These are jus
 
 
 	function scrollToHash (hash, speed, mobile) {
-		console.warn(hash);
+
 		if (! speed) speed = 2000;
 		var offset = mobile ? 240 : 280;
 		if (hash == '#integration-section') {

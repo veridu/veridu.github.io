@@ -18,6 +18,11 @@
 	margin-right: auto !important;
 }
 
+
+.current-state {
+    display: none;
+}
+
 .content-padding {
 
 	max-width: $container-max-width;
@@ -261,9 +266,6 @@ body {
 					}
 
 				}
-				.current-state {
-					display: none;
-				}
 			}
 
 			&.toggler-container {
@@ -383,34 +385,6 @@ body {
 				display: inline-block;
 				width: 49.0%;
 			}
-		}
-
-	}
-}
-
-
-.header.pricing {
-
-	.current-state {
-		i {
-
-		}
-		font-weight: 600;
-		display: inline-block !important;
-	}
-
-	.logo {
-
-		img {
-			&.id-img {
-				width: 80%;
-			}
-			&.veridu-img {
-				display: none;
-			}
-		}
-		a.veridu {
-			font-size: 1.8em;
 		}
 
 	}
