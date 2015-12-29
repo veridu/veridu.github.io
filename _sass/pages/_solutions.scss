@@ -16,6 +16,9 @@
 
 	.logo {
 
+		position: relative;
+		z-index: 10;
+
 		.veridu-img {
 			display: none;
 		}
@@ -45,6 +48,10 @@
 		transition: all .45s ease-out;
 
 		.menu__links__md {
+			.sign-in-link {
+				position: relative;
+				z-index: 10;
+			}
 		}
 
 		.current-state {

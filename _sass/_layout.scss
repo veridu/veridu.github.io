@@ -539,12 +539,10 @@ footer {
     width: 100%;
     z-index: 100;
     text-align: right;
-    bottom: 3px;
-    right: 3px;
+    bottom: 20px;
+    right: 20px;
 
     @media (min-width: $screen-sm-min) {
-        bottom: 20px;
-        right: 20px;
 
         div.fixed-contact__input-container {
             max-width: em(350) !important;
@@ -601,11 +599,12 @@ footer {
 
     .fixed-contact__input-container {
         width: 100%;
-        max-width: calc(100% - 60px);
+        max-width: calc(100% - 90px);
         display: none;
         position: relative;
 
         .text-danger {
+            background: rgba(white, 0.8);
             display: none;
             position: absolute;
             left: 0;
