@@ -232,7 +232,10 @@ description: What company doesn't want to know their users better? These are jus
 			mobile = $window.width() < 768;
 			integrationsHeight = $('#integration-section').offset().top - 50;
 			clientsParntersHeight =  $('#clients-partners-section').offset().top - 50;
-
+			if (mobile) {
+				$nav.css('min-height', 'auto');
+				$menuContent.css('height', "auto");
+			}
 		}
 
 		// iife -  basically controll all the submenu behavior
