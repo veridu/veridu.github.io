@@ -390,9 +390,15 @@ body {
 		z-index: 1000;
 
 		h4 {
-			padding-left: em(10);
 			margin-top: em(30);
+            padding-left: 0 !important;
 
+            &.signin {
+                margin-top: 0;
+                color: $brand-primary;
+                cursor: pointer;
+                display: inline-block;
+            }
 			// for iphone 4
 			@media (max-width: 350px) {
 				margin-top: em(20) !important;

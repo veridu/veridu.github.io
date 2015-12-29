@@ -11,19 +11,27 @@
 	menuToggler
 		.click(toggleMenu);
 
+	$(".solutions-submenu a")
+		.click(closeMenu);
+
 	function toggleMenu (e) {
 
-		console.warn(dropdownMenu.hasClass('visible'));
-		e.stopPropagation();
-
 		if (dropdownMenu.hasClass('visible')) {
-			dropdownMenu.removeClass('fadeInDown');
-			dropdownMenu.addClass('fadeOutUp');
-			dropdownMenu.removeClass('visible');
+			closeMenu();
 		} else {
-			dropdownMenu.addClass('visible');
+			openMenu();
 		}
 
+	}
+
+	function openMenu() {
+		dropdownMenu.addClass('visible');
+	}
+
+	function closeMenu() {
+		dropdownMenu.removeClass('fadeInDown');
+		dropdownMenu.addClass('fadeOutUp');
+		dropdownMenu.removeClass('visible');
 	}
 
 
