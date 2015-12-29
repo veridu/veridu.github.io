@@ -3,9 +3,16 @@
 		display: none;
 	}
 }
-
-// shows only on solutions page
+// styles of the solution page
 .header.solutions {
+
+	nav.nav {
+		-webkit-transition: all .75s ease-out;
+		-moz-transition: all .75s ease-out;
+		-ms-transition: all .75s ease-out;
+		-o-transition: all .75s ease-out;
+		transition: all .75s ease-out;
+	}
 
 	.logo {
 
@@ -31,6 +38,12 @@
 
 	.menu-content {
 
+		-webkit-transition: all .75s ease-out;
+		-moz-transition: all .75s ease-out;
+		-ms-transition: all .75s ease-out;
+		-o-transition: all .75s ease-out;
+		transition: all .75s ease-out;
+
 		.menu__links__md {
 		}
 
@@ -45,21 +58,19 @@
 
 		@media (min-width: $screen-sm-min) {
 
+			.menu__links__md.animated,
+			li.animated {
+
+				-webkit-animation-duration: .45s;
+				animation-duration: .45s;
+				-webkit-animation-fill-mode: both;
+				animation-fill-mode: both;
+
+			}
 			&.scrolldown {
 
-				.menu__links__md.animated,
-				li.animated {
-					display: none;
-				}
 
 				.current-state {
-
-
-					-webkit-transition: top 0s ease-out;
-			 	    -moz-transition: top 0s ease-out;
-				    -ms-transition: top 0s ease-out;
-				    -o-transition: top 0s ease-out;
-			        transition: top 0s ease-out;
 
 					display: inline-block;
 					padding-left: 0;

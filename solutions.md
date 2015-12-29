@@ -244,6 +244,9 @@ description: What company doesn't want to know their users better? These are jus
 			var $window =  $(window);
 			var $menuItems = $('.menu-content .collapsibleItem');
 			var $menuContent = $('.menu-content');
+			var $nav = $('nav.nav');
+			var navHeight = $nav.height();
+			var $menuHeight = $('.menu-content');
 			var $currentState = $('.current-state');
 			var fixed_header = $('nav.nav')[0];
 			var lastScrollPos = $window.scrollTop();
@@ -274,28 +277,40 @@ description: What company doesn't want to know their users better? These are jus
 					// check if scrolled up or down
 					if (lastScrollPos < scrolled) {
 						// down
-						$menuItems.removeClass('slideInDown');
-						$menuItems.addClass('slideOutUp');
-						$currentState.css('top', "-40px");
+						$menuItems.removeClass('fadeIn');
+						$menuItems.addClass('fadeOut');
+						$currentState.css('top', "-41px");
+						$nav.css('min-height', "55px");
+						$menuContent.css('height', "40px");
 
 						setTimeout(function () {
-							$menuContent.addClass('scrolldown');
+							// $menuContent.addClass('scrolldown');
 						}, 500);
 
 					} else {
 						// up
-						$menuItems.addClass('slideInDown');
-						$menuItems.removeClass('slideOutUp');
-						$currentState.css('top', "0");
+						$menuItems.addClass('fadeIn');
+						$menuItems.removeClass('fadeOut');
+						$nav.css('min-height', '93px');
+						$currentState.css('top', "0px");
 
 						setTimeout(function () {
-							$menuContent.removeClass('scrolldown');
-						}, 500);
+							// $menuContent.removeClass('scrolldown');
+						}, 1000);
 					}
 
 					lastScrollPos = scrolled;
 				} else {
-					$menuContent.removeClass('scrolldown');
+
+					$currentState.css('top', "0px");
+
+					if (mobile) {
+						$nav.css('min-height', 'auto');
+						$menuContent.css('height', "auto");
+					} else {
+						$nav.css('min-height', navHeight);
+					}
+
 				}
 			}
 		})();
