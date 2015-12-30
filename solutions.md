@@ -144,12 +144,10 @@ description: What company doesn't want to know their users better? These are jus
 
 		<section class="solution__section__container solution__section__container--integrations content-padding font-light" id="integration-section">
 			<h2 class="solution__section__title">Integration</h2>
-			<p class="solution__section__description">
-			</p>
 		</section>
 
 
-		<section id="integration-section" class="solution__item solution__item__notfirst">
+		<section class="solution__item solution__item__notfirst">
 			<div id="integrations-tabs" class="solution__item__content solution__item__content--green">
 
 				<div ng-show="ctrl.integrationsTabs.active == 'HOSTED'">
