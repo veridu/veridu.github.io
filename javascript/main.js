@@ -169,9 +169,7 @@
 
 	function adjustHeights() {
 		mobile = mbHelper.is(':visible');
-
 		var landingHeight = $window.height() - menu.height();
-
 		// minimum height of the landing content for the contents to fit
 		if (landingHeight < 750)
 			landingHeight = 750;

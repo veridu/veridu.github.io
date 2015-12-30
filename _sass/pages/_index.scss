@@ -94,9 +94,22 @@ section.verification-container {
 
 .landing-section {
 
+	video {
+		display: none;
+
+		@media (min-width: $screen-sm-min) {
+			display: inherit;
+			position: absolute;
+		    width: 100% !important;
+		    height: 100%;
+		    width: auto;
+			object-fit: fill;
+		}
+	}
 	@media (min-width: $screen-sm-min) {
 		height: auto ;
 	}
+
 
 	@include clearfix();
 
@@ -361,6 +374,7 @@ section.verification-container {
 	}
 
 	.verification-container {
+		padding-top: em(50);
 
 		@media (min-width: $screen-sm-min) {
 			@include col(4);

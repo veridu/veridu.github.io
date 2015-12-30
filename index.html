@@ -3,7 +3,27 @@ layout: default
 ---
 <div class="landing-section">
 
-     <div class="landing__overlay hidden-xs"></div>
+    <video id="video-candidate" autoplay loop ng-show="App.slider.state() == 'candidate'">
+        <source src="/video/candidate.webm" type="video/webm">
+        <source src="/video/candidate.mp4" type="video/mp4">
+    </video>
+
+    <video id="video-customer"  autoplay loop ng-show="App.slider.state() == 'customer'">
+        <source src="/video/customer.webm" type="video/webm">
+        <source src="/video/customer.mp4" type="video/mp4">
+    </video>
+
+    <video id="video-candidate"peerautoplay loop ng-show="App.slider.state() == 'peer'">
+        <source src="/video/peer.webm" type="video/webm">
+        <source src="/video/peer.mp4" type="video/mp4">
+    </video>
+
+    <video id="video-tenant"  autoplay loop ng-show="App.slider.state() == 'tenant'">
+        <source src="/video/tenant.webm" type="video/webm">
+        <source src="/video/tenant.mp4" type="video/mp4">
+    </video>
+
+    <div class="landing__overlay hidden-xs"></div>
     <div class="landing__content">
         <div class="row-sm no-styled-container">
 
@@ -173,9 +193,6 @@ layout: default
         </div>
     </div>
 </div>
-
-
-
 
 <section class="veridu-list md-cards">
     <div class="item-container">

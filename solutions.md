@@ -5,7 +5,7 @@ class: solutions
 description: What company doesn't want to know their users better? These are just some of the sectors we work with so if you don't see yours listed get in touch, we love to talk.
 ---
 <div ng-controller="SolutionsCtrl as ctrl">
-
+	
 	<section class="solution__section__container content-padding font-light" id="sectors-section">
 		<h2 class="solution__section__title">Sectors</h2>
 		<p class="solution__section__description">
