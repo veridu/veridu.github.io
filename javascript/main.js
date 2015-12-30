@@ -7,11 +7,11 @@
 	var $window = $(window);
 	var dropdownMenu = $('.dropdown-menu');
 
-	$('.btn')
-		.mouseenter(function () {
-			var $this = $(this);
-			$this.height($this.height());
-		});
+	// $('.btn')
+	// 	.mouseenter(function () {
+	// 		var $this = $(this);
+	// 		$this.height($this.height());
+	// 	});
 
 	// fixed contact elements
 	var fixedContactForm = $('#fixed-contact-form');
@@ -19,11 +19,17 @@
 	var fixedContactButton = $('#fixed-contact__button');
 	var fixedContactLabel = $('.fixed-contact__label');
 	var fixedContactInput = $('.fixed-contact__container input');
+	var landingActiveContent = $('.landing-active-content');
+
+	fixedContactInput.focusout(function () {
+		if (!fixedContactButton.is(':active')) {
+			fixedContactContainer.removeClass('active');
+		}
+	});
 
 	dropdownMenu.find('a').click(toggleMenu);
 
 	var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
 
 	// hides on ESC
 	$window.keydown(function(evt) {
@@ -38,6 +44,7 @@
 		if (fixedContactButton.hasClass('sent'))
 			return false;
 
+		// actually submits
 		if (fixedContactContainer.hasClass('active')) {
 			if (! valid(fixedContactInput.val())) {
 				// alerts user
@@ -47,18 +54,15 @@
 				fixedContactContainer.find('.text-danger').hide();
 				// sends e-mail
 				fixedContactContainer.toggleClass('active');
-
-
 				// hides input
 				fixedContactButton.find('.hideable').toggleClass('animated fadeOut');
 				fixedContactButton.addClass('sent');
 				fixedContactContainer.find('.thank-you').toggleClass('animated fadeIn');
-
 			}
 		} else {
+			// shows the form
 			fixedContactContainer.toggleClass('active');
 			fixedContactInput.focus();
-
 		}
 
 		function valid(value) {
@@ -224,7 +228,7 @@
 			$scope.$watch('App.slider.index' , function (value) {
 				if (value) {
 					clearInterval(vm.carouselInterval);
-					vm.carouselInterval = setInterval(moveCarousel, 6000);
+					vm.carouselInterval = setInterval(moveCarousel, 10000);
 				}
 			});
 
@@ -235,7 +239,22 @@
 		    	});
 			}
 
-			vm.carouselInterval = setInterval(moveCarousel, 6000);
+			vm.carouselInterval = setInterval(moveCarousel, 10000);
+			vm.activeContentInterval = setInterval(checkActiveContent, 1000);
+
+			function checkActiveContent() {
+				
+				if (landingActiveContent.is(':hover')) {
+					clearInterval(vm.carouselInterval);
+					vm.carouselInterval = setInterval(moveCarousel, 10000);
+				}
+
+				// hides email form
+				if (fixedContactContainer.hasClass('active') && ! fixedContactContainer.hasClass('sent') && ! fixedContactInput.is(':focus') && ! fixedContactButton.is(':focus')) {
+					fixedContactContainer.removeClass('active');
+				}
+
+			}
 
 			vm.mainSliderStates = [
 				'customer-1',

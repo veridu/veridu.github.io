@@ -540,7 +540,7 @@ footer {
 
 .fixed-contact__container {
     position: fixed;
-    width: 100%;
+    display: table;
     z-index: 100;
     text-align: right;
     bottom: 20px;
@@ -554,6 +554,8 @@ footer {
     }
 
     &.active {
+        
+        width: 100%;
         .fixed-contact__input-container {
             display: inline-block;
         }
@@ -575,7 +577,8 @@ footer {
 
     button {
         box-shadow: $material-shadow-2;
-        
+        height: em(43);
+
         .material-icons {
             position: relative;
             top: 3px;

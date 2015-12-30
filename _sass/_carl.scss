@@ -1,0 +1,173 @@
+.header .menu > div.menu-content .logo img.veridu-img {
+    width: 50%;
+    padding-top: 4px;
+}
+
+.header .dropdown-menu.visible {
+    top: 3.555em;
+    display: table;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 200px 0px #fff;
+}
+
+.header .menu > div.toggler-container {
+    margin-right: 1.15em;
+    margin-top: 0.8em;
+    float: right !important;
+}
+
+.header .dropdown-menu {
+    -webkit-transition: all .25s ease-in;
+    -moz-transition: all .25s ease-in;
+    -ms-transition: all .25s ease-in;
+    -o-transition: all .25s ease-in;
+    transition: all .25s ease-in;
+    position: absolute;
+    left: -em(15);
+    top: -1000px;
+    background: white;
+    height: 100%;
+    padding: 0 2em 1em;
+    padding-left: 10%;
+    background: white;
+    z-index: 1000;
+}
+
+.header .dropdown-menu h4 {
+    padding-left: 0.66667em;
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+
+.header .dropdown-menu .sign-in-container > div button {
+    width: 100%;
+    max-width: 140px;
+    margin-top: 10px;
+}
+
+.main-container {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding-top: 3.6em;
+}
+
+#main-slider {
+    background-image: none;
+    background-size: 0%;
+}
+
+#main-slider .item .container  {
+    width: 100%
+}
+
+#main-slider .item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+}
+
+#main-slider .item .container .carousel-caption h1 {
+    letter-spacing: 0;
+    font-weight: 300 !important;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: #000000;
+    font-size: 2.4em;
+    line-height: 1.25em;
+}
+
+.progress-container {
+    min-height: 23.13333em;
+    background-repeat: no-repeat !important;
+    background-position: 0px -60px !important;
+    padding-top: 4.26667em;
+}
+
+.progress .progress-bar {
+    background-color: white;
+    opacity:0.8;
+    border-right: 0.43333em solid #00ADEE;
+    padding: 0.8em;
+    padding-left: 0.53333em;
+ }
+
+.progress .progress-bar > p {
+    color: black;
+    text-align: left;
+    margin-left: 5%;
+    font-size: 1.26667em;
+}
+
+.progress-container .white-link {
+    margin-right: 10%;
+    float: left;
+    margin-top: 1em;
+    font-size: 1.052em;
+    line-height: 1.3em;
+    letter-spacing: 0.13333em;
+    border-bottom: 0.06667em solid #FFFFFF;
+}
+
+.progress-container {
+    min-height: 23.13333em;
+    background: rgba(0, 0, 0, 0.5);
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+section.verification-container > a {
+    color: #00adee;
+    margin-top: 0.73333em;
+    border-bottom: 0.06667em solid #00adee;
+    text-decoration: none !important;
+    letter-spacing: 0.13333em;
+    font-size: 1em;
+}
+
+a.black-link:hover {
+    color: 00adee;
+}
+
+section.rasmus-quote {
+    background-repeat: no-repeat no-repeat;
+    background-size: auto 100%;
+    background-position: -200px 0px;
+    height: 41.33333em;
+    padding-top: 2.73333em;
+}
+
+section.rasmus-quote > div {
+    float: right;
+    width: 45%;
+}
+
+section.rasmus-quote > div p {
+    font-weight: 400;
+    font-size: 1.067em;
+    line-height: 1.46667em;
+    text-align: right;
+    margin-right: 10%;
+}
+
+section.rasmus-quote > div h4 {
+    margin-right: 10%;
+    text-align: right;
+    margin-top: 0;
+    font-size: 1.6em;
+    line-height: 1.6em;
+    font-weight: 300;
+    margin-bottom: 1.26667em;
+}
+
+// @media (min-width: 767px) {
+//     section.veridu-list.md-cards .item-container > div {
+//         background: white;
+//         padding: 2em 2.66667em;
+//         height: 14.26667em;
+//         border-bottom: 4px solid #CFCFCF;
+// }
