@@ -7,11 +7,11 @@
 	var $window = $(window);
 	var dropdownMenu = $('.dropdown-menu');
 
-	// $('.btn')
-	// 	.mouseenter(function () {
-	// 		var $this = $(this);
-	// 		$this.height($this.height());
-	// 	});
+	$('.btn')
+		.mouseenter(function () {
+			var $this = $(this);
+			$this.height($this.height());
+		});
 
 	// fixed contact elements
 	var fixedContactForm = $('#fixed-contact-form');
@@ -143,6 +143,7 @@
 			if (scrolled > 1){
 				//will show
 				fixed_header.addClass('shadowed');
+				fixedContactContainer.css('display', 'table');
 			} else{
 				//will hide
 				fixed_header.removeClass('shadowed');
@@ -158,6 +159,8 @@
 	var sliderProgressCt = $('.slider-progress-container');
 	var menu = $('.menu');
 	var $window = $(window);
+	var mbHelper =  $('#mobile-indicator');
+	var mobile = mbHelper.is(':visible');
 
 	landingSection.css('height', landingHeight);
 	sliderProgressCt.css('top',  - landingHeight * 0.1);
@@ -166,13 +169,15 @@
 	adjustHeights();
 
 	function adjustHeights() {
+		mobile = mbHelper.is(':visible');
+
 		var landingHeight = $window.height() - menu.height();
 
 		// minimum height of the landing content for the contents to fit
 		if (landingHeight < 750)
 			landingHeight = 750;
 
-		if ($window.width() > 767) {
+		if (! mobile) {
 			landingSection.css('height', landingHeight);
 		} else {
 			landingSection.css('height', 'auto');
@@ -243,8 +248,8 @@
 			vm.activeContentInterval = setInterval(checkActiveContent, 1000);
 
 			function checkActiveContent() {
-				
-				if (landingActiveContent.is(':hover')) {
+
+				if (landingActiveContent.find('*:hover').length) {
 					clearInterval(vm.carouselInterval);
 					vm.carouselInterval = setInterval(moveCarousel, 10000);
 				}

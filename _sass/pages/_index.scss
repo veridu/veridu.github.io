@@ -19,7 +19,7 @@
 		letter-spacing: em(2);
 		border-bottom: em(1) solid #FFFFFF;
 		visibility: hidden;
-		
+
 	}
 }
 
@@ -143,6 +143,8 @@ section.verification-container {
 
 	p.slider-paragraph {
 		@include col(12);
+		@extend .animated;
+
 		min-height: em(62);
 		margin-bottom: em(40);
 		line-height: em(20);
@@ -167,6 +169,10 @@ section.verification-container {
 				color: white;
 				margin-top: 0;
 				margin-bottom: em(40, 50);
+			}
+
+			span {
+				@extend .animated;
 			}
 
 		}
@@ -444,6 +450,17 @@ section.rasmus-quote {
 	padding-top: em(41);
 	@extend .tablet__gutter;
 
+	// tablets
+	@media (min-width: $screen-sm-min) {
+
+		background-size: auto;
+		background-clip: inherit;
+		@media (min-width: $screen-md-min) {
+			background-size: 110% !important;
+		}
+
+	}
+
 	> div {
 
 		float: right;
@@ -484,7 +501,7 @@ section.rasmus-quote {
 		background-repeat: no-repeat no-repeat;
 		background-position: right -80px !important ;
 		height: em(468);
-		background-size: 110% !important;
+		background-size: 110%;
 		padding-top: em(41);
 
 		> div {
@@ -570,7 +587,9 @@ section.partners-quotes {
 
 	}
 	.item {
-		height: em(400);
+		min-height: em(430);
+		height: auto !important;
+		@extend .animated;
 
 		.carousel-caption {
 			font-size: em(22);

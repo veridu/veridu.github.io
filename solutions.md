@@ -160,7 +160,7 @@ description: What company doesn't want to know their users better? These are jus
 		</div>
 
 		<section id="integrations-tabs" class="solution__item solution__item__notfirst hidden-xs">
-			<div id="integration" class="solution__item__content solution__item__content--grey">
+			<div id="integration" class="solution__item__content solution__item__content--green">
 
 				<div ng-show="ctrl.integrationsTabs.active == 'HOSTED'">
 					<h2 class="solution__item__title">HOSTED</h2>
@@ -190,7 +190,7 @@ description: What company doesn't want to know their users better? These are jus
 				</div>
 			</div>
 		</section>
-		<div class="panel-controls panel-controls--grey hidden-xs">
+		<div class="panel-controls panel-controls--green hidden-xs">
 			<div>
 				<div ng-class="{selected : ctrl.integrationsTabs.active == 'HOSTED'}" ng-click="ctrl.setActive('integrations', 'HOSTED')">HOSTED</div>
 			</div>
@@ -283,9 +283,9 @@ description: What company doesn't want to know their users better? These are jus
 						// down
 						$menuItems.removeClass('fadeIn');
 						$menuItems.addClass('fadeOut');
-						$currentState.css('top', "-42px");
-						$nav.css('min-height', "25px");
-						$menuContent.css('height', "30px");
+						$currentState.css('top', "-2.58em");
+						$nav.css('min-height', "2em");
+						$menuContent.css('height', "2em");
 
 						setTimeout(function () {
 							// $menuContent.addClass('scrolldown');
@@ -295,7 +295,7 @@ description: What company doesn't want to know their users better? These are jus
 						// up
 						$menuItems.addClass('fadeIn');
 						$menuItems.removeClass('fadeOut');
-						$nav.css('min-height', '93px');
+						$nav.css('min-height', '6em');
 						$currentState.css('top', "0px");
 
 						setTimeout(function () {

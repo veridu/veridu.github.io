@@ -539,12 +539,15 @@ footer {
 }
 
 .fixed-contact__container {
+    @extend .animated;
+    @extend .fadeInUp;
+    display: none;
+
     position: fixed;
-    display: table;
     z-index: 100;
     text-align: right;
-    bottom: 20px;
-    right: 20px;
+    bottom: em(20);
+    right: em(20);
 
     @media (min-width: $screen-sm-min) {
 
@@ -554,7 +557,7 @@ footer {
     }
 
     &.active {
-        
+
         width: 100%;
         .fixed-contact__input-container {
             display: inline-block;
@@ -629,6 +632,4 @@ footer {
         top: 2px;
 
     }
-
-
 }

@@ -15,7 +15,7 @@
 	}
 
 	.signin__container--sm.visible{
-		margin-top: em(50);	
+		margin-top: em(50);
 	}
 
 	.logo {
@@ -101,12 +101,12 @@
 		.current-state {
 
 			display: inline-block;
-			margin-top: 3px;
+			margin-top: em(3);
 
 			@media (min-width: $screen-sm-min) {
 				@include clearfix();
 				display: block;
-				margin-top: 5px;
+				margin-top: em(5);
 				padding-left: em(145);
 
 			}
@@ -214,7 +214,7 @@
 			height: em(413);
 		}
 
-		background-image: url(/img/coworking.jpeg);
+		background-image: url(/img/bridge.jpeg);
 		background-repeat: no-repeat no-repeat;
 		background-size: 250%;
 		background-position: center center;
@@ -259,11 +259,12 @@
 
 				background-color: rgba(#7E57C2, 0.8);
 
+
 			}
 
-			&.solution__item__content--grey {
+			&.solution__item__content--green {
 
-				background-color: #9D9D9D;
+				background-color: #A5D6A8;
 
 			}
 
@@ -313,20 +314,24 @@
 
 		&.panel-controls--purple {
 			> div > div {
-				background: #7E57C2;
+				background-color: #7E57C2;
 
 				@media (min-width: $screen-sm-min) {
-					border-color: #7E57C2;
+					border-color: #311B92;
 				}
 			}
 		}
 
-		&.panel-controls--grey {
+		&.panel-controls--green {
 			> div > div {
-				background: #9D9D9D;
+				background: #A5D6A8;
 
 				@media (min-width: $screen-sm-min) {
-					border-color: #9D9D9D;
+					border-color: #1A5E20;
+				}
+
+				&.selected {
+					background-color: #1A5E20;
 				}
 			}
 		}
@@ -361,7 +366,7 @@
 				padding-top: em(17);
 				padding-bottom: em(17);
 				color: white;
-				height: 62px;
+				height: em(62);
 				font-size: em(16);
 				letter-spacing: em(0.5, 16);
 				line-height: em(22, 16);
