@@ -142,24 +142,7 @@ description: What company doesn't want to know their users better? These are jus
 	<section class="integration veridu-list" id="integration-section">
 	    <h2 class="font-light">Integration</h2>
 
-		<div class="visible-xs">
-		    <div class="item-container">
-		        <h3>HOSTED</h3>
-		        <p>Simply send users an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is.</p>
-		    </div>
-
-		    <div class="item-container">
-		        <h3>WIDGETS</h3>
-		        <p>Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.</p>
-		    </div>
-
-		    <div class="item-container">
-		        <h3>API</h3>
-		        <p>Get creative! Our API gives you complete flexibility to customise the look and flow of your identity solution for a seamless user experience completely tailored to your needs.</p>
-		    </div>
-		</div>
-
-		<section id="integrations-tabs" class="solution__item solution__item__notfirst hidden-xs">
+		<section id="integrations-tabs" class="solution__item solution__item__notfirst">
 			<div id="integration" class="solution__item__content solution__item__content--green">
 
 				<div ng-show="ctrl.integrationsTabs.active == 'HOSTED'">

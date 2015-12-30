@@ -319,6 +319,11 @@ body {
         display: table;
 		width: 100%;
 
+		// box styles
+		height: 100%;
+		background: white;
+		z-index: 1000;
+
 		&.visible {
             @extend .slideInDown;
             position: fixed;
@@ -335,6 +340,7 @@ body {
 		}
 
 		.sign-in-container {
+
 
             @media (min-height: 481px) {
                 margin-top: 20%;
@@ -354,6 +360,11 @@ body {
 
                     > div {
                         @include col(6);
+                        button {
+                            width: 100%;
+                            max-width: none;
+                            height: em(50);
+                        }
 
                     }
                 }
@@ -383,15 +394,10 @@ body {
                     }
                 }
             }
+
+
 		}
 
-		// box styles
-		height: 100%;
-		padding: 0 em(15) em(15);
-		padding-left: em(50);
-		background: white;
-
-		z-index: 1000;
 
 		h4 {
 			margin-top: em(30);

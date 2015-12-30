@@ -24,12 +24,11 @@
     -o-transition: all .25s ease-in;
     transition: all .25s ease-in;
     position: absolute;
-    left: -em(15);
-    top: -1000px;
+    top: -1200px;
     background: white;
     height: 100%;
-    padding: 0 2em 1em;
     padding-left: 10%;
+    padding-right: 10%;
     background: white;
     z-index: 1000;
 }
