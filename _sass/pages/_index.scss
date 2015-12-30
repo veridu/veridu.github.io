@@ -39,11 +39,11 @@ section.verification-container {
 	@media (min-width: $screen-sm-min) {
 		.hidden-verification-container {
 			position: relative;
+
 			> div {
 				position: absolute;
 				width: 100%;
 				left: 0;
-				top: 0;
 			}
 		}
 	}

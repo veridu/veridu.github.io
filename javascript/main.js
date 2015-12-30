@@ -222,14 +222,16 @@
 			}
 		}
 
-		$scope.$watch('App.Widget.user', function (user) {
+		$scope.$watch('App.Widget.user', function (user, pastUser) {
 
 			if (user) {
-				console.warn(user);
+
+				vm.providers = vm.Widget.provider;
 
 				vm.mainSliderStates = ['customer'];
 				vm.slider.length = 1;
 				var hoursPercent = (vm.Widget.hoursToFake / 5000) * 100;
+
 				vm.progressStatuses = [
 					{
 						hours: vm.Widget.hoursToFake,
@@ -246,12 +248,15 @@
 						birthPercent: user.email.score * 100
 					}
 				];
+			} else {
+				
 			}
 		}, true);
 
 		function init () {
 
 			vm.Widget.init($scope);
+			setInitialState();
 
 			vm.slider = {
 				index : 0,
@@ -290,6 +295,10 @@
 				}
 
 			}
+
+		}
+
+		function setInitialState() {
 
 			vm.mainSliderStates = [
 				'customer',
