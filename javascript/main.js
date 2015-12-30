@@ -233,7 +233,7 @@
 			$scope.$watch('App.slider.index' , function (value) {
 				if (value) {
 					clearInterval(vm.carouselInterval);
-					vm.carouselInterval = setInterval(moveCarousel, 10000);
+					vm.carouselInterval = setInterval(moveCarousel, 8000);
 				}
 			});
 
@@ -244,14 +244,14 @@
 		    	});
 			}
 
-			vm.carouselInterval = setInterval(moveCarousel, 10000);
+			vm.carouselInterval = setInterval(moveCarousel, 8000);
 			vm.activeContentInterval = setInterval(checkActiveContent, 1000);
 
 			function checkActiveContent() {
 
 				if (landingActiveContent.find('*:hover').length) {
 					clearInterval(vm.carouselInterval);
-					vm.carouselInterval = setInterval(moveCarousel, 10000);
+					vm.carouselInterval = setInterval(moveCarousel, 8000);
 				}
 
 				// hides email form
