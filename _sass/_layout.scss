@@ -339,11 +339,18 @@ body {
             }
 		}
 
+        .dropdown-menu__contents {
+            @include clearfix();
+            max-height: 80%;
+            overflow-y: auto;
+
+        }
+
 		.sign-in-container {
 
 
             @media (min-height: 481px) {
-                margin-top: 20%;
+                // margin-top: 20%;
             }
 
             .signin-component-xs {

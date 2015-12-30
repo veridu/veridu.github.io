@@ -100,7 +100,38 @@
 <script type="text/javascript" src="node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script type="text/javascript" src="bower_components/wow/dist/wow.min.js"></script>
+<script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu.min.js"></script>
+<script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu-ui.min.js"></script>
+<script type="text/javascript" src="https://veridu.com/integration/cfg.js"></script>
+
+
+<!-- App -->
+<script type="text/javascript">
+
+	var app = angular.module('app', []).config(function($interpolateProvider){
+		$interpolateProvider.startSymbol('({').endSymbol('})');
+	});
+
+	// making them injectable so I can work with multiple assets files without needing PHP info
+	app.factory('Veridu', function () {
+		return new Veridu(VERIDU);
+	});
+
+
+	app.factory('VeriduUI', function () {
+		return VeriduUI;
+	});
+
+	app.service('Auth', function () {
+		return {
+			username: VERIDU.username
+		}
+	});
+
+</script>
+
 <script type="text/javascript" src="/javascript/main.js"></script>
+<script type="text/javascript" src="/javascript/widget.factory.js"></script>
 
 <!--
 	<script type="text/javascript">

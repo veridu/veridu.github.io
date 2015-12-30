@@ -98,9 +98,8 @@
 	}
 
 
-	var app = angular.module('app', []).config(function($interpolateProvider){
-    	$interpolateProvider.startSymbol('({').endSymbol('})');
-	});
+	var app = angular.module('app');
+
 	app.controller('ContactCtrl', ContactCtrl);
 
 	// Contact controller
@@ -187,10 +186,13 @@
 
 	angular.module('app').controller('AppCtrl', AppCtrl);
 
-	AppCtrl.$inject = ['$scope'];
-	function AppCtrl ($scope) {
+	AppCtrl.$inject = ['$scope', 'Widget', 'Auth', 'Veridu'];
+	function AppCtrl ($scope, Widget, Auth, Veridu) {
 
 		var vm = this;
+
+		vm.Widget = Widget;
+		vm.auth = auth;
 		vm.nextSlide = nextSlide;
 		vm.prevSlide = prevSlide;
 		vm.togleSignin = togleSignin;
@@ -199,7 +201,6 @@
 		$(".landing-section").on("swipeleft", prevSlide);
 
 		init();
-
 
 		function togleSignin() {
 			vm.showSignin = ! vm.showSignin;
@@ -221,7 +222,36 @@
 			}
 		}
 
+		$scope.$watch('App.Widget.user', function (user) {
+
+			if (user) {
+				console.warn(user);
+
+				vm.mainSliderStates = ['customer'];
+				vm.slider.length = 1;
+				var hoursPercent = (vm.Widget.hoursToFake / 5000) * 100;
+				vm.progressStatuses = [
+					{
+						hours: vm.Widget.hoursToFake,
+						hoursPercent: Math.max(hoursPercent, 60),
+						name: user.name.value,
+						namePercent: user.name.score * 100,
+						img: user.picture,
+						imgStyle: '',
+						imgMdStyle: '',
+						sex: user.gender.value,
+						sexPercent: user.gender.score * 100,
+						verified: user.overall > 0.6,
+						birth: user.email.value,
+						birthPercent: user.email.score * 100
+					}
+				];
+			}
+		}, true);
+
 		function init () {
+
+			vm.Widget.init($scope);
 
 			vm.slider = {
 				index : 0,
@@ -262,10 +292,10 @@
 			}
 
 			vm.mainSliderStates = [
-				'customer-1',
-				'customer-2',
-				'customer-3',
-				'customer-4'
+				'customer',
+				'candidate',
+				'peer',
+				'tenant'
 			];
 
 			vm.progressStatuses = [
@@ -326,10 +356,55 @@
 					birthPercent: 89
 				},
 			];
-
-		}
 		}
 
-		$('.page-loading').fadeOut();
+		function auth(service) {
+			var username = Auth.username;
+
+			switch (service) {
+
+				case 'document':
+					Veridu.Widget.document_widget(username);
+					break;
+
+				case 'spotafriend':
+					Veridu.Widget.kba_widget(username, service);
+					break;
+
+				case 'sms':
+				case 'email':
+					Veridu.Widget.otp_widget(username, service);
+					break;
+
+				case 'cpr':
+					Veridu.Widget.cpr_widget(username);
+					break;
+
+				case 'nemid':
+					if (parent.jQuery)
+						parent.jQuery(parent.document).trigger(
+							'VeriduEvent',
+							{
+								eventname: 'NemID',
+								user: username
+							}
+						);
+					else
+						Veridu.Widget.nemid_widget(username);
+					break;
+
+				case 'personal':
+					Veridu.Widget.personal(username);
+					break;
+
+				default:
+					Veridu.Widget.provider_login(username, service);
+			}
+
+			return true;
+		}
+	}
+
+	$('.page-loading').fadeOut();
 
 })($,WOW);
