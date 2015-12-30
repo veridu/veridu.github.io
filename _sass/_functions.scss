@@ -12,6 +12,14 @@ $base-font-size: 15; // Default
     min-height: 1px;
 }
 
+@mixin transitions($time: 0.25s, $type: ease-out) {
+    -webkit-transition: all $time $type;
+    -moz-transition: all $time $type;
+    -ms-transition: all $time $type;
+    -o-transition: all $time $type;
+    transition: all $time $type;
+}
+
 @mixin col-offset($size, $base: 100%) {
     margin-left: ($base * $size / 12 ) !important;
 }

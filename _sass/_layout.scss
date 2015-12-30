@@ -340,7 +340,9 @@ body {
 		}
 
         .dropdown-menu__contents {
+            @include transitions();
             @include clearfix();
+            @extend .animated;
             max-height: 80%;
             overflow-y: auto;
 
