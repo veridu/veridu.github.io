@@ -3,22 +3,22 @@ layout: default
 ---
 <div class="landing-section">
 
-    <video id="video-candidate" autoplay loop ng-show="App.slider.state() == 'candidate'">
+    <video id="video-candidate" loop autoplay ng-show="App.slider.state() == 'candidate'">
         <source src="/video/candidate.webm" type="video/webm">
         <source src="/video/candidate.mp4" type="video/mp4">
     </video>
 
-    <video id="video-customer"  autoplay loop ng-show="App.slider.state() == 'customer'">
+    <video id="video-customer" loop autoplay ng-show="App.slider.state() == 'customer'">
         <source src="/video/customer.webm" type="video/webm">
         <source src="/video/customer.mp4" type="video/mp4">
     </video>
 
-    <video id="video-candidate"peerautoplay loop ng-show="App.slider.state() == 'peer'">
+    <video id="video-peer" loop autoplay ng-show="App.slider.state() == 'peer'">
         <source src="/video/peer.webm" type="video/webm">
         <source src="/video/peer.mp4" type="video/mp4">
     </video>
 
-    <video id="video-tenant"  autoplay loop ng-show="App.slider.state() == 'tenant'">
+    <video id="video-tenant" loop autoplay ng-show="App.slider.state() == 'tenant'">
         <source src="/video/tenant.webm" type="video/webm">
         <source src="/video/tenant.mp4" type="video/mp4">
     </video>
@@ -34,8 +34,8 @@ layout: default
                         <h1 class="title-sm">
                             Know Your <br class="visible-xs">
                             <span ng-show=" App.slider.state() == 'customer' " class="flipInX">Customer</span>
-                            <span ng-show=" App.slider.state() == 'candidate' " class="flipInX">Peer</span>
-                            <span ng-show=" App.slider.state() == 'peer' " class="flipInX">Candidate</span>
+                            <span ng-show=" App.slider.state() == 'peer' " class="flipInX">Peer</span>
+                            <span ng-show=" App.slider.state() == 'candidate' " class="flipInX">Candidate</span>
                             <span ng-show=" App.slider.state() == 'tenant' " class="flipInX">Tenant</span>
                         </h1>
 
