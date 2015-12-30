@@ -156,7 +156,7 @@ body {
                         > button {
                             display: block;
                             width: 100%;
-                            height: em(40);
+                            height: em(60);
                         }
 
                         &.signin__container__integrations--veridu {
@@ -340,11 +340,13 @@ body {
 		}
 
         .dropdown-menu__contents {
+            margin-top: 15%;
             @include transitions();
             @include clearfix();
             @extend .animated;
             max-height: 80%;
             overflow-y: auto;
+            overflow-x: hidden;
 
         }
 

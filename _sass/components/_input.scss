@@ -3,6 +3,7 @@ input {
 	padding: em(8);
 	outline: 0;
 	color: $brand-primary;
+	border-radius: 0 !important;
 
 	&.no-border {
 		border: 0;

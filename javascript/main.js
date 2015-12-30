@@ -191,10 +191,14 @@
 
 		var vm = this;
 
+		vm.partnerIndex = 0;
 		vm.Widget = Widget;
 		vm.auth = auth;
 		vm.nextSlide = nextSlide;
 		vm.prevSlide = prevSlide;
+		vm.auth = auth;
+		vm.nextPartnerSlide = nextPartnerSlide;
+		vm.prevPartnerSlide = prevPartnerSlide;
 		vm.togleSignin = togleSignin;
 
 		$(".landing-section").on("swiperight", nextSlide);
@@ -222,14 +226,30 @@
 			}
 		}
 
+		function nextPartnerSlide() {
+			if (vm.partnerIndex == 3) {
+				vm.partnerIndex = 0;
+			} else {
+				vm.partnerIndex++;
+			}
+		}
+
+		function prevPartnerSlide() {
+			if (vm.partnerIndex == 0) {
+				vm.partnerIndex = 3;
+			} else {
+				vm.partnerIndex--;
+			}
+		}
+
 		$scope.$watch('App.Widget.user', function (user, pastUser) {
+			console.warn(user);
 
 			if (user) {
-
-				vm.providers = vm.Widget.provider;
-
+				vm.user = user;
 				vm.mainSliderStates = ['customer'];
 				vm.slider.length = 1;
+				vm.slider.index = 0;
 				var hoursPercent = (vm.Widget.hoursToFake / 5000) * 100;
 
 				vm.progressStatuses = [
@@ -249,7 +269,7 @@
 					}
 				];
 			} else {
-				
+
 			}
 		}, true);
 
@@ -279,7 +299,14 @@
 		    	});
 			}
 
+			function movePartners() {
+		    	$scope.$apply(function () {
+					vm.nextPartnerSlide();
+		    	});
+			}
+
 			vm.carouselInterval = setInterval(moveCarousel, 8000);
+			vm.partnersInterval = setInterval(movePartners, 8000);
 			vm.activeContentInterval = setInterval(checkActiveContent, 1000);
 
 			function checkActiveContent() {

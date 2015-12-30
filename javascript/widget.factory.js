@@ -73,9 +73,15 @@ function Widget (Veridu, VeriduUI, Auth) {
 		vm.$scope.$apply(function () {
 
 			vm.populated = true;
+			if (json.user) {
+				json.user.auth = {};
+			}
 
 			json.provider.map(function (provider) {
 				vm.badges[provider].active = true;
+				if (json.user) {
+					json.user.auth[provider] = true;
+				}
 			});
 
 			vm.completed = Object.keys(vm.badges).length == json.provider.length;

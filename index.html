@@ -44,7 +44,7 @@ layout: default
                     <div class="row-sm">
                         <div class="customer-image-container">
                             <div  class="animated fadeIn customer__image" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgMdStyle})"></div>
-                            <a class="white-link" href="#">
+                            <a class="white-link" href="javascript:;">
                                 <span class="white-bottom-border"><small>£</small> <span class="big">0,086</span> / CHECK</span>
                             </a>
                         </div>
@@ -100,7 +100,7 @@ layout: default
 
                        </section>
                        <ol class="carousel-indicators md-indicators">
-                           <li ng-repeat="state in App.mainSliderStates" ng-click="App.slider.index = $index" ng-class="{active : App.slider.index == $index}"></li>
+                           <li ng-repeat="state in App.mainSliderStates" ng-show="App.mainSliderStates.length > 1" ng-click="App.slider.index = $index" ng-class="{active : App.slider.index == $index}"></li>
                        </ol>
 
                         <section class="verification-container">
@@ -108,22 +108,22 @@ layout: default
                             <h4>TRY IT NOW</h4>
                             <div class="buttons-container">
                                 <div class="btn-container right">
-                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')"> Facebook </button>
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')" ng-class="{active : App.user.auth.facebook}"> Facebook </button>
                                 </div>
 
                                 <div class="btn-container left">
-                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')"> LinkedIn </button>
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')" ng-class="{active : App.user.auth.linkedin}"> LinkedIn </button>
                                 </div>
 
                                 <!-- breaks line -->
                                 <div class="clearfix"></div>
 
                                 <div class="btn-container right ">
-                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('google')"> Google </button>
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('google')" ng-class="{active : App.user.auth.google}"> Google </button>
                                 </div>
 
                                 <div class="btn-container left ">
-                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('paypal')"> Paypal </button>
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('paypal')" ng-class="{active : App.user.auth.paypal}"> Paypal </button>
                                 </div>
 
                                 <div class="hidden-verification-container">
@@ -131,39 +131,39 @@ layout: default
                                         <div class="clearfix"></div>
 
                                         <div class="btn-container right ">
-                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('spotify')"> Spotify </button>
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('spotify')" ng-class="{active : App.user.auth.spotify}"> Spotify </button>
                                         </div>
 
                                         <div class="btn-container left ">
-                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('instagram')"> Instagram </button>
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('instagram')" ng-class="{active : App.user.auth.instagram}"> Instagram </button>
                                         </div>
 
                                         <div class="clearfix"></div>
 
                                         <div class="btn-container right ">
-                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('dropbox')"> Dropbox </button>
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('dropbox')" ng-class="{active : App.user.auth.dropbox}"> Dropbox </button>
                                         </div>
 
                                         <div class="btn-container left ">
-                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('email')"> Email </button>
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('email')" ng-class="{active : App.user.auth.email}"> Email </button>
                                         </div>
                                         <div class="clearfix"></div>
 
                                         <div class="btn-container right ">
-                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('sms')"> SMS </button>
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('sms')" ng-class="{active : App.user.auth.sms}"> SMS </button>
                                         </div>
 
                                         <div class="btn-container left ">
-                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('spotafriend')"> Spot a friend </button>
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('spotafriend')" ng-class="{active : App.user.auth.spotafriend}"> Spot a friend </button>
                                         </div>
 
                                         <div class="clearfix"></div>
-                                        <a ng-show="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = false" >SHOW LESS</a>
 
                                     </div>
                                 </div>
 
                             </div>
+                            <a ng-show="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = false" >SHOW LESS</a>
                             <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a>
                         </section>
 
@@ -178,27 +178,64 @@ layout: default
 
 
 <section class="veridu-list md-cards">
-
     <div class="item-container">
-        <div>
-            <h3>GLOBAL ID VERIFICATION</h3>
+        <div class="fadeIn" ng-show="App.partnerIndex == 0">
+            <h3>Frictionless Onboarding</h3>
             <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
         </div>
-    </div>
-
-    <div class="item-container">
-        <div>
-            <h3>GREATER INSIGHT</h3>
-            <p>Automate more fraud decisions and reduce time spent on manuel reviews with better tools and user insight.</p>
+        <div class="fadeIn" ng-show="App.partnerIndex == 1">
+            <h3>Trust</h3>
+            <p>Break down trust barriers show your commitment to keeping your members and their possessions safe.</p>
+        </div>
+        <div class="fadeIn" ng-show="App.partnerIndex == 2">
+            <h3>Identify Fraud</h3>
+            <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
+        </div>
+        <div class="fadeIn" ng-show="App.partnerIndex == 3">
+            <h3>Safety</h3>
+            <p>Be proactive about safety and require sellers, landlords and viewers to verify their identity before viewings.</p>
         </div>
     </div>
 
     <div class="item-container">
-        <div>
-            <h3>GAIN INSIGHT</h3>
-            <p>Break down trust barriers show your commitment to keeping your members and their possessions safe.</p>
-        <div>
+        <div class="fadeIn" ng-show="App.partnerIndex == 0">
+            <h3>Reduce False Positives</h3>
+            <p>Reduce false positive declines and recover transactions that your risk rules would normally decline.</p>
+        </div>
+        <div class="fadeIn" ng-show="App.partnerIndex == 1">
+            <h3>Automation</h3>
+            <p>Stay focused on your core business by automating the onboarding process and reducing time spent on manual reviews.</p>
+        </div>
+        <div class="fadeIn" ng-show="App.partnerIndex == 2">
+            <h3>Vetted</h3>
+            <p>Conduct robust vetting of CVs wherever a candidate has studied or worked.</p>
+        </div>
+        <div class="fadeIn" ng-show="App.partnerIndex == 3">
+            <h3>Trust</h3>
+            <p>Build trust in your business by allowing customers to showcase their credibility with a visible badge.</p>
+        </div>
     </div>
+
+    <div class="item-container">
+        <div class="fadeIn" ng-show="App.partnerIndex == 0">
+            <h3>Spend less</h3>
+            <p>Spend less time and money on fraud reviews with better tools and user insight.</p>
+        </div>
+        <div class="fadeIn" ng-show="App.partnerIndex == 1">
+            <h3>Frictionless onboarding</h3>
+            <p>Eliminate friction in the user experience to encourage more members onto your platform and drive engagement.</p>
+        </div>
+        <div class="fadeIn" ng-show="App.partnerIndex == 2">
+            <h3>Automate</h3>
+            <p>Focus your efforts on bringing new clients onboard, not manually onboarding candidates.</p>
+        </div>
+        <div class="fadeIn" ng-show="App.partnerIndex == 3">
+            <h3>Know Your Customer</h3>
+            <p>Know more about your customers for less - social identity solutions offer unrivalled insight at a lower price point.</p>
+        </div>
+    </div>
+
+
 
 </section>
 
@@ -206,10 +243,10 @@ layout: default
 
     <div  class="carousel slide" >
         <div class="carousel-inner">
-            <a class="nav carousel-nav-left"  href="javascript:;" ng-click="App.prevSlide()"><img src="/img/arrow-right.png"></a>
-            <a class="nav carousel-nav-right" href="javascript:;" ng-click="App.nextSlide()"><img src="/img/arrow-right.png"></a>
+            <a class="nav carousel-nav-left"  href="javascript:;" ng-click="App.prevPartnerSlide()"><img src="/img/arrow-right.png"></a>
+            <a class="nav carousel-nav-right" href="javascript:;" ng-click="App.nextPartnerSlide()"><img src="/img/arrow-right.png"></a>
 
-            <div class="item fadeIn" ng-class="{active : App.slider.index == 0 }" >
+            <div class="item fadeIn" ng-class="{active : App.partnerIndex == 0 }" >
                 <div class="container">
                     <div class="carousel-caption">
                         <p>“Over half our users have verified themselves with Veridu, dramatically increasing the safety and reliability of our service.”</p>
@@ -222,7 +259,7 @@ layout: default
                 </div>
             </div>
 
-            <div class="item fadeIn" ng-class="{active : App.slider.index == 1 }">
+            <div class="item fadeIn" ng-class="{active : App.partnerIndex == 1 }">
                 <div class="container">
                     <div class="carousel-caption">
                         <p>“Veridu rocks! Especially for our customers who sell high value goods online. The team has been beyond helpful and responsive to our needs.”</p>
@@ -235,7 +272,7 @@ layout: default
                 </div>
             </div>
 
-            <div class="item fadeIn" ng-class="{active : App.slider.index == 2 }">
+            <div class="item fadeIn" ng-class="{active : App.partnerIndex == 2 }">
                 <div class="container">
                     <div class="carousel-caption">
                         <p>“It’s simple: Veridu enables trust. More trust means more transactions and ultimately more revenue.”</p>
@@ -248,7 +285,7 @@ layout: default
                 </div>
             </div>
 
-            <div class="item fadeIn" ng-class="{active : App.slider.index == 3 }">
+            <div class="item fadeIn" ng-class="{active : App.partnerIndex == 3 }">
                 <div class="container">
                     <div class="carousel-caption">
                         <p>“Veridu gives us much lower transactional risk and significantly better insight on our customers.”</p>

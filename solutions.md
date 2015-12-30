@@ -16,7 +16,7 @@ description: What company doesn't want to know their users better? These are jus
 
 	<section id="sectors-tabs" class="solution__item">
 		<div id="sectors" class="solution__item__content">
-			<div ng-show="ctrl.sectorsTabs.active == 'payments'" >
+			<div class="border-right" ng-show="ctrl.sectorsTabs.active == 'payments'" >
 				<h2  class="solution__item__title">Payments</h2>
 				<p class="solution__item_description">Verify identity better globally. Decline fewer transactions. Improve user experience.</p>
 			</div>
@@ -26,7 +26,7 @@ description: What company doesn't want to know their users better? These are jus
 				<p class="solution__item_description">Build trust. Drive community engagement. Put members in control.</p>
 			</div>
 
-			<div ng-show="ctrl.sectorsTabs.active == 'recruiting'">
+			<div  ng-show="ctrl.sectorsTabs.active == 'recruiting'">
 				<h2  class="solution__item__title">Recruiting</h2>
 				<p class="solution__item_description">Enhance candidate vetting. Identify the superstars. Make clients happy.</p>
 			</div>
@@ -39,111 +39,118 @@ description: What company doesn't want to know their users better? These are jus
 	</section>
 	<div class="panel-controls">
 		<div >
-			<div ng-class="{selected : ctrl.sectorsTabs.active == 'payments'}" ng-click="ctrl.setActive('sectors', 'payments')">Payments</div>
+			<div class="separator" ng-class="{selected : ctrl.sectorsTabs.active == 'payments'}" ng-click="ctrl.setActive('sectors', 'payments')">Payments</div>
 		</div>
 		<div >
 			<div ng-class="{selected : ctrl.sectorsTabs.active == 'recruiting'}" ng-click="ctrl.setActive('sectors', 'recruiting')">Recruiting</div>
 		</div>
 		<div >
-			<div ng-class="{selected : ctrl.sectorsTabs.active == 'p2p'}" ng-click="ctrl.setActive('sectors', 'p2p')">Peer to Peer</div>
+			<div class="separator" ng-class="{selected : ctrl.sectorsTabs.active == 'p2p'}" ng-click="ctrl.setActive('sectors', 'p2p')">Peer to Peer</div>
 		</div>
 		<div >
 			<div ng-class="{selected : ctrl.sectorsTabs.active == 'real_estate'}" ng-click="ctrl.setActive('sectors', 'real_estate')">Real Estate</div>
 		</div>
 	</div>
 
-	<section class="solution__section__container solution__section__container--clients-partners content-padding font-light" id="clients-partners-section">
-		<h2 class="solution__section__title">Clients & Partners</h2>
-		<p class="solution__section__description">
-			We're proud to be working with some truly innovative companies, both big and growing. Here's a taster of how we're working together.
-		</p>
-	</section>
+		<section class="solution__section__container solution__section__container--clients-partners content-padding font-light" id="clients-partners-section">
+			<h2 class="solution__section__title">Clients & Partners</h2>
+			<p class="solution__section__description">
+				We're proud to be working with some truly innovative companies, both big and growing. Here's a taster of how we're working together.
+			</p>
+		</section>
 
 
-	<section id="partners-tabs" class="solution__item solution__item__notfirst">
-		<div id="clients-partners" class="solution__item__content solution__item__content--purple">
+		<section id="partners-tabs" class="solution__item solution__item__notfirst">
+			<div id="clients-partners" class="solution__item__content solution__item__content--purple">
 
-			<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
-				<h2 class="solution__item__title">Payfriendz</h2>
-				<p class="solution__item_description" >
-					Payfriendz is a mobile app to transfer money between friends. <br>
-					What do they use Veridu for? <br>
-				</p>
-			</div>
-			<div ng-show="ctrl.partnersTabs.active == 'durise'">
-				<h2 class="solution__item__title">Durise</h2>
-				<p class="solution__item_description" >
-					Durise is a Dubai based real estate crowdfunding platform. <br>
-					What do they use Veridu for? <br>
-				</p>
-			</div>
-			<div ng-show="ctrl.partnersTabs.active == 'real_asset'">
-				<h2 class="solution__item__title">Real Asset Company</h2>
-				<p class="solution__item_description" >
-					The Real Asset Company is an innovative gold investment platform with its own cryptocurrency. <br>
-					What do they use Veridu for? <br>
-				</p>
-			</div>
-			<div class="solution__item__tags__container">
-				<div>
-					<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
-						<div class="tag tag--sectors">Payments</div>
-						<div class="clearfix"></div>
-						<div class="tag tag--sources">Social Media & Online Services</div>
-						<div class="clearfix"></div>
-						<div class="tag tag--scores">Contact Info</div>
-						<div class="tag tag--scores">Insight</div>
-						<div class="clearfix"></div>
-						<div class="tag tag--partner">Payfriendz</div>
-					</div>
-					<div  ng-show="ctrl.partnersTabs.active == 'durise'">
-						<div class="tag tag--sectors">Peer to Peer</div>
-						<div class="tag tag--sectors">Real Estate</div>
-						<div class="clearfix"></div>
-						<div class="tag tag--sources">Social Media & Online Services</div>
-						<div class="tag tag--sources">Email</div>
-						<div class="tag tag--sources">SMS</div>
-						<div class="tag tag--sources">Knowledge-based Authentication</div>
-						<div class="clearfix"></div>
-						<div class="tag tag--scores">Contact Info</div>
-						<div class="tag tag--scores">Age</div>
-						<div class="clearfix"></div>
-						<div class="tag tag--partner">Durise</div>
-					</div>
-					<div  ng-show="ctrl.partnersTabs.active == 'real_asset'">
-						<div class="tag tag--sectors">Payments</div>
-						<div class="clearfix"></div>
-						<div class="tag tag--sources">Social Media & Online Services</div>
-						<div class="tag tag--sources">Email</div>
-						<div class="tag tag--sources">SMS</div>
-						<div class="tag tag--sources">Knowledge-based Authentication</div>
-						<div class="clearfix"></div>
-						<div class="tag tag--scores">Contact Info</div>
-						<div class="tag tag--scores">Age</div>
-						<div class="clearfix"></div>
-						<div class="tag tag--partner">The Real Asset Company</div>
+				<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
+					<h2 class="solution__item__title">Payfriendz</h2>
+					<p class="solution__item_description" >
+						Payfriendz is a mobile app to transfer money between friends. <br>
+						What do they use Veridu for? <br>
+					</p>
+				</div>
+				<div ng-show="ctrl.partnersTabs.active == 'durise'">
+					<h2 class="solution__item__title">Durise</h2>
+					<p class="solution__item_description" >
+						Durise is a Dubai based real estate crowdfunding platform. <br>
+						What do they use Veridu for? <br>
+					</p>
+				</div>
+				<div ng-show="ctrl.partnersTabs.active == 'real_asset'">
+					<h2 class="solution__item__title">Real Asset Company</h2>
+					<p class="solution__item_description" >
+						The Real Asset Company is an innovative gold investment platform with its own cryptocurrency. <br>
+						What do they use Veridu for? <br>
+					</p>
+				</div>
+				<div class="solution__item__tags__container">
+					<div>
+						<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
+							<div class="tag tag--sectors">Payments</div>
+							<div class="clearfix"></div>
+							<div class="tag tag--sources">Social Media & Online Services</div>
+							<div class="clearfix"></div>
+							<div class="tag tag--scores">Contact Info</div>
+							<div class="tag tag--scores">Insight</div>
+							<div class="clearfix"></div>
+							<div class="tag tag--partner">Payfriendz</div>
+						</div>
+						<div  ng-show="ctrl.partnersTabs.active == 'durise'">
+							<div class="tag tag--sectors">Peer to Peer</div>
+							<div class="tag tag--sectors">Real Estate</div>
+							<div class="clearfix"></div>
+							<div class="tag tag--sources">Social Media & Online Services</div>
+							<div class="tag tag--sources">Email</div>
+							<div class="tag tag--sources">SMS</div>
+							<div class="tag tag--sources">Knowledge-based Authentication</div>
+							<div class="clearfix"></div>
+							<div class="tag tag--scores">Contact Info</div>
+							<div class="tag tag--scores">Age</div>
+							<div class="clearfix"></div>
+							<div class="tag tag--partner">Durise</div>
+						</div>
+						<div  ng-show="ctrl.partnersTabs.active == 'real_asset'">
+							<div class="tag tag--sectors">Payments</div>
+							<div class="clearfix"></div>
+							<div class="tag tag--sources">Social Media & Online Services</div>
+							<div class="tag tag--sources">Email</div>
+							<div class="tag tag--sources">SMS</div>
+							<div class="tag tag--sources">Knowledge-based Authentication</div>
+							<div class="clearfix"></div>
+							<div class="tag tag--scores">Contact Info</div>
+							<div class="tag tag--scores">Age</div>
+							<div class="clearfix"></div>
+							<div class="tag tag--partner">The Real Asset Company</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-	</section>
-		<div class="panel-controls panel-controls--purple">
-			<div>
-				<div ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.setActive('partners', 'payfriendz')">Payfriendz</div>
+		</section>
+			<div class="panel-controls panel-controls--purple">
+				<div >
+					<div class="separator" ng-class="{selected : ctrl.partnersTabs.active == 'payfriendz'}" ng-click="ctrl.setActive('partners', 'payfriendz')">Payfriendz</div>
+				</div>
+				<div>
+					<div ng-class="{selected : ctrl.partnersTabs.active == 'durise'}" ng-click="ctrl.setActive('partners', 'durise')">Durise</div>
+				</div>
+				<div>
+					<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_asset'}" ng-click="ctrl.setActive('partners', 'real_asset')">The Real Asset Company</div>
+				</div>
 			</div>
-			<div>
-				<div ng-class="{selected : ctrl.partnersTabs.active == 'durise'}" ng-click="ctrl.setActive('partners', 'durise')">Durise</div>
-			</div>
-			<div>
-				<div class="panel-controls__item_block" ng-class="{selected : ctrl.partnersTabs.active == 'real_asset'}" ng-click="ctrl.setActive('partners', 'real_asset')">The Real Asset Company</div>
-			</div>
-		</div>
-	</section>
-	<section class="integration veridu-list" id="integration-section">
-	    <h2 class="font-light">Integration</h2>
+		</section>
 
-		<section id="integrations-tabs" class="solution__item solution__item__notfirst">
-			<div id="integration" class="solution__item__content solution__item__content--green">
+
+
+		<section class="solution__section__container solution__section__container--integrations content-padding font-light" id="integration-section">
+			<h2 class="solution__section__title">Integration</h2>
+			<p class="solution__section__description">
+			</p>
+		</section>
+
+
+		<section id="integration-section" class="solution__item solution__item__notfirst">
+			<div id="integrations-tabs" class="solution__item__content solution__item__content--green">
 
 				<div ng-show="ctrl.integrationsTabs.active == 'HOSTED'">
 					<h2 class="solution__item__title">HOSTED</h2>
@@ -153,7 +160,6 @@ description: What company doesn't want to know their users better? These are jus
 						It's effective, easy and no integration is.
 					</p>
 				</div>
-
 				<div ng-show="ctrl.integrationsTabs.active == 'WIDGETS'">
 					<h2 class="solution__item__title">WIDGETS</h2>
 					<p class="solution__item_description" >
@@ -162,7 +168,6 @@ description: What company doesn't want to know their users better? These are jus
 						into your site quickly, easily and without any fuss.
 					</p>
 				</div>
-
 				<div ng-show="ctrl.integrationsTabs.active == 'API'">
 					<h2 class="solution__item__title">API</h2>
 					<p class="solution__item_description" >
@@ -173,18 +178,19 @@ description: What company doesn't want to know their users better? These are jus
 				</div>
 			</div>
 		</section>
-		<div class="panel-controls panel-controls--green hidden-xs">
-			<div>
-				<div ng-class="{selected : ctrl.integrationsTabs.active == 'HOSTED'}" ng-click="ctrl.setActive('integrations', 'HOSTED')">HOSTED</div>
+		<div class="panel-controls panel-controls--green">
+			<div >
+				<div class="separator" ng-class="{selected : ctrl.integrationsTabs.active == 'HOSTED'}" ng-click="ctrl.setActive('integrations', 'HOSTED')">Hosted</div>
 			</div>
 			<div>
-				<div ng-class="{selected : ctrl.integrationsTabs.active == 'WIDGETS'}" ng-click="ctrl.setActive('integrations', 'WIDGETS')">WIDGETS</div>
+				<div ng-class="{selected : ctrl.integrationsTabs.active == 'WIDGETS'}" ng-click="ctrl.setActive('integrations', 'WIDGETS')">Widgets</div>
 			</div>
 			<div>
 				<div class="panel-controls__item_block" ng-class="{selected : ctrl.integrationsTabs.active == 'API'}" ng-click="ctrl.setActive('integrations', 'API')">API</div>
 			</div>
 		</div>
 	</section>
+
 
 </div>
 
@@ -322,27 +328,44 @@ description: What company doesn't want to know their users better? These are jus
 
 			this.setActive = function (tabSection, value) {
 
+				var top ;
+
 				switch (tabSection) {
 
 					case 'partners':
 						vm.partnersTabs.active = value;
-					    $('html, body').animate({
-					        scrollTop: ($('#partners-tabs').offset().top - vm.menuElement.height())
-					    }, 1000);
+						top = Math.round($('#partners-tabs').offset().top - vm.menuElement.height());
+
+						if (Math.round($window.scrollTop()) != top) {
+					    	$('html, body').animate({
+					        	scrollTop: top
+					    	}, 1000);
+						}
 						break;
 
 					case 'sectors':
+
 						vm.sectorsTabs.active = value;
-					    $('html, body').animate({
-					        scrollTop: ($('#sectors-tabs').offset().top - vm.menuElement.height())
-					    }, 1000);
+						top = Math.round($('#sectors-tabs').offset().top - vm.menuElement.height());
+
+						if (Math.round($window.scrollTop()) != top) {
+					    	$('html, body').animate({
+					        	scrollTop: top
+					    	}, 1000);
+						}
 						break;
 
 					case 'integrations':
 						vm.integrationsTabs.active = value;
-					    $('html, body').animate({
-					        scrollTop: ($('#integrations-tabs').offset().top - vm.menuElement.height())
-					    }, 1000);
+						top = Math.round($('#integrations-tabs').offset().top - vm.menuElement.height());
+
+
+						// not clicked && not the bottom of the page
+						if (Math.round($window.scrollTop()) != top &&  !($(window).scrollTop() + $(window).height() == getDocHeight())) {
+					    	$('html, body').animate({
+					        	scrollTop: top
+					    	}, 1000);
+						}
 						break;
 
 					default:
@@ -351,6 +374,14 @@ description: What company doesn't want to know their users better? These are jus
 			}
 		}
 
+		function getDocHeight() {
+		    var D = document;
+		    return Math.max(
+		        D.body.scrollHeight, D.documentElement.scrollHeight,
+		        D.body.offsetHeight, D.documentElement.offsetHeight,
+		        D.body.clientHeight, D.documentElement.clientHeight
+		    );
+		}
 
 		$(".solutions-submenu a")
 			.click(handleScroll);

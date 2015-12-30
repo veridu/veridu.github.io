@@ -315,25 +315,27 @@
 		&.panel-controls--purple {
 			> div > div {
 				background-color: #7E57C2;
-
-				@media (min-width: $screen-sm-min) {
-					border-color: #311B92;
+				border-color: #31228F;
+				&.selected {
+					background-color: #31228F !important;
 				}
 			}
 		}
 
 		&.panel-controls--green {
+
+			margin-bottom: em(200);
+
 			> div > div {
 				background: #A5D6A8;
-
-				@media (min-width: $screen-sm-min) {
-					border-color: #1A5E20;
-				}
+				border-color: #1E5D23 !important;
 
 				&.selected {
-					background-color: #1A5E20;
+					background-color: #1E5D23 !important;
 				}
 			}
+
+
 		}
 
 		> div {
@@ -350,11 +352,6 @@
 				}
 			}
 
-			&:nth-child(odd) {
-				> div {
-					border-right: 1px solid #EFEFEF;
-				}
-			}
 
 			> div {
 				cursor: pointer;
@@ -377,6 +374,9 @@
 				-ms-transition: all .15s ease-out;
 				-o-transition: all .15s ease-out;
 				transition: all .15s ease-out;
+				&.separator {
+					border-right: 1px solid #EFEFEF !important;
+				}
 
 				@media (min-width: $screen-sm-min) {
 					width: 100%;
