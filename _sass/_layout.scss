@@ -237,13 +237,13 @@ body {
         }
 
         .id-img {
-                display: none;
-                max-width: em(30);
+            display: none;
+            max-width: em(30);
 
-                @media (min-width: $screen-sm-min) {
-                    margin-right: em(126);
-                }
+            @media (min-width: $screen-sm-min) {
+                margin-right: em(126);
             }
+        }
         .veridu-img {
             width: 80%;
         }
@@ -342,9 +342,7 @@ body {
 
         .dropdown-menu__contents {
             margin-top: 15%;
-            @include transitions();
             @include clearfix();
-            @extend .animated;
             max-height: 80%;
             overflow-y: auto;
             overflow-x: hidden;
