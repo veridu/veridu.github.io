@@ -95,8 +95,6 @@
 	}
 
 	function closeMenu() {
-		dropdownMenu.removeClass('fadeInDown');
-		dropdownMenu.addClass('fadeOutUp');
 		dropdownMenu.removeClass('visible');
 	}
 
