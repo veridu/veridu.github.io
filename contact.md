@@ -8,15 +8,16 @@ cover: img/bridge.jpeg
 <section class="contact__landing">
 	<div class="contact__body">
 		<div class="contact__cover">
-			<!-- <div class="contact__cover__overlay"></div> -->
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7022.5299661762565!2d-0.0913615286685383!3d51.516164530745264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cabafacd447%3A0x7cd8bebcc7de94c5!2s1+Fore+St%2C+London+EC2Y+5EJ%2C+UK!5e0!3m2!1spt-BR!2sbr!4v1451332435494" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
-			<div class="contact__cover__contents">
-				<div>
-					<h1>Contact</h1>
-					<p>
-						Do you have a question for us? Just fill out this short <br>
-						form and one of our team will be in touch.
-					</p>
+			<div class="contact__cover__overlay"></div>
+				<div class="map" id="map"></div>
+				<div class="contact__cover__contents">
+					<div class="page-description">
+						<h1>Contact</h1>
+						<p>
+							Do you have a question for us? Just fill out this short <br>
+							form and one of our team will be in touch.
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -119,7 +120,7 @@ cover: img/bridge.jpeg
 		London, EC2Y 5EJ <br>
 		Our nearest tube station is Moorgate. <br>
 
-		<a href="#">Google map</a>
+		<a href="https://www.google.com/maps?ll=51.52058,-0.099765&z=17&t=m&hl=en-US&gl=BR&mapclient=embed&q=1+Fore+St+London+EC2Y+5EJ+UK" target="_blank">Google map</a>
 	</address>
 
 	<div>
@@ -128,6 +129,7 @@ cover: img/bridge.jpeg
 	<br>
 </section>
 
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
 
 	function load () {
@@ -137,7 +139,25 @@ cover: img/bridge.jpeg
 			.controller('SolutionsCtrl', SolutionsCtrl);
 
 		var $window = $(window);
+
+		var myLatLng = { lat: 51.5180027, lng: -0.090573};
+
 		var $cover = $('.contact__cover');
+		var myOptions = {
+	        center: new google.maps.LatLng(myLatLng),
+	        zoom: 18,
+	        mapTypeId: google.maps.MapTypeId.ROADMAP,
+	        disableDefaultUI: true
+	    };
+
+
+
+	    var map = new google.maps.Map(document.getElementById("map"), myOptions);
+		var marker = new google.maps.Marker({
+		    position: myLatLng,
+		    map: map,
+		    title: 'Veridu HQ'
+	  	});
 
 		SolutionsCtrl.$inject = [];
 		function SolutionsCtrl () {
