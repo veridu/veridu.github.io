@@ -121,23 +121,26 @@
 				type: 'POST',
 				url: 'https://mandrillapp.com/api/1.0/messages/send.json',
 				data: {
-					'key': 'YOUR API KEY HERE',
+					'key': 'aWW0R-modIT7wxtqmWKMGA',
 					'message': {
-						'from_email': 'YOUR@EMAIL.HERE',
+						'from_email': 'website@veridu.com',
 						'to': [
 							{
-								'email': 'RECIPIENT@EMAIL.HERE',
-								'name': 'RECIPIENT NAME (OPTIONAL)',
+								'email': 'marketing@veridu.com',
+								'name': 'Marketing',
 								'type': 'to'
 							}
 						],
 						'autotext': 'true',
-						'subject': 'YOUR SUBJECT HERE!',
-						'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+						'subject': 'Contact from website | veridu.com',
+						'html': 'Name: <strong>' + vm.contact.name + '<strong><br>' +
+								'Email: <strong>' + vm.contact.email + '<strong><br>' +
+								'Company: <strong>' + vm.contact.company + '<strong><br>' +
+								'<br> Message: <br> <strong>' + vm.contact.message + '<strong><br>'
 					}
 				}
 				}).done(function(response) {
-				console.log(response); // if you're into that sorta thing
+					console.log(response); // if you're into that sorta thing
 				});
 
 		}

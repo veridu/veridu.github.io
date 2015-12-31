@@ -221,8 +221,8 @@
 		position: relative;
 		background-position: left center;
 
-		&.solution__item__integration {
-			background-image: url(../img/bridge.jpeg);
+		&.solution__item--integration {
+			background-image: url(../img/bg-integrations.jpg);
 			margin-top: em(20);
 		}
 		&.solution__item__clients-partners {
@@ -271,7 +271,7 @@
 
 			&.solution__item__content--green {
 
-				background-color: #212121;
+				background-color: rgba(#212121,0.95);
 
 			}
 
@@ -334,11 +334,14 @@
 			margin-bottom: em(175);
 
 			> div > div {
-				background: #A5D6A8;
-				border-color: #1E5D23 !important;
+				background: #E0E0E0;
+				color: #333;
+
+				border-color: #212121 !important;
 
 				&.selected {
-					background-color: #1E5D23 !important;
+					color: white;
+					background-color: #212121 !important;
 				}
 			}
 

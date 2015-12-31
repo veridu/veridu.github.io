@@ -454,7 +454,7 @@ description: What company doesn't want to know their users better? These are jus
 								if (Math.round($window.scrollTop()) != top) {
 									$('html, body').animate({
 										scrollTop: top
-									}, 1000);
+									}, 500);
 								}
 							});
 						});
@@ -539,7 +539,7 @@ description: What company doesn't want to know their users better? These are jus
 
 	function scrollToHash (hash, speed, mobile) {
 
-		if (! speed) speed = 2000;
+		if (! speed) speed = 500;
 		var offset = mobile ? 240 : 280;
 		if (hash == '#integration-section') {
 			offset = 20;
