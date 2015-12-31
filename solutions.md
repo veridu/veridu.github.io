@@ -399,26 +399,36 @@ description: What company doesn't want to know their users better? These are jus
 					// check if scrolled up or down
 					if (lastScrollPos < scrolled) {
 						// down
-
-						if (isSafari) {
-							clearTimeout(scrollT);
-							scrollT = setTimeout(function () {
-								hideSubmenu();
-							}, 1000);
-						} else {
+						// if (isSafari) {
+						// 	clearTimeout(scrollT);
+						// 	scrollT = setTimeout(function () {
+						// 		hideSubmenu();
+						// 	}, 1000);
+						// } else {
+						// }
+						if (scrolled > 100) {
 							hideSubmenu();
+						} else {
+							showSubmenu();
 						}
 
 					} else {
 						// up
-						if (isSafari) {
-							clearTimeout(scrollT);
-							scrollT = setTimeout(function () {
-								showSubmenu();
-							});
+						// if (isSafari) {
+						// 	clearTimeout(scrollT);
+						// 	scrollT = setTimeout(function () {
+						// 		showSubmenu();
+						// 	});
+						// } else {
+						// }
+
+						// not on the bottom of the page
+						if (!($(window).scrollTop() + $(window).height() <= getDocHeight() - 100)) {
+							hideSubmenu();
 						} else {
 							showSubmenu();
 						}
+
 					}
 
 					lastScrollPos = scrolled;
