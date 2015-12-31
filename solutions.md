@@ -5,7 +5,7 @@ class: solutions
 description: What company doesn't want to know their users better? These are just some of the sectors we work with so if you don't see yours listed get in touch, we love to talk.
 ---
 <div ng-controller="SolutionsCtrl as ctrl">
-	
+
 	<section class="solution__section__container content-padding font-light" id="sectors-section">
 		<h2 class="solution__section__title">Sectors</h2>
 		<p class="solution__section__description">
@@ -19,23 +19,77 @@ description: What company doesn't want to know their users better? These are jus
 			<div class="border-right" ng-show="ctrl.sectorsTabs.active == 'payments'" >
 				<h2  class="solution__item__title">Payments</h2>
 				<p class="solution__item_description">Verify identity better globally. Decline fewer transactions. Improve user experience.</p>
+				<br>
+				<p class="solution__item_description">
+					Our onboarding and identity authentication solutions are frictionless and solve the issues facing today’s eCommerce companies.
+					We offer (which means you’ll offer) extensive coverage, even in thin-file markets, and greater insight into users - leading to improved good customer decline ratios.
+				</p>
 			</div>
 
 			<div ng-show="ctrl.sectorsTabs.active == 'p2p'">
 				<h2  class="solution__item__title">Peer to Peer</h2>
 				<p class="solution__item_description">Build trust. Drive community engagement. Put members in control.</p>
+				<br>
+				<p class="solution__item_description">Increase trust and reduce friction with consent-based identity and insight solutions designed specifically for the needs of the sharing economy. </p>
 			</div>
 
 			<div  ng-show="ctrl.sectorsTabs.active == 'recruiting'">
 				<h2  class="solution__item__title">Recruiting</h2>
 				<p class="solution__item_description">Enhance candidate vetting. Identify the superstars. Make clients happy.</p>
+				<br>
+				<p class="solution__item_description">
+					Veridu analyses an individual’s digital footprint using proprietary and sophisticated algorithms to verify their identity and match them against your elligibility criteria to single out the most wanted candidates, in real-time as they sign up or transact on your site.
+				</p>
 			</div>
+
+
 
 			<div ng-show="ctrl.sectorsTabs.active == 'real_estate'">
 				<h2  class="solution__item__title">Real Estate</h2>
 				<p class="solution__item_description">Build a trusted business. Keep customers safe. Identify, vet and put a face on viewers.</p>
+				<br>
+				<p class="solution__item_description">
+					Veridu helps build trust and prevent unwanted behaviour of both side of a real-estate transaction by applying our proprietary, sophisticated algorithms to analyse an individual’s digital footprint and verify their identity and credibility, in real-time as they sign up or transact on your site.
+				</p>
 			</div>
+			<div class="solution__item__tags__container">
+				<div>
+					<div ng-show="ctrl.sectorsTabs.active == 'payments'">
+						<p>
+						</p>
+					</div>
+					<div  ng-show="ctrl.partnersTabs.active == 'durise'">
+						<div class="tag tag--sectors">Peer to Peer</div>
+						<div class="tag tag--sectors">Real Estate</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--sources">Social Media & Online Services</div>
+						<div class="tag tag--sources">Email</div>
+						<div class="tag tag--sources">SMS</div>
+						<div class="tag tag--sources">Knowledge-based Authentication</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--scores">Contact Info</div>
+						<div class="tag tag--scores">Age</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--partner">Durise</div>
+					</div>
+					<div  ng-show="ctrl.partnersTabs.active == 'real_asset'">
+						<div class="tag tag--sectors">Payments</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--sources">Social Media & Online Services</div>
+						<div class="tag tag--sources">Email</div>
+						<div class="tag tag--sources">SMS</div>
+						<div class="tag tag--sources">Knowledge-based Authentication</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--scores">Contact Info</div>
+						<div class="tag tag--scores">Age</div>
+						<div class="clearfix"></div>
+						<div class="tag tag--partner">The Real Asset Company</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
+
 	</section>
 	<div class="panel-controls">
 		<div >
@@ -69,6 +123,16 @@ description: What company doesn't want to know their users better? These are jus
 						Payfriendz is a mobile app to transfer money between friends. <br>
 						What do they use Veridu for? <br>
 					</p>
+					<br>
+					<p>
+						<strong>Influencer marketing.</strong> Our social media insights help Payfriendz to identify the influencers who'll be key to growing their user base.
+						<br>
+						<br>
+						<strong>Building trust.</strong> As the currency of peer-to-peer trust is essential to Payfriendz. Using us Payfriendz can assess the credibility of all users.
+						<br>
+						<br>
+						<strong>Minimising fraud.</strong> Authenticating the identity of users keeps fraudsters off the Payfriendz platform allowing their business to thrive."
+					</p>
 				</div>
 				<div ng-show="ctrl.partnersTabs.active == 'durise'">
 					<h2 class="solution__item__title">Durise</h2>
@@ -76,12 +140,32 @@ description: What company doesn't want to know their users better? These are jus
 						Durise is a Dubai based real estate crowdfunding platform. <br>
 						What do they use Veridu for? <br>
 					</p>
+					<br>
+					<p>
+						<strong>Know Your Customer.</strong> Durise uses us to authenticate potential investors as they onboard to minimise fraud risk.
+						<br>
+						<br>
+						<strong>Customer insight.</strong> With our social media insights Durise can learn more about their customers, helping to improve their marketing.
+						<br>
+						<br>
+						<strong>Creating trust.</strong> By assessing credibility of potential investors Durise can be sure their platform becomes a trusted investment vehicle."
+					</p>
 				</div>
 				<div ng-show="ctrl.partnersTabs.active == 'real_asset'">
 					<h2 class="solution__item__title">Real Asset Company</h2>
 					<p class="solution__item_description" >
 						The Real Asset Company is an innovative gold investment platform with its own cryptocurrency. <br>
 						What do they use Veridu for? <br>
+					</p>
+					<br>
+					<p>
+						<strong>Anti-money laundering.</strong> Our frictionless identity checks allow The Real Asset Co maintain the integrity of their platform while keeping the user experience slick.
+						<br>
+						<br>
+						<strong>Protecting investors.</strong> Before withdrawing currency or making a payment investors have to pass a social identity check to identify potential account takeover. slick.
+						<br>
+						<br>
+						<strong>Managing costs.</strong> Using our social ID checks means The Real Asset Co has a risk-based identity solution, with extensive global coverage, at a fraction of the price.
 					</p>
 				</div>
 				<div class="solution__item__tags__container">
@@ -153,25 +237,39 @@ description: What company doesn't want to know their users better? These are jus
 				<div ng-show="ctrl.integrationsTabs.active == 'HOSTED'">
 					<h2 class="solution__item__title">HOSTED</h2>
 					<p class="solution__item_description" >
-						Simply send users an email link to verify themselves and <br>
-						evaluate and manage responses with our one-stop dashboard. <br>
-						It's effective, easy and no integration is.
+						Simply send users to our gateway via a button or an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is needed.
+						<br>
+						<br>
+						<strong>No development:</strong> As it works without the need for technical integration our hosted service is ideal if you have a small volume of users you want to verify or if you simply want to get started faster than your technical team is able to support.
+						<br>
+						<br>
+						<strong>Start verifying, now!:</strong> send the link to your users and you could start verifying your users today
 					</p>
 				</div>
 				<div ng-show="ctrl.integrationsTabs.active == 'WIDGETS'">
 					<h2 class="solution__item__title">WIDGETS</h2>
 					<p class="solution__item_description" >
-						Access our library full of beautiful widgets - you're sure to <br>
-						find one that meets your needs. Simple plug ins let you embed your chosen widget <br>
-						into your site quickly, easily and without any fuss.
+						Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.
+						<br>
+						<br>
+						<strong>Integrate with a single button:</strong> add sign-in or challenge button to your site to start verifying your visitors on your site now
+						<br>
+						<br>
+						<strong>Make verifications pop:</strong> whether is seamless login or a verification challenge your looking for our widgets can pop up beatifully on your existing site
 					</p>
 				</div>
 				<div ng-show="ctrl.integrationsTabs.active == 'API'">
 					<h2 class="solution__item__title">API</h2>
 					<p class="solution__item_description" >
-						Get creative! Our API gives you complete flexibility to customise <br>
-						the look and flow of your identity solution for a seamless user experience <br>
+						Get creative! Our API gives you complete flexibility to customise
+						the look and flow of your identity solution for a seamless user experience
 						completely tailored to your needs.
+						<br>
+						<br>
+						<strong>Be unique:</strong> want to keep the experience on your site unique? Not a problem using our APIs you can integrate our services without the user needing to leave your carefully crafted online experience.
+						<br>
+						<br>
+						<strong>We've got an SDK for that:</strong> with an ever growing number of Software Development Kits available to you, chances are that we've got exactly what your developers are looking for to integrate with.
 					</p>
 				</div>
 			</div>
@@ -199,27 +297,42 @@ description: What company doesn't want to know their users better? These are jus
 
 		// cached jQuery calls for performance improvements
 		var $window = $(window);
-		var mobile = $window.width() < 768;
+		var mbHelper =  $('#mobile-indicator');
+		var mobile = mbHelper.is(':visible');
 		var $integration = $('#integration');
 		var $integrationMobile = $('#integration-section');
 		var $clientsParnters = $('#clients-partners');
 		var $sectors = $('#sectors');
 		var $menuContent = $('.menu-content');
 		var $nav = $('nav.nav');
-
+		var items = $('.solution__item');
 		var currentState;
 
 		init();
 
-
 		function init() {
 			getSectionsHeight();
+		}
 
+		function resizeContainers(cb) {
+			items.map(function(index, item) {
+				var $item = $(item);
+				var visHeight = $item.find('.solution__item__content  div:visible:first').height();
+				var tagsCHeight = $item.find('.solution__item__tags__container').height();
+
+				$item.height(tagsCHeight + visHeight + 250);
+				if (typeof(cb) == 'function') {
+					cb();
+				}
+			});
 		}
 
 		$window.resize(getSectionsHeight);
 		function getSectionsHeight() {
-			mobile = $window.width() < 768;
+
+			resizeContainers();
+
+			mobile = mbHelper.is(':visible');
 			integrationsHeight = $('#integration-section').offset().top - 50;
 			clientsParntersHeight =  $('#clients-partners-section').offset().top - 50;
 			if (mobile) {
@@ -315,16 +428,19 @@ description: What company doesn't want to know their users better? These are jus
 			currentState = sectionId;
 		}
 
-		SolutionsCtrl.$inject = [];
-		function SolutionsCtrl () {
+		SolutionsCtrl.$inject = ['$timeout'];
+		function SolutionsCtrl ($timeout) {
 			var vm = this;
-
-			vm.sectorsTabs = { active : 'payments' };
-			vm.partnersTabs = { active : 'payfriendz' };
-			vm.integrationsTabs = { active : 'HOSTED' };
+			vm.setActive = setActive;
 			vm.menuElement = $('.menu');
+			vm.sectorsTabs = { active : 'payments'};
+			vm.partnersTabs = { active : 'payfriendz' };
+			vm.integrationsTabs = { active : 'HOSTED'};
+			$timeout(function () {
+				resizeContainers();
+			});
 
-			this.setActive = function (tabSection, value) {
+			function setActive (tabSection, value) {
 
 				var top ;
 
@@ -332,16 +448,23 @@ description: What company doesn't want to know their users better? These are jus
 
 					case 'partners':
 						vm.partnersTabs.active = value;
-						top = Math.round($('#partners-tabs').offset().top - vm.menuElement.height());
+						$timeout(function (){
+							resizeContainers(function (argument) {
+								top = Math.round($('#partners-tabs').offset().top - vm.menuElement.height());
+								if (Math.round($window.scrollTop()) != top) {
+									$('html, body').animate({
+										scrollTop: top
+									}, 1000);
+								}
+							});
+						});
 
-						if (Math.round($window.scrollTop()) != top) {
-					    	$('html, body').animate({
-					        	scrollTop: top
-					    	}, 1000);
-						}
 						break;
-
 					case 'sectors':
+
+						$timeout(function (){
+							resizeContainers();
+						}, 1000);
 
 						vm.sectorsTabs.active = value;
 						top = Math.round($('#sectors-tabs').offset().top - vm.menuElement.height());
@@ -354,6 +477,10 @@ description: What company doesn't want to know their users better? These are jus
 						break;
 
 					case 'integrations':
+						$timeout(function (){
+							resizeContainers();
+						}, 1000);
+
 						vm.integrationsTabs.active = value;
 						top = Math.round($('#integrations-tabs').offset().top - vm.menuElement.height());
 
@@ -387,8 +514,12 @@ description: What company doesn't want to know their users better? These are jus
 		$(".dropdown-menu a")
 			.click(handleScroll);
 
+		$("#footer-solutions a")
+			.click(handleScroll);
+
 		// handles submenu clicks
 		function handleScroll(event) {
+
 			var id = $(this).attr('data-scrollTo');
 			if (id) {
 				event.preventDefault();

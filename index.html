@@ -3,22 +3,22 @@ layout: default
 ---
 <div class="landing-section">
 
-    <video id="video-candidate" loop autoplay ng-show="App.slider.state() == 'candidate'">
+    <video id="video-candidate" loop ng-show="App.slider.state() == 'candidate'">
         <source src="/video/candidate.webm" type="video/webm">
         <source src="/video/candidate.mp4" type="video/mp4">
     </video>
 
-    <video id="video-customer" loop autoplay ng-show="App.slider.state() == 'customer'">
+    <video id="video-customer" loop ng-show="App.slider.state() == 'customer'">
         <source src="/video/customer.webm" type="video/webm">
         <source src="/video/customer.mp4" type="video/mp4">
     </video>
 
-    <video id="video-peer" loop autoplay ng-show="App.slider.state() == 'peer'">
+    <video id="video-peer" loop ng-show="App.slider.state() == 'peer'">
         <source src="/video/peer.webm" type="video/webm">
         <source src="/video/peer.mp4" type="video/mp4">
     </video>
 
-    <video id="video-tenant" loop autoplay ng-show="App.slider.state() == 'tenant'">
+    <video id="video-tenant" loop ng-show="App.slider.state() == 'tenant'">
         <source src="/video/tenant.webm" type="video/webm">
         <source src="/video/tenant.mp4" type="video/mp4">
     </video>
@@ -178,12 +178,13 @@ layout: default
                                         </div>
 
                                         <div class="clearfix"></div>
+                                        
+                                        <a ng-show="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = false" >SHOW LESS</a>
 
                                     </div>
                                 </div>
 
                             </div>
-                            <a ng-show="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = false" >SHOW LESS</a>
                             <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a>
                         </section>
 
@@ -195,58 +196,64 @@ layout: default
 </div>
 
 <section class="veridu-list md-cards">
+
     <div class="item-container">
-        <div class="fadeIn" ng-show="App.partnerIndex == 0">
+        <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
             <h3>Frictionless Onboarding</h3>
             <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
         </div>
-        <div class="fadeIn" ng-show="App.partnerIndex == 1">
+        <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
             <h3>Trust</h3>
             <p>Break down trust barriers show your commitment to keeping your members and their possessions safe.</p>
         </div>
-        <div class="fadeIn" ng-show="App.partnerIndex == 2">
+        <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
             <h3>Identify Fraud</h3>
             <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
         </div>
-        <div class="fadeIn" ng-show="App.partnerIndex == 3">
+        <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
             <h3>Safety</h3>
             <p>Be proactive about safety and require sellers, landlords and viewers to verify their identity before viewings.</p>
         </div>
+
     </div>
 
     <div class="item-container">
-        <div class="fadeIn" ng-show="App.partnerIndex == 0">
+
+        <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
             <h3>Reduce False Positives</h3>
             <p>Reduce false positive declines and recover transactions that your risk rules would normally decline.</p>
         </div>
-        <div class="fadeIn" ng-show="App.partnerIndex == 1">
+
+        <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
             <h3>Automation</h3>
             <p>Stay focused on your core business by automating the onboarding process and reducing time spent on manual reviews.</p>
         </div>
-        <div class="fadeIn" ng-show="App.partnerIndex == 2">
+
+        <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
             <h3>Vetted</h3>
             <p>Conduct robust vetting of CVs wherever a candidate has studied or worked.</p>
         </div>
-        <div class="fadeIn" ng-show="App.partnerIndex == 3">
+
+        <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
             <h3>Trust</h3>
             <p>Build trust in your business by allowing customers to showcase their credibility with a visible badge.</p>
         </div>
     </div>
 
     <div class="item-container">
-        <div class="fadeIn" ng-show="App.partnerIndex == 0">
+        <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
             <h3>Spend less</h3>
             <p>Spend less time and money on fraud reviews with better tools and user insight.</p>
         </div>
-        <div class="fadeIn" ng-show="App.partnerIndex == 1">
+        <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
             <h3>Frictionless onboarding</h3>
             <p>Eliminate friction in the user experience to encourage more members onto your platform and drive engagement.</p>
         </div>
-        <div class="fadeIn" ng-show="App.partnerIndex == 2">
+        <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
             <h3>Automate</h3>
             <p>Focus your efforts on bringing new clients onboard, not manually onboarding candidates.</p>
         </div>
-        <div class="fadeIn" ng-show="App.partnerIndex == 3">
+        <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
             <h3>Know Your Customer</h3>
             <p>Know more about your customers for less - social identity solutions offer unrivalled insight at a lower price point.</p>
         </div>
@@ -390,7 +397,7 @@ layout: default
 
 <script>
 
-    var imageAddr = "/img/coworking.jpeg";
+    var imageAddr = "/img/bridge.jpeg";
     var downloadSize = 128048; //bytes
 
     window.onload = function() {
@@ -431,3 +438,11 @@ layout: default
 }
 
 </script>
+
+<!-- for faster image loading on landing content -->
+<div class="hidden">
+    <img src="/img/customer.jpeg" alt="">
+    <img src="/img/customer.jpeg" alt="">
+    <img src="/img/candidate.jpeg" alt="">
+    <img src="/img/tenant.jpeg" alt="">
+</div>

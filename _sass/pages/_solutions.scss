@@ -208,13 +208,12 @@
 	}
 
 	.solution__item {
-
 		@media (max-width: $screen-xs-max) {
-			height: em(430);
+			min-height: em(430);
 		}
 
 		@media (min-width: $screen-sm-min) {
-			height: em(413);
+			min-height: em(413);
 		}
 
 		background-image: url(/img/city.jpeg);
@@ -431,6 +430,7 @@
 			}
 		}
 	}
+
 	.solution__section__description {
 		&:first-of-type {
 			margin-bottom: em(30);

@@ -3,7 +3,10 @@ input {
 	padding: em(8);
 	outline: 0;
 	color: $brand-primary;
-	border-radius: 0 !important;
+
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
 
 	&.no-border {
 		border: 0;
@@ -14,4 +17,10 @@ input {
 		color: $state-danger-text;
 	}
 
+}
+
+textarea {
+	-webkit-border-radius: 0px !important;
+	-moz-border-radius: 0px !important;
+	border-radius: 0px !important;
 }

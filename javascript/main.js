@@ -156,6 +156,7 @@
 	var landingHeight = $(window).height() -  $('.menu').height();
 	var landingSection = $('.landing-section');
 	var sliderProgressCt = $('.slider-progress-container');
+	var landingCards =  $('.md-cards');
 	var menu = $('.menu');
 	var $window = $(window);
 	var mbHelper =  $('#mobile-indicator');
@@ -198,6 +199,7 @@
 		vm.nextPartnerSlide = nextPartnerSlide;
 		vm.prevPartnerSlide = prevPartnerSlide;
 		vm.togleSignin = togleSignin;
+		vm.currentLandingState = 'customer';
 
 		$(".landing-section").on("swiperight", nextSlide);
 		$(".landing-section").on("swipeleft", prevSlide);
@@ -241,8 +243,6 @@
 		}
 
 		$scope.$watch('App.Widget.user', function (user, pastUser) {
-			console.warn(user);
-
 			if (user) {
 				vm.user = user;
 				vm.mainSliderStates = ['customer'];
@@ -284,9 +284,16 @@
 			};
 
 			$scope.$watch('App.slider.index' , function (value) {
-				if (value) {
+				if (value !== undefined) {
+
+					vm.partnerIndex = value;
+					var lastIndex = value == 0 ? 3 : value -1;
+					var lastState = vm.mainSliderStates[lastIndex];
+					vm.currentLandingState = vm.mainSliderStates[value];
 					clearInterval(vm.carouselInterval);
 					vm.carouselInterval = setInterval(moveCarousel, 8000);
+					document.getElementById('video-' + vm.currentLandingState).play();
+					document.getElementById('video-' + lastState).pause();
 				}
 			});
 
@@ -304,12 +311,11 @@
 			}
 
 			vm.carouselInterval = setInterval(moveCarousel, 8000);
-			vm.partnersInterval = setInterval(movePartners, 8000);
 			vm.activeContentInterval = setInterval(checkActiveContent, 1000);
 
 			function checkActiveContent() {
 
-				if (landingActiveContent.find('*:hover').length) {
+				if (landingActiveContent.find('*:hover').length || landingCards.find('*:hover').length) {
 					clearInterval(vm.carouselInterval);
 					vm.carouselInterval = setInterval(moveCarousel, 8000);
 				}
@@ -339,7 +345,7 @@
 					name: 'Johnatan Walsh',
 					namePercent: 58,
 					img: '/img/customer.jpeg',
-					imgStyle:'background-size: 120%;',
+					imgStyle:'background-size: auto',
 					imgMdStyle: '',
 					sex: 'Male',
 					sexPercent: 62,
@@ -352,7 +358,7 @@
 					hoursPercent: 78,
 					name: 'Lucy Mormum',
 					img: '/img/peer.jpeg',
-					imgStyle:'background-size: 120%;',
+					imgStyle:'background-size: auto',
 					imgMdStyle:'',
 					namePercent: 78,
 					sex: 'Female',
@@ -366,7 +372,7 @@
 					hoursPercent: 58,
 					name: 'James Winston',
 					img: '/img/candidate.jpeg',
-					imgStyle:'background-size: 120%;',
+					imgStyle:'background-size: auto',
 					imgMdStyle:'',
 					namePercent: 68,
 					sex: 'Works at Veridu Ltd.',
@@ -381,7 +387,7 @@
 					name: 'Charlize Bush',
 					img: '/img/tenant.jpg',
 					namePercent: 80,
-					imgStyle:'background-size: 120%;',
+					imgStyle:'background-size: auto',
 					imgMdStyle:'',
 					sex: 'Female',
 					sexPercent: 72,

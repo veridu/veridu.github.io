@@ -24,6 +24,15 @@ $base-font-size: 15; // Default
     margin-left: ($base * $size / 12 ) !important;
 }
 
+@mixin animated($duration: 1s) {
+    .animated {
+      -webkit-animation-duration: $duration;
+      animation-duration: $duration;
+      -webkit-animation-fill-mode: both;
+      animation-fill-mode: both;
+    }
+}
+
 @mixin row() {
     margin-left: -8.5px;
     margin-right: -8.5px;
