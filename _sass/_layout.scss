@@ -313,6 +313,8 @@ body {
         // positioning
 		background: white !important;
         display: table;
+        position: absolute;
+        top: -1000px;
 		width: 100%;
 
 		// box styles
