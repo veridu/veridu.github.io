@@ -376,31 +376,33 @@ description: What company doesn't want to know their users better? These are jus
 					}
 				}
 
+				var scrollT;
+
 				if (! mobile && scrolled) {
 
 					// check if scrolled up or down
 					if (lastScrollPos < scrolled) {
 						// down
-						$menuItems.removeClass('fadeIn');
-						$menuItems.addClass('fadeOut');
-						$currentState.css('top', "-2.58em");
-						$nav.css('min-height', "2em");
-						$menuContent.css('height', "2em");
-
-						setTimeout(function () {
-							// $menuContent.addClass('scrolldown');
-						}, 500);
+						clearTimeout(scrollT);
+						scrollT = setTimeout(function () {
+							if (scrolled) {
+								$menuItems.removeClass('fadeIn');
+								$menuItems.addClass('fadeOut');
+								$currentState.css('top', "-2.58em");
+								$nav.css('min-height', "2em");
+								$menuContent.css('height', "2em");
+							}
+						}, 1000);
 
 					} else {
 						// up
-						$menuItems.addClass('fadeIn');
-						$menuItems.removeClass('fadeOut');
-						$nav.css('min-height', '6em');
-						$currentState.css('top', "0px");
-
-						setTimeout(function () {
-							// $menuContent.removeClass('scrolldown');
-						}, 1000);
+						clearTimeout(scrollT);
+						scrollT = setTimeout(function () {
+							$menuItems.addClass('fadeIn');
+							$menuItems.removeClass('fadeOut');
+							$nav.css('min-height', '6em');
+							$currentState.css('top', "0px");
+						});
 					}
 
 					lastScrollPos = scrolled;
@@ -462,35 +464,37 @@ description: What company doesn't want to know their users better? These are jus
 						break;
 					case 'sectors':
 
+						vm.sectorsTabs.active = value;
 						$timeout(function (){
 							resizeContainers();
-						}, 1000);
+							top = Math.round($('#sectors-tabs').offset().top - vm.menuElement.height());
 
-						vm.sectorsTabs.active = value;
-						top = Math.round($('#sectors-tabs').offset().top - vm.menuElement.height());
+							if (Math.round($window.scrollTop()) != top) {
+								$('html, body').animate({
+									scrollTop: top
+								}, 500);
+							}
+						}, 500);
 
-						if (Math.round($window.scrollTop()) != top) {
-					    	$('html, body').animate({
-					        	scrollTop: top
-					    	}, 1000);
-						}
+
 						break;
 
 					case 'integrations':
-						$timeout(function (){
-							resizeContainers();
-						}, 1000);
 
 						vm.integrationsTabs.active = value;
-						top = Math.round($('#integrations-tabs').offset().top - vm.menuElement.height());
+
+						$timeout(function (){
+							resizeContainers();
+							top = Math.round($('#integrations-tabs').offset().top - vm.menuElement.height());
+							// not clicked && not the bottom of the page
+							if (Math.round($window.scrollTop()) != top &&  !($(window).scrollTop() + $(window).height() == getDocHeight())) {
+								$('html, body').animate({
+									scrollTop: top
+								}, 500);
+							}
+						}, 500);
 
 
-						// not clicked && not the bottom of the page
-						if (Math.round($window.scrollTop()) != top &&  !($(window).scrollTop() + $(window).height() == getDocHeight())) {
-					    	$('html, body').animate({
-					        	scrollTop: top
-					    	}, 1000);
-						}
 						break;
 
 					default:
@@ -530,7 +534,7 @@ description: What company doesn't want to know their users better? These are jus
 				}
 
 				$('#solutions-curent-position').html(this.innerHTML);
-				scrollToHash(id, 1000, mobile);
+				scrollToHash(id, 500, mobile);
 			}
 		}
 
