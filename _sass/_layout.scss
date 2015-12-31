@@ -326,7 +326,8 @@ body {
 		z-index: 1000;
 
 		&.visible {
-            position: absolute;
+            @extend .slideInDown;
+            position: fixed;
             height: 100%;
 			display: table;
             top: 3.555em !important;
