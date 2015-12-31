@@ -389,7 +389,7 @@
 					sex: 'Male',
 					sexPercent: 62,
 					verified: false,
-					birth: 'jonathan@veridu.com',
+					birth: 'jon@veridu.com',
 					birthPercent: 89
 				},
 				{
