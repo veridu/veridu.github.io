@@ -4,7 +4,7 @@ a {
 
 		text-decoration: none;
 		color: white;
-		
+
 		&:hover {
 			color: white;
 		}
@@ -14,9 +14,18 @@ a {
 
 		text-decoration: none;
 		color: black;
-		
+
 		&:hover {
 			color: black;
 		}
+	}
+}
+
+a.elegant-link {
+	text-decoration: none;
+
+	&:hover {
+		text-decoration: none;
+		border-bottom: 1px solid $brand-primary;
 	}
 }

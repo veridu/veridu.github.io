@@ -698,7 +698,10 @@ section.partners-quotes {
 	@media (min-width: $screen-sm-min) {
 
 		padding-bottom: em(135);
-
+		padding-top: 0;
+		position: relative;
+		top: -40px;
+		
 		.carousel-inner {
 
 			.item {

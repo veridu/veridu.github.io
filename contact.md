@@ -68,7 +68,7 @@ cover: img/bridge.jpeg
 
 <section class="contact veridu-list" ng-controller="ContactCtrl as ctrl">
     <div>
-        <h2 class="font-light">Contact <span class="hidden-xs">us</span> <a href="https://podio.com/webforms/6314922/492384" target="_blank" >here</a></h2>
+        <h2 class="font-light">Contact <span class="hidden-xs">us</span> <a class="elegant-link" href="https://podio.com/webforms/6314922/492384" target="_blank" >here</a></h2>
 		<!--
         <p class="section__description visible-xs">
             Contact us to discuss your specific needs

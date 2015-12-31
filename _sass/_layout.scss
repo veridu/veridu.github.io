@@ -341,12 +341,12 @@ body {
 		}
 
         .dropdown-menu__contents {
-            margin-top: 15%;
             @include clearfix();
+            position: relative;
+            z-index: 1000;
             max-height: 80%;
             overflow-y: auto;
             overflow-x: hidden;
-
         }
 
 		.sign-in-container {
