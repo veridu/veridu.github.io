@@ -45,7 +45,7 @@
 			width: 100%;
 			position: absolute;
 			left: 0;
-			color: white;
+			color: black;
 			z-index: 11;
 			bottom: 5%;
 			@media (min-width: $screen-sm-min) {
@@ -57,12 +57,13 @@
 				@extend .content-padding;
 				max-width: $container-max-width;
 				width: 100%;
-				margin: 0 auto;
+				margin: 0 auto;;
 
 				p {
 					@extend .hidden-xs;
 					font-style: italic;
 					font-size: em(16);
+
 				}
 
 			}

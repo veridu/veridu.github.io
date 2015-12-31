@@ -8,7 +8,7 @@ cover: img/bridge.jpeg
 <section class="contact__landing">
 	<div class="contact__body">
 		<div class="contact__cover">
-			<div class="contact__cover__overlay"></div>
+			<!-- <div class="contact__cover__overlay"></div> -->
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7022.5299661762565!2d-0.0913615286685383!3d51.516164530745264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761cabafacd447%3A0x7cd8bebcc7de94c5!2s1+Fore+St%2C+London+EC2Y+5EJ%2C+UK!5e0!3m2!1spt-BR!2sbr!4v1451332435494" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
 			<div class="contact__cover__contents">
 				<div>
@@ -65,10 +65,10 @@ cover: img/bridge.jpeg
 	</address>
 </section>
 
-<!-- <section class="contact veridu-list" ng-controller="ContactCtrl as ctrl">
+<section class="contact veridu-list" ng-controller="ContactCtrl as ctrl">
     <div>
-        <h2 class="font-light">Contact <span class="hidden-xs">us</span></h2>
-
+        <h2 class="font-light">Contact <span class="hidden-xs">us</span> <a href="https://podio.com/webforms/6314922/492384" target="_blank" >here</a></h2>
+		<!--
         <p class="section__description visible-xs">
             Contact us to discuss your specific needs
         </p>
@@ -95,10 +95,10 @@ cover: img/bridge.jpeg
             <div class="input-container text-right submit">
                 <button type="submit" class="btn btn-primary">Submit</button>
             </div>
-        </form>
+        </form> -->
     </div>
-</section> -->
-<!-- BEGIN Podio web form --> <script src="https://podio.com/webforms/6314922/492384.js"></script> <script type="text/javascript">   _podioWebForm.render("492384") </script> <noscript>   <a href="https://podio.com/webforms/6314922/492384" target="_blank">Please fill out the form</a> </noscript>   <div class="podio-webform-container">   A webform by Podio - <a href="https://company.podio.com/collaboration-software" class="podio-webform-inner">click here</a> to get yours    </div> <!-- END Podio web form --> 
+</section>
+
 <section class="support pure-container">
 
 	<div>
@@ -126,9 +126,6 @@ cover: img/bridge.jpeg
 		For regular Veridu news sign up to our monthly newsletter
 	</div>
 	<br>
-
-	<input class="no-border" type="text"  placeholder="Email" > <button class="btn btn-primary">Send</button>
-
 </section>
 
 <script type="text/javascript">
