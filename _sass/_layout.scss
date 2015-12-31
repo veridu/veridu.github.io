@@ -312,11 +312,8 @@ body {
 
         // positioning
 		background: white !important;
-        display: none;
+        display: table;
 		width: 100%;
-        padding-left: 10%;
-        padding-right: 10%;
-        padding-top: em(50);
 
 		// box styles
 		height: 100%;
@@ -342,8 +339,6 @@ body {
             position: relative;
             z-index: 1000;
             max-height: 80%;
-            overflow-x: hidden;
-            overflow-y: auto;
         }
 
 		.sign-in-container {
