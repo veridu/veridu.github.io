@@ -329,7 +329,7 @@
 					clearInterval(vm.carouselInterval);
 					vm.carouselInterval = setInterval(moveCarousel, 8000);
 
-					if (vm.videos[vm.currentLandingState]) {
+					if (!mobile && vm.videos[vm.currentLandingState]) {
 						vm.videos[vm.currentLandingState].play();
 						vm.videos[lastState].pause();
 					}
@@ -381,7 +381,7 @@
 				{
 					hours: 1963,
 					hoursPercent: 70,
-					name: 'Johnatan Walsh',
+					name: 'Jonathan Walsh',
 					namePercent: 58,
 					img: 'img/customer.jpeg',
 					imgStyle:'background-size: auto',
@@ -389,7 +389,7 @@
 					sex: 'Male',
 					sexPercent: 62,
 					verified: false,
-					birth: 'carl@veridu.com',
+					birth: 'jonathan@veridu.com',
 					birthPercent: 89
 				},
 				{
@@ -403,7 +403,7 @@
 					sex: 'Female',
 					sexPercent: 72,
 					verified: true,
-					birth: 'carl@veridu.com',
+					birth: 'lucy@veridu.com',
 					birthPercent: 59
 				},
 				{
@@ -417,7 +417,7 @@
 					sex: 'Works at Veridu Ltd.',
 					sexPercent: 72,
 					verified: false,
-					birth: 'carl@veridu.com',
+					birth: 'james@veridu.com',
 					birthPercent: 39
 				},
 				{
@@ -431,7 +431,7 @@
 					sex: 'Female',
 					sexPercent: 72,
 					verified: true,
-					birth: 'carl@veridu.com',
+					birth: 'charlize@veridu.com',
 					birthPercent: 89
 				},
 			];
