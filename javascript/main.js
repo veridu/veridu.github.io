@@ -1,7 +1,6 @@
 (function ($, WoW) {
 
 	// initializes
-	(new WoW).init();
 
 	var menuToggler  = $('#menu-toggler');
 	var $window = $(window);
@@ -485,5 +484,6 @@
 	}
 
 	$('.page-loading').fadeOut();
+	(new WoW).init();
 
 })($,WOW);

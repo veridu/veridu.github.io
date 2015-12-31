@@ -167,7 +167,7 @@ cover: img/bridge.jpeg
 	var myLatLng = { lat: 51.5180027, lng: -0.090573};
 	var myOptions = {
 		center: new google.maps.LatLng(myLatLng),
-		zoom: 18,
+		zoom: 15,
 		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		disableDefaultUI: true
 	};

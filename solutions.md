@@ -333,7 +333,9 @@ description: What company doesn't want to know their users better? These are jus
 			resizeContainers();
 
 			mobile = mbHelper.is(':visible');
-			integrationsHeight = $('#integration-section').offset().top - 50;
+			integrationsHeight = $('#integration-section').offset().top - 650;
+
+			console.warn(integrationsHeight);
 			clientsParntersHeight =  $('#clients-partners-section').offset().top - 50;
 			if (mobile) {
 				$nav.css('min-height', 'auto');
@@ -392,6 +394,8 @@ description: What company doesn't want to know their users better? These are jus
 					$menuItems.removeClass('fadeOut');
 					$nav.css('min-height', '6em');
 					$currentState.css('top', "0px");
+					setTimeout(function () {
+					}, 300);
 				}
 
 				if (! mobile && scrolled) {
