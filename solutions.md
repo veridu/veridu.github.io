@@ -359,6 +359,7 @@ description: What company doesn't want to know their users better? These are jus
 			$menuItems.addClass('animated');
 			$window.scroll(detect);
 			detect();
+			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 			function detect() {
 
@@ -378,31 +379,46 @@ description: What company doesn't want to know their users better? These are jus
 
 				var scrollT;
 
+				function hideSubmenu() {
+					$menuItems.removeClass('fadeIn');
+					$menuItems.addClass('fadeOut');
+					$currentState.css('top', "-2.58em");
+					$nav.css('min-height', "2em");
+					$menuContent.css('height', "2em");
+				}
+
+				function showSubmenu() {
+					$menuItems.addClass('fadeIn');
+					$menuItems.removeClass('fadeOut');
+					$nav.css('min-height', '6em');
+					$currentState.css('top', "0px");
+				}
+
 				if (! mobile && scrolled) {
 
 					// check if scrolled up or down
 					if (lastScrollPos < scrolled) {
 						// down
-						clearTimeout(scrollT);
-						scrollT = setTimeout(function () {
-							if (scrolled) {
-								$menuItems.removeClass('fadeIn');
-								$menuItems.addClass('fadeOut');
-								$currentState.css('top', "-2.58em");
-								$nav.css('min-height', "2em");
-								$menuContent.css('height', "2em");
-							}
-						}, 1000);
+
+						if (isSafari) {
+							clearTimeout(scrollT);
+							scrollT = setTimeout(function () {
+								hideSubmenu();
+							}, 1000);
+						} else {
+							hideSubmenu();
+						}
 
 					} else {
 						// up
-						clearTimeout(scrollT);
-						scrollT = setTimeout(function () {
-							$menuItems.addClass('fadeIn');
-							$menuItems.removeClass('fadeOut');
-							$nav.css('min-height', '6em');
-							$currentState.css('top', "0px");
-						});
+						if (isSafari) {
+							clearTimeout(scrollT);
+							scrollT = setTimeout(function () {
+								showSubmenu();
+							});
+						} else {
+							showSubmenu();
+						}
 					}
 
 					lastScrollPos = scrolled;
