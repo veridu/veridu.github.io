@@ -286,7 +286,7 @@
 						name: user.name.value,
 						namePercent: user.name.score * 100,
 						img: user.picture || 'http://placehold.it/1000?text=Your%20Picture',
-						imgStyle: 'background-size: 100% 125%;',
+						imgStyle: 'background-size: 150%; background-position: 50% !important',
 						imgMdStyle: '',
 						sex: user.gender.value,
 						sexPercent: user.gender.score * 100,
