@@ -221,7 +221,11 @@
 		position: relative;
 		background-position: left center;
 
-		&.solution__item__notfirst {
+		&.solution__item__integration {
+			background-image: url(/img/bridge.jpeg);
+			margin-top: em(20);
+		}
+		&.solution__item__clients-partners {
 			background-image: url(/img/bridge.jpeg);
 			margin-top: em(20);
 		}
@@ -267,7 +271,7 @@
 
 			&.solution__item__content--green {
 
-				background-color: #A5D6A8;
+				background-color: #212121;
 
 			}
 

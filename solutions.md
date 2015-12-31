@@ -114,7 +114,7 @@ description: What company doesn't want to know their users better? These are jus
 		</section>
 
 
-		<section id="partners-tabs" class="solution__item solution__item__notfirst">
+		<section id="partners-tabs" class="solution__item solution__item__clients-partners">
 			<div id="clients-partners" class="solution__item__content solution__item__content--purple">
 
 				<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
@@ -231,7 +231,7 @@ description: What company doesn't want to know their users better? These are jus
 		</section>
 
 
-		<section class="solution__item solution__item__notfirst">
+		<section class="solution__item solution__item--integration">
 			<div id="integrations-tabs" class="solution__item__content solution__item__content--green">
 
 				<div ng-show="ctrl.integrationsTabs.active == 'HOSTED'">
