@@ -65,7 +65,7 @@ cover: img/bridge.jpeg
 	</address>
 </section>
 
-<section class="contact veridu-list" ng-controller="ContactCtrl as ctrl">
+<!-- <section class="contact veridu-list" ng-controller="ContactCtrl as ctrl">
     <div>
         <h2 class="font-light">Contact <span class="hidden-xs">us</span></h2>
 
@@ -97,8 +97,8 @@ cover: img/bridge.jpeg
             </div>
         </form>
     </div>
-</section>
-
+</section> -->
+<!-- BEGIN Podio web form --> <script src="https://podio.com/webforms/6314922/492384.js"></script> <script type="text/javascript">   _podioWebForm.render("492384") </script> <noscript>   <a href="https://podio.com/webforms/6314922/492384" target="_blank">Please fill out the form</a> </noscript>   <div class="podio-webform-container">   A webform by Podio - <a href="https://company.podio.com/collaboration-software" class="podio-webform-inner">click here</a> to get yours    </div> <!-- END Podio web form --> 
 <section class="support pure-container">
 
 	<div>
