@@ -2,7 +2,7 @@
 title: Article
 layout: blank
 class: article
-cover: /img/bridge.jpeg
+cover: img/bridge.jpeg
 ---
 
 <article>

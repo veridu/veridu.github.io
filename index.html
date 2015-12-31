@@ -4,23 +4,23 @@ layout: default
 <div class="landing-section">
 
     <video id="video-candidate" loop ng-show="App.slider.state() == 'candidate'">
-        <source src="/video/candidate.webm" type="video/webm">
-        <source src="/video/candidate.mp4" type="video/mp4">
+        <source src="video/candidate.webm" type="video/webm">
+        <source src="video/candidate.mp4" type="video/mp4">
     </video>
 
     <video id="video-customer" loop ng-show="App.slider.state() == 'customer'">
-        <source src="/video/customer.webm" type="video/webm">
-        <source src="/video/customer.mp4" type="video/mp4">
+        <source src="video/customer.webm" type="video/webm">
+        <source src="video/customer.mp4" type="video/mp4">
     </video>
 
     <video id="video-peer" loop ng-show="App.slider.state() == 'peer'">
-        <source src="/video/peer.webm" type="video/webm">
-        <source src="/video/peer.mp4" type="video/mp4">
+        <source src="video/peer.webm" type="video/webm">
+        <source src="video/peer.mp4" type="video/mp4">
     </video>
 
     <video id="video-tenant" loop ng-show="App.slider.state() == 'tenant'">
-        <source src="/video/tenant.webm" type="video/webm">
-        <source src="/video/tenant.mp4" type="video/mp4">
+        <source src="video/tenant.webm" type="video/webm">
+        <source src="video/tenant.mp4" type="video/mp4">
     </video>
 
     <div class="landing__overlay hidden-xs"></div>
@@ -111,7 +111,7 @@ layout: default
                                 </div>
 
                                 <div class="progress progress-verified" ng-show="App.slider.status().verified">
-                                    <img src="/img/verified.png">
+                                    <img src="img/verified.png">
                                 </div>
 
                                <a class="white-link" href="#">SHOW MORE</a>
@@ -267,8 +267,8 @@ layout: default
 
     <div  class="carousel slide" >
         <div class="carousel-inner">
-            <a class="nav carousel-nav-left"  href="javascript:;" ng-click="App.prevPartnerSlide()"><img src="/img/arrow-right.png"></a>
-            <a class="nav carousel-nav-right" href="javascript:;" ng-click="App.nextPartnerSlide()"><img src="/img/arrow-right.png"></a>
+            <a class="nav carousel-nav-left"  href="javascript:;" ng-click="App.prevPartnerSlide()"><img src="img/arrow-right.png"></a>
+            <a class="nav carousel-nav-right" href="javascript:;" ng-click="App.nextPartnerSlide()"><img src="img/arrow-right.png"></a>
 
             <div class="item fadeIn" ng-class="{active : App.partnerIndex == 0 }" >
                 <div class="container">
@@ -397,7 +397,7 @@ layout: default
 
 <script>
 
-    var imageAddr = "/img/bridge.jpeg";
+    var imageAddr = "img/bridge.jpeg";
     var downloadSize = 128048; //bytes
 
     window.onload = function() {
@@ -441,8 +441,8 @@ layout: default
 
 <!-- for faster image loading on landing content -->
 <div class="hidden">
-    <img src="/img/customer.jpeg" alt="">
-    <img src="/img/customer.jpeg" alt="">
-    <img src="/img/candidate.jpeg" alt="">
-    <img src="/img/tenant.jpeg" alt="">
+    <img src="img/customer.jpeg" alt="">
+    <img src="img/customer.jpeg" alt="">
+    <img src="img/candidate.jpeg" alt="">
+    <img src="img/tenant.jpeg" alt="">
 </div>

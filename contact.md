@@ -2,7 +2,7 @@
 title: Contact
 class: contact-page
 layout: blank
-cover: /img/bridge.jpeg
+cover: img/bridge.jpeg
 ---
 
 <section class="contact__landing">

@@ -160,7 +160,7 @@ section.verification-container {
 	@media (min-width: $screen-sm-min) {
 		display: table;
 		width: 100%;
-		background-image: url(/img/coworking.jpeg);
+		background-image: url(img/coworking.jpeg);
 		background-size: 100% 100%;
 		position: relative;
 
@@ -517,7 +517,7 @@ section.veridu-list {
 section.rasmus-quote {
 	@include clearfix();
 
-	background-image: url(/img/rasmus-big-fliph.jpg);
+	background-image: url(img/rasmus-big-fliph.jpg);
 	background-repeat: no-repeat no-repeat;
 	background-position: -320px -50px ;
 	height: em(470);
@@ -571,7 +571,7 @@ section.rasmus-quote {
 			}
 		}
 
-		background-image: url(/img/rasmus-big.jpg);
+		background-image: url(img/rasmus-big.jpg);
 		background-repeat: no-repeat no-repeat;
 		background-position: right -80px !important ;
 		height: em(468);
