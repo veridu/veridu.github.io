@@ -51,13 +51,17 @@
 				fixedContactContainer.find('.text-danger').show();
 
 			} else {
-				fixedContactContainer.find('.text-danger').hide();
-				// sends e-mail
-				fixedContactContainer.toggleClass('active');
 				// hides input
+				fixedContactContainer.find('.text-danger').hide();
+				fixedContactContainer.toggleClass('active');
 				fixedContactButton.find('.hideable').toggleClass('animated fadeOut');
 				fixedContactButton.addClass('sent');
 				fixedContactContainer.find('.thank-you').toggleClass('animated fadeIn');
+				// sends e-mail
+				_dcq.push(["identify", {
+					email: fixedContactInput.val(),
+					tags: ["Customer", "Website Footer"]
+				}]);
 			}
 		} else {
 			// shows the form
@@ -283,6 +287,13 @@
 				length: 4
 			};
 
+			vm.videos = {
+				'customer': document.getElementById('video-customer'),
+				'peer': document.getElementById('video-peer'),
+				'candidate': document.getElementById('video-candidate'),
+				'tenant': document.getElementById('video-tenant')
+			};
+
 			$scope.$watch('App.slider.index' , function (value) {
 				if (value !== undefined) {
 
@@ -292,8 +303,11 @@
 					vm.currentLandingState = vm.mainSliderStates[value];
 					clearInterval(vm.carouselInterval);
 					vm.carouselInterval = setInterval(moveCarousel, 8000);
-					document.getElementById('video-' + vm.currentLandingState).play();
-					document.getElementById('video-' + lastState).pause();
+
+					if (vm.videos[vm.currentLandingState]) {
+						vm.videos[vm.currentLandingState].play();
+						vm.videos[lastState].pause();
+					}
 				}
 			});
 
