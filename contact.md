@@ -161,7 +161,7 @@ cover: img/bridge.jpeg
 </script>
 
 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false" ></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false" ></script>
 <script >
 
 	var myLatLng = { lat: 51.5180027, lng: -0.090573};
