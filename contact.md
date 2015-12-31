@@ -129,7 +129,6 @@ cover: img/bridge.jpeg
 	<br>
 </section>
 
-<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
 
 	function load () {
@@ -139,25 +138,7 @@ cover: img/bridge.jpeg
 			.controller('SolutionsCtrl', SolutionsCtrl);
 
 		var $window = $(window);
-
-		var myLatLng = { lat: 51.5180027, lng: -0.090573};
-
 		var $cover = $('.contact__cover');
-		var myOptions = {
-	        center: new google.maps.LatLng(myLatLng),
-	        zoom: 18,
-	        mapTypeId: google.maps.MapTypeId.ROADMAP,
-	        disableDefaultUI: true
-	    };
-
-
-
-	    var map = new google.maps.Map(document.getElementById("map"), myOptions);
-		var marker = new google.maps.Marker({
-		    position: myLatLng,
-		    map: map,
-		    title: 'Veridu HQ'
-	  	});
 
 		SolutionsCtrl.$inject = [];
 		function SolutionsCtrl () {
@@ -177,4 +158,23 @@ cover: img/bridge.jpeg
 
 	document.addEventListener('DOMContentLoaded', load);
 
+</script>
+
+
+<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false" async></script>
+<script async defer>
+
+	var myLatLng = { lat: 51.5180027, lng: -0.090573};
+	var myOptions = {
+		center: new google.maps.LatLng(myLatLng),
+		zoom: 18,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		disableDefaultUI: true
+	};
+	var map = new google.maps.Map(document.getElementById("map"), myOptions);
+	var marker = new google.maps.Marker({
+		position: myLatLng,
+		map: map,
+		title: 'Veridu HQ'
+	});
 </script>
