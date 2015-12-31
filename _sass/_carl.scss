@@ -3,13 +3,6 @@
     padding-top: 4px;
 }
 
-.header .dropdown-menu.visible {
-    top: 3.555em;
-    display: table;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 200px 0px #fff;
-}
 
 .header .menu > div.toggler-container {
     margin-right: 1.15em;
@@ -17,21 +10,6 @@
     float: right !important;
 }
 
-.header .dropdown-menu {
-    -webkit-transition: all .25s ease-in;
-    -moz-transition: all .25s ease-in;
-    -ms-transition: all .25s ease-in;
-    -o-transition: all .25s ease-in;
-    transition: all .25s ease-in;
-    position: absolute;
-    top: -1200px;
-    background: white;
-    height: 100%;
-    padding-left: 10%;
-    padding-right: 10%;
-    background: white;
-    z-index: 1000;
-}
 
 .header .dropdown-menu h4 {
     padding-left: 0.66667em;
