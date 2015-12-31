@@ -91,18 +91,21 @@
 <script type="text/javascript" src="bower_components/wow/dist/wow.min.js"></script>
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu.min.js"></script>
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu-ui.min.js"></script>
+<script type="text/javascript" src="https://veridu.com/integration/cfg.js"></script>
 
 
 <!-- App -->
 <script type="text/javascript">
 
-	window.VERIDU = {
-		client: '4a7c7fecb825828469207438292ddbfbdad85361',
-	    session: 'abce9dd966413e0963b31779a4b648aed63ef64d3fb5ead720f65ed156883700',
-	    version: '0.3',
-	    username: '859d3d20de4db03c9834',
-	    success: true
-	};
+	if (! window.VERIDU) {
+		window.VERIDU = {
+			client: '4a7c7fecb825828469207438292ddbfbdad85361',
+		    session: 'abce9dd966413e0963b31779a4b648aed63ef64d3fb5ead720f65ed156883700',
+		    version: '0.3',
+		    username: '859d3d20de4db03c9834',
+		    success: true
+		};
+	}
 
 	var app = angular.module('app', []).config(function($interpolateProvider){
 		$interpolateProvider.startSymbol('({').endSymbol('})');
