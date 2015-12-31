@@ -310,11 +310,6 @@ body {
 	.dropdown-menu {
         @include clearfix();
 
-        -webkit-animation-duration: .5s;
-        animation-duration: .5s;
-        -webkit-animation-fill-mode: both;
-        animation-fill-mode: both;
-
         // positioning
 		background: white !important;
         display: table;
@@ -326,7 +321,6 @@ body {
 		z-index: 1000;
 
 		&.visible {
-            @extend .slideInDown;
             position: fixed;
             height: 100%;
 			display: table;
@@ -345,8 +339,6 @@ body {
             position: relative;
             z-index: 1000;
             max-height: 80%;
-            overflow-y: auto;
-            overflow-x: hidden;
         }
 
 		.sign-in-container {
