@@ -38,7 +38,7 @@ description: What company doesn't want to know their users better? These are jus
 				<p class="solution__item_description">Enhance candidate vetting. Identify the superstars. Make clients happy.</p>
 				<br>
 				<p class="solution__item_description">
-					Veridu analyses an individual’s digital footprint using proprietary and sophisticated algorithms to verify their identity and match them against your elligibility criteria to single out the most wanted candidates, in real-time as they sign up or transact on your site.
+					Veridu analyses an individual’s digital footprint using proprietary and sophisticated algorithms to verify their identity and match them against your eligibility criteria to single out the most wanted candidates, in real-time as they sign up or transact on your site.
 				</p>
 			</div>
 
@@ -148,7 +148,7 @@ description: What company doesn't want to know their users better? These are jus
 						<strong>Customer insight.</strong> With our social media insights Durise can learn more about their customers, helping to improve their marketing.
 						<br>
 						<br>
-						<strong>Creating trust.</strong> By assessing credibility of potential investors Durise can be sure their platform becomes a trusted investment vehicle."
+						<strong>Creating trust.</strong> By assessing credibility of potential investors Durise can be sure their platform becomes a trusted investment vehicle.
 					</p>
 				</div>
 				<div ng-show="ctrl.partnersTabs.active == 'real_asset'">
@@ -162,7 +162,7 @@ description: What company doesn't want to know their users better? These are jus
 						<strong>Anti-money laundering.</strong> Our frictionless identity checks allow The Real Asset Co maintain the integrity of their platform while keeping the user experience slick.
 						<br>
 						<br>
-						<strong>Protecting investors.</strong> Before withdrawing currency or making a payment investors have to pass a social identity check to identify potential account takeover. slick.
+						<strong>Protecting investors.</strong> Before withdrawing currency or making a payment investors have to pass a social identity check to identify potential account takeover.
 						<br>
 						<br>
 						<strong>Managing costs.</strong> Using our social ID checks means The Real Asset Co has a risk-based identity solution, with extensive global coverage, at a fraction of the price.
