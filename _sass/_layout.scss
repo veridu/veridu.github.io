@@ -104,7 +104,7 @@ body {
         min-height: em(52);
 
         &.shadowed {
-            box-shadow: $material-shadow-2;
+            box-shadow: $menu-shadow;
         }
 	}
 
@@ -543,6 +543,7 @@ footer {
 			section {
 				float: left;
 				width: em(141);
+                height: 160px;
 				margin-right: em(17);
 			}
 		}

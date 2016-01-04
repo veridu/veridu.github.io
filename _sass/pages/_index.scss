@@ -458,6 +458,7 @@ section.veridu-list {
 
 	}
 	&.md-cards {
+		height: em(450);
 		@include clearfix();
 		clear: both;
 		@extend .tablet__gutter;
@@ -520,6 +521,7 @@ section.rasmus-quote {
 	background-image: url(../img/rasmus-big-fliph.jpg);
 	background-repeat: no-repeat no-repeat;
 	background-position: -320px -50px ;
+	background-size: auto 100%;
 	height: em(470);
 	padding-top: em(41);
 	@extend .tablet__gutter;
@@ -535,14 +537,20 @@ section.rasmus-quote {
 
 	}
 
-	> div {
+	> div.rasmus-quote__content {
 
 		float: right;
 		width: 40%;
+		//position: relative;
+		z-index: 10;
+
+		@media (max-width: 330px) {
+			background-color: rgba(white, 0.8);
+			width: 50%;
+		}
 
 		h4 {
-			margin-right: 20%;
-			text-align: center;
+			text-align: right;
 			margin-top: 0;
 			font-size: 1.6em;
 			line-height: 1.6em;
@@ -554,6 +562,18 @@ section.rasmus-quote {
 			font-size: 1.067em;
 			line-height: em(22);
 		}
+	}
+
+	> div.rasmus-quote__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+
+		width: 100%;
+		height: 100%;
+		//background-color: rgba(white, 0.5);
+
 	}
 
 
@@ -701,7 +721,7 @@ section.partners-quotes {
 		padding-top: 0;
 		position: relative;
 		top: -40px;
-		
+
 		.carousel-inner {
 
 			.item {
