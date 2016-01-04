@@ -17,7 +17,7 @@ description: What company doesn't want to know their users better? These are jus
 	<section id="sectors-tabs" class="solution__item">
 		<div id="sectors" class="solution__item__content">
 			<div class="border-right" ng-show="ctrl.sectorsTabs.active == 'payments'" >
-				<h2  class="solution__item__title">Payments</h2>
+				<h2  class="solution__item__title">PAYMENTS</h2>
 				<p class="solution__item_description">Verify identity better globally. Decline fewer transactions. Improve user experience.</p>
 				<br>
 				<p class="solution__item_description">
@@ -27,14 +27,14 @@ description: What company doesn't want to know their users better? These are jus
 			</div>
 
 			<div ng-show="ctrl.sectorsTabs.active == 'p2p'">
-				<h2  class="solution__item__title">Peer to Peer</h2>
+				<h2  class="solution__item__title">PEER TO PEER</h2>
 				<p class="solution__item_description">Build trust. Drive community engagement. Put members in control.</p>
 				<br>
 				<p class="solution__item_description">Increase trust and reduce friction with consent-based identity and insight solutions designed specifically for the needs of the sharing economy. </p>
 			</div>
 
 			<div  ng-show="ctrl.sectorsTabs.active == 'recruiting'">
-				<h2  class="solution__item__title">Recruiting</h2>
+				<h2  class="solution__item__title">RECRUITING</h2>
 				<p class="solution__item_description">Enhance candidate vetting. Identify the superstars. Make clients happy.</p>
 				<br>
 				<p class="solution__item_description">
@@ -45,7 +45,7 @@ description: What company doesn't want to know their users better? These are jus
 
 
 			<div ng-show="ctrl.sectorsTabs.active == 'real_estate'">
-				<h2  class="solution__item__title">Real Estate</h2>
+				<h2  class="solution__item__title">REAL ESTATE</h2>
 				<p class="solution__item_description">Build a trusted business. Keep customers safe. Identify, vet and put a face on viewers.</p>
 				<br>
 				<p class="solution__item_description">
@@ -118,7 +118,7 @@ description: What company doesn't want to know their users better? These are jus
 			<div id="clients-partners" class="solution__item__content solution__item__content--purple">
 
 				<div ng-show="ctrl.partnersTabs.active == 'payfriendz'">
-					<h2 class="solution__item__title">Payfriendz</h2>
+					<h2 class="solution__item__title">PAYFRIENDZ</h2>
 					<p class="solution__item_description" >
 						Payfriendz is a mobile app to transfer money between friends. <br>
 						What do they use Veridu for? <br>
@@ -135,7 +135,7 @@ description: What company doesn't want to know their users better? These are jus
 					</p>
 				</div>
 				<div ng-show="ctrl.partnersTabs.active == 'durise'">
-					<h2 class="solution__item__title">Durise</h2>
+					<h2 class="solution__item__title">DURISE</h2>
 					<p class="solution__item_description" >
 						Durise is a Dubai based real estate crowdfunding platform. <br>
 						What do they use Veridu for? <br>
@@ -152,7 +152,7 @@ description: What company doesn't want to know their users better? These are jus
 					</p>
 				</div>
 				<div ng-show="ctrl.partnersTabs.active == 'real_asset'">
-					<h2 class="solution__item__title">Real Asset Company</h2>
+					<h2 class="solution__item__title">THE REAL ASSET COMPANY</h2>
 					<p class="solution__item_description" >
 						The Real Asset Company is an innovative gold investment platform with its own cryptocurrency. <br>
 						What do they use Veridu for? <br>
@@ -235,7 +235,7 @@ description: What company doesn't want to know their users better? These are jus
 			<div id="integrations-tabs" class="solution__item__content solution__item__content--green">
 
 				<div ng-show="ctrl.integrationsTabs.active == 'HOSTED'">
-					<h2 class="solution__item__title">HOSTED</h2>
+					<h2 class="solution__item__title">Hosted</h2>
 					<p class="solution__item_description" >
 						Simply send users to our gateway via a button or an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is needed.
 						<br>
@@ -247,7 +247,7 @@ description: What company doesn't want to know their users better? These are jus
 					</p>
 				</div>
 				<div ng-show="ctrl.integrationsTabs.active == 'WIDGETS'">
-					<h2 class="solution__item__title">WIDGETS</h2>
+					<h2 class="solution__item__title">Widgets</h2>
 					<p class="solution__item_description" >
 						Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.
 						<br>
@@ -394,8 +394,21 @@ description: What company doesn't want to know their users better? These are jus
 					$menuItems.removeClass('fadeOut');
 					$nav.css('min-height', '6em');
 					$currentState.css('top', "0px");
+				}
+
+				var height = getDocHeight();
+				var dist = $(window).scrollTop() + $(window).height();
+
+				if (height == dist) {
 					setTimeout(function () {
-					}, 300);
+
+						var height = getDocHeight();
+						var dist = $(window).scrollTop() + $(window).height();
+						if (height == dist) {
+							showSubmenu();
+						}
+
+					}, 100);
 				}
 
 				if (! mobile && scrolled) {
@@ -403,13 +416,6 @@ description: What company doesn't want to know their users better? These are jus
 					// check if scrolled up or down
 					if (lastScrollPos < scrolled) {
 						// down
-						// if (isSafari) {
-						// 	clearTimeout(scrollT);
-						// 	scrollT = setTimeout(function () {
-						// 		hideSubmenu();
-						// 	}, 1000);
-						// } else {
-						// }
 						if (scrolled > 100) {
 							hideSubmenu();
 						} else {
@@ -417,17 +423,9 @@ description: What company doesn't want to know their users better? These are jus
 						}
 
 					} else {
-						// up
-						// if (isSafari) {
-						// 	clearTimeout(scrollT);
-						// 	scrollT = setTimeout(function () {
-						// 		showSubmenu();
-						// 	});
-						// } else {
-						// }
 
 						// not on the bottom of the page
-						if (!($(window).scrollTop() + $(window).height() <= getDocHeight() - 100)) {
+						if (!(dist < height) ) {
 							hideSubmenu();
 						} else {
 							showSubmenu();

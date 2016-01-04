@@ -445,7 +445,6 @@ section.veridu-list {
 			margin-top: 0;
 			font-size: 1.067em;
 			font-weight: 400;
-			letter-spacing: em(2);
 			line-height: em(22);
 			margin-bottom: em(14);
 		}
@@ -457,25 +456,31 @@ section.veridu-list {
 		}
 
 	}
+
 	&.md-cards {
 		height: em(450);
 		@include clearfix();
 		clear: both;
 		@extend .tablet__gutter;
-	}
+		position: relative;
+		z-index: 10;
+		.item-container  {
 
-	&.md-cards {
-		.item-container > div {
-			@extend .animated;
+			position: relative;
 
-			&.vis {
-				@extend .fadeInUp;
-			}
+			> div {
 
-			&.inv {
-				@extend .fadeOutDown;
-				position: absolute;
-				z-index: -100;
+				@extend .animated;
+
+				&.vis {
+					@extend .fadeIn;
+				}
+
+				&.inv {
+					width: calc(100% - 17px);
+					@extend .fadeOut;
+					position: absolute;
+				}
 			}
 
 		}
@@ -506,7 +511,7 @@ section.veridu-list {
 					box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 
 					h3 {
-						letter-spacing: em(1, 25);
+						letter-spacing: em(0.3, 25);
 					}
 				}
 
