@@ -281,15 +281,15 @@
 						hours: vm.Widget.hoursToFake,
 						hoursPercent: Math.max(hoursPercent, 60),
 						name: user.name.value,
-						namePercent: (user.name || 0 ) && Math.round((user.name.score * 100) * 100) / 100,
+						namePercent: (user.name || 0 ) && Math.round((user.name.score * 100) * 10) / 10,
 						img: user.picture || 'http://placehold.it/1000?text=Your%20Picture',
 						imgStyle: 'background-size: 150%; background-position: 50% !important',
 						imgMdStyle: '',
 						sex: user.gender.value,
-						sexPercent: (user.gender || 0 ) && Math.round((user.gender.score * 100) * 100) / 100,
+						sexPercent: (user.gender || 0 ) && Math.round((user.gender.score * 100) * 10) / 10,
 						verified: user.overall > 0.6,
 						birth: user.email.value,
-						birthPercent: (user.email || 0 ) && Math.round((user.email.score * 100) * 100) / 100
+						birthPercent: (user.email || 0 ) && Math.round((user.email.score * 100) * 10) / 10
 					}
 				];
 			} else {
