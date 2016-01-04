@@ -264,7 +264,7 @@
 			if (vm.partnerIndex == 0) {
 				vm.partnerIndex = 3;
 			} else {
-				vm.partnerIndex--;
+				vm.partnerIndex = vm.partnerIndex - 1;
 			}
 		}
 

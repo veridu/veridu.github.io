@@ -472,14 +472,15 @@ section.veridu-list {
 
 				@extend .animated;
 
+
 				&.vis {
 					@extend .fadeIn;
 				}
 
 				&.inv {
-					width: calc(100% - 17px);
 					@extend .fadeOut;
-					position: absolute;
+					width: calc(100% - 17px) !important;
+					position: absolute !important;
 				}
 			}
 
@@ -489,6 +490,7 @@ section.veridu-list {
 	// for desktop
 	@media (min-width: $screen-sm-min) {
 		&.md-cards {
+			height: 15em;
 			max-width: $container-max-width;
 			margin-right: auto;
 			margin-left: auto;
@@ -504,6 +506,8 @@ section.veridu-list {
 
 				> div {
 					@include animated();
+					width: calc(100% - 17px) !important;
+					position: absolute !important;
 
 					background: white;
 					padding: em(30) em(40);
