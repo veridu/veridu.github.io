@@ -22,9 +22,12 @@
 	}
 
 	.contact.veridu-list {
-
 		@media (min-width: $screen-sm-min) {
 			padding-top: 0 !important;
+			> div {
+				@include col(12);
+				float: none;
+			}
 		}
 	}
 
@@ -61,17 +64,22 @@
 			}
 
 			div.page-description {
+
 				@extend .tablet__gutter;
 				@extend .content-padding;
 				max-width: $container-max-width;
-				width: 100%;
-				margin: 0 auto;;
+				margin: 0 auto;
 
 				p {
 					@extend .hidden-xs;
 					font-style: italic;
 					font-size: em(16);
 
+				}
+
+				@media (min-width: $screen-sm-min) {
+					@include col(12);
+					float: none;
 				}
 
 			}
@@ -84,7 +92,8 @@
 
 		padding-top: 0;
 		@media (min-width: $screen-sm-min) {
-			// background: white;
+			@include col(12);
+			float: none;
 		}
 		padding-bottom: em(300);
 

@@ -372,7 +372,7 @@ description: What company doesn't want to know their users better? These are jus
 				if (scrolled < clientsParntersHeight) {
 					setActiveSection('#submenu-sectors', 'SECTORS');
 				} else{
-					if(scrolled < integrationsHeight) {
+					if(scrolled < integrationsHeight - 100) {
 						setActiveSection('#submenu-clients-partners', 'CLIENTS & PARTNERS');
 					} else {
 						setActiveSection('#submenu-integration', 'INTEGRATION');
