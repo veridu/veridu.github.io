@@ -476,11 +476,11 @@ section.veridu-list {
 
 
 				&.vis {
-					@extend .fadeIn;
+					@extend .fadeInUp;
 				}
 
 				&.inv {
-					@extend .fadeOut;
+					@extend .fadeOutDown;
 					width: calc(100% - 17px) !important;
 					position: absolute !important;
 				}
