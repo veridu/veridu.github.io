@@ -284,6 +284,7 @@
 				@extend .sm-container;
 			}
 			.solution__item__title {
+				text-transform: capitalize;
 				font-weight: 300;
 				@media (min-width: $screen-sm-min) {
 					padding-left: 8.5px;
