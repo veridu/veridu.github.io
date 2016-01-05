@@ -335,7 +335,6 @@ description: What company doesn't want to know their users better? These are jus
 			mobile = mbHelper.is(':visible');
 			integrationsHeight = $('#integration-section').offset().top - 650;
 
-			console.warn(integrationsHeight);
 			clientsParntersHeight =  $('#clients-partners-section').offset().top - 550;
 			if (mobile) {
 				$nav.css('min-height', 'auto');
