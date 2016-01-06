@@ -120,8 +120,10 @@ body {
             display: none;
         }
 
-        @media (max-width: 900px) and (min-width: $screen-sm-min) {
-            font-size: 0.75em;
+        @media (max-width: 827px) and (min-width: $screen-sm-min) {
+            .menu__links__md > ul > li {
+                margin-right: em(13) !important
+            }
         }
 
         @media (min-width: $screen-sm-min) {

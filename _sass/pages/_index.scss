@@ -193,6 +193,10 @@ section.verification-container {
 			color: black;
 			margin-bottom: em(40, 35);
 
+			@media (max-width: $screen-xs-max) {
+				padding: 0 !important	
+			}
+
 			@media (min-width: $screen-sm-min) {
 
 				@include col(12);
@@ -460,7 +464,7 @@ section.veridu-list {
 	}
 
 	&.md-cards {
-		height: em(450);
+		min-height: em(450);
 		@include clearfix();
 		clear: both;
 		@extend .tablet__gutter;
@@ -476,14 +480,28 @@ section.veridu-list {
 
 
 				&.vis {
-					@extend .fadeInUp;
+					@media (max-width: $screen-xs-max) {
+						-webkit-animation-name: fadeIn;
+					    animation-name: fadeIn;
+					}
+					@media (min-width: $screen-sm-min) {
+						-webkit-animation-name: fadeInUp;
+					    animation-name: fadeInUp;
+					}
 				}
 
 				&.inv {
-					@extend .fadeOutDown;
 					width: calc(100% - 17px) !important;
 					position: absolute !important;
-				}
+
+					@media (max-width: $screen-xs-max) {
+						-webkit-animation-name: fadeOut;
+						animation-name: fadeOut;
+					}
+					@media (min-width: $screen-sm-min) {
+						-webkit-animation-name: fadeOutDown;
+						animation-name: fadeOutDown;
+					}				}
 			}
 
 		}
