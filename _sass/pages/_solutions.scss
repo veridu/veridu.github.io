@@ -219,6 +219,19 @@
 		}
 	}
 
+	#sectors-tabs {
+		position: relative;
+
+		video {
+			display: inherit;
+			position: absolute;
+		    width: 100% !important;
+		    height: 100%;
+		    width: auto;
+			object-fit: cover;
+		}
+	}
+
 	.solution__item {
 
 		@media (max-width: $screen-xs-max) {

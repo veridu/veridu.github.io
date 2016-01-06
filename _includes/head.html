@@ -1,27 +1,27 @@
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{% if page.title %}{{ page.title }} - Veridu.com{% else %}Veridu.com{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="author" content="Veridu">
-  <base href="./" />
-  <link rel="stylesheet" href="{{ "css/main.css" }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-  <meta property="og:locale" content="en_US">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="{{ page.title }}">
-  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta property="og:url" content="{{ page.url }}">
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:image" content="img/og.jpg">
-  <meta property="og:publisher" content="http://www.facebook.com/veridu">
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@veridu">
-  <meta name="twitter:title" content="{{ page.title || site.title }}">
-  <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="twitter:image" content="img/og.jpg">
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} - Veridu.com{% else %}Veridu.com{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="author" content="Veridu">
+    <base href="./" />
+    <link rel="stylesheet" href="{{ "css/main.css" }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <meta property="og:locale" content="en_US">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="{{ page.title }}">
+    <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta property="og:url" content="{{ page.url }}">
+    <meta property="og:site_name" content="{{ site.title }}">
+    <meta property="og:image" content="img/og.jpg">
+    <meta property="og:publisher" content="http://www.facebook.com/veridu">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@veridu">
+    <meta name="twitter:title" content="{{ page.title || site.title }}">
+    <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="twitter:image" content="img/og.jpg">
+    <meta name="keywords"  content="veridu identify verification trust real estate">
 </head>

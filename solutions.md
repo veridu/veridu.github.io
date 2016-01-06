@@ -15,6 +15,23 @@ description: What company doesn't want to know their users better? These are jus
 
 
 	<section id="sectors-tabs" class="solution__item">
+
+	    <video id="video-solutions-candidate" loop ng-show="ctrl.sectorsTabs.active == 'recruiting'">
+	        <source src="video/candidate.mp4" type="video/mp4">
+	    </video>
+
+	    <video id="video-solutions-customer" loop ng-show="ctrl.sectorsTabs.active == 'payments'">
+	        <source src="video/customer.mp4" type="video/mp4">
+	    </video>
+
+	    <video id="video-solutions-peer" loop ng-show="ctrl.sectorsTabs.active == 'p2p'">
+	        <source src="video/peer.mp4" type="video/mp4">
+	    </video>
+
+	    <video id="video-solutions-tenant" loop ng-show="ctrl.sectorsTabs.active == 'real_estate'">
+	        <source src="video/tenant.mp4" type="video/mp4">
+	    </video>
+
 		<div id="sectors" class="solution__item__content">
 			<div class="border-right" ng-show="ctrl.sectorsTabs.active == 'payments'" >
 				<h2  class="solution__item__title">Payments</h2>
@@ -448,6 +465,14 @@ description: What company doesn't want to know their users better? These are jus
 			}
 		})();
 
+		var videos = {
+			'payments': document.getElementById('video-solutions-customer'),
+			'p2p': document.getElementById('video-solutions-peer'),
+			'recruiting': document.getElementById('video-solutions-candidate'),
+			'real_estate': document.getElementById('video-solutions-tenant')
+		};
+		var lastActiveVideo = 'payments';
+
 		function setActiveSection(sectionId, currentStateName) {
 			if (currentState != sectionId) {
 				$('#solutions-submenu').find('a').removeClass('active');
@@ -468,6 +493,9 @@ description: What company doesn't want to know their users better? These are jus
 			$timeout(function () {
 				resizeContainers();
 			});
+
+
+			videos[lastActiveVideo].play();
 
 			function setActive (tabSection, value) {
 
@@ -492,6 +520,9 @@ description: What company doesn't want to know their users better? These are jus
 					case 'sectors':
 
 						vm.sectorsTabs.active = value;
+						videos[lastActiveVideo].pause();
+						videos[value].play();
+
 						$timeout(function (){
 							resizeContainers();
 							top = Math.round($('#sectors-tabs').offset().top - vm.menuElement.height());
