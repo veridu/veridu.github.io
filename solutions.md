@@ -478,7 +478,7 @@ description: What company doesn't want to know their users better? These are jus
 			});
 
 
-			videos[lastActiveVideo].play();
+			//videos[lastActiveVideo].play();
 
 			function setActive (tabSection, value) {
 
@@ -503,8 +503,8 @@ description: What company doesn't want to know their users better? These are jus
 					case 'sectors':
 
 						vm.sectorsTabs.active = value;
-						videos[lastActiveVideo].pause();
-						videos[value].play();
+						//videos[lastActiveVideo].pause();
+						// videos[value].play();
 
 						$timeout(function (){
 							resizeContainers();
