@@ -16,19 +16,19 @@ description: What company doesn't want to know their users better? These are jus
 
 	<section id="sectors-tabs" class="solution__item">
 
-	    <video id="video-solutions-candidate" loop ng-show="ctrl.sectorsTabs.active == 'recruiting'">
+	    <video id="video-solutions-candidate" ng-show="ctrl.sectorsTabs.active == 'recruiting'">
 	        <source src="video/candidate.mp4" type="video/mp4">
 	    </video>
 
-	    <video id="video-solutions-customer" loop ng-show="ctrl.sectorsTabs.active == 'payments'">
+	    <video id="video-solutions-customer" ng-show="ctrl.sectorsTabs.active == 'payments'">
 	        <source src="video/customer.mp4" type="video/mp4">
 	    </video>
 
-	    <video id="video-solutions-peer" loop ng-show="ctrl.sectorsTabs.active == 'p2p'">
+	    <video id="video-solutions-peer" ng-show="ctrl.sectorsTabs.active == 'p2p'">
 	        <source src="video/peer.mp4" type="video/mp4">
 	    </video>
 
-	    <video id="video-solutions-tenant" loop ng-show="ctrl.sectorsTabs.active == 'real_estate'">
+	    <video id="video-solutions-tenant" ng-show="ctrl.sectorsTabs.active == 'real_estate'">
 	        <source src="video/tenant.mp4" type="video/mp4">
 	    </video>
 
