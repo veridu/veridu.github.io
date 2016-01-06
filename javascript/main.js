@@ -159,24 +159,6 @@
 		}
 	}
 
-	// menu border
-	(function  () {
-		var fixed_header = $('nav.nav');
-
-		window.addEventListener('scroll', function () {
-			var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;
-			if (scrolled > 1){
-				//will show
-				fixed_header.addClass('shadowed');
-				fixedContactContainer.css('display', 'table');
-			} else{
-				//will hide
-				fixed_header.removeClass('shadowed');
-
-			}
-		})
-	})();
-
 	// sets landing height to 100%
 
 	var landingHeight = $(window).height() -  $('.menu').height();
@@ -226,17 +208,47 @@
 		vm.prevPartnerSlide = prevPartnerSlide;
 		vm.togleSignin = togleSignin;
 		vm.currentLandingState = 'customer';
+		vm.playSlider = true;
 
 		$(".landing-section").on("swiperight", nextSlide);
 		$(".landing-section").on("swipeleft", prevSlide);
 
 		init();
 
+		// menu border
+		(function  () {
+			var fixed_header = $('nav.nav');
+
+			window.addEventListener('scroll', function () {
+				var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;
+				if (scrolled > 1){
+					//will show
+					fixed_header.addClass('shadowed');
+					fixedContactContainer.css('display', 'table');
+
+					if (scrolled > $(window).height() - 150) {
+						// scrolled after landing -- stops slider
+						vm.playSlider = false;
+					} else {
+						vm.playSlider = true;
+					}
+
+				} else{
+					//will hide
+					fixed_header.removeClass('shadowed');
+
+				}
+			})
+		})();
+
 		function togleSignin() {
 			vm.showSignin = ! vm.showSignin;
 		}
 
 		function nextSlide() {
+			if (! vm.playSlider)
+				return;
+
 			if (vm.slider.index == (vm.slider.length - 1)) {
 				vm.slider.index = 0;
 			} else {
@@ -245,6 +257,9 @@
 		}
 
 		function prevSlide() {
+			if (! vm.playSlider)
+				return;
+				
 			if (vm.slider.index == 0) {
 				vm.slider.index = 3;
 			} else {
