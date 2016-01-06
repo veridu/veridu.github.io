@@ -194,7 +194,7 @@ section.verification-container {
 			margin-bottom: em(40, 35);
 
 			@media (max-width: $screen-xs-max) {
-				padding: 0 !important	
+				padding: 0 !important
 			}
 
 			@media (min-width: $screen-sm-min) {
@@ -755,7 +755,7 @@ section.partners-quotes {
 
 			.item {
 
-				height: em(300);
+				min-height: em(330);
 				max-width: 100% !important;
 			}
 			max-width: $container-max-width;
