@@ -257,7 +257,8 @@
 
 		&.solution__item--integration {
 
-			//background-image: url(../img/bg-integrations.jpg);
+			background-image: url(../img/bg-integrations.jpg);
+			background-size: 100% auto;
 			margin-top: em(20);
 		}
 		&.solution__item__clients-partners {
