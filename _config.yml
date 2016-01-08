@@ -5,6 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Veridu brings trust to the internet with a range of identity verification tools that are fast and easy for users, and reduce fraud for merchants.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://veridu.com" # the base hostname & protocol for your site
+mode: 'localhost'
 enforce_ssl: veridu.com
 twitter_username: veridu
 github_username:  veridu

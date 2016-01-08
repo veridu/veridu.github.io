@@ -41,7 +41,7 @@ class: pricing
 										<span class="pricing__option-label">Total/month:</span>
 									</td>
 									<td class="value-td">
-										<span ng-bind="(cart.getTotal() | currency : '')  "></span> <small ng-bind="cart.currency"></small>
+										<span ng-bind="(cart.getTotal() | number : 0 )  "></span> <small ng-bind="cart.currency"></small>
 									</td>
 								</tr>
 								<tr>
@@ -73,13 +73,13 @@ class: pricing
 
 				<ul class="products">
 					<li>
-						<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
+						<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('social-media')" ng-class="{active: cart.hasProduct('social-media')}">
 							<div class="product__description">Social Media</div>
 							<div class="product__price">FREE</div>
 						</button>
 					</li>
 					<li>
-						<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
+						<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('document-upload')" ng-class="{active: cart.hasProduct('document-upload')}">
 							<div class="product__description">Document <br>Upload</div>
 							<div class="product__price">FREE</div>
 						</button>
@@ -93,25 +93,25 @@ class: pricing
 
 				<ul class="products">
 					<li>
-						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('document-authentication')">
+						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('document-authentication')" ng-class="{active: cart.hasProduct('document-authentication')}">
 							<div class="product__description">Document<br>Authentication</div>
 							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
 						</button>
 					</li>
 					<li>
-						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('email')">
+						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('email')" ng-class="{active: cart.hasProduct('email')}">
 							<div class="product__description">Email</div>
 							<div class="product__price">FREE</div>
 						</button>
 					</li>
 					<li>
-						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('sms')">
+						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('sms')" ng-class="{active: cart.hasProduct('sms')}">
 							<div class="product__description">SMS</div>
 							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
 						</button>
 					</li>
 					<li>
-						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('kba')">
+						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('kba')" ng-class="{active: cart.hasProduct('kba')}">
 							<div class="product__description">KBA</div>
 							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
 						</button>
@@ -123,13 +123,13 @@ class: pricing
 
 				<ul class="products">
 					<li>
-						<button class="btn btn-lightgreen btn-lg" ng-click="cart.addProduct('contact-info')">
+						<button class="btn btn-lightgreen btn-lg" ng-click="cart.addProduct('contact-info')" ng-class="{active: cart.hasProduct('contact-info')}">
 							<div class="product__description">Contact Info</div>
 							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
 						</button>
 					</li>
 					<li>
-						<button class="btn btn-lightgreen btn-lg" ng-click="cart.addProduct('age')">
+						<button class="btn btn-lightgreen btn-lg" ng-click="cart.addProduct('age')" ng-class="{active: cart.hasProduct('age')}">
 							<div class="product__description">Age</div>
 							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
 						</button>
@@ -141,13 +141,13 @@ class: pricing
 
 				<ul class="products">
 					<li>
-						<button class="btn btn-bluegreen btn-lg" ng-click="cart.addProduct('work')">
+						<button class="btn btn-bluegreen btn-lg" ng-click="cart.addProduct('work')" ng-class="{active: cart.hasProduct('work')}">
 							<div class="product__description">Work</div>
 							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
 						</button>
 					</li>
 					<li>
-						<button class="btn btn-bluegreen btn-lg" ng-click="cart.addProduct('education')">
+						<button class="btn btn-bluegreen btn-lg" ng-click="cart.addProduct('education')" ng-class="{active: cart.hasProduct('education')}">
 							<div class="product__description">Education</div>
 							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
 						</button>
@@ -159,13 +159,13 @@ class: pricing
 
 				<ul class="products">
 					<li>
-						<button class="btn btn-warning2 btn-lg" ng-click="cart.addProduct('general-warnings')">
+						<button class="btn btn-warning2 btn-lg" ng-click="cart.addProduct('general-warnings')" ng-class="{active: cart.hasProduct('general-warnings')}">
 							<div class="product__description">General<br>Warnings</div>
 							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
 						</button>
 					</li>
 					<li>
-						<button class="btn btn-warning2 btn-lg" ng-click="cart.addProduct('specific-warnings')">
+						<button class="btn btn-warning2 btn-lg" ng-click="cart.addProduct('specific-warnings')" ng-class="{active: cart.hasProduct('specific-warnings')}">
 							<div class="product__description">Specific Warnings</div>
 							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
 						</button>
@@ -177,19 +177,19 @@ class: pricing
 
 				<ul class="products">
 					<li>
-						<button class="btn btn-yellow btn-lg" ng-click="cart.addProduct('general-warnings')">
+						<button class="btn btn-yellow btn-lg">
 							<div class="product__description">10% Off</div>
 							<div class="product__price">£1000<span class="font-light">/Month</span></div>
 						</button>
 					</li>
 					<li>
-						<button class="btn btn-yellow btn-lg" ng-click="cart.addProduct('general-warnings')">
+						<button class="btn btn-yellow btn-lg">
 							<div class="product__description">10% Off</div>
 							<div class="product__price">£1000<span class="font-light">/Month</span></div>
 						</button>
 					</li>
 					<li>
-						<button class="btn btn-yellow btn-lg" ng-click="cart.addProduct('general-warnings')">
+						<button class="btn btn-yellow btn-lg">
 							<div class="product__description">10% Off</div>
 							<div class="product__price">£1000<span class="font-light">/Month</span></div>
 						</button>
@@ -235,6 +235,8 @@ class: pricing
 			vm.checks = "1000";
 			vm.getPricePerCheck = getPricePerCheck;
 			vm.items = [];
+			vm.itemsObject = {};
+			vm.totalChecks = 0;
 
 			vm.pricePerCheck = {
 				'£': 0.038,
@@ -246,6 +248,7 @@ class: pricing
 			vm.hasItem = hasItem;
 			vm.getTotal = getTotal;
 			vm.addProduct = addProduct;
+			vm.hasProduct = hasProduct;
 			vm.removeProduct = removeProduct;
 			vm.changeCurrency = changeCurrency;
 
@@ -273,26 +276,41 @@ class: pricing
 			}
 
 			function getTotal() {
-				return 2000;
+				return vm.totalChecks * vm.getPricePerCheck() * vm.checks;
 			}
 
-			$scope.$watch('cart.items', function (items) {
-				if (items.length) {
-					vm.total = (vm.items.reduce(function (a,b) {
-										return {value: a.value + b.value};
-									}, {value: 0})).value;
-				} else {
-					vm.total = 0;
-				}
-			}, true);
 			$scope.$watch('cart.currency', function (value) {
 				if (value) {
 					vm.changeCurrency(value);
 				}
 			});
 
+			function hasProduct(key) {
+				return !! vm.itemsObject[key];
+			}
+
 			function addProduct (key) {
-				vm.items.push(vm.allProducts[key]);
+
+				if (vm.itemsObject[key]) {
+					vm.items.splice(vm.itemsObject[key].index, 1);
+
+					if (vm.allProducts[key].value) {
+						vm.totalChecks--;
+					}
+
+					delete vm.itemsObject[key];
+
+				} else {
+
+					if (vm.allProducts[key].value) {
+						vm.totalChecks++;
+					}
+
+					vm.itemsObject[key] = {
+   						index : vm.items.push(vm.allProducts[key]) - 1
+   					};
+				}
+
 			}
 
 			function removeProduct (key) {
@@ -315,27 +333,51 @@ class: pricing
 			vm.allProducts = {
 				'social-media': {
 					name:'Social Media',
-					value:0
-				},
-				'online-services': {
-					name: 'Online Services',
-					value : 0
-				},
-				'knowledge-based-authentication': {
-					name: 'Knowledge-based Authentication',
-					value : 0.035
+					value: 0
 				},
 				'document-upload': {
 					name: 'Document Upload',
 					value : 0
 				},
+				'document-authentication': {
+					name: 'Document Authentication',
+					value : 1
+				},
 				'email': {
 					name: 'Email',
 					value : 0
 				},
+				'sms': {
+					name: 'SMS',
+					value : 1
+				},
+				'kba': {
+					name: 'KBA',
+					value : 1
+				},
+				'contact-info': {
+					name: 'Contact Info',
+					value : 1
+				},
 				'age': {
 					name: 'Age',
-					value : 0.035
+					value : 1
+				},
+				'work': {
+					name: 'Work',
+					value : 1
+				},
+				'education': {
+					name: 'Education',
+					value : 1
+				},
+				'general-warnings': {
+					name: 'General Warning',
+					value : 1
+				},
+				'specific-warnings': {
+					name: 'Specific Warning',
+					value : 1
 				}
 			};
 
@@ -352,32 +394,32 @@ class: pricing
 
 		(function () {
 
-			var fixed_header = document.querySelector('.cart-status');
-			var header  =	$('#form-checks')
-
-			window.addEventListener('scroll', function  () {
-
-				var elementPosition  = header.offset();
-				var scrolled 	 = document.documentElement.scrollTop || document.body.scrollTop ;
-
-				//will show
-				if ( scrolled > elementPosition.top ){
-
-					if (fixed_header.style.display != 'block'){
-
-						fixed_header.style.display =  'block';
-
-					}
-
-				} else { //will hide
-
-					if (fixed_header.style.display != 'none'){
-
-						fixed_header.style.display =  'none';
-
-					}
-				}
-			});
+			// var fixed_header = document.querySelector('.cart-status');
+			// var header  =	$('#form-checks')
+			//
+			// window.addEventListener('scroll', function  () {
+			//
+			// 	var elementPosition  = header.offset();
+			// 	var scrolled 	 = document.documentElement.scrollTop || document.body.scrollTop ;
+			//
+			// 	//will show
+			// 	if ( scrolled > elementPosition.top ){
+			//
+			// 		if (fixed_header.style.display != 'block'){
+			//
+			// 			fixed_header.style.display =  'block';
+			//
+			// 		}
+			//
+			// 	} else { //will hide
+			//
+			// 		if (fixed_header.style.display != 'none'){
+			//
+			// 			fixed_header.style.display =  'none';
+			//
+			// 		}
+			// 	}
+			// });
 
 		})();
 

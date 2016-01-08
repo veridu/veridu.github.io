@@ -29,8 +29,7 @@
 		color: $color;
 	}
 
-	&.active,
-	&:focus{
+	&.active{
 		color: white;
 		background-color: $color !important ;
 	}
