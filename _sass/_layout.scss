@@ -12,6 +12,29 @@
   }
 }
 
+.veridu-container {
+    // phone
+    padding-left: 10%;
+    padding-right: 10%;
+
+    // desktop
+    @media (min-width: $screen-sm-min) {
+        @include container-fixed();
+        max-width: $container-max-width;
+        margin: 0 auto;
+    }
+
+    // tablets
+    @media(max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+}
+.v-row {
+    @include row();
+}
+
 .no-styled-container {
 	max-width: $container-max-width;
 	margin-left: auto !important;

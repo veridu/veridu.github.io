@@ -1,438 +1,99 @@
 ---
 title: Pricing
 description: Create your tailored identity solution to see  the cost.  You'll be pleasantly surprised.
-layout: page
+layout: blank
 class: pricing
 ---
-<div  ng-controller="CartCtrl as cart">
+<div id="pricing-wrapper" ng-controller="CartCtrl as cart">
 
-	<div class="cart-status">
-		<div>
-			<select ng-model="cart.checks" class="check-qty-select">
-				<option value="1000">1000</option>
-				<option value="2000">2000</option>
-				<option value="3000">3000</option>
-			</select>
+	<header class="page-header">
+		<div class="header-content">
+			<div class="v-row">
 
-			checks/month
+				<div class="header--left">
+					<h1 class="page-title ">
+						Price Calculator
+					</h1>
+					<p class="page__description font-light">
+						Create your tailored identity solution to see  the cost.  You'll be pleasantly surprised.
+					</p>
+				</div>
 
-			<select ng-model="cart.currency" class="check-currency-select">
-				<option value="£">£</option>
-				<option value="€">€</option>
-				<option value="$">$</option>
-			</select>
-			<span  ng-bind="(cart.total * cart.checks).toFixed(2)"></span>
-
-			<div class="submit-container">
-				<i class="material-icons">&#xE5CC;</i>
-			</div>
+				<div class="header--right">
+					<div class="checkout-container">
+						<form id="form-checks" name="checks" class="form-cart" onsubmit="submitChecks()">
+							<table>
+								<tr>
+									<td class="text-right"><span class="pricing__option-label">Checks/month:</span></td>
+									<td>
+										<div class="v-select">
+											<ul>
+												<li ng-click="cart.checks = 1000" ng-class="{selected: cart.checks == 1000}">1,000</li>
+												<li ng-click="cart.checks = 2000" ng-class="{selected: cart.checks == 2000}">2,000</li>
+												<li ng-click="cart.checks = 3000" ng-class="{selected: cart.checks == 3000}">3,000</li>
+											</ul>
+											<i class="material-icons">&#xE313;</i>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<td >
+										<span class="pricing__option-label">Total/month:</span>
+									</td>
+									<td class="value-td">
+										<span ng-bind="(cart.getTotal() | currency : '')  "></span> <small ng-bind="cart.currency"></small>
+									</td>
+								</tr>
+								<tr>
+									<td >
+										<span class="pricing__option-label">Price/check:</span>
+									</td>
+									<td class="value-td">
+										<span ng-bind="cart.getPricePerCheck()"></span> <small ng-bind="cart.currency"></small>
+									</td>
+								</tr>
+								<tr>
+									<td colspan="2" >
+										<a href="#">Change currency</a>
+									</td>
+								</tr>
+							</table>
+						</form>
+					</div>
+				</div>
 
 		</div>
+		</div>
+	</header>
+
+	<div class="products-container" >
+
+		<section class="products--verification">
+			<h4 >VERIFICATION</h4>
+			<ul class="products">
+				<li>
+					<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
+						<div class="product__description">Social<br>Media</div>
+						<div class="product__price">FREE</div>
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
+						<div class="product__description">Document<br>Upload</div>
+						<div class="product__price">FREE</div>
+					</button>
+				</li>
+				<li>
+					<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
+						<div class="product__description">Document<br>Verification</div>
+						<div class="product__price">FREE</div>
+					</button>
+				</li>
+			</ul>
+
+		</section>
+
 	</div>
-
-	<section class="solutions__container">
-		<ul class="products">
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Social Media
-					</div>
-				</div>
-				<div class="product__footer green">
-					FREE
-					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Social Media', value : 0, key : 'social-media'})"
-						ng-hide="cart.hasItem('social-media')">&#xE876;</i>
-
-					<i  class="material-icons"
-						ng-click="cart.removeProduct('social-media')"
-						ng-show="cart.hasItem('social-media')">&#xE14C;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Online Services
-					</div>
-				</div>
-				<div class="product__footer green">
-					FREE
-					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Online Services', value : 0, key : 'online-services'})"
-						ng-hide="cart.hasItem('online-services')">&#xE876;</i>
-
-					<i  class="material-icons"
-						ng-click="cart.removeProduct('online-services')"
-						ng-show="cart.hasItem('online-services')">&#xE14C;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE7FB;</i>
-					</div>
-					<div class="product__name">
-						Knowledge-based Authentication
-					</div>
-				</div>
-				<div class="product__footer green knowledge-based-authentication">
-					<strong ng-bind="cart.currency"></strong><strong class="value">0,035</strong> / CHECK
-
-					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Knowledge-based Authentication', value : 0.035, key : 'knowledge-based-authentication'})"
-						ng-hide="cart.hasItem('knowledge-based-authentication')">&#xE876;</i>
-
-					<i  class="material-icons"
-						ng-click="cart.removeProduct('knowledge-based-authentication')"
-						ng-show="cart.hasItem('knowledge-based-authentication')">&#xE14C;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE2C6;</i>
-					</div>
-					<div class="product__name">
-						Document Upload
-					</div>
-				</div>
-				<div class="product__footer green">
-					FREE
-					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Document Upload', value : 0, key : 'document-upload'})"
-						ng-hide="cart.hasItem('document-upload')">&#xE876;</i>
-
-					<i  class="material-icons"
-						ng-click="cart.removeProduct('document-upload')"
-						ng-show="cart.hasItem('document-upload')">&#xE14C;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE158;</i>
-					</div>
-					<div class="product__name">
-						Email
-					</div>
-				</div>
-				<div class="product__footer green">
-					FREE
-
-					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Email', value : 0, key : 'email'})"
-						ng-hide="cart.hasItem('email')">&#xE876;</i>
-
-					<i  class="material-icons"
-						ng-click="cart.removeProduct('email')"
-						ng-show="cart.hasItem('email')">&#xE14C;</i>
-
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE536;</i>
-					</div>
-					<div class="product__name">
-						Age
-					</div>
-				</div>
-				<div class="product__footer green knowledge-based-authentication">
-					<strong ng-bind="cart.currency"></strong><strong class="value">0,035</strong> / CHECK
-
-					<i class="material-icons"
-						ng-click="cart.addProduct({ name: 'Age', value : 0.035, key : 'age'})"
-						ng-hide="cart.hasItem('age')">&#xE876;</i>
-
-					<i  class="material-icons"
-						ng-click="cart.removeProduct('age')"
-						ng-show="cart.hasItem('age')">&#xE14C;</i>
-				</div>
-			</li>
-		</ul>
-	</section>
-
-	<div class="checkout-container">
-		<form id="form-checks" name="checks" class="form-cart" onsubmit="submitChecks()">
-			<div>
-				<select ng-model="cart.checks" class="check-qty-select">
-					<option value="1000">1000</option>
-					<option value="2000">2000</option>
-					<option value="3000">3000</option>
-				</select>
-				checks/month
-			</div>
-			<div>
-				<select ng-model="cart.currency" class="check-currency-select">
-					<option value="£">£</option>
-					<option value="€">€</option>
-					<option value="$">$</option>
-				</select>
-
-				<span ng-bind="(cart.total * cart.checks).toFixed(2)"></span>
-				<button class="btn btn-primary btn-sm">Get started</button>
-			</div>
-		</form>
-	</div>
-
-	<section  class="onboarding">
-		<h2 id="ONBOARDING" class="section__title">Onboarding & Authentication</h2>
-		<p class="section__description">
-			How do you want to onboard and authenticate users? Combine as many methods as you like according to your specific requirements.
-		</p>
-
-		<ul class="products">
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Social Media
-					</div>
-				</div>
-				<div class="product__footer green">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Online Services
-					</div>
-				</div>
-				<div class="product__footer green">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE7FB;</i>
-					</div>
-					<div class="product__name">
-						Knowledge-based Authentication
-					</div>
-				</div>
-				<div class="product__footer green knowledge-based-authentication">
-					<strong ng-bind="cart.currency"></strong><strong class="value">0,035</strong> / CHECK <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE2C6;</i>
-					</div>
-					<div class="product__name">
-						Document Upload
-					</div>
-				</div>
-				<div class="product__footer green">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE158;</i>
-					</div>
-					<div class="product__name">
-						Email
-					</div>
-				</div>
-				<div class="product__footer green">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE536;</i>
-					</div>
-					<div class="product__name">
-						Age
-					</div>
-				</div>
-				<div class="product__footer green knowledge-based-authentication">
-					<strong ng-bind="cart.currency"></strong><strong class="value">0,035</strong> / CHECK <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-		</ul>
-
-
-		<h2 id="CREDIBILITY" class="section__title">Credibility</h2>
-		<p class="section__description">
-			What do you want to verify or know about your users? We use scorecards to analyse the credibility of specific user attributes depending on what you need.
-		</p>
-
-		<ul class="products">
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Social Media
-					</div>
-				</div>
-				<div class="product__footer bluegreen">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Online Services
-					</div>
-				</div>
-				<div class="product__footer bluegreen">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-		</ul>
-
-		<h2 id="INSIGHT" class="section__title">Insight</h2>
-		<p class="section__description">
-			What do you want to verify or know about your users? We use scorecards to analyse the credibility of specific user attributes depending on what you need.
-		</p>
-		<ul class="products">
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Social Media
-					</div>
-				</div>
-				<div class="product__footer bluegreen">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Online Services
-					</div>
-				</div>
-				<div class="product__footer bluegreen">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-		</ul>
-
-		<h2 id="RED_FLAGS" class="section__title">Red Flags</h2>
-		<p class="section__description">
-			What do you want to verify or know about your users? We use scorecards to analyse the credibility of specific user attributes depending on what you need.
-		</p>
-		<ul class="products">
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Social Media
-					</div>
-				</div>
-				<div class="product__footer red">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Online Services
-					</div>
-				</div>
-				<div class="product__footer red">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-		</ul>
-
-		<h2 id="DISCOUNTS" class="section__title">Discounts</h2>
-		<p class="section__description">
-			How many checks do you need to run? We offer volume based discounts so that you can run the checks you need to while keeping your costs to a minimum.
-		</p>
-		<ul class="products">
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Social Media
-					</div>
-				</div>
-				<div class="product__footer grey">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-			<li>
-				<div class="product__description">
-					<div class="product__icon">
-						<i class="material-icons">&#xE853;</i>
-					</div>
-					<div class="product__name">
-						Online Services
-					</div>
-				</div>
-				<div class="product__footer grey">
-					FREE <i class="material-icons">&#xE876;</i>
-				</div>
-			</li>
-		</ul>
-
-
-	</section>
-	<section class="contact" id="CONTACT">
-		<h4>SOMETHING YOU’RE NOT SEEING?</h4>
-		<p class="section__description">
-			Contact us to discuss your specific needs
-		</p>
-	    <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">
-            <div class="input-container">
-                <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name">
-            </div>
-
-            <div class="input-container">
-                <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">
-            </div>
-
-            <div class="input-container">
-                <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">
-            </div>
-
-            <div class="input-container">
-                <textarea rows="5" ng-model="ctrl.contact.message" name="message" type="text" placeholder="Message"></textarea>
-            </div>
-
-            <div class="input-container text-right">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-	    </form>
-
-    </section>
 
 </div>
 
@@ -460,7 +121,7 @@ class: pricing
 			}
 
 		}
-		angular.module('app').controller('CartCtrç', CartCtrç);
+		angular.module('app').controller('CartCtrl', CartCtrl);
 
 		CartCtrl.$inject = ['$scope'];
 		function CartCtrl ($scope) {
@@ -469,14 +130,50 @@ class: pricing
 			vm.total = 0;
 			vm.currency = '£';
 			vm.checks = "1000";
+			vm.getPricePerCheck = getPricePerCheck;
 			vm.items = [];
 
+			vm.pricePerCheck = {
+				'£': 0.000,
+				'€': 0.000,
+				'$': 0.000
+			};
+
+
 			vm.hasItem = hasItem;
+			vm.getTotal = getTotal;
 			vm.addProduct = addProduct;
 			vm.removeProduct = removeProduct;
+			vm.changeCurrency = changeCurrency;
+
+			function getPricePerCheck() {
+				return vm.pricePerCheck[vm.currency];
+			}
+
+			function changeCurrency(value) {
+				switch (value) {
+					case '£':
+						//change
+					break;
+
+					case '€':
+						//change
+					break;
+
+					case '$':
+						// change
+					break;
+
+					default:
+					break;
+				}
+			}
+
+			function getTotal() {
+				return 2000;
+			}
 
 			$scope.$watch('cart.items', function (items) {
-
 				if (items.length) {
 					vm.total = (vm.items.reduce(function (a,b) {
 										return {value: a.value + b.value};
@@ -484,11 +181,15 @@ class: pricing
 				} else {
 					vm.total = 0;
 				}
-
 			}, true);
+			$scope.$watch('cart.currency', function (value) {
+				if (value) {
+					vm.changeCurrency(value);
+				}
+			});
 
-			function addProduct (product) {
-				vm.items.push(product);
+			function addProduct (key) {
+				vm.items.push(vm.allProducts[key]);
 			}
 
 			function removeProduct (key) {
@@ -507,6 +208,42 @@ class: pricing
 				});
 				return found;
 			}
+
+			vm.allProducts = {
+				'social-media': {
+					name:'Social Media',
+					value:0
+				},
+				'online-services': {
+					name: 'Online Services',
+					value : 0
+				},
+				'knowledge-based-authentication': {
+					name: 'Knowledge-based Authentication',
+					value : 0.035
+				},
+				'document-upload': {
+					name: 'Document Upload',
+					value : 0
+				},
+				'email': {
+					name: 'Email',
+					value : 0
+				},
+				'age': {
+					name: 'Age',
+					value : 0.035
+				}
+			};
+
+			vm.prices = {
+				'0.035': {
+					gbp: 0.035,
+					eur: 0.040,
+					usd: 0.049
+				}
+			}
+
 		}
 
 

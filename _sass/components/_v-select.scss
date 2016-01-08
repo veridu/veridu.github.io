@@ -1,0 +1,70 @@
+div.v-select {
+	position: relative;
+	text-align: left;
+	color: #333;
+	min-width: em(105);
+	z-index: 10;
+
+	&:hover,
+	&:focus,
+	&:active {
+		> ul {
+			border: 1px solid #333;
+
+			> li {
+				position: relative;
+				display: block;
+				border-bottom: 1px solid #333;
+
+				&:last-of-type {
+					border-bottom: 0;
+				}
+
+				&.selected {
+					background-color: white !important;
+					color: $brand-primary;
+				}
+			}
+		}
+		> i {
+			display: none;
+		}
+	}
+
+	> i {
+		position: absolute;
+		left: 80px;
+		top: em(10);
+	}
+
+	> ul {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+		margin: 0;
+		list-style: none;
+
+
+		> li {
+			min-width: em(105, 30);
+			display: none;
+			padding-top: 5px;
+			padding-left: 5px;
+			font-weight: 300;
+			background-color: #eee;
+			font-size: em(30);
+
+			&:hover {
+				background-color: white;
+			}
+
+			&.selected {
+				display: block;
+				background-color: white;
+				border-bottom: 1px solid #333;
+			}
+
+		}
+	}
+}

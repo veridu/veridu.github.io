@@ -17,18 +17,22 @@
 	}
 }
 
-.btn-primary {
 
-	border-bottom: 2px solid $brand-primary-border-color !important;
+@mixin v-btn($bg-color, $color) {
+
+	border-bottom: 2px solid $color !important;
+	background-color: $bg-color;
+	color: $color;
 
 	&:hover{
-		background-color: $brand-primary;
+		background-color: $bg-color;
+		color: $color;
 	}
 
 	&.active,
-	&:active,
 	&:focus{
-		background-color: $brand-primary-border-color !important ;
+		color: white;
+		background-color: $color !important ;
 	}
 
 	// grey primary
@@ -38,4 +42,22 @@
 		border-color: #9e9e9e !important;
 	}
 
+}
+
+.btn-primary {
+	@include v-btn($brand-primary, $brand-primary-border-color);
+}
+
+.btn-blue {
+	@include v-btn($bg-brand-blue, $color-brand-blue);
+}
+
+.btn-success1 {
+	@include v-btn($bg-brand-success1, $color-brand-success1);
+}
+.btn-success2 {
+	@include v-btn($bg-brand-success2, $color-brand-success2);
+}
+.btn-purple {
+	@include v-btn($bg-brand-purple, $color-brand-purple);
 }
