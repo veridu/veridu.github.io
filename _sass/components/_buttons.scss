@@ -55,9 +55,27 @@
 .btn-success1 {
 	@include v-btn($bg-brand-success1, $color-brand-success1);
 }
+.btn-lightblue {
+	@include v-btn($bg-brand-lightblue, $color-brand-lightblue);
+}
 .btn-success2 {
 	@include v-btn($bg-brand-success2, $color-brand-success2);
 }
 .btn-purple {
 	@include v-btn($bg-brand-purple, $color-brand-purple);
+}
+.btn-lightgreen {
+	@include v-btn($bg-brand-lightgreen, $color-brand-lightgreen);
+}
+
+.btn-bluegreen {
+	@include v-btn($bg-brand-bluegreen, $color-brand-bluegreen);
+}
+
+.btn-warning2 {
+	@include v-btn($bg-brand-warning2, $color-brand-warning2);
+}
+
+.btn-yellow {
+	@include v-btn($bg-brand-yellow, $color-brand-yellow);
 }

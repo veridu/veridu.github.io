@@ -67,34 +67,137 @@ class: pricing
 	</header>
 
 	<div class="products-container" >
+		<div>
+			<section class="products--verification">
+				<h4>VERIFICATION</h4>
 
-		<section class="products--verification">
-			<h4 >VERIFICATION</h4>
-			<ul class="products">
-				<li>
-					<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
-						<div class="product__description">Social<br>Media</div>
-						<div class="product__price">FREE</div>
-					</button>
-				</li>
-				<li>
-					<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
-						<div class="product__description">Document<br>Upload</div>
-						<div class="product__price">FREE</div>
-					</button>
-				</li>
-				<li>
-					<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
-						<div class="product__description">Document<br>Verification</div>
-						<div class="product__price">FREE</div>
-					</button>
-				</li>
-			</ul>
+				<ul class="products">
+					<li>
+						<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
+							<div class="product__description">Social Media</div>
+							<div class="product__price">FREE</div>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('media')">
+							<div class="product__description">Document <br>Upload</div>
+							<div class="product__price">FREE</div>
+						</button>
+					</li>
+				</ul>
 
-		</section>
+			</section>
 
+			<section class="products--authentication">
+				<h4>AUTHENTICATION</h4>
+
+				<ul class="products">
+					<li>
+						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('document-authentication')">
+							<div class="product__description">Document<br>Authentication</div>
+							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('email')">
+							<div class="product__description">Email</div>
+							<div class="product__price">FREE</div>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('sms')">
+							<div class="product__description">SMS</div>
+							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('kba')">
+							<div class="product__description">KBA</div>
+							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
+						</button>
+					</li>
+				</ul>
+			</section>
+			<section class="products--credibility">
+				<h4>CREDIBILITY</h4>
+
+				<ul class="products">
+					<li>
+						<button class="btn btn-lightgreen btn-lg" ng-click="cart.addProduct('contact-info')">
+							<div class="product__description">Contact Info</div>
+							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-lightgreen btn-lg" ng-click="cart.addProduct('age')">
+							<div class="product__description">Age</div>
+							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
+						</button>
+					</li>
+				</ul>
+			</section>
+			<section class="products--insight">
+				<h4>INSIGHT</h4>
+
+				<ul class="products">
+					<li>
+						<button class="btn btn-bluegreen btn-lg" ng-click="cart.addProduct('work')">
+							<div class="product__description">Work</div>
+							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-bluegreen btn-lg" ng-click="cart.addProduct('education')">
+							<div class="product__description">Education</div>
+							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
+						</button>
+					</li>
+				</ul>
+			</section>
+			<section class="products--red-flags">
+				<h4>RED FLAGS</h4>
+
+				<ul class="products">
+					<li>
+						<button class="btn btn-warning2 btn-lg" ng-click="cart.addProduct('general-warnings')">
+							<div class="product__description">General<br>Warnings</div>
+							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-warning2 btn-lg" ng-click="cart.addProduct('specific-warnings')">
+							<div class="product__description">Specific Warnings</div>
+							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
+						</button>
+					</li>
+				</ul>
+			</section>
+			<section class="products--red-flags">
+				<h4>DISCOUNTS</h4>
+
+				<ul class="products">
+					<li>
+						<button class="btn btn-yellow btn-lg" ng-click="cart.addProduct('general-warnings')">
+							<div class="product__description">10% Off</div>
+							<div class="product__price">£1000<span class="font-light">/Month</span></div>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-yellow btn-lg" ng-click="cart.addProduct('general-warnings')">
+							<div class="product__description">10% Off</div>
+							<div class="product__price">£1000<span class="font-light">/Month</span></div>
+						</button>
+					</li>
+					<li>
+						<button class="btn btn-yellow btn-lg" ng-click="cart.addProduct('general-warnings')">
+							<div class="product__description">10% Off</div>
+							<div class="product__price">£1000<span class="font-light">/Month</span></div>
+						</button>
+					</li>
+				</ul>
+			</section>
+		</div>
 	</div>
-
 </div>
 
 <script type="text/javascript">
@@ -134,7 +237,7 @@ class: pricing
 			vm.items = [];
 
 			vm.pricePerCheck = {
-				'£': 0.000,
+				'£': 0.038,
 				'€': 0.000,
 				'$': 0.000
 			};

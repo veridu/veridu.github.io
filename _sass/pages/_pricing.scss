@@ -56,10 +56,18 @@
     .products-container {
         @extend .veridu-container;
         padding-bottom: em(100);
+        > div {
+            @include row() ;
+        }
 
         section {
+            @include col(2);
 
-            @include col(3);
+            h4 {
+                font-size: 1.1em;
+                margin-bottom: em(20);
+            }
+
 
             ul.products {
 
@@ -75,12 +83,12 @@
                     button {
                         display: block;
                         position: relative;
-                        height: em(60);
-                        width: 90%;
+                        height: em(55);
+                        width: 100%;
 
                         .product__description {
                             font-weight: 300;
-                            font-size: em(14);
+                            font-size: 0.8em;
                             position: absolute;
                             left: 8.5px;
                             top: 8.5px;
@@ -88,8 +96,9 @@
                         }
                         .product__price {
                             font-weight: 600;
+                            font-size: 0.8em;
                             position: absolute;
-                            bottom: 8.5px;
+                            bottom: 0px;
                             right: 8.5px;
                         }
                     }
