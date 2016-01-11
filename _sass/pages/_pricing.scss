@@ -1,51 +1,27 @@
+.header.pricing {
+
+    @media (min-width: $screen-sm-min) {
+        .menu-content {
+            margin-left: -8.5px !important;
+            margin-right: -8.5px !important;
+        }
+    }
+}
 .page.pricing {
 
     .page-header {
-        background-color: white;
         margin-top: 0;
         padding-top: em(20);
         .header-content {
             @extend .veridu-container;
 
-            h1.page-title {
+            h2.page-title {
                 margin-top: em(20,50);
                 font-size: em(40);
             }
 
-
             .header--left {
-
-                @media (min-width: $screen-sm-min) {
-                    float: left;
-                    width: 40%;
-                }
-            }
-
-            .header--right {
-                margin-top: em(60);
-                float: right;
-                table {
-                    td {
-                        position: relative;
-                        text-align: right;
-                        font-weight: 300;
-
-                        padding: em(5);
-
-                        &.value-td {
-                            font-size: em(30);
-                            > * {
-                                position: relative;
-                                top: -3px;
-                            }
-                        }
-                    }
-                }
-
-                div.v-select {
-                    top: - em(35);
-                    float: right;
-                }
+                @include col(8);
             }
 
         }
@@ -56,57 +32,116 @@
         font-weight: 300;
     }
 
-    .products-container {
+    .plans-wrapper {
         @extend .veridu-container;
         padding-bottom: em(100);
-        > div {
-            @include row() ;
-        }
 
-        section {
-            @include col(2);
-
-            h4 {
-                font-size: 1.1em;
-                margin-bottom: em(20);
+        .plans-container {
+            @include row();
+            .plan__cell, .cell {
+                height: em(125);
+                padding-top: em(10);
+                padding-bottom: em(10);
             }
+            > div.plans-sizes {
+                @include col(6);
 
+                > div {
+                     @include row();
 
-            ul.products {
+                    > div.plan-size  {
+                        @include col(4);
 
-                width: 100%;
-                list-style: none;
-                padding: 0;
-                margin: 0;
+                        .plan__cell {
+                            background-color: #C7E6C9;
+                            color: #1B5E20;
+                            text-align: center;
 
-                > li {
-                    width: 100%;
-                    margin-bottom: em(20);
+                            p.plan-size__label {
+                                font-weight: bold;
+                            }
 
-                    button {
-                        display: block;
-                        position: relative;
-                        height: em(55);
-                        width: 100%;
+                            > div.plan-size__value {
+                                span {
+                                    font-weight: 1em;
+                                    display: inline-block;
+                                }
+                                h2 {
+                                    margin-bottom: 0;
+                                    margin-top: em(10);
+                                    font-weight: bold;
+                                    display: inline-block;
+                                }
+                            }
 
-                        .product__description {
-                            font-weight: 300;
-                            font-size: 0.8em;
-                            position: absolute;
-                            left: 8.5px;
-                            top: 8.5px;
-                            width: 30%;
+                            p.per-month {
+                                margin-bottom: 0;
+                            }
+
+                            &.plan__cell--heading {
+                                h2 {
+                                    margin-top: 0 !important;
+                                    margin-bottom: 0 !important;
+                                }
+
+                                &.plan__cell--heading--low {
+                                    background-color: #A4D6A7;
+                                }
+                                &.plan__cell--heading--medium {
+                                    background-color: #81C784;
+                                }
+                                &.plan__cell--heading--high {
+                                    background-color: #66BA6A;
+                                }
+
+                            }
+
                         }
-                        .product__price {
-                            font-weight: 600;
-                            font-size: 0.8em;
-                            position: absolute;
-                            bottom: 0px;
-                            right: 8.5px;
-                        }
+
                     }
                 }
+            }
+            > div.plans-descriptions {
+                @media (min-width: $screen-sm-min) {
 
+                    @include col(6);
+                    div.cell {
+                        h4 {
+                            font-size: 1.0em;
+                            font-weight: bold;
+                        }
+                        p.plan-description {
+                            font-weight: 300;
+                        }
+                    }
+                    div.cell--separator {
+                        border-bottom: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+
+    .advantages-wrapper {
+        background-color: white;
+        margin-bottom: em(450);
+        padding-bottom: em(60);
+
+        > div.advantages-container {
+            @extend .veridu-container;
+
+            > h2 {
+                margin-top: em(30);
+                margin-bottom: em(20);
+                font-weight: 300;
+                font-size: em(40);
+            }
+
+        }
+
+        .v-list {
+            > li {
+                height: em(225);
             }
         }
     }

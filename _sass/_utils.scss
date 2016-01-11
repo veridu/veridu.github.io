@@ -25,3 +25,20 @@
 	@extend .tablet__gutter;
 	@extend .content-padding;
 }
+
+.v-list {
+	@extend .list-unstyled;
+	@include row();
+
+	> li {
+		@include col(3);
+		margin-bottom: em(15);
+
+		h4 {
+			font-size: 1em;
+			margin-top: 0;
+			margin-bottom: em(10);
+			font-weight: bold;
+		}
+	}
+}

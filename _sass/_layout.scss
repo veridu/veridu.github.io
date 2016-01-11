@@ -21,7 +21,9 @@
     @media (min-width: $screen-sm-min) {
         @include container-fixed();
         max-width: $container-max-width;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
     }
 
     // tablets
@@ -288,7 +290,7 @@ body {
                 @media (min-width: $screen-sm-min) {
                     float: none;
                     margin-left: 0;
-                    width: 100%;
+                    width: inherit;
                 }
 
 				.logo {

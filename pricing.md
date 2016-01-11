@@ -9,197 +9,162 @@ class: pricing
 	<header class="page-header">
 		<div class="header-content">
 			<div class="v-row">
-
 				<div class="header--left">
-					<h1 class="page-title ">
-						Price Calculator
-					</h1>
+					<h2 class="page-title ">
+						Basic Pricing model <span class="visible-xs">explained</span>
+					</h2>
 					<p class="page__description font-light">
-						Create your tailored identity solution to see  the cost.  You'll be pleasantly surprised.
+						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
+					</p>
+				</div>
+			</div>
+		</div>
+	</header>
+	<section class="plans-wrapper">
+		<div class="plans-container">
+			<div class="plans-descriptions">
+				<div class="cell cell--separator">
+					<h4 class="plan-heading">Subscription</h4>
+					<p class="plan-description">
+						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
 					</p>
 				</div>
 
-				<div class="header--right">
-					<div class="checkout-container">
-						<form id="form-checks" name="checks" class="form-cart" onsubmit="submitChecks()">
-							<table>
-								<tr>
-									<td class="text-right"><span class="pricing__option-label">Checks/month:</span></td>
-									<td>
-										<div class="v-select">
-											<ul>
-												<li ng-click="cart.checks = 1000" ng-class="{selected: cart.checks == 1000}">1,000</li>
-												<li ng-click="cart.checks = 2000" ng-class="{selected: cart.checks == 2000}">2,000</li>
-												<li ng-click="cart.checks = 3000" ng-class="{selected: cart.checks == 3000}">3,000</li>
-												<li ng-click="cart.checks = 4000" ng-class="{selected: cart.checks == 4000}">4,000</li>
-												<li ng-click="cart.checks = 5000" ng-class="{selected: cart.checks == 5000}">5,000</li>
-											</ul>
-											<i class="material-icons">&#xE313;</i>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td >
-										<span class="pricing__option-label">Total/month:</span>
-									</td>
-									<td class="value-td">
-										<span ng-bind="(cart.getTotal() | number : 0 )  "></span> <small ng-bind="cart.currency"></small>
-									</td>
-								</tr>
-								<tr>
-									<td >
-										<span class="pricing__option-label">Price/check:</span>
-									</td>
-									<td class="value-td">
-										<span ng-bind="cart.getPricePerCheck()"></span> <small ng-bind="cart.currency"></small>
-									</td>
-								</tr>
-								<tr>
-									<td colspan="2" >
-										<a href="javascript:;">Change currency</a>
-									</td>
-								</tr>
-							</table>
-						</form>
-					</div>
+				<div class="cell cell--separator">
+					<h4 class="plan-heading">Subscription</h4>
+					<p class="plan-description">
+						Verified single source authentication using social networks and online services.
+					</p>
 				</div>
 
+				<div class="cell">
+					<h4 class="plan-heading">Subscription</h4>
+					<p class="plan-description">
+						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
+					</p>
+				</div>
+
+			</div>
+			<div class="plans-sizes">
+				<div>
+
+					<div class="plan-size">
+						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
+							<p class="plan-size__label">Low</p>
+							<div class="plan-size__value">
+								<span>£</span> <h2>25</h2>
+							</div>
+							<p class="per-month">per month</p>
+						</div>
+						<div class="plan__cell ">
+							<div class="plan-size__value">
+								<span>£</span>
+								<h2>0.08</h2>
+							</div>
+							<p class="per-month">per check</p>
+						</div>
+						<div class="plan__cell ">
+							<div class="plan-size__value">
+								<span>£</span>
+								<h2>0.20</h2>
+							</div>
+							<p class="per-month">per check</p>
+						</div>
+					</div>
+					<div class="plan-size">
+						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
+							<p class="plan-size__label">Medium</p>
+							<div class="plan-size__value">
+								<span>£</span><h2>175</h2>
+							</div>
+							<p class="per-month">per month</p>
+						</div>
+						<div class="plan__cell ">
+							<div class="plan-size__value">
+								<span>£</span>
+								<h2>0.05</h2>
+							</div>
+							<p class="per-month">per check</p>
+						</div>
+						<div class="plan__cell ">
+							<div class="plan-size__value">
+								<span>£</span>
+								<h2>0.11</h2>
+							</div>
+							<p class="per-month">per check</p>
+						</div>
+					</div>
+					<div class="plan-size">
+						<div class="plan__cell plan__cell--heading plan__cell--heading--high">
+							<p class="plan-size__label">High</p>
+							<div class="plan-size__value">
+								<span>£</span><h2>1,250</h2>
+							</div>
+							<p class="per-month">per month</p>
+						</div>
+						<div class="plan__cell ">
+							<div class="plan-size__value">
+								<span>£</span>
+								<h2>0.04</h2>
+							</div>
+							<p class="per-month">per check</p>
+						</div>
+						<div class="plan__cell ">
+							<div class="plan-size__value">
+								<span>£</span>
+								<h2>0.07</h2>
+							</div>
+							<p class="per-month">per check</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</section>
+	<section class="advantages-wrapper">
+
+		<div class="advantages-container">
+
+			<h2>What you get</h2>
+
+			<ul class="v-list">
+				<li>
+					<h4>Subscription</h4>
+					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+					<span class="v-tag v-tag--success1">Facebook</span>
+					<span class="v-tag v-tag--success1">Twitter</span>
+					<span class="v-tag v-tag--success1">Google</span>
+					<span class="v-tag v-tag--success1">Paypal</span>
+				</li>
+				<li>
+					<h4>Subscription</h4>
+					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+				</li>
+				<li>
+					<h4>Subscription</h4>
+					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+				</li>
+				<li>
+					<h4>Subscription</h4>
+					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+				</li>
+				<li>
+					<h4>Subscription</h4>
+					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+				</li>
+				<li>
+					<h4>Subscription</h4>
+					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+				</li>
+				<li>
+					<h4>Subscription</h4>
+					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+				</li>
+			</ul>
+
 		</div>
-	</header>
 
-	<div class="products-container" >
-		<div>
-			<section class="products--verification">
-				<h4>VERIFICATION</h4>
-
-				<ul class="products">
-					<li>
-						<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('social-media')" ng-class="{active: cart.hasProduct('social-media')}">
-							<div class="product__description">Social Media</div>
-							<div class="product__price">FREE</div>
-						</button>
-					</li>
-					<li>
-						<button class="btn btn-success1 btn-lg" ng-click="cart.addProduct('document-upload')" ng-class="{active: cart.hasProduct('document-upload')}">
-							<div class="product__description">Document <br>Upload</div>
-							<div class="product__price">FREE</div>
-						</button>
-					</li>
-				</ul>
-
-			</section>
-
-			<section class="products--authentication">
-				<h4>AUTHENTICATION</h4>
-
-				<ul class="products">
-					<li>
-						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('document-authentication')" ng-class="{active: cart.hasProduct('document-authentication')}">
-							<div class="product__description">Document<br>Authentication</div>
-							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
-						</button>
-					</li>
-					<li>
-						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('email')" ng-class="{active: cart.hasProduct('email')}">
-							<div class="product__description">Email</div>
-							<div class="product__price">FREE</div>
-						</button>
-					</li>
-					<li>
-						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('sms')" ng-class="{active: cart.hasProduct('sms')}">
-							<div class="product__description">SMS</div>
-							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
-						</button>
-					</li>
-					<li>
-						<button class="btn btn-success2 btn-lg" ng-click="cart.addProduct('kba')" ng-class="{active: cart.hasProduct('kba')}">
-							<div class="product__description">KBA</div>
-							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
-						</button>
-					</li>
-				</ul>
-			</section>
-			<section class="products--credibility">
-				<h4>CREDIBILITY</h4>
-
-				<ul class="products">
-					<li>
-						<button class="btn btn-lightgreen btn-lg" ng-click="cart.addProduct('contact-info')" ng-class="{active: cart.hasProduct('contact-info')}">
-							<div class="product__description">Contact Info</div>
-							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
-						</button>
-					</li>
-					<li>
-						<button class="btn btn-lightgreen btn-lg" ng-click="cart.addProduct('age')" ng-class="{active: cart.hasProduct('age')}">
-							<div class="product__description">Age</div>
-							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
-						</button>
-					</li>
-				</ul>
-			</section>
-			<section class="products--insight">
-				<h4>INSIGHT</h4>
-
-				<ul class="products">
-					<li>
-						<button class="btn btn-bluegreen btn-lg" ng-click="cart.addProduct('work')" ng-class="{active: cart.hasProduct('work')}">
-							<div class="product__description">Work</div>
-							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
-						</button>
-					</li>
-					<li>
-						<button class="btn btn-bluegreen btn-lg" ng-click="cart.addProduct('education')" ng-class="{active: cart.hasProduct('education')}">
-							<div class="product__description">Education</div>
-							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
-						</button>
-					</li>
-				</ul>
-			</section>
-			<section class="products--red-flags">
-				<h4>RED FLAGS</h4>
-
-				<ul class="products">
-					<li>
-						<button class="btn btn-warning2 btn-lg" ng-click="cart.addProduct('general-warnings')" ng-class="{active: cart.hasProduct('general-warnings')}">
-							<div class="product__description">General<br>Warnings</div>
-							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
-						</button>
-					</li>
-					<li>
-						<button class="btn btn-warning2 btn-lg" ng-click="cart.addProduct('specific-warnings')" ng-class="{active: cart.hasProduct('specific-warnings')}">
-							<div class="product__description">Specific Warnings</div>
-							<div class="product__price"><span ng-bind="cart.getPricePerCheck()"></span> <span ng-bind="cart.currency"></span></div>
-						</button>
-					</li>
-				</ul>
-			</section>
-			<section class="products--red-flags">
-				<h4>DISCOUNTS</h4>
-
-				<ul class="products">
-					<li>
-						<button class="btn btn-yellow btn-lg">
-							<div class="product__description">10% Off</div>
-							<div class="product__price">£1000<span class="font-light">/Month</span></div>
-						</button>
-					</li>
-					<li>
-						<button class="btn btn-yellow btn-lg">
-							<div class="product__description">10% Off</div>
-							<div class="product__price">£1000<span class="font-light">/Month</span></div>
-						</button>
-					</li>
-					<li>
-						<button class="btn btn-yellow btn-lg">
-							<div class="product__description">10% Off</div>
-							<div class="product__price">£1000<span class="font-light">/Month</span></div>
-						</button>
-					</li>
-				</ul>
-			</section>
-		</div>
-	</div>
+	</section>
 </div>
 
 <script type="text/javascript">

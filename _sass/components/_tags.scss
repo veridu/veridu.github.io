@@ -1,6 +1,6 @@
 // tag styles
 
-.tag {
+.tag, .v-tag {
 	@extend .btn;
 
 	font-size: 0.666em;
@@ -51,4 +51,46 @@
 		background-color: #CE92D7;
 		color: #870E4F;
 	}
+}
+
+@mixin v-tag($bg-color, $color) {
+	background-color: $bg-color;
+	color: $color;
+}
+
+
+.v-tag--primary {
+	@include v-tag($brand-primary, $brand-primary-border-color);
+}
+
+.v-tag--blue {
+	@include v-tag($bg-brand-blue, $color-brand-blue);
+}
+
+.v-tag--success1 {
+	@include v-tag($bg-brand-success1, $color-brand-success1);
+}
+.v-tag--lightblue {
+	@include v-tag($bg-brand-lightblue, $color-brand-lightblue);
+}
+.v-tag--success2 {
+	@include v-tag($bg-brand-success2, $color-brand-success2);
+}
+.v-tag--purple {
+	@include v-tag($bg-brand-purple, $color-brand-purple);
+}
+.v-tag--lightgreen {
+	@include v-tag($bg-brand-lightgreen, $color-brand-lightgreen);
+}
+
+.v-tag--bluegreen {
+	@include v-tag($bg-brand-bluegreen, $color-brand-bluegreen);
+}
+
+.v-tag--warning2 {
+	@include v-tag($bg-brand-warning2, $color-brand-warning2);
+}
+
+.v-tag--yellow {
+	@include v-tag($bg-brand-yellow, $color-brand-yellow);
 }
