@@ -11,10 +11,10 @@ class: pricing
 			<div class="v-row">
 				<div class="header--left">
 					<h2 class="page-title ">
-						Basic Pricing model <span class="visible-xs">explained</span>
+						Low-cost global KYC <span class="visible-xs">explained</span>
 					</h2>
 					<p class="page__description font-light">
-						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
+						We believe every internet business, no matter how small, should have cost-effective access to enterprise grade identity, authentication, insight and reputation tools to grow their businesses globally.
 					</p>
 				</div>
 			</div>
