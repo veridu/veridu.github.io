@@ -14,8 +14,11 @@
 
 
             .header--left {
-                float: left;
-                width: 40%;
+
+                @media (min-width: $screen-sm-min) {
+                    float: left;
+                    width: 40%;
+                }
             }
 
             .header--right {

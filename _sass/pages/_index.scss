@@ -111,7 +111,7 @@ section.verification-container {
 			object-fit: fill;
 		}
 	}
-	
+
 	@media (min-width: $screen-sm-min) {
 		height: auto ;
 	}
@@ -407,6 +407,9 @@ section.verification-container {
 						font-size: em(15);
 						line-height: em(20);
 						height: em(87);
+						&.btn {
+							color: white !important
+						}
 					}
 				}
 			}

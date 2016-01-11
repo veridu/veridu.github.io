@@ -31,6 +31,8 @@ class: pricing
 												<li ng-click="cart.checks = 1000" ng-class="{selected: cart.checks == 1000}">1,000</li>
 												<li ng-click="cart.checks = 2000" ng-class="{selected: cart.checks == 2000}">2,000</li>
 												<li ng-click="cart.checks = 3000" ng-class="{selected: cart.checks == 3000}">3,000</li>
+												<li ng-click="cart.checks = 4000" ng-class="{selected: cart.checks == 4000}">4,000</li>
+												<li ng-click="cart.checks = 5000" ng-class="{selected: cart.checks == 5000}">5,000</li>
 											</ul>
 											<i class="material-icons">&#xE313;</i>
 										</div>
@@ -54,7 +56,7 @@ class: pricing
 								</tr>
 								<tr>
 									<td colspan="2" >
-										<a href="#">Change currency</a>
+										<a href="javascript:;">Change currency</a>
 									</td>
 								</tr>
 							</table>
