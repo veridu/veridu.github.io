@@ -386,6 +386,10 @@ section.verification-container {
 		padding-top: em(40);
 		min-height: em(300);
 
+		.buttons-container .btn {
+			color: white !important
+		}
+
 		@media (min-width: $screen-sm-min) {
 			@include col(4);
 			@include col-offset(1);
@@ -407,9 +411,6 @@ section.verification-container {
 						font-size: em(15);
 						line-height: em(20);
 						height: em(87);
-						&.btn {
-							color: white !important
-						}
 					}
 				}
 			}

@@ -38,6 +38,7 @@
 	});
 
 	fixedContactForm.submit(function (event) {
+
 		event.preventDefault();
 
 		if (fixedContactButton.hasClass('sent'))
@@ -57,10 +58,8 @@
 				fixedContactButton.addClass('sent');
 				fixedContactContainer.find('.thank-you').toggleClass('animated fadeIn');
 				// sends e-mail
-				_dcq.push(["identify", {
-					email: fixedContactInput.val(),
-					tags: ["Customer", "Website Footer"]
-				}]);
+				this.submit();
+				
 			}
 		} else {
 			// shows the form
@@ -259,7 +258,7 @@
 		function prevSlide() {
 			if (! vm.playSlider)
 				return;
-				
+
 			if (vm.slider.index == 0) {
 				vm.slider.index = 3;
 			} else {

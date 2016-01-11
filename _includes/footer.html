@@ -1,16 +1,17 @@
 <div class="fixed-contact__container">
-	<form action="/" id="fixed-contact-form" method="POST">
+	<form action="https://www.getdrip.com/forms/8939167/submissions" id="fixed-contact-form" method="post" data-drip-embedded-form="8939167" target="_blank">
 		<div class="fixed-contact__input-container">
-			<input id="fixed-contact__input"  type="text" placeholder="Type your email and we'll contact you">
+			<input id="fixed-contact__input" type="email" placeholder="Type your email and we'll contact you" name="fields[email]" value="" />
 			<span class="text-danger">The email provided must be valid.</span>
 		</div>
-		<button type="submit" id="fixed-contact__button" class="btn btn-primary">
+		<button type="submit" id="fixed-contact__button" class="btn btn-primary" data-drip-attribute="sign-up-button">
 			<i class="material-icons hideable">&#xE0E1;</i>
 			<span class="fixed-contact__label hideable">Get in touch</span>
 			<span class="fixed-contact__thank-you animated fadeIn">Thank you! We will get in touch soon!</span>
 		</button>
 	</form>
 </div>
+
 <div id="mobile-indicator" class="visible-xs"></div>
 <footer>
 	<div>
@@ -162,5 +163,5 @@
 	    ga('create', 'UA-47899661-1', 'auto');
 	    ga('send', 'pageview');
 	}
-	
+
 </script>
