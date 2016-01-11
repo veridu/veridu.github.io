@@ -24,21 +24,21 @@ class: pricing
 		<div class="plans-container">
 			<div class="plans-descriptions">
 				<div class="cell cell--separator">
-					<h4 class="plan-heading">Subscription</h4>
+					<h4 class="plan-heading">Monthly Subscription</h4>
 					<p class="plan-description">
 						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
 					</p>
 				</div>
 
 				<div class="cell cell--separator">
-					<h4 class="plan-heading">Subscription</h4>
+					<h4 class="plan-heading">Single Source Verification</h4>
 					<p class="plan-description">
-						Verified single source authentication using social networks and online services.
+						Single source verification and authentication using social networks and online services.
 					</p>
 				</div>
 
 				<div class="cell">
-					<h4 class="plan-heading">Subscription</h4>
+					<h4 class="plan-heading">Multi Source Verification</h4>
 					<p class="plan-description">
 						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
 					</p>
@@ -129,20 +129,32 @@ class: pricing
 
 			<ul class="v-list">
 				<li>
-					<h4>Subscription</h4>
-					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+					<h4>Verification</h4>
+					<p>Verify users globally using social networks, online services and documents. Combine as many sources as you like to achieve the best results.</p>
 					<span class="v-tag v-tag--success1">Facebook</span>
 					<span class="v-tag v-tag--success1">Twitter</span>
 					<span class="v-tag v-tag--success1">Google</span>
 					<span class="v-tag v-tag--success1">Paypal</span>
 				</li>
 				<li>
-					<h4>Subscription</h4>
-					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+					<h4>Verification</h4>
+					<p>
+						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
+					</p>
+					<span class="v-tag v-tag--yellow">Facebook</span>
+					<span class="v-tag v-tag--yellow">Twitter</span>
+					<span class="v-tag v-tag--yellow">Google</span>
+					<span class="v-tag v-tag--yellow">Paypal</span>
 				</li>
 				<li>
-					<h4>Subscription</h4>
-					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+					<h4>Authentication</h4>
+					<p>
+						Use traditional two-factor authentication or our dynamic knowledge based authentication to make sure you are dealing with the right person.
+					</p>
+					<span class="v-tag v-tag--success2">Facebook</span>
+					<span class="v-tag v-tag--success2">Twitter</span>
+					<span class="v-tag v-tag--success2">Google</span>
+					<span class="v-tag v-tag--success2">Paypal</span>
 				</li>
 				<li>
 					<h4>Subscription</h4>
