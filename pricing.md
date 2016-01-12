@@ -4,14 +4,14 @@ description: Create your tailored identity solution to see  the cost.  You'll be
 layout: blank
 class: pricing
 ---
-<div id="pricing-wrapper">
+<div id="pricing-wrapper" ng-controller="PricingCtrl as ctrl">
 
 	<header class="page-header">
 		<div class="header-content">
 			<div class="v-row">
 				<div class="header--left">
 					<h2 id="low-cost-section" class="page-title ">
-						Low-cost. Global KYC. <span class="visible-xs">explained</span>
+						Low-cost. <div class="clearfix visible-xs"></div> Global KYC. 
 					</h2>
 					<p class="page__description font-light">
 						We believe every internet business, no matter how small, should have cost-effective access to enterprise grade identity, authentication, insight and reputation tools to grow their businesses globally.
@@ -25,22 +25,25 @@ class: pricing
 			<div class="plans-descriptions">
 				<div class="cell cell--separator">
 					<h4 class="plan-heading">Monthly Subscription</h4>
-					<p class="plan-description">
-						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
+					<p class="plan-description" ng-class="{'mobile-vis': msub}">
+						<span>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</span>
+						<a href="javascript:;" class="black-link"  ng-click="msub = !msub" >({ msub ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>
 
 				<div class="cell cell--separator">
 					<h4 class="plan-heading">Single Source Verification</h4>
-					<p class="plan-description">
-						Single source verification and authentication using social networks and online services.
+					<p class="plan-description" ng-class="{'mobile-vis': ssv}">
+						<span >Single source verification and authentication using social networks and online services.</span>
+						<a href="javascript:;" class="black-link"  ng-click="ssv = !ssv" >({ ssv ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>
 
 				<div class="cell">
 					<h4 class="plan-heading">Multi Source Verification</h4>
-					<p class="plan-description">
-						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
+					<p class="plan-description" ng-class="{'mobile-vis': msv}">
+						<span>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</span>
+						<a href="javascript:;" class="black-link"  ng-click="msv = !msv" >({ msv ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>
 
@@ -316,6 +319,11 @@ class: pricing
 				currentState = sectionId;
 			}
 
+			ctrl.$inject = ['$scope'];
+			function ctrl($scope) {
+
+			}
+			angular.module('app').controller('PricingCtrl', ctrl);
 
 		})();
 	}

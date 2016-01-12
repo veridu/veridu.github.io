@@ -33,7 +33,10 @@
 
     .page-header {
         margin-top: 0;
-        padding-top: em(50);
+
+		@media (min-width: $screen-sm-min) {
+	        padding-top: em(50);
+		}
 
         .page__description {
             font-size: em(18);
@@ -49,7 +52,9 @@
             }
 
             .header--left {
-                @include col(8);
+				@media (min-width: $screen-sm-min) {
+	                @include col(8);
+				}
             }
 
         }
@@ -67,13 +72,30 @@
             @include row();
 
             .plan__cell, .cell {
-                height: em(125);
+                min-height: em(125);
                 padding-top: em(10);
                 padding-bottom: em(10);
+                @media (min-width: $screen-sm-min) {
+                    height: em(125);
+                }
             }
 
             > div.plans-sizes {
                 @include col(6);
+
+                @media (max-width: $screen-xs-max) {
+					float: left;
+					width: 160px;
+
+                    > div {
+						width: 500px !important;
+
+						> div.plan-size {
+							width: em(151) !important
+						}
+                    }
+
+                }
 
                 > div {
                      @include row();
@@ -136,17 +158,56 @@
                 }
             }
             > div.plans-descriptions {
-                @media (min-width: $screen-sm-min) {
 
-                    @include col(6);
+				float: left;
+				width: calc(100% - 160px);
+
+				@media (min-width: $screen-sm-min) {
+					@include col(6);
+				}
+
+				div.cell {
+
+					p.plan-description {
+						a {
+							display: block;
+							outline: 0;
+						}
+						> span {
+							display: none;
+						}
+
+						&.mobile-vis {
+							a {
+								//display: none;
+								margin-top: 5px;
+							}
+							> span {
+								display: block;
+							}
+						}
+					}
+				}
+
+                @media (min-width: $screen-sm-min) {
                     div.cell {
                         h4 {
                             font-size: 1.0em;
                             font-weight: bold;
                         }
-                        p.plan-description {
-                            font-weight: 300;
-                        }
+
+						p.plan-description {
+							a {
+								display: none;
+							}
+
+							> span {
+								display: block;
+							}
+
+						    font-weight: 300;
+
+						}
                     }
                     div.cell--separator {
                         border-bottom: 1px solid #888;
