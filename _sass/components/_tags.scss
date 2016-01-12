@@ -40,6 +40,7 @@
 		background-color: #9E9E9E
 	}
 
+
 	&.tag--lightbluegreen {
 		background-color: #009687
 	}
@@ -56,6 +57,9 @@
 @mixin v-tag($bg-color, $color) {
 	background-color: $bg-color;
 	color: $color;
+	&:hover {
+		color: $color;
+	}
 }
 
 
@@ -93,4 +97,12 @@
 
 .v-tag--yellow {
 	@include v-tag($bg-brand-yellow, $color-brand-yellow);
+}
+
+.v-tag--orange {
+	@include v-tag($bg-brand-orange, $color-brand-orange);
+}
+
+.v-tag--grey {
+	@include v-tag(#ddd, black);
 }

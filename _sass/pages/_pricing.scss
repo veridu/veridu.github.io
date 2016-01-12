@@ -55,6 +55,18 @@
             h2.page-title {
                 margin-top: em(20,50);
                 font-size: em(40);
+				.global {
+					@extend .text-capitalize;
+				}
+				@media (min-width: $screen-sm-min) {
+					.global {
+						text-transform: none;
+					}
+					.dot {
+						display: none;
+					}
+				}
+
             }
 
             .header--left {
@@ -302,7 +314,7 @@
 
         .v-list {
             > li {
-                height: em(225);
+                height: em(285);
             }
         }
     }

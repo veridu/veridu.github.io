@@ -11,7 +11,7 @@ class: pricing
 			<div class="v-row">
 				<div class="header--left">
 					<h2 id="low-cost-section" class="page-title ">
-						Low-cost <div class="clearfix visible-xs"></div> <span class="text-capitalize">global</span> KYC<span class="visible-xs">.</span>
+						Low-cost<span class="dot">.</span> <div class="clearfix visible-xs"></div> <span class="global">global</span> KYC<span class="dot">.</span>
 					</h2>
 					<p class="page__description font-light">
 						We believe every internet business, no matter how small, should have cost-effective access to enterprise grade identity, authentication, insight and reputation tools to grow their businesses globally.
@@ -24,9 +24,9 @@ class: pricing
 		<div class="plans-container">
 			<div class="plans-descriptions">
 				<div class="cell cell--separator">
-					<h4 class="plan-heading">Monthly Subscription</h4>
+					<h4 class="plan-heading">Subscriptions</h4>
 					<p class="plan-description" ng-class="{'mobile-vis': msub}">
-						<span>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</span>
+						<span>Three subscription levels to pick from depending on your volume of checks.</span>
 						<a href="javascript:;" class="black-link"  ng-click="msub = !msub" >({ msub ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>
@@ -34,7 +34,7 @@ class: pricing
 				<div class="cell cell--separator">
 					<h4 class="plan-heading">Single Source Verification</h4>
 					<p class="plan-description" ng-class="{'mobile-vis': ssv}">
-						<span >Single source verification and authentication using social networks and online services.</span>
+						<span>Verification and authentication using a single social verification method - usually single sign on via Facebook, Google etc.</span>
 						<a href="javascript:;" class="black-link"  ng-click="ssv = !ssv" >({ ssv ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>
@@ -85,14 +85,14 @@ class: pricing
 						<div class="plan__cell ">
 							<div class="plan-size__value">
 								<span>£</span>
-								<h2>0.05</h2>
+								<h2>0.06</h2>
 							</div>
 							<p class="per-month">per check</p>
 						</div>
 						<div class="plan__cell plan__cell--last">
 							<div class="plan-size__value">
 								<span>£</span>
-								<h2>0.11</h2>
+								<h2>0.15</h2>
 							</div>
 							<p class="per-month">per check</p>
 						</div>
@@ -115,7 +115,7 @@ class: pricing
 						<div class="plan__cell plan__cell--last ">
 							<div class="plan-size__value">
 								<span>£</span>
-								<h2>0.07</h2>
+								<h2>0.10</h2>
 							</div>
 							<p class="per-month">per check</p>
 						</div>
@@ -153,46 +153,79 @@ class: pricing
 				<li>
 					<h4>Verification</h4>
 					<p>Verify users globally using social networks, online services and documents. Combine as many sources as you like to achieve the best results.</p>
-					<span class="v-tag v-tag--success1">Facebook</span>
-					<span class="v-tag v-tag--success1">Twitter</span>
-					<span class="v-tag v-tag--success1">Google</span>
-					<span class="v-tag v-tag--success1">Paypal</span>
-				</li>
-				<li>
-					<h4>Verification</h4>
-					<p>
-						Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.
-					</p>
 					<span class="v-tag v-tag--yellow">Facebook</span>
+					<span class="v-tag v-tag--yellow">Google+</span>
+					<span class="v-tag v-tag--yellow">LinkedIn</span>
 					<span class="v-tag v-tag--yellow">Twitter</span>
-					<span class="v-tag v-tag--yellow">Google</span>
 					<span class="v-tag v-tag--yellow">Paypal</span>
+					<span class="v-tag v-tag--yellow">Amazon</span>
+					<span class="v-tag v-tag--yellow">Document Upload</span>
+					<span class="v-tag v-tag--yellow">...</span>
 				</li>
 				<li>
 					<h4>Authentication</h4>
 					<p>
 						Use traditional two-factor authentication or our dynamic knowledge based authentication to make sure you are dealing with the right person.
 					</p>
-					<span class="v-tag v-tag--success2">Facebook</span>
-					<span class="v-tag v-tag--success2">Twitter</span>
-					<span class="v-tag v-tag--success2">Google</span>
-					<span class="v-tag v-tag--success2">Paypal</span>
+					<span class="v-tag v-tag--orange">Dynamic KBA</span>
+					<span class="v-tag v-tag--orange">Email 2FA</span>
+					<span class="v-tag v-tag--orange">SMS 2FA</span>
+					<span class="v-tag v-tag--orange">...</span>
 				</li>
 				<li>
-					<h4>Subscription</h4>
-					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+					<h4>Credibility Scores</h4>
+					<p>
+						Analyse an individual’s digital footprint, using our proprietary and sophisticated algorithms, to verify their identity credibility in real-time.
+					</p>
+					<span class="v-tag v-tag--success1">Time to fake</span>
+					<span class="v-tag v-tag--success1">Contact info</span>
+					<span class="v-tag v-tag--success1">Age</span>
+					<span class="v-tag v-tag--success1">Work</span>
+					<span class="v-tag v-tag--success1">Education</span>
+					<span class="v-tag v-tag--success1">...</span>
 				</li>
 				<li>
-					<h4>Subscription</h4>
-					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+					<h4>Insight</h4>
+					<p>
+						Gather pre-transaction insight the moment a user signs up to your site, based on configurable scorecards that listen for what’s important to you.
+					</p>
+					<span class="v-tag v-tag--success2">Ability to influence</span>
+					<span class="v-tag v-tag--success2">Frequent traveler</span>
+					<span class="v-tag v-tag--success2">...</span>
 				</li>
 				<li>
-					<h4>Subscription</h4>
-					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+					<h4>Warnings</h4>
+					<p>
+						Be alerted to any potential issues - we will flag any warning signals we pick up in the data we collect.
+					</p>
+					<span class="v-tag v-tag--warning2">Empty profile</span>
+					<span class="v-tag v-tag--warning2">Known fake</span>
+					<span class="v-tag v-tag--warning2">Silly name</span>
+					<span class="v-tag v-tag--warning2">Celebrity name</span>
+					<span class="v-tag v-tag--warning2">...</span>
+
 				</li>
 				<li>
-					<h4>Subscription</h4>
-					<p>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</p>
+					<h4>Decision gates</h4>
+					<p>
+						Not interested in scores? Just want a decision? Use our decision gates to specify which verification and authentication methods and what threshold a user needs to reach.
+					</p>
+					<span class="v-tag v-tag--bluegreen">+13</span>
+					<span class="v-tag v-tag--bluegreen">+18</span>
+					<span class="v-tag v-tag--bluegreen">+21</span>
+					<span class="v-tag v-tag--bluegreen">Student</span>
+					<span class="v-tag v-tag--bluegreen">...</span>
+				</li>
+				<li>
+					<h4>Integration</h4>
+					<p>
+						Veridu enables you to verify your users with gateways that require no integration, widgets that can be embedded easily or APIs and SDKs that give you full flexibility.
+					</p>
+					<span class="v-tag v-tag--grey">+13</span>
+					<span class="v-tag v-tag--grey">+18</span>
+					<span class="v-tag v-tag--grey">+21</span>
+					<span class="v-tag v-tag--grey">Student</span>
+					<span class="v-tag v-tag--grey">...</span>
 				</li>
 			</ul>
 
