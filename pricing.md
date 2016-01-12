@@ -221,10 +221,10 @@ class: pricing
 					<p>
 						Veridu enables you to verify your users with gateways that require no integration, widgets that can be embedded easily or APIs and SDKs that give you full flexibility.
 					</p>
-					<span class="v-tag v-tag--grey">+13</span>
-					<span class="v-tag v-tag--grey">+18</span>
-					<span class="v-tag v-tag--grey">+21</span>
-					<span class="v-tag v-tag--grey">Student</span>
+					<span class="v-tag v-tag--grey">API</span>
+					<span class="v-tag v-tag--grey">SDK</span>
+					<span class="v-tag v-tag--grey">Widget</span>
+					<span class="v-tag v-tag--grey">Hosted</span>
 					<span class="v-tag v-tag--grey">...</span>
 				</li>
 			</ul>
