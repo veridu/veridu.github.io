@@ -28,11 +28,11 @@
 
 .v-list {
 	@extend .list-unstyled;
-	@include row();
-
+	@extend .clearfix;
+	
 	> li {
 		display: inline-block;
-		
+
 		@media (min-width: $screen-sm-min) {
 			@include col(3);
 		}
