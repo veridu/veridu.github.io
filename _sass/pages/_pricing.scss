@@ -31,6 +31,8 @@
 }
 .page.pricing {
 
+	overflow: hidden;
+	
     .page-header {
         margin-top: 0;
 
@@ -90,8 +92,11 @@
                 @media (max-width: $screen-xs-max) {
 					float: left;
 					width: 160px;
+					position: relative;
 
                     > div {
+						position: absolute;
+
 						width: 500px !important;
 
 						> div.plan-size {
