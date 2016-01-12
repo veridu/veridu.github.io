@@ -221,7 +221,7 @@ class: pricing
 
 			// mobile detection helpers
 			var mbHelper =  $('#mobile-indicator');
-			var mobile = mobile = mbHelper.is(':visible');
+			var mobile = mbHelper.is(':visible');
 
 			// sections height
 			var lowCostHeight, whatYouGetHeight;
@@ -342,18 +342,19 @@ class: pricing
 			function ctrl($scope) {
 				$scope.currentPlan = 0;
 
-				if (mobile) {
-					$scope.nextPlan = function (){
-						$scope.currentPlan = $scope.currentPlan < 2 ? $scope.currentPlan + 1 : 0;
-					}
+				$scope.nextPlan = function (){
+					if (! mobile) return;
+					$scope.currentPlan = $scope.currentPlan < 2 ? $scope.currentPlan + 1 : 0;
+				}
 
-					$scope.prevPlan = function (){
-						$scope.currentPlan = $scope.currentPlan > 0 ? $scope.currentPlan - 1 : 2;
-					}
+				$scope.prevPlan = function (){
+					if (! mobile) return;
+					$scope.currentPlan = $scope.currentPlan > 0 ? $scope.currentPlan - 1 : 2;
+				}
 
-					$scope.showPlan = function (index) {
-						$scope.currentPlan = index;
-					}
+				$scope.showPlan = function (index) {
+					if (! mobile) return;
+					$scope.currentPlan = index;
 				}
 
 			}
