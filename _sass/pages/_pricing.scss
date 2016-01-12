@@ -32,7 +32,7 @@
 .page.pricing {
 
 	overflow: hidden;
-	
+
     .page-header {
         margin-top: 0;
 
@@ -73,6 +73,30 @@
 
     .plans-wrapper {
         @extend .veridu-container;
+		position: relative;
+
+		.mobile-indicators {
+			@extend .visible-xs;
+			position: relative;
+			z-index: 10;
+
+			text-align: center;
+
+			> span {
+				width: 15px;
+				height: 15px;
+				border: 3px solid $brand-primary;
+				border-radius: 50%;
+
+				display: inline-block;
+				cursor: pointer;
+
+				&.active {
+					background-color: $brand-primary;
+				}
+
+			}
+		}
 
         .plans-container {
             @include row();
@@ -84,6 +108,10 @@
                 @media (min-width: $screen-sm-min) {
                     height: em(125);
                 }
+
+				.black-link {
+					border-bottom: 1px solid black;
+				}
             }
 
             > div.plans-sizes {
@@ -96,8 +124,8 @@
 
                     > div {
 						position: absolute;
-
-						width: 500px !important;
+						width: 900px !important;
+						overflow-x: scroll;
 
 						> div.plan-size {
 							width: em(151) !important
@@ -111,6 +139,26 @@
 
                     > div.plan-size  {
                         @include col(4);
+						&.dummy-plan {
+							display: none;
+						}
+
+						@media (max-width: $screen-xs-max) {
+							&.plan-size--not-active {
+
+								display: none;
+
+								&.dummy-plan {
+									display: block;
+								}
+
+								.plan__cell {
+									> * {
+										display: none;
+									}
+								}
+							}
+						}
 
                         .plan__cell {
 
@@ -179,7 +227,7 @@
 
 					p.plan-description {
 						a {
-							display: block;
+							display: inline-block;
 							outline: 0;
 						}
 						> span {
@@ -230,10 +278,10 @@
         background-color: white;
         position: relative;
         z-index: 2;
-        margin-bottom: em(450);
         padding-bottom: em(60);
 
 		@media (min-width: $screen-sm-min) {
+        	margin-bottom: em(450);
 			box-shadow: 0 -2px 2px lighten(grey, 20%);
 		}
 

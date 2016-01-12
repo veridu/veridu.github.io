@@ -11,7 +11,7 @@ class: pricing
 			<div class="v-row">
 				<div class="header--left">
 					<h2 id="low-cost-section" class="page-title ">
-						Low-cost. <div class="clearfix visible-xs"></div> Global KYC. 
+						Low-cost. <div class="clearfix visible-xs"></div> Global KYC.
 					</h2>
 					<p class="page__description font-light">
 						We believe every internet business, no matter how small, should have cost-effective access to enterprise grade identity, authentication, insight and reputation tools to grow their businesses globally.
@@ -51,7 +51,7 @@ class: pricing
 			<div class="plans-sizes">
 				<div>
 
-					<div class="plan-size">
+					<div class="plan-size" ng-class="{'plan-size--not-active' : currentPlan !== 0}">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
 							<p class="plan-size__label">Low</p>
 							<div class="plan-size__value">
@@ -74,7 +74,7 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
-					<div class="plan-size">
+					<div class="plan-size" ng-class="{'plan-size--not-active' : currentPlan !== 1}">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
 							<p class="plan-size__label">Medium</p>
 							<div class="plan-size__value">
@@ -97,7 +97,7 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
-					<div class="plan-size">
+					<div class="plan-size" ng-class="{'plan-size--not-active' : currentPlan !== 2}">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--high">
 							<p class="plan-size__label">High</p>
 							<div class="plan-size__value">
@@ -120,8 +120,27 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
+					<div class="plan-size dummy-plan" ng-class="{'plan-size--not-active' : currentPlan !== 3}">
+						<div class="plan__cell plan__cell--heading plan__cell--heading--low"
+							ng-class="{
+								'plan__cell--heading--low' : currentPlan === 2,
+								'plan__cell--heading--high' : currentPlan === 1,
+								'plan__cell--heading--medium' : currentPlan === 0
+							}"
+							>
+						</div>
+						<div class="plan__cell ">
+						</div>
+						<div class="plan__cell plan__cell--last ">
+						</div>
+					</div>
 				</div>
 			</div>
+		</div>
+		<div class="mobile-indicators">
+			<span ng-class="{active : currentPlan === 0}" ng-click="showPlan(0)"></span>
+			<span ng-class="{active : currentPlan === 1}" ng-click="showPlan(1)"></span>
+			<span ng-class="{active : currentPlan === 2}" ng-click="showPlan(2)"></span>
 		</div>
 	</section>
 	<section class="advantages-wrapper" id="what-you-get-section">
@@ -321,6 +340,21 @@ class: pricing
 
 			ctrl.$inject = ['$scope'];
 			function ctrl($scope) {
+				$scope.currentPlan = 0;
+
+				$scope.nextPlan = function (){
+					$scope.currentPlan = $scope.currentPlan <= 2 ? $scope.currentPlan + 1 : $scope.currentPlan - 1;
+				}
+
+				$scope.prevPlan = function (){
+					$scope.currentPlan = $scope.currentPlan > 0 ? $scope.currentPlan - 1 : $scope.currentPlan + 1;
+				}
+
+				$scope.showPlan = function (index) {
+					console.warn(index);
+
+					$scope.currentPlan = index;
+				}
 
 			}
 			angular.module('app').controller('PricingCtrl', ctrl);

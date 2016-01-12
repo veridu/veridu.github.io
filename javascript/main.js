@@ -136,9 +136,6 @@
 	$(".pricing-submenu a")
 		.click(handleClickToHash);
 
-	$(".dropdown-menu a")
-		.click(handleClickToHash);
-
 	$("#footer-solutions a")
 		.click(handleClickToHash);
 

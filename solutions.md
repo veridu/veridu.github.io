@@ -562,6 +562,9 @@ description: What company doesn't want to know their users better? These are jus
 				}
 			}
 		}
+
+		$(".dropdown-menu a")
+			.click(handleClickToHash);
 	}
 
 	document.addEventListener('DOMContentLoaded', load);
