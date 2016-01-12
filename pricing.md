@@ -4,13 +4,13 @@ description: Create your tailored identity solution to see  the cost.  You'll be
 layout: blank
 class: pricing
 ---
-<div id="pricing-wrapper" ng-controller="CartCtrl as cart">
+<div id="pricing-wrapper">
 
 	<header class="page-header">
 		<div class="header-content">
 			<div class="v-row">
 				<div class="header--left">
-					<h2 class="page-title ">
+					<h2 id="low-cost-section" class="page-title ">
 						Low-cost. Global KYC. <span class="visible-xs">explained</span>
 					</h2>
 					<p class="page__description font-light">
@@ -121,7 +121,7 @@ class: pricing
 			</div>
 		</div>
 	</section>
-	<section class="advantages-wrapper">
+	<section class="advantages-wrapper" id="what-you-get-section">
 
 		<div class="advantages-container">
 
@@ -182,7 +182,142 @@ class: pricing
 <script type="text/javascript">
 
 	function load (){
+		(function  detectCurrentSection() {
 
+			// jQuery query caching
+			var $window =  $(window);
+			var $nav =  $('nav.nav');
+			var $menuItems = $('.menu-content .collapsibleItem');
+			var navHeight = $nav.height();
+			var $menuHeight = $('.menu-content');
+			var $currentState = $('.current-state');
+			var fixed_header = $('nav.nav')[0];
+			var lastScrollPos = $window.scrollTop();
+			var t0, t1;
+			var currentState = $('#submenu-low-cost').text();
+			var $menuContent = $('.menu-content');
+
+			// mobile detection helpers
+			var mbHelper =  $('#mobile-indicator');
+			var mobile = mobile = mbHelper.is(':visible');
+
+			// sections height
+			var lowCostHeight, whatYouGetHeight;
+			getSectionsHeight();
+
+			$window.resize(getSectionsHeight);
+			function getSectionsHeight() {
+
+				mobile = mbHelper.is(':visible');
+				lowCostHeight = 0;
+				whatYouGetHeight =  $('#what-you-get-section').offset().top - 100;
+
+				if (mobile) {
+					$nav.css('min-height', 'auto');
+					$menuContent.css('height', "auto");
+				}
+			}
+
+			$menuItems.addClass('animated');
+			$window.scroll(detect);
+			detect();
+
+			function detect() {
+
+				var scrolled = $window.scrollTop();
+				// detects change on sections offset
+				// updates current state
+				if (scrolled < whatYouGetHeight) {
+					setActiveSection('#submenu-low-cost', $('#submenu-low-cost').text());
+				} else{
+					setActiveSection('#submenu-what-you-get', $('#submenu-what-you-get').text());
+				}
+
+				var scrollT;
+
+				function hideSubmenu() {
+					if (mobile)
+						return;
+					$menuItems.removeClass('fadeIn');
+					$menuItems.addClass('fadeOut');
+					$currentState.css('top', "-2.58em");
+					$nav.css('min-height', "2em");
+					$menuContent.css('height', "2em");
+				}
+
+				function showSubmenu() {
+					if (mobile)
+						return;
+
+					$menuItems.addClass('fadeIn');
+					$menuItems.removeClass('fadeOut');
+					$nav.css('min-height', '6em');
+					$currentState.css('top', "0px");
+				}
+
+				var height = getDocHeight();
+				var dist = $(window).scrollTop() + $(window).height();
+
+				if (height == dist) {
+					setTimeout(function () {
+
+						var height = getDocHeight();
+						var dist = $(window).scrollTop() + $(window).height();
+						if (height == dist) {
+							showSubmenu();
+						}
+
+					}, 100);
+				}
+
+				if (! mobile && scrolled) {
+
+					// check if scrolled up or down
+					if (lastScrollPos < scrolled) {
+						// down
+						if (scrolled > 100) {
+							hideSubmenu();
+						} else {
+							showSubmenu();
+						}
+
+					} else {
+
+						// not on the bottom of the page
+						if (!(dist < height) ) {
+							hideSubmenu();
+						} else {
+							showSubmenu();
+						}
+
+					}
+
+					lastScrollPos = scrolled;
+				} else {
+
+					$currentState.css('top', "0px");
+
+					if (mobile) {
+						$nav.css('min-height', 'auto');
+						$menuContent.css('height', "auto");
+					} else {
+						$nav.css('min-height', navHeight);
+					}
+
+				}
+			}
+
+			function setActiveSection(sectionId, currentStateName) {
+				if (currentState != sectionId) {
+					$('#pricing-submenu').find('a').removeClass('active');
+					$(sectionId).addClass('active');
+					$('#pricing-curent-position').html(currentStateName);
+				}
+				currentState = sectionId;
+			}
+
+
+		})();
 	}
 
 	document.addEventListener('DOMContentLoaded', load);

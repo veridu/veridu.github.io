@@ -12,6 +12,9 @@
 			$this.height($this.height());
 		});
 
+
+	// Fixed email form
+
 	// fixed contact elementsC
 	var fixedContactForm = $('#fixed-contact-form');
 	var fixedContactContainer = $('.fixed-contact__container');
@@ -27,7 +30,6 @@
 	});
 
 	dropdownMenu.find('a').click(toggleMenu);
-
 	var emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 	// hides on ESC
@@ -59,7 +61,7 @@
 				fixedContactContainer.find('.thank-you').toggleClass('animated fadeIn');
 				// sends e-mail
 				this.submit();
-				
+
 			}
 		} else {
 			// shows the form
@@ -97,13 +99,96 @@
 		dropdownMenu.removeClass('visible');
 	}
 
+	// sets landing height to 100%
+	var landingHeight = $(window).height() -  $('.menu').height();
+	var landingSection = $('.landing-section');
+	var sliderProgressCt = $('.slider-progress-container');
+	var landingCards =  $('.md-cards');
+	var menu = $('.menu');
+	var $window = $(window);
+	var mbHelper =  $('#mobile-indicator');
+	var mobile = mbHelper.is(':visible');
 
-	var app = angular.module('app');
+	landingSection.css('height', landingHeight);
+	sliderProgressCt.css('top',  - landingHeight * 0.1);
 
-	app.controller('ContactCtrl', ContactCtrl);
+	$window.resize(adjustHeights);
+	adjustHeights();
 
-	// Contact controller
+	function adjustHeights() {
+		mobile = mbHelper.is(':visible');
+		var landingHeight = $window.height() - menu.height();
+		// minimum height of the landing content for the contents to fit
+		if (landingHeight < 750)
+			landingHeight = 750;
 
+		if (! mobile) {
+			landingSection.css('height', landingHeight);
+		} else {
+			landingSection.css('height', 'auto');
+		}
+
+	}
+
+	$(".solutions-submenu a")
+		.click(handleClickToHash);
+
+	$(".pricing-submenu a")
+		.click(handleClickToHash);
+
+	$(".dropdown-menu a")
+		.click(handleClickToHash);
+
+	$("#footer-solutions a")
+		.click(handleClickToHash);
+
+	// handles submenu clicks
+	function handleClickToHash(event) {
+
+		var id = $(this).attr('data-scrollTo');
+		if (id) {
+			event.preventDefault();
+			var sectionName = id.replace('#','');
+
+			if (mobile && sectionName == 'integration') {
+				id = "#integration-section";
+			}
+
+			$('#solutions-curent-position').html(this.innerHTML);
+			$('#pricing-curent-position').html(this.innerHTML);
+
+			scrollToHash(id, 500, mobile);
+		}
+	}
+
+	function scrollToHash (hash, speed, mobile) {
+
+		var overrideOffsets =  {
+			'#integration-section' : 20,
+			'#what-you-get-section' : 0,
+			'#low-cost' : 0
+		};
+
+		var offset = overrideOffsets[hash];
+
+		if (offset !== undefined)
+			var _off  = offset;
+		else
+			var _off = mobile ? 240 : 280;
+
+		if (! speed) speed = 500;
+		if (hash == '#integration-section') {
+			_off = 20;
+		}
+
+		$('html, body').animate({
+			scrollTop: ($(hash).offset().top - _off)
+		}, speed);
+	}
+
+	// controllers
+
+	angular.module('app').controller('AppCtrl', AppCtrl);
 	ContactCtrl.$inject = ['$scope'];
 	function ContactCtrl ($scope) {
 
@@ -142,55 +227,6 @@
 		}
 
 	}
-
-
-	if (window.location.hash) {
-		scrollToHash(window.location.hash, 1000);
-	}
-
-	function scrollToHash (hash, speed) {
-		if (! speed) speed = 2000;
-
-		if ($(hash).offset()) {
-			$('html, body').animate({
-				scrollTop: ($(hash).offset().top - 120)
-			}, 2000);
-		}
-	}
-
-	// sets landing height to 100%
-
-	var landingHeight = $(window).height() -  $('.menu').height();
-	var landingSection = $('.landing-section');
-	var sliderProgressCt = $('.slider-progress-container');
-	var landingCards =  $('.md-cards');
-	var menu = $('.menu');
-	var $window = $(window);
-	var mbHelper =  $('#mobile-indicator');
-	var mobile = mbHelper.is(':visible');
-
-	landingSection.css('height', landingHeight);
-	sliderProgressCt.css('top',  - landingHeight * 0.1);
-
-	$window.resize(adjustHeights);
-	adjustHeights();
-
-	function adjustHeights() {
-		mobile = mbHelper.is(':visible');
-		var landingHeight = $window.height() - menu.height();
-		// minimum height of the landing content for the contents to fit
-		if (landingHeight < 750)
-			landingHeight = 750;
-
-		if (! mobile) {
-			landingSection.css('height', landingHeight);
-		} else {
-			landingSection.css('height', 'auto');
-		}
-
-	}
-
-	angular.module('app').controller('AppCtrl', AppCtrl);
 
 	AppCtrl.$inject = ['$scope', 'Widget', 'Auth', 'Veridu'];
 	function AppCtrl ($scope, Widget, Auth, Veridu) {
@@ -499,3 +535,14 @@
 	(new WoW).init();
 
 })($,WOW);
+
+// globals
+
+window.getDocHeight =  function (){
+	var D = document;
+	return Math.max(
+		D.body.scrollHeight, D.documentElement.scrollHeight,
+		D.body.offsetHeight, D.documentElement.offsetHeight,
+		D.body.clientHeight, D.documentElement.clientHeight
+	);
+}

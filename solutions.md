@@ -348,7 +348,6 @@ description: What company doesn't want to know their users better? These are jus
 		function getSectionsHeight() {
 
 			resizeContainers();
-
 			mobile = mbHelper.is(':visible');
 			integrationsHeight = $('#integration-section').offset().top - 650;
 
@@ -377,7 +376,6 @@ description: What company doesn't want to know their users better? These are jus
 			$menuItems.addClass('animated');
 			$window.scroll(detect);
 			detect();
-			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
 
 			function detect() {
 
@@ -386,18 +384,20 @@ description: What company doesn't want to know their users better? These are jus
 				// detects change on sections offset
 				// updates current state
 				if (scrolled < clientsParntersHeight) {
-					setActiveSection('#submenu-sectors', 'SECTORS');
+					setActiveSection('#submenu-sectors', $('#submenu-sectors').text());
 				} else{
 					if(scrolled < integrationsHeight - 100) {
-						setActiveSection('#submenu-clients-partners', 'CLIENTS & PARTNERS');
+						setActiveSection('#submenu-clients-partners', $('#submenu-clients-partners').text());
 					} else {
-						setActiveSection('#submenu-integration', 'INTEGRATION');
+						setActiveSection('#submenu-integration', $('#submenu-integration').text());
 					}
 				}
 
 				var scrollT;
 
 				function hideSubmenu() {
+					if (mobile)
+						return;
 					$menuItems.removeClass('fadeIn');
 					$menuItems.addClass('fadeOut');
 					$currentState.css('top', "-2.58em");
@@ -406,6 +406,8 @@ description: What company doesn't want to know their users better? These are jus
 				}
 
 				function showSubmenu() {
+					if (mobile)
+						return;
 					$menuItems.addClass('fadeIn');
 					$menuItems.removeClass('fadeOut');
 					$nav.css('min-height', '6em');
@@ -560,56 +562,6 @@ description: What company doesn't want to know their users better? These are jus
 				}
 			}
 		}
-
-		function getDocHeight() {
-		    var D = document;
-		    return Math.max(
-		        D.body.scrollHeight, D.documentElement.scrollHeight,
-		        D.body.offsetHeight, D.documentElement.offsetHeight,
-		        D.body.clientHeight, D.documentElement.clientHeight
-		    );
-		}
-
-		$(".solutions-submenu a")
-			.click(handleScroll);
-
-		$(".dropdown-menu a")
-			.click(handleScroll);
-
-		$("#footer-solutions a")
-			.click(handleScroll);
-
-		// handles submenu clicks
-		function handleScroll(event) {
-
-			var id = $(this).attr('data-scrollTo');
-			if (id) {
-				event.preventDefault();
-				var sectionName = id.replace('#','');
-
-				if (mobile && sectionName == 'integration') {
-					id = "#integration-section";
-				}
-
-				$('#solutions-curent-position').html(this.innerHTML);
-				scrollToHash(id, 500, mobile);
-			}
-		}
-
-	}
-
-
-	function scrollToHash (hash, speed, mobile) {
-
-		if (! speed) speed = 500;
-		var offset = mobile ? 240 : 280;
-		if (hash == '#integration-section') {
-			offset = 20;
-		}
-
-		$('html, body').animate({
-			scrollTop: ($(hash).offset().top - offset)
-		}, speed);
 	}
 
 	document.addEventListener('DOMContentLoaded', load);

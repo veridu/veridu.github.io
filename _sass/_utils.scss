@@ -42,3 +42,27 @@
 		}
 	}
 }
+
+.responsive-logo {
+	position: relative;
+	z-index: 10;
+
+	.veridu-img {
+		display: none;
+	}
+
+	.id-img {
+		display: inline-block;
+	}
+
+	@media (min-width: $screen-sm-min) {
+
+		.veridu-img {
+			display: inline-block;
+		}
+
+		.id-img {
+			display: none;
+		}
+	}
+}

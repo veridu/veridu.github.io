@@ -6,50 +6,15 @@
 // styles of the solution page
 .header.solutions {
 
-	nav.nav {
-		-webkit-transition: all .45s ease-out;
-		-moz-transition: all .45s ease-out;
-		-ms-transition: all .45s ease-out;
-		-o-transition: all .45s ease-out;
-		transition: all .45s ease-out;
-	}
-
 	.signin__container--sm.visible{
 		margin-top: em(50);
 	}
 
 	.logo {
-
-		position: relative;
-		z-index: 10;
-
-		.veridu-img {
-			display: none;
-		}
-
-		.id-img {
-			display: inline-block;
-		}
-
-		@media (min-width: $screen-sm-min) {
-
-			.veridu-img {
-				display: inline-block;
-			}
-
-			.id-img {
-				display: none;
-			}
-		}
+		@extend .responsive-logo;
 	}
 
 	.menu-content {
-
-		-webkit-transition: all .45s ease-out;
-		-moz-transition: all .45s ease-out;
-		-ms-transition: all .45s ease-out;
-		-o-transition: all .45s ease-out;
-		transition: all .45s ease-out;
 
 		.menu__links__md {
 			.sign-in-link {
@@ -59,17 +24,11 @@
 		}
 
 		.current-state {
-			position: relative;
-			top: 5px;
-			-webkit-transition: top .45s ease-out;
-	 	    -moz-transition: top .45s ease-out;
-		    -ms-transition: top .45s ease-out;
-		    -o-transition: top .45s ease-out;
-	        transition: top .45s ease-out;
-			ul {
+			> ul.solutions-submenu {
 				position: relative;
 				top: 3px;
 				background: transparent !important;
+				display: inline-block;
 			}
 		}
 
@@ -89,7 +48,6 @@
 
 				.current-state {
 
-					display: inline-block;
 					padding-left: 0;
 					margin-top: 0;
 
@@ -103,100 +61,6 @@
 
 		}
 
-		.current-state {
-
-			display: inline-block;
-			margin-top: em(3);
-
-			@media (min-width: $screen-sm-min) {
-				@include clearfix();
-				display: block;
-				margin-top: em(5);
-				padding-left: em(145);
-
-			}
-
-			.solutions-submenu {
-
-				background: white;
-				font-weight: 400;
-				padding: 0;
-				margin-left: 15px;
-				margin-bottom: 0;
-				display: inline-block;
-
-				@media (min-width: $screen-sm-min) {
-					margin-bottom: 0;
-					margin-top: em(4);
-				}
-
-				li {
-					a {
-						text-decoration: none;
-						outline: 0;
-
-						&.active {
-							font-weight: bold;
-						}
-					}
-
-					i {
-						position: relative;
-						top: 2px;
-						left: -3px;
-						visibility: hidden;
-					}
-
-					&:first-of-type {
-						display: block;
-						font-weight: bold;
-					}
-
-					&.selected {
-						font-weight: bold;
-						i {
-							visibility: visible;
-						}
-
-					}
-					display: none;
-
-					@media (min-width: $screen-sm-min) {
-						display: inline-block;
-						font-weight: 400;
-						margin-right: em(30);
-
-						a.active {
-							font-weight: bold;
-						}
-
-						&:first-of-type {
-							display: none !important;
-						}
-						i {
-							display: none !important;
-						}
-					}
-				}
-
-				&:hover {
-
-					@media (max-width: $screen-xs-max) {
-						li {
-							display: block !important;
-							&:last-of-type {
-
-								}
-							&:first-of-type {
-								display: none !important;
-							}
-						}
-					}
-				}
-				list-style: none;
-			}
-
-			}
 	}
 }
 
