@@ -6,12 +6,19 @@
             margin-right: -8.5px !important;
         }
     }
+
 }
 .page.pricing {
 
     .page-header {
         margin-top: 0;
         padding-top: em(20);
+
+        .page__description {
+            font-size: em(18);
+            font-weight: 400 !important;
+        }
+
         .header-content {
             @extend .veridu-container;
 
@@ -34,15 +41,16 @@
 
     .plans-wrapper {
         @extend .veridu-container;
-        padding-bottom: em(100);
 
         .plans-container {
             @include row();
+
             .plan__cell, .cell {
                 height: em(125);
                 padding-top: em(10);
                 padding-bottom: em(10);
             }
+
             > div.plans-sizes {
                 @include col(6);
 
@@ -53,9 +61,14 @@
                         @include col(4);
 
                         .plan__cell {
+
                             background-color: #C7E6C9;
                             color: #1B5E20;
                             text-align: center;
+
+                            &.plan__cell--last {
+                                height: em(190);
+                            }
 
                             p.plan-size__label {
                                 font-weight: bold;
@@ -124,8 +137,11 @@
 
     .advantages-wrapper {
         background-color: white;
+        position: relative;
+        z-index: 2;
         margin-bottom: em(450);
         padding-bottom: em(60);
+        box-shadow: 0 -1px 3px lighten(grey, 10%);
 
         > div.advantages-container {
             @extend .veridu-container;
