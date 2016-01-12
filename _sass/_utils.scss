@@ -31,7 +31,12 @@
 	@include row();
 
 	> li {
-		@include col(3);
+		display: inline-block;
+		
+		@media (min-width: $screen-sm-min) {
+			@include col(3);
+		}
+
 		margin-bottom: em(15);
 
 		h4 {
