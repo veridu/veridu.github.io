@@ -29,7 +29,7 @@
 .v-list {
 	@extend .list-unstyled;
 	@extend .clearfix;
-	
+
 	> li {
 		display: inline-block;
 
@@ -70,4 +70,58 @@
 			display: none;
 		}
 	}
+}
+
+
+@media (max-width: $screen-xs-max) {
+
+	@-webkit-keyframes fadeOutMobile {
+	  from {
+	    opacity: 1;
+	  }
+
+	  100% {
+	    opacity: 0;
+	  }
+	}
+
+	@keyframes fadeOutMobile {
+	  from {
+	    opacity: 1;
+	  }
+
+	  100% {
+	    opacity: 0;
+	  }
+	}
+
+	@-webkit-keyframes fadeInMobile {
+	  from {
+	    opacity: 0;
+	  }
+
+	  100% {
+	    opacity: 1;
+	  }
+	}
+
+	@keyframes fadeInMobile {
+	  from {
+	    opacity: 0;
+	  }
+
+	  100% {
+	    opacity: 1;
+	  }
+	}
+}
+
+.fadeOutMobile {
+  -webkit-animation-name: fadeOutMobile;
+  animation-name: fadeOutMobile;
+}
+
+.fadeInMobile {
+  -webkit-animation-name: fadeInMobile;
+  animation-name: fadeInMobile;
 }

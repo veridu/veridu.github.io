@@ -92,7 +92,8 @@
 </footer>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-touch.min.js"></script>
 <script type="text/javascript" src="bower_components/wow/dist/wow.min.js"></script>
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu.min.js"></script>
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu-ui.min.js"></script>
@@ -111,7 +112,7 @@
 		};
 	}
 
-	var app = angular.module('app', []).config(function($interpolateProvider){
+	var app = angular.module('app', ['ngTouch']).config(function($interpolateProvider){
 		$interpolateProvider.startSymbol('({').endSymbol('})');
 	});
 

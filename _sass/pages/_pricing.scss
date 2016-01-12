@@ -139,9 +139,12 @@
 
                     > div.plan-size  {
                         @include col(4);
+						@extend .animated;
+
 						&.dummy-plan {
 							display: none;
 						}
+
 
 						@media (max-width: $screen-xs-max) {
 							&.plan-size--not-active {
