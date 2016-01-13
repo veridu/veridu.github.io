@@ -13,6 +13,12 @@
 }
 
 
+header.index {
+    .current-state {
+        display: none !important;
+    }
+}
+
 .menu-content {
 
 	-webkit-transition: all .45s ease-out;

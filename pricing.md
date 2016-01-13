@@ -64,14 +64,14 @@ class: pricing
 								<span>£</span>
 								<h2>0.08</h2>
 							</div>
-							<p class="per-month">per check</p>
+							<p class="per-month">per user</p>
 						</div>
 						<div class="plan__cell plan__cell--last ">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.20</h2>
 							</div>
-							<p class="per-month">per check</p>
+							<p class="per-month">per user</p>
 						</div>
 					</div>
 					<div class="plan-size plan-size--not-active" id="plan-1" >
@@ -87,14 +87,14 @@ class: pricing
 								<span>£</span>
 								<h2>0.06</h2>
 							</div>
-							<p class="per-month">per check</p>
+							<p class="per-month">per user</p>
 						</div>
 						<div class="plan__cell plan__cell--last">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.15</h2>
 							</div>
-							<p class="per-month">per check</p>
+							<p class="per-month">per user</p>
 						</div>
 					</div>
 					<div class="plan-size plan-size--not-active" id="plan-2">
@@ -110,14 +110,14 @@ class: pricing
 								<span>£</span>
 								<h2>0.04</h2>
 							</div>
-							<p class="per-month">per check</p>
+							<p class="per-month">per user</p>
 						</div>
 						<div class="plan__cell plan__cell--last ">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.10</h2>
 							</div>
-							<p class="per-month">per check</p>
+							<p class="per-month">per user</p>
 						</div>
 					</div>
 					<div class="plan-size dummy-plan plan-size--not-active">

@@ -469,7 +469,7 @@ section.veridu-list {
 	}
 
 	&.md-cards {
-		min-height: em(450);
+		min-height: em(350);
 		@include clearfix();
 		clear: both;
 		@extend .tablet__gutter;
@@ -751,7 +751,7 @@ section.partners-quotes {
 
 	@media (min-width: $screen-sm-min) {
 
-		padding-bottom: em(135);
+		padding-bottom: em(110);
 		padding-top: 0;
 		position: relative;
 		top: -40px;

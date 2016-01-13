@@ -119,8 +119,8 @@
 		mobile = mbHelper.is(':visible');
 		var landingHeight = $window.height() - menu.height();
 		// minimum height of the landing content for the contents to fit
-		if (landingHeight < 750)
-			landingHeight = 750;
+		if (landingHeight < 900)
+			landingHeight = 900;
 
 		if (! mobile) {
 			landingSection.css('height', landingHeight);
@@ -426,7 +426,7 @@
 					hours: 1963,
 					hoursPercent: 70,
 					name: 'Jonathan Walsh',
-					namePercent: 58,
+					namePercent: 68,
 					img: 'img/customer.jpeg',
 					imgStyle:'background-size: auto',
 					imgMdStyle: '',
@@ -457,12 +457,12 @@
 					img: 'img/candidate.jpeg',
 					imgStyle:'background-size: auto',
 					imgMdStyle:'',
-					namePercent: 68,
+					namePercent: 62,
 					sex: 'Works at Veridu Ltd.',
 					sexPercent: 72,
 					verified: false,
 					birth: 'james@veridu.com',
-					birthPercent: 39
+					birthPercent: 79
 				},
 				{
 					hours: 3563,

@@ -29,6 +29,12 @@
 				padding: em(23) 0;
 				width: 100%;
 
+				&:disabled {
+					background-color: $brand-primary-border-color !important;
+					border-color: $brand-primary-border-color !important;
+					border-width: 2px !important
+				}
+
 			}
 		}
 
