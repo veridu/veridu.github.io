@@ -51,7 +51,7 @@ class: pricing
 			<div class="plans-sizes">
 				<div>
 
-					<div class="plan-size" ng-class="currentPlan !== 0 ? 'plan-size--not-active' :'slideInRightMobile'">
+					<div class="plan-size" id="plan-0">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
 							<p class="plan-size__label">Low</p>
 							<div class="plan-size__value">
@@ -74,7 +74,7 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
-					<div class="plan-size" ng-class="currentPlan !== 1 ? 'plan-size--not-active ' :'slideInRightMobile'">
+					<div class="plan-size" id="plan-1" >
 						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
 							<p class="plan-size__label">Medium</p>
 							<div class="plan-size__value">
@@ -97,7 +97,7 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
-					<div class="plan-size" ng-class="currentPlan !== 2 ? 'plan-size--not-active ' :'slideInRightMobile'">
+					<div class="plan-size" id="plan-2">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--high">
 							<p class="plan-size__label">High</p>
 							<div class="plan-size__value">
@@ -309,18 +309,39 @@ class: pricing
 
 				$scope.nextPlan = function (){
 					if (! mobile) return;
-					$scope.currentPlan = $scope.currentPlan < 2 ? $scope.currentPlan + 1 : 0;
+					var nextIndex = $scope.currentPlan < 2 ? $scope.currentPlan + 1 : 0;
+					animate($scope.currentPlan, nextIndex, 'forward');
+					$scope.currentPlan = nextIndex;
 				}
 
 				$scope.prevPlan = function (){
 					if (! mobile) return;
-					$scope.currentPlan = $scope.currentPlan > 0 ? $scope.currentPlan - 1 : 2;
+					var nextIndex =  $scope.currentPlan > 0 ? $scope.currentPlan - 1 : 2;
+					animate($scope.currentPlan, nextIndex, 'backwards');
+					$scope.currentPlan = nextIndex;
 				}
 
 				$scope.showPlan = function (index) {
 					if (! mobile) return;
+					animate($scope.currentPlan, index, 'forward');
 					$scope.currentPlan = index;
 				}
+
+				function animate(lastIndex, index, d) {
+					var pId = '#plan-' + index;
+					var lpId = '#plan-' + lastIndex;
+
+					$('.plan-size').addClass('plan-size--not-active');
+					$('.plan-size').removeClass('slideInRight fadeIn');
+					$(pId).removeClass('plan-size--not-active');
+
+					if (d == 'forward') {
+						$(pId).addClass('slideInRight');
+					} else {
+						$(pId).addClass('slideInRight');
+					}
+				}
+
 
 			}
 			angular.module('app').controller('PricingCtrl', ctrl);

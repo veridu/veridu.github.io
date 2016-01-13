@@ -150,10 +150,14 @@
                     > div {
 						position: absolute;
 						width: 900px !important;
-						overflow-x: scroll;
 
 						> div.plan-size {
-							width: em(151) !important
+							width: em(151) !important;
+
+							&.slideInRightMobile {
+								display: block !important
+							}
+
 						}
                     }
 
