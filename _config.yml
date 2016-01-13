@@ -14,4 +14,5 @@ sass:
 # Build settings
 markdown: kramdown
 # Gems
-gems: []
+gems:
+  - jekyll-sitemap
