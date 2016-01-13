@@ -51,7 +51,7 @@ class: pricing
 			<div class="plans-sizes">
 				<div>
 
-					<div class="plan-size" ng-class="currentPlan !== 0 ? 'plan-size--not-active fadeOutMobile' :'fadeInMobile'">
+					<div class="plan-size" ng-class="currentPlan !== 0 ? 'plan-size--not-active fadeOutLeft' :'slideInRight'">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
 							<p class="plan-size__label">Low</p>
 							<div class="plan-size__value">
@@ -74,7 +74,7 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
-					<div class="plan-size" ng-class="currentPlan !== 1 ? 'plan-size--not-active fadeOutMobile' :'fadeInMobile'">
+					<div class="plan-size" ng-class="currentPlan !== 1 ? 'plan-size--not-active fadeOutLeft' :'slideInRight'">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
 							<p class="plan-size__label">Medium</p>
 							<div class="plan-size__value">
@@ -97,7 +97,7 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
-					<div class="plan-size" ng-class="currentPlan !== 2 ? 'plan-size--not-active fadeOutMobile' :'fadeInMobile'">
+					<div class="plan-size" ng-class="currentPlan !== 2 ? 'plan-size--not-active fadeOutLeft' :'slideInRight'">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--high">
 							<p class="plan-size__label">High</p>
 							<div class="plan-size__value">

@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/veridu/veridu.github.io",
   "dependencies": {
+    "angular-carousel": "^1.0.1",
     "animate.css": "^3.4.0",
     "bootstrap-sass": "^3.3.6"
   }

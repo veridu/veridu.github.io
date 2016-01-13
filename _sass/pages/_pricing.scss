@@ -165,6 +165,7 @@
                     > div.plan-size  {
                         @include col(4);
 						@extend .animated;
+						overflow: hidden;
 
 						&.dummy-plan {
 							display: none;
@@ -195,7 +196,10 @@
                             text-align: center;
 
                             &.plan__cell--last {
-                                height: em(190);
+                                height: em(990);
+								@media (min-width: $screen-sm-min) {
+									height: em(190);
+								}
                             }
 
                             p.plan-size__label {
@@ -246,6 +250,9 @@
 
 				float: left;
 				width: calc(100% - 160px);
+				.cell--separator {
+					border-bottom: 1px solid #888 !important;
+				}
 
 				@media (min-width: $screen-sm-min) {
 					@include col(6);
@@ -293,9 +300,6 @@
 						    font-weight: 300;
 
 						}
-                    }
-                    div.cell--separator {
-                        border-bottom: 1px solid #888;
                     }
                 }
             }
