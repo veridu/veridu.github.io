@@ -74,7 +74,7 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
-					<div class="plan-size" id="plan-1" >
+					<div class="plan-size plan-size--not-active" id="plan-1" >
 						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
 							<p class="plan-size__label">Medium</p>
 							<div class="plan-size__value">
@@ -97,7 +97,7 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
-					<div class="plan-size" id="plan-2">
+					<div class="plan-size plan-size--not-active" id="plan-2">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--high">
 							<p class="plan-size__label">High</p>
 							<div class="plan-size__value">
@@ -120,7 +120,7 @@ class: pricing
 							<p class="per-month">per check</p>
 						</div>
 					</div>
-					<div class="plan-size dummy-plan" ng-class="{'plan-size--not-active' : currentPlan !== 3}">
+					<div class="plan-size dummy-plan plan-size--not-active">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--low"
 							ng-class="{
 								'plan__cell--heading--low' : currentPlan === 2,
