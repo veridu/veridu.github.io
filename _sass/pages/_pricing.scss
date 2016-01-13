@@ -328,8 +328,12 @@
         .v-list {
             > li {
 				@media (min-width: $screen-sm-min) {
+					height: em(365);
+				}
+				@media (min-width: $screen-md-min) {
 					height: em(285);
 				}
+
 				@media (max-width: $screen-xs-max) {
 					margin-bottom: em(40);
 				}

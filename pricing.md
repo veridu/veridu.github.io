@@ -287,80 +287,12 @@ class: pricing
 				} else{
 					setActiveSection('#submenu-what-you-get', $('#submenu-what-you-get').text());
 				}
-
-				var scrollT;
-
-				function hideSubmenu() {
-					if (mobile)
-						return;
-					$menuItems.removeClass('fadeIn');
-					$menuItems.addClass('fadeOut');
-					$currentState.css('top', "-2.58em");
-					$nav.css('min-height', "2em");
-					$menuContent.css('height', "2em");
-				}
-
-				function showSubmenu() {
-					if (mobile)
-						return;
-
-					$menuItems.addClass('fadeIn');
-					$menuItems.removeClass('fadeOut');
-					$nav.css('min-height', '6em');
-					$currentState.css('top', "0px");
-				}
-
-				var height = getDocHeight();
-				var dist = $(window).scrollTop() + $(window).height();
-
-				if (height == dist) {
-					setTimeout(function () {
-
-						var height = getDocHeight();
-						var dist = $(window).scrollTop() + $(window).height();
-						if (height == dist) {
-							showSubmenu();
-						}
-
-					}, 100);
-				}
-
-				if (! mobile && scrolled) {
-
-					// check if scrolled up or down
-					if (lastScrollPos < scrolled) {
-						// down
-						if (scrolled > 100) {
-							hideSubmenu();
-						} else {
-							showSubmenu();
-						}
-
-					} else {
-
-						// not on the bottom of the page
-						if (!(dist < height) ) {
-							hideSubmenu();
-						} else {
-							showSubmenu();
-						}
-
-					}
-
-					lastScrollPos = scrolled;
-				} else {
-
-					$currentState.css('top', "0px");
-
-					if (mobile) {
-						$nav.css('min-height', 'auto');
-						$menuContent.css('height', "auto");
-					} else {
-						$nav.css('min-height', navHeight);
-					}
-
-				}
 			}
+
+			var scrollT;
+
+			var height = getDocHeight();
+			var dist = $(window).scrollTop() + $(window).height();
 
 			function setActiveSection(sectionId, currentStateName) {
 				if (currentState != sectionId) {
