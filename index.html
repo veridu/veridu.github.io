@@ -93,10 +93,10 @@ layout: default
                                 </div>
 
                                 <div ng-hide="App.slider.status().verified" class="progress">
-                                  <div class="progress-bar" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100" style="width: 64%;">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="({App.slider.status().birthPercent})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.slider.status().birthPercent})%;">
                                     <p>
-                                        ({App.slider.status().birth})
-                                        <span class="attributeValue">({App.slider.status().birthPercent})%</span>
+                                        ({App.slider.status().birth || 'Overall'})
+                                        <span class="attributeValue">({App.slider.status().birthPercent ? App.slider.status().birthPercent + '%' : ''})</span>
                                     </p>
                                   </div>
                                 </div>
@@ -134,7 +134,7 @@ layout: default
                                 </div>
 
                                 <div class="btn-container left ">
-                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('paypal')" ng-class="{active : App.user.auth.paypal}"> Paypal </button>
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{active : App.user.auth.twitter}"> Twitter </button>
                                 </div>
 
                                 <div class="hidden-verification-container">

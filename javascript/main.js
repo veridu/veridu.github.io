@@ -336,7 +336,7 @@
 						sexPercent: (user.gender || 0 ) && Math.round((user.gender.score * 100) * 10) / 10,
 						verified: user.overall > 0.6,
 						birth: user.email.value,
-						birthPercent: (user.email || 0 ) && Math.round((user.email.score * 100) * 10) / 10
+						birthPercent: Math.round(( ( (user.email && user.email.score) || user.overall) * 100) * 10) / 10
 					}
 				];
 			} else {

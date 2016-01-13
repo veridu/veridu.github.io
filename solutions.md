@@ -55,7 +55,7 @@ description: What company doesn't want to know their users better? These are jus
 				<p class="solution__item_description">Enhance candidate vetting. Identify the superstars. Make clients happy.</p>
 				<br>
 				<p class="solution__item_description">
-					Veridu analyses an individual’s digital footprint using proprietary and sophisticated algorithms to verify their identity and match them against your eligibility criteria to single out the most wanted candidates, in real-time as they sign up or transact on your site.
+					Veridu analyses an individual’s digital footprint using proprietary and sophisticated algorithms to verify their identity and match them against your elligibility criteria to single out the most wanted candidates, in real-time as they sign up or transact on your site.
 				</p>
 			</div>
 

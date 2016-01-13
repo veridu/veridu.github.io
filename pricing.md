@@ -338,7 +338,7 @@ class: pricing
 					if (d == 'forward') {
 						$(pId).addClass('slideInRight');
 					} else {
-						$(pId).addClass('slideInRight');
+						$(pId).addClass('zoomInLeft');
 					}
 				}
 
