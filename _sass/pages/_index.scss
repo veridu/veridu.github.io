@@ -864,8 +864,11 @@ section.contact {
 				input {
 					width: em(250);
 				}
-				textarea {
+				textarea, input.big {
 					width: em(607)
+				}
+				input.half {
+					width: em(338);
 				}
 
 				&.email {

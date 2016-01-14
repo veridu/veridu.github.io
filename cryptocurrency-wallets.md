@@ -85,6 +85,67 @@ excerpt: A happy user is an active user
 
 				<h5>Give us a go</h5>
 				<p>Like what you’ve read? Sign in with your social networks to try us for yourself.</p>
+
+				<h5>A User’s Story</h5>
+
+				<em>
+					<p>“I tried to set up a Bitcoin wallet as a friend told me it was a quick, easy and cheap way to transfer money to anyone, anywhere in the world.</p>
+					<p>Turns out it wasn’t so easy… They wanted my ID documents, which I didn’t have with me at the time. When I was able to share them I thought that would be that. It wasn’t - they needed to approve my account. That could take 48 hours. It might be cheap, but it certainly wasn’t quick and easy.”</p>
+				</em>
+
+				<h5>What our customers say…</h5>
+
+				<quote >
+					<em>“We especially like the frictionless user experience. If you have a consumer facing mobile app and need to integrate ID services I highly recommend checking out Veridu.”</em>
+					Volker Breuer, CEO, PayFriendz
+				</quote>
+
+				<h5>Want to know more? Contact hello@veridu.com</h5>
+
+				<section class="contact veridu-list">
+				    <div>
+				        <h2 class="font-light">Contact us</h2>
+
+				        <form  class="form-horizontal" role="form" action="https://www.getdrip.com/forms/8370268/submissions" method="post" data-drip-embedded-form="8370268" ng-submit="ctrl.sendContact()">
+				            <div class="input-container">
+				                <input ng-model="ctrl.contact.first_name" name="fields[first_name]" type="text" placeholder="First Name" >
+				            </div>
+
+				            <div class="input-container">
+				                <input ng-model="ctrl.contact.last_name" name="fields[last_name]" type="text" placeholder="Last Name">
+				            </div>
+				            <div class="clearfix hidden-xs"></div>
+							<div class="input-container">
+				                <input ng-model="ctrl.contact.company" name="fields[company]" type="text" placeholder="Company" >
+				            </div>
+
+				            <div class="input-container">
+				                <input ng-model="ctrl.contact.job_title" name="fields[job_title]" type="text" placeholder="Job Title">
+				            </div>
+							<div class="hidden-xs"></div>
+
+				            <div class="input-container ">
+				                <input ng-model="ctrl.contact.email"  name="fields[email]" type="email" placeholder="Email">
+				            </div>
+
+				            <div class="input-container ">
+				                <input ng-model="ctrl.contact.phone" class="half"  name="fields[phone]" type="text" placeholder="Phone">
+				            </div>
+				            <div class="clearfix hidden-xs"></div>
+
+				            <div class="input-container message">
+				                <textarea rows="5" ng-model="ctrl.contact.message" name="fields[tell_us_more]" name="message" type="text" placeholder="Message"></textarea>
+				            </div>
+
+				            <div class="input-container text-right submit">
+				                <button type="submit" class="btn btn-primary btn-primary--text-white">Submit</button>
+				            </div>
+				        </form>
+
+				    </div>
+				</section>
+
+
 			</div>
 
 			<div class="article__tags__container">

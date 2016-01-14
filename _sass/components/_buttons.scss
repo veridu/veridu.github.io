@@ -46,6 +46,9 @@
 .btn-primary {
 	@include v-btn($brand-primary, $brand-primary-border-color);
 }
+.btn-primary.btn-primary--text-white {
+	color: white !important;
+}
 
 .btn-blue {
 	@include v-btn($bg-brand-blue, $color-brand-blue);
