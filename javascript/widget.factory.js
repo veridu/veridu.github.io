@@ -30,6 +30,7 @@ function Widget (Veridu, VeriduUI, Auth) {
 				break;
 		}
 	}
+
 	function init($scope) {
 
 		// binds view scope to make 2-way data binding work on polling
@@ -134,7 +135,7 @@ function Widget (Veridu, VeriduUI, Auth) {
 				})
 				.fail(function (err) {
 					if (vm.retry < 4) {
-						setTimeout(update, (1000 + (500 * retry)));
+						setTimeout(update, (1000 + (500 * vm.retry)));
 						vm.retry++;
 					} else
 						VeriduUI.Block.error('Whoops!', err.message);

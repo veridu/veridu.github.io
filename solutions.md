@@ -16,7 +16,7 @@ description: What company doesn't want to know their users better? These are jus
 
 	<section id="sectors-tabs" class="solution__item">
 
-	    <video id="video-solutions-candidate" ng-show="ctrl.sectorsTabs.active == 'recruiting'">
+	    <!-- <video id="video-solutions-candidate" ng-show="ctrl.sectorsTabs.active == 'recruiting'">
 	        <source src="video/candidate.mp4" type="video/mp4">
 	    </video>
 
@@ -31,7 +31,7 @@ description: What company doesn't want to know their users better? These are jus
 	    <video id="video-solutions-tenant" ng-show="ctrl.sectorsTabs.active == 'real_estate'">
 	        <source src="video/tenant.mp4" type="video/mp4">
 	    </video>
-
+ -->
 		<div id="sectors" class="solution__item__content">
 			<div class="border-right" ng-show="ctrl.sectorsTabs.active == 'payments'" >
 				<h2  class="solution__item__title">Payments</h2>
@@ -497,7 +497,7 @@ description: What company doesn't want to know their users better? These are jus
 			});
 
 
-			videos[lastActiveVideo].play();
+			// videos[lastActiveVideo].play();
 
 			function setActive (tabSection, value) {
 
@@ -522,8 +522,8 @@ description: What company doesn't want to know their users better? These are jus
 					case 'sectors':
 
 						vm.sectorsTabs.active = value;
-						videos[lastActiveVideo].pause();
-						videos[value].play();
+						// videos[lastActiveVideo].pause();
+						// videos[value].play();
 
 						$timeout(function (){
 							resizeContainers();

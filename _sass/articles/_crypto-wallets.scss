@@ -1,0 +1,42 @@
+section.page.article {
+
+    article {
+        .article__body.article__body--crypto-wallets {
+
+            .article__cover {
+                // background-position:
+                // background-size: 100% auto;
+                // larger than the image
+
+                background-position: 75% 30%;
+                background-repeat: no-repeat;
+
+                .article__cover__img_overlay {
+                    background: -moz-linear-gradient(left,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.6) 35%, rgba(0,0,0,0.8) 100%); /* FF3.6-15 */
+                    background: -webkit-linear-gradient(left,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.6) 35%, rgba(0,0,0,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+                    background: linear-gradient(to right,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.6) 35%, rgba(0,0,0,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a5aa2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+                }
+
+                @media (min-width: $screen-sm-min) {
+                    background-size: 100% auto;
+                    background-position: 25% 30%;
+                    .article__cover__img_overlay {
+                        background: transparent;
+                        background: -moz-linear-gradient(left,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.1) 60%, rgba(0,0,0,0.0) 100%); /* FF3.6-15 */
+                        background: -webkit-linear-gradient(left,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.1) 60%, rgba(0,0,0,0.0) 100%); /* Chrome10-25,Safari5.1-6 */
+                        background: linear-gradient(to right,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.1) 60%, rgba(0,0,0,0.0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a5aa2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+                    }
+                }
+
+            }
+
+            .article__content {
+                img.world-coverage {
+                    max-width: 200%;
+                }
+            }
+        }
+    }
+}

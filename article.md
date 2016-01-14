@@ -87,10 +87,10 @@ cover: img/bridge.jpeg
 			vm.partnersTabs = { active : 'payfriendz' };
 		}
 
-		$cover.css('height', ($window.height() / 2));
+		$cover.css('height', ($window.height() * 2 /3));
 
 		$window.resize(function() {
-			$cover.css('height', ($window.height() / 2));
+			$cover.css('height', ($window.height() * 2 /3));
 		});
 
 	}

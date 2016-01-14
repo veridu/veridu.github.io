@@ -10,12 +10,23 @@ section.page.article {
 			padding-top: em(20);
 			padding-bottom: em(30, 19);
 			font-weight: 300;
+			> div {
+				width: 75%;
+			}
 		}
 
-		p.article__content {
+		.article__content {
 			font-weight: 400;
 			padding-top: em(30);
-			margin-bottom: em(80)
+			margin-bottom: em(80);
+
+			h4, h5 {
+				font-weight: bold;
+			}
+
+			h5 {
+				margin-top: em(25);
+			}
 		}
 
 		div.article__tags__container {
@@ -61,10 +72,6 @@ section.page.article {
 					// centralizes
 					width: 100%;
 					overflow:hidden;
-
-					background-size: auto 100%;
-					background-repeat: no-repeat no-repeat;
-					background-position: center center;
 
 					.article__cover__img_overlay {
 						position: absolute;
@@ -121,7 +128,6 @@ section.page.article {
 					.article__excerpt {
 						background: transparent;
 						font-weight: 400;
-						font-style: italic;
 						@media (min-width: $screen-md-min) {
 							padding-left: 0;
 						}
@@ -140,7 +146,7 @@ section.page.article {
 				padding-top: em(50);
 
 				.article__content {
-					@include make-xs-column(8);
+					@include make-xs-column(6);
 					padding-top: em(0);
 					padding-right: em(40);
 					@media (min-width: $screen-md-min) {
@@ -151,7 +157,7 @@ section.page.article {
 					h5 {
 						margin-top: 0;
 					}
-					@include make-xs-column(4);
+					@include make-xs-column(6);
 				}
 			}
 
