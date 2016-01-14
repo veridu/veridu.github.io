@@ -1,3 +1,5 @@
+@import url("http://www.carlejlers.dk/css/article.css");
+
 section.page.article {
 
 	article {
@@ -27,6 +29,14 @@ section.page.article {
 			h5 {
 				margin-top: em(25);
 			}
+
+			@media (min-width: $screen-sm-min) {
+				.span-both {
+					width:200%;
+					display:block;
+				}
+			}
+
 		}
 
 		div.article__tags__container {

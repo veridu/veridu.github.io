@@ -69,7 +69,7 @@ excerpt: A happy user is an active user
 				<p>Veridu covers all the major global social networks (there are over 2bn active social media users globally) and uses proprietary and sophisticated algorithms to calculate a user’s credibility based on this data.</p>
 
 				<img src="img/articles/crypto-wallets/world-coverage.png" class="world-coverage">
-				<quote style="width:200%; display:block;">
+				<quote class="span-both">
 					<em>Total active users on the top social network in each country, based on We Are Social’s Digital, Social and Mobile in 2015 Report.</em>
 				</quote>
 
