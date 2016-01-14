@@ -32,28 +32,28 @@ cover: img/bridge.jpeg
 
 <section class="veridu-list md-cards">
 
-	<address class="item-container">
+	<address class="item-container" onclick="setLocation('ltd')" id="ct-ltd" >
 		<div>
 			<h3>VERIDU LTD</h3>
 			Co. No. 8885008<br>
 			9th floor, 107 Cheapside<br>
-			EC2V 6DN, London<br>
+			London, EC2V 6DN<br>
 			United Kingdom
 		</div>
 	</address>
 
-	<address class="item-container">
+	<address class="item-container" onclick="setLocation('hq')" id="ct-hq">
 		<div>
 			<h3>UK HEADQUARTERS</h3>
 			Wework Moorgate<br>
 			6th floor, 3042<br>
 			1 Fore Street<br>
-			London EC2Y 5EJ <br>
+			London, EC2Y 5EJ<br>
 			United Kingdom
 		</div>
 	</address>
 
-	<address class="item-container">
+	<address class="item-container" onclick="setLocation('brazil')" id="ct-brazil">
 		<div>
 			<h3>BRAZILLIAN OFFICE</h3>
 			Bridge Coworking <br>
@@ -66,7 +66,7 @@ cover: img/bridge.jpeg
 	</address>
 </section>
 
-<section class="contact veridu-list" ng-controller="ContactCtrl as ctrl">
+<section class="contact veridu-list">
     <div>
         <h2 class="font-light">Contact <span class="hidden-xs">us</span> <a class="elegant-link" href="https://podio.com/webforms/6314922/492384" target="_blank" >here</a></h2>
 		<!--
@@ -133,23 +133,9 @@ cover: img/bridge.jpeg
 
 	function load () {
 
-		angular
-			.module('app')
-			.controller('SolutionsCtrl', SolutionsCtrl);
-
 		var $window = $(window);
 		var $cover = $('.contact__cover');
-
-		SolutionsCtrl.$inject = [];
-		function SolutionsCtrl () {
-			var vm = this;
-
-			vm.sectorsTabs = { active : 'payments' };
-			vm.partnersTabs = { active : 'payfriendz' };
-		}
-
 		$cover.css('height', ($window.height() * 0.7));
-
 		$window.resize(function() {
 			$cover.css('height', ($window.height() * 0.7));
 		});
@@ -164,17 +150,58 @@ cover: img/bridge.jpeg
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false" ></script>
 <script >
 
-	var myLatLng = { lat: 51.5180027, lng: -0.090573};
-	var myOptions = {
-		center: new google.maps.LatLng(myLatLng),
-		zoom: 15,
-		mapTypeId: google.maps.MapTypeId.ROADMAP,
-		disableDefaultUI: true
+
+	var mapOptions  = {
+		'hq' : {
+			latLng: { lat: 51.5180027, lng: -0.090573 },
+			options: {
+				center: new google.maps.LatLng({ lat: 51.5180027, lng: -0.090573 }),
+				zoom: 15,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				disableDefaultUI: true
+			}
+		},
+		'ltd' : {
+			latLng: { lat: 51.5142235, lng: -0.095689 },
+			options : {
+				center: new google.maps.LatLng({ lat: 51.5142235, lng: -0.095689 }),
+				zoom: 15,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				disableDefaultUI: true
+			}
+		},
+		'brazil' : {
+			latLng: { lat: -22.0082951, lng: -47.9088077 },
+			options: {
+				center: new google.maps.LatLng({ lat: 22.0082951, lng: -47.9088077 }),
+				zoom: 15,
+				mapTypeId: google.maps.MapTypeId.ROADMAP,
+				disableDefaultUI: true
+			}
+		}
 	};
-	var map = new google.maps.Map(document.getElementById("map"), myOptions);
-	var marker = new google.maps.Marker({
-		position: myLatLng,
-		map: map,
+	function setLocation(office) {
+		Map.setCenter(mapOptions[office].latLng);
+		$('.item-container').removeClass('animated bounce');
+		$('#ct-' + office).addClass('animated bounce');
+	}
+
+
+	var Map = new google.maps.Map(document.getElementById("map"), mapOptions['hq'].options);
+	new google.maps.Marker({
+		position: mapOptions['hq'].latLng,
+		map: Map,
 		title: 'Veridu HQ'
 	});
+	new google.maps.Marker({
+		position: mapOptions['ltd'].latLng,
+		map: Map,
+		title: 'Veridu HQ'
+	});
+	new google.maps.Marker({
+		position: mapOptions['brazil'].latLng,
+		map: Map,
+		title: 'Veridu HQ'
+	});
+
 </script>

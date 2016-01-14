@@ -9,12 +9,16 @@
 
 	.progress-bar {
 		background-color: white;
- 		border-right: em(2) solid $brand-primary;
- 		padding: em(12);
- 		padding-left: em(8);
+
+		padding: em(13);
+		padding-left: 5%;
+		padding-right: 5%;
+		@media (min-width: $screen-sm-min) {
+			padding: em(8);
+		}
 
 		> p {
-			
+
 			color: black;
 			text-align: left;
 			font-size: em(16);

@@ -110,7 +110,7 @@
 	var mobile = mbHelper.is(':visible');
 
 	landingSection.css('height', landingHeight);
-	sliderProgressCt.css('top',  - landingHeight * 0.1);
+	sliderProgressCt.css('top',  - landingHeight * 0.035);
 
 	$window.resize(adjustHeights);
 	adjustHeights();
@@ -119,8 +119,8 @@
 		mobile = mbHelper.is(':visible');
 		var landingHeight = $window.height() - menu.height();
 		// minimum height of the landing content for the contents to fit
-		if (landingHeight < 900)
-			landingHeight = 900;
+		if (landingHeight < 850)
+			landingHeight = 850;
 
 		if (! mobile) {
 			landingSection.css('height', landingHeight);
