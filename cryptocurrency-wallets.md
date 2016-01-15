@@ -126,6 +126,49 @@ excerpt: A happy user is an active user
 		</div>
 	</div>
 </article>
+<section class="contact veridu-list">
+	<div>
+		<h2 class="font-light">Contact us</h2>
+
+		<form  class="form-horizontal" role="form" action="https://www.getdrip.com/forms/8370268/submissions" method="post" data-drip-embedded-form="8370268" ng-submit="ctrl.sendContact()">
+			<div class="input-container">
+				<input ng-model="ctrl.contact.first_name" name="fields[first_name]" type="text" placeholder="First Name" >
+			</div>
+
+			<div class="input-container">
+				<input ng-model="ctrl.contact.last_name" name="fields[last_name]" type="text" placeholder="Last Name">
+			</div>
+			<div class="clearfix hidden-xs"></div>
+			<div class="input-container">
+				<input ng-model="ctrl.contact.company" name="fields[company]" type="text" placeholder="Company" >
+			</div>
+
+			<div class="input-container">
+				<input ng-model="ctrl.contact.job_title" name="fields[job_title]" type="text" placeholder="Job Title">
+			</div>
+			<div class="hidden-xs"></div>
+
+			<div class="input-container ">
+				<input ng-model="ctrl.contact.email"  name="fields[email]" type="email" placeholder="Email">
+			</div>
+
+			<div class="input-container ">
+				<input ng-model="ctrl.contact.phone" class="half"  name="fields[phone]" type="text" placeholder="Phone">
+			</div>
+			<div class="clearfix hidden-xs"></div>
+
+			<div class="input-container message">
+				<textarea rows="5" ng-model="ctrl.contact.message" name="fields[tell_us_more]" name="message" type="text" placeholder="Message"></textarea>
+			</div>
+
+			<div class="input-container text-right submit">
+				<button type="submit" class="btn btn-primary btn-primary--text-white">Submit</button>
+			</div>
+		</form>
+
+	</div>
+</section>
+
 
 
 <script type="text/javascript">
