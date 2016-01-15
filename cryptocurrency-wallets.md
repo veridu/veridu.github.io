@@ -16,7 +16,11 @@ excerpt: A happy user is an active user
 				</div>
 			</div>
 			<div class="article__call__container">
-				<h1 class="article__title">Veridu for Cryptocurrency Wallets</h1>
+				<h1 class="article__title">
+					<div>
+						Veridu for Cryptocurrency Wallets
+					</div>
+				</h1>
 				<h4 class="article__excerpt hidden-xs">
 					<div>
 						Whether you’re regulated as a money transmitter or just want to protect your reputation by being proactive about knowing your customers, identity verification is a huge challenge for cryptocurrency wallet providers.

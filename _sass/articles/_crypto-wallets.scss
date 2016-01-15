@@ -8,6 +8,23 @@ section.page.article {
                 // background-size: 100% auto;
                 // larger than the image
 
+                .article__call__container {
+                    @media (min-width: $screen-sm-min) {
+                        position: absolute;
+                        top: 15%;
+                    } 
+
+                    .article__title {
+                        > div {
+                            @media (min-width: $screen-sm-min) {
+                                max-width: em(350, 39);
+                            }
+                        }
+                    }
+                    .article__excerpt {
+                    }
+                }
+
                 background-position: 75% 30%;
                 background-repeat: no-repeat;
 
@@ -34,7 +51,10 @@ section.page.article {
 
             .article__content {
                 img.world-coverage {
-                    max-width: 200%;
+                    max-width: 100%;
+                    @media (min-width: $screen-sm-min) {
+                        max-width: 200%;
+                    }
                 }
             }
         }
