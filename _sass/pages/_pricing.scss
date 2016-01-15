@@ -127,11 +127,11 @@
             @include row();
 
             .plan__cell, .cell {
-                min-height: em(125);
+                min-height: em(115);
                 padding-top: em(10);
                 padding-bottom: em(10);
                 @media (min-width: $screen-sm-min) {
-                    height: em(125);
+                    height: em(115);
                 }
 
 				.black-link {
@@ -199,6 +199,22 @@
 							}
 						}
 
+						&.plan-size--low {
+							.plan__cell {
+								background-color: #C8E6C9;
+							}
+						}
+						&.plan-size--medium {
+							.plan__cell {
+								background-color: #A5D6A7;
+							}
+						}
+						&.plan-size--high {
+							.plan__cell {
+								background-color: #81C784;
+							}
+						}
+
                         .plan__cell {
 
                             background-color: #C7E6C9;
@@ -214,6 +230,9 @@
 
                             p.plan-size__label {
                                 font-weight: bold;
+								font-size: em(18);
+								margin-top: em(20, 18);
+								margin-bottom: em(3, 18);
                             }
 
                             > div.plan-size__value {
@@ -223,7 +242,7 @@
                                 }
                                 h2 {
                                     margin-bottom: 0;
-                                    margin-top: em(10);
+                                    margin-top: em(10, 32);
                                     font-weight: bold;
                                     display: inline-block;
                                 }
@@ -235,18 +254,7 @@
 
                             &.plan__cell--heading {
                                 h2 {
-                                    margin-top: 0 !important;
                                     margin-bottom: 0 !important;
-                                }
-
-                                &.plan__cell--heading--low {
-                                    background-color: #A4D6A7;
-                                }
-                                &.plan__cell--heading--medium {
-                                    background-color: #81C784;
-                                }
-                                &.plan__cell--heading--high {
-                                    background-color: #66BA6A;
                                 }
 
                             }

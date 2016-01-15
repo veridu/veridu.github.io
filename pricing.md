@@ -24,9 +24,16 @@ class: pricing
 		<div class="plans-container">
 			<div class="plans-descriptions">
 				<div class="cell cell--separator">
+					<h4 class="plan-heading">Volume</h4>
+					<p class="plan-description" ng-class="{'mobile-vis': msub}">
+						<span>Choose your subscription level based on your volume</span>
+						<a href="javascript:;" class="black-link"  ng-click="msub = !msub" >({ msub ? 'Show less' : 'Read more'})</a>
+					</p>
+				</div>
+				<div class="cell cell--separator">
 					<h4 class="plan-heading">Subscriptions</h4>
 					<p class="plan-description" ng-class="{'mobile-vis': msub}">
-						<span>Three subscription levels to pick from depending on your volume of checks.</span>
+						<span>Three subscription levels to suit your needs</span>
 						<a href="javascript:;" class="black-link"  ng-click="msub = !msub" >({ msub ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>
@@ -51,9 +58,14 @@ class: pricing
 			<div class="plans-sizes">
 				<div>
 
-					<div class="plan-size" id="plan-0">
+					<div class="plan-size plan-size--low" id="plan-0">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
 							<p class="plan-size__label">Low</p>
+							<div class="plan-size__value">
+								< 3,000 / month
+							</div>
+						</div>
+						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
 							<div class="plan-size__value">
 								<span>£</span> <h2>25</h2>
 							</div>
@@ -74,9 +86,14 @@ class: pricing
 							<p class="per-month">per user</p>
 						</div>
 					</div>
-					<div class="plan-size plan-size--not-active" id="plan-1" >
+					<div class="plan-size plan-size--medium plan-size--not-active" id="plan-1" >
 						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
 							<p class="plan-size__label">Medium</p>
+							<div class="plan-size__value">
+								> 3,000 / month
+							</div>
+						</div>
+						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
 							<div class="plan-size__value">
 								<span>£</span><h2>175</h2>
 							</div>
@@ -97,9 +114,16 @@ class: pricing
 							<p class="per-month">per user</p>
 						</div>
 					</div>
-					<div class="plan-size plan-size--not-active" id="plan-2">
+					<div class="plan-size plan-size--high plan-size--not-active" id="plan-2">
 						<div class="plan__cell plan__cell--heading plan__cell--heading--high">
 							<p class="plan-size__label">High</p>
+							<div class="plan-size__value">
+								<div class="plan-size__value">
+									> 21,000 / month
+								</div>
+							</div>
+						</div>
+						<div class="plan__cell plan__cell--heading plan__cell--heading--high">
 							<div class="plan-size__value">
 								<span>£</span><h2>1,250</h2>
 							</div>
@@ -120,14 +144,15 @@ class: pricing
 							<p class="per-month">per user</p>
 						</div>
 					</div>
-					<div class="plan-size dummy-plan plan-size--not-active">
-						<div class="plan__cell plan__cell--heading plan__cell--heading--low"
-							ng-class="{
-								'plan__cell--heading--low' : currentPlan === 2,
-								'plan__cell--heading--high' : currentPlan === 1,
-								'plan__cell--heading--medium' : currentPlan === 0
-							}"
-							>
+					<div class="plan-size dummy-plan plan-size--not-active"
+						ng-class="{
+							'plan-size--low' : currentPlan === 2,
+							'plan-size--high' : currentPlan === 1,
+							'plan-size--medium' : currentPlan === 0
+						}">
+						<div class="plan__cell plan__cell--heading">
+						</div>
+						<div class="plan__cell plan__cell--heading">
 						</div>
 						<div class="plan__cell ">
 						</div>
