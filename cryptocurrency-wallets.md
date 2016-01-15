@@ -5,8 +5,6 @@ class: article
 cover: img/articles/crypto-wallets/cover.png
 excerpt: A happy user is an active user
 ---
-<link rel="stylesheet" href="http://www.carlejlers.dk/css/article2.css">
-
 <article>
 	<div class="article__body article__body--crypto-wallets">
 
