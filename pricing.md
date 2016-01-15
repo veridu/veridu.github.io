@@ -25,9 +25,9 @@ class: pricing
 			<div class="plans-descriptions">
 				<div class="cell cell--separator">
 					<h4 class="plan-heading">Volume</h4>
-					<p class="plan-description" ng-class="{'mobile-vis': msub}">
+					<p class="plan-description" ng-class="{'mobile-vis': vol}">
 						<span>Choose your subscription level based on your volume</span>
-						<a href="javascript:;" class="black-link"  ng-click="msub = !msub" >({ msub ? 'Show less' : 'Read more'})</a>
+						<a href="javascript:;" class="black-link"  ng-click="vol = !vol" >({ vol ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>
 				<div class="cell cell--separator">
@@ -76,14 +76,14 @@ class: pricing
 								<span>£</span>
 								<h2>0.08</h2>
 							</div>
-							<p class="per-month">per user</p>
+							<p class="per-month">per check</p>
 						</div>
 						<div class="plan__cell plan__cell--last ">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.20</h2>
 							</div>
-							<p class="per-month">per user</p>
+							<p class="per-month">per check</p>
 						</div>
 					</div>
 					<div class="plan-size plan-size--medium plan-size--not-active" id="plan-1" >
@@ -104,14 +104,14 @@ class: pricing
 								<span>£</span>
 								<h2>0.06</h2>
 							</div>
-							<p class="per-month">per user</p>
+							<p class="per-month">per check</p>
 						</div>
 						<div class="plan__cell plan__cell--last">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.15</h2>
 							</div>
-							<p class="per-month">per user</p>
+							<p class="per-month">per check</p>
 						</div>
 					</div>
 					<div class="plan-size plan-size--high plan-size--not-active" id="plan-2">
@@ -134,14 +134,14 @@ class: pricing
 								<span>£</span>
 								<h2>0.04</h2>
 							</div>
-							<p class="per-month">per user</p>
+							<p class="per-month">per check</p>
 						</div>
 						<div class="plan__cell plan__cell--last ">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.10</h2>
 							</div>
-							<p class="per-month">per user</p>
+							<p class="per-month">per check</p>
 						</div>
 					</div>
 					<div class="plan-size dummy-plan plan-size--not-active"
