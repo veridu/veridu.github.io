@@ -41,7 +41,7 @@ class: pricing
 				<div class="cell cell--separator">
 					<h4 class="plan-heading">Single Source Verification</h4>
 					<p class="plan-description" ng-class="{'mobile-vis': ssv}">
-						<span>Verification and authentication using a single social verification method - usually single sign on via Facebook, Google etc.</span>
+						<span>Verication and authentication using Facebook, Google etc. Subsequent logins are free for a month</span>
 						<a href="javascript:;" class="black-link"  ng-click="ssv = !ssv" >({ ssv ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>

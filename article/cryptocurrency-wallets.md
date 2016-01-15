@@ -108,21 +108,50 @@ excerpt: A happy user is an active user
 			</div>
 
 			<div class="article__tags__container">
+				<span class="v-tag v-tag--blue">Payments</span>
+				<div class="clearfix"></div>
+				<div class="v-tag v-tag--orange">Social Media</div>
+				<div class="v-tag v-tag--orange">Online Services</div>
+				<div class="v-tag v-tag--orange">SMS</div>
+				<div class="v-tag v-tag--orange">2FA</div>
+				<div class="v-tag v-tag--orange">Email</div>
+				<div class="v-tag v-tag--orange">Dynamic KBA</div>
+				<div class="v-tag v-tag--orange">Documents</div>
+				<div class="v-tag v-tag--orange">Contact</div>
 
-				<h5>TAGS</h5>
+				<div class="clearfix"></div>
+				<div class="v-tag v-tag--grey">API</div>
+				<div class="v-tag v-tag--grey">SDK</div>
+				<div class="v-tag v-tag--grey">Widget</div>
+				<div class="v-tag v-tag--grey">Hosted</div>
+				<div class="clearfix"></div>
 
-				<div class="tag tag--partner">World Pay</div>
-				<div class="tag tag--partner">PayFriendz</div>
-				<div class="tag tag--partner">ZipMoney</div>
 				<div class="clearfix"></div>
-				<div class="tag tag--sources">Social Media & Online Services</div>
-				<div class="tag tag--sources">Knowledge-based Authentication</div>
+				<div class="v-tag v-tag--success1">Time to fake</div>
+				<div class="v-tag v-tag--success1">Contact info</div>
+				<div class="v-tag v-tag--success1">Age</div>
+				<div class="v-tag v-tag--success1">Work</div>
+				<div class="v-tag v-tag--success1">Education</div>
 				<div class="clearfix"></div>
-				<div class="tag tag--scores">Contact Info</div>
-				<div class="tag tag--scores">Age</div>
-				<div class="tag tag--scores">Insight</div>
+
 				<div class="clearfix"></div>
-				<div class="tag tag--integration">API</div>
+				<div class="v-tag v-tag--success2">Ability to influence</div>
+				<div class="v-tag v-tag--success2">Frequent traveller</div>
+
+				<div class="clearfix"></div>
+				<div class="v-tag v-tag--warning2">Empty profile</div>
+				<div class="v-tag v-tag--warning2">Known fake</div>
+				<div class="v-tag v-tag--warning2">Peps</div>
+				<div class="v-tag v-tag--warning2">Sanctions</div>
+				<div class="v-tag v-tag--warning2">Silly name</div>
+				<div class="v-tag v-tag--warning2">Celebrity name</div>
+
+				<div class="clearfix"></div>
+				<div class="v-tag v-tag--bluegreen">+13</div>
+				<div class="v-tag v-tag--bluegreen">+18</div>
+				<div class="v-tag v-tag--bluegreen">+21</div>
+				<div class="v-tag v-tag--bluegreen">Student</div>
+
 			</div>
 		</div>
 	</div>
