@@ -319,6 +319,7 @@ section.verification-container {
 		}
 
 		h4 {
+			font-weight: 400;
 			text-align: center;
 			margin-top: 0;
 			font-size: 1.052em;
@@ -388,9 +389,23 @@ section.verification-container {
 			color: white !important
 		}
 
+		.terms-of-use {
+			@include col(12);
+			color: black;
+			font-size: em(13);
+			a {
+				border-bottom: 1px solid white;
+			}
+
+		}
+
 		@media (min-width: $screen-sm-min) {
+
 			@include col(4);
 			@include col-offset(1);
+			.terms-of-use {
+				color: white;
+			}
 
 			padding-left: 0 !important;
 			padding-right: 0 !important;
@@ -427,6 +442,8 @@ section.verification-container {
 			}
 
 			h4 {
+
+				font-weight: 400;
 				margin-left: 8.5px;
 				letter-spacing: em(0.5);
 				color: white;
@@ -442,7 +459,7 @@ section.veridu-list {
 	@include clearfix();
 	padding-top: em(50);
 	padding-left: 10%;
-	padding-right: em(50);
+	padding-right: 10%;
 
 	.item-container {
 		margin-bottom: em(60);
@@ -473,6 +490,7 @@ section.veridu-list {
 		@extend .tablet__gutter;
 		position: relative;
 		z-index: 10;
+
 		.item-container  {
 
 			position: relative;
@@ -571,6 +589,9 @@ section.rasmus-quote {
 
 	> div.rasmus-quote__content {
 
+		@media (min-width: $screen-sm-min) {
+			padding-left: 0 !important;
+		}
 		float: right;
 		width: 40%;
 		//position: relative;

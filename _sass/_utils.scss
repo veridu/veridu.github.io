@@ -158,5 +158,15 @@
 }
 
 ul.no-bullets {
-	list-style: none;	
+	list-style: none;
+}
+
+.col12 {
+	@include col(12);
+}
+
+.row-md {
+	@media (min-width: $screen-sm-min) {
+		@include row();
+	}
 }

@@ -22,12 +22,12 @@ class: index
 
     <div class="landing__overlay hidden-xs"></div>
     <div class="landing__content">
-        <div class="row-sm no-styled-container">
+        <div class="row-md no-styled-container">
 
             <div class="slider-progress-container">
 
                 <div class="clearfix container-sm landing-active-content">
-                    <div class="row-sm">
+                    <div class="row-md">
                         <h1 class="title-sm">Know Your<span class="hidden-xs"> </span><br class="visible-xs"><span ng-show=" App.slider.state() == 'customer' " class="flipInX">Customer</span><span ng-show=" App.slider.state() == 'peer' " class="flipInX">Peer</span><span ng-show=" App.slider.state() == 'candidate' " class="flipInX">Candidate</span><span ng-show=" App.slider.state() == 'tenant' " class="flipInX">Tenant</span>
                         </h1>
 
@@ -53,7 +53,7 @@ class: index
                         </p>
 
                     </div>
-                    <div class="row-sm">
+                    <div class="row-md">
                         <div class="customer-image-container">
                             <div  class="animated fadeIn customer__image" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgMdStyle})"></div>
                             <a class="white-link" href="javascript:;">
@@ -176,6 +176,7 @@ class: index
                                     </div>
                                 </div>
 
+                                <div class="terms-of-use">By using this service you accept our <a class="white-link" href="https://veridu.com/wiki/Terms_%26_Conditions" target="_blank" >terms of use</a></div>
                             </div>
                             <!-- <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a> -->
                         </section>
@@ -188,71 +189,70 @@ class: index
 </div>
 
 <section class="veridu-list md-cards">
+    <div class="row-md">
+        <div class="item-container">
+            <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
+                <h3>FRICTIONLESS ONBOARDING</h3>
+                <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
+                <h3>TRUST</h3>
+                <p>Break down trust barriers show your commitment to keeping your members and their possessions safe.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
+                <h3>IDENTIFY FRAUD</h3>
+                <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
+                <h3>SAFETY</h3>
+                <p>Be proactive about safety and require sellers, landlords and viewers to verify their identity before viewings.</p>
+            </div>
 
-    <div class="item-container">
-        <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
-            <h3>FRICTIONLESS ONBOARDING</h3>
-            <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
         </div>
-        <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
-            <h3>TRUST</h3>
-            <p>Break down trust barriers show your commitment to keeping your members and their possessions safe.</p>
+
+        <div class="item-container">
+
+            <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
+                <h3>REDUCE FALSE POSITIVES</h3>
+                <p>Reduce false positive declines and recover transactions that your risk rules would normally decline.</p>
+            </div>
+
+            <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
+                <h3>AUTOMATION</h3>
+                <p>Stay focused on your core business by automating the onboarding process and reducing time spent on manual reviews.</p>
+            </div>
+
+            <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
+                <h3>VETTED</h3>
+                <p>Conduct robust vetting of CVs wherever a candidate has studied or worked.</p>
+            </div>
+
+            <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
+                <h3>TRUST</h3>
+                <p>Build trust in your business by allowing customers to showcase their credibility with a visible badge.</p>
+            </div>
         </div>
-        <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
-            <h3>IDENTIFY FRAUD</h3>
-            <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
-        </div>
-        <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
-            <h3>SAFETY</h3>
-            <p>Be proactive about safety and require sellers, landlords and viewers to verify their identity before viewings.</p>
+
+        <div class="item-container">
+            <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
+                <h3>SPEND LESS</h3>
+                <p>Spend less time and money on fraud reviews with better tools and user insight.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
+                <h3>FRICTIONLESS ONBOARDING</h3>
+                <p>Eliminate friction in the user experience to encourage more members onto your platform and drive engagement.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
+                <h3>AUTOMATE</h3>
+                <p>Focus your efforts on bringing new clients onboard, not manually onboarding candidates.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
+                <h3>KNOW YOUR CUSTOMER</h3>
+                <p>Know more about your customers for less - social identity solutions offer unrivalled insight at a lower price point.</p>
+            </div>
         </div>
 
     </div>
-
-    <div class="item-container">
-
-        <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
-            <h3>REDUCE FALSE POSITIVES</h3>
-            <p>Reduce false positive declines and recover transactions that your risk rules would normally decline.</p>
-        </div>
-
-        <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
-            <h3>AUTOMATION</h3>
-            <p>Stay focused on your core business by automating the onboarding process and reducing time spent on manual reviews.</p>
-        </div>
-
-        <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
-            <h3>VETTED</h3>
-            <p>Conduct robust vetting of CVs wherever a candidate has studied or worked.</p>
-        </div>
-
-        <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
-            <h3>TRUST</h3>
-            <p>Build trust in your business by allowing customers to showcase their credibility with a visible badge.</p>
-        </div>
-    </div>
-
-    <div class="item-container">
-        <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
-            <h3>SPEND LESS</h3>
-            <p>Spend less time and money on fraud reviews with better tools and user insight.</p>
-        </div>
-        <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
-            <h3>FRICTIONLESS ONBOARDING</h3>
-            <p>Eliminate friction in the user experience to encourage more members onto your platform and drive engagement.</p>
-        </div>
-        <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
-            <h3>AUTOMATE</h3>
-            <p>Focus your efforts on bringing new clients onboard, not manually onboarding candidates.</p>
-        </div>
-        <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
-            <h3>KNOW YOUR CUSTOMER</h3>
-            <p>Know more about your customers for less - social identity solutions offer unrivalled insight at a lower price point.</p>
-        </div>
-    </div>
-
-
-
 </section>
 
 <section class="partners-quotes">
@@ -321,11 +321,13 @@ class: index
 <section class="rasmus-quote">
     <div class="rasmus-quote__overlay"></div>
     <div class="rasmus-quote__content">
-        <h4>"We bring trust to <br class="hidden-xs"> the internet"</h4>
-        <p>
-            RASMUS GROTH,
-            CEO, VERIDU
-        </p>
+        <div class="row-md">
+            <h4>"We bring trust to <br class="hidden-xs"> the internet"</h4>
+            <p>
+                RASMUS GROTH,
+                CEO, VERIDU
+            </p>
+        </div>
     </div>
 </section>
 

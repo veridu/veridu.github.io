@@ -12,6 +12,13 @@
   }
 }
 
+@media (min-width: $screen-sm-min) {
+    .menu-content {
+        margin-left: -8.5px !important;
+        margin-right: -8.5px !important;
+
+    }
+}
 
 header.index {
     .current-state {
@@ -830,6 +837,6 @@ footer {
         margin-left: -15px;
         margin-right: -15px;
     }
-    
+
     background-color: #f8f8f8;
 }

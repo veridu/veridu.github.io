@@ -62,56 +62,50 @@ class: pricing
 						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
 							<p class="plan-size__label">Low</p>
 							<div class="plan-size__value">
-								< 3,000 / month
+								0 - 3000
 							</div>
 						</div>
 						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
 							<div class="plan-size__value">
 								<span>£</span> <h2>25</h2>
 							</div>
-							<p class="per-month">per month</p>
 						</div>
 						<div class="plan__cell ">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.08</h2>
 							</div>
-							<p class="per-month">per check</p>
 						</div>
 						<div class="plan__cell plan__cell--last ">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.20</h2>
 							</div>
-							<p class="per-month">per check</p>
 						</div>
 					</div>
 					<div class="plan-size plan-size--medium plan-size--not-active" id="plan-1" >
 						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
 							<p class="plan-size__label">Medium</p>
 							<div class="plan-size__value">
-								> 3,000 / month
+								3,000 - 20,000
 							</div>
 						</div>
 						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
 							<div class="plan-size__value">
 								<span>£</span><h2>175</h2>
 							</div>
-							<p class="per-month">per month</p>
 						</div>
 						<div class="plan__cell ">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.06</h2>
 							</div>
-							<p class="per-month">per check</p>
 						</div>
 						<div class="plan__cell plan__cell--last">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.15</h2>
 							</div>
-							<p class="per-month">per check</p>
 						</div>
 					</div>
 					<div class="plan-size plan-size--high plan-size--not-active" id="plan-2">
@@ -119,7 +113,7 @@ class: pricing
 							<p class="plan-size__label">High</p>
 							<div class="plan-size__value">
 								<div class="plan-size__value">
-									> 21,000 / month
+									20000 +
 								</div>
 							</div>
 						</div>
@@ -127,21 +121,18 @@ class: pricing
 							<div class="plan-size__value">
 								<span>£</span><h2>1,250</h2>
 							</div>
-							<p class="per-month">per month</p>
 						</div>
 						<div class="plan__cell ">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.04</h2>
 							</div>
-							<p class="per-month">per check</p>
 						</div>
 						<div class="plan__cell plan__cell--last ">
 							<div class="plan-size__value">
 								<span>£</span>
 								<h2>0.10</h2>
 							</div>
-							<p class="per-month">per check</p>
 						</div>
 					</div>
 					<div class="plan-size dummy-plan plan-size--not-active"
