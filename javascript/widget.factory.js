@@ -134,11 +134,7 @@ function Widget (Veridu, VeriduUI, Auth) {
 
 				})
 				.fail(function (err) {
-					if (vm.retry < 4) {
-						setTimeout(update, (1000 + (500 * vm.retry)));
-						vm.retry++;
-					} else
-						VeriduUI.Block.error('Whoops!', err.message);
+					window.location.reload();
 				});
 		})();
 	}

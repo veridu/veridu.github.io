@@ -35,6 +35,10 @@ section.page.article {
                     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a5aa2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
                 }
 
+                @media (min-width: $screen-sm-min) and (max-width: 1000px) {
+                    background-size: 130% !important;
+                }
+
                 @media (min-width: $screen-sm-min) {
                     background-size: 100% auto;
                     background-position: 25% 30%;

@@ -20,12 +20,16 @@
     }
 }
 
-header.index {
+.header.index,
+.header.pricing {
     .current-state {
-        display: none !important;
+        background: red !important;
+        display: inline-block;
+        @media (min-width: $screen-sm-min) {
+            display: none !important;
+        }
     }
 }
-
 .menu-content {
 
 	-webkit-transition: all .45s ease-out;
@@ -50,7 +54,6 @@ header.index {
 	}
     .current-state {
 
-        display: inline-block;
         margin-top: em(3);
 		position: relative;
 		top: 5px;
@@ -62,7 +65,6 @@ header.index {
 
         @media (min-width: $screen-sm-min) {
             @include clearfix();
-            display: block;
             margin-top: em(5);
             padding-left: em(145);
 
@@ -839,4 +841,13 @@ footer {
     }
 
     background-color: #f8f8f8;
+}
+
+.header.article,
+.header.pricing {
+    .current-state {
+        @media (min-width: $screen-sm-min) {
+            display: none !important
+        }
+    }
 }

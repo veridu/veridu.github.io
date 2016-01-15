@@ -36,10 +36,7 @@ excerpt: A happy user is an active user
 			<div class="article__content">
 
 				<h4>A happy user is an active user</h4>
-
-				<p>
-					Whether you’re regulated as a money transmitter or just want to protect your reputation by being proactive about knowing your customers, identity verification is a huge challenge for cryptocurrency wallet providers.
-				</p>
+				
 				<p>
 					Forums are full of tirades from users unable to sign up to their wallet of choice because they didn’t have the right identity documents, from those frustrated with the hoops they had to jump through to prove their identity and from users locked ou of their accounts for days at a time.
 				</p>
