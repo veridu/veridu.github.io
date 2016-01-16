@@ -41,7 +41,7 @@ class: pricing
 				<div class="cell cell--separator">
 					<h4 class="plan-heading">Single Source Verification</h4>
 					<p class="plan-description" ng-class="{'mobile-vis': ssv}">
-						<span>Verication and authentication using Facebook, Google etc. Subsequent logins are free for a month</span>
+						<span>Subsequent verifications by a user on the same social account are free for a month</span>
 						<a href="javascript:;" class="black-link"  ng-click="ssv = !ssv" >({ ssv ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>
@@ -191,7 +191,7 @@ class: pricing
 				<li>
 					<h4>Credibility Scores</h4>
 					<p>
-						Analyse an individual’s digital footprint, using our proprietary and sophisticated algorithms, to verify their identity credibility in real-time.
+						Analyse an individual’s digital footprint, using our proprietary and sophisticated algorithms, to verify their identity and credibility in real-time.
 					</p>
 					<span class="v-tag v-tag--success1">Time to fake</span>
 					<span class="v-tag v-tag--success1">Contact info</span>
@@ -224,7 +224,7 @@ class: pricing
 				<li>
 					<h4>Decision gates</h4>
 					<p>
-						Not interested in scores? Just want a decision? Use our decision gates to specify which verification and authentication methods and what threshold a user needs to reach.
+						Use our decision gates to specify which verification and authentication methods and what threshold a user needs to reach.
 					</p>
 					<span class="v-tag v-tag--bluegreen">+13</span>
 					<span class="v-tag v-tag--bluegreen">+18</span>
