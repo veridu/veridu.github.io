@@ -62,7 +62,7 @@ class: pricing
 						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
 							<p class="plan-size__label">Low</p>
 							<div class="plan-size__value">
-								0 - 3,000
+								0-3,000
 							</div>
 						</div>
 						<div class="plan__cell plan__cell--heading plan__cell--heading--low">
@@ -87,7 +87,7 @@ class: pricing
 						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
 							<p class="plan-size__label">Medium</p>
 							<div class="plan-size__value">
-								3,000 - 20,000
+								3,000-20,000
 							</div>
 						</div>
 						<div class="plan__cell plan__cell--heading plan__cell--heading--medium">
@@ -113,7 +113,7 @@ class: pricing
 							<p class="plan-size__label">High</p>
 							<div class="plan-size__value">
 								<div class="plan-size__value">
-									20,000 +
+									20,000+
 								</div>
 							</div>
 						</div>
