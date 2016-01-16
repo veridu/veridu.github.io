@@ -497,32 +497,31 @@ section.veridu-list {
 
 			> div {
 
-				@extend .animated;
+				> * {
+					@extend .animated;
+				}
 
 
 				&.vis {
-					@media (max-width: $screen-xs-max) {
+					display: block;
+
+					> * {
 						-webkit-animation-name: fadeIn;
 					    animation-name: fadeIn;
-					}
-					@media (min-width: $screen-sm-min) {
-						-webkit-animation-name: fadeInUp;
-					    animation-name: fadeInUp;
 					}
 				}
 
 				&.inv {
+					display: none;
 					width: calc(100% - 17px) !important;
 					position: absolute !important;
 
-					@media (max-width: $screen-xs-max) {
+					> * {
 						-webkit-animation-name: fadeOut;
 						animation-name: fadeOut;
 					}
-					@media (min-width: $screen-sm-min) {
-						-webkit-animation-name: fadeOutDown;
-						animation-name: fadeOutDown;
-					}				}
+				}
+
 			}
 
 		}
