@@ -23,7 +23,7 @@
 .header.index,
 .header.pricing {
     .current-state {
-        background: red !important;
+
         display: inline-block;
         @media (min-width: $screen-sm-min) {
             display: none !important;
