@@ -36,7 +36,7 @@ excerpt: A happy user is an active user
 			<div class="article__content">
 
 				<h4>A happy user is an active user</h4>
-				
+
 				<p>
 					Forums are full of tirades from users unable to sign up to their wallet of choice because they didn’t have the right identity documents, from those frustrated with the hoops they had to jump through to prove their identity and from users locked ou of their accounts for days at a time.
 				</p>
@@ -148,6 +148,19 @@ excerpt: A happy user is an active user
 				<div class="v-tag v-tag--bluegreen">+18</div>
 				<div class="v-tag v-tag--bluegreen">+21</div>
 				<div class="v-tag v-tag--bluegreen">Student</div>
+
+				<div class="clearfix"></div>
+
+				<div class="download-ct">
+					<button class="btn btn-primary btn-primary--text-white" onclick="window.open('resources/cryptocurrency-wallets-Veridu.pdf')">
+						<table>
+							<tr>
+								<td>Download <br> PDF</td>
+								<td><i class="material-icons">&#xE2C4;</i></td>
+							</tr>
+						</table>
+					</button>
+				</div>
 
 			</div>
 		</div>

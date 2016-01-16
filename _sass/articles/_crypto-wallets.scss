@@ -85,3 +85,29 @@ h1, h2, h3, h4, h5 {
 section.page.article article .article__excerpt > div {
     max-width: em(282);
 }
+
+.download-ct {
+
+    margin-top: em(60);
+
+    .btn {
+
+        width: em(150);
+        height: em(80);
+
+        table {
+            width: 100%;
+            position: relative;
+            top: 0;
+            td {
+                vertical-align: middle;
+
+                i {
+                    font-size: em(30);
+                    position: relative;
+                    top: 3px;
+                }
+            }
+        }
+    }
+}
