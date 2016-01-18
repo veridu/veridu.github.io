@@ -25,6 +25,7 @@
     .current-state {
 
         display: inline-block;
+
         @media (min-width: $screen-sm-min) {
             display: none !important;
         }
@@ -40,7 +41,7 @@
 
 	.current-state {
 		position: relative;
-		top: 5px;
+		// top: 5px;
 		-webkit-transition: top .45s ease-out;
  	    -moz-transition: top .45s ease-out;
 	    -ms-transition: top .45s ease-out;
@@ -478,7 +479,6 @@ body {
 			#menu-toggler {
 				cursor: pointer;
 				position: relative;
-				top: -3px;
 				font-size: em(30);
 
 				@media (min-width: $screen-sm-min) {

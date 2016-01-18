@@ -1,6 +1,9 @@
 .header .menu > div.menu-content .logo img.veridu-img {
-    width: 50%;
+    width: 78px;
     padding-top: 4px;
+    @media (min-width: $screen-sm-min) {
+        width: 50%;
+    }
 }
 
 
