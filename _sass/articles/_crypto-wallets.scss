@@ -91,10 +91,6 @@ section.page.article article .article__excerpt > div {
     margin-top: em(60);
 
     .btn {
-
-        width: em(150);
-        height: em(80);
-
         table {
             width: 100%;
             position: relative;
@@ -103,7 +99,7 @@ section.page.article article .article__excerpt > div {
                 vertical-align: middle;
 
                 i {
-                    font-size: em(30);
+                    margin-left: em(5);
                     position: relative;
                     top: 3px;
                 }

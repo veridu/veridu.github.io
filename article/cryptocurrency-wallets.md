@@ -35,7 +35,7 @@ excerpt: A happy user is an active user
 		<div class="article__content-wrapper">
 			<div class="article__content">
 
-				<h4>A happy user is an active user</h4>
+				<h5>A happy user is an active user</h5>
 
 				<p>
 					Forums are full of tirades from users unable to sign up to their wallet of choice because they didn’t have the right identity documents, from those frustrated with the hoops they had to jump through to prove their identity and from users locked ou of their accounts for days at a time.
@@ -71,7 +71,7 @@ excerpt: A happy user is an active user
 
 				<img src="img/articles/crypto-wallets/world-coverage.png" class="world-coverage">
 				<quote class="span-both">
-					<em>Total active users on the top social network in each country, based on We Are Social’s Digital, Social and Mobile in 2015 Report.</em>
+					<em>Social Network User Penetration worldwide, via any device, at least once per month. Source : eMarketer, April 2013</em>
 				</quote>
 
 				<h5>Onboard more users and protect your reputation with social KYC</h5>
@@ -155,7 +155,7 @@ excerpt: A happy user is an active user
 					<button class="btn btn-primary btn-primary--text-white" onclick="window.open('resources/cryptocurrency-wallets-Veridu.pdf')">
 						<table>
 							<tr>
-								<td>Download <br> PDF</td>
+								<td>Download PDF</td>
 								<td><i class="material-icons">&#xE2C4;</i></td>
 							</tr>
 						</table>
