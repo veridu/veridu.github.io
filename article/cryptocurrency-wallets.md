@@ -70,12 +70,12 @@ excerpt: A happy user is an active user
 				<p>Veridu covers all the major global social networks (there are over 2bn active social media users globally) and uses proprietary and sophisticated algorithms to calculate a user’s credibility based on this data.</p>
 
 				<figure>
-					<img src="img/articles/crypto-wallets/world-coverage.png" class="world-coverage">
+					<img src="img/articles/crypto-wallets/world-coverage.png" class="world-coverage" alt="Social network user penetration worldwide">
 					<figcaption class="span-both">
 						<em>Social Network User Penetration worldwide, via any device, at least once per month. Source : eMarketer, April 2013</em>
 					</figcaption>
 				</figure>
-				
+
 				<h5>Onboard more users and protect your reputation with social KYC</h5>
 				<p>Do you really need to see an official identity document for a user just to sign up to your wallet, or to carry out a low value transaction? Then answer is no.</p>
 				<p>Our social Know Your Customer (KYC) solution verifies a user’s identity in real-time. It’s quick, frictionless and mobile-friendly too, and can be used when onboarding and/or at the point of transaction.</p>

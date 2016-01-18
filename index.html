@@ -327,6 +327,11 @@ class: index
                 RASMUS GROTH,
                 CEO, VERIDU
             </p>
+            <div class="player-container">
+                <img id="play-button" src="img/play.png" alt="play">
+                <div id="youtube-player"></div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -441,3 +446,62 @@ class: index
     <img src="img/peer.jpeg" alt="">
     <img src="img/tenant.jpg" alt="">
 </div>
+
+
+<script>
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var ytPlayer;
+function onYouTubeIframeAPIReady() {
+
+    ytPlayer = new YT.Player('youtube-player', {
+        width: '350',
+        height: '180',
+        videoId: 'II1_oO_ULNo',
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    var playButton = document.getElementById('play-button');
+
+    function onPlayerReady(event) {
+
+        ytPlayer = event.target;
+        playButton.addEventListener('click', playVideo);
+    }
+
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+
+        if (event.data == YT.PlayerState.PLAYING ) {
+            // hide button
+            playButton.style.display = 'none';
+
+        } else {
+            // show button
+            playButton.style.display = 'inline-block';
+        }
+
+    }
+    function stopVideo() {
+        ytPlayer.stopVideo();
+    }
+    function playVideo() {
+        ytPlayer.playVideo();
+    }
+
+    </script>

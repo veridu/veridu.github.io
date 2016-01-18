@@ -575,6 +575,33 @@ section.rasmus-quote {
 	padding-top: em(41);
 	@extend .tablet__gutter;
 
+
+	.player-container {
+		position: relative;
+		display: table;
+		width: 300px;
+		margin-right: 10%;
+		float: right;
+
+		@media (min-width: $screen-sm-min) {
+			margin-right: 0;
+			width: auto;
+			float: none;
+		}
+
+		> img {
+			position: absolute;
+			width: 50px;
+			left: 50%;
+			margin-left: -25px;
+			top: 50%;
+			margin-top: -25px;
+		}
+		iframe {
+			width: 100% !important;
+		}
+	}
+
 	// tablets
 	@media (min-width: $screen-sm-min) {
 
