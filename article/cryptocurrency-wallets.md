@@ -44,7 +44,7 @@ excerpt: A happy user is an active user
 				<h5>What if your wallet eliminated these frustrations? What if you could...</h5>
 
 				<p>
-					<ul class="no-bullets">
+					<ul class="no-bullets list-unstyled">
 						<li>
 							&bullet; &nbsp; &nbsp;Safely grow your userbase in regions with a large unbanked or underbanked population?
 						</li>
