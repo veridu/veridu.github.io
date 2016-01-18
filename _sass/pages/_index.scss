@@ -582,6 +582,7 @@ section.rasmus-quote {
 		width: 300px;
 		margin-right: 10%;
 		float: right;
+		margin-top: em(40);
 
 		@media (min-width: $screen-sm-min) {
 			margin-right: 0;
@@ -590,6 +591,7 @@ section.rasmus-quote {
 		}
 
 		> img {
+			cursor: pointer;
 			position: absolute;
 			width: 50px;
 			left: 50%;
