@@ -24,14 +24,14 @@ class: pricing
 		<div class="plans-container">
 			<div class="plans-descriptions">
 				<div class="cell cell--separator">
-					<h4 class="plan-heading">Volume</h4>
+					<h4 class="plan-heading">Checks Per Month</h4>
 					<p class="plan-description" ng-class="{'mobile-vis': vol}">
 						<span>Choose your subscription level based on your volume</span>
 						<a href="javascript:;" class="black-link"  ng-click="vol = !vol" >({ vol ? 'Show less' : 'Read more'})</a>
 					</p>
 				</div>
 				<div class="cell cell--separator">
-					<h4 class="plan-heading">Subscriptions</h4>
+					<h4 class="plan-heading">Monthly Base Fee</h4>
 					<p class="plan-description" ng-class="{'mobile-vis': msub}">
 						<span>Three subscription levels to suit your needs</span>
 						<a href="javascript:;" class="black-link"  ng-click="msub = !msub" >({ msub ? 'Show less' : 'Read more'})</a>
@@ -39,7 +39,7 @@ class: pricing
 				</div>
 
 				<div class="cell cell--separator">
-					<h4 class="plan-heading">Single Source Verification</h4>
+					<h4 class="plan-heading">Single Source Check</h4>
 					<p class="plan-description" ng-class="{'mobile-vis': ssv}">
 						<span>Subsequent verifications by a user on the same social account are free for a month</span>
 						<a href="javascript:;" class="black-link"  ng-click="ssv = !ssv" >({ ssv ? 'Show less' : 'Read more'})</a>
@@ -47,7 +47,7 @@ class: pricing
 				</div>
 
 				<div class="cell">
-					<h4 class="plan-heading">Multi Source Verification</h4>
+					<h4 class="plan-heading">Multi Source Check</h4>
 					<p class="plan-description" ng-class="{'mobile-vis': msv}">
 						<span>Multi source verification and authentication using social networks, online services, knowledge based authentication, email, sms etc.</span>
 						<a href="javascript:;" class="black-link"  ng-click="msv = !msv" >({ msv ? 'Show less' : 'Read more'})</a>

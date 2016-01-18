@@ -5,6 +5,8 @@ section.page.article {
 		@include clearfix();
 		background: #eee;
 
+		h5 {
+		}
 		.article__excerpt {
 			margin-top: 0;
 			background: white;

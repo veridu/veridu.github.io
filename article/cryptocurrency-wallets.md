@@ -44,15 +44,15 @@ excerpt: A happy user is an active user
 				<h5>What if your wallet eliminated these frustrations? What if you could...</h5>
 
 				<p>
-					<ul class="no-bullets list-unstyled">
-						<li>
-							&bullet; &nbsp; &nbsp;Safely grow your userbase in regions with a large unbanked or underbanked population?
+					<ul class="list-hollow list-unstyled">
+						<li class="v-row">
+							<div class="col-07">&bullet;</div> <div class="col-113">Safely grow your userbase in regions with a large unbanked or underbanked population?</div>
 						</li>
-						<li>
-							&bullet; &nbsp; &nbsp; Attract more users by improving the security of your wallet without affecting their experience?
+						<li class="v-row">
+							<div class="col-07">&bullet;</div> <div class="col-113">Attract more users by improving the security of your wallet without affecting their experience?</div>
 						</li>
-						<li>
-							&bullet; &nbsp; &nbsp; Retain users by offering a slick account reactivation experience?
+						<li class="v-row">
+							<div class="col-07">&bullet;</div> <div class="col-113">Retain users by offering a slick account reactivation experience?</div>
 						</li>
 					</ul>
 				</p>
@@ -105,8 +105,10 @@ excerpt: A happy user is an active user
 			</div>
 
 			<div class="article__tags__container">
+				<div class="clearfix"><h5>Sectors</h5></div>
 				<span class="v-tag v-tag--blue">Payments</span>
-				<div class="clearfix"></div>
+
+				<div class="clearfix"><h5>Authentication</h5></div>
 				<div class="v-tag v-tag--orange">Social Media</div>
 				<div class="v-tag v-tag--orange">Online Services</div>
 				<div class="v-tag v-tag--orange">SMS</div>
@@ -116,14 +118,14 @@ excerpt: A happy user is an active user
 				<div class="v-tag v-tag--orange">Documents</div>
 				<div class="v-tag v-tag--orange">Contact</div>
 
-				<div class="clearfix"></div>
+				<div class="clearfix"><h5>Integration</h5></div>
 				<div class="v-tag v-tag--grey">API</div>
 				<div class="v-tag v-tag--grey">SDK</div>
 				<div class="v-tag v-tag--grey">Widget</div>
 				<div class="v-tag v-tag--grey">Hosted</div>
 				<div class="clearfix"></div>
 
-				<div class="clearfix"></div>
+				<div class="clearfix"><h5>Credibility scores</h5></div>
 				<div class="v-tag v-tag--success1">Time to fake</div>
 				<div class="v-tag v-tag--success1">Contact info</div>
 				<div class="v-tag v-tag--success1">Age</div>
@@ -131,11 +133,11 @@ excerpt: A happy user is an active user
 				<div class="v-tag v-tag--success1">Education</div>
 				<div class="clearfix"></div>
 
-				<div class="clearfix"></div>
+				<div class="clearfix"><h5>Insight</h5></div>
 				<div class="v-tag v-tag--success2">Ability to influence</div>
 				<div class="v-tag v-tag--success2">Frequent traveller</div>
 
-				<div class="clearfix"></div>
+				<div class="clearfix"><h5>Warnings</h5></div>
 				<div class="v-tag v-tag--warning2">Empty profile</div>
 				<div class="v-tag v-tag--warning2">Known fake</div>
 				<div class="v-tag v-tag--warning2">Peps</div>
@@ -143,7 +145,7 @@ excerpt: A happy user is an active user
 				<div class="v-tag v-tag--warning2">Silly name</div>
 				<div class="v-tag v-tag--warning2">Celebrity name</div>
 
-				<div class="clearfix"></div>
+				<div class="clearfix"><h5>Decision gates</h5></div>
 				<div class="v-tag v-tag--bluegreen">+13</div>
 				<div class="v-tag v-tag--bluegreen">+18</div>
 				<div class="v-tag v-tag--bluegreen">+21</div>

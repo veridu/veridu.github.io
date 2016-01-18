@@ -170,3 +170,17 @@ ul.no-bullets {
 		@include row();
 	}
 }
+
+.list-hollow {
+	> li {
+		margin-top: em(10);
+		margin-bottom: em(10);
+	}
+}
+
+.col-07 {
+	@include col(0.7);
+}
+.col-113 {
+	@include col(11.3);
+}
