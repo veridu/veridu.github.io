@@ -242,9 +242,6 @@
 		vm.currentLandingState = 'customer';
 		vm.playSlider = true;
 
-		$(".landing-section").on("swiperight", nextSlide);
-		$(".landing-section").on("swipeleft", prevSlide);
-
 		init();
 
 		// menu border
@@ -277,8 +274,8 @@
 			vm.showSignin = ! vm.showSignin;
 		}
 
-		function nextSlide() {
-			if (! vm.playSlider)
+		function nextSlide(force) {
+			if (!force && ! vm.playSlider)
 				return;
 
 			if (vm.slider.index == (vm.slider.length - 1)) {
@@ -288,8 +285,8 @@
 			}
 		}
 
-		function prevSlide() {
-			if (! vm.playSlider)
+		function prevSlide(force) {
+			if (!force && ! vm.playSlider)
 				return;
 
 			if (vm.slider.index == 0) {

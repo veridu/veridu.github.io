@@ -2,7 +2,7 @@
 layout: default
 class: index
 ---
-<div class="landing-section">
+<div class="landing-section" ng-swipe-right="App.prevSlide(true)" ng-swipe-left="App.nextSlide(true)">
 
     <video id="video-candidate" loop ng-show="App.slider.state() == 'candidate'">
         <source src="video/candidate.mp4" type="video/mp4">
