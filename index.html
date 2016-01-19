@@ -120,22 +120,71 @@ class: index
                             <h4>TRY IT NOW</h4>
                             <div class="buttons-container">
                                 <div class="btn-container right">
-                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')" ng-class="{active : App.user.auth.facebook}"> Facebook </button>
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')"
+                                        ng-class="{ active : App.user.auth.facebook, loading: App.Widget.state == 'SCRAPING' && App.loading == 'facebook'}"
+                                    >
+                                        <span>Facebook</span>
+                                        <div class="spinner">
+                                            <div class="spinner-wrapper">
+                                                <div class="rotator">
+                                                    <div class="inner-spin"></div>
+                                                    <div class="inner-spin"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </button>
                                 </div>
 
                                 <div class="btn-container left">
-                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')" ng-class="{active : App.user.auth.linkedin}"> LinkedIn </button>
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')"
+                                        ng-class="{ active : App.user.auth.linkedin, loading: App.Widget.state == 'SCRAPING' && App.loading == 'linkedin'}"
+                                    >
+                                        <span>LinkedIn</span>
+                                        <div class="spinner">
+                                            <div class="spinner-wrapper">
+                                                <div class="rotator">
+                                                    <div class="inner-spin"></div>
+                                                    <div class="inner-spin"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
                                 </div>
 
                                 <!-- breaks line -->
                                 <div class="clearfix"></div>
 
                                 <div class="btn-container right ">
-                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('google')" ng-class="{active : App.user.auth.google}"> Google </button>
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('google')"
+                                        ng-class="{ active : App.user.auth.google, loading: App.Widget.state == 'SCRAPING' && App.loading == 'google'}"
+                                    >
+                                        <span>Google</span>
+                                        <div class="spinner">
+                                            <div class="spinner-wrapper">
+                                                <div class="rotator">
+                                                    <div class="inner-spin"></div>
+                                                    <div class="inner-spin"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
                                 </div>
 
                                 <div class="btn-container left ">
-                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{active : App.user.auth.twitter}"> Twitter </button>
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')"
+                                        ng-class="{ active : App.user.auth.twitter, loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}"
+                                    >
+                                        <span>Twitter</span>
+                                        <div class="spinner">
+                                            <div class="spinner-wrapper">
+                                                <div class="rotator">
+                                                    <div class="inner-spin"></div>
+                                                    <div class="inner-spin"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
                                 </div>
 
                                 <div class="hidden-verification-container">

@@ -479,6 +479,9 @@
 		}
 
 		function auth(service) {
+
+			vm.loading = service;
+
 			var username = Auth.username;
 
 			switch (service) {
@@ -524,7 +527,7 @@
 			return true;
 		}
 
-		
+
 
 	}
 

@@ -386,7 +386,22 @@ section.verification-container {
 		min-height: em(300);
 
 		.buttons-container .btn {
-			color: white !important
+			color: white !important;
+
+			.spinner {
+				display: none;
+				margin: 0 auto;
+				position: relative;
+				top: -18px;
+			}
+			&.loading {
+				.spinner {
+					display: block;
+				}
+				> span {
+					display: none;
+				}
+			}
 		}
 
 		.terms-of-use {
