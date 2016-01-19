@@ -406,6 +406,16 @@ section.verification-container {
 				}
 			}
 
+			&:active {
+				.inner-spin,
+				.spinner-wrapper::after {
+					background: #1080E8;
+				}
+				.rotator:before {
+					border: 3px solid #1080E8;
+				}
+			}
+
 
 			.spinner {
 				display: none;
