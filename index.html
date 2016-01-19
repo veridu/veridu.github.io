@@ -257,63 +257,26 @@ class: index
 
 <section class="partners-quotes">
 
-    <div  class="carousel slide" >
-        <div class="carousel-inner">
-            <a class="nav carousel-nav-left"  href="javascript:;" ng-click="App.prevPartnerSlide()"><img src="img/arrow-right.png"></a>
-            <a class="nav carousel-nav-right" href="javascript:;" ng-click="App.nextPartnerSlide()"><img src="img/arrow-right.png"></a>
-
-            <div class="item fadeIn" ng-class="{active : App.partnerIndex == 0 }" >
-                <div class="container">
-                    <div class="carousel-caption">
-                        <p>“Over half our users have verified themselves with Veridu, dramatically increasing the safety and reliability of our service.”</p>
-                        <div class="quoted-from-container">
-                            <small>
-                                CTO, <br> Faadetgjort
-                            </small>
-                        </div>
-                    </div>
+    <div class="v-container">
+        <div class="slick-carousel" id="partners-carousel" >
+            <div>
+                <q>Over half our users have verified themselves with Veridu, dramatically increasing the safety and reliability of our service.</q>
+                <div class="author">
+                    CTO, <br> Faadetgjort
                 </div>
             </div>
-
-            <div class="item fadeIn" ng-class="{active : App.partnerIndex == 1 }">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <p>“Veridu rocks! Especially for our customers who sell high value goods online. The team has been beyond helpful and responsive to our needs.”</p>
-                        <div class="quoted-from-container">
-                            <small>
-                                CEO, <br> SimpleShop
-                            </small>
-                        </div>
-                    </div>
+            <div>
+                <q>Veridu rocks! Especially for our customers who sell high value goods online. The team has been beyond helpful and responsive to our needs.</q>
+                <div class="author">
+                    CEO, <br> SimpleShop
                 </div>
             </div>
-
-            <div class="item fadeIn" ng-class="{active : App.partnerIndex == 2 }">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <p>“It’s simple: Veridu enables trust. More trust means more transactions and ultimately more revenue.”</p>
-                        <div class="quoted-from-container">
-                            <small>
-                                CTO, <br> Ahandyhand
-                            </small>
-                        </div>
-                    </div>
+            <div>
+                <q>It’s simple: Veridu enables trust. More trust means more transactions and ultimately more revenue.</q>
+                <div class="author">
+                    CTO, <br> Ahandyhand
                 </div>
             </div>
-
-            <div class="item fadeIn" ng-class="{active : App.partnerIndex == 3 }">
-                <div class="container">
-                    <div class="carousel-caption">
-                        <p>“Veridu gives us much lower transactional risk and significantly better insight on our customers.”</p>
-                        <div class="quoted-from-container">
-                            <small>
-                                CEO, <br> The Real Asset Company
-                            </small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
         </div>
     </div>
 </section>

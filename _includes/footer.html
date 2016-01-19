@@ -142,9 +142,17 @@
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu.min.js"></script>
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu-ui.min.js"></script>
 <script type="text/javascript" src="https://veridu.com/integration/cfg.js"></script>
+<script src="node_modules/slick-carousel/slick/slick.js"></script>
 
 <!-- App -->
 <script type="text/javascript">
+
+	$('.slick-carousel').slick({
+		dots: true,
+		speed: 500,
+		prevArrow: '<a class="nav-prev"  href="javascript:;"><img src="img/arrow-right.png"></a>',
+		nextArrow: '<a class="nav-next"  href="javascript:;"><img src="img/arrow-right.png"></a>'
+	});
 
 	if (! window.VERIDU) {
 		window.VERIDU = {

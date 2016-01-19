@@ -166,3 +166,22 @@ ul.no-bullets {
 .col-113 {
 	@include col(11.3);
 }
+
+.v-container {
+	@extend .clearfix;
+	display: block;
+
+	@media (max-width: $screen-xs-max) {
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+	@extend .tablet__gutter;
+
+	@media (min-width: $screen-sm-min) {
+		padding: 0;
+		width: 100%;
+		max-width: $container-max-width;
+		margin: 0 auto;
+
+	}
+}
