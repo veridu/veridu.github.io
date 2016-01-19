@@ -85,8 +85,8 @@ excerpt: A happy user is an active user
 				<p>Nothing is more frustrating for a user than being locked out of their account for days while their identity is being verified because they’ve lost their login credentials.</p>
 				<p>When a user is locked out of their account, give them the option of proving they are who they say they are with a variety of identity verification challenges, that can be completed on a mobile, for faster account reactivation.</p>
 
-				<h5>Give us a go</h5>
-				<p>Like what you’ve read? Sign in with your social networks to try us for yourself.</p>
+				<!-- <h5>Give us a go</h5>
+				<p>Like what you’ve read? Sign in with your social networks to try us for yourself.</p> -->
 
 				<h5>A User’s Story</h5>
 

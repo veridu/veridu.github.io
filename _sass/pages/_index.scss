@@ -639,8 +639,8 @@ section.rasmus-quote {
 			margin-bottom: em(19);
 		}
 		p {
-			font-weight: 400;
-			font-size: 1.067em;
+			font-weight: 600;
+			font-size: 1em;
 			line-height: em(22);
 		}
 	}
@@ -919,8 +919,7 @@ section.contact {
 			font-weight: 300;
 
 			@media (min-width: $screen-sm-min) {
-				// width: 50%;
-				// margin: 0 auto;
+				font-size: em(30)
 			}
 		}
 
