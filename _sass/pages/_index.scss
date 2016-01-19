@@ -412,18 +412,19 @@ section.verification-container {
 				margin: 0 auto;
 				position: relative;
 				top: -27px;
+
 				@media (min-width: $screen-sm-min) {
 					top: -18px;
 				}
 			}
-			// &.loading {
+			&.loading {
 				.spinner {
 					display: block;
 				}
 				> span {
 					display: none;
 				}
-			// }
+			}
 		}
 
 		.terms-of-use {
@@ -431,7 +432,8 @@ section.verification-container {
 			color: black;
 			font-size: em(13);
 			a {
-				border-bottom: 1px solid white;
+				color: black;
+				border-bottom: 1px solid black;
 			}
 
 		}
@@ -442,6 +444,10 @@ section.verification-container {
 			@include col-offset(1);
 			.terms-of-use {
 				color: white;
+				a {
+					color: white;
+					border-color: white;
+				}
 			}
 
 			padding-left: 0 !important;
