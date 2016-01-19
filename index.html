@@ -332,6 +332,7 @@ function MeasureConnectionSpeed() {
         var speedKbps = (speedBps / 1024).toFixed(2);
         var speedMbps = (speedKbps / 1024).toFixed(2);
         console.warn(speedKbps);
+        
         if (speedKbps < 1000) {
             $('.landing-section video').remove();
             console.warn('rmoveou');
