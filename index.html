@@ -299,76 +299,15 @@ class: index
     </div>
 </section>
 
-<!-- <section class="integration veridu-list">
-    <div>
-        <h2 class="font-light">Integration</h2>
-
-        <div class="items-container">
-
-            <div class="item-container">
-                <h3>HOSTED</h3>
-                <p>Simply send users an email link to verify themselves and evaluate and manage responses with our one-stop dashboard. It's effective, easy and no integration is.</p>
-            </div>
-
-            <div class="item-container">
-                <h3>WIDGETS</h3>
-                <p>Access our library full of beautiful widgets - you're sure to find one that meets your needs. Simple plug ins let you embed your chosen widget into your site quickly, easily and without any fuss.</p>
-            </div>
-
-            <div class="item-container">
-                <h3>API</h3>
-                <p>Get creative! Our API gives you complete flexibility to customise the look and flow of your identity solution for a seamless user experience completely tailored to your needs.</p>
-            </div>
-        </div>
-    </div>
-</section> -->
-
-<!-- <section class="contact veridu-list" ng-controller="ContactCtrl as ctrl">
-    <div>
-        <h2 class="font-light">Contact <span class="hidden-xs">us</span></h2>
-
-        <p class="section__description visible-xs">
-            Contact us to discuss your specific needs
-        </p>
-
-        <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">
-
-                <div class="input-container name">
-                    <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name">
-                </div>
-
-                <div class="input-container company">
-                    <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">
-                </div>
-                <div class="clearfix hidden-xs"></div>
-
-                <div class="input-container email">
-                    <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">
-                </div>
-                <div class="clearfix hidden-xs"></div>
-
-                <div class="input-container message">
-                    <textarea rows="5" ng-model="ctrl.contact.message" name="message" type="text" placeholder="Message"></textarea>
-                </div>
-
-                <div class="input-container text-right submit">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-        </form>
-    </div>
-</section> -->
-
 <script>
+var imageAddr = "img/bg-integrations.jpg";
+var downloadSize = 168048; //bytes
 
-    var imageAddr = "img/bridge.jpeg";
-    var downloadSize = 128048; //bytes
+window.onload = function() {
+    window.setTimeout(MeasureConnectionSpeed, 1);
+};
 
-    window.onload = function() {
-
-        window.setTimeout(MeasureConnectionSpeed, 1);
-    };
-
-    function MeasureConnectionSpeed() {
+function MeasureConnectionSpeed() {
     var oProgress = document.getElementById("progress");
     var startTime, endTime;
     var download = new Image();
@@ -379,7 +318,7 @@ class: index
     }
 
     download.onerror = function (err, msg) {
-        oProgress.innerHTML = "Invalid image, or error downloading";
+        console.warn('error measuring connection speed');
     }
 
     startTime = (new Date()).getTime();
@@ -392,16 +331,16 @@ class: index
         var speedBps = (bitsLoaded / duration).toFixed(2);
         var speedKbps = (speedBps / 1024).toFixed(2);
         var speedMbps = (speedKbps / 1024).toFixed(2);
-        console.warn(speedMbps);
-        // oProgress.innerHTML = "Your connection speed is: <br />" +
-        //    speedBps + " bps<br />"   +
-        //    speedKbps + " kbps<br />" +
-        //    speedMbps + " Mbps<br />";
+        console.warn(speedKbps);
+        if (speedKbps < 1000) {
+            $('.landing-section video').remove();
+            console.warn('rmoveou');
+        }
+
     }
+
 }
-
 </script>
-
 <!-- for faster image loading on landing content -->
 <div class="hidden">
     <img src="img/customer.jpeg" alt="">
@@ -412,8 +351,8 @@ class: index
 
 
 <script>
-var tag = document.createElement('script');
 
+var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);

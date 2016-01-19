@@ -225,8 +225,8 @@
 
 	}
 
-	AppCtrl.$inject = ['$scope', 'Widget', 'Auth', 'Veridu'];
-	function AppCtrl ($scope, Widget, Auth, Veridu) {
+	AppCtrl.$inject = ['$scope', 'Widget', 'Auth', 'Veridu', '$compile'];
+	function AppCtrl ($scope, Widget, Auth, Veridu, $compile) {
 
 		var vm = this;
 
@@ -523,6 +523,9 @@
 
 			return true;
 		}
+
+		
+
 	}
 
 	$('.page-loading').fadeOut();
