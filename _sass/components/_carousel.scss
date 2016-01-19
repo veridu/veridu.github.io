@@ -56,6 +56,9 @@
 // Slick carousel
 
 .slick-carousel {
+	*  {
+		outline: 0;
+	}
 
 	position: relative;
 
