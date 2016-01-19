@@ -66,39 +66,50 @@ cover: img/bridge.jpeg
 	</address>
 </section>
 
+
 <section class="contact veridu-list">
-    <div>
-        <h2 class="font-light">Contact <span class="hidden-xs">us</span> <a class="elegant-link" href="https://podio.com/webforms/6314922/492384" target="_blank" >here</a></h2>
-		<!--
-        <p class="section__description visible-xs">
-            Contact us to discuss your specific needs
-        </p>
+	<div>
+		<h2 class="font-light">Contact us</h2>
 
-        <form  method="post" class="form-horizontal" role="form" ng-submit="ctrl.sendContact()">
-            <div class="input-container name">
-                <input ng-model="ctrl.contact.name" name="name" type="text" placeholder="Name">
-            </div>
+		<form  class="form-horizontal" role="form" action="https://www.getdrip.com/forms/8370268/submissions" method="post" data-drip-embedded-form="8370268" ng-submit="ctrl.sendContact()" target="_blank">
+			<div class="input-container">
+				<input ng-model="ctrl.contact.first_name" name="fields[first_name]" type="text" placeholder="First Name" >
+			</div>
 
-            <div class="input-container company">
-                <input ng-model="ctrl.contact.company" name="company" type="text" placeholder="Company">
-            </div>
-            <div class="clearfix hidden-xs"></div>
+			<div class="input-container">
+				<input ng-model="ctrl.contact.last_name" name="fields[last_name]" type="text" placeholder="Last Name">
+			</div>
+			<div class="clearfix hidden-xs"></div>
+			<div class="input-container">
+				<input ng-model="ctrl.contact.company" name="fields[company]" type="text" placeholder="Company" >
+			</div>
 
-            <div class="input-container email">
-                <input ng-model="ctrl.contact.email"  name="email" type="email" placeholder="Email">
-            </div>
-            <div class="clearfix hidden-xs"></div>
+			<div class="input-container">
+				<input ng-model="ctrl.contact.job_title" name="fields[job_title]" type="text" placeholder="Job Title">
+			</div>
+			<div class="hidden-xs"></div>
 
-            <div class="input-container message">
-                <textarea rows="5" ng-model="ctrl.contact.message" name="message" type="text" placeholder="Message"></textarea>
-            </div>
+			<div class="input-container ">
+				<input ng-model="ctrl.contact.email"  name="fields[email]" type="email" placeholder="Email">
+			</div>
 
-            <div class="input-container text-right submit">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </form> -->
-    </div>
+			<div class="input-container ">
+				<input ng-model="ctrl.contact.phone" class="half"  name="fields[telephone]" type="text" placeholder="Telephone">
+			</div>
+			<div class="clearfix hidden-xs"></div>
+
+			<div class="input-container message">
+				<textarea rows="5" ng-model="ctrl.contact.message" name="fields[tell_us_more]" type="text" placeholder="Message"></textarea>
+			</div>
+
+			<div class="input-container text-right submit">
+				<button type="submit" class="btn btn-primary btn-primary--text-white">Submit</button>
+			</div>
+		</form>
+
+	</div>
 </section>
+
 
 <section class="support pure-container">
 

@@ -6,7 +6,7 @@
 		.item-container {
 			cursor: pointer;
 		}
-		
+
 		@media (max-width: $screen-xs-max) {
 			background: #EFEFEF !important;
 			* {
@@ -114,5 +114,11 @@
 		}
 
 	}
+
+}
+.contact.veridu-list {
+
+	position: relative;
+	top: -50px;
 
 }
