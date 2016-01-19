@@ -388,20 +388,42 @@ section.verification-container {
 		.buttons-container .btn {
 			color: white !important;
 
+			.inner-spin,
+			.spinner-wrapper::after {
+				background: $brand-primary;
+			}
+			.rotator:before {
+				border: 3px solid $brand-primary;
+			}
+
+			&.active {
+				.inner-spin,
+				.spinner-wrapper::after {
+					background: $brand-primary-border-color;
+				}
+				.rotator:before {
+					border: 3px solid $brand-primary-border-color;
+				}
+			}
+
+
 			.spinner {
 				display: none;
 				margin: 0 auto;
 				position: relative;
-				top: -18px;
+				top: -27px;
+				@media (min-width: $screen-sm-min) {
+					top: -18px;
+				}
 			}
-			&.loading {
+			// &.loading {
 				.spinner {
 					display: block;
 				}
 				> span {
 					display: none;
 				}
-			}
+			// }
 		}
 
 		.terms-of-use {
