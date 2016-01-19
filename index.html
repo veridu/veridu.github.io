@@ -300,8 +300,9 @@ class: index
 </section>
 
 <script>
-var imageAddr = "img/bg-integrations.jpg";
-var downloadSize = 168048; //bytes
+
+var imageAddr = "img/rasmus-01.jpg";
+var downloadSize = 46861; //bytes
 
 window.onload = function() {
     window.setTimeout(MeasureConnectionSpeed, 1);
@@ -332,10 +333,9 @@ function MeasureConnectionSpeed() {
         var speedKbps = (speedBps / 1024).toFixed(2);
         var speedMbps = (speedKbps / 1024).toFixed(2);
         console.warn(speedKbps);
-        
-        if (speedKbps < 1000) {
+
+        if (speedKbps < 500) {
             $('.landing-section video').remove();
-            console.warn('rmoveou');
         }
 
     }
