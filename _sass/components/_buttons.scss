@@ -29,7 +29,8 @@
 		color: $color;
 	}
 
-	&.active{
+	&.active,
+	&:active {
 		color: white;
 		background-color: $color !important ;
 	}
