@@ -156,7 +156,7 @@ excerpt: A happy user is an active user
 				<div class="clearfix"></div>
 
 				<div class="download-ct">
-					<button class="btn btn-primary btn-primary--text-white" onclick="window.open('resources/cryptocurrency-wallets-Veridu.pdf')">
+					<button class="btn btn-primary btn-primary--text-white" onclick="showPdf()">
 						<table>
 							<tr>
 								<td>Download PDF</td>
@@ -173,6 +173,28 @@ excerpt: A happy user is an active user
 
 <script type="text/javascript">
 
+	function showPdf() {
+
+		if (typeof(_dcq) !== 'undefined') {
+
+			_dcq.push(
+				[
+					"track",
+					"Opened Cryptocurrency Article PDF - Download Button",
+					{
+						value: 2000,
+						success : function (response) {
+							window.open('resources/cryptocurrency-wallets-Veridu.pdf');
+						}
+					}
+				]
+			);
+
+		} else {
+			window.open('resources/cryptocurrency-wallets-Veridu.pdf');
+		}
+
+	}
 	function load () {
 
 		angular
