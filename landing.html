@@ -2,7 +2,7 @@
 layout: default
 class: index
 ---
-<div class="landing-section" ng-swipe-right="App.prevSlide(true)" ng-swipe-left="App.nextSlide(true)">
+<div class="landing-section">
 
     <video id="video-candidate" loop ng-show="App.slider.state() == 'candidate'" poster="img/landing-bg.png">
         <source src="video/candidate.mp4" type="video/mp4">
@@ -350,8 +350,8 @@ class: index
 
 <script>
 
-var imageAddr = "img/city.jpeg";
-var downloadSize = 271.891; //bytes
+var imageAddr = "img/rasmus-01.jpg";
+var downloadSize = 46861; //bytes
 
 window.onload = function() {
     window.setTimeout(MeasureConnectionSpeed, 1);
