@@ -646,11 +646,11 @@ section.rasmus-quote {
 		> img {
 			cursor: pointer;
 			position: absolute;
-			width: em(50);
+			width: 50px;
 			left: 50%;
-			margin-left: -em(50);
+			margin-left: -25px;
 			top: 50%;
-			margin-top: -em(50);
+			margin-top: -25px;
 		}
 		iframe {
 			width: 100% !important;
