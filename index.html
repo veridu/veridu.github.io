@@ -2,6 +2,20 @@
 layout: default
 class: index
 ---
+<div class="video-overlay">
+    <div>
+        <div class="v-container">
+            <div class="player-container">
+                <img id="play-button" src="img/play.png" alt="play">
+                <div id="youtube-player"></div>
+                <div class="close-ct">
+                    <span onclick="hideVideo()"><i class="material-icons">&#xE5CD;</i> <span class="close-label">Close</span> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="landing-section" ng-swipe-right="App.prevSlide(true)" ng-swipe-left="App.nextSlide(true)">
 
     <video class="hidden-xs" id="video-candidate" loop ng-show="App.slider.state() == 'candidate'" poster="img/landing-bg.png">
@@ -339,20 +353,20 @@ class: index
                 Rasmus Groth,
                 CEO, VERIDU
             </p>
-            <div class="player-container">
-                <img id="play-button" src="img/play.png" alt="play">
-                <div id="youtube-player"></div>
-            </div>
-
+            <div onclick="showVideo()" class="player-container"></div>
         </div>
     </div>
 </section>
+
 
 <script>
 
 var imageAddr = "img/city.jpeg";
 var downloadSize = 271891; //bytes
-setTimeout(MeasureConnectionSpeed(), 1);
+
+window.onload = function() {
+    window.setTimeout(MeasureConnectionSpeed, 1);
+};
 
 function MeasureConnectionSpeed() {
     var oProgress = document.getElementById("progress");
@@ -404,6 +418,16 @@ function MeasureConnectionSpeed() {
 
 
 <script>
+
+function hideVideo() {
+    $('.video-overlay').removeClass('vis');
+    ytPlayer.stopVideo();
+}
+
+function showVideo() {
+    $('.video-overlay').addClass('vis');
+    ytPlayer.playVideo();
+}
 
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
@@ -460,4 +484,4 @@ function onYouTubeIframeAPIReady() {
         ytPlayer.playVideo();
     }
 
-    </script>
+</script>

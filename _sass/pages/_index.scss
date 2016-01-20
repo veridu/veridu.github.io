@@ -631,30 +631,20 @@ section.rasmus-quote {
 
 	.player-container {
 		position: relative;
-		display: table;
 		width: 300px;
+		height: 200px;
 		margin-right: 10%;
 		float: right;
 		margin-top: em(40);
+		background-image: url(../img/ras-video.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+		cursor: pointer;
 
 		@media (min-width: $screen-sm-min) {
-			margin-right: 0;
-			width: auto;
 			float: none;
 		}
 
-		> img {
-			cursor: pointer;
-			position: absolute;
-			width: 50px;
-			left: 50%;
-			margin-left: -25px;
-			top: 50%;
-			margin-top: -25px;
-		}
-		iframe {
-			width: 100% !important;
-		}
 	}
 
 	// tablets
@@ -983,6 +973,88 @@ section.contact {
 			letter-spacing: em(1);
 			line-height: em(22);
 			font-weight: 600;
+		}
+	}
+}
+
+.video-overlay {
+	@extend .animated;
+	@extend .fadeOut;
+	display: none;
+
+	background-color: rgba(black, 0.9);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 20000;
+
+	top: 0;
+	left: 0;
+
+	&.vis {
+		@extend .fadeIn;
+		display: table;
+	}
+
+	> div {
+		display: table-cell;
+		vertical-align: middle;
+
+		> div {
+		}
+		div.player-container {
+
+			display: table;
+			width: 100%;
+			height: 100%;
+
+			position: relative;
+
+			> .close-ct {
+				position: absolute;
+				top: - em(40);
+				left: 0;
+				color: white;
+
+				> span {
+					cursor: pointer;
+				}
+				.close-label {
+					position: relative;
+					top: - em(5);
+				}
+			}
+
+			iframe {
+				width: 100%;
+				height: 300px;
+
+				@media (orientation: landscape) {
+					height: 150px;
+				}
+
+				@media (min-width: $screen-sm-min) {
+					height: 450px;
+				}
+			}
+
+			> img {
+				cursor: pointer;
+				position: absolute;
+				left: 50%;
+				top: 50%;
+
+				margin-top: -40px;
+				margin-left: -40px;
+				width: 80px;
+
+				@media (min-width: $screen-sm-min) {
+					margin-top: -40px;
+					margin-left: -40px;
+					width: 80px;
+				}
+
+			}
 		}
 	}
 }
