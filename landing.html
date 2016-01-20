@@ -1,10 +1,177 @@
 ---
 layout: default
-class: index
+class: index landing
 ---
+<div class="video-overlay" onclick="hideVideo()">
+    <div>
+        <div class="v-container">
+            <div class="player-container">
+                <img id="play-button" src="img/play.png" alt="play">
+                <div id="youtube-player"></div>
+                <div class="close-ct">
+                    <span onclick="hideVideo()"><i class="material-icons">&#xE5CD;</i> <span class="close-label">Close</span> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <section class="landing-section">
+    <div class="landing__overlay"></div>
+    <div class="landing-content">
+        <div class="v-container">
+            <div class="slick-carousel" id="landing-carousel">
+                <div >
+                    <h1 class="title-sm">
+                        Know Your Costumer
+                    </h1>
+                    <p>
+                        You can have it all. Robust identity verification globally, <br>
+                        fewer declined transactions and an improved user experience.
+                    </p>
+                </div>
+
+                <div>
+                    <h1 class="title-sm">
+                        Know Your Peer
+                    </h1>
+                    <p>
+                        A trusting community is a sharing community. Drive engagement <br>
+                        in your community by letting members proactively showcase their <br>
+                        credibility and trustworthiness.
+                    </p>
+                </div>
+
+                <div>
+                    <h1 class="title-sm">
+                        Know Your Candidate
+                    </h1>
+                    <p>
+                        Rise above the competition. Enhance your candidate vetting <br>
+                        and be confident that you always put forward the most suitable <br>
+                        person for the job.
+                    </p>
+                </div>
+
+                <div>
+                    <h1 class="title-sm">
+                        Know Your Tenant
+                    </h1>
+                    <p>
+                        Don't be a stranger. Create trust between property owners and viewers <br>
+                        before they even meet with pre-vetting solutions that establish identity <br>
+                        and credibility.
+
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
 
 </section>
+
+<section class="integration-container">
+
+    <div class="v-container">
+        <h4>Connect to try it yourself</h4>
+        <div class="v-row">
+            <div class="buttons-container">
+                <div>
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')" ng-class="{ active : App.user.auth.facebook, loading: App.Widget.state == 'SCRAPING' && App.loading == 'facebook'}">
+                        <span>Facebook</span>
+                        <div class="spinner">
+                            <div class="spinner-wrapper">
+                                <div class="rotator">
+                                    <div class="inner-spin"></div>
+                                    <div class="inner-spin"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <div>
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')" ng-class="{ active : App.user.auth.linkedin, loading: App.Widget.state == 'SCRAPING' && App.loading == 'linkedin'}">
+                        <span>LinkedIn</span>
+                        <div class="spinner">
+                            <div class="spinner-wrapper">
+                                <div class="rotator">
+                                    <div class="inner-spin"></div>
+                                    <div class="inner-spin"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+
+                <div>
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('google')" ng-class="{ active : App.user.auth.google, loading: App.Widget.state == 'SCRAPING' && App.loading == 'google'}">
+
+                        <span>Google</span>
+                        <div class="spinner">
+                            <div class="spinner-wrapper">
+                                <div class="rotator">
+                                    <div class="inner-spin"></div>
+                                    <div class="inner-spin"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <div>
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter, loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
+                        <span>Twitter</span>
+                        <div class="spinner">
+                            <div class="spinner-wrapper">
+                                <div class="rotator">
+                                    <div class="inner-spin"></div>
+                                    <div class="inner-spin"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <div>
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter, loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
+                        <span>Twitter</span>
+                        <div class="spinner">
+                            <div class="spinner-wrapper">
+                                <div class="rotator">
+                                    <div class="inner-spin"></div>
+                                    <div class="inner-spin"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+                <div>
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter, loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
+                        <span>Twitter</span>
+                        <div class="spinner">
+                            <div class="spinner-wrapper">
+                                <div class="rotator">
+                                    <div class="inner-spin"></div>
+                                    <div class="inner-spin"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="terms-of-use">By using this service you accept our <a class="white-link" href="https://veridu.com/wiki/Terms_%26_Conditions" target="_blank" >terms of use</a></div>
+    </div>
+    <!-- <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a> -->
+</section>
+
 
 <section class="veridu-list md-cards">
     <div class="row-md">
@@ -108,19 +275,16 @@ class: index
                 Rasmus Groth,
                 CEO, VERIDU
             </p>
-            <div class="player-container">
-                <img id="play-button" src="img/play.png" alt="play">
-                <div id="youtube-player"></div>
-            </div>
-
+            <div onclick="showVideo()" class="player-container"></div>
         </div>
     </div>
 </section>
 
+
 <script>
 
-var imageAddr = "img/rasmus-01.jpg";
-var downloadSize = 46861; //bytes
+var imageAddr = "img/city.jpeg";
+var downloadSize = 271891; //bytes
 
 window.onload = function() {
     window.setTimeout(MeasureConnectionSpeed, 1);
@@ -153,7 +317,13 @@ function MeasureConnectionSpeed() {
         console.warn(speedKbps);
 
         if (speedKbps < 500) {
-            $('.landing-section video').remove();
+            var landingSection = document.querySelector('.landing-section');
+            var videos = document.querySelectorAll('.landing-section video');
+
+            for (var i = 0; i < videos.length; ++i) {
+              landingSection.removeChild(videos[i]);
+            }
+
         }
 
     }
@@ -168,68 +338,4 @@ function MeasureConnectionSpeed() {
     <img src="img/tenant.jpg" alt="">
 </div>
 
-
-<script>
-
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-// 3. This function creates an <iframe> (and YouTube player)
-//    after the API code downloads.
-var ytPlayer;
-function onYouTubeIframeAPIReady() {
-
-    ytPlayer = new YT.Player('youtube-player', {
-        width: '350',
-        height: '180',
-        videoId: 'II1_oO_ULNo',
-        thumbnailId: 2,
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
-    });
-    }
-
-    // 4. The API will call this function when the video player is ready.
-    var playButton = document.getElementById('play-button');
-
-    function onPlayerReady(event) {
-
-        ytPlayer = event.target;
-        playButton.addEventListener('click', playVideo);
-    }
-
-
-    // 5. The API calls this function when the player's state changes.
-    //    The function indicates that when playing a video (state=1),
-    //    the player should play for six seconds and then stop.
-    var done = false;
-    function onPlayerStateChange(event) {
-
-        if (event.data == YT.PlayerState.PLAYING ) {
-            // hide button
-            playButton.style.display = 'none';
-
-        } else {
-            // show button
-            playButton.style.display = 'inline-block';
-        }
-
-    }
-    function stopVideo() {
-        ytPlayer.stopVideo();
-    }
-    function playVideo() {
-        ytPlayer.playVideo();
-    }
-
-</script>
-
-<script>
-    // main.js
-
-
-</script>
+<script type="text/javascript" src="javascript/index.js"></script>

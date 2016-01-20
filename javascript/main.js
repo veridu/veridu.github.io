@@ -101,7 +101,7 @@
 
 	// sets landing height to 100%
 	var landingHeight = $(window).height() -  $('.menu').height();
-	var landingSection = $('.landing-section');
+	var landingSection = $('div.landing-section');
 	var sliderProgressCt = $('.slider-progress-container');
 	var landingCards =  $('.md-cards');
 	var menu = $('.menu');
@@ -109,7 +109,6 @@
 	var mbHelper =  $('#mobile-indicator');
 	var mobile = mbHelper.is(':visible');
 
-	landingSection.css('height', landingHeight);
 	sliderProgressCt.css('top',  - landingHeight * 0.035);
 
 	$window.resize(adjustHeights);

@@ -97,7 +97,7 @@ section.verification-container {
 	color: white;
 }
 
-.landing-section {
+div.landing-section {
 
 	video {
 		display: none;
@@ -236,6 +236,7 @@ section.verification-container {
 		height: 100%;
 		background: rgba(black, 0.8);
 	}
+
 
 	.slider-progress-container {
 		@media (min-width: $screen-sm-min) {
@@ -386,7 +387,6 @@ section.verification-container {
 		min-height: em(300);
 
 		.buttons-container .btn {
-			color: white !important;
 
 			.inner-spin,
 			.spinner-wrapper::after {
@@ -620,6 +620,7 @@ section.veridu-list {
 section.rasmus-quote {
 	@include clearfix();
 
+	position: relative;
 	background-image: url(../img/rasmus-big-fliph.jpg);
 	background-repeat: no-repeat no-repeat;
 	background-position: -320px -50px ;
@@ -665,7 +666,7 @@ section.rasmus-quote {
 		}
 		float: right;
 		width: 40%;
-		//position: relative;
+		position: relative;
 		z-index: 10;
 
 		@media (max-width: 330px) {
@@ -1056,5 +1057,105 @@ section.contact {
 
 			}
 		}
+	}
+}
+
+//  new
+
+section.landing-section {
+	position: relative;
+	display: table;
+	width: 100%;
+	color: white;
+	background-image: url(../img/articles/crypto-wallets/cover.png);
+
+	.landing__overlay {
+		position: absolute;
+		z-index: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(black, 0.8);
+	}
+
+	.landing-content {
+		display: table-cell;
+		vertical-align: bottom;
+		position: relative;
+		z-index: 2;
+		padding-bottom: em(50);
+
+		.slick-carousel {
+			> div {
+				text-align: left;
+				padding-top: 20%;
+
+				h1 {
+					margin-bottom: em(10);
+				}
+			}
+
+			.nav-prev,
+			.nav-next {
+				color: white;
+			}
+			.slick-dots li.slick-active button:before {
+				background-color: white;
+			}
+			.slick-dots li.slick-active button:before,
+			.slick-dots li button:before {
+				color: white;
+			}
+			.slick-dots li button:before {
+				border-color: white;
+			}
+		}
+	}
+}
+
+.main-container-index.landing {
+
+	.integration-container {
+		padding-top: em(50);
+		padding-bottom: em(50);
+
+		.buttons-container {
+			@extend .clearfix;
+			margin-top: em(20);
+			margin-bottom: em(20);
+
+			> div {
+				@include col(6);
+			}
+			@media (min-width: $screen-sm-min) {
+				> div {
+					@include col(2);
+				}
+			}
+			.btn {
+				width: 100%;
+				padding-top: em(10);
+				padding-bottom: em(10);
+			}
+		}
+
+		h4 {
+			margin: 0;
+			font-weight: 400
+		}
+
+		.terms-of-use {
+			color: black;
+			font-size: em(13);
+			a {
+				color: black !important;
+				border-bottom: 1px solid black !important;
+			}
+
+		}
+	}
+
+	section.veridu-list.md-cards {
+		position: relative;
+		top: 0;
 	}
 }
