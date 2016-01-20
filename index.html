@@ -4,19 +4,19 @@ class: index
 ---
 <div class="landing-section" ng-swipe-right="App.prevSlide(true)" ng-swipe-left="App.nextSlide(true)">
 
-    <video id="video-candidate" loop ng-show="App.slider.state() == 'candidate'" poster="img/landing-bg.png">
+    <video class="hidden-xs" id="video-candidate" loop ng-show="App.slider.state() == 'candidate'" poster="img/landing-bg.png">
         <source src="video/candidate.mp4" type="video/mp4">
     </video>
 
-    <video id="video-customer" loop ng-show="App.slider.state() == 'customer'" poster="img/landing-bg.png">
+    <video class="hidden-xs" id="video-customer" loop ng-show="App.slider.state() == 'customer'" poster="img/landing-bg.png">
         <source src="video/customer.mp4" type="video/mp4">
     </video>
 
-    <video id="video-peer" loop ng-show="App.slider.state() == 'peer'" poster="img/landing-bg.png">
+    <video class="hidden-xs" id="video-peer" loop ng-show="App.slider.state() == 'peer'" poster="img/landing-bg.png">
         <source src="video/peer.mp4" type="video/mp4">
     </video>
 
-    <video id="video-tenant" loop ng-show="App.slider.state() == 'tenant'" poster="img/landing-bg.png">
+    <video class="hidden-xs" id="video-tenant" loop ng-show="App.slider.state() == 'tenant'" poster="img/landing-bg.png">
         <source src="video/tenant.mp4" type="video/mp4">
     </video>
 
@@ -352,8 +352,7 @@ class: index
 
 var imageAddr = "img/city.jpeg";
 var downloadSize = 271891; //bytes
-
-MeasureConnectionSpeed();
+setTimeout(MeasureConnectionSpeed(), 1);
 
 function MeasureConnectionSpeed() {
     var oProgress = document.getElementById("progress");

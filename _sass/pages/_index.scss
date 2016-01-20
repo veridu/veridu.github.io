@@ -646,11 +646,11 @@ section.rasmus-quote {
 		> img {
 			cursor: pointer;
 			position: absolute;
-			width: 50px;
+			width: em(50);
 			left: 50%;
-			margin-left: -25px;
+			margin-left: -em(50);
 			top: 50%;
-			margin-top: -25px;
+			margin-top: -em(50);
 		}
 		iframe {
 			width: 100% !important;
@@ -957,7 +957,7 @@ section.contact {
 }
 
 .slick-carousel {
-	
+
 	> div {
 		outline: 0;
 		text-align: center;
