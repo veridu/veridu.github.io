@@ -351,11 +351,9 @@ class: index
 <script>
 
 var imageAddr = "img/city.jpeg";
-var downloadSize = 271.891; //bytes
+var downloadSize = 271891; //bytes
 
-window.onload = function() {
-    window.setTimeout(MeasureConnectionSpeed, 1);
-};
+MeasureConnectionSpeed();
 
 function MeasureConnectionSpeed() {
     var oProgress = document.getElementById("progress");
@@ -384,7 +382,13 @@ function MeasureConnectionSpeed() {
         console.warn(speedKbps);
 
         if (speedKbps < 500) {
-            $('.landing-section video').remove();
+            var landingSection = document.querySelector('.landing-section');
+            var videos = document.querySelectorAll('.landing-section video');
+
+            for (var i = 0; i < videos.length; ++i) {
+              landingSection.removeChild(videos[i]);
+            }
+
         }
 
     }
