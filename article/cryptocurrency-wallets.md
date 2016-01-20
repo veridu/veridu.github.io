@@ -136,8 +136,7 @@ excerpt: A happy user is an active user
 				<div class="clearfix"></div>
 
 				<div class="clearfix"><h5>Insight</h5></div>
-				<div class="v-tag v-tag--success2">Ability to influence</div>
-				<div class="v-tag v-tag--success2">Frequent traveller</div>
+				<div class="v-tag v-tag--success2">Crypto user</div>
 
 				<div class="clearfix"><h5>Warnings</h5></div>
 				<div class="v-tag v-tag--warning2">Empty profile</div>
@@ -146,12 +145,6 @@ excerpt: A happy user is an active user
 				<div class="v-tag v-tag--warning2">Sanctions</div>
 				<div class="v-tag v-tag--warning2">Silly name</div>
 				<div class="v-tag v-tag--warning2">Celebrity name</div>
-
-				<div class="clearfix"><h5>Decision gates</h5></div>
-				<div class="v-tag v-tag--bluegreen">+13</div>
-				<div class="v-tag v-tag--bluegreen">+18</div>
-				<div class="v-tag v-tag--bluegreen">+21</div>
-				<div class="v-tag v-tag--bluegreen">Student</div>
 
 				<div class="clearfix"></div>
 
@@ -176,23 +169,18 @@ excerpt: A happy user is an active user
 	function showPdf() {
 
 		if (typeof(_dcq) !== 'undefined') {
-
 			_dcq.push(
 				[
 					"track",
-					"Opened Cryptocurrency Article PDF - Download Button",
+					"Opened Cryptocurrency Wallets Article PDF - Download Button",
 					{
-						value: 2000,
-						success : function (response) {
-							window.open('resources/cryptocurrency-wallets-Veridu.pdf');
-						}
+						value: 2000
 					}
 				]
 			);
-
-		} else {
-			window.open('resources/cryptocurrency-wallets-Veridu.pdf');
 		}
+
+		window.open('resources/cryptocurrency-wallets-Veridu.pdf');
 
 	}
 	function load () {
