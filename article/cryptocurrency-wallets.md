@@ -3,7 +3,7 @@ title: Veridu for Cryptocurrency Wallets
 layout: blank
 class: article
 base: ../
-cover: img/articles/crypto-wallets/cover.jpg
+cover: img/articles/crypto-wallets/cover.png
 excerpt: A happy user is an active user
 ---
 <article>
