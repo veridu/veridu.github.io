@@ -424,6 +424,12 @@ function hideVideo() {
     ytPlayer.stopVideo();
 }
 
+window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode == 27) {
+        hideVideo();
+    }
+});
+
 function showVideo() {
     $('.video-overlay').addClass('vis');
     ytPlayer.playVideo();
