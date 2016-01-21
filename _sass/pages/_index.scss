@@ -952,7 +952,7 @@ section.contact {
 	> div {
 		outline: 0;
 		text-align: center;
-		padding-bottom: 50px;
+		padding-bottom: em(50);
 
 
 		q {
@@ -1078,19 +1078,17 @@ section.landing-section {
 	}
 
 	.landing-content {
-		display: table-cell;
 		vertical-align: bottom;
 		position: relative;
-		z-index: 2;
-		padding-bottom: em(50);
+		display: table;		
 
 		.slick-carousel {
 			> div {
 				text-align: left;
-				padding-top: 20%;
+				// padding-top: 20%;
 
 				h1 {
-					margin-bottom: em(10);
+
 				}
 			}
 

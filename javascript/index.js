@@ -51,7 +51,8 @@ function indexLoad() {
 				page.landingSection.css('height', landingHeight * 2/3);
 				page.landingItems.css('height', (landingHeight * 2/3) - 50);
 			} else {
-				page.landingSection.css('height', 'auto');
+				page.landingSection.css('height', 480);
+				page.landingItems.css('height', 430);
 			}
 
 		}
