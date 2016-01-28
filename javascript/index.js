@@ -19,7 +19,7 @@ function indexLoad() {
 	function init() {
 		// sets landing height to 100%
 		page.landingHeight = $(window).height() -  $('.menu').height();
-		page.landingSection = $('.landing-section');
+		page.landingSection = $('.new-landing-section');
 		page.landingItems = $('#landing-carousel > div');
 		page.sliderProgressCt = $('.slider-progress-container');
 		page.landingCards =  $('.md-cards');
@@ -48,7 +48,7 @@ function indexLoad() {
 				// landingHeight = 850;
 
 			if (! page.mobile) {
-				page.landingSection.css('height', landingHeight * 2/3);
+				page.landingSection.css('height', page.$window.height() * 2/3);
 				page.landingItems.css('height', (landingHeight * 6/12) - 50);
 			} else {
 				page.landingSection.css('height', 480);
