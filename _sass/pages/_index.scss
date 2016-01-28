@@ -1080,41 +1080,118 @@ section.landing-section {
 	.landing-content {
 		vertical-align: bottom;
 		position: relative;
-		display: table;		
+		display: table;
 
-		.slick-carousel {
-			> div {
-				text-align: left;
-				// padding-top: 20%;
-
-				h1 {
-
-				}
-			}
-
-			.nav-prev,
-			.nav-next {
-				color: white;
-			}
-			.slick-dots li.slick-active button:before {
-				background-color: white;
-			}
-			.slick-dots li.slick-active button:before,
-			.slick-dots li button:before {
-				color: white;
-			}
-			.slick-dots li button:before {
-				border-color: white;
-			}
-		}
 	}
 }
 
-.main-container-index.landing {
+.main-container.landing {
 
-	.integration-container {
+
+	//  new landing
+	.new-landing-section {
+		background-image: url(../img/articles/crypto-wallets/cover.png);
+		background-size: auto 100%;
+		position: relative;
+		.new-landing__overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background: rgba(black, 0.3);
+			z-index: 1;
+		}
+		//  media queries
+		@media (min-width: $screen-lg-min) {
+			background-size: 100% auto;
+			background-position: 0 -100px;
+		}
+
+
+		> div.new-landing-content {
+			@extend .v-container;
+			position: relative;
+			z-index: 2;
+
+			.slick-carousel {
+				@extend .row-md;
+
+				margin-bottom: em(50);
+				margin-top: 20%;
+				color: white;
+
+				> div {
+					text-align: left;
+
+					.v-item-content {
+						@media (min-width: $screen-sm-min) {
+							@include col(6);
+						}
+						h1 {
+							font-weight: 400;
+							margin-bottom: em(10);
+						}
+						p {
+							font-size: 1.2em;
+
+							a {
+								color: white;
+								text-decoration: none;
+								border-bottom: 1px solid white;
+
+								a:hover {
+									text-decoration: none;
+								}
+							}
+						}
+					}
+
+				}
+
+				.nav-prev,
+				.nav-next {
+					color: white;
+				}
+
+				.slick-dots li button:before{
+					width: 13px;
+					height: 13px;
+				}
+
+				.slick-dots li.slick-active button:before {
+					background-color: white;
+				}
+				.slick-dots li.slick-active button:before,
+				.slick-dots li button:before {
+					color: white;
+				}
+				.slick-dots li button:before {
+					border-color: white;
+				}
+			}
+
+		}
+	}
+
+	section.white-belt {
+		@extend .clearfix;
+		@extend .text-center;
+
+		background-color: white;
+		box-shadow: $material-shadow-1-both;
+		position: relative;
+		z-index: 10;
 		padding-top: em(50);
 		padding-bottom: em(50);
+
+		h2,h3 {
+			margin-top: 0;
+		}
+
+	}
+
+	.integration-container {
+		@extend .white-belt;
+		text-align: left !important;
 
 		.buttons-container {
 			@extend .clearfix;
@@ -1152,8 +1229,67 @@ section.landing-section {
 		}
 	}
 
-	section.veridu-list.md-cards {
-		position: relative;
-		top: 0;
+	section.onboard-customers,
+	section.accept-transactions,
+	section.do-it-your-way,
+	section.authenticate-identity {
+		@extend .multimedia-section;
+	}
+	section.do-it-your-way,
+	section.accept-transactions {
+		padding-bottom: em(100);
+	}
+
+	section.multimedia-section {
+
+		.content__container {
+			@extend .v-container;
+
+			.content {
+				@include row();
+
+				.content__image {
+					@include col(6);
+					img {
+						max-width: 100%;
+					}
+				}
+				.content__text {
+					@include col(6);
+					h1 {
+						margin-top: 2em;
+						margin-bottom: 1em;
+					}
+
+					h5 {
+						font-weight: bold;
+					}
+
+					.v-row {
+
+						> div {
+							@include col(6);
+						}
+					}
+				}
+			}
+		}
+	}
+
+	section.kyc {
+		padding-top: em(80);
+		padding-bottom: em(100);
+
+		h1 {
+			margin-top: 0;
+			margin-bottom: 0.9em;
+		}
+
+		.kyc__item {
+			@include col(4);
+			h5 {
+				font-weight: bold;
+			}
+		}
 	}
 }

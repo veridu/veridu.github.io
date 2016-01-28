@@ -49,7 +49,7 @@ function indexLoad() {
 
 			if (! page.mobile) {
 				page.landingSection.css('height', landingHeight * 2/3);
-				page.landingItems.css('height', (landingHeight * 2/3) - 50);
+				page.landingItems.css('height', (landingHeight * 6/12) - 50);
 			} else {
 				page.landingSection.css('height', 480);
 				page.landingItems.css('height', 430);

@@ -15,53 +15,56 @@ class: index landing
         </div>
     </div>
 </div>
-<section class="landing-section">
-    <div class="landing__overlay"></div>
-    <div class="landing-content">
-        <div class="">
+<section class="new-landing-section">
+    <div class="new-landing__overlay"></div>
+    <div class="new-landing-content">
+        <div >
             <div class="slick-carousel" id="landing-carousel">
-                <div >
-                    <h1 class="title-sm">
-                        Know Your Costumer
-                    </h1>
-                    <p>
-                        You can have it all. Robust identity verification globally, <br>
-                        fewer declined transactions and an improved user experience.
-                    </p>
+                <div class="v-item">
+                    <div class="v-item-content">
+                        <h1 class="title-sm">
+                            Know Your Costumer
+                        </h1>
+                        <p>
+                            You can have it all. Robust identity verification globally, fewer declined transactions and an improved user experience.
+                            <br>
+                            <br>
+                            <a href="#">Veridu for Sharing Economy</a>
+                        </p>
+                    </div>
                 </div>
 
-                <div>
-                    <h1 class="title-sm">
-                        Know Your Peer
-                    </h1>
-                    <p>
-                        A trusting community is a sharing community. Drive engagement <br>
-                        in your community by letting members proactively showcase their <br>
-                        credibility and trustworthiness.
-                    </p>
+                <div class="v-item">
+                    <div class="v-item-content">
+                        <h1 class="title-sm">
+                            Know Your Peer
+                        </h1>
+                        <p>
+                            A trusting community is a sharing community. Drive engagement in your community by letting members proactively showcase their credibility and trustworthiness.
+                        </p>
+                    </div>
                 </div>
 
-                <div>
-                    <h1 class="title-sm">
-                        Know Your Candidate
-                    </h1>
-                    <p>
-                        Rise above the competition. Enhance your candidate vetting <br>
-                        and be confident that you always put forward the most suitable <br>
-                        person for the job.
-                    </p>
+                <div class="v-item">
+                    <div class="v-item-content">
+                        <h1 class="title-sm">
+                            Know Your Candidate
+                        </h1>
+                        <p>
+                            Rise above the competition. Enhance your candidate vetting and be confident that you always put forward the most suitable person for the job.
+                        </p>
+                    </div>
                 </div>
 
-                <div>
-                    <h1 class="title-sm">
-                        Know Your Tenant
-                    </h1>
-                    <p>
-                        Don't be a stranger. Create trust between property owners and viewers <br>
-                        before they even meet with pre-vetting solutions that establish identity <br>
-                        and credibility.
-
-                    </p>
+                <div class="v-item">
+                    <div class="v-item-content">
+                        <h1 class="title-sm">
+                            Know Your Tenant
+                        </h1>
+                        <p>
+                            Don't be a stranger. Create trust between property owners and viewers before they even meet with pre-vetting solutions that establish identity and credibility.
+                        </p>
+                    </div>
                 </div>
 
             </div>
@@ -136,8 +139,8 @@ class: index landing
                 </div>
 
                 <div>
-                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter, loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
-                        <span>Twitter</span>
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('amazon')" ng-class="{ active : App.user.auth.amazon, loading: App.Widget.state == 'SCRAPING' && App.loading == 'amazon'}">
+                        <span>Amazon</span>
                         <div class="spinner">
                             <div class="spinner-wrapper">
                                 <div class="rotator">
@@ -150,8 +153,8 @@ class: index landing
                 </div>
 
                 <div>
-                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter, loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
-                        <span>Twitter</span>
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('paypal')" ng-class="{ active : App.user.auth.paypal, loading: App.Widget.state == 'SCRAPING' && App.loading == 'paypal'}">
+                        <span>Paypal</span>
                         <div class="spinner">
                             <div class="spinner-wrapper">
                                 <div class="rotator">
@@ -172,114 +175,239 @@ class: index landing
     <!-- <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a> -->
 </section>
 
+<section class="onboard-customers">
 
-<section class="veridu-list md-cards">
-    <div class="row-md">
-        <div class="item-container">
-            <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
-                <h3>FRICTIONLESS ONBOARDING</h3>
-                <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
-            </div>
-            <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
-                <h3>TRUST</h3>
-                <p>Break down trust barriers show your commitment to keeping your members and their possessions safe.</p>
-            </div>
-            <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
-                <h3>IDENTIFY FRAUD</h3>
-                <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
-            </div>
-            <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
-                <h3>SAFETY</h3>
-                <p>Be proactive about safety and require sellers, landlords and viewers to verify their identity before viewings.</p>
-            </div>
+    <div class="content__container">
 
-        </div>
+        <div class="content">
+            <div class="content__image">
+                <img src="img/phone-verification.png" alt="phone_verification" />
+            </div>
+            <div class="content__text">
+                <h1>Onboard customers</h1>
+                <div class="v-row">
+                    <div>
+                        <h5>Why</h5>
+                        <p>
+                            Your users get what tey want - a quick, easy and mobile friendly sign up process that gives them intsant access to your product or service.
+                            You get what you need - the ability to instantly verify a user's identity for effective risk management.
+                        </p>
+                    </div>
+                    <div>
+                        <h5>How</h5>
+                        <p>
+                            Veridu lets you verify users globally using social networks, online services and documents. You can use any combination of theses services to design a sign up proccess that truly meets your needs.
+                        </p>
+                        <div class="clearfix">
+                            <span class="v-tag v-tag--yellow">Facebook</span>
+                            <span class="v-tag v-tag--yellow">Twiter</span>
+                            <span class="v-tag v-tag--yellow">LinkedIn</span>
+                            <span class="v-tag v-tag--yellow">Google+</span>
+                            <span class="v-tag v-tag--yellow">...</span>
+                        </div>
 
-        <div class="item-container">
-
-            <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
-                <h3>REDUCE FALSE POSITIVES</h3>
-                <p>Reduce false positive declines and recover transactions that your risk rules would normally decline.</p>
-            </div>
-
-            <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
-                <h3>AUTOMATION</h3>
-                <p>Stay focused on your core business by automating the onboarding process and reducing time spent on manual reviews.</p>
-            </div>
-
-            <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
-                <h3>VETTED</h3>
-                <p>Conduct robust vetting of CVs wherever a candidate has studied or worked.</p>
-            </div>
-
-            <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
-                <h3>TRUST</h3>
-                <p>Build trust in your business by allowing customers to showcase their credibility with a visible badge.</p>
-            </div>
-        </div>
-
-        <div class="item-container">
-            <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
-                <h3>SPEND LESS</h3>
-                <p>Spend less time and money on fraud reviews with better tools and user insight.</p>
-            </div>
-            <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
-                <h3>FRICTIONLESS ONBOARDING</h3>
-                <p>Eliminate friction in the user experience to encourage more members onto your platform and drive engagement.</p>
-            </div>
-            <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
-                <h3>AUTOMATE</h3>
-                <p>Focus your efforts on bringing new clients onboard, not manually onboarding candidates.</p>
-            </div>
-            <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
-                <h3>KNOW YOUR CUSTOMER</h3>
-                <p>Know more about your customers for less - social identity solutions offer unrivalled insight at a lower price point.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 </section>
 
-<section class="partners-quotes">
 
+<section class="white-belt">
+    <h3><q>12% of customers drop off because of too complicated onborading proccesses</q></h3>
+    <strong>Cool Survey, 2013</strong>
+</section>
+
+<section class="authenticate-identity">
+
+    <div class="content__container">
+
+        <div class="content">
+            <div class="content__text">
+                <h1>Authenticate identity</h1>
+                <div class="v-row">
+                    <div>
+                        <h5>Why</h5>
+                        <p>
+                            We don't have to tell you that your fraud engine is flagging many perfectly good users or transactions as high risk.
+                            <br>
+                            <br>
+                            What we can tell you is that this doesn't have to be the case. You can onboard more users and accept more good transactions without increasing fraud risk - automatically and cost-effectively.
+                        </p>
+                    </div>
+                    <div>
+                        <h5>How</h5>
+                        <p>
+                            Surface traditional two-factor authentication or Veridu's dynamic knowledge based authentication when a user or transaction is flagged as potntially risky for an additional layer of securiy.
+                        </p>
+                        <div class="clearfix">
+                            <span class="v-tag v-tag--orange">Dynamic KBA</span>
+                            <span class="v-tag v-tag--orange">Email 2FA</span>
+                            <span class="v-tag v-tag--orange">SMS 2FA</span>
+                            <span class="v-tag v-tag--orange">...</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="content__image text-right">
+                <img src="img/phone-challenge.png" alt="phone_challenge" />
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="white-belt">
+    <h3><q>12% of customers drop off because of too complicated onborading proccesses</q></h3>
+    <strong>Cool Survey, 2013</strong>
+</section>
+
+<section class="kyc">
     <div class="v-container">
-        <div class="slick-carousel" id="partners-carousel" >
-            <div>
-                <q>Over half our users have verified themselves with Veridu, dramatically increasing the safety and reliability of our service.</q>
-                <div class="author">
-                    CTO, Faadetgjort
-                </div>
-            </div>
-            <div>
-                <q>Veridu rocks! Especially for our customers who sell high value goods online. The team has been beyond helpful and responsive to our needs.</q>
-                <div class="author">
-                    CEO, SimpleShop
-                </div>
-            </div>
-            <div>
-                <q>It’s simple: Veridu enables trust. More trust means more transactions and ultimately more revenue.</q>
-                <p class="author">
-                    CTO, Ahandyhand
+        <h1 class="clearfix">
+            Know your costumers better
+        </h1>
+        <div class="v-row">
+            <div class="kyc__item">
+                <h5>Access credibility</h5>
+                <p>
+                    We analyse an individual's digital footprint, using our proprietary and sophisticated algorithms to verify their identity and credibility in real-time.
                 </p>
+                <br>
+                <p>
+                    You can build this information into your fraud prevention programme, to instil trust in your peer-to-peer platform, to validate a potntial candidate's credential and more.
+                </p>
+                <br>
+                <div >
+                    <span class="v-tag v-tag--success1">Time to fake</span>
+                    <span class="v-tag v-tag--success1">Contact info</span>
+                    <span class="v-tag v-tag--success1">Age</span>
+                    <span class="v-tag v-tag--success1">Work</span>
+                    <span class="v-tag v-tag--success1">Education</span>
+                    <span class="v-tag v-tag--success1">...</span>
+                </div>
+            </div>
+            <div class="kyc__item">
+                <h5>Gather insight</h5>
+                <p>
+                    Gather valuable insight about a user from the moment they sign up to your site - whatyou listen for is up to you as our scorecards are fully configurable to your needs.
+                </p>
+                <br>
+                <p>
+                    Give your customers a truly customised experience based on the insight you gather to increase revenue and engagement.
+                </p>
+                <br>
+                <div >
+                    <span class="v-tag v-tag--success2">Ability to influence</span>
+                    <span class="v-tag v-tag--success2">Frenquent traveller</span>
+                    <span class="v-tag v-tag--success2">...</span>
+                </div>
+            </div>
+            <div class="kyc__item">
+                <h5>Assess risk</h5>
+                <p>
+                    If we detect anything that looks like a potential risk in the data gather we'll alert you with a warning flag.
+                </p>
+                <br>
+                <p>
+                    A flag doesn't necessarily mean bad - but it is telling you that you probably want to look into a user in a little more detail.
+                </p>
+                <br>
+                <div >
+                    <span class="v-tag v-tag--warning2">Empty profile</span>
+                    <span class="v-tag v-tag--warning2">Known fake</span>
+                    <span class="v-tag v-tag--warning2">Silly name</span>
+                    <span class="v-tag v-tag--warning2">Celebrity name</span>
+                    <span class="v-tag v-tag--warning2">...</span>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<section class="rasmus-quote">
-    <div class="rasmus-quote__overlay"></div>
-    <div class="rasmus-quote__content">
-        <div class="row-md">
-            <h4>"We bring trust to <br class="hidden-xs"> the internet"</h4>
-            <p>
-                Rasmus Groth,
-                CEO, VERIDU
-            </p>
-            <div onclick="showVideo()" class="player-container"></div>
+<section class="white-belt">
+    <h3><q>12% of customers drop off because of too complicated onborading proccesses</q></h3>
+    <strong>Cool Survey, 2013</strong>
+</section>
+
+<section class="accept-transactions">
+
+    <div class="content__container">
+
+        <div class="content">
+            <div class="content__image">
+                <!-- <img src="img/rasmus-01.jpg" alt="" /> -->
+            </div>
+            <div class="content__text">
+                <h1>Accept more good transactions</h1>
+                <div >
+                    <div>
+                        <p>
+                            If you just want to automate decisions based on certain criteria, age for example, you could use one of our decision gates.
+                            <br>
+                            <br>
+                            Tell us how you want to verify a user and to what level of confidence and we'll configure a gate to give you a pass/fail decision.
+                        </p>
+                        <br>
+                        <div>
+                            <span class="v-tag v-tag--lightblue">+13</span>
+                            <span class="v-tag v-tag--lightblue">+18</span>
+                            <span class="v-tag v-tag--lightblue">+21</span>
+                            <span class="v-tag v-tag--lightblue">Student</span>
+                            <span class="v-tag v-tag--lightblue">...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
+<section class="white-belt">
+    <h3><q>12% of customers drop off because of too complicated onborading proccesses</q></h3>
+    <strong>Cool Survey, 2013</strong>
+</section>
+
+<section class="do-it-your-way">
+
+    <div class="content__container">
+
+        <div class="content">
+            <div class="content__text">
+                <h1>Do it your way</h1>
+                <div >
+                    <div>
+                        <p>
+                            You can do all this, and you can do it your way.
+                            <br>
+                            <br>
+                            We offer gaeways that require no integration, widgets that can be embedded easily or APIs and SDKs that give you full flexibility to customise the experience.
+                        </p>
+                        <br>
+                        <div>
+                            <span class="v-tag v-tag--grey">API</span>
+                            <span class="v-tag v-tag--grey">SDK</span>
+                            <span class="v-tag v-tag--grey">Widgets</span>
+                            <span class="v-tag v-tag--grey">Hosted</span>
+                            <span class="v-tag v-tag--grey">...</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content__image">
+            <!-- <img src="img/rasmus-01.jpg" alt="" /> -->
+        </div>
+    </div>
+</section>
+
+<section class="white-belt">
+    <h3><q>12% of customers drop off because of too complicated onborading proccesses</q></h3>
+    <strong>Cool Survey, 2013</strong>
+</section>
 
 <script>
 
@@ -332,4 +460,4 @@ function MeasureConnectionSpeed() {
 </script>
 
 
-<script type="text/javascript" src="javascript/index.js"></script>
+<script type="text/javascript" src="javascript/index.js" async></script>
