@@ -6,11 +6,11 @@
 	var $window = $(window);
 	var dropdownMenu = $('.dropdown-menu');
 
-	$('.btn')
-		.mouseenter(function () {
-			var $this = $(this);
-			$this.height($this.height());
-		});
+	// $('.btn')
+	// 	.mouseenter(function () {
+	// 		var $this = $(this);
+	// 		$this.height($this.height());
+	// 	});
 
 
 	// Fixed email form

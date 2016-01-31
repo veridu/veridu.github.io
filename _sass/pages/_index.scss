@@ -354,7 +354,7 @@ div.landing-section {
 			padding-top: 0px !important;
 
 			.progress {
-				height: 36.4px;
+				height: em(37);
 				position: relative;
 
 
@@ -1087,6 +1087,7 @@ section.landing-section {
 
 .main-container.landing {
 
+	background-color: #f1f1f1;
 
 	//  new landing
 	.new-landing-section {
@@ -1121,8 +1122,19 @@ section.landing-section {
 				@extend .row-md;
 
 				margin-bottom: em(50);
-				margin-top: 10%;
 				color: white;
+
+				@media (max-width: $screen-xs-max)	{
+					margin-top: 0;
+
+					.slick-list {
+						top: 0;
+						.v-item {
+							margin-top: 30px;
+						}
+					}
+
+				}
 
 				> div {
 					position: relative;
@@ -1193,12 +1205,17 @@ section.landing-section {
 
 		h2,h3 {
 			margin-top: 0;
+
+			@media (max-width: $screen-xs-max)	{
+				font-size: 300;
+			}
 		}
 
 	}
 
 	.integration-container {
 		@extend .white-belt;
+		padding-bottom: em(80) !important;
 		text-align: left !important;
 
 		.buttons-container {
@@ -1208,16 +1225,36 @@ section.landing-section {
 
 			> div {
 				@include col(6);
+				height: em(42);
+				margin-top: 8.5px;
+				margin-bottom: 8.5px;
+
+				.btn {
+					font-size: 1em;
+					height: em(42);
+					width: 100%;
+					padding-top: em(10);
+					padding-bottom: em(10);
+
+				}
 			}
 			@media (min-width: $screen-sm-min) {
 				> div {
 					@include col(2);
 				}
 			}
-			.btn {
-				width: 100%;
-				padding-top: em(10);
-				padding-bottom: em(10);
+			@media (max-width: $screen-xs-max) {
+				> div {
+					height: em(62);
+				}
+
+				> div {
+					.btn {
+						height: em(62);
+						padding-top: em(20);
+						padding-bottom: em(20);
+					}
+				}
 			}
 		}
 
@@ -1258,12 +1295,33 @@ section.landing-section {
 
 				.content__image {
 					@include col(6);
+					@extend .hidden-xs;
+
 					img {
 						max-width: 100%;
 					}
 				}
 				.content__text {
 					@include col(6);
+
+					@media (max-width: $screen-xs-max) {
+
+						width: 100%;
+						float: none;
+
+						&.content__text--guttered {
+							padding-bottom: em(80);
+						}
+
+						h1 {
+							font-weight: 300;
+						}
+						.v-row > div {
+							width: 100% !important;
+						}
+
+					}
+
 					h1 {
 						margin-top: 2em;
 						margin-bottom: 1em;
@@ -1288,6 +1346,15 @@ section.landing-section {
 		padding-top: em(80);
 		padding-bottom: em(100);
 
+		@media (max-width: $screen-xs-max) {
+			.kyc__item	{
+				width: 100% !important;
+				float: none;
+				margin-bottom: em(30);
+
+			}
+		}
+
 		h1 {
 			margin-top: 0;
 			margin-bottom: 0.9em;
@@ -1298,6 +1365,111 @@ section.landing-section {
 			h5 {
 				font-weight: bold;
 			}
+		}
+
+	}
+
+	.progress {
+		.progress-bar {
+			background-color: #F1F1F1;
+			// border-width: 2px;
+			box-shadow: none;
+			border-bottom: 2px solid grey;
+
+			p {
+				margin-top: em(5);
+			}
+		}
+	}
+
+	div.veridu-profile {
+		margin-top: em(50);
+		position: relative;
+
+		@media (max-width: $screen-xs-max) {
+			h2.price-heading {
+				// margin-top: em(80);
+			}
+		}
+
+		> div.v-row {
+
+			.profile__photo-container {
+				float: left;
+				width: 25%;
+				padding-left: 8.5px;
+				padding-right: 8.5px;
+
+				max-height: 225px;
+				overflow: hidden;
+
+				img {
+					width: 100%;
+				}
+
+			}
+			.v-profile__progress-container {
+				float: left;
+				width: 41.6666%;
+				padding-left: 8.5px;
+				padding-right: 8.5px;
+				height: em(280);
+
+			}
+
+			@media (max-width: $screen-xs-max) {
+
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 320px;
+				position: relative;
+
+				.v-profile__progress-container {
+					padding-top: em(29);
+					position: absolute;
+					display: table;
+					width: 100%;
+					height: 100%;
+					top: 0;
+					left: 0;
+					padding: 0;
+
+					> div {
+						display: table-cell;
+						vertical-align: middle;
+					}
+
+					.progress {
+						height: em(55);
+					}
+
+				}
+
+				.profile__photo-container {
+					width: 100%;
+					padding: 0;
+					max-height: none;
+					min-height: 310px;
+					float: none;
+
+					img {
+						width: auto;
+						min-width: 100%;
+						min-height: 310px;
+						height: auto;
+					}
+
+				}
+			}
+
+		}
+	}
+
+	h2.price-heading {
+		> small {
+			font-weight: normal;
+			font-size: 0.45em;
+			color: inherit;
 		}
 	}
 }

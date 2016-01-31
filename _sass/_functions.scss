@@ -34,7 +34,7 @@ $base-font-size: 15; // Default
 }
 
 @mixin row() {
+    @include clearfix();
     margin-left: -8.5px;
     margin-right: -8.5px;
-    @include clearfix();
 }

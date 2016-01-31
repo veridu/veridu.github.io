@@ -30,8 +30,8 @@ function indexLoad() {
 		initVideo();
 
 		page.$window.resize(adjustHeights);
-		adjustHeights();
 
+		adjustHeights();
 		page.$window.keydown(keyPressed);
 
 		function keyPressed(evt) {
