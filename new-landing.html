@@ -2,21 +2,9 @@
 layout: default
 class: index landing
 ---
-<div class="video-overlay" onclick="hideVideo()">
-    <div>
-        <div class="v-container">
-            <div class="player-container">
-                <img id="play-button" src="img/play.png" alt="play">
-                <div id="youtube-player"></div>
-                <div class="close-ct">
-                    <span onclick="hideVideo()"><i class="material-icons">&#xE5CD;</i> <span class="close-label">Close</span> </span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <section class="new-landing-section">
-    <div class="new-landing__overlay"></div>
+    <div class="new-landing__overlay new-landing__overlay--blue"></div>
+    <div class="new-landing__overlay new-landing__overlay--black"></div>
     <div class="new-landing-content">
         <div >
             <div class="slick-carousel" id="landing-carousel">
@@ -138,7 +126,7 @@ class: index landing
                     </button>
                 </div>
 
-                <div>
+                <div class="hidden-xs">
                     <button class="btn btn-primary btn-lg" ng-click="App.auth('amazon')" ng-class="{ active : App.user.auth.amazon, loading: App.Widget.state == 'SCRAPING' && App.loading == 'amazon'}">
                         <span>Amazon</span>
                         <div class="spinner">
@@ -152,7 +140,7 @@ class: index landing
                     </button>
                 </div>
 
-                <div>
+                <div class="hidden-xs">
                     <button class="btn btn-primary btn-lg" ng-click="App.auth('paypal')" ng-class="{ active : App.user.auth.paypal, loading: App.Widget.state == 'SCRAPING' && App.loading == 'paypal'}">
                         <span>Paypal</span>
                         <div class="spinner">
