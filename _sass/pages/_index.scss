@@ -1319,10 +1319,11 @@ section.landing-section {
 			.content__image {
 				position: relative;
 				img {
-					transform: scale(1.2);
+					max-width: none !important;
 					position: absolute;
-					top: 100px;
-					left: -100px;
+					width: auto !important;
+					top: 40px;
+					right: 30px;
 				}
 			}
 			.content__text {
