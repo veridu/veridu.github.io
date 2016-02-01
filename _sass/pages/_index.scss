@@ -427,7 +427,7 @@ div.landing-section {
 					top: -18px;
 				}
 			}
-			&.loading {
+			&.active.loading {
 				.spinner {
 					display: block;
 				}
@@ -1110,7 +1110,9 @@ section.landing-section {
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a5aa2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 			}
 			&.new-landing__overlay--black {
-				background-color: rgba(black, 0.4);
+				@media (max-width: $screen-xs-max) {
+					background-color: rgba(black, 0.4);
+				}
 			}
 		}
 
@@ -1324,8 +1326,8 @@ section.landing-section {
 					width: auto !important;
 					top: 40px;
 					right: 30px;
-					@media (max-width: 886px) {
-						top: 145px;
+					@media (max-width: 925px) {
+						top: 166px;
 					}
 				}
 			}
