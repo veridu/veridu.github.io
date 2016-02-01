@@ -1127,6 +1127,9 @@ section.landing-section {
 				background-size: auto 100%;
 			}
 		}
+		@media (min-width: $screen-lg-min) {
+			background-position: 0% 50%;
+		}
 
 
 		> div.new-landing-content {
@@ -1159,7 +1162,7 @@ section.landing-section {
 					text-align: left;
 
 					.v-item-content {
-						@media (min-width: $screen-sm-min) {
+						@media (min-width: 480px) {
 							@include col(5);
 						}
 						h1 {
