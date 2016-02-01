@@ -1149,10 +1149,10 @@ section.landing-section {
 
 					.v-item-content {
 						@media (min-width: $screen-sm-min) {
-							@include col(6);
+							@include col(5);
 						}
 						h1 {
-							font-weight: 400;
+							// font-weight: 400;
 							margin-bottom: em(10);
 						}
 						p {
@@ -1384,6 +1384,7 @@ section.landing-section {
 
 	.progress {
 		.progress-bar {
+			min-width: 230px;
 			background-color: #F1F1F1;
 			// border-width: 2px;
 			box-shadow: none;
