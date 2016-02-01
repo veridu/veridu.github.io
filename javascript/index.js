@@ -42,14 +42,15 @@ function indexLoad() {
 
 		function adjustHeights() {
 			page.mobile = page.mbHelper.is(':visible');
-			var landingHeight = page.$window.height();
+			var landingHeight = page.$window.height() * 2/3;
+			var pageHeight = page.$window.height();
 			// minimum height of the landing content for the contents to fit
-			// if (landingHeight < 850)
-				// landingHeight = 850;
+			if (landingHeight < 610)
+				landingHeight = 610;
 
 			if (! page.mobile) {
-				page.landingSection.css('height', page.$window.height() * 2/3);
-				page.landingItems.css('height', (landingHeight * 6/12) - 50);
+				page.landingSection.css('height', landingHeight);
+				page.landingItems.css('height', (landingHeight * 3/4) - 50);
 			} else {
 				page.landingSection.css('height', 480);
 				page.landingItems.css('height', 430);
