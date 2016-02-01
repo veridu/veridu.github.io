@@ -1091,9 +1091,10 @@ section.landing-section {
 
 	//  new landing
 	.new-landing-section {
-		background-image: url(../img/articles/crypto-wallets/cover.png);
+		background-image: url(../img/landing-bg-0.jpg);
 		background-size: auto 100%;
 		position: relative;
+
 		.new-landing__overlay {
 			position: absolute;
 			width: 100%;
@@ -1108,13 +1109,14 @@ section.landing-section {
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a5aa2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 			}
 			&.new-landing__overlay--black {
-				background-color: rgba(black, 0.1);
+				// background-color: rgba(black, 0.1);
 			}
 		}
 		//  media queries
-		@media (min-width: $screen-lg-min) {
+		@media (min-width: $screen-sm-min) {
 			background-size: 100% auto;
-			background-position: 0 -100px;
+			background-repeat: no-repeat;
+			// background-position: 0 -320px;
 		}
 
 
