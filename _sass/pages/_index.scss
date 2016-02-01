@@ -1194,6 +1194,7 @@ section.landing-section {
 
 				.slick-arrow {
 					color: white;
+					display: none !important;
 				}
 				@media (min-width: $screen-sm-min)	{
 					.slick-arrow {
