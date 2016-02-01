@@ -1168,6 +1168,9 @@ section.landing-section {
 						@media (min-width: 580px) {
 							@include col(8);
 						}
+						@media (min-width: $screen-sm-min) {
+							@include col(5);
+						}
 						h1 {
 							// font-weight: 400;
 							margin-bottom: em(10);
