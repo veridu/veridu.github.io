@@ -69,7 +69,7 @@ class: index landing
         <div class="v-row">
             <div class="buttons-container">
                 <div>
-                    <button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')" ng-class="{ active : App.user.auth.facebook, loading: App.Widget.state == 'SCRAPING' && App.loading == 'facebook'}">
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')" ng-class="{ active : App.user.auth.facebook || App.loading == 'facebook', loading: App.Widget.state == 'SCRAPING' && App.loading == 'facebook'}">
                         <span>Facebook</span>
                         <div class="spinner">
                             <div class="spinner-wrapper">
@@ -83,7 +83,7 @@ class: index landing
                 </div>
 
                 <div>
-                    <button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')" ng-class="{ active : App.user.auth.linkedin, loading: App.Widget.state == 'SCRAPING' && App.loading == 'linkedin'}">
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')" ng-class="{ active : App.user.auth.linkedin || App.loading == 'linkedin' , loading: App.Widget.state == 'SCRAPING' && App.loading == 'linkedin'}">
                         <span>LinkedIn</span>
                         <div class="spinner">
                             <div class="spinner-wrapper">
@@ -98,7 +98,7 @@ class: index landing
 
 
                 <div>
-                    <button class="btn btn-primary btn-lg" ng-click="App.auth('google')" ng-class="{ active : App.user.auth.google, loading: App.Widget.state == 'SCRAPING' && App.loading == 'google'}">
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('google')" ng-class="{ active : App.user.auth.google || App.loading == 'google', loading: App.Widget.state == 'SCRAPING' && App.loading == 'google'}">
 
                         <span>Google</span>
                         <div class="spinner">
@@ -113,7 +113,7 @@ class: index landing
                 </div>
 
                 <div>
-                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter, loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter || App.loading == 'twitter', loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
                         <span>Twitter</span>
                         <div class="spinner">
                             <div class="spinner-wrapper">
@@ -127,7 +127,7 @@ class: index landing
                 </div>
 
                 <div class="hidden-xs">
-                    <button class="btn btn-primary btn-lg" ng-click="App.auth('amazon')" ng-class="{ active : App.user.auth.amazon, loading: App.Widget.state == 'SCRAPING' && App.loading == 'amazon'}">
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('amazon')" ng-class="{ active : App.user.auth.amazon || App.loading == 'amazon', loading: App.Widget.state == 'SCRAPING' && App.loading == 'amazon'}">
                         <span>Amazon</span>
                         <div class="spinner">
                             <div class="spinner-wrapper">
@@ -141,7 +141,7 @@ class: index landing
                 </div>
 
                 <div class="hidden-xs">
-                    <button class="btn btn-primary btn-lg" ng-click="App.auth('paypal')" ng-class="{ active : App.user.auth.paypal, loading: App.Widget.state == 'SCRAPING' && App.loading == 'paypal'}">
+                    <button class="btn btn-primary btn-lg" ng-click="App.auth('paypal')" ng-class="{ active : App.user.auth.paypal || App.loading == 'paypal', loading: App.Widget.state == 'SCRAPING' && App.loading == 'paypal'}">
                         <span>Paypal</span>
                         <div class="spinner">
                             <div class="spinner-wrapper">
@@ -220,7 +220,7 @@ class: index landing
 
         <div class="content">
             <div class="content__image">
-                <img src="img/phone-verified.jpg" alt="phone_verification" />
+                <img src="img/phone-verified.jpg" class="wow slideInUp" data-wow-delay="0.3s" alt="phone_verification" />
             </div>
             <div class="content__text content__text--guttered">
                 <h1>So what's the Veridu experience?</h1>
