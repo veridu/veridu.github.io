@@ -1324,6 +1324,9 @@ section.landing-section {
 					width: auto !important;
 					top: 40px;
 					right: 30px;
+					@media (max-width: 886px) {
+						top: 145px;
+					}
 				}
 			}
 			.content__text {
