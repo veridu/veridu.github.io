@@ -545,3 +545,24 @@ window.getDocHeight =  function (){
 		D.body.clientHeight, D.documentElement.clientHeight
 	);
 }
+
+window.scrollToHash = function (hash, speed, offset) {
+
+	var offset = offset || 0;
+	var speed = speed || 500;
+	var el = document.getElementById(hash);
+
+	console.warn(hash, speed, offset, el);
+
+	if (el) {
+
+		$('html, body').animate({
+			scrollTop: ($(el).offset().top - offset)
+		}, speed);
+	}
+
+}
+
+if (window.location.hash) {
+	window.scrollToHash(window.location.hash.replace('#','') + '-wrapper', 1000, 175);
+}
