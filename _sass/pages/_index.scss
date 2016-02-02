@@ -1157,6 +1157,14 @@ section.landing-section {
 					@media (min-width: $screen-lg-min) {
 						background-position: 0% 50%;
 					}
+
+					// &:after {
+					// 	content: ' ';
+					// 	position: absolute;
+					// 	width: 100%;
+					// 	height: 100%;
+					// }
+
 				}
 
 				> div {

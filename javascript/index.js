@@ -1,7 +1,6 @@
-function indexLoad() {
+(function () {
 
 	var page = this;
-
 	var landingActiveContent = $('.landing-active-content');
 
 	function hideVideo() {
@@ -118,6 +117,5 @@ function indexLoad() {
 	    }
 
 
-}
-
-document.addEventListener('DOMContentLoaded', indexLoad);
+	}
+)();
