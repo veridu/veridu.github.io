@@ -21,6 +21,7 @@ function indexLoad() {
 		page.landingHeight = $(window).height() -  $('.menu').height();
 		page.landingSection = $('.new-landing-section');
 		page.landingItems = $('#landing-carousel .v-item');
+		page.landingItems = $('#landing-carousel .slick-track');
 		page.sliderProgressCt = $('.slider-progress-container');
 		page.landingCards =  $('.md-cards');
 		page.menu = $('.menu');
@@ -52,6 +53,7 @@ function indexLoad() {
 				page.landingItems.css('height',  landingHeight);
 			} else {
 				page.landingSection.css('height', 480);
+				page.landingTrack.css('height', 480);
 				page.landingItems.css('height', 480);
 			}
 
