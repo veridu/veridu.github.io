@@ -48,6 +48,7 @@
 
 			if (! page.mobile) {
 				page.landingSection.css('height', landingHeight);
+				page.landingTrack.css('height', landingHeight);
 				page.landingItems.css('height',  landingHeight);
 			} else {
 				page.landingSection.css('height', 480);
