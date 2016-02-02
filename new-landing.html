@@ -13,11 +13,8 @@ script: index.js
                     <div class="v-item-container">
                         <div class="v-item-content">
                             <h1 class="title-sm">
-                                <q cite="Rasmus Groth">We bring trust to the internet</q>
+                                Global and low-cost social identity verification
                             </h1>
-                            <p>
-                                Global and low-cost social identity verification" to the "We bring trust to the internet
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -232,6 +229,7 @@ script: index.js
     <!-- <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a> -->
 </section>
 
+
 <section class="onboard-customers">
 
     <div class="content__container">
@@ -239,6 +237,10 @@ script: index.js
         <div class="content">
             <div class="content__image">
                 <img src="img/phone-verified.jpg" alt="phone_verification" />
+                <video autoplay loop>
+                    <source src="video/login.mp4" type="video/mp4">
+                </video>
+
             </div>
             <div class="content__text content__text--guttered">
                 <h1 class="secondary">
@@ -735,13 +737,16 @@ script: index.js
     	</section>
     </div>
 </section>
+
 <script>
 
 var imageAddr = "img/city.jpeg";
 var downloadSize = 271891; //bytes
 
 window.onload = function() {
+    console.warn(Gifffer());
     window.setTimeout(MeasureConnectionSpeed, 1);
+
 };
 
 function MeasureConnectionSpeed() {
@@ -783,4 +788,6 @@ function MeasureConnectionSpeed() {
     }
 
 }
+
+
 </script>
