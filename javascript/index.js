@@ -52,7 +52,7 @@ function indexLoad() {
 				page.landingItems.css('height',  landingHeight);
 			} else {
 				page.landingSection.css('height', 480);
-				page.landingItems.css('height', 430);
+				page.landingItems.css('height', 480);
 			}
 
 		}

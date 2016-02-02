@@ -1091,9 +1091,6 @@ section.landing-section {
 
 	//  new landing
 	.new-landing-section {
-		background-image: url(../img/landing-bg-0.jpg);
-		background-size: auto 130%;
-		background-position: right -100px;
 		position: relative;
 
 		.new-landing__overlay {
@@ -1117,21 +1114,6 @@ section.landing-section {
 		}
 
 		//  media queries
-		@media (max-width: 550px) {
-			background-position: right -250px bottom 0px;
-		}
-		@media (min-width: $screen-sm-min) {
-			background-size: 100% auto;
-			background-repeat: no-repeat;
-			background-position: left top;
-			// background-position: 0 -320px;
-			@media (max-width: 920px) {
-				background-size: auto 100%;
-			}
-		}
-		@media (min-width: $screen-lg-min) {
-			background-position: 0% 50%;
-		}
 
 
 		> div.new-landing-content {
@@ -1150,14 +1132,31 @@ section.landing-section {
 					.slick-list {
 						top: 0;
 						.v-item {
-							margin-top: 30px;
+							// margin-top: 30px;
 						}
 					}
 
 				}
 
 				.v-item {
-					background-image: url(../img/landing-bg-0.jpg);
+					background-size: auto 130%;
+					background-position: right -100px;
+
+					@media (max-width: 550px) {
+						background-position: right -250px bottom 0px;
+					}
+					@media (min-width: $screen-sm-min) {
+						background-size: 100% auto;
+						background-repeat: no-repeat;
+						background-position: left top;
+						// background-position: 0 -320px;
+						@media (max-width: 920px) {
+							background-size: auto 100%;
+						}
+					}
+					@media (min-width: $screen-lg-min) {
+						background-position: 0% 50%;
+					}
 				}
 
 				> div {
@@ -1209,9 +1208,9 @@ section.landing-section {
 					.slick-arrow {
 						// bottom: - em(50);
 					}
-					.slick-dots {
-						bottom: em(82);
-					}
+				}
+				.slick-dots {
+					bottom: em(82);
 				}
 
 
