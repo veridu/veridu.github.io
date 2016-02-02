@@ -20,7 +20,7 @@
 		page.landingHeight = $(window).height() -  $('.menu').height();
 		page.landingSection = $('.new-landing-section');
 		page.landingItems = $('#landing-carousel .v-item');
-		page.landingItems = $('#landing-carousel .slick-track');
+		page.landingTrack = $('#landing-carousel .slick-track');
 		page.sliderProgressCt = $('.slider-progress-container');
 		page.landingCards =  $('.md-cards');
 		page.menu = $('.menu');
