@@ -9,12 +9,15 @@ script: index.js
     <div class="new-landing-content">
         <div >
             <div class="slick-carousel" id="landing-carousel" >
-                <div class="v-item v-item--rasmus" style="background-image: url(img/landing-bg.jpg);">
+                <div class="v-item v-item--alice" style="background-image: url(img/landing-bg.jpg);">
                     <div class="v-item-container">
                         <div class="v-item-content">
                             <h1 class="title-sm">
-                                Global and low-cost social identity verification
+                                <q cite="Rasmus Groth">We bring trust to the internet</q>
                             </h1>
+                            <p>
+                                Global and low-cost social identity verification
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -237,7 +240,7 @@ script: index.js
         <div class="content">
             <div class="content__image">
                 <img src="img/phone-verified.jpg" alt="phone_verification" />
-                <video autoplay loop>
+                <video autoplay loop muted>
                     <source src="video/login.mp4" type="video/mp4">
                 </video>
 
@@ -322,9 +325,11 @@ script: index.js
 
                     </div>
                 </div>
+                <br>
+                <br>
             </div>
             <div class="content__image text-right">
-                <img src="img/phone-challenge.png" alt="phone_challenge" />
+                <img src="img/phone-challenge.jpg" alt="phone_challenge" />
             </div>
         </div>
 
@@ -744,9 +749,7 @@ var imageAddr = "img/city.jpeg";
 var downloadSize = 271891; //bytes
 
 window.onload = function() {
-    console.warn(Gifffer());
     window.setTimeout(MeasureConnectionSpeed, 1);
-
 };
 
 function MeasureConnectionSpeed() {

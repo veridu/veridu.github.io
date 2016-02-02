@@ -1158,27 +1158,6 @@ section.landing-section {
 						background-position: 0% 50%;
 					}
 
-					&.v-item--rasmus {
-						background-size: auto 100%;
-						background-position: right top;
-
-						@media (min-width: $screen-sm-min) {
-							background-size: 100% auto;
-							background-repeat: no-repeat;
-							background-position: right top;
-							@media (max-width: 920px) {
-								background-size: auto 100%;
-							}
-						}
-						&.slick-active:after {
-							@include opacity(0.15);
-							@media (min-width: $screen-sm-min) {
-								@include opacity(0.1);
-							}
-						}
-
-					}
-
 					&.v-item--peer {
 						@media (min-width: $screen-lg-min) {
 							background-position: 0% 44%;
@@ -1394,6 +1373,25 @@ section.landing-section {
 				border-bottom: 1px solid black !important;
 			}
 
+		}
+	}
+
+	section.authenticate-identity {
+
+		@media (min-width: $screen-sm-min) {
+			.content__image {
+				position: relative;
+				img {
+					max-width: none !important;
+					position: absolute;
+					top: em(50);
+					left: 30px;
+					height: 600px;
+					@media(min-width: $screen-sm-min) and (max-width: 800px) {
+						top: em(110);
+					}
+				}
+			}
 		}
 	}
 
