@@ -1135,7 +1135,6 @@ section.landing-section {
 
 
 		> div.new-landing-content {
-			@extend .v-container;
 			position: relative;
 			z-index: 2;
 
@@ -1157,13 +1156,21 @@ section.landing-section {
 
 				}
 
-				> div {
-					position: relative;
-					top: em(80);
+				.v-item {
+					background-image: url(../img/landing-bg-0.jpg);
+				}
 
+				> div {
+					height: 100%;
+					// position: relative;
 					text-align: left;
 
+					.v-item-container {
+						@extend .v-container;
+					}
 					.v-item-content {
+						padding-top: em(50);
+
 						@media (min-width: 480px) {
 							@include col(10);
 						}
@@ -1200,10 +1207,10 @@ section.landing-section {
 				}
 				@media (min-width: $screen-sm-min)	{
 					.slick-arrow {
-						bottom: - em(50);
+						// bottom: - em(50);
 					}
 					.slick-dots {
-						bottom: - em(52);
+						bottom: em(82);
 					}
 				}
 

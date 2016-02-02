@@ -20,7 +20,7 @@ function indexLoad() {
 		// sets landing height to 100%
 		page.landingHeight = $(window).height() -  $('.menu').height();
 		page.landingSection = $('.new-landing-section');
-		page.landingItems = $('#landing-carousel > div');
+		page.landingItems = $('#landing-carousel .v-item');
 		page.sliderProgressCt = $('.slider-progress-container');
 		page.landingCards =  $('.md-cards');
 		page.menu = $('.menu');
@@ -30,7 +30,6 @@ function indexLoad() {
 		initVideo();
 
 		page.$window.resize(adjustHeights);
-
 		adjustHeights();
 		page.$window.keydown(keyPressed);
 
@@ -50,7 +49,7 @@ function indexLoad() {
 
 			if (! page.mobile) {
 				page.landingSection.css('height', landingHeight);
-				page.landingItems.css('height', (landingHeight * 3/4) - 50);
+				page.landingItems.css('height',  landingHeight);
 			} else {
 				page.landingSection.css('height', 480);
 				page.landingItems.css('height', 430);
