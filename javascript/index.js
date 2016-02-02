@@ -27,7 +27,6 @@
 		page.$window = $(window);
 		page.mbHelper =  $('#mobile-indicator');
 		page.mobile = page.mbHelper.is(':visible');
-		initVideo();
 
 		page.$window.resize(adjustHeights);
 		adjustHeights();
@@ -60,62 +59,46 @@
 	}
 
 
-	function initVideo() {
-		var tag = document.createElement('script');
-		tag.src = "https://www.youtube.com/iframe_api";
-		var firstScriptTag = document.getElementsByTagName('script')[0];
-		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-	}
+		ctrl.$inject = ['$scope'];
+		function ctrl($scope) {
+			$scope.currentPlan = 0;
 
-	// 3. This function creates an <iframe> (and YouTube player)
-	//    after the API code downloads.
-	function onYouTubeIframeAPIReady() {
+			$scope.nextPlan = function (){
+				if (! mobile) return;
+				var nextIndex = $scope.currentPlan < 2 ? $scope.currentPlan + 1 : 0;
+				animate($scope.currentPlan, nextIndex, 'forward');
+				$scope.currentPlan = nextIndex;
+			}
 
-	    ytPlayer = new YT.Player('youtube-player', {
-	        width: '350',
-	        height: '180',
-	        videoId: 'II1_oO_ULNo',
-	        thumbnailId: 2,
-	        events: {
-	            'onReady': onPlayerReady,
-	            'onStateChange': onPlayerStateChange
-	        }
-	    });
-	    }
+			$scope.prevPlan = function (){
+				if (! mobile) return;
+				var nextIndex =  $scope.currentPlan > 0 ? $scope.currentPlan - 1 : 2;
+				animate($scope.currentPlan, nextIndex, 'backwards');
+				$scope.currentPlan = nextIndex;
+			}
 
-	    // 4. The API will call this function when the video player is ready.
-	    var playButton = document.getElementById('play-button');
+			$scope.showPlan = function (index) {
+				if (! mobile) return;
+				animate($scope.currentPlan, index, 'forward');
+				$scope.currentPlan = index;
+			}
 
-	    function onPlayerReady(event) {
+			function animate(lastIndex, index, d) {
+				var pId = '#plan-' + index;
+				var lpId = '#plan-' + lastIndex;
 
-	        ytPlayer = event.target;
-	        playButton.addEventListener('click', playVideo);
-	    }
+				$('.plan-size').addClass('plan-size--not-active');
+				$('.plan-size').removeClass('slideInRight fadeIn');
+				$(pId).removeClass('plan-size--not-active');
 
-
-	    // 5. The API calls this function when the player's state changes.
-	    //    The function indicates that when playing a video (state=1),
-	    //    the player should play for six seconds and then stop.
-	    var done = false;
-	    function onPlayerStateChange(event) {
-
-	        if (event.data == YT.PlayerState.PLAYING ) {
-	            // hide button
-	            playButton.style.display = 'none';
-
-	        } else {
-	            // show button
-	            playButton.style.display = 'inline-block';
-	        }
-
-	    }
-	    function stopVideo() {
-	        ytPlayer.stopVideo();
-	    }
-	    function playVideo() {
-	        ytPlayer.playVideo();
-	    }
+				if (d == 'forward') {
+					$(pId).addClass('slideInRight');
+				} else {
+					$(pId).addClass('zoomInLeft');
+				}
+			}
 
 
-	}
-)();
+		}
+		angular.module('app').controller('PricingCtrl', ctrl);
+})();

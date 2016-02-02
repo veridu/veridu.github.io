@@ -191,11 +191,11 @@
 
 </script>
 {{}}
-<script type="text/javascript" src="javascript/main.js"></script>
+<script type="text/javascript" src="javascript/main.js?v={{site.version}}"></script>
 {% if page.script != null %}
-<script type="text/javascript" src="javascript/{{page.script}}" async></script>
+<script type="text/javascript" src="javascript/{{page.script}}?v={{site.version}}"></script>
 {% endif %}
-<script type="text/javascript" src="javascript/widget.factory.js"></script>
+<script type="text/javascript" src="javascript/widget.factory.js?v={{site.version}}"></script>
 
 <script type="text/javascript">
 
