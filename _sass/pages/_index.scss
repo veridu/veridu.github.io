@@ -1169,6 +1169,14 @@ section.landing-section {
 								}
 						}
 					}
+					&.v-item--alice {
+						&.slick-active:after {
+								@include opacity(0.2);
+								@media (min-width: $screen-sm-min) {
+									@include opacity(0.2);
+								}
+						}
+					}
 					&.v-item--candidate {
 						@media (min-width: $screen-lg-min) {
 							background-position: 0% 38%;
