@@ -1164,6 +1164,7 @@ section.landing-section {
 						background-position: 0% 50%;
 					}
 
+					&.v-item--tenant,
 					&.v-item--peer {
 						@media (min-width: $screen-lg-min) {
 							background-position: 0% 44%;
