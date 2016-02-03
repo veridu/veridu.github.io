@@ -1,0 +1,493 @@
+---
+layout: default
+class: index
+---
+<div class="video-overlay" onclick="hideVideo()">
+    <div>
+        <div class="v-container">
+            <div class="player-container">
+                <img id="play-button" src="img/play.png" alt="play">
+                <div id="youtube-player"></div>
+                <div class="close-ct">
+                    <span onclick="hideVideo()"><i class="material-icons">&#xE5CD;</i> <span class="close-label">Close</span> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="landing-section">
+
+    <video class="hidden-xs" id="video-candidate" loop ng-show="App.slider.state() == 'candidate'" poster="img/landing-bg.png">
+        <source src="video/candidate.mp4" type="video/mp4">
+    </video>
+
+    <video class="hidden-xs" id="video-customer" loop ng-show="App.slider.state() == 'customer'" poster="img/landing-bg.png">
+        <source src="video/customer.mp4" type="video/mp4">
+    </video>
+
+    <video class="hidden-xs" id="video-peer" loop ng-show="App.slider.state() == 'peer'" poster="img/landing-bg.png">
+        <source src="video/peer.mp4" type="video/mp4">
+    </video>
+
+    <video class="hidden-xs" id="video-tenant" loop ng-show="App.slider.state() == 'tenant'" poster="img/landing-bg.png">
+        <source src="video/tenant.mp4" type="video/mp4">
+    </video>
+
+    <div class="landing__overlay hidden-xs"></div>
+    <div class="landing__content">
+        <div class="row-md no-styled-container">
+
+            <div class="slider-progress-container">
+
+                <div class="clearfix container-sm landing-active-content">
+                    <div class="row-md">
+                        <h1 class="title-sm">Know Your<span class="hidden-xs"> </span><br class="visible-xs"><span ng-show=" App.slider.state() == 'customer' " class="flipInX">Customer</span><span ng-show=" App.slider.state() == 'peer' " class="flipInX">Peer</span><span ng-show=" App.slider.state() == 'candidate' " class="flipInX">Candidate</span><span ng-show=" App.slider.state() == 'tenant' " class="flipInX">Tenant</span>
+                        </h1>
+
+                        <p ng-show="App.slider.state() == 'customer' " class="fadeIn slider-paragraph c-white hidden-xs">
+                            You can have it all. Robust identity verification globally, <br>
+                            fewer declined transactions and an improved user experience.
+                        </p>
+                        <p ng-show="App.slider.state() == 'peer' " class="fadeIn slider-paragraph c-white hidden-xs">
+                            A trusting community is a sharing community. Drive engagement <br>
+                            in your community by letting members proactively showcase their <br>
+                            credibility and trustworthiness.
+                        </p>
+                        <p ng-show=" App.slider.state() == 'candidate' " class="fadeIn slider-paragraph c-white hidden-xs">
+                            Rise above the competition. Enhance your candidate vetting <br>
+                            and be confident that you always put forward the most suitable <br>
+                            person for the job.
+                        </p>
+                        <p ng-show=" App.slider.state() == 'tenant' " class="fadeIn slider-paragraph c-white hidden-xs">
+                            Don't be a stranger. Create trust between property owners and viewers <br>
+                            before they even meet with pre-vetting solutions that establish identity <br>
+                            and credibility.
+
+                        </p>
+
+                    </div>
+                    <div class="row-md">
+                        <div class="customer-image-container">
+                            <div  class="animated fadeIn customer__image" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgMdStyle})"></div>
+                            <a class="white-link" href="javascript:;">
+                                <span class="white-bottom-border"><small>from £</small> <span class="big">0.10</span> / CHECK</span>
+                            </a>
+                        </div>
+                        <section class="progress-container" style="background-image: url(({App.slider.status().img})); ({App.slider.status().imgStyle})">
+
+                            <div class="progress__overlay"></div>
+                            <div class="progress-content">
+
+                                <h4 class="hidden-xs">CREDIBILITY</h4>
+                                <div class="progress">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="({ App.slider.status().hoursPercent })" aria-valuemin="0" aria-valuemax="100" style="width: ({App.slider.status().hoursPercent})%;">
+                                    <p>
+                                        +({App.slider.status().hours}) hours to fake
+                                        <span class="attributeValue"></span>
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="progress" >
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="({App.slider.status().namePercent})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.slider.status().namePercent})%;">
+                                    <p>
+                                        ({App.slider.status().name})
+                                        <span class="attributeValue">({App.slider.status().namePercent})%</span>
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="progress" >
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="({App.slider.status().sexPercent})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.slider.status().sexPercent})%;">
+                                    <p>
+                                        ({App.slider.status().sex})
+                                        <span class="attributeValue">({App.slider.status().sexPercent})%</span>
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div ng-hide="App.slider.status().verified" class="progress">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="({App.slider.status().birthPercent})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.slider.status().birthPercent})%;">
+                                    <p>
+                                        ({App.slider.status().birth || 'Overall'})
+                                        <span class="attributeValue">({App.slider.status().birthPercent ? App.slider.status().birthPercent + '%' : ''})</span>
+                                    </p>
+                                  </div>
+                                </div>
+
+                                <div class="progress progress-verified" ng-show="App.slider.status().verified">
+                                    <img src="img/verified.png">
+                                </div>
+
+                               <a class="white-link" href="#">SHOW MORE</a>
+
+                           </div>
+
+                       </section>
+                       <ol class="carousel-indicators md-indicators">
+                           <li ng-repeat="state in App.mainSliderStates" ng-show="App.mainSliderStates.length > 1" ng-click="App.slider.index = $index" ng-class="{active : App.slider.index == $index}"></li>
+                       </ol>
+
+                        <section class="verification-container">
+
+                            <h4>TRY IT NOW</h4>
+                            <div class="buttons-container">
+                                <div class="btn-container right">
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')"
+                                        ng-class="{ active : App.user.auth.facebook, loading: App.Widget.state == 'SCRAPING' && App.loading == 'facebook'}"
+                                    >
+                                        <span>Facebook</span>
+                                        <div class="spinner">
+                                            <div class="spinner-wrapper">
+                                                <div class="rotator">
+                                                    <div class="inner-spin"></div>
+                                                    <div class="inner-spin"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </button>
+                                </div>
+
+                                <div class="btn-container left">
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')"
+                                        ng-class="{ active : App.user.auth.linkedin, loading: App.Widget.state == 'SCRAPING' && App.loading == 'linkedin'}"
+                                    >
+                                        <span>LinkedIn</span>
+                                        <div class="spinner">
+                                            <div class="spinner-wrapper">
+                                                <div class="rotator">
+                                                    <div class="inner-spin"></div>
+                                                    <div class="inner-spin"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <!-- breaks line -->
+                                <div class="clearfix"></div>
+
+                                <div class="btn-container right ">
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('google')"
+                                        ng-class="{ active : App.user.auth.google, loading: App.Widget.state == 'SCRAPING' && App.loading == 'google'}"
+                                    >
+                                        <span>Google</span>
+                                        <div class="spinner">
+                                            <div class="spinner-wrapper">
+                                                <div class="rotator">
+                                                    <div class="inner-spin"></div>
+                                                    <div class="inner-spin"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <div class="btn-container left ">
+                                    <button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')"
+                                        ng-class="{ active : App.user.auth.twitter, loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}"
+                                    >
+                                        <span>Twitter</span>
+                                        <div class="spinner">
+                                            <div class="spinner-wrapper">
+                                                <div class="rotator">
+                                                    <div class="inner-spin"></div>
+                                                    <div class="inner-spin"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </div>
+
+                                <div class="hidden-verification-container">
+                                    <div ng-show="showHiddenIntegrations" class="animated fadeIn ">
+                                        <div class="clearfix"></div>
+
+                                        <div class="btn-container right ">
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('spotify')" ng-class="{active : App.user.auth.spotify}"> Spotify </button>
+                                        </div>
+
+                                        <div class="btn-container left ">
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('instagram')" ng-class="{active : App.user.auth.instagram}"> Instagram </button>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+
+                                        <div class="btn-container right ">
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('dropbox')" ng-class="{active : App.user.auth.dropbox}"> Dropbox </button>
+                                        </div>
+
+                                        <div class="btn-container left ">
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('email')" ng-class="{active : App.user.auth.email}"> Email </button>
+                                        </div>
+                                        <div class="clearfix"></div>
+
+                                        <div class="btn-container right ">
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('sms')" ng-class="{active : App.user.auth.sms}"> SMS </button>
+                                        </div>
+
+                                        <div class="btn-container left ">
+                                            <button class="btn btn-primary btn-lg" ng-click="App.auth('spotafriend')" ng-class="{active : App.user.auth.spotafriend}"> Spot a friend </button>
+                                        </div>
+
+                                        <div class="clearfix"></div>
+
+                                        <a ng-show="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = false" >SHOW LESS</a>
+
+                                    </div>
+                                </div>
+
+                                <div class="terms-of-use">By using this service you accept our <a class="white-link" href="https://veridu.com/wiki/Terms_%26_Conditions" target="_blank" >terms of use</a></div>
+                            </div>
+                            <!-- <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a> -->
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="veridu-list md-cards">
+    <div class="row-md">
+        <div class="item-container">
+            <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
+                <h3>FRICTIONLESS ONBOARDING</h3>
+                <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
+                <h3>TRUST</h3>
+                <p>Break down trust barriers show your commitment to keeping your members and their possessions safe.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
+                <h3>IDENTIFY FRAUD</h3>
+                <p>Conduct frictionless and cost-effective identity verification globally, even in high risk markets.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
+                <h3>SAFETY</h3>
+                <p>Be proactive about safety and require sellers, landlords and viewers to verify their identity before viewings.</p>
+            </div>
+
+        </div>
+
+        <div class="item-container">
+
+            <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
+                <h3>REDUCE FALSE POSITIVES</h3>
+                <p>Reduce false positive declines and recover transactions that your risk rules would normally decline.</p>
+            </div>
+
+            <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
+                <h3>AUTOMATION</h3>
+                <p>Stay focused on your core business by automating the onboarding process and reducing time spent on manual reviews.</p>
+            </div>
+
+            <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
+                <h3>VETTED</h3>
+                <p>Conduct robust vetting of CVs wherever a candidate has studied or worked.</p>
+            </div>
+
+            <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
+                <h3>TRUST</h3>
+                <p>Build trust in your business by allowing customers to showcase their credibility with a visible badge.</p>
+            </div>
+        </div>
+
+        <div class="item-container">
+            <div  ng-class="App.partnerIndex == 0  ? 'vis' : 'inv'">
+                <h3>SPEND LESS</h3>
+                <p>Spend less time and money on fraud reviews with better tools and user insight.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 1  ? 'vis' : 'inv'">
+                <h3>FRICTIONLESS ONBOARDING</h3>
+                <p>Eliminate friction in the user experience to encourage more members onto your platform and drive engagement.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 2  ? 'vis' : 'inv'">
+                <h3>AUTOMATE</h3>
+                <p>Focus your efforts on bringing new clients onboard, not manually onboarding candidates.</p>
+            </div>
+            <div  ng-class="App.partnerIndex == 3  ? 'vis' : 'inv'">
+                <h3>KNOW YOUR CUSTOMER</h3>
+                <p>Know more about your customers for less - social identity solutions offer unrivalled insight at a lower price point.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="partners-quotes">
+
+    <div class="v-container">
+        <div class="slick-carousel" id="partners-carousel" >
+            <div>
+                <q>Over half our users have verified themselves with Veridu, dramatically increasing the safety and reliability of our service.</q>
+                <div class="author">
+                    CTO, Faadetgjort
+                </div>
+            </div>
+            <div>
+                <q>Veridu rocks! Especially for our customers who sell high value goods online. The team has been beyond helpful and responsive to our needs.</q>
+                <div class="author">
+                    CEO, SimpleShop
+                </div>
+            </div>
+            <div>
+                <q>It’s simple: Veridu enables trust. More trust means more transactions and ultimately more revenue.</q>
+                <p class="author">
+                    CTO, Ahandyhand
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="rasmus-quote">
+    <div class="rasmus-quote__overlay"></div>
+    <div class="rasmus-quote__content">
+        <div class="row-md">
+            <h4>"We bring trust to <br class="hidden-xs"> the internet"</h4>
+            <p>
+                Rasmus Groth,
+                CEO, VERIDU
+            </p>
+            <div onclick="showVideo()" class="player-container"></div>
+        </div>
+    </div>
+</section>
+
+
+<script>
+
+var imageAddr = "img/city.jpeg";
+var downloadSize = 271891; //bytes
+
+window.onload = function() {
+    window.setTimeout(MeasureConnectionSpeed, 1);
+};
+
+function MeasureConnectionSpeed() {
+    var oProgress = document.getElementById("progress");
+    var startTime, endTime;
+    var download = new Image();
+
+    download.onload = function () {
+        endTime = (new Date()).getTime();
+        showResults();
+    }
+
+    download.onerror = function (err, msg) {
+        console.warn('error measuring connection speed');
+    }
+
+    startTime = (new Date()).getTime();
+    var cacheBuster = "?nnn=" + startTime;
+    download.src = imageAddr + cacheBuster;
+
+    function showResults() {
+        var duration = (endTime - startTime) / 1000;
+        var bitsLoaded = downloadSize * 8;
+        var speedBps = (bitsLoaded / duration).toFixed(2);
+        var speedKbps = (speedBps / 1024).toFixed(2);
+        var speedMbps = (speedKbps / 1024).toFixed(2);
+        console.warn(speedKbps);
+
+        if (speedKbps < 500) {
+            var landingSection = document.querySelector('.landing-section');
+            var videos = document.querySelectorAll('.landing-section video');
+
+            for (var i = 0; i < videos.length; ++i) {
+              landingSection.removeChild(videos[i]);
+            }
+
+        }
+
+    }
+
+}
+</script>
+<!-- for faster image loading on landing content -->
+<div class="hidden">
+    <img src="img/customer.jpeg" alt="">
+    <img src="img/customer.jpeg" alt="">
+    <img src="img/peer.jpeg" alt="">
+    <img src="img/tenant.jpg" alt="">
+</div>
+
+
+<script>
+
+function hideVideo() {
+    $('.video-overlay').removeClass('vis');
+    ytPlayer.stopVideo();
+}
+
+window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode == 27) {
+        hideVideo();
+    }
+});
+
+function showVideo() {
+    $('.video-overlay').addClass('vis');
+    ytPlayer.playVideo();
+}
+
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+// 3. This function creates an <iframe> (and YouTube player)
+//    after the API code downloads.
+var ytPlayer;
+function onYouTubeIframeAPIReady() {
+
+    ytPlayer = new YT.Player('youtube-player', {
+        width: '350',
+        height: '180',
+        videoId: 'II1_oO_ULNo',
+        thumbnailId: 2,
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+    }
+
+    // 4. The API will call this function when the video player is ready.
+    var playButton = document.getElementById('play-button');
+
+    function onPlayerReady(event) {
+
+        ytPlayer = event.target;
+        playButton.addEventListener('click', playVideo);
+    }
+
+
+    // 5. The API calls this function when the player's state changes.
+    //    The function indicates that when playing a video (state=1),
+    //    the player should play for six seconds and then stop.
+    var done = false;
+    function onPlayerStateChange(event) {
+
+        if (event.data == YT.PlayerState.PLAYING ) {
+            // hide button
+            playButton.style.display = 'none';
+
+        } else {
+            // show button
+            playButton.style.display = 'inline-block';
+        }
+
+    }
+    function stopVideo() {
+        ytPlayer.stopVideo();
+    }
+    function playVideo() {
+        ytPlayer.playVideo();
+    }
+
+</script>
