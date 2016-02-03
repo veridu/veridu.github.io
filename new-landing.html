@@ -10,69 +10,78 @@ script: index.js
         <div >
             <div class="slick-carousel" id="landing-carousel" >
                 <div class="v-item v-item--alice" style="background-image: url(img/landing-bg.jpg);">
-                    <div class="v-item-container">
-                        <div class="v-item-content">
-                            <h1 class="title-sm">
-                                <q cite="Rasmus Groth">We bring trust <br class="hidden-xs"> to the internet</q>
-                            </h1>
-                            <p>
-                                Global and low-cost social identity verification
-                            </p>
+                    <div class="overlay">
+                        <div class="v-item-container">
+                            <div class="v-item-content">
+                                <h1 class="title-sm">
+                                    <q cite="Rasmus Groth">We bring trust <br class="hidden-xs"> to the internet</q>
+                                </h1>
+                                <p>
+                                    Global and low-cost social identity verification
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="v-item v-item--customer" style="background-image: url(img/landing-bg-0.jpg);">
-                    <div class="v-item-container">
-                        <div class="v-item-content">
-                            <h1 class="title-sm">
-                                Know Your <br class="hidden-xs"> Customer
-                            </h1>
-                            <p>
-                                You can have it all. Robust identity verification globally, fewer declined transactions and an improved user experience.
-                            </p>
+                    <div class="overlay">
+                        <div class="v-item-container">
+                            <div class="v-item-content">
+                                <h1 class="title-sm">
+                                    Know Your <br class="hidden-xs"> Customer
+                                </h1>
+                                <p>
+                                    You can have it all. Robust identity verification globally, fewer declined transactions and an improved user experience.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="v-item v-item--peer" style="background-image: url(img/landing-bg-1.jpg);">
-                    <div class="v-item-container">
-                        <div class="v-item-content">
-                            <h1 class="title-sm">
-                                Know Your <br class="hidden-xs"> Peer
-                            </h1>
-                            <p>
-                                A trusting community is a sharing community. Drive engagement in your community by letting members proactively showcase their credibility and trustworthiness.
-                            </p>
+                    <div class="overlay">
+                        <div class="v-item-container">
+                            <div class="v-item-content">
+                                <h1 class="title-sm">
+                                    Know Your <br class="hidden-xs"> Peer
+                                </h1>
+                                <p>
+                                    A trusting community is a sharing community. Drive engagement in your community by letting members proactively showcase their credibility and trustworthiness.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="v-item v-item--candidate" style="background-image: url(img/landing-bg-2.jpg);">
-                    <div class="v-item-container">
-                        <div class="v-item-content">
-                            <h1 class="title-sm">
-                                Know Your <br class="hidden-xs"> Candidate
-                            </h1>
-                            <p>
-                                Rise above the competition. Enhance your candidate vetting and be confident that you always put forward the most suitable person for the job.
-                            </p>
+                    <div class="overlay">
+                        <div class="v-item-container">
+                            <div class="v-item-content">
+                                <h1 class="title-sm">
+                                    Know Your <br class="hidden-xs"> Candidate
+                                </h1>
+                                <p>
+                                    Rise above the competition. Enhance your candidate vetting and be confident that you always put forward the most suitable person for the job.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="v-item v-item--peer" style="background-image: url(img/landing-bg-3.jpg);">
-                    <div class="v-item-container">
-                        <div class="v-item-content">
-                            <h1 class="title-sm">
-                                Know Your <br class="hidden-xs"> Tenant
-                            </h1>
-                            <p>
-                                Don't be a stranger. Create trust between property owners and viewers before they even meet with pre-vetting solutions that establish identity and credibility.
-                            </p>
+                    <div class="overlay">
+                        <div class="v-item-container">
+                            <div class="v-item-content">
+                                <h1 class="title-sm">
+                                    Know Your <br class="hidden-xs"> Tenant
+                                </h1>
+                                <p>
+                                    Don't be a stranger. Create trust between property owners and viewers before they even meet with pre-vetting solutions that establish identity and credibility.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -238,9 +247,9 @@ script: index.js
     <div class="content__container">
 
         <div class="content">
-            <div class="content__image">
+            <div class="content__image" id="onboard-video-image-container">
                 <img src="img/phone-verified.jpg" alt="phone_verification" />
-                <video autoplay loop muted>
+                <video  muted>
                     <source src="video/login.mp4" type="video/mp4">
                 </video>
 

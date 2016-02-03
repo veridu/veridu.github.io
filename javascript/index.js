@@ -29,8 +29,25 @@
 		page.mobile = page.mbHelper.is(':visible');
 
 		page.$window.resize(adjustHeights);
-		adjustHeights();
+		page.$window.scroll(detect);
 		page.$window.keydown(keyPressed);
+		page.$videoCt = $('#onboard-video-image-container');
+		page.video = page.$videoCt.find('video')[0];
+
+		adjustHeights();
+
+		detect();
+		function detect() {
+
+			var scrollBot = $window.scrollTop()  + $window.height();
+			// detects change on sections offset
+			// updates current state
+			if (scrollBot > (page.$videoCt.offset().top + 400) && ! page.played) {
+				page.video.play();
+				page.played = true;
+			}
+		}
+
 
 		function keyPressed(evt) {
 			if (evt.keyCode == 27) {
