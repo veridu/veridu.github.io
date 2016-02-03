@@ -141,7 +141,7 @@ excerpt: A happy user is an active user
 				<div class="clearfix"><h5>Warnings</h5></div>
 				<div class="v-tag v-tag--warning2">Empty profile</div>
 				<div class="v-tag v-tag--warning2">Known fake</div>
-				<div class="v-tag v-tag--warning2">Peps</div>
+				<div class="v-tag v-tag--warning2">PEP</div>
 				<div class="v-tag v-tag--warning2">Sanctions</div>
 				<div class="v-tag v-tag--warning2">Silly name</div>
 				<div class="v-tag v-tag--warning2">Celebrity name</div>

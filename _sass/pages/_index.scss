@@ -1171,7 +1171,7 @@ section.landing-section {
 						&.slick-active:after {
 								@include opacity(0.3);
 								@media (min-width: $screen-sm-min) {
-									@include opacity(0.5);
+									@include opacity(0.3);
 								}
 						}
 					}
@@ -1402,7 +1402,7 @@ section.landing-section {
 	}
 
 	section.authenticate-identity {
-
+		overflow: hidden;
 		@media (min-width: $screen-sm-min) {
 			.content__image {
 				position: relative;
@@ -1432,8 +1432,8 @@ section.landing-section {
 					display: block;
 					position: absolute;
 					top: em(121);
-					right: 98px;
-					width: 234px;
+					right: 99px;
+					width: 232px;
 				}
 				img {
 					max-width: none !important;
