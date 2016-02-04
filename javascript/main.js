@@ -60,6 +60,7 @@
 				fixedContactButton.addClass('sent');
 				fixedContactContainer.find('.thank-you').toggleClass('animated fadeIn');
 				// sends e-mail
+				ga('send', 'event', 'Bottom-fixed Form', 'submit', 'Drip email form submitted');
 				this.submit();
 
 			}
@@ -194,31 +195,6 @@
 		vm.sendContact = sendContact;
 
 		function sendContact () {
-			$.ajax({
-				type: 'POST',
-				url: 'https://mandrillapp.com/api/1.0/messages/send.json',
-				data: {
-					'key': 'aWW0R-modIT7wxtqmWKMGA',
-					'message': {
-						'from_email': 'website@veridu.com',
-						'to': [
-							{
-								'email': 'marketing@veridu.com',
-								'name': 'Marketing',
-								'type': 'to'
-							}
-						],
-						'autotext': 'true',
-						'subject': 'Contact from website | veridu.com',
-						'html': 'Name: <strong>' + vm.contact.name + '<strong><br>' +
-								'Email: <strong>' + vm.contact.email + '<strong><br>' +
-								'Company: <strong>' + vm.contact.company + '<strong><br>' +
-								'<br> Message: <br> <strong>' + vm.contact.message + '<strong><br>'
-					}
-				}
-				}).done(function(response) {
-					console.log(response); // if you're into that sorta thing
-				});
 
 		}
 
@@ -529,6 +505,11 @@
 
 
 	}
+	$('#drip-contact-form').on('submit', function (event) {
+		event.preventDefault();
+		ga('send', 'event', 'Contact Form', 'submit', 'Drip contact form submitted');
+		this.submit();
+	});
 
 	$('.page-loading').fadeOut();
 	(new WoW).init();
