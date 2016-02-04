@@ -4,7 +4,7 @@ layout: blank
 class: article
 base: ../
 cover: img/articles/crypto-wallets/cover.png
-excerpt: A happy user is an active user
+excerpt: Is ID verification holding you back in unbanked markets? It doesn’t have to. Social media penetration in these markets is high and it provides a wealth of identification data. Build social KYC into your risk-based approach and watch your wallet grow.
 ---
 <article>
 	<div class="article__body article__body--crypto-wallets">
