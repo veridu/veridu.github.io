@@ -140,23 +140,31 @@
 </footer>
 
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
 <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
 <script type="text/javascript" src="node_modules/angular-touch/angular-touch.min.js"></script>
 <script type="text/javascript" src="bower_components/wow/dist/wow.min.js"></script>
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu.min.js"></script>
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu-ui.min.js"></script>
 <script type="text/javascript" src="https://veridu.com/integration/cfg.js"></script>
-<script src="node_modules/slick-carousel/slick/slick.js"></script>
+<script src="javascript/owl.carousel/owl.carousel.min.js"></script>
 
 <!-- App -->
 <script type="text/javascript">
 
-	$('.slick-carousel').slick({
-		dots: true,
-		speed: 500,
-		prevArrow: '<a class="nav-prev"  href="javascript:;"><i class="material-icons">&#xE5C4;</i></a>',
-		nextArrow: '<a class="nav-next"  href="javascript:;"><i class="material-icons">&#xE5C8;</i></a>'
+	$(".owl-carousel").owlCarousel({
+
+	//  navigation : true, // Show next and prev buttons
+	 slideSpeed : 300,
+	 paginationSpeed : 400,
+	 singleItem:true
+
+	 // "singleItem:true" is a shortcut for:
+	 // items : 1,
+	 // itemsDesktop : false,
+	 // itemsDesktopSmall : false,
+	 // itemsTablet: false,
+	 // itemsMobile : false
+
 	});
 
 	if (! window.VERIDU) {

@@ -1116,200 +1116,85 @@ section.landing-section {
 		}
 
 		//  media queries
+		.owl-carousel {
+			margin-bottom: em(50);
+			color: white;
 
-
-		> div.new-landing-content {
-			position: relative;
-			z-index: 2;
-
-			.slick-carousel {
-				margin-bottom: em(50);
-				color: white;
-
-				h1 {
-					font-weight: 400;
-				}
-
-				@media (max-width: $screen-xs-max)	{
-					margin-top: 0;
-
-					.slick-list {
-						top: 0;
-						.v-item {
-							h1 {
-
-							}
-						}
-					}
-
-				}
-
-				.v-item {
-					background-size: auto 130%;
-					background-position: right -100px;
-
-					@media (max-width: 550px) {
-						background-position: right -250px bottom 0px;
-					}
-					@media (min-width: $screen-sm-min) {
-						background-size: 100% auto;
-						background-repeat: no-repeat;
-						background-position: left top;
-						// background-position: 0 -320px;
-						@media (max-width: 920px) {
-							background-size: auto 100% !important;
-						}
-					}
-					@media (min-width: $screen-lg-min) {
-						background-position: 0% 50%;
-					}
-
-					&.v-item--tenant,
-					&.v-item--peer {
-						@media (min-width: $screen-lg-min) {
-							background-position: 0% 44%;
-						}
-						&.slick-active:after {
-								@include opacity(0.3);
-								@media (min-width: $screen-sm-min) {
-									@include opacity(0.3);
-								}
-						}
-					}
-					&.v-item--alice {
-						&.slick-active:after {
-								@include opacity(0.2);
-								@media (min-width: $screen-sm-min) {
-									@include opacity(0.2);
-								}
-						}
-					}
-					&.v-item--candidate {
-						@media (min-width: $screen-lg-min) {
-							background-position: 0% 38%;
-						}
-						// &.slick-active:after {
-						// 		@include opacity(0.3);
-						// 		@media (min-width: $screen-sm-min) {
-						// 			@include opacity(0.5);
-						// 		}
-						// }
-					}
-
-					&:after {
-						@include transitions(1s);
-						@include opacity(0);
-
-						content: ' ';
-						position: absolute;
-						z-index: 1;
-						top: 0;
-						left: 0;
-						width: 100%;
-						height: 100%;
-						background-color: black;
-
-					}
-
-					&.slick-active:after {
-						@include opacity(0.3);
-						@media (min-width: $screen-sm-min) {
-							@include opacity(0.1);
-						}
-					}
-
-					.overlay {
-						width: 100%;
-						height: 100%;
-						background: transparent;
-						background: -moz-linear-gradient(left,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.1) 60%, rgba(0,0,0,0.0) 100%); /* FF3.6-15 */
-						background: -webkit-linear-gradient(left,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.1) 60%, rgba(0,0,0,0.0) 100%); /* Chrome10-25,Safari5.1-6 */
-						background: linear-gradient(to right,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.1) 60%, rgba(0,0,0,0.0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a5aa2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
-
-					}
-
-
-					.v-item-container {
-						z-index: 10;
-						position: relative;
-					}
-
-				}
-
-				> div {
-					height: 100%;
-					// position: relative;
-					text-align: left;
-
-					.v-item-container {
-						@extend .v-container;
-					}
-					.v-item-content {
-						padding-top: em(50);
-
-						@media (min-width: 480px) {
-							@include col(10);
-						}
-						@media (min-width: 580px) {
-							@include col(8);
-						}
-						@media (min-width: $screen-sm-min) {
-							@include col(5);
-						}
-						h1 {
-							// font-weight: 400;
-							margin-bottom: em(10);
-						}
-						p {
-							font-size: 1.2em;
-
-							a {
-								color: white;
-								text-decoration: none;
-								border-bottom: 1px solid white;
-
-								a:hover {
-									text-decoration: none;
-								}
-							}
-						}
-					}
-
-				}
-
-				.slick-arrow {
-					color: white;
-					display: none !important;
-				}
-				@media (min-width: $screen-sm-min)	{
-					.slick-arrow {
-						// bottom: - em(50);
-					}
-				}
-				.slick-dots {
-					bottom: em(82);
-				}
-
-
-				.slick-dots li button:before{
-					width: 13px;
-					height: 13px;
-				}
-
-				.slick-dots li.slick-active button:before {
-					background-color: white;
-				}
-				.slick-dots li.slick-active button:before,
-				.slick-dots li button:before {
-					color: white;
-				}
-				.slick-dots li button:before {
-					border-color: white;
-				}
+			h1 {
+				font-weight: 400;
 			}
 
+			@media (max-width: $screen-xs-max)	{
+				margin-top: 0;
+
+
+			}
+
+			.v-item {
+				background-size: auto 130%;
+				background-position: right -100px;
+
+				.overlay:before,
+				.overlay:after {
+					content: ' ';
+					position: absolute;
+					top: 0;
+					left: 0;
+					z-index: 1;
+					width: 100%;
+					height: 100%;
+				}
+				.overlay:after {
+					background-color: rgba(black, 0.1);
+				}
+				.overlay:before {
+					background: transparent;
+					background: -moz-linear-gradient(left,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.1) 60%, rgba(0,0,0,0.0) 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(left,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.1) 60%, rgba(0,0,0,0.0) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to right,  rgba(#1a5aa2, 0.65) 0%, rgba(#1a5aa2, 0.1) 60%, rgba(0,0,0,0.0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a5aa2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+				}
+				.v-item-container {
+					position: relative;
+					z-index: 2;
+
+					.v-item-content {
+						padding-top: 25%;
+
+						@media(min-width: $screen-sm-min) {
+							padding-top: 5%;
+						}
+					}
+				}
+
+				@media (max-width: 550px) {
+					background-position: right -250px bottom 0px;
+				}
+				@media (min-width: $screen-sm-min) {
+					background-size: 100% auto;
+					background-repeat: no-repeat;
+					background-position: left top;
+					// background-position: 0 -320px;
+					@media (max-width: 920px) {
+						background-size: auto 100% !important;
+					}
+
+					.v-item-content {
+						@include col(5);
+					}
+				}
+				@media (min-width: $screen-lg-min) {
+					background-position: 0% 50%;
+				}
+
+				.v-item-container {
+					@extend .v-container;
+
+				}
+			}
 		}
+
 	}
 
 	section.white-belt {
