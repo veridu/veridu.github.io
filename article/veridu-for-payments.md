@@ -42,7 +42,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 						<q>In 2014 nearly $118 billion was left on the table due to false declines.</q>
 						<p>
 							<br>
-							<small><em>PYMNTS</em></small>
+							<small>PYMNTS</small>
 						</p>
 					</blockquote>
 				</a>
@@ -82,10 +82,10 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				</p>
 				<a href="http://www.mobilepaymentstoday.com/articles/whats-ahead-for-online-fraud-in-2016/" target="_blank">
 					<blockquote cite="http://www.mobilepaymentstoday.com/articles/whats-ahead-for-online-fraud-in-2016/">
-						Online retail fraud in the U.S. alone is expected to rise by 106 percent over the next three years.
+						<q>Online retail fraud in the U.S. alone is expected to rise by 106 percent over the next three years.</q>
 						<p>
 							<br>
-							<small><em>What’s Ahead for Online Fraud in 2016</em></small>
+							<small>What’s Ahead for Online Fraud in 2016</small>
 						</p>
 					</blockquote>
 				</a>
@@ -104,7 +104,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 						<q>By 2020, mobile commerce will make up 45 percent of total e-commerce, equaling $284 billion in sales.</q>
 						<p>
 							<br>
-							<small><em>Where Mobile Commerce is going in 2016</em></small>
+							<small>Where Mobile Commerce is going in 2016</small>
 						</p>
 					</blockquote>
 				</a>
@@ -122,7 +122,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 						<q>The ultimate goal in providing superior fraud prevention in today’s omni-channel environment is a balancing act between implementing robust solutions without impeding the customer experience.</q>
 						<p>
 							<br>
-							<small><em>Balanced Fraud Prevention is Key in Today’s Omni-Channel Environment</em></small>
+							<small>Balanced Fraud Prevention is Key in Today’s Omni-Channel Environment</small>
 						</p>
 					</blockquote>
 				</a>
@@ -143,10 +143,10 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				</em>
 				<a href="http://www.riskified.com/pdfs/Riskified-Javelin-Whitepaper-2015.pdf" target="_blank">
 					<blockquote cite="http://www.riskified.com/pdfs/Riskified-Javelin-Whitepaper-2015.pdf">
-						26% of declined cardholders reduced their patronage of a merchant following a decline and 32% stopped shopping with the merchant entirely.
+						<q>26% of declined cardholders reduced their patronage of a merchant following a decline and 32% stopped shopping with the merchant entirely.</q>
 						<p>
 							<br>
-							<small><em>Overcoming False Positives</em></small>
+							<small>Overcoming False Positives</small>
 						</p>
 					</blockquote>
 				</a>
@@ -155,8 +155,9 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				<h5>What our customers say…</h5>
 
 				<blockquote>
-					We especially like the frictionless user experience. If you have a consumer facing mobile app and need to integrate ID services I highly recommend checking out Veridu.
+					<q>We especially like the frictionless user experience. If you have a consumer facing mobile app and need to integrate ID services I highly recommend checking out Veridu.</q>
 					<p>
+						<br>
 						<small>Volker Breuer, CEO, PayFriendz</small>
 					</p>
 				</blockquote>
@@ -167,9 +168,6 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 						<em>Social Network User Penetration worldwide, via any device, at least once per month. Source : eMarketer, April 2013</em>
 					</figcaption>
 				</figure>
-
-				<h5>Want to know more? Contact hello@veridu.com</h5>
-
 			</div>
 
 			<div class="article__tags__container">

@@ -3,7 +3,7 @@ section.page.article {
 
 	article {
 		@include clearfix();
-		background: #eee;
+		background: #EFEFEF;
 
 		.article__excerpt {
 			margin-top: 0;
@@ -126,6 +126,7 @@ section.page.article {
 
 					.article__title {
 						@extend .content-padding;
+						font-weight: 400;
 						padding-right: 0;
 						@media (min-width: $screen-md-min) {
 							padding-left: 0;
@@ -179,6 +180,11 @@ section.page.article {
 		}
 		* {
 			color: #01579b;
+		}
+	}
+	blockquote {
+		q {
+			font-style: italic;
 		}
 	}
 }
