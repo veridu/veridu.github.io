@@ -171,4 +171,14 @@ section.page.article {
 
 		}
 	}
+	a {
+		color: #01579b;
+
+		&:hover {
+			text-decoration: none;
+		}
+		* {
+			color: #01579b;
+		}
+	}
 }

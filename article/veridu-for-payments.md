@@ -22,14 +22,14 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				</h1>
 				<h4 class="article__excerpt hidden-xs">
 					<div>
-						You know your customers, but do they know theirs?
+						You know your customers, <br class="hidden-xs"> but do they know theirs?
 					</div>
 				</h4>
 			</div>
 		</div>
 
 		<h4 class="article__excerpt visible-xs">
-			You know your customers, but do they know theirs?
+			You know your customers, <br class="hidden-xs"> but do they know theirs?
 		</h4>
 
 		<div class="article__content-wrapper">
@@ -37,12 +37,15 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				<p>
 					Supporting your e-Commerce customers is getting more complex - because their customer base is getting more complex. They’re global, they want to browse and buy anywhere and anytime; they want to pay using different methods, from credit card to eWallets; and they won’t tolerate a bad user experience. And that’s just the legitimate customers. Don’t forget about the increasingly sophisticated fraudsters who are stealing and faking identities with greater ease.
 				</p>
-				<blockquote cite="http://www.pymnts.com/news/2015/fixing-retails-118b-mistake/">
-					In 2014 nearly $118 billion was left on the table due to false declines.
-					<p>
-						<small><em>Source: PYMNTS (<a href="http://www.pymnts.com/news/2015/fixing-retails-118b-mistake/" target="_blank">http://www.pymnts.com/news/2015/fixing-retails-118b-mistake/</a>) </em></small>
-					</p>
-				</blockquote>
+				<a href="http://www.pymnts.com/news/2015/fixing-retails-118b-mistake/" target="_blank">
+					<blockquote cite="http://www.pymnts.com/news/2015/fixing-retails-118b-mistake/">
+						<q>In 2014 nearly $118 billion was left on the table due to false declines.</q>
+						<p>
+							<br>
+							<small><em>PYMNTS</em></small>
+						</p>
+					</blockquote>
+				</a>
 
 				<p>
 					Your customers need to find the right balance between building their global businesses and mitigating fraud. As their payments partner they’ll turn to you for support, but can you currently provide them with exactly what they need?
@@ -77,13 +80,15 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				<p>
 					By analysing an individual’s online footprint, in real time, Veridu can assess their credibility with confidence. When integrated into your fraud prevention engine this capability safely reduces false positives allowing your merchants to sell more
 				</p>
-
-				<blockquote cite="http://www.mobilepaymentstoday.com/articles/whats-ahead-for-online-fraud-in-2016/">
-					Online retail fraud in the U.S. alone is expected to rise by 106 percent over the next three years.
-					<p>
-						<small><em>Source: What’s Ahead for Online Fraud in 2016 (<a href="http://www.mobilepaymentstoday.com/articles/whats-ahead-for-online-fraud-in-2016/" target="_blank">http://www.mobilepaymentstoday.com/articles/whats-ahead-for-online-fraud-in-2016/</a>) </em></small>
-					</p>
-				</blockquote>
+				<a href="http://www.mobilepaymentstoday.com/articles/whats-ahead-for-online-fraud-in-2016/" target="_blank">
+					<blockquote cite="http://www.mobilepaymentstoday.com/articles/whats-ahead-for-online-fraud-in-2016/">
+						Online retail fraud in the U.S. alone is expected to rise by 106 percent over the next three years.
+						<p>
+							<br>
+							<small><em>What’s Ahead for Online Fraud in 2016</em></small>
+						</p>
+					</blockquote>
+				</a>
 
 
 				<h5>Be m-Commerce friendly</h5>
@@ -94,12 +99,15 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 					Veridu’s social identity checks simply ask a user to login to existing social and online accounts (that they’re already likely to be logged into on their device). A better experience will boost conversions for your merchants while still keeping fraud to a minimum.
 				</p>
 
-				<blockquote cite="http://digiday.com/brands/mobile-commerce-going-2016/">
-					By 2020, mobile commerce will make up 45 percent of total e-commerce, equaling $284 billion in sales.
-					<p>
-						<small><em>Source: Where Mobile Commerce is going in 2016 (<a href="http://digiday.com/brands/mobile-commerce-going-2016/" target="_blank">http://digiday.com/brands/mobile-commerce-going-2016/</a>) </em></small>
-					</p>
-				</blockquote>
+				<a href="http://digiday.com/brands/mobile-commerce-going-2016/" target="_blank">
+					<blockquote cite="http://digiday.com/brands/mobile-commerce-going-2016/">
+						<q>By 2020, mobile commerce will make up 45 percent of total e-commerce, equaling $284 billion in sales.</q>
+						<p>
+							<br>
+							<small><em>Where Mobile Commerce is going in 2016</em></small>
+						</p>
+					</blockquote>
+				</a>
 
 				<h5>Frictionless identity and age verification</h5>
 				<p>
@@ -109,14 +117,15 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 					Veridu can verify a user’s identity and age using their social and online accounts. It’s real-time, frictionless and mobile-friendly too, so you can protect yourself and still make the sale.
 				</p>
 
-
-				<blockquote cite="http://www.experian.com.au/assets/decision-analytics/white-papers/omni-channel-protection.pdf">
-					The ultimate goal in providing superior fraud prevention in today’s omni-channel environment is a balancing act between implementing robust solutions without impeding the customer experience.
-					<p>
-						<small><em>Source: Balanced Fraud Prevention is Key in Today’s Omni-Channel Environment (<a href="http://www.experian.com.au/assets/decision-analytics/white-papers/omni-channel-protection.pdf" target="_blank">http://www.experian.com.au/assets/decision-analytics/white-papers/omni-channel-protection.pdf</a>) </em></small>
-					</p>
-				</blockquote>
-
+				<a href="http://www.experian.com.au/assets/decision-analytics/white-papers/omni-channel-protection.pdf" target="_blank">
+					<blockquote cite="http://www.experian.com.au/assets/decision-analytics/white-papers/omni-channel-protection.pdf">
+						<q>The ultimate goal in providing superior fraud prevention in today’s omni-channel environment is a balancing act between implementing robust solutions without impeding the customer experience.</q>
+						<p>
+							<br>
+							<small><em>Balanced Fraud Prevention is Key in Today’s Omni-Channel Environment</em></small>
+						</p>
+					</blockquote>
+				</a>
 
 				<h5>A User’s Story</h5>
 
@@ -132,14 +141,15 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 					</q>
 
 				</em>
-
-				<blockquote cite="http://www.riskified.com/pdfs/Riskified-Javelin-Whitepaper-2015.pdf">
-					26% of declined cardholders reduced their patronage of a merchant following a decline and 32% stopped shopping with the merchant entirely.
-					<p>
-						<small><em>Source: Overcoming False Positives (<a href="http://www.riskified.com/pdfs/Riskified-Javelin-Whitepaper-2015.pdf" target="_blank">http://www.riskified.com/pdfs/Riskified-Javelin-Whitepaper-2015.pdf</a>) </em></small>
-					</p>
-				</blockquote>
-
+				<a href="http://www.riskified.com/pdfs/Riskified-Javelin-Whitepaper-2015.pdf" target="_blank">
+					<blockquote cite="http://www.riskified.com/pdfs/Riskified-Javelin-Whitepaper-2015.pdf">
+						26% of declined cardholders reduced their patronage of a merchant following a decline and 32% stopped shopping with the merchant entirely.
+						<p>
+							<br>
+							<small><em>Overcoming False Positives</em></small>
+						</p>
+					</blockquote>
+				</a>
 
 
 				<h5>What our customers say…</h5>
@@ -150,6 +160,13 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 						<small>Volker Breuer, CEO, PayFriendz</small>
 					</p>
 				</blockquote>
+
+				<figure>
+					<img src="img/articles/crypto-wallets/world-coverage.png" class="world-coverage" alt="Social network user penetration worldwide">
+					<figcaption class="span-both">
+						<em>Social Network User Penetration worldwide, via any device, at least once per month. Source : eMarketer, April 2013</em>
+					</figcaption>
+				</figure>
 
 				<h5>Want to know more? Contact hello@veridu.com</h5>
 
