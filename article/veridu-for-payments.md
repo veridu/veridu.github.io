@@ -185,7 +185,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				<div class="clearfix"></div>
 
 				<div class="clearfix"><h5>Insight</h5></div>
-				<div class="v-tag v-tag--success2">Crypto user</div>
+				<div class="v-tag v-tag--success2">Payments</div>
 
 				<div class="clearfix"><h5>Warnings</h5></div>
 				<div class="v-tag v-tag--warning2">Empty profile</div>
@@ -221,7 +221,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 			_dcq.push(
 				[
 					"track",
-					"Opened Cryptocurrency Wallets Article PDF - Download Button",
+					"Opened Veridu for payments Article PDF - Download Button",
 					{
 						value: 2000
 					}
@@ -229,7 +229,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 			);
 		}
 
-		window.open('resources/cryptocurrency-wallets-Veridu.pdf');
+		window.open('resources/veridu-for-payments.pdf');
 
 	}
 	function load () {
