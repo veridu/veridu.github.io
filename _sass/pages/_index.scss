@@ -1175,7 +1175,16 @@ section.landing-section {
 					background-size: 100% auto;
 					background-repeat: no-repeat;
 					background-position: left top;
-					// background-position: 0 -320px;
+
+					&.v-item--tenant,
+					&.v-item--peer {
+						background-position: right -250px;
+					}
+					&.v-item--candidate {
+						background-position: right -210px;
+					}
+
+
 					@media (max-width: 920px) {
 						background-size: auto 100% !important;
 					}
