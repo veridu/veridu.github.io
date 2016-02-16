@@ -46,7 +46,6 @@ cover: img/bridge.jpeg
 		<div>
 			<h3>UK HEADQUARTERS</h3>
 			Wework Moorgate<br>
-			6th floor, 3042<br>
 			1 Fore Street<br>
 			London, EC2Y 5EJ<br>
 			United Kingdom
