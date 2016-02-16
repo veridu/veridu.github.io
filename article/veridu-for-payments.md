@@ -141,6 +141,9 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 					</q>
 
 				</em>
+				<br>
+				<br>
+
 				<a href="http://www.riskified.com/pdfs/Riskified-Javelin-Whitepaper-2015.pdf" target="_blank">
 					<blockquote cite="http://www.riskified.com/pdfs/Riskified-Javelin-Whitepaper-2015.pdf">
 						<q>26% of declined cardholders reduced their patronage of a merchant following a decline and 32% stopped shopping with the merchant entirely.</q>
@@ -154,13 +157,12 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 
 				<h5>What our customers say…</h5>
 
-				<blockquote>
-					<q>We especially like the frictionless user experience. If you have a consumer facing mobile app and need to integrate ID services I highly recommend checking out Veridu.</q>
-					<p>
-						<br>
-						<small>Volker Breuer, CEO, PayFriendz</small>
-					</p>
-				</blockquote>
+				<q>
+					<em>We especially like the frictionless user experience. If you have a consumer facing mobile app and need to integrate ID services I highly recommend checking out Veridu.</em></q>
+				<p>
+					<small><br></small>
+					<small class="quoted-from text-muted">Volker Breuer, CEO, PayFriendz</small>
+				</p>
 
 				<figure>
 					<img src="img/articles/crypto-wallets/world-coverage.png" class="world-coverage" alt="Social network user penetration worldwide">

@@ -188,3 +188,7 @@ section.page.article {
 		}
 	}
 }
+
+small.quoted-from:before {
+	content: '\2014 \00A0';
+}
