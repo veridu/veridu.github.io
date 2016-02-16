@@ -1178,15 +1178,14 @@ section.landing-section {
 
 					&.v-item--tenant,
 					&.v-item--peer {
-						background-position: right -250px;
+						background-position: left 40%;
 					}
 					&.v-item--candidate {
-						background-position: right -210px;
+						background-position: left 35%;
 					}
 
-
-					@media (max-width: 920px) {
-						background-size: auto 100% !important;
+					@media (max-width: 1020px) {
+						background-size: auto 110% !important;
 					}
 
 					.v-item-content {
