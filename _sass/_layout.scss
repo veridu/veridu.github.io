@@ -269,7 +269,7 @@ body {
 		width: 100%;
         z-index: 1000;
         background: white;
-        min-height: em(52);
+        height: em(53);
 
         &.shadowed {
             box-shadow: $menu-shadow;
