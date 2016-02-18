@@ -85,8 +85,8 @@ ul.media-list {
         margin-top: 0.7em;
         margin-bottom: 0.7em;
 
-        @media (max-width: $screen-xs-max) {
-            @include col(12);
+        @media (max-width: 950px) {
+            width: 100% !important
         }
     }
 
