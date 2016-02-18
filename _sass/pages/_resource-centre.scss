@@ -44,6 +44,8 @@
             }
 
             @media (min-width: 700px) {
+                background-size: 100% auto;
+
                 h1 {
                     font-size: 1.7em;
                 }
@@ -51,9 +53,11 @@
                     display: none;
                 }
 
-                background-size: 120% auto;
             }
-            @media (min-width: 900px) {
+            @media (min-width: 770px) {
+                background-size: auto 100%;
+            }
+            @media (min-width: 1020px) {
                 background-size: 100% auto;
             }
 
