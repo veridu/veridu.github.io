@@ -330,7 +330,7 @@ layout: blank
 
 		</ul>
 		<p class="text-right">
-			<a class="black-link" href="#">See more news</a>
+			<a class="black-link" href="http://www.mynewsdesk.com/uk/veridu-com" target="_blank">See more news</a>
 		</p>
 
 	</div>

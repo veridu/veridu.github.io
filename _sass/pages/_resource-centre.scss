@@ -85,12 +85,16 @@ ul.media-list {
         margin-top: 0.7em;
         margin-bottom: 0.7em;
 
-        @media (max-width: 950px) {
+        @media (max-width: $screen-sm-max) {
+            width: 50% !important
+        }
+        @media (max-width: $screen-xs-max) {
             width: 100% !important
         }
     }
 
 }
+
 ul.media-list {
 
     &.media-list--latest-news {
@@ -110,6 +114,9 @@ ul.media-list {
         }
 
         > div {
+            max-width: 350px;
+            // margin-left: auto;
+            // margin-right: ;auto;
             height: em(150);
             background-color: $gray-dark;
             color: $gray-lighter;
