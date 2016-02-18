@@ -2,7 +2,7 @@
     .black-link {
         border-bottom: 1px solid black;
     }
-    
+
     .page__cover-container {
         .page__cover {
             background-size: auto 100%;
@@ -82,9 +82,12 @@ ul.media-list {
 
     li {
         @include col(4);
-
         margin-top: 0.7em;
         margin-bottom: 0.7em;
+
+        @media (max-width: $screen-xs-max) {
+            @include col(12);
+        }
     }
 
 }
