@@ -864,7 +864,7 @@ section.contact {
 
 section.contact {
 	@extend .tablet__gutter;
-	background-color: #F8F8F8;
+	background-color: #f1f1f1 !important;
 
 	// desktop styles
 	@media (min-width: $screen-sm-min) {
@@ -1143,6 +1143,7 @@ section.landing-section {
 					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a5aa2', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 
 				}
+
 				.v-item-container {
 					position: relative;
 					z-index: 2;

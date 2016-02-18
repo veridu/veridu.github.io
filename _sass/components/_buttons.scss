@@ -44,10 +44,17 @@
 		border-color: #9e9e9e !important;
 	}
 
+	&.btn--color--white {
+		color: white;
+	}
 }
 
 .btn-primary {
 	@include v-btn($brand-primary, $brand-primary-border-color);
+}
+
+.btn-danger {
+	@include v-btn($brand-danger, darken($brand-danger, 20%));
 }
 .btn-primary.btn-primary--text-white {
 	color: white !important;
