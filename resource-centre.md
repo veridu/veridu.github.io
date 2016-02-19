@@ -14,13 +14,13 @@ layout: blank
 			<br>
 
 			<div class="btn-container">
-				<button type="button" class="btn btn-primary btn--color--white">
+				<button type="button" class="btn btn-primary btn--color--white" id="introduction-button" >
 					<i class="material-icons">&#xE039;</i>
 					<span>Watch introduction video</span>
 				</button>
 			</div>
 			<div class="btn-container">
-				<button type="button" class="btn btn-primary btn--color--white">
+				<button type="button" class="btn btn-primary btn--color--white" onclick="window.open('resources/general-introduction.pdf')">
 					<i class="material-icons">&#xE2C4;</i>
 					<span>Download introduction PDF</span>
 				</button>
@@ -42,7 +42,7 @@ layout: blank
 
 		<ul class="resource-list">
 			<li>
-				<a href="#" class="block-link">
+				<a href="article/veridu-for-payments.html" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Veridu for Payments
 					</div>
@@ -54,45 +54,21 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="#" class="block-link">
-					<div class="block-link__text">
-						Veridu for Sharing Economy
-					</div>
-					<div class="block-link__icon">
-						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
-						</button>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="block-link">
+				<a href="https://www.veridu.com/article/cryptocurrency-wallets" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Veridu for Crypto Currency
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
+							<i class="material-icons">&#xE157;</i>
 						</button>
 					</div>
 				</a>
 			</li>
 			<li>
-				<a href="#" class="block-link">
+				<a href="resources/veridu-for-igaming.pdf" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Veridu for iGaming
-					</div>
-					<div class="block-link__icon">
-						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
-						</button>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="block-link">
-					<div class="block-link__text">
-						Veridu for eCommerce
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
@@ -117,33 +93,9 @@ layout: blank
 		<ul class="resource-list">
 
 			<li>
-				<a href="#" class="block-link">
+				<a href="resources/use-case-underthedoormat.pdf" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Under The Doormat
-					</div>
-					<div class="block-link__icon">
-						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
-						</button>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="block-link">
-					<div class="block-link__text">
-						PayFriendz
-					</div>
-					<div class="block-link__icon">
-						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
-						</button>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="#" class="block-link">
-					<div class="block-link__text">
-						The Real Asset Company
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
@@ -164,7 +116,7 @@ layout: blank
 
 		<ul class="resource-list">
 			<li>
-				<a href="#" class="block-link">
+				<a href="https://veridu.com/tryit/sso/" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Single-Sign-on
 					</div>
@@ -176,49 +128,49 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="#" class="block-link">
+				<a href="https://veridu.com/tryit/challenge/" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Challenge
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
+							<i class="material-icons">&#xE157;</i>
 						</button>
 					</div>
 				</a>
 			</li>
 			<li>
-				<a href="#" class="block-link">
+				<a href="https://veridu.com/gateway/1.0/hrdemo" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Human Resources
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
+							<i class="material-icons">&#xE157;</i>
 						</button>
 					</div>
 				</a>
 			</li>
-			<li>
+			<!-- <li>
 				<a href="#" class="block-link">
 					<div class="block-link__text">
 						Carsharing
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
+						<i class="material-icons">&#xE157;</i>
 						</button>
 					</div>
 				</a>
-			</li>
+			</li> -->
 			<li>
-				<a href="#" class="block-link">
+				<a href="http://demo.veridu.com/payments/" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Payment Verification
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
+							<i class="material-icons">&#xE157;</i>
 						</button>
 					</div>
 				</a>
@@ -230,46 +182,46 @@ layout: blank
 	<div class="page__section__content">
 		<h3 class="page__section__title">Videos</h3>
 		<br>
-		<ul class="media-list">
-			<li>
-				<div>
+		<ul class="media-list media-list--video">
+			<li >
+				<div style="background-image: url(http://img.youtube.com/vi/aczCaHh9yJo/hqdefault.jpg); background-position: center 36%; background-size: 140% auto;">
 					<h4>Interview with Rasmus Groth at FinTech Connect</h4>
 
-					<button type="button" class="play__button play__button--primary">
+					<button type="button" class="btn btn-primary" data-iframe-id="video-1">
 						<i class="material-icons">&#xE039;</i>
 					</button>
 				</div>
 			</li>
 			<li>
-				<div>
+				<div style="background-image: url(img/ian-video-thumb.png); background-position: top left;">
 					<h4>Interview with Ian Green at FinTech Connect</h4>
 
-					<button type="button" class="play__button play__button--primary">
+					<button type="button" class="btn btn-primary" data-iframe-id="video-2">
 						<i class="material-icons">&#xE039;</i>
 					</button>
 				</div>
 			</li>
 			<li>
-				<div>
+				<div style="background-image: url(http://img.youtube.com/vi/II1_oO_ULNo/hqdefault.jpg); background-position: center 36%; background-size: 170% auto;">
 					<h4>Introduction to Veridu</h4>
 
-					<button type="button" class="play__button play__button--primary">
+					<button type="button" class="btn btn-primary" data-iframe-id="video-3">
 						<i class="material-icons">&#xE039;</i>
 					</button>
 				</div>
 			</li>
+
 			<li class="item--gray">
 				<div>
 					<h4>Subscribe to Veridu's YouTube channel for industry updates and case studies</h4>
 
-					<button type="button" class="play__button play__button--danger">
-						<i class="material-icons">&#xE039;</i>
+					<button type="button" class="btn btn-danger" onclick="window.open('https://www.youtube.com/channel/UC71f4rr0XBjx6df2eIooM2w')">
+						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
 			</li>
 
 		</ul>
-
 	</div>
 </div>
 
@@ -282,22 +234,6 @@ layout: blank
 			<li class="item--gray">
 				<div>
 					<h4>
-						<em>Veridu raises 1 million euros for global identity platform</em>
-						<br>
-						<br>
-						<p>
-							TechCrunch
-						</p>
-					</h4>
-
-					<button type="button" class="play__button play__button--primary">
-						<i class="material-icons">&#xE039;</i>
-					</button>
-				</div>
-			</li>
-			<li class="item--gray">
-				<div>
-					<h4>
 						<em>Identity Verification Startup Veridu Raises £800,000 Seed</em>
 						<br>
 						<br>
@@ -306,8 +242,24 @@ layout: blank
 						</p>
 					</h4>
 
-					<button type="button" class="play__button play__button--primary">
-						<i class="material-icons">&#xE157;</i>
+					<button type="button" class="btn btn-primary" onclick="window.open('http://techcrunch.com/2015/10/14/veridu/')">
+						<i class="material-icons">&#xE039;</i>
+					</button>
+				</div>
+			</li>
+			<li class="item--gray">
+				<div>
+					<h4>
+						<em>Veridu raises 1 million euros for global identity platform</em>
+						<br>
+						<br>
+						<p>
+							Ecommerce News
+						</p>
+					</h4>
+
+					<button type="button" class="btn btn-primary" onclick="window.open('http://ecommercenews.eu/veridu-raises-1-million-euros-for-global-identity-platform/')">
+						<i class="material-icons">&#xE039;</i>
 					</button>
 				</div>
 			</li>
@@ -322,7 +274,7 @@ layout: blank
 						</p>
 					</h4>
 
-					<button type="button" class="play__button play__button--primary">
+					<button type="button" class="btn btn-primary" onclick="window.open('http://www.pymnts.com/news/2015/veridu-secures-nearly-1-3m-to-keep-identities-safe/')">
 						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
@@ -335,7 +287,6 @@ layout: blank
 
 	</div>
 </div>
-
 
 <div class="page__section page__section--gray">
 	<div class="page__section__content">
@@ -356,7 +307,7 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="#" class="block-link">
+				<a href="http://www.mynewsdesk.com/uk/veridu-com/latest_media" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Images
 					</div>
@@ -371,40 +322,18 @@ layout: blank
 	</div>
 </div>
 
+<script src="javascript/page.js" charset="utf-8"></script>
+<div class="video-overlay">
+	<div class="video-overlay__content">
+		<div>
+			<div class="video-overlay__close" role="button" onclick="hideVideo()">
+				<i class="material-icons">&#xE5CD;</i> <span>close</span>
+			</div>
+			<iframe class="video video--youtube" src="//www.youtube.com/embed/aczCaHh9yJo?enablejsapi=1" id="video-1" frameborder="0" allowfullscreen ></iframe>
+			<iframe class="video video--vimeo" src="https://player.vimeo.com/video/149493523?api=1" id="video-2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			<iframe class="video video--youtube" src="//www.youtube.com/embed/II1_oO_ULNo?enablejsapi=1" id="video-3" frameborder="0" allowfullscreen ></iframe>
+		</div>
+	</div>
+</div>
 
-<script type="text/javascript">
-
-	function load () {
-
-		var vm = this;
-
-		vm.$window = $(window);
-		vm.$container = $('.page__cover-container');
-		vm.$cover = $('.page__cover');
-		vm.coverHeight = vm.$window.height() -  $('.menu').height();
-		vm.mbHelper =  $('#mobile-indicator');
-
-		vm.$window.resize(adjustHeights);
-		adjustHeights();
-
-		function adjustHeights() {
-			vm.mobile = vm.mbHelper.is(':visible');
-			var coverHeight = vm.$window.height() * 2/3;
-			// minimum height of the landing content for the contents to fit
-			if (coverHeight < 610)
-				coverHeight = 610;
-
-			if (! vm.mobile) {
-				vm.$container.css('height', coverHeight);
-				vm.$cover.css('height', coverHeight);
-			} else {
-				vm.$container.css('height', 480);
-				vm.$cover.css('height', 480);
-			}
-
-		}
-	}
-
-	document.addEventListener('DOMContentLoaded', load);
-
-</script>
+<script src="javascript/resource-centre.js" charset="utf-8"></script>

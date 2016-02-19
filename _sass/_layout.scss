@@ -269,18 +269,17 @@ body {
 		width: 100%;
         z-index: 1000;
         background: white;
-        height: em(53);
-
+        height: em(54);
+        -webkit-transition: all .45s ease-out;
+        -moz-transition: all .45s ease-out;
+        -ms-transition: all .45s ease-out;
+        -o-transition: all .45s ease-out;
+        transition: all .45s ease-out;
+        
         &.shadowed {
             box-shadow: $menu-shadow;
         }
 
-
-		-webkit-transition: all .45s ease-out;
-		-moz-transition: all .45s ease-out;
-		-ms-transition: all .45s ease-out;
-		-o-transition: all .45s ease-out;
-		transition: all .45s ease-out;
 	}
 
 	.menu {
