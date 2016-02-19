@@ -181,8 +181,8 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 							the fact they were an avid traveller
 							just like me. This little fact made
 							me a whole lot more comfortable
-							and I gave me the confidence I
-							needed to accept their booking
+							and gave me the confidence I
+							needed to accept their booking.
 						</span>
 					</q>
 				</em>
