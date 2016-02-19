@@ -1,20 +1,14 @@
 (function ($, WoW) {
 
 	// initializes
-
 	var menuToggler  = $('#menu-toggler');
 	var $window = $(window);
 	var dropdownMenu = $('.dropdown-menu');
+	var $nav = $('nav.nav');
 
-	// $('.btn')
-	// 	.mouseenter(function () {
-	// 		var $this = $(this);
-	// 		$this.height($this.height());
-	// 	});
 
 
 	// Fixed email form
-
 	// fixed contact elementsC
 	var fixedContactForm = $('#fixed-contact-form');
 	var fixedContactContainer = $('.fixed-contact__container');
@@ -83,13 +77,12 @@
 		.click(closeMenu);
 
 	function toggleMenu (e) {
-
-		if (dropdownMenu.hasClass('visible')) {
-			closeMenu();
+		if ($nav.hasClass('collapsed')) {
+			$nav.css('height', $window.height() + 150);
 		} else {
-			openMenu();
+			$nav.css('height', '3.6em');
 		}
-
+		$nav.toggleClass('collapsed');
 	}
 
 	function openMenu() {
