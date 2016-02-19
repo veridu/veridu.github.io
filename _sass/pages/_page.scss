@@ -41,6 +41,7 @@
 }
 
 .page__section {
+    @include clearfix();
 
     padding-top: em(50);
     padding-bottom: em(50);
