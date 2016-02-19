@@ -4,7 +4,7 @@ layout: blank
 class: article
 base: ../
 cover: img/articles/sharing-economy/cover.jpg
-excerpt: Is ID verification holding you back in unbanked markets? It doesn’t have to. Social media penetration in these markets is high and it provides a wealth of identification data. Build social KYC into your risk-based approach and watch your wallet grow.
+excerpt: It’s no secret that trust is everything when it comes to the sharing economy. You need to establish your platform as trustworthy, as well as providing members with the opportunity to get to know and trust their peers.
 ---
 <article>
 	<div class="article__body article__body--crypto-wallets">
@@ -259,7 +259,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 			_dcq.push(
 				[
 					"track",
-					"Opened Veridu for payments Article PDF - Download Button",
+					"Opened Veridu for the Sharing Economy Article PDF - Download Button",
 					{
 						value: 2000
 					}
@@ -267,7 +267,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 			);
 		}
 
-		window.open('resources/veridu-for-payments.pdf');
+		window.open('resources/veridu-for-the-sharing-economy.pdf');
 
 	}
 	function load () {
