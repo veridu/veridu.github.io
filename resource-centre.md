@@ -255,7 +255,7 @@ layout: blank
 					</h4>
 
 					<button type="button" class="btn btn-primary" onclick="window.open('http://techcrunch.com/2015/10/14/veridu/')">
-						<i class="material-icons">&#xE039;</i>
+						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
 			</li>
@@ -271,7 +271,7 @@ layout: blank
 					</h4>
 
 					<button type="button" class="btn btn-primary" onclick="window.open('http://ecommercenews.eu/veridu-raises-1-million-euros-for-global-identity-platform/')">
-						<i class="material-icons">&#xE039;</i>
+						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
 			</li>
