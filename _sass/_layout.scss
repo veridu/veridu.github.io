@@ -281,10 +281,27 @@ body {
             height: em(54);
 
             .menu {
-                .menu__links__md {
-                    @media (max-width: $screen-xs-max) {
-                        @include opacity(0);
+                @media (max-width: $screen-xs-max) {
+                    .menu__links__md--left {
+                        ul {
+                            li:first-of-type {
+                                margin-top: 44em !important;
+                            }
+                        }
                     }
+                    .menu__links__md {
+                        display: none;
+                    }
+                }
+            }
+        }
+        @media (max-width: $screen-xs-max) {
+            .menu__links__md {
+
+                margin-left: 1em;
+                
+                &.menu__links__md--left {
+                    margin-top: 3em !important
                 }
             }
         }
@@ -377,8 +394,8 @@ body {
         }
 
         .menu__links__md {
-            @include transitions();
-            @include opacity(1);
+            @extend .animated;
+            @extend .fadeIn;
 
             li {
                 display: block;
