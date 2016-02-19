@@ -9,9 +9,9 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 <article>
 	<div class="article__body article__body--crypto-wallets">
 
-		<div class="article__cover" style="background-image: url({{page.cover}})" >
-			<div class="article__cover__img_container" >
-				<div class="article__cover__img_overlay"  >
+		<div class="article__cover" style="background-image: url({{page.cover}})">
+			<div class="article__cover__img_container">
+				<div class="article__cover__img_overlay">
 				</div>
 			</div>
 			<div class="article__call__container">

@@ -1,5 +1,6 @@
 .page__cover-container {
     position: relative;
+    min-height: 480px;
 
     .page__cover {
         position: absolute;
@@ -9,6 +10,7 @@
         height: 100%;
 
         background-position: top left;
+        min-height: 480px;
 
         .page__cover__overlay:before,
         .page__cover__overlay:after {

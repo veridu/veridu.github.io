@@ -12,7 +12,6 @@ layout: blank
 				Learn about us, our identity verification solutions, <br> our customers and general industry trends.
 			</p>
 			<br>
-
 			<div class="btn-container">
 				<button type="button" class="btn btn-primary btn--color--white" id="introduction-button" >
 					<i class="material-icons">&#xE039;</i>
@@ -25,11 +24,9 @@ layout: blank
 					<span>Download introduction PDF</span>
 				</button>
 			</div>
-
 		</div>
 	</div>
 </div>
-
 <div class="page__section page__section--white">
 	<div class="page__section__content">
 		<h3 class="page__section__title">Sectors</h3>
