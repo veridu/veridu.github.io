@@ -1,6 +1,6 @@
 # Site settings
 title: 'Veridu'
-version: '1.9.2'
+version: '1.9.3'
 email: contact@veridu.com
 description: > # this means to ignore newlines until "baseurl:"
   Veridu brings trust to the internet with a range of identity verification tools that are fast and easy for users, and reduce fraud for merchants.
