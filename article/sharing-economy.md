@@ -188,9 +188,7 @@ excerpt: It’s no secret that trust is everything when it comes to the sharing 
 				</em>
 
 				<br>
-
-				<h5>Want to know more? Contact <a href="mailto:hello@veridu.com">hello@veridu.com</a></h5>
-
+				
 			</div>
 
 			<div class="article__tags__container">
