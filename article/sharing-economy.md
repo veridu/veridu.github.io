@@ -181,8 +181,8 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 							the fact they were an avid traveller
 							just like me. This little fact made
 							me a whole lot more comfortable
-							and I gave me the confidence I
-							needed to accept their booking
+							and gave me the confidence I
+							needed to accept their booking.
 						</span>
 					</q>
 				</em>
@@ -199,7 +199,6 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 				<div class="v-tag v-tag--orange">Social Media</div>
 				<div class="v-tag v-tag--orange">Online Services</div>
 				<div class="v-tag v-tag--orange">SMS</div>
-				<div class="v-tag v-tag--orange">2FA</div>
 				<div class="v-tag v-tag--orange">Email</div>
 				<div class="v-tag v-tag--orange">Dynamic KBA</div>
 				<div class="v-tag v-tag--orange">Documents</div>
@@ -221,13 +220,11 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 				<div class="clearfix"></div>
 
 				<div class="clearfix"><h5>Insight</h5></div>
-				<div class="v-tag v-tag--success2">Sharing Economy</div>
+				<div class="v-tag v-tag--success2">Frequent Traveller</div>
 
 				<div class="clearfix"><h5>Warnings</h5></div>
 				<div class="v-tag v-tag--warning2">Empty profile</div>
 				<div class="v-tag v-tag--warning2">Known fake</div>
-				<div class="v-tag v-tag--warning2">PEP</div>
-				<div class="v-tag v-tag--warning2">Sanctions</div>
 				<div class="v-tag v-tag--warning2">Silly name</div>
 				<div class="v-tag v-tag--warning2">Celebrity name</div>
 
