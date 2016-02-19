@@ -193,7 +193,7 @@ excerpt: It’s no secret that trust is everything when it comes to the sharing 
 
 			<div class="article__tags__container">
 				<div class="clearfix"><h5>Sectors</h5></div>
-				<span class="v-tag v-tag--blue">Payments</span>
+				<span class="v-tag v-tag--blue">Sharing Economy</span>
 
 				<div class="clearfix"><h5>Authentication</h5></div>
 				<div class="v-tag v-tag--orange">Social Media</div>
