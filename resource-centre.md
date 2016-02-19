@@ -66,6 +66,18 @@ layout: blank
 				</a>
 			</li>
 			<li>
+				<a href="https://www.veridu.com/article/sharing-economy.html" class="block-link" target="_blank">
+					<div class="block-link__text">
+						Veridu for the Sharing Economy
+					</div>
+					<div class="block-link__icon">
+						<button type="button" class="btn btn-primary btn--color--white">
+							<i class="material-icons">&#xE157;</i>
+						</button>
+					</div>
+				</a>
+			</li>
+			<li>
 				<a href="resources/veridu-for-igaming.pdf" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Veridu for iGaming
@@ -193,7 +205,7 @@ layout: blank
 				</div>
 			</li>
 			<li>
-				<div style="background-image: url(img/ian-video-thumb.png); background-position: top left;">
+				<div style="background-image: url(img/ian-video-thumb.png); background-position: top left; background-size: 160% auto; background-repeat: no-repeat;">
 					<h4>Interview with Ian Green at FinTech Connect</h4>
 
 					<button type="button" class="btn btn-primary" data-iframe-id="video-2">
@@ -295,7 +307,7 @@ layout: blank
 
 		<ul class="resource-list">
 			<li>
-				<a href="#" class="block-link">
+				<a href="resources/Veridu_logo_-_CMYK.ai" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Logos
 					</div>
@@ -313,7 +325,7 @@ layout: blank
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE2C4;</i>
+							<i class="material-icons">&#xE157;</i>
 						</button>
 					</div>
 				</a>
