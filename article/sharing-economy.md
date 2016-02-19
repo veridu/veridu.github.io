@@ -4,7 +4,7 @@ layout: blank
 class: article
 base: ../
 cover: img/articles/sharing-economy/cover.jpg
-excerpt: It’s no secret that trust is everything when it comes to the sharing economy. You need to establish your platform as trustworthy, as well as providing members with the opportunity to get to know and trust their peers.
+excerpt: Verify the identity of your users to build trust, ensure safety and increase engagement on your sharing platform. Global, low-cost Social KYC from Veridu.
 ---
 <article>
 	<div class="article__body article__body--crypto-wallets">
@@ -188,12 +188,12 @@ excerpt: It’s no secret that trust is everything when it comes to the sharing 
 				</em>
 
 				<br>
-				
+
 			</div>
 
 			<div class="article__tags__container">
 				<div class="clearfix"><h5>Sectors</h5></div>
-				<span class="v-tag v-tag--blue">Payments</span>
+				<span class="v-tag v-tag--blue">Sharing Economy</span>
 
 				<div class="clearfix"><h5>Authentication</h5></div>
 				<div class="v-tag v-tag--orange">Social Media</div>
@@ -221,7 +221,7 @@ excerpt: It’s no secret that trust is everything when it comes to the sharing 
 				<div class="clearfix"></div>
 
 				<div class="clearfix"><h5>Insight</h5></div>
-				<div class="v-tag v-tag--success2">Payments</div>
+				<div class="v-tag v-tag--success2">Sharing Economy</div>
 
 				<div class="clearfix"><h5>Warnings</h5></div>
 				<div class="v-tag v-tag--warning2">Empty profile</div>
