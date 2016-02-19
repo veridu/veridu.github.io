@@ -833,6 +833,9 @@ section.integration,
 section.contact {
 	@include clearfix();
 	padding-top: em(50);
+	textarea {
+		resize: none;
+	}
 
 	> div {
 		max-width: $container-max-width;
