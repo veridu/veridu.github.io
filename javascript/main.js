@@ -6,6 +6,10 @@
 	var dropdownMenu = $('.dropdown-menu');
 	var $nav = $('nav.nav');
 
+	$nav.find('a')
+		.click(toggleMenu);
+
+
 
 
 	// Fixed email form
@@ -77,6 +81,7 @@
 		.click(closeMenu);
 
 	function toggleMenu (e) {
+		e.stopPropagation();
 		if ($nav.hasClass('collapsed')) {
 			$nav.css('height', $window.height() + 150);
 		} else {
