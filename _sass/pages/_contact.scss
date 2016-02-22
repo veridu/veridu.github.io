@@ -123,3 +123,237 @@
 
 	}
 }
+
+
+section.veridu-list {
+
+	@include clearfix();
+	padding-top: em(50);
+	padding-left: 10%;
+	padding-right: 10%;
+
+	.item-container {
+		margin-bottom: em(60);
+		&:last-of-type {
+			margin-bottom: em(50);
+		}
+
+		h3 {
+			margin-top: 0;
+			font-size: 1.067em;
+			font-weight: 400;
+			line-height: em(22);
+			margin-bottom: em(14);
+		}
+
+		p {
+			font-weight: 300 !important;
+			font-size: 1em;
+			line-height: em(19);
+		}
+
+	}
+
+	&.md-cards {
+		min-height: em(350);
+		@include clearfix();
+		clear: both;
+		@extend .tablet__gutter;
+		position: relative;
+		z-index: 10;
+
+		.item-container  {
+
+			position: relative;
+
+			> div {
+
+				> * {
+					@extend .animated;
+				}
+
+
+				&.vis {
+					display: block;
+
+					> * {
+						-webkit-animation-name: fadeIn;
+					    animation-name: fadeIn;
+					}
+				}
+
+				&.inv {
+					display: none;
+					width: calc(100% - 17px) !important;
+					position: absolute !important;
+
+					> * {
+						-webkit-animation-name: fadeOut;
+						animation-name: fadeOut;
+					}
+				}
+
+			}
+
+		}
+	}
+
+	// for desktop
+	@media (min-width: $screen-sm-min) {
+		&.md-cards {
+			height: 15em;
+			max-width: $container-max-width;
+			margin-right: auto;
+			margin-left: auto;
+			padding-right: 0;
+			padding-left: 0;
+
+			padding-top: 0;
+			position: relative;
+			top: - em(70);
+
+			.item-container {
+				@include col(4);
+
+				> div {
+					@include animated();
+					width: calc(100% - 17px) !important;
+					position: absolute !important;
+
+					background: white;
+					padding: em(30) em(40);
+					height: em(229);
+					box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+					h3 {
+						letter-spacing: em(0.3, 25);
+					}
+				}
+
+			}
+		}
+	}
+}
+
+
+//  Contact section
+section.contact {
+	@include clearfix();
+	padding-top: em(50);
+	textarea {
+		resize: none;
+		outline: 0;
+	}
+
+	> div {
+		max-width: $container-max-width;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+	h2 {
+		margin-top: 0;
+		font-size: em(36);
+		margin-bottom: em(50, 36);
+		line-height: em(33, 36);
+	}
+
+	// desktop styles
+	@media (min-width: $screen-sm-min) {
+
+		padding-top: em(69) !important;
+		padding-left: 0;
+		padding-right: 0;
+
+		h2 {
+			margin-bottom: em(69, 36) !important;
+			line-height: em(33, 36);
+		}
+
+	}
+}
+
+section.contact {
+	@extend .tablet__gutter;
+	background-color: #f1f1f1 !important;
+
+	// desktop styles
+	@media (min-width: $screen-sm-min) {
+
+		padding-bottom: em(75) !important;
+
+		.form-horizontal {
+			position: relative;
+			display: table;
+
+			.input-container {
+				display: inline-block;
+
+				input {
+					width: em(250);
+				}
+				textarea, input.big {
+					width: em(607)
+				}
+				input.half {
+					width: em(338);
+				}
+
+				&.email {
+					input {
+						width: em(515);
+					}
+				}
+
+				margin-right: em(15);
+
+
+			}
+
+			.submit {
+				position: absolute;
+				right: 0;
+				top: 0;
+				button {
+					padding: em(28) 0;
+					width: em(77);
+				}
+			}
+		}
+
+	}
+
+}
+
+section.contact {
+	background-color: #efefef;
+
+	@include clearfix();
+	padding-bottom: em(70);
+
+	> h4 {
+		margin-bottom: em(14);
+	}
+
+	.section__description {
+		margin-bottom: em(44);
+	}
+
+	form {
+		.input-container {
+			margin-bottom: em(16);
+
+			input, textarea {
+				width: 100%;
+				border: 0;
+				background: white;
+				color: $brand-primary;
+				padding: 8px;
+			}
+			input {
+				height: em(32);
+			}
+
+		}
+	}
+}
