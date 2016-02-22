@@ -1,4 +1,4 @@
-(function ($, WoW) {
+(function ($) {
 
 	// initializes
 	var menuToggler  = $('#menu-toggler');
@@ -510,9 +510,8 @@
 	});
 
 	$('.page-loading').fadeOut();
-	(new WoW).init();
 
-})($,WOW);
+})($);
 
 // globals
 

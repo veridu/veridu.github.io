@@ -142,10 +142,9 @@
 	</div>
 </footer>
 
-<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
-<script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
-<script type="text/javascript" src="node_modules/angular-touch/angular-touch.min.js"></script>
-<script type="text/javascript" src="bower_components/wow/dist/wow.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-touch.js"></script>
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu.min.js"></script>
 <script type="text/javascript" src="https://assets.veridu.com/0.3/sdk/veridu-ui.min.js"></script>
 <script type="text/javascript" src="https://veridu.com/integration/cfg.js"></script>
@@ -155,19 +154,9 @@
 <script type="text/javascript">
 
 	$(".owl-carousel").owlCarousel({
-
-	//  navigation : true, // Show next and prev buttons
 	 slideSpeed : 300,
 	 paginationSpeed : 400,
 	 singleItem:true
-
-	 // "singleItem:true" is a shortcut for:
-	 // items : 1,
-	 // itemsDesktop : false,
-	 // itemsDesktopSmall : false,
-	 // itemsTablet: false,
-	 // itemsMobile : false
-
 	});
 
 	if (! window.VERIDU) {
@@ -201,11 +190,12 @@
 	});
 
 </script>
-{{}}
 <script type="text/javascript" src="javascript/main.js?v={{site.version}}"></script>
+
 {% if page.script != null %}
 <script type="text/javascript" src="javascript/{{page.script}}?v={{site.version}}"></script>
 {% endif %}
+
 <script type="text/javascript" src="javascript/widget.factory.js?v={{site.version}}"></script>
 
 <script type="text/javascript">
