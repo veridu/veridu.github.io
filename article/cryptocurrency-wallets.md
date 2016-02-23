@@ -78,7 +78,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 
 				<h5>Onboard more users and protect your reputation with social KYC</h5>
 				<p>Do you really need to see an official identity document for a user just to sign up to your wallet, or to carry out a low value transaction? Then answer is no.</p>
-				<p>Our social Know Your Customer (KYC) solution verifies a user’s identity in real-time. It’s quick, frictionless and mobile-friendly too, and can be used when onboarding and/or at the point of transaction.</p>
+				<p>Our social Know Your Customer (KYC) solution verifies a user’s identity in real-time. It’s quick, frictionless, and mobile friendly too, and can be used when onboarding and/or at the point of transaction.</p>
 
 				<h5>Reactivate accounts more quickly</h5>
 
