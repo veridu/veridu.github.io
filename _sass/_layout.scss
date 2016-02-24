@@ -299,7 +299,7 @@ body {
             .menu__links__md {
 
                 margin-left: 1em;
-                
+
                 &.menu__links__md--left {
                     margin-top: 3em !important
                 }
@@ -333,6 +333,11 @@ body {
             padding-bottom: 0;
             min-height: em(50);
 
+            @media (max-width: $screen-sm-max) {
+                .menu__links__md > ul > li {
+                    font-size: 0.98em;
+                }
+            }
             .menu-content {
                 margin-bottom: 0 !important;
             }

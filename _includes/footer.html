@@ -154,9 +154,9 @@
 <script type="text/javascript">
 
 	$(".owl-carousel").owlCarousel({
-	 slideSpeed : 300,
-	 paginationSpeed : 400,
-	 singleItem:true
+		slideSpeed : 300,
+		paginationSpeed : 400,
+		singleItem:true
 	});
 
 	if (! window.VERIDU) {
@@ -173,16 +173,12 @@
 		$interpolateProvider.startSymbol('({').endSymbol('})');
 	});
 
-	// making them injectable so I can work with multiple assets files without needing PHP info
 	app.factory('Veridu', function () {
 		return new Veridu(VERIDU);
 	});
-
-
 	app.factory('VeriduUI', function () {
 		return VeriduUI;
 	});
-
 	app.service('Auth', function () {
 		return {
 			username: VERIDU.username
