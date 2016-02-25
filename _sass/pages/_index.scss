@@ -144,6 +144,8 @@ section.landing-section {
 		padding-bottom: em(50);
 
 		h2,h3 {
+			padding-left: 10%;
+			padding-right: 10%;
 			margin-top: 0;
 
 			@media (max-width: $screen-xs-max)	{
@@ -224,9 +226,25 @@ section.landing-section {
 
 	section.authenticate-identity {
 		overflow: hidden;
+
+		.content {
+			position: relative;
+		}
+		video {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			max-width: 100%;
+
+		}
+
 		@media (min-width: $screen-sm-min) {
-			.content__image {
+			.content__text {
 				position: relative;
+				z-index: 10;
+
+			}
+			.content__image {
 				img {
 					max-width: none !important;
 					position: absolute;
@@ -347,6 +365,66 @@ section.landing-section {
 						}
 					}
 				}
+			}
+		}
+	}
+
+	section.accept-transactions {
+		.content__container {
+
+			.content {
+				position: relative;
+
+				@media (min-width: $screen-sm-min) {
+					.content__text {
+						@include col(4);
+						position: relative;
+						z-index: 2;
+
+					}
+					.content__image {
+						@include col(8);
+						video {
+							position: absolute;
+							top: 0;
+							left: -24%;
+							z-index: 1;
+							max-width: 111% !important;
+						}
+					}
+
+				}
+
+			}
+		}
+	}
+
+	section.do-it-your-way {
+
+		overflow: hidden;
+		.content__container {
+			.content {
+				position: relative;
+
+				@media(min-width: $screen-sm-min) {
+					.content__text {
+						@include col(4);
+						position: relative;
+						z-index: 2;
+					}
+					.content__image {
+						@include col(8);
+						video {
+							position: absolute;
+							bottom: - em(100);
+							border: 0;
+							outline: 0;
+							left: 25%;
+							max-width: 120%;
+						}
+					}
+				}
+
 			}
 		}
 	}

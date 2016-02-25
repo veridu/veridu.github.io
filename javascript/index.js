@@ -3,54 +3,55 @@
 	var page = this;
 	var landingActiveContent = $('.landing-active-content');
 
-	function hideVideo() {
-	    $('.video-overlay').removeClass('vis');
-	    ytPlayer.stopVideo();
-	}
-
-	function showVideo() {
-	    $('.video-overlay').addClass('vis');
-	    ytPlayer.playVideo();
-	}
-
 	init();
 
 	function init() {
-		// sets landing height to 100%
-		page.landingHeight = $(window).height() -  $('.menu').height();
 		page.landingSection = $('.new-landing-section');
 		page.landingItems = $('#landing-carousel .v-item');
-		page.sliderProgressCt = $('.slider-progress-container');
-		page.landingCards =  $('.md-cards');
-		page.menu = $('.menu');
 		page.$window = $(window);
 		page.mbHelper =  $('#mobile-indicator');
 		page.mobile = page.mbHelper.is(':visible');
 
 		page.$window.resize(adjustHeights);
 		page.$window.scroll(detect);
-		page.$window.keydown(keyPressed);
-		page.$videoCt = $('#onboard-video-image-container');
-		page.video = page.$videoCt.find('video')[0];
+		page.played = {};
 
 		adjustHeights();
 
+		var $onboardVideo = $('.playOnScroll.onboard-customers'),
+			$authVideoCt = $('section.authenticate-identity .content'),
+			$authVideo = $('.playOnScroll.authenticate-identity'),
+			$doitVideoCt = $('section.do-it-your-way .content'),
+			$doitVideo = $('.playOnScroll.do-it-your-way'),
+			$quickerVideoCt = $('section.accept-transactions .content'),
+			$quickerVideo = $('.playOnScroll.quicker-decisions');
+
 		detect();
 		function detect() {
-
 			var scrollBot = $window.scrollTop()  + $window.height();
-			// detects change on sections offset
-			// updates current state
-			if (scrollBot > (page.$videoCt.offset().top + 400) && ! page.played) {
-				page.video.play();
-				page.played = true;
-			}
+			playIfOnViewport();
 		}
 
+		function playIfOnViewport() {
+			// check if is on viewport then play once
+			if ($onboardVideo.visible() && ! page.played.onboard) {
+				$onboardVideo[0].play();
+				page.played.onboard = true;
+			}
 
-		function keyPressed(evt) {
-			if (evt.keyCode == 27) {
-				hideVideo();
+			if ($doitVideoCt.visible() && ! page.played.doit) {
+				$doitVideo[0].play();
+				page.played.doit = true;
+			}
+
+			if ($authVideoCt.visible() && ! page.played.auth) {
+				$authVideo[0].play();
+				page.played.auth = true;
+			}
+
+			if ($quickerVideoCt.visible() && ! page.played.quick) {
+				$quickerVideo[0].play();
+				page.played.quick = true;
 			}
 		}
 
