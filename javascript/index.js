@@ -118,3 +118,28 @@
 		}
 		angular.module('app').controller('PricingCtrl', ctrl);
 })();
+
+function fixSectionBgColor(videoId, sectionId) {
+    var video = document.getElementById(videoId);
+	var sx, sy, sw, sh;
+    var bufferCanvas = document.getElementById("bufferCanvas");
+    var displayCanvas = document.getElementById("displayCanvas");
+    var buffer = bufferCanvas.getContext("2d");
+    var display = displayCanvas.getContext("2d");
+
+    buffer.drawImage(video, 0,0, bufferCanvas.width, displayCanvas.height);
+
+    var frame = buffer.getImageData(sx, sy, sw, sh);
+    var length = frame.data.length / 4;
+
+    for (var i = 0; i < length; i++) {
+        var r = frame.data[i * 4 + 0];
+        var g = frame.data[i * 4 + 1];
+        var b = frame.data[i * 4 + 2];
+        console.warn(r,g,b);
+    }
+
+    display.putImageData(frame, 0, 0);
+
+    setTimeout(processFrame, 0);
+}
