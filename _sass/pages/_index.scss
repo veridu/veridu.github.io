@@ -90,7 +90,12 @@ section.landing-section {
 						padding-top: 25%;
 
 						@media(min-width: $screen-sm-min) {
-							padding-top: 5%;
+							padding-top: 8%;
+							p {
+								margin-top: em(20);
+								max-width: 18.8em;
+								font-size: em(19);
+							}
 						}
 					}
 				}
