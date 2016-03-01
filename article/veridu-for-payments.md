@@ -185,14 +185,12 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				<div class="v-tag v-tag--orange">Dynamic KBA</div>
 				<div class="v-tag v-tag--orange">Documents</div>
 				<div class="v-tag v-tag--orange">Contact</div>
-
 				<div class="clearfix"><h5>Integration</h5></div>
 				<div class="v-tag v-tag--grey">API</div>
 				<div class="v-tag v-tag--grey">SDK</div>
 				<div class="v-tag v-tag--grey">Widget</div>
 				<div class="v-tag v-tag--grey">Hosted</div>
 				<div class="clearfix"></div>
-
 				<div class="clearfix"><h5>Credibility scores</h5></div>
 				<div class="v-tag v-tag--success1">Time to fake</div>
 				<div class="v-tag v-tag--success1">Contact info</div>
@@ -200,10 +198,8 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				<div class="v-tag v-tag--success1">Work</div>
 				<div class="v-tag v-tag--success1">Education</div>
 				<div class="clearfix"></div>
-
 				<div class="clearfix"><h5>Insight</h5></div>
 				<div class="v-tag v-tag--success2">Payments</div>
-
 				<div class="clearfix"><h5>Warnings</h5></div>
 				<div class="v-tag v-tag--warning2">Empty profile</div>
 				<div class="v-tag v-tag--warning2">Known fake</div>
