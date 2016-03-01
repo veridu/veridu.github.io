@@ -29,7 +29,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 		</div>
 
 		<h4 class="article__excerpt visible-xs">
-			You know your customers, <br class="hidden-xs"> but do they know theirs?
+			Stop declining <br class="hidden-xs"> legitimate transactions
 		</h4>
 
 		<div class="article__content-wrapper">
