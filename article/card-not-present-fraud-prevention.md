@@ -84,7 +84,7 @@ excerpt: Stop declining legitimate transactions while keeping fraud to a minimum
 
 				<br>
 				<div class="text-center">
-					<video autoplay loop muted style="width:65%; min-width: 250px; max-width: 350px; border: 2px solid #888;">
+					<video autoplay loop controls muted style="width:65%; min-width: 250px; max-width: 350px; border: 2px solid #888;">
 						<source src="video/login1.mp4" type="video/mp4">
 						</video>
 				</div>
