@@ -61,6 +61,13 @@ section.page.article {
 
 				.article__cover__img_container {
 					position: absolute;
+					z-index: 1;
+					top: 0;
+					left: 0;
+					height: 100%;
+					// centralizes
+					width: 100%;
+					overflow: hidden;
 
 					img {
 						position: relative;
@@ -70,15 +77,6 @@ section.page.article {
 						min-width: 1900px;
 						z-index: 0;
 					}
-
-					z-index: 1;
-					top: 0;
-					left: 0;
-					height: 100%;
-
-					// centralizes
-					width: 100%;
-					overflow:hidden;
 
 					.article__cover__img_overlay {
 						position: absolute;
@@ -191,4 +189,23 @@ section.page.article {
 
 .quoted-from:before {
 	content: '\2014 \00A0';
+}
+
+
+// Card not present article
+
+.article__cover--card-not-present {
+	@media (min-width: 1700px) {
+		background-position: 0 -450px !important;
+	}
+	@media (max-width: $screen-xs-max) {
+		background-position: 67% 76% !important;
+	}
+}
+figure.fraud-graph {
+	img {
+		width: 100%;
+		max-width: 100%;
+		// border: 1px solid #ccc;
+	}
 }
