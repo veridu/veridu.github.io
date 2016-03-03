@@ -22,14 +22,14 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				</h1>
 				<h4 class="article__excerpt hidden-xs">
 					<div>
-						Stop declining <br class="hidden-xs"> legitimate transactions
+						Stop declining legitimate transactions
 					</div>
 				</h4>
 			</div>
 		</div>
 
 		<h4 class="article__excerpt visible-xs">
-			Stop declining <br class="hidden-xs"> legitimate transactions
+			Stop declining legitimate transactions
 		</h4>
 		<div class="article__content-wrapper">
 			<div class="article__content">
