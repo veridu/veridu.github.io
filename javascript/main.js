@@ -5,12 +5,26 @@
 	var $window = $(window);
 	var dropdownMenu = $('.dropdown-menu');
 	var $nav = $('nav.nav');
+	var $integrationHeader = $('header .integration-container');
+	var fixed_header = $('nav.nav');
 
 	$nav.find('a')
 		.click(toggleMenu);
 
-
-
+	// try it toggler
+	$('#try-it-toggler').click(function (evt) {
+		if (! $integrationHeader.hasClass('vis')) {
+			$(this).parent().addClass('vis');
+			$integrationHeader.removeClass('invis');
+			$integrationHeader.addClass('vis');
+			fixed_header.addClass('disabled-shadow');
+		} else {
+			$(this).parent().removeClass('vis');
+			fixed_header.removeClass('disabled-shadow');
+			$integrationHeader.removeClass('vis');
+			$integrationHeader.addClass('invis');
+		}
+	});
 
 	// Fixed email form
 	// fixed contact elementsC
@@ -219,7 +233,6 @@
 
 		// menu border
 		(function  () {
-			var fixed_header = $('nav.nav');
 
 			window.addEventListener('scroll', function () {
 				var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;

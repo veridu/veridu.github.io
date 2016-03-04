@@ -270,6 +270,42 @@ body {
         padding-bottom: em(50);
         top: 54px;
 
+        .v-profile__progress-container {
+            width: 33% !important;
+        }
+        .profile__infos {
+            @include col(4);
+            float: right;
+            height: 200px;
+
+            h2 {
+                font-weight: normal;
+                margin-top: 0;
+            }
+            p, a {
+                font-size: 15px;
+            }
+            a {
+                text-decoration: underline;
+            }
+        }
+        .more-sources {
+            @include clearfix();
+            margin-top: 2em;
+            font-size: 15px;
+        }
+        .buttons-container .btn {
+            font-size: 0.8em;
+            height: 2.5em;
+            width: 100%;
+            padding-top: 0.553em;
+
+            .spinner-wrapper {
+                font-size: 12px;
+                top: 6px;
+            }
+        }
+
         &.vis {
             display: block;
             @extend .slideInDown;
@@ -441,8 +477,29 @@ body {
                         color: white;
                         border-bottom: 2px solid $brand-primary-border-color;
 
+                        span.try-it__text {
+                            display: inline;
+                        }
+                        span.try-it__close {
+                            display: none;
+                        }
                         &:hover {
                             border-width: 4px;
+                        }
+                    }
+                    &.vis {
+                        a {
+                            color: $gray-light !important;
+                            background-color: $gray-lighter !important;
+                            border-width: 0;
+                            span.try-it__text {
+                                display: none;
+                            }
+                            span.try-it__close {
+                                display: inline;
+                            }
+                            &:before {
+                            }
                         }
                     }
                 }

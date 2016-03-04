@@ -81,7 +81,14 @@ excerpt: Stop declining legitimate transactions while keeping fraud to a minimum
 				<p>
 					With Veridu you can authenticate and challenge a user’s identity at the point of onboarding or at the point of transaction. As a user logs in to their social and online accounts we conduct a deep analysis of the information contained in these accounts in real-time.
 				</p>
-				
+				<br>
+				<div class="text-center ">
+					<a href="http://demo.veridu.com/payments" target="_blank">
+						<img class="payments-demo-img" src="img/articles/card-not-present/try-payments-demo.png" alt="try our payments demo" />
+					</a>
+				</div>
+				<br>
+
 				<h5>Like what you’ve read?</h5>
 				<p>
 					By cross referencing and corroborating the information provided by the user against their online footprint, we calculate a credibility score that our customers use to make more informed decisions about whether a transaction is actually fraudulent, or in fact, a false positive.
@@ -99,39 +106,37 @@ excerpt: Stop declining legitimate transactions while keeping fraud to a minimum
 			<div class="article__tags__container">
 				<div class="clearfix"><h5>Sector</h5></div>
 				<span class="v-tag v-tag--blue">Payments</span>
-
 				<div class="clearfix"><h5>Authentication</h5></div>
-            <div class="v-tag v-tag--orange">Social Media</div>
-            <div class="v-tag v-tag--orange">Online Services</div>
-            <div class="v-tag v-tag--orange">SMS</div>
-            <div class="v-tag v-tag--orange">2FA</div>
-            <div class="v-tag v-tag--orange">Email</div>
-            <div class="v-tag v-tag--orange">Dynamic KBA</div>
-            <div class="v-tag v-tag--orange">Documents</div>
-            <div class="v-tag v-tag--orange">Contact</div>
-            <div class="clearfix"><h5>Integration</h5></div>
-            <div class="v-tag v-tag--grey">API</div>
-            <div class="v-tag v-tag--grey">SDK</div>
-            <div class="v-tag v-tag--grey">Widget</div>
-            <div class="v-tag v-tag--grey">Hosted</div>
-            <div class="clearfix"></div>
-            <div class="clearfix"><h5>Credibility scores</h5></div>
-            <div class="v-tag v-tag--success1">Time to fake</div>
-            <div class="v-tag v-tag--success1">Contact info</div>
-            <div class="v-tag v-tag--success1">Age</div>
-            <div class="v-tag v-tag--success1">Work</div>
-            <div class="v-tag v-tag--success1">Education</div>
-            <div class="clearfix"></div>
-            <div class="clearfix"><h5>Insight</h5></div>
-            <div class="v-tag v-tag--success2">Payments</div>
-            <div class="clearfix"><h5>Warnings</h5></div>
-            <div class="v-tag v-tag--warning2">Empty profile</div>
-            <div class="v-tag v-tag--warning2">Known fake</div>
-            <div class="v-tag v-tag--warning2">PEP</div>
-            <div class="v-tag v-tag--warning2">Sanctions</div>
-            <div class="v-tag v-tag--warning2">Silly name</div>
-            <div class="v-tag v-tag--warning2">Celebrity name</div>
-
+		        <div class="v-tag v-tag--orange">Social Media</div>
+		        <div class="v-tag v-tag--orange">Online Services</div>
+		        <div class="v-tag v-tag--orange">SMS</div>
+		        <div class="v-tag v-tag--orange">2FA</div>
+		        <div class="v-tag v-tag--orange">Email</div>
+		        <div class="v-tag v-tag--orange">Dynamic KBA</div>
+		        <div class="v-tag v-tag--orange">Documents</div>
+		        <div class="v-tag v-tag--orange">Contact</div>
+		        <div class="clearfix"><h5>Integration</h5></div>
+		        <div class="v-tag v-tag--grey">API</div>
+		        <div class="v-tag v-tag--grey">SDK</div>
+		        <div class="v-tag v-tag--grey">Widget</div>
+		        <div class="v-tag v-tag--grey">Hosted</div>
+		        <div class="clearfix"></div>
+		        <div class="clearfix"><h5>Credibility scores</h5></div>
+		        <div class="v-tag v-tag--success1">Time to fake</div>
+		        <div class="v-tag v-tag--success1">Contact info</div>
+		        <div class="v-tag v-tag--success1">Age</div>
+		        <div class="v-tag v-tag--success1">Work</div>
+		        <div class="v-tag v-tag--success1">Education</div>
+		        <div class="clearfix"></div>
+		        <div class="clearfix"><h5>Insight</h5></div>
+		        <div class="v-tag v-tag--success2">Payments</div>
+		        <div class="clearfix"><h5>Warnings</h5></div>
+		        <div class="v-tag v-tag--warning2">Empty profile</div>
+		        <div class="v-tag v-tag--warning2">Known fake</div>
+		        <div class="v-tag v-tag--warning2">PEP</div>
+		        <div class="v-tag v-tag--warning2">Sanctions</div>
+		        <div class="v-tag v-tag--warning2">Silly name</div>
+		        <div class="v-tag v-tag--warning2">Celebrity name</div>
 				<div class="clearfix"></div>
 
 				<!-- <div class="download-ct">

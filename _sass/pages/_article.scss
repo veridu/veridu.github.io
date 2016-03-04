@@ -193,8 +193,10 @@ section.page.article {
 
 
 // Card not present article
-
 .article__cover--card-not-present {
+	@media (min-width: 1300px) {
+		background-position: 0 -350px !important;
+	}
 	@media (min-width: 1700px) {
 		background-position: 0 -450px !important;
 	}
@@ -202,10 +204,13 @@ section.page.article {
 		background-position: 67% 76% !important;
 	}
 }
+
 figure.fraud-graph {
 	img {
 		width: 100%;
 		max-width: 100%;
-		// border: 1px solid #ccc;
 	}
+}
+.payments-demo-img {
+	width: 100%;
 }
