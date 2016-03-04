@@ -110,37 +110,36 @@ excerpt: Stop declining legitimate transactions while keeping fraud to a minimum
 				<span class="v-tag v-tag--blue">Sharing Economy</span>
 
 				<div class="clearfix"><h5>Authentication</h5></div>
-				<div class="v-tag v-tag--orange">Social Media</div>
-				<div class="v-tag v-tag--orange">Online Services</div>
-				<div class="v-tag v-tag--orange">SMS</div>
-				<div class="v-tag v-tag--orange">Email</div>
-				<div class="v-tag v-tag--orange">Dynamic KBA</div>
-				<div class="v-tag v-tag--orange">Documents</div>
-				<div class="v-tag v-tag--orange">Contact</div>
-
-				<div class="clearfix"><h5>Integration</h5></div>
-				<div class="v-tag v-tag--grey">API</div>
-				<div class="v-tag v-tag--grey">SDK</div>
-				<div class="v-tag v-tag--grey">Widget</div>
-				<div class="v-tag v-tag--grey">Hosted</div>
-				<div class="clearfix"></div>
-
-				<div class="clearfix"><h5>Credibility scores</h5></div>
-				<div class="v-tag v-tag--success1">Time to fake</div>
-				<div class="v-tag v-tag--success1">Contact info</div>
-				<div class="v-tag v-tag--success1">Age</div>
-				<div class="v-tag v-tag--success1">Work</div>
-				<div class="v-tag v-tag--success1">Education</div>
-				<div class="clearfix"></div>
-
-				<div class="clearfix"><h5>Insight</h5></div>
-				<div class="v-tag v-tag--success2">Frequent Traveller</div>
-
-				<div class="clearfix"><h5>Warnings</h5></div>
-				<div class="v-tag v-tag--warning2">Empty profile</div>
-				<div class="v-tag v-tag--warning2">Known fake</div>
-				<div class="v-tag v-tag--warning2">Silly name</div>
-				<div class="v-tag v-tag--warning2">Celebrity name</div>
+            <div class="v-tag v-tag--orange">Social Media</div>
+            <div class="v-tag v-tag--orange">Online Services</div>
+            <div class="v-tag v-tag--orange">SMS</div>
+            <div class="v-tag v-tag--orange">2FA</div>
+            <div class="v-tag v-tag--orange">Email</div>
+            <div class="v-tag v-tag--orange">Dynamic KBA</div>
+            <div class="v-tag v-tag--orange">Documents</div>
+            <div class="v-tag v-tag--orange">Contact</div>
+            <div class="clearfix"><h5>Integration</h5></div>
+            <div class="v-tag v-tag--grey">API</div>
+            <div class="v-tag v-tag--grey">SDK</div>
+            <div class="v-tag v-tag--grey">Widget</div>
+            <div class="v-tag v-tag--grey">Hosted</div>
+            <div class="clearfix"></div>
+            <div class="clearfix"><h5>Credibility scores</h5></div>
+            <div class="v-tag v-tag--success1">Time to fake</div>
+            <div class="v-tag v-tag--success1">Contact info</div>
+            <div class="v-tag v-tag--success1">Age</div>
+            <div class="v-tag v-tag--success1">Work</div>
+            <div class="v-tag v-tag--success1">Education</div>
+            <div class="clearfix"></div>
+            <div class="clearfix"><h5>Insight</h5></div>
+            <div class="v-tag v-tag--success2">Payments</div>
+            <div class="clearfix"><h5>Warnings</h5></div>
+            <div class="v-tag v-tag--warning2">Empty profile</div>
+            <div class="v-tag v-tag--warning2">Known fake</div>
+            <div class="v-tag v-tag--warning2">PEP</div>
+            <div class="v-tag v-tag--warning2">Sanctions</div>
+            <div class="v-tag v-tag--warning2">Silly name</div>
+            <div class="v-tag v-tag--warning2">Celebrity name</div>
 
 				<div class="clearfix"></div>
 
