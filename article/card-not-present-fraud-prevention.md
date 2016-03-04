@@ -81,7 +81,6 @@ excerpt: Stop declining legitimate transactions while keeping fraud to a minimum
 				<p>
 					With Veridu you can authenticate and challenge a user’s identity at the point of onboarding or at the point of transaction. As a user logs in to their social and online accounts we conduct a deep analysis of the information contained in these accounts in real-time.
 				</p>
-				<br>
 
 				<h5>Like what you’ve read?</h5>
 				<p>
@@ -91,7 +90,6 @@ excerpt: Stop declining legitimate transactions while keeping fraud to a minimum
 				<p>
 					Run through our <a href="http://demo.veridu.com/payments">demo</a> now - it only takes a few seconds.
 					<br>
-					<a href="http://demo.veridu.com/payments">Visit demo page</a>
 				</p>
 
 				<br>
