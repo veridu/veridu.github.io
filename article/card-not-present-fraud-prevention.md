@@ -81,7 +81,7 @@ excerpt: Stop declining legitimate transactions while keeping fraud to a minimum
 				<p>
 					With Veridu you can authenticate and challenge a user’s identity at the point of onboarding or at the point of transaction. As a user logs in to their social and online accounts we conduct a deep analysis of the information contained in these accounts in real-time.
 				</p>
-
+				
 				<h5>Like what you’ve read?</h5>
 				<p>
 					By cross referencing and corroborating the information provided by the user against their online footprint, we calculate a credibility score that our customers use to make more informed decisions about whether a transaction is actually fraudulent, or in fact, a false positive.
