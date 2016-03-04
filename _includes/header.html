@@ -61,7 +61,7 @@
 	        <h4>
 				<span ng-show="! App.Widget.user">Connect to try it yourself</span>
 
-		        <div class="veridu-profile hidden" ng-class="App.Widget.user ? 'animated fadeIn' : 'hidden'">
+		        <div style="({App.Widget.user ? 'margin-top:0': ''})" class="veridu-profile hidden" ng-class="App.Widget.user ? 'animated fadeIn' : 'hidden'">
 		            <div class="v-row">
 		                <div class="profile__photo-container">
 		                    <img ng-src="({App.Widget.user.picture})" alt="user's picture" />
@@ -109,15 +109,6 @@
 
 						<div class="profile__infos">
 							<h2 class="price-heading"><small>from £</small> 0.10<small> <br> / CHECK</small></h2>
-							<br>
-							<p>
-								Start verifying people today.
-							</p>
-							<p>
-								You have 5 free checks.
-							</p>
-							<br>
-
 							<a href="javascript:;" ng-click="showHeaderIntegrations = ! showHeaderIntegrations">Improve your scores</a>
 						</div>
 
