@@ -107,7 +107,7 @@ excerpt: Stop declining legitimate transactions while keeping fraud to a minimum
 
 			<div class="article__tags__container">
 				<div class="clearfix"><h5>Sectors</h5></div>
-				<span class="v-tag v-tag--blue">Sharing Economy</span>
+				<span class="v-tag v-tag--blue">Payments</span>
 
 				<div class="clearfix"><h5>Authentication</h5></div>
             <div class="v-tag v-tag--orange">Social Media</div>
