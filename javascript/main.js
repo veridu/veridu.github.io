@@ -8,23 +8,57 @@
 	var $integrationHeader = $('header .integration-container');
 	var fixed_header = $('nav.nav');
 
+	$integrationHeader.click(stopPropagation);
+	$nav.click(stopPropagation);
+
+	function stopPropagation(evt) {
+		evt.stopPropagation();
+	}
+
+	$window.click(function () {
+		hideTryIt();
+	});
+
 	$nav.find('a')
 		.click(toggleMenu);
 
 	// try it toggler
 	$('#try-it-toggler').click(function (evt) {
+		evt.stopPropagation();
 		if (! $integrationHeader.hasClass('vis')) {
-			$(this).parent().addClass('vis');
-			$integrationHeader.removeClass('invis');
-			$integrationHeader.addClass('vis');
-			fixed_header.addClass('disabled-shadow');
+			showTryIt();
 		} else {
-			$(this).parent().removeClass('vis');
+			hideTryIt();
+		}
+	});
+	function hideTryIt() {
+		if ($('li.try-it').hasClass('vis')) {
+			$('li.try-it').removeClass('vis');
 			fixed_header.removeClass('disabled-shadow');
 			$integrationHeader.removeClass('vis');
 			$integrationHeader.addClass('invis');
 		}
-	});
+	}
+
+	function showTryIt() {
+		$('li.try-it').addClass('vis');
+		$integrationHeader.removeClass('invis');
+		$integrationHeader.addClass('vis');
+		fixed_header.addClass('disabled-shadow');
+
+		if (typeof(_dcq) !== 'undefined') {
+			_dcq.push(
+				[
+					"track",
+					"Clicked on the Try it button on the website header",
+					{
+						value: 2000
+					}
+				]
+			);
+		}
+	}
+
 
 	// Fixed email form
 	// fixed contact elementsC
