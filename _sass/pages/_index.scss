@@ -556,10 +556,11 @@ div.veridu-profile {
 
 	}
 }
+
 .progress {
 	.progress-bar {
 		position: relative;
-		width: 230px !important;
+		min-width: 200px;
 		overflow: hidden;
 		background-color: #F1F1F1 !important;
 		// border-width: 2px;
@@ -574,7 +575,7 @@ div.veridu-profile {
 			&.attributeValue {
 				position: absolute;
 				right: 0;
-				top: 0.6em;
+				top: 11px;
 				background-color: #F1F1F1;
 				padding-left: 5px;
 				padding-right: 5%;

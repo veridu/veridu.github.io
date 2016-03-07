@@ -75,6 +75,18 @@ layout: blank
 				</a>
 			</li>
 			<li>
+				<a href="https://www.veridu.com/article/card-not-present-fraud-prevention.html" class="block-link" target="_blank">
+					<div class="block-link__text">
+						Veridu for CNP fraud prevention
+					</div>
+					<div class="block-link__icon">
+						<button type="button" class="btn btn-primary btn--color--white">
+							<i class="material-icons">&#xE157;</i>
+						</button>
+					</div>
+				</a>
+			</li>
+			<li>
 				<a href="resources/veridu-for-igaming.pdf" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Veridu for iGaming

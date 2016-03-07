@@ -4,24 +4,25 @@
 
 	background: transparent;
 	box-shadow: none;
-	height: em(40);
+	height: 3.05em;
 	margin-bottom: em(14);
 
 	@media (min-width: $screen-sm-min) {
 
 		height: em(34);
+		height: 3.05em;
 
 		.progress-bar {
-			padding-top: 0;
 			p {
 				margin-top: 0 !important;
 			}
 		}
 	}
+
 	.progress-bar {
 		background-color: white;
 
-		padding: em(10);
+		padding: em(13);
 		padding-left: 5%;
 		padding-right: 5%;
 

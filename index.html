@@ -86,7 +86,7 @@ script: index.js
 <section class="integration-container">
 
     <div class="v-container">
-        <h4>Connect to try it yourself</nsh4>
+        <h4>Connect to try it yourself</h4>
         <div class="v-row">
             <div class="buttons-container">
                 <div>
@@ -752,55 +752,3 @@ script: index.js
     	</section>
     </div>
 </section>
-
-<script>
-
-var imageAddr = "img/city.jpeg";
-var downloadSize = 271891; //bytes
-
-window.onload = function() {
-    window.setTimeout(MeasureConnectionSpeed, 1);
-};
-
-function MeasureConnectionSpeed() {
-    var oProgress = document.getElementById("progress");
-    var startTime, endTime;
-    var download = new Image();
-
-    download.onload = function () {
-        endTime = (new Date()).getTime();
-        showResults();
-    }
-
-    download.onerror = function (err, msg) {
-        console.warn('error measuring connection speed');
-    }
-
-    startTime = (new Date()).getTime();
-    var cacheBuster = "?nnn=" + startTime;
-    download.src = imageAddr + cacheBuster;
-
-    function showResults() {
-        var duration = (endTime - startTime) / 1000;
-        var bitsLoaded = downloadSize * 8;
-        var speedBps = (bitsLoaded / duration).toFixed(2);
-        var speedKbps = (speedBps / 1024).toFixed(2);
-        var speedMbps = (speedKbps / 1024).toFixed(2);
-        console.warn(speedKbps);
-
-        if (speedKbps < 500) {
-            var landingSection = document.querySelector('.landing-section');
-            var videos = document.querySelectorAll('.landing-section video');
-
-            for (var i = 0; i < videos.length; ++i) {
-              landingSection.removeChild(videos[i]);
-            }
-
-        }
-
-    }
-
-}
-
-
-</script>

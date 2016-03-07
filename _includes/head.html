@@ -20,12 +20,12 @@
     <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta property="og:url" content="{{site.url}}{{  page.url }}">
     <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:image" content="{{site.url}}/img/og.jpg">
+    <meta property="og:image" content="{{site.url}}/img/veridu.png">
     <meta property="og:publisher" content="http://www.facebook.com/veridu">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@veridu">
     <meta name="twitter:title" content="{{ page.title || site.title }}">
     <meta name="twitter:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
     <meta name="twitter:image" content="img/og.jpg">
-    <meta name="keywords"  content="veridu identify verification trust real estate">
+    <meta name="keywords"  content="veridu identify verification trust real estate {{ page.keywords }}">
 </head>

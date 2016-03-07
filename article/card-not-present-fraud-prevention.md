@@ -5,6 +5,7 @@ class: article
 base: ../
 cover: img/articles/card-not-present/cover.png
 excerpt: Stop declining legitimate transactions while keeping fraud to a minimum with real-time social media identity verification.
+keywords: card not present fraud, CNP fraudsters online false positive CNP transaction fraud prevention programmes social media ID verification
 ---
 <article>
 	<div class="article__body article__body--crypto-wallets">
@@ -190,11 +191,17 @@ excerpt: Stop declining legitimate transactions while keeping fraud to a minimum
 			vm.sectorsTabs = { active : 'payments' };
 			vm.partnersTabs = { active : 'payfriendz' };
 		}
+		var mbHelper =  $('#mobile-indicator');
 
-		$cover.css('height', ($window.height() * 2/3));
+		function getMinHeight() {
+			var h = mbHelper.is(':visible') ? $window.height() * 2/3 : Math.max(($window.height() * 2/3), 600);
+			console.warn(h);
+			return h;
+		}
+		$cover.css('height', getMinHeight());
 
 		$window.resize(function() {
-			$cover.css('height', ($window.height() * 2/3));
+			$cover.css('height', getMinHeight());
 		});
 
 	}

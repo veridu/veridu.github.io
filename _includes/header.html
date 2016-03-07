@@ -54,164 +54,185 @@
 		</div> -->
 
 	</nav>
-
 	<section class="integration-container">
 
 	    <div class="v-container">
-	        <h4>
-				<span ng-show="! App.Widget.user">Connect to try it yourself</span>
+			<div ng-show="! App.Widget.user">
+				<h3>
+					<span >Try Veridu for yourself.</span>
+				</h3>
+				<p>
+					Log in to your accounts to access your own profile.
+				</p>
+			</div>
+			<div ng-show="App.Widget.user">
+				<h4>
+					<span >Your Veridu profile</span>
+				</h4>
+				<br>
+			</div>
+	        <div style="({App.Widget.user ? 'margin-top:0': ''})" class="veridu-profile hidden" ng-class="App.Widget.user ? 'animated fadeIn' : 'hidden'">
+	            <div class="v-row">
+	                <div class="profile__photo-container">
+	                    <img ng-src="({App.Widget.user.picture})" alt="user's picture" />
+	                </div>
 
-		        <div style="({App.Widget.user ? 'margin-top:0': ''})" class="veridu-profile hidden" ng-class="App.Widget.user ? 'animated fadeIn' : 'hidden'">
-		            <div class="v-row">
-		                <div class="profile__photo-container">
-		                    <img ng-src="({App.Widget.user.picture})" alt="user's picture" />
-		                </div>
+	                <div class="v-profile__progress-container">
+	                    <div>
+	                        <div class="progress">
+	                          <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+	                            <p>
+	                                +<span ng-bind="App.Widget.hoursToFake | number : 0"></span>   hours to fake
+	                                <span class="attributeValue"></span>
+	                            </p>
+	                          </div>
+	                        </div>
 
-		                <div class="v-profile__progress-container">
-		                    <div>
-		                        <div class="progress">
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
-		                            <p>
-		                                +<span ng-bind="App.Widget.hoursToFake | number : 0"></span>   hours to fake
-		                                <span class="attributeValue"></span>
-		                            </p>
-		                          </div>
-		                        </div>
+	                        <div class="progress" >
+	                          <div class="progress-bar" role="progressbar" aria-valuenow="({App.Widget.user.name.score * 100 | number: 0})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.Widget.user.name.score * 100 | number: 0})%;">
+	                            <p>
+	                                <span ng-bind="App.Widget.user.name.value"></span>
+	                                <span class="attributeValue">({App.Widget.user.name.score * 100 | number: 0})%</span>
+	                            </p>
+	                          </div>
+	                        </div>
 
-		                        <div class="progress" >
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="({App.Widget.user.name.score * 100 | number: 0})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.Widget.user.name.score * 100 | number: 0})%;">
-		                            <p>
-		                                <span ng-bind="App.Widget.user.name.value"></span>
-		                                <span class="attributeValue">({App.Widget.user.name.score * 100 | number: 0})%</span>
-		                            </p>
-		                          </div>
-		                        </div>
+	                        <div class="progress" >
+	                          <div class="progress-bar" role="progressbar" aria-valuenow="({App.Widget.user.gender.score * 100 | number: 0})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.Widget.user.gender.score * 100 | number: 0})%;">
+	                            <p>
+									<span ng-bind="App.Widget.user.gender.value"></span>
+	                                <span class="attributeValue">({App.Widget.user.gender.score * 100 | number: 0})%</span>
+	                            </p>
+	                          </div>
+	                        </div>
 
-		                        <div class="progress" >
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="({App.Widget.user.gender.score * 100 | number: 0})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.Widget.user.gender.score * 100 | number: 0})%;">
-		                            <p>
-										<span ng-bind="App.Widget.user.gender.value"></span>
-		                                <span class="attributeValue">({App.Widget.user.gender.score * 100 | number: 0})%</span>
-		                            </p>
-		                          </div>
-		                        </div>
+	                        <div class="progress" >
+	                          <div class="progress-bar" role="progressbar" aria-valuenow="({App.Widget.user.email.score * 100 | number: 0})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.Widget.user.email.score * 100 | number: 0})%;">
+	                            <p>
+									<span ng-bind="App.Widget.user.email.value"></span>
+	                                <span class="attributeValue">({App.Widget.user.email.score * 100 | number: 0})%</span>
+	                            </p>
+	                          </div>
+	                        </div>
+	                    </div>
+	                </div>
 
-		                        <div class="progress" >
-		                          <div class="progress-bar" role="progressbar" aria-valuenow="({App.Widget.user.email.score * 100 | number: 0})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.Widget.user.email.score * 100 | number: 0})%;">
-		                            <p>
-										<span ng-bind="App.Widget.user.email.value"></span>
-		                                <span class="attributeValue">({App.Widget.user.email.score * 100 | number: 0})%</span>
-		                            </p>
-		                          </div>
-		                        </div>
-		                    </div>
-		                </div>
+					<div class="profile__infos">
+						<h2 class="price-heading"><small>from £</small> 0.10<small> <br> / CHECK</small></h2>
+						<br>
+						<p>
+							Like what you see?
+							<br>
+							<a href="./#contact-us" id="contact-us-link" onclick="scrollToHash('contact-us-wrapper', 500, 50); hideTryIt();">Contact us</a> to learn more.
 
-						<div class="profile__infos">
-							<h2 class="price-heading"><small>from £</small> 0.10<small> <br> / CHECK</small></h2>
-							<a href="javascript:;" ng-click="showHeaderIntegrations = ! showHeaderIntegrations">Improve your scores</a>
-						</div>
-
-		            </div>
-		        </div>
-
-				<div class="more-sources" ng-show="App.Widget.user && showHeaderIntegrations">
-					Connect more sources to improve your scores
-				</div>
-
-				<div class="v-row" ng-show="! App.Widget.user || showHeaderIntegrations">
-					<div class="buttons-container">
-						<div>
-							<button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')" ng-class="{ active : App.user.auth.facebook || App.loading == 'facebook', loading: App.Widget.state == 'SCRAPING' && App.loading == 'facebook'}">
-								<span>Facebook</span>
-								<div class="spinner">
-									<div class="spinner-wrapper">
-										<div class="rotator">
-											<div class="inner-spin"></div>
-											<div class="inner-spin"></div>
-										</div>
-									</div>
-								</div>
-							</button>
-						</div>
-
-						<div>
-							<button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')" ng-class="{ active : App.user.auth.linkedin || App.loading == 'linkedin' , loading: App.Widget.state == 'SCRAPING' && App.loading == 'linkedin'}">
-								<span>LinkedIn</span>
-								<div class="spinner">
-									<div class="spinner-wrapper">
-										<div class="rotator">
-											<div class="inner-spin"></div>
-											<div class="inner-spin"></div>
-										</div>
-									</div>
-								</div>
-							</button>
-						</div>
-
-
-						<div>
-							<button class="btn btn-primary btn-lg" ng-click="App.auth('google')" ng-class="{ active : App.user.auth.google || App.loading == 'google', loading: App.Widget.state == 'SCRAPING' && App.loading == 'google'}">
-
-								<span>Google</span>
-								<div class="spinner">
-									<div class="spinner-wrapper">
-										<div class="rotator">
-											<div class="inner-spin"></div>
-											<div class="inner-spin"></div>
-										</div>
-									</div>
-								</div>
-							</button>
-						</div>
-
-						<div>
-							<button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter || App.loading == 'twitter', loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
-								<span>Twitter</span>
-								<div class="spinner">
-									<div class="spinner-wrapper">
-										<div class="rotator">
-											<div class="inner-spin"></div>
-											<div class="inner-spin"></div>
-										</div>
-									</div>
-								</div>
-							</button>
-						</div>
-
-						<div class="hidden-xs" >
-							<button class="btn btn-primary btn-lg" ng-click="App.auth('amazon')" ng-class="{ active : App.user.auth.amazon || App.loading == 'amazon', loading: App.Widget.state == 'SCRAPING' && App.loading == 'amazon'}">
-								<span>Amazon</span>
-								<div class="spinner">
-									<div class="spinner-wrapper">
-										<div class="rotator">
-											<div class="inner-spin"></div>
-											<div class="inner-spin"></div>
-										</div>
-									</div>
-								</div>
-							</button>
-						</div>
-
-						<div class="hidden-xs">
-							<button class="btn btn-primary btn-lg" ng-click="App.auth('paypal')" ng-class="{ active : App.user.auth.paypal || App.loading == 'paypal', loading: App.Widget.state == 'SCRAPING' && App.loading == 'paypal'}">
-								<span>Paypal</span>
-								<div class="spinner">
-									<div class="spinner-wrapper">
-										<div class="rotator">
-											<div class="inner-spin"></div>
-											<div class="inner-spin"></div>
-										</div>
-									</div>
-								</div>
-							</button>
-						</div>
-
+						</p>
+						<a class="improve-scores" href="javascript:;" ng-click="showHeaderIntegrations = ! showHeaderIntegrations">
+							Improve your scores
+							<small class="text-muted" ng-show="showHeaderIntegrations">&nbsp;(hide)</small>
+						</a>
 					</div>
-				</div>
 
-				<div class="terms-of-use clearfix" ng-show="! App.Widget.user" >By using this service you accept our <a class="white-link" href="https://veridu.com/wiki/Terms_%26_Conditions" target="_blank" >terms of use</a></div>
-			</h4>
+	            </div>
+	        </div>
+
+			<div class="more-sources" ng-show="App.Widget.user && showHeaderIntegrations">
+				Connect more sources to improve your scores
+			</div>
+
+			<div class="v-row" ng-show="! App.Widget.user || showHeaderIntegrations">
+				<div class="buttons-container">
+					<div>
+						<button class="btn btn-primary btn-lg" ng-click="App.auth('facebook')" ng-class="{ active : App.user.auth.facebook || App.loading == 'facebook', loading: App.Widget.state == 'SCRAPING' && App.loading == 'facebook'}">
+							<span>Facebook</span>
+							<div class="spinner">
+								<div class="spinner-wrapper">
+									<div class="rotator">
+										<div class="inner-spin"></div>
+										<div class="inner-spin"></div>
+									</div>
+								</div>
+							</div>
+						</button>
+					</div>
+
+					<div>
+						<button class="btn btn-primary btn-lg" ng-click="App.auth('linkedin')" ng-class="{ active : App.user.auth.linkedin || App.loading == 'linkedin' , loading: App.Widget.state == 'SCRAPING' && App.loading == 'linkedin'}">
+							<span>LinkedIn</span>
+							<div class="spinner">
+								<div class="spinner-wrapper">
+									<div class="rotator">
+										<div class="inner-spin"></div>
+										<div class="inner-spin"></div>
+									</div>
+								</div>
+							</div>
+						</button>
+					</div>
+
+
+					<div>
+						<button class="btn btn-primary btn-lg" ng-click="App.auth('google')" ng-class="{ active : App.user.auth.google || App.loading == 'google', loading: App.Widget.state == 'SCRAPING' && App.loading == 'google'}">
+
+							<span>Google</span>
+							<div class="spinner">
+								<div class="spinner-wrapper">
+									<div class="rotator">
+										<div class="inner-spin"></div>
+										<div class="inner-spin"></div>
+									</div>
+								</div>
+							</div>
+						</button>
+					</div>
+
+					<div>
+						<button class="btn btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter || App.loading == 'twitter', loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
+							<span>Twitter</span>
+							<div class="spinner">
+								<div class="spinner-wrapper">
+									<div class="rotator">
+										<div class="inner-spin"></div>
+										<div class="inner-spin"></div>
+									</div>
+								</div>
+							</div>
+						</button>
+					</div>
+
+					<div class="hidden-xs" >
+						<button class="btn btn-primary btn-lg" ng-click="App.auth('amazon')" ng-class="{ active : App.user.auth.amazon || App.loading == 'amazon', loading: App.Widget.state == 'SCRAPING' && App.loading == 'amazon'}">
+							<span>Amazon</span>
+							<div class="spinner">
+								<div class="spinner-wrapper">
+									<div class="rotator">
+										<div class="inner-spin"></div>
+										<div class="inner-spin"></div>
+									</div>
+								</div>
+							</div>
+						</button>
+					</div>
+
+					<div class="hidden-xs">
+						<button class="btn btn-primary btn-lg" ng-click="App.auth('paypal')" ng-class="{ active : App.user.auth.paypal || App.loading == 'paypal', loading: App.Widget.state == 'SCRAPING' && App.loading == 'paypal'}">
+							<span>Paypal</span>
+							<div class="spinner">
+								<div class="spinner-wrapper">
+									<div class="rotator">
+										<div class="inner-spin"></div>
+										<div class="inner-spin"></div>
+									</div>
+								</div>
+							</div>
+						</button>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="terms-of-use clearfix" ng-show="! App.Widget.user" >
+				By using this service you accept our <a class="white-link" href="https://veridu.com/wiki/Terms_%26_Conditions" target="_blank" >terms of use</a>
+			</div>
 
 	    </div>
 	    <!-- <a ng-hide="showHiddenIntegrations" class="black-link" href="javascript:;" ng-click="showHiddenIntegrations = true" ><span class="visible-xs"></span> MORE OPTIONS</a> -->

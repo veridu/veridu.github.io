@@ -262,13 +262,17 @@ body {
         box-shadow: $menu-shadow;
         display: none;
         position: fixed;
-        // z-index: 11000;
         width: 100%;
         height: auto;
         background-color: white;
-        padding-top: em(50);
-        padding-bottom: em(50);
+        padding-top: em(20);
+        padding-bottom: em(30) !important;
+
         top: 54px;
+        h3 {
+            font-weight: normal;
+            margin-top: 0;
+        }
 
         .v-profile__progress-container {
             width: 33% !important;
@@ -287,8 +291,10 @@ body {
             }
             a {
                 text-decoration: underline;
+            }
+            a.improve-scores {
                 display: block;
-                margin-top: 123px;
+                margin-top: 45px;
             }
         }
         .more-sources {
@@ -296,16 +302,22 @@ body {
             margin-top: 2em;
             font-size: 15px;
         }
-        .buttons-container .btn {
-            font-size: 0.8em;
-            height: 2.5em;
-            width: 100%;
-            padding-top: 0.553em;
+        .buttons-container {
+            margin-bottom: 0 !important;
+            margin-top: 0 !important;
 
-            .spinner-wrapper {
-                font-size: 12px;
-                top: 6px;
+            .btn {
+                font-size: 1em;
+                height: 2.5em;
+                width: 100%;
+                padding-top: 0.553em;
+
+                .spinner-wrapper {
+                    font-size: 12px;
+                    top: 6px;
+                }
             }
+
         }
 
         &.vis {
@@ -316,7 +328,6 @@ body {
             display: block;
             @extend .slideOutUp;
         }
-
         @media (max-width: $screen-xs-max) {
             display: none !important
         }
