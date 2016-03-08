@@ -13,13 +13,13 @@ layout: blank
 			</p>
 			<br>
 			<div class="btn-container">
-				<button type="button" class="btn btn-primary btn--color--white" id="introduction-button" >
+				<button type="button" class="btn btn-primary btn--color--white" id="introduction-button" onclick="pushToDrip('Resource Centre: Clicked to watch introduction video')" >
 					<i class="material-icons">&#xE039;</i>
 					<span>Watch introduction video</span>
 				</button>
 			</div>
 			<div class="btn-container">
-				<button type="button" class="btn btn-primary btn--color--white" onclick="window.open('resources/general-introduction.pdf')">
+				<button type="button" class="btn btn-primary btn--color--white" onclick="window.open('resources/general-introduction.pdf'); pushToDrip('Resource Centre: Downloaded - Introduction PDF')">
 					<i class="material-icons">&#xE2C4;</i>
 					<span>Download introduction PDF</span>
 				</button>
@@ -39,7 +39,7 @@ layout: blank
 
 		<ul class="resource-list">
 			<li>
-				<a href="article/veridu-for-payments.html" class="block-link" target="_blank">
+				<a href="article/veridu-for-payments.html" class="block-link" target="_blank" >
 					<div class="block-link__text">
 						Veridu for Payments
 					</div>
@@ -51,7 +51,7 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="https://www.veridu.com/article/cryptocurrency-wallets" class="block-link" target="_blank">
+				<a href="https://www.veridu.com/article/cryptocurrency-wallets.html" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Veridu for Crypto Currency
 					</div>
@@ -87,7 +87,7 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="resources/veridu-for-igaming.pdf" class="block-link" target="_blank">
+				<a href="resources/veridu-for-igaming.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Veridu for iGaming PDF')" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Veridu for iGaming
 					</div>
@@ -114,7 +114,7 @@ layout: blank
 		<ul class="resource-list">
 
 			<li>
-				<a href="resources/use-case-underthedoormat.pdf" class="block-link" target="_blank">
+				<a href="resources/use-case-underthedoormat.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Use Case Under the Doormat PDF')" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Under The Doormat
 					</div>
@@ -137,7 +137,7 @@ layout: blank
 
 		<ul class="resource-list">
 			<li>
-				<a href="https://veridu.com/tryit/sso/" class="block-link" target="_blank">
+				<a href="https://veridu.com/tryit/sso/" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on SSO Demo link')">
 					<div class="block-link__text">
 						Single-Sign-on
 					</div>
@@ -149,7 +149,7 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="https://veridu.com/tryit/challenge/" class="block-link" target="_blank">
+				<a href="https://veridu.com/tryit/challenge/" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on Challenge Demo link')">
 					<div class="block-link__text">
 						Challenge
 					</div>
@@ -161,7 +161,7 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="https://veridu.com/gateway/1.0/hrdemo" class="block-link" target="_blank">
+				<a href="https://veridu.com/gateway/1.0/hrdemo" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on Human Resources Demo link')">
 					<div class="block-link__text">
 						Human Resources
 					</div>
@@ -172,20 +172,8 @@ layout: blank
 					</div>
 				</a>
 			</li>
-			<!-- <li>
-				<a href="#" class="block-link">
-					<div class="block-link__text">
-						Carsharing
-					</div>
-					<div class="block-link__icon">
-						<button type="button" class="btn btn-primary btn--color--white">
-						<i class="material-icons">&#xE157;</i>
-						</button>
-					</div>
-				</a>
-			</li> -->
 			<li>
-				<a href="http://demo.veridu.com/payments/" class="block-link" target="_blank">
+				<a href="http://demo.veridu.com/payments/" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on Payments Single-source Demo link')">
 					<div class="block-link__text">
 						Payment Verification
 					</div>
@@ -263,7 +251,7 @@ layout: blank
 						</p>
 					</h4>
 
-					<button type="button" class="btn btn-primary" onclick="window.open('http://techcrunch.com/2015/10/14/veridu/')">
+					<button type="button" class="btn btn-primary" onclick="window.open('http://techcrunch.com/2015/10/14/veridu/'); pushToDrip('Resource Centre: News - Clicked on Identity Verification Startup Veridu Raises £800,000 Seed')">
 						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
@@ -279,7 +267,7 @@ layout: blank
 						</p>
 					</h4>
 
-					<button type="button" class="btn btn-primary" onclick="window.open('http://ecommercenews.eu/veridu-raises-1-million-euros-for-global-identity-platform/')">
+					<button type="button" class="btn btn-primary" onclick="window.open('http://ecommercenews.eu/veridu-raises-1-million-euros-for-global-identity-platform/'); pushToDrip('Resource Centre: News - Clicked on Veridu raises 1 million euros for global identity platform')">
 						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
@@ -295,7 +283,7 @@ layout: blank
 						</p>
 					</h4>
 
-					<button type="button" class="btn btn-primary" onclick="window.open('http://www.pymnts.com/news/2015/veridu-secures-nearly-1-3m-to-keep-identities-safe/')">
+					<button type="button" class="btn btn-primary" onclick="window.open('http://www.pymnts.com/news/2015/veridu-secures-nearly-1-3m-to-keep-identities-safe/'); pushToDrip('Resource Centre: News - Clicked on Veridu Secures Nearly $1.3M To Keep Identities Safe')">
 						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
@@ -303,7 +291,7 @@ layout: blank
 
 		</ul>
 		<p class="text-right">
-			<a class="black-link" href="http://www.mynewsdesk.com/uk/veridu-com" target="_blank">See more news</a>
+			<a class="black-link" href="http://www.mynewsdesk.com/uk/veridu-com" target="_blank" onclick="pushToDrip('Resource Centre: News - Clicked on See more news')">See more news</a>
 		</p>
 
 	</div>

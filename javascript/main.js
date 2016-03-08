@@ -13,22 +13,16 @@ window.getDocHeight =  function (){
 
 window.scrollToHash = function (hash, speed, offset) {
 
-	var offset = offset || 0;
+	var offset = offset || 53;
 	var speed = speed || 500;
 	var el = document.getElementById(hash);
 
 	if (el) {
-
 		$('html, body').animate({
 			scrollTop: ($(el).offset().top - offset)
 		}, speed);
 	}
 
-}
-
-if (window.location.hash) {
-	console.warn('oie');
-	window.scrollToHash(window.location.hash.replace('#','') + '-wrapper');
 }
 
 // useful globals
@@ -290,3 +284,12 @@ window.adjustHeights = function($el) {
 	$('.page-loading').fadeOut();
 
 })($);
+
+function load() {
+	window.removeEventListener('load', load, false);
+
+	if (window.location.hash) {
+		window.scrollToHash(window.location.hash.replace('#','') + '-wrapper');
+	}
+}
+window.addEventListener('load', load, false);

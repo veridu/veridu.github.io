@@ -1,5 +1,3 @@
-
-
 (function() {
 	'use strict';
 
@@ -27,6 +25,7 @@
 		});
 
 		function showVideo(id) {
+			pushToDrip('Clicked to watch video on Resource Centre #' + id);
 			$('.video-overlay').fadeIn();
 			$('.video-overlay').css('display', 'table');
 			$('#' + id).show();
@@ -84,20 +83,8 @@ function onYouTubePlayerAPIReady() {
 	}
 }
 
-
 function onPlayerReady(event) {
-  // var playButton = document.getElementById("play-button");
-  // playButton.addEventListener("click", function() {
-    // player.playVideo();
-  // });
-  //
-  // var pauseButton = document.getElementById("pause-button");
-  // pauseButton.addEventListener("click", function() {
-  //   player.pauseVideo();
-  // });
-
 }
-
 
 // Vimeo API library
 var Froogaloop=function(){function e(a){return new e.fn.init(a)}function g(a,c,b){if(!b.contentWindow.postMessage)return!1;a=JSON.stringify({method:a,value:c});b.contentWindow.postMessage(a,h)}function l(a){var c,b;try{c=JSON.parse(a.data),b=c.event||c.method}catch(e){}"ready"!=b||k||(k=!0);if(!/^https?:\/\/player.vimeo.com/.test(a.origin))return!1;"*"===h&&(h=a.origin);a=c.value;var m=c.data,f=""===f?null:c.player_id;c=f?d[f][b]:d[b];b=[];if(!c)return!1;void 0!==a&&b.push(a);m&&b.push(m);f&&b.push(f);
