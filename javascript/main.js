@@ -27,17 +27,18 @@ window.scrollToHash = function (hash, speed, offset) {
 }
 
 if (window.location.hash) {
+	console.warn('oie');
 	window.scrollToHash(window.location.hash.replace('#','') + '-wrapper');
 }
 
 // useful globals
-window.pushToDrip = function (event, type) {
+window.pushToDrip = function (eventLabel, type) {
 	type = type || 'track';
 	if (typeof(_dcq) !== 'undefined') {
 		_dcq.push(
 			[
 				"track",
-				"Clicked on the Try it button on the website header",
+				eventLabel,
 				{
 					value: 2000
 				}
