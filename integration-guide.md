@@ -18,6 +18,7 @@ class: pricing
 		<ol>
 			<li>Create a <a href="https://dashboard.veridu.com">Veridu Dashboard</a> account</li>
 			<li>Generate an API Key on the Dashboard</li>
+			<li>Use API_VERSION: <strong>rafael</strong></li>
 		</ol>
 
 		<br>
@@ -75,10 +76,12 @@ POST https://api.veridu.com/<strong>rafael</strong>/session/write
 				<div >
 					<code><strong>_system</strong></code> parameter  on <kbd>window.open</kbd> tells your App to use the default browser of your phone, this will allow us to access it <a href="https://issues.apache.org/jira/browse/CB-4897" target="_blank">more easily</a>.
 				</div>
+				<br>
+				<br>
 			</li>
 			<li>
 				<div>
-					<strong>Start querying the endpoints:</strong> <em>(a worker will be gathering the authenticated user afer the login)</em>
+					<strong>Start querying the endpoints:</strong> <em>(a worker will be gathering the authenticated user data afer the login)</em>
 				</div>
 				<p>
 					If you want to see <em>one</em> implementation of it, check the <a href="https://github.com/veridu/veridu-angularjs">AngularJS SDK</a> and take a look at the code examples.
@@ -87,15 +90,25 @@ POST https://api.veridu.com/<strong>rafael</strong>/session/write
 					Some endpoints:
 					<br>
 					<ul>
-						<li><a href="https://veridu.com/wiki/Profile_Resource">Profile</a></li>
-						<li><a href="https://veridu.com/wiki/User_Resource">User</a></li>
+						<li><a href="https://veridu.com/wiki/Profile_Resource">Profile Resource</a></li>
+						<li><a href="https://veridu.com/wiki/User_Resource">User Resource</a></li>
 					</ul>
 					<br>
 					<a href="https://veridu.com/wiki/Category:Endpoint">https://veridu.com/wiki/Category:Endpoint</a>
 				</p>
+				<br>
+				<br>
+				<p>
+					Tip: <br>
+					<ul>
+						<li>Use polling to the Profile or User Resource to emulate realtime updates</li>
+					</ul>
+
+				</p>
 			</li>
 		</ol>
 
+		<br>
 		<br>
 		Any questions I'll be glad to answer! <br>
 		Find me at rafael@veridu.com
