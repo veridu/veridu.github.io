@@ -75,15 +75,32 @@ POST https://api.veridu.com/<strong>rafael</strong>/session/write
 				<div >
 					<code><strong>_system</strong></code> parameter  on <kbd>window.open</kbd> tells your App to use the default browser of your phone, this will allow us to access it <a href="https://issues.apache.org/jira/browse/CB-4897" target="_blank">more easily</a>.
 				</div>
-
-				<br>
-
-				Any questions I'll be glad to answer! <br>
-				Find me here rafael@veridu.com
-				<br>
-
+			</li>
+			<li>
+				<div>
+					<strong>Start querying the endpoints:</strong> <em>(a worker will be gathering the authenticated user afer the login)</em>
+				</div>
+				<p>
+					If you want to see <em>one</em> implementation of it, check the <a href="https://github.com/veridu/veridu-angularjs">AngularJS SDK</a> and take a look at the code examples.
+					<br>
+					<br>
+					Some endpoints:
+					<br>
+					<ul>
+						<li><a href="https://veridu.com/wiki/Profile_Resource">Profile</a></li>
+						<li><a href="https://veridu.com/wiki/User_Resource">User</a></li>
+					</ul>
+					<br>
+					<a href="https://veridu.com/wiki/Category:Endpoint">https://veridu.com/wiki/Category:Endpoint</a>
+				</p>
 			</li>
 		</ol>
+
+		<br>
+		Any questions I'll be glad to answer! <br>
+		Find me at rafael@veridu.com
+		<br>
+
 	</div>
 
 </div>
