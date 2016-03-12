@@ -12,13 +12,16 @@ class: pricing
 		<p>
 			Follow this guide to make the integration happen in minutes on any platform, if you are using <a href="ionicframework.com/">Ionic</a>, jump the steps by using our new <a href="https://github.com/veridu/veridu-angularjs" target="_blank">AngularJS SDK</a> and reading its documentation.
 		</p>
+		<p>
+			Ionic users, also check out the <a href="https://github.com/melloc01/veridu-ionic-example" target="_blank">sample app</a>.
+		</p>
 
 		<br>
 		<h4>Before you code:</h4>
 		<ol>
 			<li>Create a <a href="https://dashboard.veridu.com">Veridu Dashboard</a> account</li>
 			<li>Generate an API Key on the Dashboard</li>
-			<li>For now, we'll using API_KEY = 'demo'</li>
+			<li>For now, we'll be using API_KEY = <strong>demo</strong></li>
 			<li>Use API_VERSION: <strong>rafael</strong></li>
 		</ol>
 

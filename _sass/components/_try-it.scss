@@ -1,0 +1,190 @@
+// Try it
+div.try-it {
+
+    .try-it__call {
+        h3 {
+            margin-top: 0;
+        }
+    }
+
+    .try-it__buttons--hidden {
+        display: none;
+    }
+    .buttons-container {
+        @extend .clearfix;
+        margin-top: em(20);
+        margin-bottom: em(20);
+
+        .btn--loading {
+            .icn {
+                margin-left: 0;
+                margin-right: 0;
+                position: relative;
+                top: 3px;
+
+                &.icn-twitter {
+                    top: 2px;
+                }
+                &.icn-googleplus,
+                &.icn-twitter {
+                    margin-right: 3px;
+                }
+
+                &.icn-googleplus,
+                &.icn-linkedin {
+                    top: 1px;
+                }
+            }
+        }
+
+        > div {
+			@include col(6);
+			height: em(42);
+			margin-top: 8.5px;
+			margin-bottom: 8.5px;
+
+			.btn {
+				font-size: 1em;
+				height: em(42);
+				width: 100%;
+				padding-top: em(10);
+				padding-bottom: em(10);
+
+			}
+		}
+		@media (min-width: $screen-sm-min) {
+			> div {
+				@include col(2);
+			}
+		}
+		@media (max-width: $screen-xs-max) {
+			> div {
+				height: em(62);
+			}
+
+			> div {
+				.btn {
+					height: em(62);
+					padding-top: em(20);
+					padding-bottom: em(20);
+					.spinner {
+						top: -20px;
+					}
+				}
+			}
+		}
+    }
+
+    div.veridu-profile {
+        .veridu-profile__photo-container {
+            @include col(3);
+
+            height: 250px;
+            > div {
+                height: 250px;
+                background-size: 100% auto;
+                background-position: center center;
+                background-repeat: no-repeat;
+
+            }
+        }
+        .veridu-profile__progress-container {
+            @include col(4);
+
+            h1 {
+                font-weight: 400;
+                display: inline-block;
+            }
+            span.hours-to-fake {
+                font-weight: 600;
+                margin-left: .2em;
+            }
+
+            .progress {
+                margin-top: 2em;
+                margin-bottom: 2em;
+            }
+        }
+    }
+
+    .veridu-profile__progress-container__actions {
+        > span {
+            font-size: 1em;
+            margin-right: 1em;
+            cursor: pointer;
+
+            > i {
+                font-size: 1.4em;
+                margin-right: em(5);
+            }
+            > span {
+                font-size: 1.1em;
+                position: relative;
+                top: - em(4);
+            }
+        }
+    }
+    .veridu-profile__info-container {
+        @include col(3);
+        margin-left: 16.6666666%;
+
+        .veridu-profile__info-container__price-label {
+            font-weight: 600;
+            margin-right: 0.5em;
+        }
+        h1.veridu-profile__info-container__price {
+            display: inline-block;
+            font-weight: 400;
+            span {
+                font-size: 15px;
+                font-weight: 600;
+            }
+        }
+        p {
+            margin-bottom: 2em;
+        }
+    }
+    .try-it__create-account {
+        display: none;
+        margin-top: 2em;
+        
+        $steps-width: 70px;
+
+        .try-it__create-account__steps {
+            width: $steps-width;
+            float: left;
+            background-image: url(../img/1px-gray.jpg);
+            background-position: center center;
+            background-repeat: repeat-y;
+            height: 500px;
+            .try-it__create-account__steps__step {
+                display: block;
+                div {
+                    position: relative;
+                    text-align: center;
+                    top: 10px;
+
+                    > span {
+                        font-size: 2em;
+                        letter-spacing: -3px;
+                    }
+                }
+                &.try-it__create-account__steps__step--1 {
+                    border: 1px solid black;
+                    background: white;
+                    width: 100%;
+                    border-radius: 100%;
+                    height: $steps-width;
+                }
+                &.try-it__create-account__steps__step--2 {
+                    display: none;
+                }
+            }
+
+        }
+
+        .try-it__create-account__content {
+            @include col(11);
+        }
+    }
+}
