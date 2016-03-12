@@ -14,9 +14,6 @@ class: pricing
 		</p>
 
 		<br>
-
-		<h2>Steps:</h2>
-		<br>
 		<h4>Before you code:</h4>
 		<ol>
 			<li>Create a <a href="https://dashboard.veridu.com">Veridu Dashboard</a> account</li>
@@ -24,8 +21,10 @@ class: pricing
 		</ol>
 
 		<br>
+		<br>
 
-		<h4>Let's <kbd>code</kbd>:</h4>
+		<h2>Steps:</h2>
+		<Br>
 		<ol>
 			<li>
 				<strong>Generate a session/user to start querying the API </strong><small>. <em>(Not an authenticated user. Just a Veridu user)</em></small>
