@@ -62,11 +62,11 @@ POST https://api.veridu.com/<strong>rafael</strong>/session/write
 				<strong>Start authenticating: </strong>
 				<br>
 				<br>
-<pre>window.open('https://widget.veridu.com/'+ <strong>rafael</strong> + '/provider/login/'+ <strong>provider</strong> +'/'+
-<strong>demo</strong> +'/'+ <strong>GENERATED_USER</strong> +'?session='+ <strong>GENERATED_SESSION</strong> +
+<pre>window.open('https://widget.veridu.com/'+ <strong>rafael</strong> + '/provider/login/'+ <strong>provider</strong>/<strong>demo</strong>/'+
+<strong>GENERATED_USER</strong> +'?session='+ <strong>GENERATED_SESSION</strong> +
 '&amp;language=en-us', '_system');</pre>
 				<br>
-				<code><small>https://widget.veridu.com/rafael/provider/login/<strong>facebook</strong>/<strong>axz9383899a</strong>/<strong>johndoe</strong>?session=<strong>zxqq9d938399</strong>&language=en-us</small></code>
+				<code><small>https://widget.veridu.com/rafael/provider/login/<strong>facebook</strong>/<strong>demo</strong>/<strong>johndoe</strong>?session=<strong>zxqq9d938399</strong>&language=en-us</small></code>
 				<br>
 				<br>
 				<div >
