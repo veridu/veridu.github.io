@@ -18,6 +18,7 @@ class: pricing
 		<ol>
 			<li>Create a <a href="https://dashboard.veridu.com">Veridu Dashboard</a> account</li>
 			<li>Generate an API Key on the Dashboard</li>
+			<li>For now, we'll using API_KEY = 'demo'</li>
 			<li>Use API_VERSION: <strong>rafael</strong></li>
 		</ol>
 
@@ -34,7 +35,7 @@ class: pricing
 <pre>
 POST https://api.veridu.com/<strong>rafael</strong>/session/write
 
-?client=<strong>YOUR_API_KEY</strong>
+?client=<strong>demo</strong>
 &mobile=true
 &nonce=<strong>YOUR_RANDOM_NONCE</strong>
 &timestamp=<strong>CURRENT_TIMESTAMP</strong></pre>
@@ -62,7 +63,7 @@ POST https://api.veridu.com/<strong>rafael</strong>/session/write
 				<br>
 				<br>
 <pre>window.open('https://widget.veridu.com/'+ <strong>rafael</strong> + '/provider/login/'+ <strong>provider</strong> +'/'+
-<strong>YOUR_API_KEY</strong> +'/'+ <strong>GENERATED_USER</strong> +'?session='+ <strong>GENERATED_SESSION</strong> +
+<strong>demo</strong> +'/'+ <strong>GENERATED_USER</strong> +'?session='+ <strong>GENERATED_SESSION</strong> +
 '&amp;language=en-us', '_system');</pre>
 				<br>
 				<code><small>https://widget.veridu.com/rafael/provider/login/<strong>facebook</strong>/<strong>axz9383899a</strong>/<strong>johndoe</strong>?session=<strong>zxqq9d938399</strong>&language=en-us</small></code>
