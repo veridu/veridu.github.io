@@ -89,12 +89,12 @@ keywords: card not present fraud, CNP fraudsters online false positive CNP trans
 					</a>
 				</div>
 				<br>
-
-				<h5>Like what you’ve read?</h5>
 				<p>
 					By cross referencing and corroborating the information provided by the user against their online footprint, we calculate a credibility score that our customers use to make more informed decisions about whether a transaction is actually fraudulent, or in fact, a false positive.
 				</p>
 				<br>
+				
+				<h5>Like what you’ve read?</h5>
 				<p>
 					Run through our <a href="http://demo.veridu.com/payments">demo</a> now - it only takes a few seconds.
 					<br>
