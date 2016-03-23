@@ -1,5 +1,11 @@
 // Try it
 div.try-it {
+
+    .btn-primary {
+        line-height: 1.6;
+        height: 38px;
+    }
+
     .form-group {
 
         label {
@@ -31,6 +37,11 @@ div.try-it {
     }
     .buttons-container {
         @extend .clearfix;
+
+        .btn-primary {
+            line-height: 1.4;
+        }
+
         margin-top: em(20);
         margin-bottom: em(20);
 
@@ -170,7 +181,8 @@ div.try-it {
         margin-top: 2em;
 
         .btn-primary {
-            height: 35px;
+            line-height: 2;
+            height: 44px;
         }
 
         $steps-width: 70px;

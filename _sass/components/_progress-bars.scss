@@ -2,7 +2,7 @@
 
 .progress {
 
-	background: transparent;
+	background: $gray-lighter;
 	box-shadow: none;
 	height: 3.05em;
 	margin-bottom: em(14);
@@ -10,7 +10,7 @@
 	@media (min-width: $screen-sm-min) {
 
 		height: em(34);
-		height: 3.05em;
+		height: 2.65em;
 
 		.progress-bar {
 			p {
@@ -20,20 +20,25 @@
 	}
 
 	.progress-bar {
-		background-color: white;
+		background-color: #01579B;
 
-		padding: em(13);
+		padding: .70em;
 		padding-left: 5%;
 		padding-right: 5%;
-
+		position: relative;
 
 		> p {
 
-			color: black;
+			color: white;
 			text-align: left;
-			font-size: em(16);
+			font-size: em(18);
 
 			.attributeValue {
+				position: absolute;
+				right: 5%;
+				top: .15em;
+				background: #01579B;
+
 				font-weight: normal;
 				font-size: em(15);
 				float: right;

@@ -51,6 +51,7 @@
 
 .btn-primary {
 	@include v-btn($brand-primary, $brand-primary-border-color);
+	color: white !important;
 }
 
 .btn-danger {
@@ -90,4 +91,27 @@
 
 .btn-yellow {
 	@include v-btn($bg-brand-yellow, $color-brand-yellow);
+}
+
+
+.btn--loading {
+	position: relative;
+
+	.spinner {
+		width: 100%;
+		text-align: center;
+		left: 0;
+		display: none;
+		position: absolute;
+		top: -6px;
+	}
+
+	&.btn--loading.loading {
+		span {
+			display: none;
+		}
+		.spinner {
+			display: inline-block;
+		}
+	}
 }

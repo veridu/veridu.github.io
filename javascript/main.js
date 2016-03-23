@@ -83,10 +83,12 @@ window.adjustHeights = function($el) {
 	attachEvents();
 	function attachEvents() {
 		// stops propagation
-		$integrationHeader[0].addEventListener('click', stopPropagation);
-		$integrationHeader[0].addEventListener('contextmenu', stopPropagation);
-		$nav[0].addEventListener('click', stopPropagation);
-		$nav[0].addEventListener('contextmenu', stopPropagation);
+		if ($integrationHeader[0]) {
+			$integrationHeader[0].addEventListener('click', stopPropagation);
+			$integrationHeader[0].addEventListener('contextmenu', stopPropagation);
+			$nav[0].addEventListener('click', stopPropagation);
+			$nav[0].addEventListener('contextmenu', stopPropagation);
+		}
 
 		// hides try-it on window click
 		$window.click(function () {
@@ -102,6 +104,24 @@ window.adjustHeights = function($el) {
 			} else
 				fixed_header.removeClass('shadowed');
 		});
+		// create-account-button
+		$('#create-account-button').click(createAccount);
+		// google-material inputs
+
+		$('.material-input-container input')
+			.focus(function () {
+				$(this).parent().addClass('focused');
+			})
+			.blur(function () {
+				$(this).parent().removeClass('focused');
+			});
+		$('.material-input-container textarea')
+			.focus(function () {
+				$(this).parent().addClass('focused');
+			})
+			.blur(function () {
+				$(this).parent().removeClass('focused');
+			});
 
 		// try it toggler
 		$('#try-it-toggler').click(function (evt) {
@@ -180,8 +200,6 @@ window.adjustHeights = function($el) {
 	}
 
 	window.hideTryIt = hideTryIt;
-
-
 	function showTryIt() {
 		$('li.try-it').addClass('vis');
 		$integrationHeader.removeClass('invis');
@@ -210,7 +228,29 @@ window.adjustHeights = function($el) {
 		dropdownMenu.removeClass('visible');
 	}
 
+	function createAccount() {
+		var state1 = $('.state--create-account');
+		var state2 = $('.state--verify-others');
+		var step1 = $('.try-it__create-account__steps__step--1');
+		var step2 = $('.try-it__create-account__steps__step--2');
+		var stepContainer = $('.try-it__create-account__steps');
 
+		stepContainer.addClass('second-step');
+		state1.find('h4').text('Make account (complete)');
+		state1.addClass('state--disabled');
+
+		state2.find('h4').css('margin-bottom', '0');
+		state2.find('h4 p').remove();
+		state2.find('h4 span').toggle();
+		state2.removeClass('state--disabled');
+
+
+		step2.removeClass('step--disabled');
+		step1.addClass('step--disabled');
+
+		$('#invite-name').focus();
+
+	}
 
 	if (landingSection.length) {
 		$window.resize(function () {
@@ -233,11 +273,49 @@ window.adjustHeights = function($el) {
 		vm.partnerIndex = 0;
 		vm.Widget = Widget;
 		vm.auth = auth;
+		vm.identified = false;
 		init();
+
+		function getHighestScoreAttribute(arr) {
+			var index = -1, score = 0;
+			arr.map(function (item, i) {
+				if (parseFloat(item.score) > parseFloat(score)) {
+					score = item.score;
+					index = i;
+				}
+			});
+			return arr.length ? arr[index].value : '';
+		}
+
+		vm.account = {};
 
 		$scope.$watch('App.Widget.user', function (user, pastUser) {
 			if (user) {
 				vm.user = user;
+
+				if (! vm.account.email) {
+					vm.account = {
+						name: user.name.value,
+						email: user.email.value
+					}
+				}
+
+				if (! vm.identified) {
+					vm.identified = true;
+					goal('try-it');
+					var details = vm.Widget.raw.details;
+					console.warn(vm.Widget.raw);
+
+					var userInfo = {
+						first_name: getHighestScoreAttribute(details.firstName),
+						last_name: getHighestScoreAttribute(details.lastName),
+						country: getHighestScoreAttribute(details.countryName),
+						job_title: getHighestScoreAttribute(details.currentWorkPosition),
+						profile_picture: getHighestScoreAttribute(details.profilePicture),
+						email: getHighestScoreAttribute(details.emailAddress)
+					};
+					console.info(userInfo);
+				}
 				vm.mainSliderStates = ['customer'];
 				var hoursPercent = (vm.Widget.hoursToFake / 5000) * 100;
 
@@ -293,3 +371,19 @@ function load() {
 	}
 }
 window.addEventListener('load', load, false);
+
+window.goal = function (label) {
+	switch (label) {
+		case 'contact-us':
+			ga('send', 'event', 'goal', 'contact-us', 'Contact us', 1);
+			break;
+		case 'try-it':
+			ga('send', 'event', 'goal', 'Authenticated via Try it', 'try-it', 1);
+		break;
+		case 'newsletter':
+			ga('send', 'event', 'goal', 'Subscribed to newsletter', 'newsletter', 1);
+		break;
+		default:
+		break;
+	}
+}

@@ -5,7 +5,7 @@
 		<div>
 			<h2 class="font-light">Contact us</h2>
 
-			<form id="drip-contact-form"  class="form-horizontal" role="form" action="https://www.getdrip.com/forms/8370268/submissions" method="post" data-drip-embedded-form="8370268" target="_blank">
+			<form id="drip-contact-form" onsubmit="goal('contact-us'); submit();"  class="form-horizontal" role="form" action="https://www.getdrip.com/forms/8370268/submissions" method="post" data-drip-embedded-form="8370268" target="_blank">
 				<div class="input-container">
 					<input name="fields[first_name]" type="text" placeholder="First Name" >
 				</div>
@@ -217,6 +217,8 @@
 
 	ga('create', 'UA-47899661-1', 'auto');
 	ga('send', 'pageview');
+
+	window.ga = ga;
 
 
 </script>
