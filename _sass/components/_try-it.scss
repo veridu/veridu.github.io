@@ -1,0 +1,363 @@
+// Try it
+div.try-it {
+    .form-group {
+
+        label {
+            font-weight: 400;
+            cursor: pointer;
+        }
+
+        input[type=checkbox] {
+            position: relative;
+            top: 2px;
+            margin-right: 5px;
+            &:after {
+                content: ' ';
+                display: block;
+                background-color: red;
+                height: 30px;
+                width: 30px;
+            }
+        }
+    }
+    .try-it__call {
+        h3 {
+            margin-top: 0;
+        }
+    }
+
+    .try-it__buttons--hidden {
+        display: none;
+    }
+    .buttons-container {
+        @extend .clearfix;
+        margin-top: em(20);
+        margin-bottom: em(20);
+
+        .btn--loading {
+            .icn {
+                margin-left: 0;
+                margin-right: 0;
+                position: relative;
+                top: 3px;
+
+                &.icn-twitter {
+                    top: 2px;
+                }
+                &.icn-googleplus,
+                &.icn-twitter {
+                    margin-right: 3px;
+                }
+
+                &.icn-googleplus,
+                &.icn-linkedin {
+                    top: 1px;
+                }
+            }
+        }
+
+        > div {
+			@include col(6);
+			height: em(42);
+			margin-top: 8.5px;
+			margin-bottom: 8.5px;
+
+			.btn {
+				font-size: 1em;
+				height: em(42);
+				width: 100%;
+				padding-top: em(10);
+				padding-bottom: em(10);
+
+			}
+		}
+		@media (min-width: $screen-sm-min) {
+			> div {
+				@include col(2);
+			}
+		}
+		@media (max-width: $screen-xs-max) {
+			> div {
+				height: em(62);
+			}
+
+			> div {
+				.btn {
+					height: em(62);
+					padding-top: em(20);
+					padding-bottom: em(20);
+					.spinner {
+						top: -20px;
+					}
+				}
+			}
+		}
+    }
+
+    div.veridu-profile {
+        .veridu-profile__photo-container {
+            @include col(3);
+
+            height: 250px;
+            > div {
+                height: 250px;
+                background-size: 100% auto;
+                background-position: center center;
+                background-repeat: no-repeat;
+
+            }
+        }
+        .veridu-profile__progress-container {
+            @include col(4);
+
+            h1 {
+                font-weight: 400;
+                display: inline-block;
+                margin: 0;
+            }
+            span.hours-to-fake {
+                font-weight: 600;
+                margin-left: .2em;
+            }
+
+            .progress {
+                margin-top: 2em;
+                margin-bottom: 2em;
+            }
+        }
+    }
+
+    .veridu-profile__progress-container__actions {
+        > span {
+            font-size: 1em;
+            margin-right: 1em;
+            cursor: pointer;
+
+            > i {
+                font-size: 1.4em;
+                margin-right: em(5);
+            }
+            > span {
+                font-size: 1.1em;
+                position: relative;
+                top: - em(4);
+            }
+        }
+    }
+    .veridu-profile__info-container {
+        @include col(3);
+        margin-left: 16.6666666%;
+
+        .veridu-profile__info-container__price-label {
+            font-weight: 600;
+            margin-right: 0.5em;
+        }
+        h1.veridu-profile__info-container__price {
+            display: inline-block;
+            font-weight: 400;
+            span {
+                font-size: 15px;
+                font-weight: 600;
+            }
+        }
+        p {
+            margin-bottom: 2em;
+        }
+    }
+
+    .try-it__create-account {
+        display: none;
+        margin-top: 2em;
+
+        .btn-primary {
+            height: 35px;
+        }
+
+        $steps-width: 70px;
+        .try-it__create-account__steps {
+            -webkit-transition: height 0.25s ease-in;
+            -moz-transition: height 0.25s ease-in;
+            -ms-transition: height 0.25s ease-in;
+            -o-transition: height 0.25s ease-in;
+            transition: height 0.25s ease-in;
+
+            width: $steps-width;
+            position: relative;
+            float: left;
+            background-image: url(../img/1px-gray.jpg);
+            background-position: center center;
+            background-repeat: repeat-y;
+            height: 500px;
+
+            &.second-step {
+                height: 160px;
+            }
+
+            .try-it__create-account__steps__step {
+                -webkit-transition: all 0.25s ease-in;
+                -moz-transition: all 0.25s ease-in;
+                -ms-transition: all 0.25s ease-in;
+                -o-transition: all 0.25s ease-in;
+                transition: all 0.25s ease-in;
+
+                display: block;
+                border: 1px solid black;
+                background: white;
+                width: 100%;
+                border-radius: 100%;
+                height: $steps-width;
+
+                div {
+                    position: relative;
+                    text-align: center;
+                    top: em(10);
+
+                    > span {
+                        font-size: 2em;
+                        letter-spacing: -3px;
+                    }
+                }
+
+                &.step--disabled {
+                    height: $steps-width * 2/3;
+                    width: $steps-width * 2/3;
+                    border-color: $gray-light;
+                    color: $gray-light;
+                    font-size: 10px;
+                    left: em(12, 10);
+                }
+
+                &.try-it__create-account__steps__step--1 {
+                    position: relative;
+                }
+                &.try-it__create-account__steps__step--2 {
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+
+        }
+
+        .try-it__create-account__content {
+            float: left;
+            width: 100%;
+            max-width: 649px;
+            padding-left: em(19);
+
+            div.state {
+
+                &.state--create-account {
+                    @extend .enhance-perf;
+
+                    height: 300px;
+                    -webkit-transition: height 0.25s ease-in;
+                    -moz-transition: height 0.25s ease-in;
+                    -ms-transition: height 0.25s ease-in;
+                    -o-transition: height 0.25s ease-in;
+                    transition: height 0.25s ease-in;
+
+                    h4 {
+                        -webkit-transition: all 0.25s ease-in;
+                        -moz-transition: all 0.25s ease-in;
+                        -ms-transition: all 0.25s ease-in;
+                        -o-transition: all 0.25s ease-in;
+                        transition: all 0.25s ease-in;
+                    }
+
+                    &.state--disabled {
+                        height: 50px;
+                        overflow: hidden;
+
+                        h4 {
+                            font-size: 13px !important;
+                            color: $gray-light;
+                            position: relative;
+                            top: -10px;
+                        }
+                    }
+
+                }
+
+                .state__title {
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 1.2;
+                    margin-top: em(16);
+                }
+
+                &.state--disabled {
+
+                    .hidden-disabled {
+                        display: none;
+                    }
+
+                    .state__title {
+                        font-weight: 400;
+                        color: $gray-light;
+                        h4 {
+                            font-size: 15px !important;
+                        }
+                    }
+                }
+
+                &.state--verify-others {
+
+                    margin-top: 60px;
+
+                    &.state--disabled {
+                        margin-top: 0;
+                        position: absolute;
+                        bottom: em(50);
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.material-input-container {
+    width: 100%;
+    max-width: 397px;
+
+    textarea {
+        font-size: .85em;
+    }
+    input, textarea {
+        width: 100%;
+        color: $gray-dark;
+        border: 0;
+        padding: 4px;
+        padding-left: 1px;
+        border-bottom: 1px solid #eee;
+        position: relative;
+    }
+
+    &.focused {
+        &:after {
+            width: 100%;
+        }
+    }
+
+    &:after {
+        -webkit-transition: width 0.15s ease-in;
+        -moz-transition: width 0.15s ease-in;
+        -ms-transition: width 0.15s ease-in;
+        -o-transition: width 0.15s ease-in;
+        transition: width 0.15s ease-in;
+
+        -webkit-transform: translateZ(0);
+        -moz-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        -o-transform: translateZ(0);
+        transform: translateZ(0);
+
+        position: relative;
+        margin: 0 auto;
+        content: ' ';
+        display: block;
+        width: 0;
+        height: 1px;
+        background-color: $brand-primary;
+    }
+}

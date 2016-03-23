@@ -1,0 +1,38 @@
+span.v-check {
+	position: relative;
+	display: inline-block;
+
+	input[type=checkbox] {
+		display: none;
+
+		+ label {
+			display: inline-block;
+			position: relative;
+			top: em(9);
+			width: em(18);
+			height: em(18);
+			background: #f1f1f1;
+			margin-right: em(5);
+			overflow: hidden;
+
+			i {
+				@include opacity(0);
+				transition: .15s;
+				transition-property: all;
+				color: white;
+				position: relative;
+				top: -5px;
+				left: 0;
+			}
+		}
+
+		&:checked {
+			+ label {
+				background: $brand-primary;
+				i {
+					@include opacity(1);
+				}
+			}
+		}
+	}
+}
