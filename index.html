@@ -3,15 +3,6 @@ layout: default
 class: index landing pricing
 script: index.js
 ---
-<div class="v-modal" id="verify-email">
-    <div class="v-modal__content">
-        <div class="v-modal__dialog">
-            <div class="v-modal__close"><i class="material-icons" role="button" onclick="closeModal()">&#xE5CD;</i></div>
-            <div ng-include="'templates/verify-email.html'"></div>
-        </div>
-    </div>
-</div>
-
 <section class="new-landing-section">
     <div class="new-landing-content">
         <div >
@@ -136,11 +127,6 @@ script: index.js
                                 <span onclick="$('.try-it__buttons').slideToggle(); $(this).find('i').toggleClass('rotate45');">
                                     <i id="improve-scores-toggler" class="transitions rotate45 material-icons">&#xE5CD;</i>
                                     <span>Improve score</span>
-                                </span>
-                                <span class="ib" ng-click="App.shareProfile()">
-                                    <i class="material-icons">&#xE80D;</i>&nbsp;<span>
-                                        Share&nbsp;profile
-                                    </span>
                                 </span>
                             </div>
                         </div>
@@ -359,7 +345,7 @@ script: index.js
                                     E-mail is required
                                 </div>
 
-                                <div ng-init="App.invite.text = 'I\'m testing out Veridu\'s social identity verification solution. Could you take a few seconds to verify yourself for me? Thanks!'" class="form-group material-input-container">
+                                <div ng-init="App.invite.text = 'I\'m testing out Veridu\'s social identity verification solution. Could you take a few seconds to verify yourself for me? Thanks!'" class="form-group material-input-container material-input-container--textarea">
                                     <label for="invite-text" class="text-muted"><small>Personal message</small></label>
                                     <textarea rows="3" id="invite-text" ng-model="App.invite.text"></textarea>
                                 </div>

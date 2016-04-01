@@ -96,13 +96,6 @@ div.try-it {
 			}
 		}
 		@media (max-width: $screen-xs-max) {
-            // background: #f1f1f1;
-            // position: absolute;
-            // width: 100%;
-            // left: 0px;
-            // top: 385px;
-            // padding: 35px;
-
             > div {
 				height: em(62);
 			}
@@ -445,8 +438,8 @@ div.try-it {
         font-size: .85em;
         outline: 0;
         resize: none;
-
     }
+
     input, textarea {
         width: 100%;
         color: $gray-dark;
@@ -462,6 +455,14 @@ div.try-it {
     }
 
     &.focused {
+        input, textarea {
+            // border-color: transparent;
+
+            &.ng-invalid.ng-touched {
+                border-color: $brand-danger;
+            }
+        }
+
         &:after {
             width: 100%;
         }
@@ -480,14 +481,24 @@ div.try-it {
         -o-transform: translateZ(0);
         transform: translateZ(0);
 
-        position: relative;
-        margin: 0 auto;
         content: ' ';
-        display: block;
+        position: relative;
+        top: -1px;
         width: 0;
         height: 1px;
+        margin: 0 auto;
+        display: block;
         background-color: $brand-primary;
     }
+
+    &.material-input-container--textarea {
+        @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+            &:after {
+                top: -6px;
+            }
+        }
+    }
+
     &.material-input-container--error {
         input, textarea {
             border-color: $brand-danger;

@@ -4,7 +4,6 @@
 			<div class="menu-content">
 				<span class="logo">
 					<a href="./"><img class="veridu-img" src="img/veridu.png"></a>
-					<a href="./"><img class="id-img" src="img/id.png"></a>
 				</span>
 				<div class="menu__links__md menu__links__md--left collapsibleItem">
 					<ul class="list-inline list-unstyled left-list">
@@ -90,11 +89,6 @@
 		                                <span onclick="$('.try-it__buttons').slideToggle(); $(this).find('i').toggleClass('rotate45');">
 		                                    <i id="improve-scores-toggler" class="transitions rotate45 material-icons">&#xE5CD;</i>
 		                                    <span>Improve score</span>
-		                                </span>
-		                                <span class="ib" ng-click="App.shareProfile()">
-		                                    <i class="material-icons">&#xE80D;</i>&nbsp;<span>
-		                                        Share&nbsp;profile
-		                                    </span>
 		                                </span>
 		                            </div>
 		                        </div>
@@ -353,3 +347,11 @@
 	    </div>
 
 </header>
+<div class="v-modal" id="verify-email">
+    <div class="v-modal__content">
+        <div class="v-modal__dialog">
+            <div class="v-modal__close"><i class="material-icons" role="button" onclick="closeModal()">&#xE5CD;</i></div>
+            <div ng-include="'templates/verify-email.html'"></div>
+        </div>
+    </div>
+</div>
