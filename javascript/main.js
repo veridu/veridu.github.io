@@ -404,26 +404,46 @@ window.adjustHeights = function($el) {
 			vm.Veridu.API.fetch('GET', 'credential')
 				.then(
 					function success(response) {
-						vm.connected = true;
-						vm.Widget.init($scope, vm.Veridu, vm.cfg, true);
+						if (! $scope.$$phase) {
+							$scope.$apply(function () {
+								vm.connected = true;
+								vm.Widget.init($scope, vm.Veridu, vm.cfg, true);
+								vm.Veridu = new Veridu(vm.cfg);
+							});
+						} else {
+							vm.connected = true;
+							vm.Widget.init($scope, vm.Veridu, vm.cfg, true);
+							vm.Veridu = new Veridu(vm.cfg);
+						}
 					},
 					function error(response) {
-						window.localStorage.removeItem('Veridu_User');
-						window.localStorage.removeItem('Veridu_Session');
-						delete vm.cfg.user;
-						delete vm.cfg.session;
-						vm.Veridu = new Veridu(vm.cfg);
+						if (! $scope.$$phase) {
+							$scope.$apply(function () {
+								setVars();
+							});
+						} else {
+							setVars();
+						}
+
+						function setVars() {
+							window.localStorage.removeItem('Veridu_User');
+							window.localStorage.removeItem('Veridu_Session');
+							delete vm.cfg.user;
+							delete vm.cfg.session;
+							vm.Veridu = new Veridu(vm.cfg);
+						}
+
 					}
 				)
 		}
 
 		function auth(service) {
 			vm.loading = service;
-
 			if (vm.connected) {
 				vm.Veridu.Widget.provider_login(vm.cfg.user, service);
 			} else {
 				var url = vm.Veridu.SSO.provider_login(service, window.location.href + '/templates/sso.html', 'nonce');
+				url = url.replace(/session.*/, 'session&');
 				var win = window.open(url, 'sso', "width=500,height=500");
 			}
 
@@ -437,7 +457,7 @@ window.adjustHeights = function($el) {
 				return;
 
 			vm.submits.requestVerification = true;
-			$http.post('https://dashboard.veridu.com/rafael/website/verify',{
+			$http.post('https://dashboard.veridu.com/website/verify',{
 				guest_name: vm.invite.name,
 				guest_email: vm.invite.email,
 				message: vm.invite.text,
@@ -515,7 +535,7 @@ window.adjustHeights = function($el) {
 
 			var companyName = vm.account.personal ? undefined : vm.account.company;
 			// create a dashboard account
-			$http.post('https://dashboard.veridu.com/rafael/website/account', {
+			$http.post('https://dashboard.veridu.com/website/account', {
 				session: vm.cfg.session,
 				client: vm.cfg.client,
 				username: vm.cfg.username,
