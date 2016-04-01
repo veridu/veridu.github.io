@@ -1,17 +1,17 @@
 var app = angular.module('app');
 
-Widget.$inject = ["Veridu", "VeriduUI", "Auth"];
-function Widget (Veridu, VeriduUI, Auth) {
+Widget.$inject = ["VeriduUI", "Auth"];
+function Widget (VeriduUI, Auth) {
 
 	var vm = this;
 
-	vm.Veridu = Veridu;
 	vm.username = Auth.username;
 
 	vm.init = init;
 	vm.populate = populate;
 	vm.getStatusMessage = getStatusMessage;
 	vm.getFlagMessage = getFlagMessage;
+	vm.poll = poll;
 
 	function getStatusMessage () {
 
@@ -31,10 +31,12 @@ function Widget (Veridu, VeriduUI, Auth) {
 		}
 	}
 
-	function init($scope) {
+	function init($scope, Veridu, cfg, startPolling) {
 
 		// binds view scope to make 2-way data binding work on polling
 		vm.$scope = $scope;
+		vm.username = cfg.user;
+		vm.Veridu = Veridu;
 		vm.score = 0;
 		vm.statusString = 'not-verified';
 		vm.badges = badges;
@@ -55,7 +57,8 @@ function Widget (Veridu, VeriduUI, Auth) {
 			end: 'Your verification process is complete'
 		};
 
-		poll();
+		if (startPolling)
+			poll();
 
 	}
 
@@ -99,7 +102,7 @@ function Widget (Veridu, VeriduUI, Auth) {
 			vm.statusString  = getStatusString(vm.score);
 			vm.flags = json.flags || [];
 
-			vm.hoursToFake = Math.round(5000 * Math.pow(vm.score, 4));
+			vm.hoursToFake = Math.tanh((((vm.score*100)-80)/20)) * 2500 + (4528*vm.score)-((-0.5+vm.score)*2800);
 
 		});
 
@@ -130,10 +133,8 @@ function Widget (Veridu, VeriduUI, Auth) {
 		(function update() {
 			vm.Veridu.API.fetch('GET', '/profile/' + vm.username)
 				.done(function (json) {
-
 					vm.populate(json);
 					setTimeout(update, 1000);
-
 				})
 				.fail(function (err) {
 					window.location.reload();

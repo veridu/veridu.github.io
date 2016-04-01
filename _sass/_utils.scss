@@ -202,3 +202,13 @@ ul.no-bullets {
     -o-transform: translateZ(0);
     transform: translateZ(0);
 }
+.ib {
+	display: inline-block;
+}
+
+label.disabled {
+	cursor: not-allowed !important;
+	* {
+		cursor: not-allowed !important;
+	}
+}

@@ -209,7 +209,7 @@
     width: 100%;
 }
 
-.main-container {
+.main-container {    
 	@include make-row();
 	padding-top: em(61);
     &.wow {
@@ -255,6 +255,7 @@ body {
     @include make-row();
 	z-index: 10000;
 	position: relative;
+    background-color: white;
 
 	a {
 		color: #303030;

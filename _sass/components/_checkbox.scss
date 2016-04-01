@@ -2,6 +2,21 @@ span.v-check {
 	position: relative;
 	display: inline-block;
 
+
+	&.v-check--disabled {
+		input[type=checkbox] {
+			&:checked {
+				+ label {
+					background: $gray-light;
+
+					i {
+						@include opacity(1);
+					}
+				}
+			}
+		}
+	}
+
 	input[type=checkbox] {
 		display: none;
 

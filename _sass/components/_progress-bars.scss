@@ -21,7 +21,11 @@
 
 	.progress-bar {
 		background-color: #01579B;
-
+		-webkit-transition: width 15s ease;
+		-o-transition: width 15s ease;
+		transition: width 15s ease;
+		transition-delay: 1s;
+		
 		padding: .70em;
 		padding-left: 5%;
 		padding-right: 5%;

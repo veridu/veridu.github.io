@@ -31,7 +31,7 @@ window.pushToDrip = function (eventLabel, type) {
 	if (typeof(_dcq) !== 'undefined') {
 		_dcq.push(
 			[
-				"track",
+				type,
 				eventLabel,
 				{
 					value: 2000
@@ -82,6 +82,7 @@ window.adjustHeights = function($el) {
 
 	attachEvents();
 	function attachEvents() {
+
 		// stops propagation
 		if ($integrationHeader[0]) {
 			$integrationHeader[0].addEventListener('click', stopPropagation);
@@ -91,9 +92,18 @@ window.adjustHeights = function($el) {
 		}
 
 		// hides try-it on window click
-		$window.click(function () {
+		$window.click(function (evt) {
 			hideTryIt();
+			if (evt.target.className == 'v-modal__content') {
+
+				closeModal();
+			}
 		});
+
+		$window.resize(function () {
+			$('.v-modal__dialog').css('max-height', $window.height() * 0.8);
+		});
+
 
 		// menu shadow
 		window.addEventListener('scroll', function addShadow() {
@@ -104,8 +114,7 @@ window.adjustHeights = function($el) {
 			} else
 				fixed_header.removeClass('shadowed');
 		});
-		// create-account-button
-		$('#create-account-button').click(createAccount);
+
 		// google-material inputs
 
 		$('.material-input-container input')
@@ -138,6 +147,7 @@ window.adjustHeights = function($el) {
 		window.$window.keydown(function(evt) {
 			if (evt.keyCode == 27) {
 				fixedContactContainer.removeClass('active');
+				closeModal();
 			}
 		});
 
@@ -228,30 +238,6 @@ window.adjustHeights = function($el) {
 		dropdownMenu.removeClass('visible');
 	}
 
-	function createAccount() {
-		var state1 = $('.state--create-account');
-		var state2 = $('.state--verify-others');
-		var step1 = $('.try-it__create-account__steps__step--1');
-		var step2 = $('.try-it__create-account__steps__step--2');
-		var stepContainer = $('.try-it__create-account__steps');
-
-		stepContainer.addClass('second-step');
-		state1.find('h4').text('Make account (complete)');
-		state1.addClass('state--disabled');
-
-		state2.find('h4').css('margin-bottom', '0');
-		state2.find('h4 p').remove();
-		state2.find('h4 span').toggle();
-		state2.removeClass('state--disabled');
-
-
-		step2.removeClass('step--disabled');
-		step1.addClass('step--disabled');
-
-		$('#invite-name').focus();
-
-	}
-
 	if (landingSection.length) {
 		$window.resize(function () {
 			adjustHeights(landingSection);
@@ -266,18 +252,58 @@ window.adjustHeights = function($el) {
 		var vm = this;
 	}
 
-	AppCtrl.$inject = ['$scope', 'Widget', 'Auth', 'Veridu', '$compile'];
-	function AppCtrl ($scope, Widget, Auth, Veridu, $compile) {
+	AppCtrl.$inject = ['$scope', 'Widget', 'Auth', '$compile', '$filter', '$http', 'cfg', '$window'];
+	function AppCtrl ($scope, Widget, Auth, $compile, $filter, $http, cfg, $window) {
 		var vm = this;
 
 		vm.partnerIndex = 0;
+		vm.cfg = cfg;
 		vm.Widget = Widget;
 		vm.auth = auth;
 		vm.identified = false;
+		vm.createAccount = createAccount;
+		vm.requestVerification = requestVerification;
+		vm.getHighestScoreAttribute = getHighestScoreAttribute;
+		vm.skipVerification = skipVerification;
+		vm.showCreateAccount = showCreateAccount;
+		vm.setItem = setItem;
+		vm.getItem = getItem;
+		vm.shareProfile = shareProfile;
+		vm.pushTagsToDrip = pushTagsToDrip;
+		vm.submits = {};
+
+		function pushTagsToDrip(tags) {
+			_dcq.push(["identify", {
+				email: vm.Widget.user.email.value,
+				tags
+			}]);
+		}
+
+		function setItem(key, value) {
+			$window.localStorage.setItem(key, JSON.stringify(value));
+		}
+
+		function shareProfile() {
+			var url = window.location.host + '/share-profile.html?hours_to_fake='+ $filter('number')(vm.Widget.hoursToFake, 0) + '&profile_picture=' + vm.Widget.user.picture;
+			window.open("https://www.facebook.com/sharer/sharer.php?u=" + url, "facebook-share", "width=580,height=296")
+		}
+
+		function getItem(key) {
+			try {
+				return JSON.parse($window.localStorage.getItem(key));
+			} catch (e) {
+				$window.removeItem(key);
+				return null;
+			}
+		}
+
 		init();
 
 		function getHighestScoreAttribute(arr) {
 			var index = -1, score = 0;
+			if (! arr)
+				return '';
+
 			arr.map(function (item, i) {
 				if (parseFloat(item.score) > parseFloat(score)) {
 					score = item.score;
@@ -300,22 +326,39 @@ window.adjustHeights = function($el) {
 					}
 				}
 
-				if (! vm.identified) {
-					vm.identified = true;
-					goal('try-it');
-					var details = vm.Widget.raw.details;
-					console.warn(vm.Widget.raw);
+				var details = vm.Widget.raw.details;
 
-					var userInfo = {
+				if (! vm.identified) {
+					goal('try-it');
+					vm.identified = true;
+
+					vm.userInfo = {
 						first_name: getHighestScoreAttribute(details.firstName),
 						last_name: getHighestScoreAttribute(details.lastName),
 						country: getHighestScoreAttribute(details.countryName),
 						job_title: getHighestScoreAttribute(details.currentWorkPosition),
 						profile_picture: getHighestScoreAttribute(details.profilePicture),
-						email: getHighestScoreAttribute(details.emailAddress)
+						email: getHighestScoreAttribute(details.emailAddress),
+						company_name: getHighestScoreAttribute(details.currentEmployer),
+						phone: vm.Widget.raw.user.phone && vm.Widget.raw.user.phone.value,
+						time_to_fake: vm.Widget.hoursToFake && $filter('number')(vm.Widget.hoursToFake, 0),
+						tags: ['tried_it']
 					};
-					console.info(userInfo);
+					_dcq.push(["identify", vm.userInfo]);
+
+				} else {
+					vm.userInfo.new_email = getHighestScoreAttribute(details.emailAddress);
+					vm.userInfo.time_to_fake = vm.Widget.hoursToFake && $filter('number')(vm.Widget.hoursToFake, 0);
+
+					if (details.emailAddress.length > 1) {
+						details.emailAddress.map(function (email) {
+							if (email.value != vm.userInfo.new_email)
+								vm.userInfo.secondary_email = email.value;
+						});
+					}
+					_dcq.push(["identify", vm.userInfo]);
 				}
+
 				vm.mainSliderStates = ['customer'];
 				var hoursPercent = (vm.Widget.hoursToFake / 5000) * 100;
 
@@ -341,18 +384,170 @@ window.adjustHeights = function($el) {
 		}, true);
 
 		function init () {
-			vm.Widget.init($scope);
+			vm.cfg.session = vm.getItem('Veridu_Session');
+			vm.cfg.user = vm.getItem('Veridu_User');
+
+			// attach events
+			window.addEventListener('Veridu_SSO', function (evt) {
+				vm.cfg.user = evt.veridu.id;
+				vm.cfg.session = evt.veridu.session;
+				vm.setItem('Veridu_User', vm.cfg.user);
+				vm.setItem('Veridu_Session', vm.cfg.session);
+				initVeridu();
+			});
+
+			initVeridu();
 		}
 
+		function initVeridu() {
+			vm.Veridu = new Veridu(vm.cfg);
+			vm.Veridu.API.fetch('GET', 'credential')
+				.then(
+					function success(response) {
+						vm.connected = true;
+						vm.Widget.init($scope, vm.Veridu, vm.cfg, true);
+					},
+					function error(response) {
+						window.localStorage.removeItem('Veridu_User');
+						window.localStorage.removeItem('Veridu_Session');
+						delete vm.cfg.user;
+						delete vm.cfg.session;
+						vm.Veridu = new Veridu(vm.cfg);
+					}
+				)
+		}
 
 		function auth(service) {
 			vm.loading = service;
-			var username = Auth.username;
-			Veridu.Widget.provider_login(username, service);
+
+			if (vm.connected) {
+				vm.Veridu.Widget.provider_login(vm.cfg.user, service);
+			} else {
+				var url = vm.Veridu.SSO.provider_login(service, window.location.href + '/templates/sso.html', 'nonce');
+				var win = window.open(url, 'sso', "width=500,height=500");
+			}
+
 			return true;
 		}
 
+		function requestVerification() {
+			vm.errors.guest_name = (! vm.invite.name || ! vm.invite.name.length);
+			vm.errors.guest_email = (! vm.invite.email || ! vm.invite.email.length);
+			if (vm.errors.guest_email  || vm.errors.guest_name)
+				return;
+
+			vm.submits.requestVerification = true;
+			$http.post('https://dashboard.veridu.com/rafael/website/verify',{
+				guest_name: vm.invite.name,
+				guest_email: vm.invite.email,
+				message: vm.invite.text,
+				show_profile: !! vm.invite.profile,
+				first_name: getHighestScoreAttribute(vm.Widget.raw.details.firstName),
+				profile_picture: vm.Widget.user.picture,
+				api_key: vm.invite.api_key,
+				Veridu_Session: vm.cfg.session,
+				time_to_fake: $filter('number')(vm.Widget.hoursToFake, 0)
+			}).then(function () {
+				vm.submits.requestVerification = false;
+				vm.pushTagsToDrip(['invited_friends_from_tryit']);
+
+			} , function () {
+				vm.submits.requestVerification = false;
+			});
+
+			finishCreateAccount('Verification requested');
+		}
+
+		function skipVerification() {
+			finishCreateAccount('Request verification');
+		}
+
+		function finishCreateAccount(h4Text) {
+			var state2 = $('.state--verify-others');
+
+			if (h4Text)
+				state2.find('h4').html("<span>"+ h4Text +"</span>");
+
+			state2.find('.hidden-disabled').slideUp();
+			state2.css('margin-top', '73px');
+			state2.find('.take-me-to-account').slideDown();
+			$('.try-it__create-account__steps__step--2').addClass('step--disabled');
+		}
+
+		function showCreateAccount(h4Text) {
+			var state2 = $('.state--verify-others');
+			state2.find('h4').html('<span style="display: none;">Who else do you want to verify? (optional)</span><span style="display: inline;" class="hidden-disabled">Test us out on someone else</span>');
+
+			state2.find('.hidden-disabled').slideDown();
+			state2.css('margin-top', '60px');
+			state2.find('.take-me-to-account').slideUp();
+			$('.try-it__create-account__steps__step--2').removeClass('step--disabled');
+			vm.invite.name = '';
+			vm.invite.email = '';
+		}
+
+		vm.errors = {};
+		function createAccount() {
+			// validation
+			if (! vm.account.personal  && (! vm.account.company || vm.account.company == '') ) {
+				vm.errors.personal_account = true;
+				return;
+			}
+
+			// ui updates
+			var state1 = $('.state--create-account');
+			var state2 = $('.state--verify-others');
+			var step1 = $('.try-it__create-account__steps__step--1');
+			var step2 = $('.try-it__create-account__steps__step--2');
+			var stepContainer = $('.try-it__create-account__steps');
+
+			stepContainer.addClass('second-step');
+			state1.addClass('state--disabled');
+
+			state2.find('h4').css('margin-bottom', '0');
+			state2.find('h4 p').remove();
+			state2.find('h4 span').toggle();
+			state2.removeClass('state--disabled');
+			step2.removeClass('step--disabled');
+			step1.addClass('step--disabled');
+
+			$('#invite-name').focus();
+
+			var companyName = vm.account.personal ? undefined : vm.account.company;
+			// create a dashboard account
+			$http.post('https://dashboard.veridu.com/rafael/website/account', {
+				session: vm.cfg.session,
+				client: vm.cfg.client,
+				username: vm.cfg.username,
+				company_name: companyName,
+				name: vm.Widget.user.name.value,
+				email: vm.Widget.user.email.value
+
+			})
+			.then(function (response) {
+				vm.invite.api_key = response.data.api_key;
+				if (response.data.new_account) {
+					state1.find('h4').text('Make account (complete)');
+				} else {
+					state1.find('h4').text('Account found');
+				}
+			},
+			function (e) {
+				console.error(e);
+			});
+
+			// send info to drip
+			vm.userInfo.tags = ['liked_it'];
+			vm.userInfo.name = vm.account.name;
+			vm.userInfo.account_name = vm.account.company;
+			vm.userInfo.personal_account = !! vm.account.personal;
+			vm.userInfo.connected_accounts = vm.Widget.raw.provider;
+
+			_dcq.push(["identify", vm.userInfo]);
+
+		}
 	}
+
 	$('#drip-contact-form').on('submit', function (event) {
 		event.preventDefault();
 		ga('send', 'event', 'Contact Form', 'submit', 'Drip contact form submitted');
@@ -386,4 +581,22 @@ window.goal = function (label) {
 		default:
 		break;
 	}
+}
+
+window.closeModal = function () {
+	var vModals = $('.v-modal');
+
+	if (vModals.hasClass('vis')) {
+		vModals.removeClass('vis');
+		vModals.addClass('inv');
+		setTimeout(function () {
+			vModals.removeClass('inv');
+		}, 500);
+		$('body').css('overflow', 'auto');
+	}
+}
+
+window.showModal = function (id) {
+	$('body').css('overflow', 'hidden');
+	$('#' + id).addClass('vis');
 }

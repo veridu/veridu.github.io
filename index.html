@@ -3,6 +3,15 @@ layout: default
 class: index landing pricing
 script: index.js
 ---
+<div class="v-modal" id="verify-email">
+    <div class="v-modal__content">
+        <div class="v-modal__dialog">
+            <div class="v-modal__close"><i class="material-icons" role="button" onclick="closeModal()">&#xE5CD;</i></div>
+            <div ng-include="'templates/verify-email.html'"></div>
+        </div>
+    </div>
+</div>
+
 <section class="new-landing-section">
     <div class="new-landing-content">
         <div >
@@ -112,28 +121,25 @@ script: index.js
                     <div class="veridu-profile__progress-container">
                         <div>
                             <br>
-                            <p>
-                                Faking this profile would take
-                            </p>
-                            <h1>+({App.Widget.hoursToFake})</h1> <span class="hours-to-fake">HOURS TO FAKE</span>
+                            <p>Faking this <br class="visible-xs"> profile would take</p>
+                            <h1>~({App.Widget.hoursToFake | number :0})</h1> <br class="visible-xs"> <span class="hours-to-fake">HOURS</span>
 
                             <div class="progress" >
                               <div class="progress-bar" role="progressbar" aria-valuenow="({App.Widget.user.overall > 0.6 ? 100 : 70})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.Widget.user.overall > 0.6 ? 100 : 70})%;">
                                 <p>
                                     <span ng-bind="App.Widget.user.overall > 0.6 ? App.Widget.user.name.value : 'Partially verified'"></span>
-                                    <span class="attributeValue"><img src="img/verified-white.png" width="48px" alt="verified" /></span>
+                                    <span class="attributeValue"><img ng-show="App.Widget.user.overall > 0.6" src="img/verified-white.png" width="48px" alt="verified" /></span>
                                 </p>
                               </div>
                             </div>
                             <div class="veridu-profile__progress-container__actions">
                                 <span onclick="$('.try-it__buttons').slideToggle(); $(this).find('i').toggleClass('rotate45');">
-                                    <i class="transitions rotate45 material-icons">&#xE5CD;</i>
+                                    <i id="improve-scores-toggler" class="transitions rotate45 material-icons">&#xE5CD;</i>
                                     <span>Improve score</span>
                                 </span>
-                                <span>
-                                    <i class="material-icons">&#xE80D;</i>
-                                    <span>
-                                        Share profile
+                                <span class="ib" ng-click="App.shareProfile()">
+                                    <i class="material-icons">&#xE80D;</i>&nbsp;<span>
+                                        Share&nbsp;profile
                                     </span>
                                 </span>
                             </div>
@@ -141,13 +147,13 @@ script: index.js
                     </div>
                     <div class="veridu-profile__info-container">
                         <span class="veridu-profile__info-container__price-label">
-                            PRICE:
+                            FROM
                         </span>
                         <h1 class="veridu-profile__info-container__price">£0.10<span>&nbsp;/&nbsp;CHECK</span></h1>
                         <p>
                             Start verifying users today.
                         </p>
-                        <button type="button" class="btn btn-block btn-primary" ng-click="creatingAccount = true" onclick="$('.try-it__create-account').slideToggle(); $('.veridu-profile').slideToggle()">Create Account</button>
+                        <button type="button" class="btn btn-block btn-primary" ng-click="creatingAccount = true" onclick="$('.try-it__create-account').slideToggle(); $('.veridu-profile').slideToggle(); $('.try-it__buttons').slideUp(); $('#improve-scores-toggler').toggleClass('rotate45');">Create Account</button>
                     </div>
                 </div>
             </div>
@@ -271,19 +277,19 @@ script: index.js
                     </div>
 
                 </div>
-                <div class="terms-of-use" style="margin-left:8.5px;">By using this service you accept our <a class="white-link" href="https://veridu.com/wiki/Terms_%26_Conditions" target="_blank" >terms of use</a></div>
+                <div class="terms-of-use" style="margin-left:8.5px;">By using this service you accept our <a class="black-link" href="https://veridu.com/wiki/Terms_%26_Conditions" target="_blank" >terms of use</a></div>
             </div>
 
             <div class="v-row try-it__create-account">
                 <div class="try-it__create-account__steps">
                     <span class="try-it__create-account__steps__step try-it__create-account__steps__step--1">
                         <div>
-                            <span>1</span>/2
+                            <span>1</span>
                         </div>
                     </span>
                     <span class="try-it__create-account__steps__step try-it__create-account__steps__step--2 step--disabled">
                         <div>
-                            <span>2</span>/2
+                            <span>2</span>
                         </div>
                     </span>
                 </div>
@@ -293,15 +299,12 @@ script: index.js
                             <h4 >Did we get it right?</h4>
                         </div>
                         <br>
-                        <form class="" action="index.html" method="post">
+                        <form id="create-account-form" ng-submit="App.createAccount()" novalidate="true">
                             <div class="form-group material-input-container">
-                                <input placeholder="Name" ng-model="App.account.name" type="text">
+                                <input placeholder="Name" ng-model="App.account.name" type="text" required>
                             </div>
                             <div class="form-group material-input-container">
-                                <input placeholder="Email" ng-model="App.account.email" type="text">
-                            </div>
-                            <div class="form-group material-input-container" ng-show="! App.account.personal">
-                                <input placeholder="Company name*" ng-model="App.account.company" type="text">
+                                <input placeholder="Email" ng-model="App.account.email" type="email" required>
                             </div>
                             <div class="form-group">
                                 <span class="v-check">
@@ -314,13 +317,19 @@ script: index.js
                                     <small> This is a personal account</small>
                                 </label>
                             </div>
-                            <button type="button" class="btn btn-primary" id="create-account-button">
+                            <div class="form-group material-input-container" ng-show="! App.account.personal" ng-class="(! App.account.personal && App.errors.personal_account) ? 'material-input-container--error' : ''">
+                                <input placeholder="Company name*" ng-model="App.account.company" type="text" >
+                            </div>
+                            <div class="md-error" ng-show="(! App.account.personal && App.errors.personal_account)">
+                                Company name is required
+                            </div>
+                            <button type="submit" class="btn btn-primary">
                                 Create account
                             </button>
                         </form>
                     </div>
 
-                    <div class="state state--disabled state--verify-others">
+                    <div class="state state--disabled state--verify-others ">
                         <div class="state__title">
                             <h4>
                                 <p>Next step:</p>
@@ -331,45 +340,56 @@ script: index.js
                             </h4>
                         </div>
                         <div class="hidden-disabled">
-                            <div >
-                                <small>Your colleague, future tenant, friend...</small>
-                            </div>
-                            <br>
-                            <div class="form-group material-input-container">
-                                <input id="invite-name" placeholder="Name" ng-model="App.invite.name" type="text">
-                            </div>
-                            <div class="form-group material-input-container">
-                                <input placeholder="Email" ng-model="App.invite.email" type="text">
-                            </div>
+                            <form  ng-submit="App.requestVerification()" novalidate>
+                                <div >
+                                    <small>Your colleague, future tenant, friend...</small>
+                                </div>
+                                <br>
+                                <div class="form-group material-input-container" ng-class="App.errors.guest_name ? 'material-input-container--error' : ''" >
+                                    <input id="invite-name" placeholder="Their name" ng-model="App.invite.name" type="text">
+                                </div>
+                                <div class="md-error" ng-show="(App.errors.guest_name)">
+                                    Name is required
+                                </div>
 
-                            <div ng-init="App.invite.text = 'Hi. I\'m testing out Veridu\'s social identity verification solution. Could you take a few seconds to verify yourself for me? Thanks!'" class="form-group material-input-container">
-                                <label for="invite-text" class="text-muted"><small>Personal message</small></label>
-                                <textarea rows="3" id="invite-text" ng-model="App.invite.text"></textarea>
+                                <div class="form-group material-input-container" ng-class="App.errors.guest_email ? 'material-input-container--error' : ''">
+                                    <input placeholder="Their email" ng-model="App.invite.email" type="email" required>
+                                </div>
+                                <div class="md-error" ng-show="(App.errors.guest_email)">
+                                    E-mail is required
+                                </div>
+
+                                <div ng-init="App.invite.text = 'I\'m testing out Veridu\'s social identity verification solution. Could you take a few seconds to verify yourself for me? Thanks!'" class="form-group material-input-container">
+                                    <label for="invite-text" class="text-muted"><small>Personal message</small></label>
+                                    <textarea rows="3" id="invite-text" ng-model="App.invite.text"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="disabled" for="include-profile" ng-init="App.invite.profile = true">
+                                        <span class="v-check v-check--disabled">
+                                            <input type="checkbox"  id="include-profile" readonly="true" disabled checked>
+                                            <label for="account-personal">
+                                                <i class="material-icons">&#xE5CA;</i>
+                                            </label>
+                                        </span>
+                                        <small>Include your profile</small>
+                                    </label>
+                                    <small>&nbsp;&nbsp;&nbsp; <a href="javascript:;" class="black-link" style="margin-bottom: 1px solid black; display:inline-block" onclick="showModal('verify-email')">Preview email</a> </small>
+
+                                </div>
+                                <div>
+                                    <button  type="submit" class="btn btn-primary" ng-disabled="App.submits.requestVerification">
+                                        Request verification
+                                    </button>
+                                </div>
+                                <br>
+                                <a href="javascript:;" class="black-link" ng-click="App.skipVerification()">Skip this step</a>
                             </div>
-                            <div class="form-group">
-                                <label for="include-profile">
-                                    <span class="v-check">
-                                        <input type="checkbox" ng-model="App.invite.profile" ng-check="App.invite.profile" id="include-profile">
-                                        <label for="account-personal">
-                                            <i class="material-icons">&#xE5CA;</i>
-                                        </label>
-                                    </span>
+                        </form>
 
-                                    <small> Include your profile &nbsp;&nbsp;&nbsp; <a href="#" class="black-link" style="margin-bottom: 1px solid black; display:inline-block">Preview email</a> </small>
-                                </label>
-                            </div>
-                            <div>
-                                <button type="button" class="btn btn-primary">
-                                    Request verification
-                                </button>
-                            </div>
-                            <br>
-
-                            <a href="#" class="black-link">Skip this step</a>
-
-
+                        <div class="take-me-to-account">
+                            <a href="https://dashboard.veridu.com/login" class="btn btn-primary" target="_blank">Take me to my account</a>
+                            <a href="javascript:;" class="black-link" ng-click="App.showCreateAccount()">Verify another user</a>
                         </div>
-
                     </div>
                 </div>
             </div>

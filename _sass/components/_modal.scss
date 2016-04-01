@@ -1,0 +1,50 @@
+div.v-modal {
+	-webkit-animation-duration: .45s;
+    animation-duration: .45s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+	display: none;
+	top: 0;
+	left: 0;
+	width: 100%;
+    max-height: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(black, 0.7);
+	z-index: 1000000;
+	overflow-y: auto;
+
+
+	&.vis {
+		display: block;
+		@extend .fadeIn;
+	}
+	&.inv {
+		display: table;
+		@extend .fadeOut;
+	}
+
+	.v-modal__close {
+		text-align: right;
+		color: white;
+	}
+
+	.v-modal__content {
+		display: block;
+		vertical-align: middle;
+		width: 100%;
+
+		.v-modal__dialog {
+			margin-top: 5%;
+			margin-bottom: 5%;
+			margin-left: auto;
+			margin-right: auto;
+
+			width: 100%;
+			min-height: 300px;
+			max-width: 800px;
+
+		}
+	}
+}
