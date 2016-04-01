@@ -442,7 +442,7 @@ window.adjustHeights = function($el) {
 			if (vm.connected) {
 				vm.Veridu.Widget.provider_login(vm.cfg.user, service);
 			} else {
-				var url = vm.Veridu.SSO.provider_login(service, window.location.href + '/templates/sso.html', 'nonce');
+				var url = vm.Veridu.SSO.provider_login(service, 'https://www.veridu.com/templates/sso.html', 'nonce');
 				url = url.replace(/session.*/, 'session&');
 				var win = window.open(url, 'sso', "width=500,height=500");
 			}
