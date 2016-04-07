@@ -598,6 +598,9 @@ window.goal = function (label) {
 		case 'newsletter':
 			ga('send', 'event', 'goal', 'Subscribed to newsletter', 'newsletter', 1);
 		break;
+		case 'account-created':
+			ga('send', 'event', 'goal', 'Created account', 'created-account', 1);
+		break;
 		default:
 		break;
 	}
