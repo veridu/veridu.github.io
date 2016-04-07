@@ -514,6 +514,8 @@ window.adjustHeights = function($el) {
 				return;
 			}
 
+            goal('account-created');
+
 			// ui updates
 			var state1 = $('.state--create-account');
 			var state2 = $('.state--verify-others');
@@ -599,7 +601,7 @@ window.goal = function (label) {
 			ga('send', 'event', 'goal', 'Subscribed to newsletter', 'newsletter', 1);
 		break;
 		case 'account-created':
-			ga('send', 'event', 'goal', 'Created account', 'created-account', 1);
+			ga('send', 'event', 'goal', 'Account created', 'account-created', 1);
 		break;
 		default:
 		break;
