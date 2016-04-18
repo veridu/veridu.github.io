@@ -279,6 +279,13 @@ window.adjustHeights = function($el) {
 			}]);
 		}
 
+        $scope.$watch('creatingAccount', function (cur, past) {
+            if (cur === true) {
+                // track creating account start
+                goal('account-creation-started');
+            }
+        });
+
 		function setItem(key, value) {
 			$window.localStorage.setItem(key, JSON.stringify(value));
 		}
@@ -587,6 +594,7 @@ function load() {
 		window.scrollToHash(window.location.hash.replace('#','') + '-wrapper');
 	}
 }
+
 window.addEventListener('load', load, false);
 
 window.goal = function (label) {
@@ -600,6 +608,9 @@ window.goal = function (label) {
 		case 'newsletter':
 			ga('send', 'event', 'goal', 'Subscribed to newsletter', 'newsletter', 1);
 		break;
+        case 'account-creation-started':
+        ga('send', 'event', 'goal', 'Account creation started', 'account-creation-started', 1);
+        break;
 		case 'account-created':
 			ga('send', 'event', 'goal', 'Account created', 'account-created', 1);
 		break;
