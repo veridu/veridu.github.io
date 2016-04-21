@@ -112,8 +112,8 @@ script: index.js
                     <div class="veridu-profile__progress-container">
                         <div>
                             <br>
-                            <p>Faking this <br class="visible-xs"> profile would take</p>
-                            <h1>~({App.Widget.hoursToFake | number :0})</h1> <br class="visible-xs"> <span class="hours-to-fake">HOURS</span>
+                            <h1>~({App.Widget.user.time_invested | number : 0})</h1>
+                            <p>hours invested on this profile</p>
 
                             <div class="progress" >
                               <div class="progress-bar" role="progressbar" aria-valuenow="({App.Widget.user.overall > 0.6 ? 100 : 70})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.Widget.user.overall > 0.6 ? 100 : 70})%;">

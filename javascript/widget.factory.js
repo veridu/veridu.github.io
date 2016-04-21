@@ -94,6 +94,7 @@ function Widget (VeriduUI, Auth) {
 
 			if (typeof(json.user) == 'object') {
 				vm.user = json.user;
+                vm.hoursToFake = json.user.time_invested;
 			}
 
 			vm.status = json.status;
@@ -102,7 +103,6 @@ function Widget (VeriduUI, Auth) {
 			vm.statusString  = getStatusString(vm.score);
 			vm.flags = json.flags || [];
 
-			vm.hoursToFake = Math.tanh((((vm.score*100)-80)/20)) * 2500 + (4528*vm.score)-((-0.5+vm.score)*2800);
 
 		});
 

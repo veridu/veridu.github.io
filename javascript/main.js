@@ -348,14 +348,14 @@ window.adjustHeights = function($el) {
 						email: getHighestScoreAttribute(details.emailAddress),
 						company_name: getHighestScoreAttribute(details.currentEmployer),
 						phone: vm.Widget.raw.user.phone && vm.Widget.raw.user.phone.value,
-						time_to_fake: vm.Widget.hoursToFake && $filter('number')(vm.Widget.hoursToFake, 0),
+						time_to_fake: vm.Widget.raw.user.time_invested && $filter('number')(vm.Widget.raw.user.time_invested, 0),
 						tags: ['tried_it']
 					};
 					_dcq.push(["identify", vm.userInfo]);
 
 				} else {
 					vm.userInfo.new_email = getHighestScoreAttribute(details.emailAddress);
-					vm.userInfo.time_to_fake = vm.Widget.hoursToFake && $filter('number')(vm.Widget.hoursToFake, 0);
+					vm.userInfo.time_to_fake = vm.Widget.raw.user.time_invested && $filter('number')(vm.Widget.raw.user.time_invested, 0);
 
 					if (details.emailAddress.length > 1) {
 						details.emailAddress.map(function (email) {
@@ -367,11 +367,11 @@ window.adjustHeights = function($el) {
 				}
 
 				vm.mainSliderStates = ['customer'];
-				var hoursPercent = (vm.Widget.hoursToFake / 5000) * 100;
+				var hoursPercent = (vm.Widget.raw.user.time_invested / 5000) * 100;
 
 				vm.progressStatuses = [
 					{
-						hours: vm.Widget.hoursToFake,
+						hours: vm.Widget.raw.user.time_invested,
 						hoursPercent: Math.max(hoursPercent, 60),
 						name: user.name.value,
 						namePercent: (user.name || 0 ) && Math.round((user.name.score * 100) * 10) / 10,
@@ -449,7 +449,8 @@ window.adjustHeights = function($el) {
 			if (vm.connected) {
 				vm.Veridu.Widget.provider_login(vm.cfg.user, service);
 			} else {
-				var url = vm.Veridu.SSO.provider_login(service, 'https://www.veridu.com/templates/sso.html', 'nonce');
+				// var url = vm.Veridu.SSO.provider_login(service, 'https://www.veridu.com/templates/sso.html', 'nonce');
+				var url = vm.Veridu.SSO.provider_login(service, 'http://localhost:4000/templates/sso.html', 'nonce');
 				url = url.replace(/session.*/, 'session&');
 				var win = window.open(url, 'sso', "width=500,height=500");
 			}
@@ -473,7 +474,7 @@ window.adjustHeights = function($el) {
 				profile_picture: vm.Widget.user.picture,
 				api_key: vm.invite.api_key,
 				Veridu_Session: vm.cfg.session,
-				time_to_fake: $filter('number')(vm.Widget.hoursToFake, 0)
+				time_to_fake: $filter('number')(vm.Widget.raw.user.time_invested, 0)
 			}).then(function () {
 				vm.submits.requestVerification = false;
 				vm.pushTagsToDrip(['invited_friends_from_tryit']);
