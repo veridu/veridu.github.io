@@ -395,12 +395,15 @@ window.adjustHeights = function($el) {
 			vm.cfg.user = vm.getItem('Veridu_User');
 
 			// attach events
-			window.addEventListener('Veridu_SSO', function (evt) {
-				vm.cfg.user = evt.veridu.id;
-				vm.cfg.session = evt.veridu.session;
-				vm.setItem('Veridu_User', vm.cfg.user);
-				vm.setItem('Veridu_Session', vm.cfg.session);
-				initVeridu();
+			window.addEventListener('message', function (evt) {
+                if (evt.origin === "https://widget.veridu.com") {
+                    var data = JSON.parse(evt.data);
+                    vm.cfg.user = data.veridu_id;
+                    vm.cfg.session = data.veridu_session;
+                    vm.setItem('Veridu_User', vm.cfg.user);
+                    vm.setItem('Veridu_Session', vm.cfg.session);
+                    initVeridu();
+                }
 			});
 
 			initVeridu();
@@ -449,9 +452,8 @@ window.adjustHeights = function($el) {
 			if (vm.connected) {
 				vm.Veridu.Widget.provider_login(vm.cfg.user, service);
 			} else {
-				var url = vm.Veridu.SSO.provider_login(service, 'https://www.veridu.com/templates/sso.html', 'nonce');
-				// var url = vm.Veridu.SSO.provider_login(service, 'http://localhost:4000/templates/sso.html', 'nonce');
-				url = url.replace(/session.*/, 'session&');
+				var url = vm.Veridu.SSO.provider_login(service, 'about:blank', 'nonce');
+				url = url.replace(/session.*/, 'mobile=true&session&');
 				var win = window.open(url, 'sso', "width=500,height=500");
 			}
 
