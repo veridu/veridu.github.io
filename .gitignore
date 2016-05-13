@@ -8,3 +8,6 @@ _site
 .sass-cache
 *.sublime-*
 .jekyll-metadata
+
+
+serve/

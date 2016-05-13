@@ -4,7 +4,7 @@ class: resource-centre
 layout: blank
 ---
 <div class="page__cover-container">
-	<div class="page__cover" style="background-image: url(img/resource-page-cover.jpg)" >
+	<div class="page__cover" style="background-image: url(img/resource-page-cover-2.0.3.jpg)" >
 		<div class="page__cover__overlay"></div>
 		<div class="page__cover__content">
 			<h1>Welcome to Veridu's <br class="visible-xs visible-sm"> Resource Centre</h1>
@@ -102,7 +102,33 @@ layout: blank
 	</div>
 </div>
 
-<div class="page__section page__section--gray">
+<div class="page__section pag__section--gray">
+	<div class="page__section__content">
+		<h3 class="page__section__title">White papers </h3>
+		<p>
+			Dig deeper into the issues that are relevant to you. Explore our selection of white papers.
+		</p>
+		<br>
+
+		<ul class="resource-list">
+
+			<li>
+				<a href="resources/social-kyc-for-cryptocurrencies.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Social KYC For Cryptocurrencies PDF')" class="block-link" target="_blank">
+					<div class="block-link__text">
+						Social KYC for Cryptocurrencies
+					</div>
+					<div class="block-link__icon">
+						<button type="button" class="btn btn-primary btn--color--white">
+							<i class="material-icons">&#xE2C4;</i>
+						</button>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+</div>
+
+<div class="page__section page__section--white">
 	<div class="page__section__content">
 		<h3 class="page__section__title">Use cases</h3>
 		<p>
@@ -130,7 +156,7 @@ layout: blank
 	</div>
 </div>
 
-<div class="page__section page__section--white">
+<div class="page__section page__section--gray">
 	<div class="page__section__content">
 		<h3 class="page__section__title">Demos</h3>
 		<br>
@@ -199,7 +225,7 @@ layout: blank
 		</ul>
 	</div>
 </div>
-<div class="page__section page__section--gray">
+<div class="page__section page__section--white">
 	<div class="page__section__content">
 		<h3 class="page__section__title">Videos</h3>
 		<br>
@@ -246,7 +272,7 @@ layout: blank
 	</div>
 </div>
 
-<div class="page__section page__section--white">
+<div class="page__section page__section--gray">
 	<div class="page__section__content">
 		<h3 class="page__section__title">Latest news</h3>
 		<br>
@@ -309,7 +335,7 @@ layout: blank
 	</div>
 </div>
 
-<div class="page__section page__section--gray">
+<div class="page__section page__section--white">
 	<div class="page__section__content">
 		<h3 class="page__section__title">Press Kit</h3>
 		<br>
