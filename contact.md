@@ -114,14 +114,14 @@ cover: img/bridge.jpeg
 
 	<div>
 		Need product support? <br>
-		<a href="https://veridu.com/submit/" target="_blank">https://veridu.com/submit/</a>
+		<a href="mailto:support@veridu.com" target="_blank">support@veridu.com</a>
 	</div>
 
 	<br>
 
 	<address>
 		Media enquiry? <br>
-		Contact: <a href="mailto:marketing@veridu.com">marketing@veridu.com</a>
+        <a href="mailto:marketing@veridu.com">marketing@veridu.com</a>
 	</address>
 
 	<address>
