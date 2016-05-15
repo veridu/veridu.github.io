@@ -205,8 +205,8 @@ layout: blank
 		<br>
 		<ul class="media-list media-list--video">
 			<li >
-				<div style="background-image: url(http://img.youtube.com/vi/aczCaHh9yJo/hqdefault.jpg); background-position: center 36%; background-size: 140% auto;">
-					<h4>Interview with Rasmus Groth at FinTech Connect</h4>
+				<div style="background-size: 120% auto; background-position: 0px -25px;">
+					<h4></h4>
 
 					<button type="button" class="btn btn-primary" data-iframe-id="video-1">
 						<i class="material-icons">&#xE039;</i>
@@ -214,8 +214,8 @@ layout: blank
 				</div>
 			</li>
 			<li>
-				<div style="background-image: url(img/ian-video-thumb.png); background-position: top left; background-size: 160% auto; background-repeat: no-repeat;">
-					<h4>Interview with Ian Green at FinTech Connect</h4>
+				<div style="background-position: top left; background-size: 120% auto; background-position: 0px -25px;">
+					<h4></h4>
 
 					<button type="button" class="btn btn-primary" data-iframe-id="video-2">
 						<i class="material-icons">&#xE039;</i>
@@ -223,8 +223,8 @@ layout: blank
 				</div>
 			</li>
 			<li>
-				<div style="background-image: url(http://img.youtube.com/vi/II1_oO_ULNo/hqdefault.jpg); background-position: center 36%; background-size: 170% auto;">
-					<h4>Introduction to Veridu</h4>
+				<div style="background-size: 120% auto; background-position: 0px -25px;">
+					<h4></h4>
 
 					<button type="button" class="btn btn-primary" data-iframe-id="video-3">
 						<i class="material-icons">&#xE039;</i>
@@ -358,3 +358,20 @@ layout: blank
 </div>
 
 <script src="javascript/resource-centre.js" charset="utf-8"></script>
+<script type="text/javascript">
+
+window.addEventListener('DOMContentLoaded', function () {
+    // $.getJSON('http://www.mynewsdesk.com/services/pressroom/list/veridu-com/?limit=3&offset=0&order=published&format=json&locale=en', function(response) {});
+
+    $.getJSON('https://www.googleapis.com/youtube/v3/search?key=AIzaSyAvUUpe0M1TdAeatGioOjXFi7bqcsmGyfI&channelId=UC71f4rr0XBjx6df2eIooM2w&part=snippet,id&order=date&maxResults=3', function(response) {
+        var videos = response.items;
+        var list = $('.media-list--video li');
+        var listItems = [ $(list[0]), $(list[1]), $(list[2]) ];
+        console.log();
+        response.items.map(function (video, index) {
+            listItems[index].find('h4').text(video.snippet.title);
+            listItems[index].find('> div').css('background-image', 'url(' +video.snippet.thumbnails.high.url +')');
+        });
+    });
+});
+</script>
