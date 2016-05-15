@@ -11,7 +11,7 @@ layout: blank
 			<p>
 				Learn about us, our identity verification solutions, <br> our customers and general industry trends.
 			</p>
-			<br>
+			<br />
 			<div class="btn-container">
 				<button type="button" class="btn btn-primary btn--color--white" id="introduction-button" onclick="pushToDrip('Resource Centre: Clicked to watch introduction video')" >
 					<i class="material-icons">&#xE039;</i>
@@ -376,28 +376,41 @@ layout: blank
 			<div class="video-overlay__close" role="button" onclick="hideVideo()">
 				<i class="material-icons">&#xE5CD;</i> <span>close</span>
 			</div>
-			<iframe class="video video--youtube" src="//www.youtube.com/embed/aczCaHh9yJo?enablejsapi=1" id="video-1" frameborder="0" allowfullscreen ></iframe>
-			<iframe class="video video--vimeo" src="https://player.vimeo.com/video/149493523?api=1" id="video-2" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-			<iframe class="video video--youtube" src="//www.youtube.com/embed/II1_oO_ULNo?enablejsapi=1" id="video-3" frameborder="0" allowfullscreen ></iframe>
+			<!-- <iframe class="video video--youtube" src="//www.youtube.com/embed/aczCaHh9yJo?enablejsapi=1" id="video-1"    frameborder="0" allowfullscreen ></iframe>
+			<iframe class="video video--vimeo"   src="https://player.vimeo.com/video/149493523?api=1"    id="video-2"         frameborder="0" allowfullscreen></iframe> -->
+			<iframe class="video video--youtube" src="//www.youtube.com/embed/II1_oO_ULNo?enablejsapi=1" id="video-intro"    frameborder="0" allowfullscreen ></iframe>
 		</div>
 	</div>
 </div>
 
-<script src="javascript/resource-centre.js" charset="utf-8"></script>
 <script type="text/javascript">
 
 window.addEventListener('DOMContentLoaded', function () {
     // $.getJSON('http://www.mynewsdesk.com/services/pressroom/list/veridu-com/?limit=3&offset=0&order=published&format=json&locale=en', function(response) {});
 
     $.getJSON('https://www.googleapis.com/youtube/v3/search?key=AIzaSyAvUUpe0M1TdAeatGioOjXFi7bqcsmGyfI&channelId=UC71f4rr0XBjx6df2eIooM2w&part=snippet,id&order=date&maxResults=3', function(response) {
-        var videos = response.items;
-        var list = $('.media-list--video li');
-        var listItems = [ $(list[0]), $(list[1]), $(list[2]) ];
-        console.log();
+        var videos = response.items,
+            list = $('.media-list--video li'),
+            listItems = [ $(list[0]), $(list[1]), $(list[2]) ],
+            $videosContainer = $('.video-overlay__content > div');
+
         response.items.map(function (video, index) {
+            $videosContainer.append('<iframe class="video video--youtube" src="//www.youtube.com/embed/'+ video.id.videoId +'?enablejsapi=1" id="video-'+ index +'" frameborder="0" allowfullscreen></iframe>');
             listItems[index].find('h4').text(video.snippet.title);
+            listItems[index].find('button').click(ytBtHandler);
+            listItems[index].find('button').data('iframe-id', 'video-' + index);
             listItems[index].find('> div').css('background-image', 'url(' +video.snippet.thumbnails.high.url +')');
         });
     });
+
+    function ytBtHandler() {
+		var player,
+			id = $(this).data('iframe-id');
+		if (id) {
+			player = players[id];
+			showVideo(id);
+		}
+    }
 });
 </script>
+<script src="javascript/resource-centre.js" charset="utf-8"></script>

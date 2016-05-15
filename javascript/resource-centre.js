@@ -21,11 +21,12 @@
 		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 		$('#introduction-button').click(function () {
-			showVideo('video-3');
+			showVideo('video-intro');
 		});
 
 		function showVideo(id) {
 			pushToDrip('Clicked to watch video on Resource Centre #' + id);
+
 			$('.video-overlay').fadeIn();
 			$('.video-overlay').css('display', 'table');
 			$('#' + id).show();
@@ -71,7 +72,10 @@
 var players = {}, ids = [];
 
 function onYouTubePlayerAPIReady() {
-	var iframes = document.querySelectorAll('iframe.video.video--youtube');
+	var iframes = $('.video-overlay__content iframe');
+
+    if (iframes.length == 1)
+        setTimeout(onYouTubePlayerAPIReady, 500);
 
 	for (var i = 0; i < iframes.length; i++) {
 		var id = iframes[i].id;
