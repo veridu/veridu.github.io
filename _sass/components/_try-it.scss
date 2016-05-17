@@ -405,7 +405,7 @@ div.try-it {
                     &.state--disabled {
                         margin-top: 0;
                         position: absolute;
-                        bottom: em(50);
+                        bottom: 0
                     }
                     .take-me-to-account {
                         display: none;
@@ -520,6 +520,17 @@ div.try-it {
 
 // header try-it
 .header {
+
+    .header__try-it__container {
+        background-color: gray;
+        position: relative;
+        // position: relative;
+
+        .veridu-container {
+            position: relative;
+        }
+    }
+
     div.try-it {
         display: none;
         left: 0;
@@ -529,6 +540,10 @@ div.try-it {
         z-index: 1000;
         padding: 2em 0;
         box-shadow: 0 8px 6px rgba(0,0,0,0.26);
+
+        > * {
+            @extend .veridu-container;
+        }
 
         @media (max-width: $screen-xs-max) {
             display: none !important;

@@ -328,8 +328,8 @@ window.adjustHeights = function($el) {
 
 				if (! vm.account.email) {
 					vm.account = {
-						name: user.name.value,
-						email: user.email.value
+						name: user.name.value
+						// email: user.email.value
 					}
 				}
 
@@ -518,11 +518,19 @@ window.adjustHeights = function($el) {
 
 		vm.errors = {};
 		function createAccount() {
+            var error = false;
+
 			// validation
 			if (! vm.account.personal  && (! vm.account.company || vm.account.company == '') ) {
 				vm.errors.personal_account = true;
-				return;
+                error = true;
 			}
+			if (! (vm.account.email && emailRegex.test(vm.account.email))) {
+				vm.errors.email = true;
+                error = true
+			}
+            if (error)
+                return; 
 
             goal('account-created');
 
