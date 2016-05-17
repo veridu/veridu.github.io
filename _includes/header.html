@@ -44,9 +44,300 @@
 		</div>
 
 	</nav>
-    
+
     <div class="header__try-it__container">
-        <div class="v-container" ng-include="'templates/try-it.html'"></div>
+        <div class="v-container" >
+            <div class="try-it">
+                <div class="try-it__call">
+                    <div ng-show="! App.Widget.user">
+                        <h3>
+                            <span >Try Veridu for yourself.</span>
+                        </h3>
+                        <p>
+                            Log in to your accounts to access your own profile.
+                        </p>
+                    </div>
+                    <div ng-show="App.Widget.user &&  ! creatingAccount">
+                        <h4>
+                            <span >Your Veridu profile</span>
+                        </h4>
+                        <br>
+                    </div>
+                </div>
+                <div class="veridu-profile hidden" ng-class="App.Widget.user ? 'animated fadeIn' : 'hidden'">
+                    <div class="v-row">
+                        <div class="veridu-profile__photo-container" >
+                            <div style="background-image: url(({App.Widget.user.picture || 'https://placeholdit.imgix.net/~text?txtsize=25&txt=Your+Picture&w=300&h=300'}))"></div>
+                        </div>
+
+                        <div class="veridu-profile__progress-container">
+                            <div>
+                                <br>
+                                <h1>~({App.Widget.hoursToFake | number :0})</h1> <br class="visible-xs"> <span class="hours-to-fake">HOURS</span>
+                                <p>
+                                    invested in your profile
+                                </p>
+                                <div class="progress" >
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="({App.Widget.user.overall > 0.6 ? 100 : 70})" aria-valuemin="0" aria-valuemax="100" style="width: ({App.Widget.user.overall > 0.6 ? 100 : 70})%;">
+                                    <p>
+                                        <span ng-bind="App.Widget.user.overall > 0.6 ? App.Widget.user.name.value : 'Partially verified'"></span>
+                                        <span class="attributeValue"><img ng-show="App.Widget.user.overall > 0.6" src="img/verified-white.png" width="48px" alt="verified" /></span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div class="veridu-profile__progress-container__actions">
+                                    <span onclick="$('.try-it__buttons').slideToggle(); $(this).find('i').toggleClass('rotate45');">
+                                        <i id="improve-scores-toggler" class="transitions rotate45 material-icons">&#xE5CD;</i>
+                                        <span>Improve score</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="veridu-profile__info-container">
+                            <span class="veridu-profile__info-container__price-label">
+                                FROM
+                            </span>
+                            <h1 class="veridu-profile__info-container__price">£0.10<span>&nbsp;/&nbsp;CHECK</span></h1>
+                            <p>
+                                Start verifying users today:
+                            </p>
+                            <button type="button" class="btn btn-block btn-primary" ng-click="creatingAccount = true" onclick="$('.try-it__create-account').slideToggle(); $('.veridu-profile').slideToggle(); $('.try-it__buttons').slideUp(); $('#improve-scores-toggler').toggleClass('rotate45');">Create Account</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="v-row try-it__buttons" ng-class="{'try-it__buttons--hidden' : App.Widget.user}"  >
+                    <div class="buttons-container">
+                        <div>
+                            <button class="btn btn--loading btn-primary btn-lg" ng-click="App.auth('facebook')" ng-class="{ active : App.user.auth.facebook || App.loading == 'facebook', loading: App.Widget.state == 'SCRAPING' && App.loading == 'facebook'}">
+                                <span>
+                                    <i class="icn icn-facebook"></i>
+                                </span>
+                                <span>
+                                    Facebook
+                                </span>
+                                <div class="spinner">
+                                    <div class="spinner-wrapper">
+                                        <div class="rotator">
+                                            <div class="inner-spin"></div>
+                                            <div class="inner-spin"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div>
+                            <button class="btn btn--loading btn-primary btn-lg" ng-click="App.auth('linkedin')" ng-class="{ active : App.user.auth.linkedin || App.loading == 'linkedin' , loading: App.Widget.state == 'SCRAPING' && App.loading == 'linkedin'}">
+                                <span>
+                                    <i class="icn icn-linkedin"></i>
+                                </span>
+                                <span>
+                                    LinkedIn
+                                </span>
+                                <div class="spinner">
+                                    <div class="spinner-wrapper">
+                                        <div class="rotator">
+                                            <div class="inner-spin"></div>
+                                            <div class="inner-spin"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
+
+                        <div>
+                            <button class="btn btn--loading btn-primary btn-lg" ng-click="App.auth('google')" ng-class="{ active : App.user.auth.google || App.loading == 'google', loading: App.Widget.state == 'SCRAPING' && App.loading == 'google'}">
+
+                                <span>
+                                    <i class="icn icn-googleplus"></i>
+                                </span>
+                                <span>
+                                    Google
+                                </span>
+                                <div class="spinner">
+                                    <div class="spinner-wrapper">
+                                        <div class="rotator">
+                                            <div class="inner-spin"></div>
+                                            <div class="inner-spin"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div>
+                            <button class="btn btn--loading btn-primary btn-lg" ng-click="App.auth('twitter')" ng-class="{ active : App.user.auth.twitter || App.loading == 'twitter', loading: App.Widget.state == 'SCRAPING' && App.loading == 'twitter'}">
+                                <span>
+                                    <i class="icn icn-twitter"></i>
+                                </span>
+                                <span>
+                                    Twitter
+                                </span>
+                                <div class="spinner">
+                                    <div class="spinner-wrapper">
+                                        <div class="rotator">
+                                            <div class="inner-spin"></div>
+                                            <div class="inner-spin"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="hidden-xs" >
+                            <button class="btn btn--loading btn-primary btn-lg" ng-click="App.auth('amazon')" ng-class="{ active : App.user.auth.amazon || App.loading == 'amazon', loading: App.Widget.state == 'SCRAPING' && App.loading == 'amazon'}">
+                                <span>
+                                    <i class="icn icn-amazon"></i>
+                                </span>
+                                <span>
+                                    Amazon
+                                </span>
+                                <div class="spinner">
+                                    <div class="spinner-wrapper">
+                                        <div class="rotator">
+                                            <div class="inner-spin"></div>
+                                            <div class="inner-spin"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="hidden-xs">
+                            <button class="btn btn--loading btn-primary btn-lg" ng-click="App.auth('paypal')" ng-class="{ active : App.user.auth.paypal || App.loading == 'paypal', loading: App.Widget.state == 'SCRAPING' && App.loading == 'paypal'}">
+                                <span>
+                                    <i class="icn icn-paypal"></i>
+                                </span>
+                                <span>
+                                    Paypal
+                                </span>
+                                <div class="spinner">
+                                    <div class="spinner-wrapper">
+                                        <div class="rotator">
+                                            <div class="inner-spin"></div>
+                                            <div class="inner-spin"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="terms-of-use" style="margin-left:8.5px;">By using this service you accept our <a class="black-link" href="https://veridu.com/wiki/Terms_%26_Conditions" target="_blank" >terms of use</a></div>
+                </div>
+
+                <div class="v-row try-it__create-account">
+                    <div class="try-it__create-account__steps">
+                        <span class="try-it__create-account__steps__step try-it__create-account__steps__step--1">
+                            <div>
+                                <span>1</span>
+                            </div>
+                        </span>
+                        <span class="try-it__create-account__steps__step try-it__create-account__steps__step--2 step--disabled">
+                            <div>
+                                <span>2</span>
+                            </div>
+                        </span>
+                    </div>
+                    <div class="try-it__create-account__content">
+                        <div class="state state--create-account">
+                            <div class="state__title">
+                                <h4 >Did we get it right?</h4>
+                            </div>
+                            <br>
+                            <form id="create-account-form" ng-submit="App.createAccount()" novalidate="true">
+                                <div class="form-group material-input-container">
+                                    <input placeholder="Name" ng-model="App.account.name" type="text" required>
+                                </div>
+                                <div class="form-group material-input-container" ng-class="{ 'material-input-container--error' : App.errors.email}">
+                                    <input placeholder="Business email*" ng-model="App.account.email" type="email" required>
+                                </div>
+                                <div class="md-error" ng-show="(! App.account.email && App.errors.email)">
+                                    Business email is required
+                                </div>
+
+                                <div class="form-group material-input-container" ng-show="! App.account.personal" ng-class="(! App.account.personal && App.errors.personal_account) ? 'material-input-container--error' : ''">
+                                    <input placeholder="Company name*" ng-model="App.account.company" type="text" >
+                                </div>
+                                <div class="md-error" ng-show="(! App.account.personal && App.errors.personal_account)">
+                                    Company name is required
+                                </div>
+                                <button type="submit" class="btn btn-primary">
+                                    Create account
+                                </button>
+                            </form>
+                        </div>
+
+                        <div class="state state--disabled state--verify-others ">
+                            <div class="state__title">
+                                <h4>
+                                    <p>Next step:</p>
+                                    <span>Who else do you want to verify? (optional)</span>
+                                    <span class="hidden-disabled">
+                                        Test us out on someone else
+                                    </span>
+                                </h4>
+                            </div>
+                            <div class="hidden-disabled">
+                                <form  ng-submit="App.requestVerification()" novalidate>
+                                    <div >
+                                        <small>Your colleague, partner...</small>
+                                    </div>
+                                    <br>
+                                    <div class="form-group material-input-container" ng-class="App.errors.guest_name ? 'material-input-container--error' : ''" >
+                                        <input id="invite-name" placeholder="Their name" ng-model="App.invite.name" type="text">
+                                    </div>
+                                    <div class="md-error" ng-show="(App.errors.guest_name)">
+                                        Name is required
+                                    </div>
+
+                                    <div class="form-group material-input-container" ng-class="App.errors.guest_email ? 'material-input-container--error' : ''">
+                                        <input placeholder="Their email" ng-model="App.invite.email" type="email" required>
+                                    </div>
+                                    <div class="md-error" ng-show="(App.errors.guest_email)">
+                                        E-mail is required
+                                    </div>
+
+                                    <div ng-init="App.invite.text = 'I\'m testing out Veridu\'s social identity verification solution. Could you take a few seconds to verify yourself for me? Thanks!'" class="form-group material-input-container material-input-container--textarea">
+                                        <label for="invite-text" class="text-muted"><small>Personal message</small></label>
+                                        <textarea rows="3" id="invite-text" ng-model="App.invite.text"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="disabled" for="include-profile" ng-init="App.invite.profile = true">
+                                            <span class="v-check v-check--disabled">
+                                                <input type="checkbox"  id="include-profile" readonly="true" disabled checked>
+                                                <label for="account-personal">
+                                                    <i class="material-icons">&#xE5CA;</i>
+                                                </label>
+                                            </span>
+                                            <small>Include your profile</small>
+                                        </label>
+                                        <small>&nbsp;&nbsp;&nbsp; <a href="javascript:;" class="black-link" style="margin-bottom: 1px solid black; display:inline-block" onclick="showModal('verify-email')">Preview email</a> </small>
+
+                                    </div>
+                                    <div>
+                                        <button  type="submit" class="btn btn-primary" ng-disabled="App.submits.requestVerification">
+                                            Request verification
+                                        </button>
+                                    </div>
+                                    <br>
+                                    <a href="javascript:;" class="black-link" ng-click="App.skipVerification()">Skip this step</a>
+                                </div>
+                            </form>
+
+                            <div class="take-me-to-account">
+                                <a href="https://dashboard.veridu.com/login" class="btn btn-primary" target="_blank">Take me to my account</a>
+                                <a href="javascript:;" class="black-link" ng-click="App.showCreateAccount()">Verify another user</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
     </div>
 
 </header>
