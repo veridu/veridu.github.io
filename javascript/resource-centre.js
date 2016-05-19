@@ -27,26 +27,42 @@
 		function showVideo(id) {
 			pushToDrip('Clicked to watch video on Resource Centre #' + id);
 
-			$('.video-overlay').fadeIn();
-			$('.video-overlay').css('display', 'table');
-			$('#' + id).show();
-			vm.playing = id;
+            loadedVideo();
 
-			if (players[id].api) {
-				players[id].api('play');
-			} else {
-				players[id].playVideo();
-			}
+            function loadedVideo() {
+                if (typeof players[id].playVideo === 'function') {
+                    finish();
+                } else {
+                    setTimeout(loadedVideo, 500);
+                }
+            }
+
+            function finish() {
+                $('.video-overlay').fadeIn();
+    			$('.video-overlay').css('display', 'table');
+    			$('#' + id).show();
+    			vm.playing = id;
+
+    			if (players[id].api) {
+    				players[id].api('play');
+    			} else {
+                    if (typeof players[id].playVideo === 'function') {
+                        players[id].playVideo();
+                    }
+    			}
+            }
+
 		}
 
 		window.hideVideo = hideVideo;
 		window.addEventListener('keydown', function (evt) {
-			if (vm.playing && evt.keyCode == 27)
-				hideVideo();
+			if (vm.playing && evt.keyCode === 27) {
+                hideVideo();
+            }
 		});
 
 		window.addEventListener('click', function (evt) {
-			if (evt.target.className == 'video-overlay__content') {
+			if (evt.target.className === 'video-overlay__content') {
 				hideVideo();
 			}
 		});
@@ -55,10 +71,11 @@
 			$('#' + vm.playing).hide();
 			$('.video-overlay').fadeOut(function () {
 				if (players[vm.playing]) {
-					if (players[vm.playing].api)
-						players[vm.playing].api('pause');
-					else
-						players[vm.playing].pauseVideo();
+					if (players[vm.playing].api) {
+                        players[vm.playing].api('pause');
+                    } else {
+                        players[vm.playing].pauseVideo();
+                    }
 
 					delete vm.playing;
 				}
