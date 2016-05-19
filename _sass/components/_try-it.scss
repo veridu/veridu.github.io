@@ -559,3 +559,19 @@ div.try-it {
 
     }
 }
+
+li.try-it {
+    &.try-it--close {
+        a {
+            background-color: lighten($gray_light, 20%) !important;
+            border-bottom: 0 !important;
+        }
+
+        .try-it__text {
+            display: none !important;
+        }
+        .try-it__close {
+            display: block !important;
+        }
+    }
+}

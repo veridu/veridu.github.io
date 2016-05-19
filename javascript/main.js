@@ -1,3 +1,5 @@
+'use strict';
+
 // visible function
 !function(t){var i=t(window);t.fn.visible=function(t,e,o){if(!(this.length<1)){var r=this.length>1?this.eq(0):this,n=r.get(0),f=i.width(),h=i.height(),o=o?o:"both",l=e===!0?n.offsetWidth*n.offsetHeight:!0;if("function"==typeof n.getBoundingClientRect){var g=n.getBoundingClientRect(),u=g.top>=0&&g.top<h,s=g.bottom>0&&g.bottom<=h,c=g.left>=0&&g.left<f,a=g.right>0&&g.right<=f,v=t?u||s:u&&s,b=t?c||a:c&&a;if("both"===o)return l&&v&&b;if("vertical"===o)return l&&v;if("horizontal"===o)return l&&b}else{var d=i.scrollTop(),p=d+h,w=i.scrollLeft(),m=w+f,y=r.offset(),z=y.top,B=z+r.height(),C=y.left,R=C+r.width(),j=t===!0?B:z,q=t===!0?z:B,H=t===!0?R:C,L=t===!0?C:R;if("both"===o)return!!l&&p>=q&&j>=d&&m>=L&&H>=w;if("vertical"===o)return!!l&&p>=q&&j>=d;if("horizontal"===o)return!!l&&m>=L&&H>=w}}}}(jQuery);
 
@@ -9,12 +11,11 @@ window.getDocHeight =  function (){
 		D.body.offsetHeight, D.documentElement.offsetHeight,
 		D.body.clientHeight, D.documentElement.clientHeight
 	);
-}
+};
 
 window.scrollToHash = function (hash, speed, offset) {
-
-	var offset = offset || 53;
-	var speed = speed || 500;
+	offset = offset || 53;
+	speed = speed || 500;
 	var el = document.getElementById(hash);
 
 	if (el) {
@@ -23,7 +24,7 @@ window.scrollToHash = function (hash, speed, offset) {
 		}, speed);
 	}
 
-}
+};
 
 // useful globals
 window.pushToDrip = function (eventLabel, type) {
@@ -39,15 +40,16 @@ window.pushToDrip = function (eventLabel, type) {
 			]
 		);
 	}
-}
+};
 
 window.$window = $(window);
 window.mbHelper = $('#mobile-indicator');
 
 window.adjustHeights = function($el) {
 	var coverHeight = $window.height() * 2/3;
-	if (typeof($el.css) == 'function')
-		return (window.mbHelper.is('visible')) ? $el.css('height', Math.max(coverHeight, 380)) : $el.css('height', Math.max(coverHeight, 610));
+	if (typeof($el.css) === 'function') {
+        return (window.mbHelper.is('visible')) ? $el.css('height', Math.max(coverHeight, 380)) : $el.css('height', Math.max(coverHeight, 610));
+    }
 
 	return false;
 };
@@ -59,7 +61,7 @@ window.adjustHeights = function($el) {
 	var dropdownMenu = $('.dropdown-menu');
 	var $nav = $('nav.nav');
 	var $integrationHeader = $('header .integration-container');
-	var fixed_header = $('nav.nav');
+	var fixedHeader = $('nav.nav');
 
 	// Fixed email form
 	var fixedContactForm = $('#fixed-contact-form');
@@ -94,8 +96,7 @@ window.adjustHeights = function($el) {
 		// hides try-it on window click
 		$window.click(function (evt) {
 			hideTryIt();
-			if (evt.target.className == 'v-modal__content') {
-
+			if (evt.target.className === 'v-modal__content') {
 				closeModal();
 			}
 		});
@@ -109,10 +110,11 @@ window.adjustHeights = function($el) {
 		window.addEventListener('scroll', function addShadow() {
 			var scrolled = document.documentElement.scrollTop || document.body.scrollTop ;
 			if (scrolled > 1){
-				fixed_header.addClass('shadowed');
+				fixedHeader.addClass('shadowed');
 				fixedContactContainer.css('display', 'table');
-			} else
-				fixed_header.removeClass('shadowed');
+			} else {
+                fixedHeader.removeClass('shadowed');
+            }
 		});
 
 		// google-material inputs
@@ -145,7 +147,7 @@ window.adjustHeights = function($el) {
 
 		// hides on ESC
 		window.$window.keydown(function(evt) {
-			if (evt.keyCode == 27) {
+			if (evt.keyCode === 27) {
 				fixedContactContainer.removeClass('active');
 				closeModal();
 			}
@@ -156,8 +158,9 @@ window.adjustHeights = function($el) {
 
 			event.preventDefault();
 
-			if (fixedContactButton.hasClass('sent'))
-				return false;
+			if (fixedContactButton.hasClass('sent')) {
+                return false;
+            }
 
 			// actually submits
 			if (fixedContactContainer.hasClass('active')) {
@@ -192,7 +195,7 @@ window.adjustHeights = function($el) {
 		menuToggler
 			.click(toggleMenu);
 
-		$(".solutions-submenu a")
+		$('.solutions-submenu a')
 			.click(closeMenu);
 
 		dropdownMenu.find('a').click(toggleMenu);
@@ -203,7 +206,7 @@ window.adjustHeights = function($el) {
 	function hideTryIt() {
 		if ($('li.try-it').hasClass('vis')) {
 			$('li.try-it').removeClass('vis');
-			fixed_header.removeClass('disabled-shadow');
+			fixedHeader.removeClass('disabled-shadow');
 			$integrationHeader.removeClass('vis');
 			$integrationHeader.addClass('invis');
 		}
@@ -214,7 +217,7 @@ window.adjustHeights = function($el) {
 		$('li.try-it').addClass('vis');
 		$integrationHeader.removeClass('invis');
 		$integrationHeader.addClass('vis');
-		fixed_header.addClass('disabled-shadow');
+		fixedHeader.addClass('disabled-shadow');
 		pushToDrip('Clicked "Try it" button on the website header');
 	}
 
@@ -530,7 +533,7 @@ window.adjustHeights = function($el) {
                 error = true
 			}
             if (error)
-                return; 
+                return;
 
             goal('account-created');
 
