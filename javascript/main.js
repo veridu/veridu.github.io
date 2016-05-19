@@ -275,9 +275,9 @@ window.adjustHeights = function($el) {
 		vm.pushTagsToDrip = pushTagsToDrip;
 		vm.submits = {};
 
-		function pushTagsToDrip(tags) {
+		function pushTagsToDrip(tags, email) {
 			_dcq.push(["identify", {
-				email: vm.Widget.user.email.value,
+				email: email || vm.Widget.user.email.value,
 				tags
 			}]);
 		}
@@ -337,6 +337,13 @@ window.adjustHeights = function($el) {
 				}
 
 				var details = vm.Widget.raw.details;
+				var facts = vm.Widget.raw.facts;
+                var linkedInEmail = false;
+                var hasLinkedin
+
+                if (facts && facts.linkedin && facts.linkedin.emailAddress) {
+                    linkedInEmail = facts.linkedin.emailAddress;
+                }
 
 				if (! vm.identified) {
 					goal('try-it');
@@ -348,16 +355,21 @@ window.adjustHeights = function($el) {
 						country: getHighestScoreAttribute(details.countryName),
 						job_title: getHighestScoreAttribute(details.currentWorkPosition),
 						profile_picture: getHighestScoreAttribute(details.profilePicture),
-						email: getHighestScoreAttribute(details.emailAddress),
+						email: linkedInEmail || getHighestScoreAttribute(details.emailAddress),
 						company_name: getHighestScoreAttribute(details.currentEmployer),
 						phone: vm.Widget.raw.user.phone && vm.Widget.raw.user.phone.value,
 						time_to_fake: vm.Widget.raw.user.time_invested && $filter('number')(vm.Widget.raw.user.time_invested, 0),
 						tags: ['tried_it']
 					};
+
+                    if (facts && facts.linkedin) {
+                        vm.userInfo.tags.push('LinkedIn');
+                    }
+
 					_dcq.push(["identify", vm.userInfo]);
 
 				} else {
-					vm.userInfo.new_email = getHighestScoreAttribute(details.emailAddress);
+					vm.userInfo.new_email = linkedInEmail || getHighestScoreAttribute(details.emailAddress);
 					vm.userInfo.time_to_fake = vm.Widget.raw.user.time_invested && $filter('number')(vm.Widget.raw.user.time_invested, 0);
 
 					if (details.emailAddress.length > 1) {

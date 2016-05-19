@@ -26,7 +26,6 @@
 
 		function showVideo(id) {
 			pushToDrip('Clicked to watch video on Resource Centre #' + id);
-
             loadedVideo();
 
             function loadedVideo() {
