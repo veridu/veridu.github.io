@@ -463,6 +463,8 @@ window.adjustHeights = function($el) {
 		}
 
 		function auth(service) {
+            goal('started-try-it');
+            
 			vm.loading = service;
 			if (vm.connected) {
 				vm.Veridu.Widget.provider_login(vm.cfg.user, service);
@@ -633,6 +635,9 @@ window.goal = function (label) {
 		break;
 		case 'newsletter':
 			ga('send', 'event', 'goal', 'Subscribed to newsletter', 'newsletter', 1);
+		break;
+		case 'started-try-it':
+			ga('send', 'event', 'goal', 'Started try it', 'try-it-started', 1);
 		break;
         case 'account-creation-started':
         ga('send', 'event', 'goal', 'Account creation started', 'account-creation-started', 1);
