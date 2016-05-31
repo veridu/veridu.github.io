@@ -95,7 +95,10 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
 
         <h5>Learn more about <a href="http://veridu.com" class="underline-a" target="_blank">Veridu’s Social KYC</a> solutions.</h5>
         
-                <figure>
+        <br>
+        <br>
+        
+        <figure>
 					<img src="img/articles/data.generated.jpg" class="world-coverage" alt="Social network user penetration worldwide">
 					<figcaption class="span-both">
 						<em>Source:
