@@ -36,7 +36,9 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
 			<div class="article__content">
         
         <p>
-          <quote><i>“It’s so easy to set up a fake Facebook/LinkedIn/Twitter profile!”.</i></quote>
+          <quote>
+            <i>“It’s so easy to set up a fake Facebook/LinkedIn/Twitter profile!”.</i>
+          </quote>
 				</p>
 				
 				<p>
@@ -48,7 +50,13 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
         </p>
         
         <p>
-          “What about the data breaches social media sites have suffered? It’s so easy for people to buy a fake profile!”. We hear that a lot too. But again, it’s not as simple as simply buying a fake profile from the dark web. When we talk about digital identity we’re referring to the whole life we live online - not one social media account taken in isolation.
+          <quote>
+            <i>“What about the data breaches social media sites have suffered? It’s so easy for people to buy a fake profile!”.</i>
+          </quote>
+        </p>
+        
+        <p>  
+          We hear that a lot too. But again, it’s not as simple as simply buying a fake profile from the dark web. When we talk about digital identity we’re referring to the whole life we live online - not one social media account taken in isolation.
         </p>
         
         <p>
@@ -57,9 +65,11 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
         
 				<h5>What’s wrong with a passport?</h5>
         
-        <quote>
-          “If I need to check someone’s identity, I’ll just ask to see their passport”.
-        </quote>
+        <p>
+          <quote>
+            “If I need to check someone’s identity, I’ll just ask to see their passport”.
+          </quote>
+        </p>
         
         <p>
           That’s not something we hear a lot. Why? Because the companies we deal with want to onboard their customers quickly, whilst giving them a frictionless digital experience. Fitting a paper-based identity verification step into a purely online transaction just doesn’t work. 
