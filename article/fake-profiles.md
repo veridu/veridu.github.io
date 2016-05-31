@@ -34,10 +34,10 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
 
 		<div class="article__content-wrapper">
 			<div class="article__content">
-
-        <quote>
-          <em>“It’s so easy to set up a fake Facebook/LinkedIn/Twitter profile!”.</em>
-        </quote>
+        
+        <p>
+          <quote><i>“It’s so easy to set up a fake Facebook/LinkedIn/Twitter profile!”.</i></quote>
+				</p>
 				
 				<p>
 					We hear that a lot and we can’t disagree. It is easy to create a fake social media account. But… how easy (and how long would it take) to set up fake accounts on multiple platforms that look both real and consistent?
