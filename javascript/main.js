@@ -327,8 +327,12 @@ window.adjustHeights = function($el) {
 
 		$scope.$watch('App.Widget.user', function (user, pastUser) {
 			if (user) {
-				vm.user = user;
+                goal('started-try-it');
+                if (user.overall > 0) {
+                    goal('try-it');
+                }
 
+				vm.user = user;
 				if (! vm.account.email) {
 					vm.account = {
 						name: user.name.value
@@ -346,7 +350,6 @@ window.adjustHeights = function($el) {
                 }
 
 				if (! vm.identified) {
-					goal('try-it');
 					vm.identified = true;
 
 					vm.userInfo = {
@@ -464,7 +467,7 @@ window.adjustHeights = function($el) {
 
 		function auth(service) {
             goal('started-try-it');
-            
+
 			vm.loading = service;
 			if (vm.connected) {
 				vm.Veridu.Widget.provider_login(vm.cfg.user, service);
@@ -640,7 +643,7 @@ window.goal = function (label) {
 			ga('send', 'event', 'goal', 'Started try it', 'try-it-started', 1);
 		break;
         case 'account-creation-started':
-        ga('send', 'event', 'goal', 'Account creation started', 'account-creation-started', 1);
+            ga('send', 'event', 'goal', 'Account creation started', 'account-creation-started', 1);
         break;
 		case 'account-created':
 			ga('send', 'event', 'goal', 'Account created', 'account-created', 1);
