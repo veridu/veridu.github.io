@@ -80,7 +80,7 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
         </p>
 
         <figure>
-					<img src="img/articles/crypto-wallets/world-coverage.png" class="world-coverage" alt="Social network user penetration worldwide">
+					<img src="img/articles/data.generated.jpg" class="world-coverage" alt="Social network user penetration worldwide">
 					<figcaption class="span-both">
 						<em>Social Network User Penetration worldwide, via any device, at least once per month. Source : eMarketer, April 2013</em>
 					</figcaption>
