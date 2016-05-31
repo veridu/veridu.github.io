@@ -9,7 +9,7 @@ keywords: card not present fraud, CNP fraudsters online false positive CNP trans
 ---
 <article>
 	<div class="article__body article__body--crypto-wallets">
-		<div class="article__cover article__cover--card-not-present" style="background-image: url({{img/articles/card-not-present/card-not-present.jpg}})">
+		<div class="article__cover article__cover--card-not-present" style="background-image: url({{page.cover}})">
 			<div class="article__cover__img_container">
 				<div class="article__cover__img_overlay">
 				</div>
