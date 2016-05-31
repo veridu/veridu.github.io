@@ -191,7 +191,7 @@ excerpt: Is ID verification holding you back in unbanked markets? It doesn’t h
 				<div class="v-tag v-tag--grey">Hosted</div>
 				<div class="clearfix"></div>
 				<div class="clearfix"><h5>Credibility scores</h5></div>
-				<div class="v-tag v-tag--success1">Time to fake</div>
+				<div class="v-tag v-tag--success1">Time invested</div>
 				<div class="v-tag v-tag--success1">Contact info</div>
 				<div class="v-tag v-tag--success1">Age</div>
 				<div class="v-tag v-tag--success1">Work</div>
