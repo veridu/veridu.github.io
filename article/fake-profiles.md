@@ -79,13 +79,6 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
           Furthermore, the companies we deal with want to grow globally, often into segments of the population that have been excluded from the mainstream financial system. These people may not have paper documents, but they do have mobiles and they do engage in social media. That’s why we’re seeing such tremendous interest in the use of social media for identity verification - we call it ‘Social KYC’.
         </p>
 
-        <figure>
-					<img src="img/articles/data.generated.jpg" class="world-coverage" alt="Social network user penetration worldwide">
-					<figcaption class="span-both">
-						<em>Social Network User Penetration worldwide, via any device, at least once per month. Source : eMarketer, April 2013</em>
-					</figcaption>
-				</figure>
-
         <h5>What’s the score with Social KYC?</h5>
         
         <p>
@@ -101,6 +94,15 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
         </p>
 
         <h5>Learn more about <a href="http://veridu.com" class="underline-a" target="_blank">Veridu’s Social KYC</a> solutions.</h5>
+        
+                <figure>
+					<img src="img/articles/data.generated.jpg" class="world-coverage" alt="Social network user penetration worldwide">
+					<figcaption class="span-both">
+						<em>Source:
+						<a href="http://wersm.com/how-much-data-is-generated-every-minute-on-social-media/" class="underline-a" target="_blank">We Are Social</a>
+						</em>
+					</figcaption>
+				</figure>
 
 			</div>
 
