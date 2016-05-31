@@ -36,7 +36,7 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
 			<div class="article__content">
 
         <quote>
-          “It’s so easy to set up a fake Facebook/LinkedIn/Twitter profile!”.
+          <em>“It’s so easy to set up a fake Facebook/LinkedIn/Twitter profile!”.</em>
         </quote>
 				
 				<p>
