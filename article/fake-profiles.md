@@ -98,6 +98,7 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
         <br>
         <br>
         
+        <h5>How much data is shared on social media?</h5>
         <figure>
 					<img src="img/articles/data.generated.jpg" class="world-coverage" alt="Social network user penetration worldwide">
 					<figcaption class="span-both">
