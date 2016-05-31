@@ -128,17 +128,6 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
 
 				<div class="clearfix"></div>
 
-				<div class="download-ct">
-					<button class="btn btn-primary btn-primary--text-white" onclick="showPdf()">
-						<table>
-							<tr>
-								<td>Download PDF</td>
-								<td><i class="material-icons">&#xE2C4;</i></td>
-							</tr>
-						</table>
-					</button>
-				</div>
-
 			</div>
 		</div>
 	</div>
