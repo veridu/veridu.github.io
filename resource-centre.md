@@ -104,9 +104,9 @@ layout: blank
 
 <div class="page__section pag__section--gray">
 	<div class="page__section__content">
-		<h3 class="page__section__title">White papers </h3>
+		<h3 class="page__section__title">White papers & Articles</h3>
 		<p>
-			Dig deeper into the issues that are relevant to you. Explore our selection of white papers.
+			Dig deeper into the issues that are relevant to you. Explore our selection of white papers and articles.
 		</p>
 		<br>
 
@@ -120,6 +120,18 @@ layout: blank
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
 							<i class="material-icons">&#xE2C4;</i>
+						</button>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.veridu.com/article/fake-profiles" class="block-link" target="_blank">
+					<div class="block-link__text">
+						Detecting fake profiles
+					</div>
+					<div class="block-link__icon">
+						<button type="button" class="btn btn-primary btn--color--white">
+							<i class="material-icons">&#xE157;</i>
 						</button>
 					</div>
 				</a>
