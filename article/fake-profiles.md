@@ -67,7 +67,7 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
         
         <p>
           <quote>
-            “If I need to check someone’s identity, I’ll just ask to see their passport”.
+            <i>“If I need to check someone’s identity, I’ll just ask to see their passport”.</i>
           </quote>
         </p>
         
