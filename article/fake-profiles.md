@@ -101,8 +101,9 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
         <figure>
 					<img src="img/articles/data.generated.jpg" class="world-coverage" alt="Social network user penetration worldwide">
 					<figcaption class="span-both">
-						<em>Source:
-						<a href="http://wersm.com/how-much-data-is-generated-every-minute-on-social-media/" class="underline-a" target="_blank">We Are Social</a>
+						<em>
+						  <br>
+						  Source: <a href="http://wersm.com/how-much-data-is-generated-every-minute-on-social-media/" class="underline-a" target="_blank">We Are Social</a>
 						</em>
 					</figcaption>
 				</figure>
