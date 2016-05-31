@@ -107,16 +107,12 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
 			<div class="article__tags__container">
 				<div class="clearfix"><h5>Sectors</h5></div>
 				<span class="v-tag v-tag--blue">Payments</span>
+				<span class="v-tag v-tag--blue">Sharing Economy</span>
 
 				<div class="clearfix"><h5>Authentication</h5></div>
 				<div class="v-tag v-tag--orange">Social Media</div>
 				<div class="v-tag v-tag--orange">Online Services</div>
-				<div class="v-tag v-tag--orange">SMS</div>
-				<div class="v-tag v-tag--orange">2FA</div>
-				<div class="v-tag v-tag--orange">Email</div>
 				<div class="v-tag v-tag--orange">Dynamic KBA</div>
-				<div class="v-tag v-tag--orange">Documents</div>
-				<div class="v-tag v-tag--orange">Contact</div>
 
 				<div class="clearfix"><h5>Integration</h5></div>
 				<div class="v-tag v-tag--grey">API</div>
@@ -126,7 +122,7 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
 				<div class="clearfix"></div>
 
 				<div class="clearfix"><h5>Credibility scores</h5></div>
-				<div class="v-tag v-tag--success1">Time to fake</div>
+				<div class="v-tag v-tag--success1">Time invested</div>
 				<div class="v-tag v-tag--success1">Contact info</div>
 				<div class="v-tag v-tag--success1">Age</div>
 				<div class="v-tag v-tag--success1">Work</div>
@@ -134,15 +130,14 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
 				<div class="clearfix"></div>
 
 				<div class="clearfix"><h5>Insight</h5></div>
-				<div class="v-tag v-tag--success2">Crypto user</div>
+				<div class="v-tag v-tag--success2">Frequent Traveller</div>
 
 				<div class="clearfix"><h5>Warnings</h5></div>
 				<div class="v-tag v-tag--warning2">Empty profile</div>
 				<div class="v-tag v-tag--warning2">Known fake</div>
-				<div class="v-tag v-tag--warning2">PEP</div>
-				<div class="v-tag v-tag--warning2">Sanctions</div>
 				<div class="v-tag v-tag--warning2">Silly name</div>
 				<div class="v-tag v-tag--warning2">Celebrity name</div>
+				<div class="v-tag v-tag--warning2">New Profile</div>
 
 				<div class="clearfix"></div>
 
