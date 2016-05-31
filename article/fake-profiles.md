@@ -35,7 +35,7 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
 		<div class="article__content-wrapper">
 			<div class="article__content">
 
-        <quote >
+        <quote>
           “It’s so easy to set up a fake Facebook/LinkedIn/Twitter profile!”.
         </quote>
 				
@@ -57,8 +57,12 @@ excerpt: Social KYC is a reality, and as the push for financial inclusion contin
         
 				<h5>What’s wrong with a passport?</h5>
         
+        <quote>
+          “If I need to check someone’s identity, I’ll just ask to see their passport”.
+        </quote>
+        
         <p>
-          “If I need to check someone’s identity, I’ll just ask to see their passport”. That’s not something we hear a lot. Why? Because the companies we deal with want to onboard their customers quickly, whilst giving them a frictionless digital experience. Fitting a paper-based identity verification step into a purely online transaction just doesn’t work. 
+          That’s not something we hear a lot. Why? Because the companies we deal with want to onboard their customers quickly, whilst giving them a frictionless digital experience. Fitting a paper-based identity verification step into a purely online transaction just doesn’t work. 
         </p>
 
         <p>
