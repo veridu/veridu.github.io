@@ -104,7 +104,7 @@ layout: blank
 
 <div class="page__section pag__section--gray">
 	<div class="page__section__content">
-		<h3 class="page__section__title">White papers & Articles</h3>
+		<h3 class="page__section__title">White papers & articles</h3>
 		<p>
 			Dig deeper into the issues that are relevant to you. Explore our selection of white papers and articles.
 		</p>
