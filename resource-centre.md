@@ -4,7 +4,7 @@ class: resource-centre
 layout: blank
 ---
 <div class="page__cover-container">
-	<div class="page__cover" style="background-image: url(img/resource-page-cover-2.0.3.jpg)" >
+	<div class="page__cover" style="background-image: url(img/resource-page-cover-2.0.4.jpg)" >
 		<div class="page__cover__overlay"></div>
 		<div class="page__cover__content">
 			<h1>Welcome to Veridu's <br class="visible-xs visible-sm"> Resource Centre</h1>
