@@ -51,7 +51,7 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="resources/merchants.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Merchants PDF')" class="block-link" target="_blank">
+				<a href="resources/veridu-for-marketplaces.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Merchants PDF')" class="block-link" target="_blank">
 					<div class="block-link__text">
 						Veridu for Marketplaces
 					</div>
