@@ -53,7 +53,7 @@ layout: blank
 			<li>
 				<a href="resources/merchants.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Merchants PDF')" class="block-link" target="_blank">
 					<div class="block-link__text">
-						Veridu for Merchants
+						Veridu for Marketplaces
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
