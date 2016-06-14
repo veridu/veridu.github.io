@@ -47,7 +47,7 @@ cover: img/bridge.jpeg
 			<h3>UK HEADQUARTERS</h3>
 			Wework Moorgate<br>
 			1 Fore Street<br>
-			London, EC2Y 5EJ<br>
+			London, EC2Y 9DT<br>
 			United Kingdom
 		</div>
 	</address>
@@ -127,7 +127,7 @@ cover: img/bridge.jpeg
 	<address>
 		Visiting Veridu HQ? <br>
 		1 Fore Street <br>
-		London, EC2Y 5EJ <br>
+		London, EC2Y 9DT <br>
 		Our nearest tube station is Moorgate. <br>
 
 		<a href="https://www.google.com/maps?ll=51.52058,-0.099765&z=17&t=m&hl=en-US&gl=BR&mapclient=embed&q=1+Fore+St+London+EC2Y+5EJ+UK" target="_blank">Google map</a>

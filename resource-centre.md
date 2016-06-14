@@ -51,13 +51,13 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="https://www.veridu.com/article/cryptocurrency-wallets.html" class="block-link" target="_blank">
+				<a href="resources/veridu-for-marketplaces.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Merchants PDF')" class="block-link" target="_blank">
 					<div class="block-link__text">
-						Veridu for Crypto Currency
+						Veridu for Marketplaces
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE157;</i>
+							<i class="material-icons">&#xE2C4;</i>
 						</button>
 					</div>
 				</a>
@@ -94,6 +94,18 @@ layout: blank
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
 							<i class="material-icons">&#xE2C4;</i>
+						</button>
+					</div>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.veridu.com/article/cryptocurrency-wallets.html" class="block-link" target="_blank">
+					<div class="block-link__text">
+						Veridu for Crypto Currency
+					</div>
+					<div class="block-link__icon">
+						<button type="button" class="btn btn-primary btn--color--white">
+							<i class="material-icons">&#xE157;</i>
 						</button>
 					</div>
 				</a>
