@@ -308,6 +308,12 @@ window.adjustHeights = function($el) {
             }
         });
 
+        vm.cookie = document.cookie;
+        $scope.$watch('App.cookie', function (cur, past) {
+            var evt = (! cur) ? (new CustomEvent('cookies.new')) : (new CustomEvent('cookies.accepted'));
+            window.dispatchEvent(evt);
+        });
+
         function setItem(key, value) {
             $window.localStorage.setItem(key, JSON.stringify(value));
         }
@@ -639,9 +645,10 @@ window.adjustHeights = function($el) {
 
 function load() {
     window.removeEventListener('load', load, false);
-
+    console.log('hello');
     if (window.location.hash) {
-        window.scrollToHash(window.location.hash.replace('#','') + '-wrapper');
+        var ctName = window.location.hash.replace('#','').replace('/', '');
+        window.scrollToHash(ctName + '-wrapper');
     }
 }
 
@@ -688,4 +695,18 @@ window.closeModal = function () {
 window.showModal = function (id) {
     $('body').css('overflow', 'hidden');
     $('#' + id).addClass('vis');
+}
+
+window.toggleMenu = toggleMenu;
+
+// toggle menu functions
+function toggleMenu (e) {
+    var $nav = $('nav.nav');
+    e.stopPropagation();
+    if ($nav.hasClass('collapsed')) {
+        $nav.css('height', $window.height() + 150);
+    } else {
+        $nav.css('height', '3.6em');
+    }
+    $nav.toggleClass('collapsed');
 }

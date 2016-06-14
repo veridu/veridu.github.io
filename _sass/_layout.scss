@@ -209,7 +209,7 @@
     width: 100%;
 }
 
-.main-container {    
+.main-container {
 	@include make-row();
 	padding-top: em(61);
     &.wow {
@@ -729,6 +729,13 @@ footer {
     bottom: em(20);
     right: em(20);
 
+    &.cookie-not-accepted {
+        bottom: em(69);
+        @media(max-width: $screen-xs-max) {
+            bottom: em(85);
+        }
+    }
+
     @media (min-width: $screen-sm-min) {
 
         div.fixed-contact__input-container {
@@ -835,5 +842,51 @@ footer {
         @media (min-width: $screen-sm-min) {
             display: none !important
         }
+    }
+}
+
+div.cookie-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    padding: em(6);
+    text-align: center;
+    background-color: #fafafa;
+    z-index: 10000000000;
+    box-shadow: $material-shadow-1-both;
+    display: none;
+
+    button {
+        border-radius: 5px;
+        // height: 2.em;
+        // line-height: 1.55;
+        margin-left: 0.8em;
+        margin-right: 0.8em;
+        border: 1px solid $gray-light;
+        background-color: rgba(white, 0.15);
+        border: solid 2px #DDDDDD;
+        color: $brand-primary-border-color;
+        transition: background-color 0.25s linear !important;
+        border-radius: 10px !important;
+
+        &:hover, &:active, &:focus {
+            border-width: 2px !important;
+            color: $brand-primary-border-color !important;
+            box-shadow: none !important;
+        }
+        &:hover {
+            border-color: #DDDDDD !important;
+            background-color: #DDDDDD !important;
+        }
+        &:active, &:focus {
+            border-color: #BFBFBF !important;
+            background-color: #BFBFBF !important;
+        }
+
+    }
+    a {
+        font-size: 0.8em
     }
 }
