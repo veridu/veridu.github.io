@@ -47,7 +47,7 @@ cover: img/bridge.jpeg
 			<h3>UK HEADQUARTERS</h3>
 			Wework Moorgate<br>
 			1 Fore Street<br>
-			London, EC2Y 5EJ<br>
+			London, EC2Y 9DT<br>
 			United Kingdom
 		</div>
 	</address>
