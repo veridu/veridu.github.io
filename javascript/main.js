@@ -645,7 +645,6 @@ window.adjustHeights = function($el) {
 
 function load() {
     window.removeEventListener('load', load, false);
-    console.log('hello');
     if (window.location.hash) {
         var ctName = window.location.hash.replace('#','').replace('/', '');
         window.scrollToHash(ctName + '-wrapper');
