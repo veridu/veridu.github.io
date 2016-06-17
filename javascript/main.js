@@ -309,10 +309,10 @@ window.adjustHeights = function($el) {
         });
 
         vm.cookie = document.cookie;
-        $scope.$watch('App.cookie', function (cur, past) {
-            var evt = (! cur) ? (new CustomEvent('cookies.new')) : (new CustomEvent('cookies.accepted'));
-            window.dispatchEvent(evt);
-        });
+
+        var accepted = window.localStorage.getItem('acceptedCookies');
+        var evt = (! accepted) ? (new CustomEvent('cookies.new')) : (new CustomEvent('cookies.accepted'));
+        window.dispatchEvent(evt);
 
         function setItem(key, value) {
             $window.localStorage.setItem(key, JSON.stringify(value));
