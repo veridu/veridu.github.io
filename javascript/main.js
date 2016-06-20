@@ -28,6 +28,8 @@ window.scrollToHash = function (hash, speed, offset) {
 
 // useful globals
 window.pushToDrip = function (eventLabel, type) {
+    if (! window._dcq)
+        return;
     type = type || 'track';
     if (typeof(_dcq) !== 'undefined') {
         _dcq.push(
@@ -176,7 +178,8 @@ window.adjustHeights = function($el) {
                     fixedContactButton.addClass('sent');
                     fixedContactContainer.find('.thank-you').toggleClass('animated fadeIn');
                     // sends e-mail
-                    ga('send', 'event', 'Bottom-fixed Form', 'submit', 'Drip email form submitted');
+                    if (window.ga)
+                        ga('send', 'event', 'Bottom-fixed Form', 'submit', 'Drip email form submitted');
                     this.submit();
 
                 }
@@ -277,6 +280,8 @@ window.adjustHeights = function($el) {
         vm.submitContactUs = submitContactUs;
 
         function pushTagsToDrip(tags, email) {
+            if (! window._dcq)
+                return;
             _dcq.push(["identify", {
                 email: email || vm.Widget.user.email.value,
                 tags
@@ -394,7 +399,8 @@ window.adjustHeights = function($el) {
                         vm.userInfo.tags.push('LinkedIn');
                     }
 
-                    _dcq.push(["identify", vm.userInfo]);
+                    if (window._dcq)
+                        _dcq.push(["identify", vm.userInfo]);
 
                 } else {
                     vm.userInfo.new_email = linkedInEmail || getHighestScoreAttribute(details.emailAddress);
@@ -406,7 +412,8 @@ window.adjustHeights = function($el) {
                                 vm.userInfo.secondary_email = email.value;
                         });
                     }
-                    _dcq.push(["identify", vm.userInfo]);
+                    if (window._dcq)
+                        _dcq.push(["identify", vm.userInfo]);
                 }
 
                 vm.mainSliderStates = ['customer'];
@@ -628,14 +635,18 @@ window.adjustHeights = function($el) {
             vm.userInfo.personal_account = !! vm.account.personal;
             vm.userInfo.connected_accounts = vm.Widget.raw.provider;
 
-            _dcq.push(["identify", vm.userInfo]);
+            if (window._dcq) {
+                _dcq.push(["identify", vm.userInfo]);
+            }
 
         }
     }
 
     $('#drip-contact-form').on('submit', function (event) {
         event.preventDefault();
-        ga('send', 'event', 'Contact Form', 'submit', 'Drip contact form submitted');
+        if (window.ga) {
+            ga('send', 'event', 'Contact Form', 'submit', 'Drip contact form submitted');
+        }
         this.submit();
     });
 
@@ -654,6 +665,9 @@ function load() {
 window.addEventListener('load', load, false);
 
 window.goal = function (label) {
+    if (! window.ga)
+        return;
+
     switch (label) {
         case 'contact-us':
             ga('send', 'event', 'goal', 'contact-us', 'Contact us', 1);
