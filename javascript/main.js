@@ -313,12 +313,6 @@ window.adjustHeights = function($el) {
             }
         });
 
-        vm.cookie = document.cookie;
-
-        var accepted = window.localStorage.getItem('acceptedCookies');
-        var evt = (! accepted) ? (new CustomEvent('cookies.new')) : (new CustomEvent('cookies.accepted'));
-        window.dispatchEvent(evt);
-
         function setItem(key, value) {
             $window.localStorage.setItem(key, JSON.stringify(value));
         }
@@ -722,4 +716,19 @@ function toggleMenu (e) {
         $nav.css('height', '3.6em');
     }
     $nav.toggleClass('collapsed');
+}
+
+cookieVerification();
+function cookieVerification() {
+    var accepted = true;
+    if (document.cookie.replace(/(?:(?:^|.*;\s*)first_visit\s*\=\s*([^;]*).*$)|^.*$/, "$1") !== "true") {
+        accepted = false;
+        var today = new Date();
+        var expirationDate = (today.getFullYear() + 1) + '/' + (today.getMonth() + 1) + '/' + today.getDate();
+        document.cookie = "first_visit=true; expires=" + expirationDate;
+    }
+
+  var evt = (! accepted) ? (new CustomEvent('cookies.new')) : (new CustomEvent('cookies.accepted'));
+  window.dispatchEvent(evt);
+
 }
