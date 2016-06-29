@@ -126,7 +126,7 @@ layout: blank
       <li>
 				<a href="resources/Sharing-economy-consumer-views-survey.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Social Economy Consumer Survey')" class="block-link" target="_blank">
 					<div class="block-link__text">
-						Sharing Economy Consumer Survey
+						Sharing Economy Survey
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
