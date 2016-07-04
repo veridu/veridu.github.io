@@ -116,14 +116,25 @@ layout: blank
 
 <div class="page__section pag__section--gray">
 	<div class="page__section__content">
-		<h3 class="page__section__title">White papers & articles</h3>
+		<h3 class="page__section__title">Thought Leadership</h3>
 		<p>
 			Dig deeper into the issues that are relevant to you. Explore our selection of white papers and articles.
 		</p>
 		<br>
 
 		<ul class="resource-list">
-
+      <li>
+				<a href="resources/Sharing-economy-consumer-views-survey.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Social Economy Consumer Survey')" class="block-link" target="_blank">
+					<div class="block-link__text">
+						Sharing Economy Survey
+					</div>
+					<div class="block-link__icon">
+						<button type="button" class="btn btn-primary btn--color--white">
+							<i class="material-icons">&#xE2C4;</i>
+						</button>
+					</div>
+				</a>
+			</li>
 			<li>
 				<a href="resources/social-kyc-for-cryptocurrencies.pdf" onclick="pushToDrip('Resource Centre: Downloaded - Social KYC For Cryptocurrencies PDF')" class="block-link" target="_blank">
 					<div class="block-link__text">
