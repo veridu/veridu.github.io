@@ -305,23 +305,7 @@ layout: blank
 			<li class="item--gray">
 				<div>
 					<h4>
-						<em>Identity Verification Startup Veridu Raises £800,000 Seed</em>
-						<br>
-						<br>
-						<p>
-							TechCrunch
-						</p>
-					</h4>
-
-					<button type="button" class="btn btn-primary" onclick="window.open('http://techcrunch.com/2015/10/14/veridu/'); pushToDrip('Resource Centre: News - Clicked on Identity Verification Startup Veridu Raises £800,000 Seed')">
-						<i class="material-icons">&#xE157;</i>
-					</button>
-				</div>
-			</li>
-			<li class="item--gray">
-				<div>
-					<h4>
-						<em>Veridu raises 1 million euros for global identity platform</em>
+						<em>Worldpay invests in startup Veridu</em>
 						<br>
 						<br>
 						<p>
@@ -329,23 +313,41 @@ layout: blank
 						</p>
 					</h4>
 
-					<button type="button" class="btn btn-primary" onclick="window.open('http://ecommercenews.eu/veridu-raises-1-million-euros-for-global-identity-platform/'); pushToDrip('Resource Centre: News - Clicked on Veridu raises 1 million euros for global identity platform')">
+					<button type="button" class="btn btn-primary" onclick="window.open('http://ecommercenews.eu/worldpay-invests-startup-veridu/'); pushToDrip('Resource Centre: News - Worldpay invests in startup Veridu - Ecommerce News')">
 						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
 			</li>
+
 			<li class="item--gray">
 				<div>
 					<h4>
-						<em>Veridu Secures Nearly $1.3M To Keep Identities Safe</em>
+						<em>Sharing economy: building trust between consumers and businesses</em>
 						<br>
 						<br>
 						<p>
-							PYMNTS
+							The Telegraph
 						</p>
 					</h4>
 
-					<button type="button" class="btn btn-primary" onclick="window.open('http://www.pymnts.com/news/2015/veridu-secures-nearly-1-3m-to-keep-identities-safe/'); pushToDrip('Resource Centre: News - Clicked on Veridu Secures Nearly $1.3M To Keep Identities Safe')">
+					<button type="button" class="btn btn-primary" onclick="window.open('http://www.telegraph.co.uk/business/sme-home/sharing-economy/'); pushToDrip('Resource Centre: News - Clicked on Sharing economy: building trust between consumers and businesses - The Telegraph')">
+						<i class="material-icons">&#xE157;</i>
+					</button>
+				</div>
+			</li>
+
+			<li class="item--gray">
+				<div>
+					<h4>
+						<em>Why the Payments Industry Should Use Social Media for Authentication</em>
+						<br>
+						<br>
+						<p>
+							n>genuity Journal
+						</p>
+					</h4>
+
+					<button type="button" class="btn btn-primary" onclick="window.open('http://tsys.com/ngenuity-journal/why-the-payments-industry-should-use-social-media-for-authentication.cfm'); pushToDrip('Resource Centre: News - Why the Payments Industry Should Use Social Media for Authentication - n>genuity-journal')">
 						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
