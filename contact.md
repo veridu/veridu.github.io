@@ -9,15 +9,14 @@ cover: img/bridge.jpeg
 	<div class="contact__body">
 		<div class="contact__cover">
 			<div class="contact__cover__overlay"></div>
-				<div class="map" id="map"></div>
-				<div class="contact__cover__contents">
-					<div class="page-description">
-						<h1>Contact</h1>
-						<p>
-							Do you have a question for us? Just fill out this short <br>
-							form and one of our team will be in touch.
-						</p>
-					</div>
+			<div class="map" id="map"></div>
+			<div class="contact__cover__contents">
+				<div class="page-description">
+					<h1>Contact</h1>
+					<p>
+						Do you have a question for us? Just fill out this short <br>
+						form and one of our team will be in touch.
+					</p>
 				</div>
 			</div>
 		</div>
