@@ -200,7 +200,7 @@ layout: blank
 			<li>
 				<a href="http://demo.veridu.com/popup-widget/" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on popup Demo link')">
 					<div class="block-link__text">
-						Popup widget
+						Popup Widget
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
@@ -210,9 +210,9 @@ layout: blank
 				</a>
 			</li>
 			<li>
-				<a href="https://veridu.com/tryit/sso/" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on SSO Demo link')">
+				<a href="http://demo.veridu.com/onboarding/" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on SSO Demo link')">
 					<div class="block-link__text">
-						Single-Sign-on
+						Verified Single Sign-On
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
