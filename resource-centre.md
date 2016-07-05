@@ -222,6 +222,18 @@ layout: blank
 				</a>
 			</li>
 			<li>
+				<a href="http://demo.veridu.com/payments/" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on Payments Single-source Demo link')">
+					<div class="block-link__text">
+						Payment Verification
+					</div>
+					<div class="block-link__icon">
+						<button type="button" class="btn btn-primary btn--color--white">
+							<i class="material-icons">&#xE157;</i>
+						</button>
+					</div>
+				</a>
+			</li>
+			<li>
 				<a href="https://veridu.com/tryit/challenge/" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on Challenge Demo link')">
 					<div class="block-link__text">
 						Challenge
@@ -237,18 +249,6 @@ layout: blank
 				<a href="https://veridu.com/gateway/1.0/hrdemo" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on Human Resources Demo link')">
 					<div class="block-link__text">
 						Human Resources
-					</div>
-					<div class="block-link__icon">
-						<button type="button" class="btn btn-primary btn--color--white">
-							<i class="material-icons">&#xE157;</i>
-						</button>
-					</div>
-				</a>
-			</li>
-			<li>
-				<a href="http://demo.veridu.com/payments/" class="block-link" target="_blank" onclick="pushToDrip('Resource Centre: Clicked on Payments Single-source Demo link')">
-					<div class="block-link__text">
-						Payment Verification
 					</div>
 					<div class="block-link__icon">
 						<button type="button" class="btn btn-primary btn--color--white">
