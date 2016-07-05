@@ -180,7 +180,7 @@ cover: img/bridge.jpeg
 			}
 		},
 		'brazil' : {
-			latLng: { lat: -22.0082951, lng: -47.9088077 },
+			latLng: { lat: -22.0114421, lng: -47.8925417 },
 			options: {
 				center: new google.maps.LatLng({ lat: 22.0082951, lng: -47.9088077 }),
 				zoom: 15,
