@@ -55,10 +55,10 @@ cover: img/bridge.jpeg
 		<div>
 			<h3>BRAZILLIAN OFFICE</h3>
 			Bridge Coworking <br>
-			R. Luiz Barbosa de Campos, 420 <br>
-			Planalto Paraíso <br>
+			Av. Dr. Carlos Botelho, 1863 <br>
+			Centro <br>
 			São Carlos - São Paulo <br>
-			13562-330 <br>
+			13560-250 <br>
 			Brazil
 		</div>
 	</address>
