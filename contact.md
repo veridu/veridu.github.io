@@ -53,7 +53,7 @@ cover: img/bridge.jpeg
 
 	<address class="item-container" onclick="setLocation('brazil')" id="ct-brazil">
 		<div>
-			<h3>BRAZILLIAN OFFICE</h3>
+			<h3>BRAZILIAN OFFICE</h3>
 			Bridge Coworking <br>
 			Av. Dr. Carlos Botelho, 1863 <br>
 			Centro <br>
