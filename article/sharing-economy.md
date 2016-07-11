@@ -47,7 +47,7 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 				<p>
 					Members are a demanding bunch
 					though… they want you to conduct
-					the appropriate level of identity
+					the appropriate identity
 					checks to keep them safe, but they
 					also expect instant access to your
 					platform.
@@ -62,14 +62,14 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 					<ul class="list-hollow list-unstyled">
 						<li class="v-row">
 							<div class="col-07">&bullet;</div> <div class="col-113">
-								What if you could identify all members on your platform in realtime?
+								What if you could conduct identity checks for all members of your platform in realtime?
 							</div>
 						</li>
 						<li class="v-row">
-							<div class="col-07">&bullet;</div> <div class="col-113">What if your checks analysed more data, more deeply?</div>
+							<div class="col-07">&bullet;</div> <div class="col-113">What if your identity checks analysed more data, more deeply?</div>
 						</li>
 						<li class="v-row">
-							<div class="col-07">&bullet;</div> <div class="col-113">And what if you could keep members safer by identifying more fake accounts?</div>
+							<div class="col-07">&bullet;</div> <div class="col-113">And what if you could keep members safer by eliminating fake accounts?</div>
 						</li>
 					</ul>
 				</p>
@@ -78,8 +78,8 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 
 				<p>
 					Veridu brings trust to the internet
-					with consent-driven social identity
-					solutions. Our solutions allow you to
+					with consent-driven social identity verification
+					solutions. Our identity solutions allow you to
 					build trust within your community
 					without friction, and at a low price
 					point.
@@ -107,7 +107,7 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 				<p>
 					Social media and the sharing
 					economy go hand in hand. That’s
-					why Veridu’s social identity solutions
+					why Veridu’s social identity verification solutions
 					are such a great fit, offering you
 					100% coverage of your member
 					base
@@ -124,9 +124,9 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 				<p>
 					It’s easy for members too - all they
 					need to do is log in to their online
-					accounts. We then analyse their
-					digital footprint, assess how long it
-					would take to fake, and give them
+					accounts. We then check their identity by analysing their
+					digital footprint, assessing how long it
+					would take to fake, and giving them
 					an overall credibility score.
 				</p>
 
@@ -176,7 +176,7 @@ excerpt: Verify the identity of your users to build trust, ensure safety and inc
 							sent me a great profile of my
 							potential guest. It was based
 							on their social media profiles
-							and contained all the usual
+							and contained all the usual identity
 							information, and then some. Like
 							the fact they were an avid traveller
 							just like me. This little fact made
