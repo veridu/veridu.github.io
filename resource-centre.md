@@ -316,15 +316,15 @@ layout: blank
 			<li class="item--gray">
 				<div>
 					<h4>
-						<em>Worldpay invests in startup Veridu</em>
+						<em>Online accounts could be suitable evidence for digital identity</em>
 						<br>
 						<br>
 						<p>
-							Ecommerce News
+							The Paypers
 						</p>
 					</h4>
 
-					<button type="button" class="btn btn-primary" onclick="window.open('http://ecommercenews.eu/worldpay-invests-startup-veridu/'); pushToDrip('Resource Centre: News - Worldpay invests in startup Veridu - Ecommerce News')">
+					<button type="button" class="btn btn-primary" onclick="window.open('http://www.thepaypers.com/digital-identity-security-online-fraud/online-accounts-could-be-suitable-evidence-for-digital-identity-report/765517-26'); pushToDrip('Resource Centre: Online accounts could be suitable evidence for digital identity')">
 						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
