@@ -333,15 +333,15 @@ layout: blank
 			<li class="item--gray">
 				<div>
 					<h4>
-						<em>Sharing economy: building trust between consumers and businesses</em>
+						<em>eMoov launches verification checking service of all viewers</em>
 						<br>
 						<br>
 						<p>
-							The Telegraph
+							Property Industry Eye
 						</p>
 					</h4>
 
-					<button type="button" class="btn btn-primary" onclick="window.open('http://www.telegraph.co.uk/business/sme-home/sharing-economy/'); pushToDrip('Resource Centre: News - Clicked on Sharing economy: building trust between consumers and businesses - The Telegraph')">
+					<button type="button" class="btn btn-primary" onclick="window.open('http://www.propertyindustryeye.com/30325-2/'); pushToDrip('Resource Centre: News - Clicked on eMoov launches verification checking service of all viewers')">
 						<i class="material-icons">&#xE157;</i>
 					</button>
 				</div>
