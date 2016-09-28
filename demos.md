@@ -18,7 +18,7 @@ description: What does Veridu look like through the lens of a customer?
                 <div class="col-xs-12 col-sm-4 col-lg-4 center story-howitworks divider">
                     <img class="center solutions-item" src="./svg/creditcard-1.svg">
                     <h3 class="center visible-xs visible-sm visible-md visible-lg">
-                        Verified payments
+                        Verified transactions
                     </h3>
                     <p class="center light">
                         Learn how Veridu works in an e-commerce scenario.
