@@ -8,7 +8,6 @@ $( "#go" ).click(function() {
   }, 1500 );
 });
 
-<!-- Video hover -->
 
 $(document).ready(function(){
     $("#flip").hover(function(){
@@ -16,7 +15,6 @@ $(document).ready(function(){
     });
 });
 
-<!-- Demos hover -->
 
 $(document).ready(function(){
     $(".story-demo-hover-1").on({
@@ -128,7 +126,6 @@ $(document).ready(function(){
         },
     });
 
-    <!-- Thought Leadership lines hover -->
 
     $(".story-thought-leadership-1").on({
         mouseenter: function(){
@@ -155,7 +152,6 @@ $(document).ready(function(){
         },
     });
 
-    <!-- Video hover -->
 
     $(".iam-video-hover").on({
         mouseenter: function(){
@@ -256,7 +252,6 @@ $(document).ready(function(){
         }
     });
 
-<!-- Product Cards hover -->
 
     $(".onboarding-product").on({
         mouseenter: function(){
