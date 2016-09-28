@@ -10,7 +10,7 @@ version: 3.0.1
 title: Veridu
 name: Veridu.com
 email: support@veridu.com
-share_img: https://www.veridu.com/img/share.png
+share_img: "https://www.veridu.com/img/share.png"
 description: > # this means to ignore newlines until "baseurl:"
   Veridu brings trust to the internet with a range of identity verification tools that are fast and easy for users and reduce fraud for merchants.
 keywords: veridu identify verification trust real estate idos

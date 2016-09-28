@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"><!-- Extra Meta -->
-	<meta name="description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.description}} {% endif %}">
+	<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description}}{% endif %}">
 	<meta name="keywords" content="{{ site.keywords }}">
 	<meta name="google-site-verification" content="1hn8YEzXdXAe5VA1C-Iit73ufx9tME3vul_dVJGEDAg" />
 	<meta name="msapplication-TileColor" content="#00ADEE"/>
@@ -12,25 +12,25 @@
 	<meta property="twitter:card" content="summary"/>
 	<meta property="twitter:site" content="@home"/>
 	<meta property="twitter:title" content="Veridu.com - Global identity verification based on your online activity"/>
-	<meta property="twitter:description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.description}} {% endif %}"/>
-	<meta property="twitter:image" content="{% if page.share_img %} {{ page.share_img }} {% else %} {{ site.share_image}} {% endif %}"/>
+	<meta property="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description}}{% endif %}"/>
+	<meta property="twitter:image" content="{% if page.share_img %}{{ page.share_img }}{% else %}{{ site.share_img}}{% endif %}"/>
 	<meta property="twitter:url" content="{{ site.url }}"/>
 	<meta property="search:title" content="{{ site.name }}"/>
 	<meta property="search:species" content="Home"/>
 	<meta property="search:publisher" content="www.veridu.com"/>
-	<meta property="search:image" content="{% if page.share_img %} {{ page.share_img }} {% else %} {{ site.share_image}} {% endif %}" />
+	<meta property="search:image" content="{% if page.share_img %}{{ page.share_img }}{% else %}{{ site.share_img}}{% endif %}" />
 	<meta itemprop="name" content="{{ site.name }}">
 	<meta itemprop="url" content="{{ site.url }}">
-	<meta itemprop="image" content="{% if page.share_img %} {{ page.share_img }} {% else %} {{ site.share_image}} {% endif %}">
-	<meta itemprop="description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.description}} {% endif %}">
+	<meta itemprop="image" content="{% if page.share_img %}{{ page.share_img }}{% else %}{{ site.share_img}}{% endif %}">
+	<meta itemprop="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description}}{% endif %}">
     <link rel="canonical" href="{{ site.url }}">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="{{ site.url }}">
-	<meta property="og:description" content="{% if page.description %} {{ page.description }} {% else %} {{ site.description}} {% endif %}">
+	<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description}}{% endif %}">
 	<meta property="og:title" content="Veridu.com">
 	<meta property="og:locale" content="en_GB">
 	<meta property="og:site_name" content="{{ site.name }}">
-	<meta property="og:image" content="{% if page.share_img %} {{ page.share_img }} {% else %} {{ site.share_image}} {% endif %}">
+	<meta property="og:image" content="{% if page.share_img %}{{ page.share_img }}{% else %}{{ site.share_img}}{% endif %}">
 
 	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}?v={{site.version}}">
 	<link rel="stylesheet" href="{{ "/fonts/main.css" | prepend: site.baseurl }}?v={{site.version}}">
