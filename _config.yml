@@ -5,7 +5,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
 
-version: 2.0.0
+version: 3.0.1
 # Site settings
 title: Veridu
 name: Veridu.com

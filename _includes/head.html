@@ -32,8 +32,8 @@
 	<meta property="og:site_name" content="{{ site.name }}">
 	<meta property="og:image" content="{% if page.share_img %} {{ page.share_img }} {% else %} {{ site.share_image}} {% endif %}">
 
-	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-	<link rel="stylesheet" href="{{ "/fonts/main.css" | prepend: site.baseurl }}">
+	<link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}?v={{site.version}}">
+	<link rel="stylesheet" href="{{ "/fonts/main.css" | prepend: site.baseurl }}?v={{site.version}}">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 </head>
