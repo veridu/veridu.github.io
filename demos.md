@@ -49,7 +49,7 @@ description: What does Veridu look like through the lens of a customer?
                         Pop-up widget
                     </h3>
                     <p class="center light">
-                        Try our ready to use verification widget.
+                        Try our ready to use and easily integrated verification widget.
                     </p>
                     <div class="divider-4"></div>
                     <div class="center">
