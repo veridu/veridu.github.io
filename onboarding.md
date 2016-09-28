@@ -32,11 +32,10 @@ title: Onboarding
                     <div class="col-xs-12 col-sm-5 col-lg-4 box story-video emoov-video worldpay-video-hover">
                         <div class="video-line">
                         </div>
-                            <div class="story-video-text story-video-text-hover">
-                                <h3 class="visible-xs visible-sm visible-md visible-lg" id="worlpay-text">
-                                    <i class="material-icons icon-position">play_circle_outline</i> Veridu and eMoov
-                                </h3>
-                            </div>
+                        <div class="story-video-text story-video-text-hover">
+                            <h3 class="visible-xs visible-sm visible-md visible-lg" id="worlpay-text">
+                                <i class="material-icons icon-position">play_circle_outline</i> Veridu and eMoov
+                            </h3>
                         </div>
                     </div>
                 </a>
