@@ -29,15 +29,14 @@ description: Use of Online Activity as Part of Identity Verification
                 <br class="hidden-xs hidden-sm"><br class="hidden-xs hidden-lg">
                 <a target="blank" href="http://oixuk.org/wp-content/uploads/2016/07/UseofonlineactivityaspartoftheidentityverificationFINAL-1.pdf">
                     <div class="col-xs-12 col-sm-5 col-lg-4 box story-oix report-video-hover">
-                            <h3 class="report-download-text">Report</h3>
-                            <h2 class="thin report-headline">
-                                Use of Online Activity as Part of Identity Verification
-                            </h2>
-                            <div class="story-report-text story-report-text-hover">
-                                <h3 class="visible-xs visible-sm visible-md visible-lg" id="worlpay-text">
-                                    <i class="material-icons icon-position">file_download</i> Download report
-                                </h3>
-                            </div>
+                        <h3 class="report-download-text">Report</h3>
+                        <h2 class="thin report-headline">
+                            Use of Online Activity as Part of Identity Verification
+                        </h2>
+                        <div class="story-report-text story-report-text-hover">
+                            <h3 class="visible-xs visible-sm visible-md visible-lg" id="worlpay-text">
+                                <i class="material-icons icon-position">file_download</i> Download report
+                            </h3>
                         </div>
                     </div>
                 </a>
