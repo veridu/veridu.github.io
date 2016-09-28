@@ -1,19 +1,20 @@
----
-layout: default
-css: http://www.carlejlers.dk/veriducss/landing.css
----
-<main class="wrapper">
-  <section class="{{ page.class }} page">
-    <header>
-      <h1 class="page-title content-padding" >
-        {{ page.title }}
-      </h1>
-      <p class="page__description content-padding font-light">
-        {{ page.description }}
-      </p>
-    </header>
-    <div>
-      {{ content }}
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </div>
-  </section>
-</main>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

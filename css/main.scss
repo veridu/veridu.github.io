@@ -3,59 +3,11 @@
 ---
 @charset "utf-8";
 
-// Our variables
-$base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
-
-body {
-    color: black;
-    @media (min-width: 768px) {
-        background-color: #F1F1F1 !important;
-    }
-}
-
-.underline {
-    text-decoration: underline;
-}
-
-.font-light {
-    font-weight: 300 !important;
-}
-.font-bold {
-    font-weight: 600 !important;
-}
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "functions",
-        "utils",
-        "icons",
-        "pages/index",
-        "pages/clients-and-partners",
-        "components/headings",
-        "components/v-select",
-        "components/icons",
-        "components/buttons",
-        "components/checkbox",
-        "components/modal",
-        "components/tags",
-        "components/spinner",
-        "components/links",
-        "components/try-it",
-        "components/progress-bars",
-        "components/block-link",
-        "components/input",
-        "components/page",
-        "components/carousel",
-        "vendor/animate",
-        "layout",
-        "pages/page",
-        "pages/solutions",
-        "pages/resource-centre",
-        "pages/contact",
-        "pages/article",
-        "pages/pricing",
-        "plugins/owl.carousel",
-        "carl",
-        "articles/crypto-wallets"
+        "bootstrap",
+        "animate",
+        "swipebox",
+        "veridu",
+        "material-form"
 ;

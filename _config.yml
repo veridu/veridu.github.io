@@ -1,19 +1,27 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+version: 2.0.0
 # Site settings
-title: 'Veridu'
-version: '2.2.2'
-email: contact@veridu.com
+title: Veridu
+name: Veridu.com
+email: support@veridu.com
+share_img: https://www.veridu.com/img/share.png
 description: > # this means to ignore newlines until "baseurl:"
-  Veridu brings trust to the internet with a range of identity verification tools that are fast and easy for users, and reduce fraud for merchants.
+  Veridu brings trust to the internet with a range of identity verification tools that are fast and easy for users and reduce fraud for merchants.
+keywords: veridu identify verification trust real estate idos
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://veridu.com" # the base hostname & protocol for your site
-mode: 'localhost'
-enforce_ssl: veridu.com
-twitter_username: veridu
+url: "http://veridu.com" # the base hostname & protocol for your site
+twitter_username: veriduhq
 github_username:  veridu
-sass:
-  compressed: true
+
 # Build settings
 markdown: kramdown
-# Gems
+
 gems:
   - jekyll-sitemap
+
