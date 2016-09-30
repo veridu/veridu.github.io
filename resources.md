@@ -14,7 +14,7 @@ title: Resources
                     <h1 class="hidden-xs hidden-sm hidden-md visible-lg maxwidth-big-headline thin white">
                         Welcome to Veridu's<br> Resource Centre</h1>
                     <h2 class="visible-xs visible-sm visible-md hidden-lg maxwidth-small-headline thin white">
-                        Welcome to Veridu's<br> Resource Centre</h1>
+                        Welcome to Veridu's<br> Resource Centre
                     </h2>
                     <br>
                 </div>
