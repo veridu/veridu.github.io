@@ -176,6 +176,7 @@ title: Why Veridu?
                 <a href="how-it-works.html" class="secondary-button"><b class="darkblue">Learn more</b></a>
                 </div>
             </a>
+            <div class="divider-header-2"></div>
         </div>
     </div>
 </div>
