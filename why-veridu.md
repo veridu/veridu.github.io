@@ -30,13 +30,12 @@ title: Why Veridu?
                 <br class="hidden-xs hidden-sm"><br class="hidden-xs">
                 <a class="swipebox-video" href="https://www.youtube.com/watch?v=K3j2vgXR2aw" rel="vimeo">
                     <div class="col-xs-12 col-sm-5 col-lg-4 box story-video video-article worldpay-video-hover">
-                        <div class="video-line">
-                        </div>
-                            <div class="story-video-text story-video-text-hover">
-                                <h3 class="visible-xs visible-sm visible-md visible-lg" id="worlpay-text">
-                                    <i class="material-icons icon-position">play_circle_outline</i> Why Veridu?
-                                </h3>
-                            </div>
+                    <div class="video-line">
+                    </div>
+                        <div class="story-video-text story-video-text-hover">
+                            <h3 class="visible-xs visible-sm visible-md visible-lg" id="worlpay-text">
+                                <i class="material-icons icon-position">play_circle_outline</i> Why Veridu?
+                            </h3>
                         </div>
                     </div>
                 </a>
