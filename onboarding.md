@@ -14,7 +14,7 @@ title: Onboarding
                     <h1 class="hidden-xs hidden-sm hidden-md visible-lg maxwidth-big-headline thin white">
                         Is your focus on<br> user experience leaving<br>  you open to fraud?</h1>
                     <h2 class="visible-xs visible-sm visible-md hidden-lg maxwidth-small-headline thin white">
-                        Is your focus on<br> user experience leaving<br>  you open to fraud?</h1>
+                        Is your focus on<br> user experience leaving<br>  you open to fraud?
                     </h2>
                     <div class="divider-header-2"></div>
                     <br class="visible-lg">
