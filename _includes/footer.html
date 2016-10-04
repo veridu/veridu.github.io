@@ -1,9 +1,3 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="./js/wow.min.js"></script>
-<script>new WOW().init();</script>
-<script src="./js/jquery.swipebox.js"></script>
-<script src="./js/main.js?v={{site.version}}"></script>
-
 <div class="container wow animate fadeIn">
     <div class="row"><br><br>
         <div class="col-xs-6 col-sm-4 col-md-2 footer">
@@ -17,8 +11,8 @@
         <div class="col-xs-6 col-sm-4 col-md-2 footer">
             <p class="footer">
                 Contact<br><br>
-                <a class="footer" href="http://veridu.com/contact.html">Get in Touch</a><br>
-                <a class="footer" target="_blank" href="http://www.mynewsdesk.com/uk/veridu-com">Press Room</a><br>
+                <a class="footer" href="./contact.html">Get in Touch</a><br>
+                <a class="footer" target="_blank" href="http://www.mynewsdesk.com/uk/veridu-com" onclick="trackOutboundLink(this); return true;">Press Room</a><br>
                 <a class="footer" href="mailto:support@veridu.com" target="_top" target="_top">Support</a><br>
                 <a class="footer" href="mailto:sales@veridu.com" target="_top" target="_top">Sales</a><br>
                 <a class="footer" href="mailto:jobs@veridu.com" target="_top" target="_top">Careers</a><br>
@@ -27,47 +21,49 @@
         <div class="col-xs-6 col-sm-4 col-md-2 footer">
             <p class="footer">
                 Demos<br><br>
-                <a class="footer" target="_blank" href="http://demo.veridu.com/onboarding/">Onboarding</a><br>
-                <a class="footer" target="_blank" href="http://demo.veridu.com/payments/">Transactions</a><br>
-                <a class="footer" target="_blank" href="http://demo.veridu.com/popup-widget/">Pop-up Widget</a><br>
+                <a class="footer" target="_blank" href="http://demo.veridu.com/onboarding/" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Onboarding '); return true;">Onboarding</a><br>
+                <a class="footer" target="_blank" href="http://demo.veridu.com/payments/" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Payments '); return true;">Transactions</a><br>
+                <a class="footer" target="_blank" href="http://demo.veridu.com/popup-widget/" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Popup widget'); return true;">Pop-up Widget</a><br>
             </p>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2 footer">
             <p class="footer">
                 Resources<br><br>
-                <a class="footer" target="_blank" href="https://dashboard.veridu.com">Dashboard</a><br>
-                <a class="footer" target="_blank" href="https://veridu.com/wiki/Widget_Library">Getting Started</a><br>
-                <a class="footer" target="_blank" href="./resources.html">Collateral</a><br>
+                <a class="footer" target="_blank" href="https://dashboard.veridu.com" onclick="trackOutboundLink(this); return true;">Dashboard</a><br>
+                <a class="footer" target="_blank" href="https://veridu.com/wiki/Widget_Library" onclick="trackOutboundLink(this); return true;">Getting Started</a><br>
+                <a class="footer" href="./resources.html">Collateral</a><br>
             </p>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2 footer">
             <p class="footer">
                 Legal<br><br>
-                <a class="footer" target="_blank" href="https://veridu.com/wiki/Terms_%26_Conditions">Terms & Conditions</a><br>
-                <a class="footer" target="_blank" href="https://veridu.com/wiki/Veridu:Privacy_policy">Privacy Policy</a><br>
-                <a class="footer" target="_blank" href="https://veridu.com/wiki/Service_Level_Agreement">Service Level Agreement</a><br>
-                <a class="footer" target="_blank" href="https://veridu.com/wiki/Security_Procedures">Security Procedures</a><br>
+                <a class="footer" target="_blank" href="https://veridu.com/wiki/Terms_%26_Conditions" onclick="trackOutboundLink(this); return true;">Terms & Conditions</a><br>
+                <a class="footer" target="_blank" href="https://veridu.com/wiki/Veridu:Privacy_policy" onclick="trackOutboundLink(this); return true;">Privacy Policy</a><br>
+                <a class="footer" target="_blank" href="https://veridu.com/wiki/Service_Level_Agreement" onclick="trackOutboundLink(this); return true;">Service Level Agreement</a><br>
+                <a class="footer" target="_blank" href="https://veridu.com/wiki/Security_Procedures" onclick="trackOutboundLink(this); return true;">Security Procedures</a><br>
             </p>
         </div>
         <div class="col-xs-6 col-sm-4 col-md-2 footer">
             <p class="footer"> 
                 Follow<br><br>
-                <a class="footer" target="_blank" href="https://www.linkedin.com/company/2719895?trk=vsrp_companies_cluster_name&trkInfo=VSRPsearchId%3A264505601473850220715%2CVSRPtargetId%3A2719895%2CVSRPcmpt%3Acompanies_cluster">
+                <a class="footer" target="_blank" 
+                    onclick="trackOutboundLink(this); return true;"
+                    href="https://www.linkedin.com/company/2719895?trk=vsrp_companies_cluster_name&trkInfo=VSRPsearchId%3A264505601473850220715%2CVSRPtargetId%3A2719895%2CVSRPcmpt%3Acompanies_cluster">
                     LinkedIn
                 </a><br>
-                <a class="footer" target="_blank" href="https://medium.com/@VeriduHQ">
+                <a class="footer" target="_blank" href="https://medium.com/@VeriduHQ" onclick="trackOutboundLink(this); return true;">
                     Medium
                 </a><br>
-                <a class="footer" target="_blank" href="https://www.facebook.com/VeriduHQ/?fref=ts">
+                <a class="footer" target="_blank" href="https://www.facebook.com/VeriduHQ/?fref=ts" onclick="trackOutboundLink(this); return true;">
                     Facebook
                 </a><br>
-                <a class="footer" target="_blank" href="https://twitter.com/VeriduHQ">
+                <a class="footer" target="_blank" href="https://twitter.com/VeriduHQ" onclick="trackOutboundLink(this); return true;">
                     Twitter
                 </a><br>
-                <a class="footer" target="_blank" href="https://www.youtube.com/channel/UC71f4rr0XBjx6df2eIooM2w">
+                <a class="footer" target="_blank" href="https://www.youtube.com/channel/UC71f4rr0XBjx6df2eIooM2w" onclick="trackOutboundLink(this); return true;">
                     YouTube
                 </a><br>
-                <a class="footer" target="_blank" href=" https://angel.co/veridu">
+                <a class="footer" target="_blank" href="https://angel.co/veridu" onclick="trackOutboundLink(this); return true;">
                     AngelList
                 </a><br>
             </p>
@@ -75,13 +71,31 @@
     </div>
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="./js/wow.min.js"></script>
+<script>new WOW().init();</script>
+<script src="./js/jquery.swipebox.js"></script>
+
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    // Google Analytics
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-47899661-1', 'auto');
-  ga('send', 'pageview');
+    ga('create', 'UA-47899661-1', 'auto');
+    ga('send', 'pageview');
 
+    // getDrip
+    var _dcq = _dcq || [];
+    var _dcs = _dcs || {};
+    _dcs.account = '6038086';
+    (function() {
+        var dc = document.createElement('script');
+        dc.type = 'text/javascript'; dc.async = true;
+        dc.src = '//tag.getdrip.com/6038086.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(dc, s);
+    })();
 </script>
+<script src="./js/main.js?v={{site.version}}"></script>

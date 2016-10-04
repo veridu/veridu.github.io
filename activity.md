@@ -20,7 +20,7 @@ description: Use of Online Activity as Part of Identity Verification
                     <div class="divider-header-2"></div>
                     <div>
                         <span class="button-width">
-                            <a class="secondary-negative-button" href="http://demo.veridu.com/popup-widget/">Try the demo</a>
+                            <a onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Popup widget'); return true;" class="secondary-negative-button" href="http://demo.veridu.com/popup-widget/">Try the demo</a>
                         </span>
                         <a class="secondary-negative-button hidden-xs" target="blank" href="./pdf/InternetLife.pdf">Download as PDF</a>
                     </div>
@@ -80,10 +80,10 @@ description: Use of Online Activity as Part of Identity Verification
                 </li>
             </ul>
             <br>
-            <a href="http://demo.veridu.com/popup-widget/">
+            <a onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Popup widget'); return true;" href="http://demo.veridu.com/popup-widget/">
                 <div class="demo-button-activity">
                     <div>
-                        <a target="_blank" class="secondary-negative-button" href="http://demo.veridu.com/popup-widget/">Try the demo</a>
+                        <a onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Popup widget'); return true;" target="_blank" class="secondary-negative-button" href="http://demo.veridu.com/popup-widget/">Try the demo</a>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-lg-12 story-demo activity-demo">

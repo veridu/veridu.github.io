@@ -34,7 +34,7 @@ title: Resources
                     <div class="row">
                         <div class="col-xs-12 col-sm-7 col-lg-7">
                             <p class="light">
-                                For more content, please visit our <a target="blank" href="https://www.youtube.com/channel/UC71f4rr0XBjx6df2eIooM2w">YouTube Channel</a> for latest videos, follow our blog on <a target="blank" href="https://medium.com/@VeriduHQ">Medium</a> for latest articles, or connect with us on Social Media via <a target="blank" href="https://twitter.com/VeriduHQ">Twitter</a>, <a target="blank" href="https://www.facebook.com/VeriduHQ/?fref=ts">Facebook</a>, or <a target="blank" href="https://www.linkedin.com/company/2719895?trk=vsrp_companies_cluster_name&trkInfo=VSRPsearchId%3A264505601473850220715%2CVSRPtargetId%3A2719895%2CVSRPcmpt%3Acompanies_cluster">LinkedIn</a>.
+                                For more content, please visit our <a onclick="trackOutboundLink(this); return true;" target="blank" href="https://www.youtube.com/channel/UC71f4rr0XBjx6df2eIooM2w">YouTube Channel</a> for latest videos, follow our blog on <a onclick="trackOutboundLink(this); return true;" target="blank" href="https://medium.com/@VeriduHQ">Medium</a> for latest articles, or connect with us on Social Media via <a onclick="trackOutboundLink(this); return true;" target="blank" href="https://twitter.com/VeriduHQ">Twitter</a>, <a onclick="trackOutboundLink(this); return true;" target="blank" href="https://www.facebook.com/VeriduHQ/?fref=ts">Facebook</a>, or <a  onclick="trackOutboundLink(this); return true;" target="blank" href="https://www.linkedin.com/company/2719895?trk=vsrp_companies_cluster_name&trkInfo=VSRPsearchId%3A264505601473850220715%2CVSRPtargetId%3A2719895%2CVSRPcmpt%3Acompanies_cluster">LinkedIn</a>.
                             </p>
                             <p class="light">
                                 If you're not finding what you're looking for, reach out to marketing on <a href="mailto:marketing@veridu.com">marketing@veridu.com</a>
@@ -167,7 +167,7 @@ title: Resources
                     </p>
                     <div class="divider-4"></div>
                     <div class="center">
-                        <a target="_blank"  href="http://demo.veridu.com/payments/" class="secondary-button"><b class="darkblue">Payments</b></a>
+                        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://demo.veridu.com/payments/" class="secondary-button"><b class="darkblue">Payments</b></a>
                     </div>
                     <div class="divider-header-3"></div>
                 </div>
@@ -181,7 +181,7 @@ title: Resources
                     </p>
                     <div class="divider-4"></div>
                     <div class="center">
-                        <a target="_blank"  href="http://demo.veridu.com/onboarding/" class="secondary-button"><b class="darkblue">Onboarding</b></a>
+                        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://demo.veridu.com/onboarding/" class="secondary-button"><b class="darkblue">Onboarding</b></a>
                     </div>
                     <div class="divider-header-3"></div>
                 </div>
@@ -195,7 +195,7 @@ title: Resources
                     </p>
                     <div class="divider-4"></div>
                     <div class="center">
-                        <a target="_blank"  href="http://demo.veridu.com/popup-widget/" class="secondary-button"><b class="darkblue">Widget</b></a>
+                        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://demo.veridu.com/popup-widget/" class="secondary-button"><b class="darkblue">Widget</b></a>
                     </div>
                     <div class="divider-header-3"></div>
                 </div>
@@ -205,7 +205,7 @@ title: Resources
                 Other Demos
             </h3>
             <p class="light center">
-                <a class="demo-link" target="blank" href="http://demo.veridu.com/sharing-economy/"> Sharing Economy Demo</a> | <a class="demo-link" target="blank" href="http://demo.veridu.com/sso-formfill/">SSO Formfill</a> | <a class="demo-link" target="blank" href="http://demo.veridu.com/tryit/sso/">Single Sign On+</a> | <a class="demo-link" target="blank" href="http://demo.veridu.com/tryit/trust/">Trust</a> | <a class="demo-link" target="blank" href="https://gateway.veridu.com/1.0/sample/social">Gateway Integration</a> | <a class="demo-link" target="blank" href="https://gateway.veridu.com/1.0/hrdemo">HR Demo</a> | <a class="demo-link" target="blank" href="https://gateway.veridu.com/1.0/studentdemo">Student Demo</a>
+                <a class="demo-link" onclick="trackOutboundLink(this); return true;" target="blank" href="http://demo.veridu.com/sharing-economy/"> Sharing Economy Demo</a> | <a onclick="trackOutboundLink(this); return true;" class="demo-link" target="blank" href="http://demo.veridu.com/sso-formfill/">SSO Formfill</a> | <a onclick="trackOutboundLink(this); return true;" class="demo-link" target="blank" href="http://demo.veridu.com/tryit/sso/">Single Sign On+</a> | <a onclick="trackOutboundLink(this); return true;" class="demo-link" target="blank" href="http://demo.veridu.com/tryit/trust/">Trust</a> | <a onclick="trackOutboundLink(this); return true;" class="demo-link" target="blank" href="https://gateway.veridu.com/1.0/sample/social">Gateway Integration</a> | <a onclick="trackOutboundLink(this); return true;" class="demo-link" target="blank" href="https://gateway.veridu.com/1.0/hrdemo">HR Demo</a> | <a onclick="trackOutboundLink(this); return true;" class="demo-link" target="blank" href="https://gateway.veridu.com/1.0/studentdemo">Student Demo</a>
             </p>
         </div>
     </div>
@@ -218,11 +218,11 @@ title: Resources
             <p class="maxwidth light solutionsh3 white">
                 Veridu in the news              
             </p>
-            <a target="blank" href="http://www.mynewsdesk.com/uk/veridu-com">
+            <a onclick="trackOutboundLink(this); return true;" target="blank" href="http://www.mynewsdesk.com/uk/veridu-com">
                 <p class="visible-xs visible-sm visible-md visible-lg white bottom-section">Newsroom<i class="material-icons">keyboard_arrow_right</i></p>
             </a>
         </div>
-        <a target="_blank"  href="http://www.telegraph.co.uk/business/sme-home/sharing-economy/">
+        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://www.telegraph.co.uk/business/sme-home/sharing-economy/">
             <div class="col-xs-6 col-sm-3 col-lg-2 box story-news story-news-1">
                 <div class="news-line-1">
                     <div class="newsline-1-text">
@@ -239,7 +239,7 @@ title: Resources
                 </p>
             </div>
         </a>
-        <a target="_blank"  href="http://www.thepaypers.com/digital-identity-security-online-fraud/worldpay-invests-in-digital-identity-startup-veridu/763689-26">
+        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://www.thepaypers.com/digital-identity-security-online-fraud/worldpay-invests-in-digital-identity-startup-veridu/763689-26">
             <div class="col-xs-6 col-sm-3 col-lg-2 box story-news story-news-2">
                 <div class="news-line-2">
                     <div class="newsline-2-text">
@@ -256,7 +256,7 @@ title: Resources
                 </p>
             </div>
         </a>
-        <a target="_blank"  href="http://www.propertyindustryeye.com/30325-2/">
+        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://www.propertyindustryeye.com/30325-2/">
             <div class="col-xs-6 col-sm-3 col-lg-2 box story-news story-news-3">
                 <div class="news-line-3">
                     <div class="newsline-3-text">
@@ -273,7 +273,7 @@ title: Resources
                 </p>
             </div>
         </a>
-        <a target="_blank"  href="http://ecommercenews.eu/worldpay-invests-startup-veridu/">
+        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://ecommercenews.eu/worldpay-invests-startup-veridu/">
             <div class="col-xs-6 col-sm-3 col-lg-2 box story-news story-news-4">
                 <div class="news-line-4">
                     <div class="newsline-4-text">
@@ -290,7 +290,7 @@ title: Resources
                 </p>
             </div>
         </a>
-        <a target="_blank"  href="http://www.fintech.finance/news/conventional-identity-verification-reaching-the-end/">
+        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://www.fintech.finance/news/conventional-identity-verification-reaching-the-end/">
             <div class="col-xs-6 col-sm-3 col-lg-2 box story-news story-news-5">
                 <div class="news-line-5">
                     <div class="newsline-5-text">
@@ -434,11 +434,11 @@ title: Resources
             <p class="maxwidth light solutionsh3 white">
                 Whitepapers, surveys, and more on key industry issues.
             </p>
-            <a target="blank" href="https://medium.com/@VeriduHQ/">
+            <a onclick="trackOutboundLink(this); return true;" target="blank" href="https://medium.com/@VeriduHQ/">
                 <p class="visible-xs visible-sm visible-md visible-lg white bottom-section">More articles<i class="material-icons">keyboard_arrow_right</i></p>
             </a>
         </div>
-        <a target="_blank"  href="https://www.veridu.com/resources/Sharing-economy-consumer-views-survey.pdf?utm_source=Medium&utm_medium=Social&utm_term=Sharing%20Economy%20Survey&utm_content=eBook%20download&utm_campaign=Sharing%20Economy%20Survey%20Medium%20Post">
+        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="https://www.veridu.com/resources/Sharing-economy-consumer-views-survey.pdf?utm_source=Medium&utm_medium=Social&utm_term=Sharing%20Economy%20Survey&utm_content=eBook%20download&utm_campaign=Sharing%20Economy%20Survey%20Medium%20Post">
             <div class="col-xs-12 col-sm-4 col-lg-5 box story-thought-leadership-1">
                 <div class="thought-leadership-line-1">
                     <div class="newsline-1-text">
@@ -461,7 +461,7 @@ title: Resources
                 </p>
             </div>
         </a>
-        <a target="_blank"  href="http://oixuk.org/wp-content/uploads/2016/07/UseofonlineactivityaspartoftheidentityverificationFINAL-1.pdf">
+        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://oixuk.org/wp-content/uploads/2016/07/UseofonlineactivityaspartoftheidentityverificationFINAL-1.pdf">
             <div class="col-xs-12 col-sm-4 col-lg-5 box story-thought-leadership-2">
                 <div class="thought-leadership-line-2">
                     <div class="newsline-2-text">

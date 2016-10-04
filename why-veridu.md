@@ -20,9 +20,9 @@ title: Why Veridu?
                     <br class="visible-lg">
                     <div>
                         <span class="button-width">
-                            <a class="secondary-negative-button" target="blank" href="http://demo.veridu.com/onboarding/">Try the demo</a>
+                            <a onclick="trackOutboundLink(this); return true;" class="secondary-negative-button" target="blank" href="http://demo.veridu.com/onboarding/">Try the demo</a>
                         </span>
-                            <a class="secondary-negative-button hidden-xs" target="blank" href="./pdf/WhyVeridu.pdf">Download as PDF</a>
+                            <a onclick="trackOutboundLink(this); return true;" class="secondary-negative-button hidden-xs" target="blank" href="./pdf/WhyVeridu.pdf">Download as PDF</a>
                     </div>
                     <div class="divider-header"></div>
                     <br class="visible-sm visible-xs">
@@ -87,7 +87,7 @@ title: Why Veridu?
                 <img src="./img/phone.png" class="onehoundredwidth">
                 <div class="demo-button-activity2">
                     <div>
-                        <a target="_blank" class="button" href="http://demo.veridu.com/popup-widget/">Try the demo</a>
+                        <a onclick="trackOutboundLink(this); return true;" target="_blank" class="button" href="http://demo.veridu.com/popup-widget/">Try the demo</a>
                     </div>
                 </div>
                 

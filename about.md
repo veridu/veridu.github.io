@@ -44,7 +44,7 @@ title: About
                         </div>
                         <div class="col-xs-12 col-sm-4 col-lg-4">
                             <p class="light">
-                                Current investors in Veridu include <a target="_blank"  href="http://www.worldpay.com">Worldpay</a>, <a target="_blank"  href="http://www.fomcap.com">Force Over Mass Capital</a>, <a target="_blank"  href="http://www.finextra.com/resources/fullsolns.aspx?companyid=3166"> Callatay and Wouters Ventures</a>, as well as <a target="_blank"  href="https://www.youtube.com/watch?v=yBWM_tEhttw">Philip McGriskin</a> and Paul Townsend, founders of Envoy (sold to Worldpay).
+                                Current investors in Veridu include <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://www.worldpay.com">Worldpay</a>, <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://www.fomcap.com">Force Over Mass Capital</a>, <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://www.finextra.com/resources/fullsolns.aspx?companyid=3166"> Callatay and Wouters Ventures</a>, as well as <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="https://www.youtube.com/watch?v=yBWM_tEhttw">Philip McGriskin</a> and Paul Townsend, founders of Envoy (sold to Worldpay).
                             </p>
                             <br>
                         </div>

@@ -25,7 +25,7 @@ description: What does Veridu look like through the lens of a customer?
                     </p>
                     <div class="divider-4"></div>
                     <div class="center">
-                        <a target="_blank"  href="http://demo.veridu.com/payments/" class="secondary-button"><b class="darkblue">Payments</b></a>
+                        <a target="_blank"  href="http://demo.veridu.com/payments/" onclick="trackOutboundLink('http://demo.veridu.com/payments/'); pushToDrip('Visited a Demo | Payments '); return true;" class="secondary-button"><b class="darkblue">Payments</b></a>
                     </div>
                     <div class="divider-header-3"></div>
                 </div>
@@ -39,7 +39,7 @@ description: What does Veridu look like through the lens of a customer?
                     </p>
                     <div class="divider-4"></div>
                     <div class="center">
-                        <a target="_blank"  href="http://demo.veridu.com/onboarding/" class="secondary-button"><b class="darkblue">Onboarding</b></a>
+                        <a target="_blank"  href="http://demo.veridu.com/onboarding/" onclick="trackOutboundLink('http://demo.veridu.com/onboarding/'); pushToDrip('Visited a Demo | Onboarding '); return true;" class="secondary-button"><b class="darkblue">Onboarding</b></a>
                     </div>
                     <div class="divider-header-3"></div>
                 </div>
@@ -53,7 +53,7 @@ description: What does Veridu look like through the lens of a customer?
                     </p>
                     <div class="divider-4"></div>
                     <div class="center">
-                        <a target="_blank"  href="http://demo.veridu.com/popup-widget/" class="secondary-button"><b class="darkblue">Widget</b></a>
+                        <a target="_blank"  href="http://demo.veridu.com/popup-widget/" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Popup widget'); return true;" class="secondary-button"><b class="darkblue">Widget</b></a>
                     </div>
                     <div class="divider-header-3"></div>
                 </div>
@@ -63,7 +63,13 @@ description: What does Veridu look like through the lens of a customer?
                 Other Demos
             </h3>
             <p class="light center">
-                <a class="demo-link" target="blank" href="http://demo.veridu.com/sharing-economy/"> Sharing Economy Demo</a> | <a class="demo-link" target="blank" href="http://demo.veridu.com/sso-formfill/">SSO Formfill</a> | <a class="demo-link" target="blank" href="http://demo.veridu.com/tryit/sso/">Single Sign On+</a> | <a class="demo-link" target="blank" href="http://demo.veridu.com/tryit/trust/">Trust</a> | <a class="demo-link" target="blank" href="https://gateway.veridu.com/1.0/sample/social">Gateway Integration</a> | <a class="demo-link" target="blank" href="https://gateway.veridu.com/1.0/hrdemo">HR Demo</a> | <a class="demo-link" target="blank" href="https://gateway.veridu.com/1.0/studentdemo">Student Demo</a>
+                <a class="demo-link" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Sharing Economy');  target="blank" href="http://demo.veridu.com/sharing-economy/"> Sharing Economy Demo</a> | 
+                <a class="demo-link" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | SSO Formfill'); target="blank" href="http://demo.veridu.com/sso-formfill/">SSO Formfill</a> | 
+                <a class="demo-link" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Signle Sign On+'); target="blank" href="http://demo.veridu.com/tryit/sso/">Single Sign On+</a> | 
+                <a class="demo-link" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Trust'); target="blank" href="http://demo.veridu.com/tryit/trust/">Trust</a> | 
+                <a class="demo-link" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Gateway Integration'); target="blank" href="https://gateway.veridu.com/1.0/sample/social">Gateway Integration</a> | 
+                <a class="demo-link" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | HR'); target="blank" href="https://gateway.veridu.com/1.0/hrdemo">HR Demo</a> | 
+                <a class="demo-link" onclick="trackOutboundLink(this); pushToDrip('Visited a Demo | Student'); target="blank" href="https://gateway.veridu.com/1.0/studentdemo">Student Demo</a>
             </p>
         </div>
     </div>

@@ -1,22 +1,18 @@
-$( "#go" ).click(function() {
-  $( "#block" ).animate({
-    width: "70%",
-    opacity: 0.4,
-    marginLeft: "0.6in",
-    fontSize: "3em",
-    borderWidth: "10px"
-  }, 1500 );
-});
-
-
 $(document).ready(function(){
+    $( "#go" ).click(function() {
+        $( "#block" ).animate({
+            width: "70%",
+            opacity: 0.4,
+            marginLeft: "0.6in",
+            fontSize: "3em",
+            borderWidth: "10px"
+        }, 1500 );
+    });
+
     $("#flip").hover(function(){
         $("#panel").slideDown("slow");
     });
-});
 
-
-$(document).ready(function(){
     $(".story-demo-hover-1").on({
         mouseenter: function(){
             $(".story-demo-text-1").css("height", "23%");
@@ -301,3 +297,46 @@ $(document).ready(function(){
         $( '.swipebox-video' ).swipebox();
     } )( $ );
 });
+
+// useful globals
+
+/**
+* Function that tracks a click on an outbound link in Analytics.
+* This function takes a valid URL string as an argument, and uses that URL string
+* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+* using 'navigator.sendBeacon' in browser that support it.
+*/
+window.trackOutboundLink = function(element) {
+    var url = element.href;
+
+    ga('send', 'event', 'outbound', 'click', url, {
+        'transport': 'beacon',
+        'hitCallback': function(){
+        // document.location = url;
+        }
+    });
+}
+
+/**
+ * Pushes to drip.
+ *
+ * @param      {string}  eventLabel  The event label
+ * @param      {string}  type        The type
+ */
+window.pushToDrip = function (eventLabel, type) {
+    if (! window._dcq)
+        return;
+
+    type = type || 'track';
+    if (typeof(_dcq) !== 'undefined') {
+        _dcq.push(
+            [
+                type,
+                eventLabel,
+                {
+                    value: 2000
+                }
+            ]
+        );
+    }
+};
