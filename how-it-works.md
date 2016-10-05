@@ -95,7 +95,7 @@ title: How it works?
                 During this learning step we compute features that serve as structured input to our models. Those features can be composed of numerical, categorical and binary values, and can be described as an individual measurable property of a phenomenon being observed.
             </p>
             <p class="light">
-                Let's take the example of a user's name. First, we scrape a user's online accounts, before cleansing and structuring the data into granular facts, such as 'First name on Facebook' and 'First name on Google'. At this point, however, we have no way of knowing if the user is actually a fraudster using fake details to commit their crime.
+                Let's take the example of a user's name. First, we gather data from a user's online accounts, before cleansing and structuring the data into granular facts, such as 'First name on Facebook' and 'First name on Google'. At this point, however, we have no way of knowing if the user is actually a fraudster using fake details to commit their crime.
             </p>
             <p class="light">
                 To assess the likelihood that this is actually the user's real name, we train our model using the set of features we have computed. One example of a binary feature is "does the first name on Facebook match the first name on Google?". An example of a numeric-based feature around name is the number of comments a user has received on his posts which mention his name. 
