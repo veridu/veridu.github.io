@@ -64,7 +64,7 @@ title: How it works?
                 1. Data scraping
             </h3>
             <p class="light">
-                When a user verifies their identity with Veridu, they are asked to sign in to one or more of their social or online accounts and to grant us permission to access the data contained within these. We instantly scrape, or gather, this data using APIs. 
+                When a user verifies their identity with Veridu, they are asked to sign in to one or more of their social or online accounts and to grant us permission to access the data contained within these. We instantly gather this data using APIs. 
             </p>
             <q>
                 Veridu puts the user in control of the data they share, providing us with access to data beyond what's available on public profiles.
@@ -142,7 +142,7 @@ title: How it works?
                     <img class="center solutions-item" src="./svg/whatwedo/1.svg">
                     <br>
                     <h3 class="center visible-xs visible-sm visible-md visible-lg">
-                        1. Data scraping
+                        1. Data gathering
                     </h3>
                     <p class="light">
                         A user signs into their social or online accounts. We get raw data.
