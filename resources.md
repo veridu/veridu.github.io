@@ -482,7 +482,7 @@ title: Resources
                 </p>
             </div>
         </a>
-        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="https://drive.google.com/file/d/0B7_SzDAjNb3FZ2ZXN0ZpSFdiUms/view?ts=57ffa9da">
+        <!--<a onclick="trackOutboundLink(this); return true;" target="_blank"  href="https://drive.google.com/file/d/0B7_SzDAjNb3FZ2ZXN0ZpSFdiUms/view?ts=57ffa9da">
             <div class="col-xs-12 col-sm-4 col-lg-5 box story-thought-leadership-3">
                 <div class="thought-leadership-line-3">
                     <div class="newsline-2-text">
@@ -505,4 +505,4 @@ outdated KYC processes</h3>
             </div>
         </a>
     </div>
-</div>
+</div>-->
