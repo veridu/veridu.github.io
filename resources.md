@@ -482,5 +482,27 @@ title: Resources
                 </p>
             </div>
         </a>
+        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="https://drive.google.com/file/d/0B7_SzDAjNb3FZ2ZXN0ZpSFdiUms/view?ts=57ffa9da">
+            <div class="col-xs-12 col-sm-4 col-lg-5 box story-thought-leadership-3">
+                <div class="thought-leadership-line-3">
+                    <div class="newsline-2-text">
+                        <p class="light-grey light">
+                            Read White Paper<i class="material-icons">keyboard_arrow_right</i>
+                        </p>
+                    </div>
+                </div>
+                <h3 class="visible-xs visible-sm visible-md visible-lg darkblue">Stop losing to
+outdated KYC processes</h3>
+                <p class="visible-lg maxwidth-thought-leadership light thought-leaderhip-copy-big">
+                    Social KYC can help you reach more new users safely and cost-effectively.
+                </p>
+                <p class="hidden-sm hidden-lg maxwidth-thought-leadership light thought-leaderhip-copy">
+                    Social KYC can help you reach more new users safely and cost-effectively.
+                </p>
+                <p class="visible-sm maxwidth-thought-leadership light thought-leaderhip-copy-small padding-thought-leadership">
+                    Social KYC can help you reach more new users safely and cost-effectively.
+                </p>
+            </div>
+        </a>
     </div>
 </div>
