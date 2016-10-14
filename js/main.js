@@ -147,6 +147,18 @@ $(document).ready(function(){
             }, 100);
         },
     });
+        $(".story-thought-leadership-3").on({
+        mouseenter: function(){
+            $(".thought-leadership-line-3").animate({
+                height: '40px'
+            }, 100);
+        },
+        mouseleave: function(){
+            $(".thought-leadership-line-3").animate({
+                height: '2px'
+            }, 100);
+        },
+    });
 
 
     $(".iam-video-hover").on({
