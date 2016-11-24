@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 18</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="End-user-microsite" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Front-Page-Copy-4" transform="translate(-788.000000, -515.000000)">
+            <g id="Group-18" transform="translate(789.000000, 516.000000)">
+                <ellipse id="Oval-Copy-3" stroke="#1761AA" fill="#F1F1F1" cx="16" cy="16" rx="16" ry="16"></ellipse>
+                <g id="Group-11" transform="translate(5.000000, 5.000000)">
+                    <circle id="Oval-2-Copy-4" fill="#164591" cx="11.5" cy="10.5" r="2.5"></circle>
+                    <ellipse id="Oval-3" stroke="#164591" opacity="0.300000012" transform="translate(11.000000, 10.500000) rotate(-315.000000) translate(-11.000000, -10.500000) " cx="11" cy="10.5" rx="10" ry="4.5"></ellipse>
+                    <ellipse id="Oval-3" stroke="#164591" opacity="0.300000012" transform="translate(11.000000, 10.500000) rotate(-45.000000) translate(-11.000000, -10.500000) " cx="11" cy="10.5" rx="10" ry="4.5"></ellipse>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="87px" height="78px" viewBox="0 0 87 78" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>popupwidget</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="4.54747351e-13" y="-2.27373675e-13" width="86.9386014" height="77.5469486" rx="5"></rect>
+    </defs>
+    <g id="End-user-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Front-Page-Copy-5" transform="translate(-685.000000, -1381.000000)">
+            <g id="popupwidget" transform="translate(685.000000, 1381.000000)">
+                <g id="Group-130">
+                    <g id="Page-1">
+                        <g id="Group-130">
+                            <g id="Group-128">
+                                <g id="Group-27-Copy" transform="translate(43.500000, 39.000000) rotate(180.000000) translate(-43.500000, -39.000000) ">
+                                    <g id="Rectangle-10-Clipped">
+                                        <mask id="mask-2" fill="white">
+                                            <use xlink:href="#path-1"></use>
+                                        </mask>
+                                        <g id="path-1"></g>
+                                        <g id="Rectangle-10" mask="url(#mask-2)" stroke="#000000" stroke-width="2" fill="#FFFFFF">
+                                            <rect id="path-1" x="4.54747351e-13" y="-2.27373675e-13" width="86.9386014" height="77.5469486" rx="5"></rect>
+                                        </g>
+                                    </g>
+                                </g>
+                                <path d="M9.80408208,20.0380434 L77.3773259,20.0380434" id="Line" stroke="#000000"></path>
+                                <path d="M8.92110874,59.5380436 L25.6963253,59.5380436" id="Line-Copy-7" stroke="#000000"></path>
+                                <path d="M8.92110874,65.8580436 L40.6428571,65.8580434" id="Line-Copy-8" stroke="#000000"></path>
+                                <g id="Group-127" transform="translate(8.428571, 32.180000)" fill="#FFFFFF" stroke="#164591">
+                                    <g id="Group-51">
+                                        <ellipse id="Oval-2-Copy" cx="43.6217852" cy="7.08125387" rx="7.10814152" ry="7.08125387"></ellipse>
+                                        <ellipse id="Oval-2-Copy-4" cx="61.4901639" cy="7.08125387" rx="7.10814152" ry="7.08125387"></ellipse>
+                                        <ellipse id="Oval-2-Copy" cx="7.76886035" cy="7.08125387" rx="7.10814152" ry="7.08125387"></ellipse>
+                                        <ellipse id="Oval-2-Copy-5" cx="25.7534064" cy="7.08125387" rx="7.10814152" ry="7.08125387"></ellipse>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

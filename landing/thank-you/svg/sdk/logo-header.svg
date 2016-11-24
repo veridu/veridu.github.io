@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="82px" height="69px" viewBox="0 0 82 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 24 Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ICONS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-24-Copy">
+            <g id="Group-26" transform="translate(8.000000, 5.000000)" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2">
+                <path d="M39,53 L1,20" id="Line-Copy-81"></path>
+                <polyline id="Line-Copy-81" points="6 62.9836066 4.75985407 52.3224176 1 20"></polyline>
+                <path d="M35,1 L1,20" id="Line-Copy-81"></path>
+                <path d="M39,53 L6.125,62.9672131" id="Line-Copy-81"></path>
+                <path d="M54.5,63 L6.125,62.9672131" id="Line-Copy-81"></path>
+                <path d="M54.5,63 L39,53" id="Line-Copy-81"></path>
+                <path d="M35,1 L39,53" id="Line-Copy-81"></path>
+                <path d="M66.9583333,18.0819672 L35,1" id="Line-Copy-81"></path>
+                <path d="M66.9583333,18.0819672 L39,53" id="Line-Copy-81"></path>
+                <path d="M55.5486262,18.0819672 L67.5069595,63" id="Line-Copy-81" transform="translate(61.253480, 40.581967) scale(-1, 1) translate(-61.253480, -40.581967) "></path>
+                <path d="M6,63 L22,25" id="Line"></path>
+                <path d="M1,20 L22,25" id="Line"></path>
+                <path d="M67,18 L22,25" id="Line"></path>
+                <path d="M35,1 L22,25" id="Line"></path>
+            </g>
+            <g id="Group-21" opacity="0.49852808" transform="translate(8.000000, 5.000000)" fill="#FFFFFF">
+                <ellipse id="Oval-Copy-2" cx="11.9917856" cy="48.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-17" cx="35.9917856" cy="14.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-12" cx="0.991785554" cy="19.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-3" cx="54.9917856" cy="62.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-16" cx="56.9917856" cy="29.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-19" cx="2.99178555" cy="38.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-6" cx="58.9917856" cy="47.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-7" cx="5.99178555" cy="62.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-14" cx="38.9917856" cy="52.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-10" cx="66.9917856" cy="17.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-15" cx="34.9917856" cy="0.983704963" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-11" cx="21.9917856" cy="24.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+                <ellipse id="Oval-Copy-18" cx="37.9917856" cy="37.983705" rx="0.991785554" ry="0.983704963"></ellipse>
+            </g>
+            <g id="Group-31" font-size="3" font-family="HelveticaNeue-Bold, Helvetica Neue" letter-spacing="0.0700000003" fill="#FFFFFF" font-weight="bold">
+                <text id="Submitted-data">
+                    <tspan x="35" y="40">Submitted dat</tspan>
+                    <tspan x="56.073" y="40">a</tspan>
+                </text>
+                <text id="Contact-list">
+                    <tspan x="0.394999998" y="22">Contact lis</tspan>
+                    <tspan x="16.549" y="22">t</tspan>
+                </text>
+                <text id="Malware-detection">
+                    <tspan x="53.6665" y="50">Malware detectio</tspan>
+                    <tspan x="79.5545" y="50">n</tspan>
+                </text>
+                <text id="Call-log">
+                    <tspan x="9" y="65">Call lo</tspan>
+                    <tspan x="18.424" y="65">g</tspan>
+                </text>
+                <text id="User-behaviour">
+                    <tspan x="53" y="32">User behaviou</tspan>
+                    <tspan x="74.469" y="32">r</tspan>
+                </text>
+                <text id="Photos-Copy">
+                    <tspan x="6" y="41">Photo</tspan>
+                    <tspan x="14.852" y="41">s</tspan>
+                </text>
+                <text id="Installed-apps">
+                    <tspan x="11" y="51">Installed app</tspan>
+                    <tspan x="30.288" y="51">s</tspan>
+                </text>
+                <text id="IP-Address">
+                    <tspan x="37" y="3">IP Addres</tspan>
+                    <tspan x="51.517" y="3">s</tspan>
+                </text>
+                <text id="Emails">
+                    <tspan x="42" y="56">Emails</tspan>
+                </text>
+                <text id="Rooted-Phone-Detecti">
+                    <tspan x="26" y="17">Rooted Phone Detectio</tspan>
+                    <tspan x="60.803" y="17">n</tspan>
+                </text>
+                <text id="SMS">
+                    <tspan x="72.1225" y="21">SM</tspan>
+                    <tspan x="76.9305" y="21">S</tspan>
+                </text>
+                <text id="Account-info">
+                    <tspan x="20.0325" y="27">Account inf</tspan>
+                    <tspan x="37.1345" y="27">o</tspan>
+                </text>
+                <text id="Metadata">
+                    <tspan x="55.978" y="65">Metadat</tspan>
+                    <tspan x="68.3" y="65">a</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

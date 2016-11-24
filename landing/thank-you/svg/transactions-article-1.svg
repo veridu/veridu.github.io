@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="100px" height="54px" viewBox="0 0 100 54" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 50</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="8.52651283e-14" y="-1.13686838e-13" width="25.3190005" height="17.1415322" rx="2"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="25.3190005" height="17.1415322" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-50" transform="translate(0.000000, -1.000000)">
+            <path d="M1.58405342,35.5504199 L74.8472113,35.5504199" id="Line" stroke="#164591" stroke-linecap="square" opacity="0.3"></path>
+            <path d="M1.58373609,48.5504199 L85.5653666,48.5504199" id="Line-Copy-10" stroke="#164591" stroke-linecap="square" opacity="0.3"></path>
+            <path d="M1.35912267,22.4494861 L35.2596326,22.4494861" id="Line-Copy-11" stroke="#D0011B" stroke-linecap="square"></path>
+            <path d="M1.46728376,7.55041989 L87.0577376,7.55041989" id="Line-Copy-12" stroke="#164591" stroke-linecap="square" opacity="0.3"></path>
+            <text id="$" opacity="0.3" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12" font-weight="400" letter-spacing="1.17000008" fill="#164591">
+                <tspan x="92.7506418" y="12">$</tspan>
+            </text>
+            <text id="$-copy" opacity="0.3" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12" font-weight="400" letter-spacing="1.17000008" fill="#164591">
+                <tspan x="80.7506418" y="41">$</tspan>
+            </text>
+            <text id="$-copy-2" opacity="0.3" font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12" font-weight="400" letter-spacing="1.17000008" fill="#164591">
+                <tspan x="91.7506418" y="53">$</tspan>
+            </text>
+            <g id="Group-47" transform="translate(43.955224, 2.627700)">
+                <g id="Group-46" transform="translate(0.000000, 9.922003)" stroke="#D0011B">
+                    <use id="Rectangle-10" mask="url(#mask-2)" stroke-width="2" fill="#FFFFFF" transform="translate(12.659500, 8.570766) rotate(-180.000000) translate(-12.659500, -8.570766) " xlink:href="#path-1"></use>
+                    <path d="M1.6486537,11.57567 L23.9207392,11.57567" id="Line" stroke-linecap="square"></path>
+                </g>
+                <g id="Group-45" transform="translate(18.135191, 0.000000)">
+                    <g id="Group-5">
+                        <ellipse id="Oval-2-Copy" stroke="#EB393B" fill="#FFFFFF" cx="8.24326849" cy="8.23396246" rx="8.24326849" ry="8.23396246"></ellipse>
+                        <g id="ic_flag_black_24px" transform="translate(3.212258, 2.762674)">
+                            <g id="Group">
+                                <polygon id="Shape" points="0 0 10.7469163 0 10.7469163 10.779597 0 10.779597"></polygon>
+                                <polygon id="Shape" fill="#EB393B" points="6.44814981 2.69489926 6.26903454 1.7965995 2.23894091 1.7965995 2.23894091 9.4321474 3.13451727 9.4321474 3.13451727 6.28809827 5.64213108 6.28809827 5.82124636 7.18639802 8.95576362 7.18639802 8.95576362 2.69489926"></polygon>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

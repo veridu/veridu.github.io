@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="73px" height="73px" viewBox="0 0 73 73" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="End-user-page" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Front-Page-Copy-5" transform="translate(-300.000000, -1029.000000)" stroke="#164591">
+            <g id="Group-10" transform="translate(301.000000, 1029.000000)">
+                <g id="Group-7">
+                    <ellipse id="Oval" fill="#164591" cx="68.9166667" cy="25.0328853" rx="2" ry="1.98370496"></ellipse>
+                    <ellipse id="Oval-Copy-4" fill="#164591" cx="41" cy="54.983705" rx="2" ry="1.98370496"></ellipse>
+                    <ellipse id="Oval-Copy-5" fill="#164591" cx="8.08333333" cy="69.9181312" rx="2" ry="1.98370496"></ellipse>
+                    <ellipse id="Oval-Copy" fill="#164591" cx="37.6179167" cy="2.50130059" rx="2" ry="1.98370496"></ellipse>
+                    <ellipse id="Oval" fill="#164591" cx="2.42583333" cy="27.0090602" rx="2" ry="1.98370496"></ellipse>
+                    <g id="Group-Copy" transform="translate(11.000000, 17.000000)">
+                        <g id="Group-13" transform="translate(0.171140, 0.890192)">
+                            <ellipse id="Oval-6-Copy-191" cx="23.8948055" cy="23.2033619" rx="23.475881" ry="23.2033619"></ellipse>
+                        </g>
+                    </g>
+                    <path d="M40.975,55.4098361 L3.25833333,27.5081967" id="Line-Copy-81" stroke-linecap="square" opacity="0.3"></path>
+                    <path d="M6.90833333,71.1803279 L3.25833333,27.5081967" id="Line-Copy-81" stroke-linecap="square" opacity="0.3"></path>
+                    <path d="M37.325,2.03278689 L3.25833333,27.5081967" id="Line-Copy-81" stroke-linecap="square" opacity="0.3"></path>
+                    <path d="M40.975,55.4098361 L8.125,69.9672131" id="Line-Copy-81" stroke-linecap="square" opacity="0.3"></path>
+                    <path d="M40.975,55.4098361 L37.325,2.03278689" id="Line-Copy-81" stroke-linecap="square" opacity="0.3"></path>
+                    <path d="M68.9583333,25.0819672 L37.325,2.03278689" id="Line-Copy-81" stroke-linecap="square" opacity="0.3"></path>
+                    <path d="M68.9583333,25.0819672 L40.975,55.4098361" id="Line-Copy-81" stroke-linecap="square" opacity="0.3"></path>
+                </g>
+                <path d="M8.5,68.5 L17.5,56.5" id="Line" stroke-linecap="square" opacity="0.3"></path>
+                <path d="M3.5,27.5 L13.5,30.5" id="Line" stroke-linecap="square" opacity="0.3"></path>
+                <path d="M69.5,24.5 L54.5,28.5" id="Line" stroke-linecap="square" opacity="0.3"></path>
+                <path d="M37.5,2.5 L34.5,17.5" id="Line" stroke-linecap="square" opacity="0.3"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="134px" height="62px" viewBox="0 0 134 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41 (35326) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 32</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ICONS" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-32">
+            <path d="M93,37.6341463 L45,29.7073171" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <polyline id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2" transform="translate(50.500000, 48.718713) scale(1, -1) translate(-50.500000, -48.718713) " points="66 51.902439 58.3110952 50.3231248 35 45.534986"></polyline>
+            <path d="M29,15.4390244 L11.875,32.930028" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M35,51.902439 L11.875,32.930028" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M29,15.4390244 L35,51.902439" id="Path" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M93,37.6341463 L66.125,45.5089964" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M77,61.4146341 L93,37.6341463" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M77,61.4146341 L66.0164289,45.5609756" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M98.1,61.4146341 L77,59.7256219" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2" transform="translate(87.550000, 60.570128) scale(-1, 1) translate(-87.550000, -60.570128) "></path>
+            <path d="M114.5,45.5609756 L93,37.6341463" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M114.5,45.5609756 L119,21.7804878" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M93,37.6341463 L98,59.8292683" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M114.5,45.5609756 L98,59.8292683" id="Path" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M93,37.6341463 L63,7.51219512" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M93,12.2682927 L93,37.6341463" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M115,12.2682927 L93,45.5609756" id="Line-Copy-81" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2" transform="translate(104.000000, 28.914634) scale(-1, 1) translate(-104.000000, -28.914634) "></path>
+            <path d="M66,45.5609756 L63,7.51219512" id="Line" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M63,6.732507 L45,28.1219512" id="Line" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M78,26.5365854 L35,51.902439" id="Line" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <path d="M44.5,29.7073171 L29,15.4390244" id="Line" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+            <ellipse id="Oval-Copy-2" fill="#FFFFFF" cx="45" cy="29.1219512" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-17" fill="#FFFFFF" cx="35" cy="51.3170732" rx="1" ry="1"></ellipse>
+            <circle id="Oval-Copy-12" fill="#FFFFFF" cx="78" cy="26.9512195" r="1"></circle>
+            <ellipse id="Oval-Copy-3" fill="#FFFFFF" cx="115" cy="44.9756098" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-16" fill="#FFFFFF" cx="12" cy="32.2926829" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-19" fill="#FFFFFF" cx="63" cy="6.92682927" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-6" fill="#FFFFFF" cx="119" cy="21.195122" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-7" fill="#FFFFFF" cx="66" cy="44.9756098" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-14" fill="#FFFFFF" cx="93" cy="37.0487805" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-10" fill="#FFFFFF" cx="98" cy="59.2439024" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-15" fill="#FFFFFF" cx="29" cy="14.8536585" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-11" fill="#FFFFFF" cx="93" cy="11.6829268" rx="1" ry="1"></ellipse>
+            <ellipse id="Oval-Copy-18" fill="#FFFFFF" cx="77" cy="61" rx="1" ry="1"></ellipse>
+            <text id="Submitted-data" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="66" y="56.902439">Submitted dat</tspan>
+                <tspan x="87.073" y="56.902439">a</tspan>
+            </text>
+            <text id="Contact-list" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="69.395" y="22.0243902">Contact lis</tspan>
+                <tspan x="85.549" y="22.0243902">t</tspan>
+            </text>
+            <text id="Malware-detection" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="105.6665" y="17.2682927">Malware detectio</tspan>
+                <tspan x="131.5545" y="17.2682927">n</tspan>
+            </text>
+            <text id="Call-log" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="61" y="41.0487805">Call lo</tspan>
+                <tspan x="70.424" y="41.0487805">g</tspan>
+            </text>
+            <text id="User-behaviour" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="0" y="28.3658537">User behaviou</tspan>
+                <tspan x="21.469" y="28.3658537">r</tspan>
+            </text>
+            <text id="Photos-Copy" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="58" y="3">Photo</tspan>
+                <tspan x="66.852" y="3">s</tspan>
+            </text>
+            <text id="Installed-apps" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="36" y="25.195122">Installed app</tspan>
+                <tspan x="55.288" y="25.195122">s</tspan>
+            </text>
+            <text id="IP-Address" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="23" y="10.9268293">IP Addres</tspan>
+                <tspan x="37.517" y="10.9268293">s</tspan>
+            </text>
+            <text id="Emails" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="88" y="34.7073171">Emails</tspan>
+            </text>
+            <text id="Rooted-Phone-Detecti" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="17" y="47.3902439">Rooted Phone Detectio</tspan>
+                <tspan x="51.803" y="47.3902439">n</tspan>
+            </text>
+            <text id="SMS" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="95.1225" y="56.902439">SM</tspan>
+                <tspan x="99.9305" y="56.902439">S</tspan>
+            </text>
+            <text id="Account-info" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="83.0325" y="7.75609756">Account inf</tspan>
+                <tspan x="100.1345" y="7.75609756">o</tspan>
+            </text>
+            <text id="Metadata" font-family="HelveticaNeue-Bold, Helvetica Neue" font-size="3" font-weight="bold" letter-spacing="0.0700000003" fill="#FFFFFF">
+                <tspan x="107.978" y="41.0487805">Metadat</tspan>
+                <tspan x="120.3" y="41.0487805">a</tspan>
+            </text>
+            <path d="M78,26.5365854 L118,21.7804878" id="Path" stroke="#FFFFFF" stroke-width="0.5" stroke-linecap="square" opacity="0.2"></path>
+        </g>
+    </g>
+</svg>
