@@ -19,7 +19,7 @@ title: Verified transactions
                     <div class="divider-header-2"></div>
                     <div>
                         <span class="button-width">
-                            <a target="blank" class="secondary-negative-button" href="http://www.demo.veridu.com/payments/">Try the demo</a>
+                            <a target="blank" class="secondary-negative-button" href="http://demo.veridu.com/payments/">Try the demo</a>
                         </span>
                         <a target="blank" class="secondary-negative-button hidden-xs" href="./pdf/Transactions.pdf">Download as PDF</a>
                     </div>
