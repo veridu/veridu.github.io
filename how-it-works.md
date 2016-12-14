@@ -61,7 +61,7 @@ title: How it works?
                 When training our machine learning models with sample data we go through a five-step process:
             </p>
             <h3>
-                1. Data scraping
+                1. Data gathering
             </h3>
             <p class="light">
                 When a user verifies their identity with Veridu, they are asked to sign in to one or more of their social or online accounts and to grant us permission to access the data contained within these. We instantly gather this data using APIs. 
@@ -76,7 +76,7 @@ title: How it works?
                 2. Data cleansing
             </h3>
             <p class="light">
-                Following the data scraping step we're left with a mass of raw, unstructured data that we need to make sense of. We do this by cleansing the data and structuring it into a standard format, turning the raw data into facts like 'first name', 'last name', 'gender', 'location', and 'age'.  
+                Following the data gathering step we're left with a mass of raw, unstructured data that we need to make sense of. We do this by cleansing the data and structuring it into a standard format, turning the raw data into facts like 'first name', 'last name', 'gender', 'location', and 'age'.  
             </p>
             <p class="light">
                 When it comes to machine learning, if you put rubbish in you'll get rubbish out, and this step ensures we never get into that situation. By identifying and marking any missing facts (for example, perhaps none of the accounts used by a user to verify themselves contained a date of birth), we train our models using only the highest quality data.
