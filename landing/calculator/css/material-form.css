@@ -1,0 +1,149 @@
+/* form starting stylings ------------------------------- */
+.newsletter-box{
+  margin: 0 auto;
+}
+.box-newsletter{
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+.box-newsletter2{
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+.group            { 
+  position:relative; 
+  margin-bottom:0px; 
+}
+input               {
+  font-size:2.0em;
+  padding:0px 0px 0px 0px;
+  display:block;
+  background-color: transparent;
+  min-width:60px;
+  max-width: 180px;
+  border:none;
+  border-bottom:1px solid #999;
+}
+input:focus         { outline:none; }
+
+input[type=submit] {
+    font-size: 1em;
+    color: #1a5aa2;
+    width: auto;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding-top: 0.5em;
+    padding-bottom: 0.4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 3px;
+    border: solid 1px #999;
+}
+input[type=submit]:hover {
+    color: #1a5aa2;
+    width: auto;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding-top: 0.5em;
+    padding-bottom: 0.4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 3px;
+    border: solid 1px #999;
+    background-color: #eee;
+}
+input[type=submit]:active {
+    color: #1a5aa2;
+    width: auto;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding-top: 0.5em;
+    padding-bottom: 0.4em;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 3px;
+    border: solid 1px #999;
+    background-color: #999;
+}
+
+/* LABEL ======================================= */
+label                {
+  color:#1a5aa2;
+  text-align: left;
+  font-size:1.1em;
+  font-weight: 200;
+  position:absolute;
+  pointer-events:none;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label        {
+  top:-10px;
+  font-weight: 300;
+  font-size:0.8em;
+  color:#164591;
+}
+
+/* BOTTOM BARS ================================= */
+.bar    { position:relative; display:block; width:300px; }
+.bar:before, .bar:after     {
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:0px; 
+  position:absolute;
+  background:#164591; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left: 0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+  to    { width:0; background:transparent; }
+}

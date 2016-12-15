@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Veridu Calculator</title>
+		<link rel="stylesheet" type="text/css" href="./MyFontsWebfontsKit/MyFontsWebfontsKit.css">
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- JQUERY -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="./js/hover.js"></script>
+		<!-- CUSTOM CSS -->
+		<link href="./css/bootstrap.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="./css/veridu.css">
+		<link rel="stylesheet" type="text/css" href="./css/material-form.css">
+		<!-- GOOGLE ICONS -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!--ANIMATE-->
+		<link href="./css/animate.css" rel="stylesheet">
+		<script src="./js/wow.min.js"></script>
+        <script>new WOW().init();</script>
+        <!--Swipebox - lightbox-->
+		<link rel="stylesheet" href="./css/swipebox.css">
+		<!--META TAGS-->
+		<meta name="google-site-verification" content="1hn8YEzXdXAe5VA1C-Iit73ufx9tME3vul_dVJGEDAg"/>
+		<meta name="msapplication-TileColor" content="#00ADEE"/>
+		<meta name="msapplication-TileImage" content="https://www.veridu.com/landing/survey/img/social.jpg"/>
+		<meta property="twitter:card" content="summary"/>
+		<meta property="twitter:site" content="@home"/>
+		<meta property="twitter:title" content="Veridu Calculator"/>
+		<meta property="twitter:description" content="Use this calculator to see what you’re losing to false declines, and what you could recover with Veridu."/>
+		<meta property="twitter:image" content="https://www.veridu.com/landing/survey/img/social.jpg"/>
+		<meta property="twitter:url" content="https://www.veridu.com/landing/survey/img/social.jpg"/>
+		<meta property="search:species" content="Home"/>
+		<meta property="search:publisher" content="www.veridu.com"/>
+		<meta property="search:image" content="https://www.veridu.com/landing/survey/img/social.jpg"/>
+		<meta itemprop="name" content="Veridu.com" />
+		<meta itemprop="url" content="https://www.veridu.com/landing/survey/" />
+		<meta itemprop="image" content="https://www.veridu.com/landing/survey/img/social.jpg" />
+		<meta itemprop="description" content="Use this calculator to see what you’re losing to false declines, and what you could recover with Veridu." />
+		<link rel="canonical" href="https://veridu.com/landing/survey/" />
+		<meta property="fb:app_id" content="297776250288899" />
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.veridu.com/landing/survey/" />
+		<meta property="og:description" content="Use this calculator to see what you’re losing to false declines, and what you could recover with Veridu." />
+		<meta property="og:title" content="Mobile Apps in 2017" />
+		<meta property="og:locale" content="en_GB" />
+		<meta property="og:site_name" content="Veridu.com" />
+		<meta property="og:image" content="https://www.veridu.com/landing/survey/img/social.jpg" />
+	</head>
+
+	<body>
+		<div class="container-fluid" ng-app="app" ng-controller="AppController as App" ng-show="App.loaded">
+			<div class="container-flex">
+				<div class="box item-flex stretch-big id-bg">
+					<div class="box-padding max-width-header-box">
+						<img class="logo-white" src="./svg/Logo.white.svg">	
+						<div class="divider"></div>
+						<h1 class="hidden-xs hidden-sm visible-md visible-lg thin white">
+							What are you losing to false declines?
+						</h1>
+						<h2 class="visible-xs visible-sm thin white">
+							What are you losing to false declines?
+						</h2>
+						<br>
+						<p class="visible-xs visible-sm visible-md visible-lg white">
+							Recent research shows that up to 52% of declined transactions are false positives.
+						</p>
+						<p class="visible-xs visible-sm visible-md visible-lg white">
+							Use this calculator to see what you’re losing to false declines, and what you could recover with Veridu.
+						</p>
+					</div>
+				</div>
+				<div class="item-flex white-bg box stretch-biggest">
+					<div class="box-padding">
+						<h3 class="darkblue">
+						Please provide us with some data
+						</h3>
+						<div class="divider"></div>
+						<form name="transactionForm" action="">
+							<p>No. monthly transactions:</p>
+							<input type="text" name="numMonthlyTransactions" ui-number-mask="0" ng-model="App.numMonthlyTransactions" onClick="this.setSelectionRange(0, this.value.length)" placeholder="{{ monthlyPlaceholder }}">
+							<br>
+							<p>Average transaction value (£):</p>
+							<input type="text" name="averageTransactionValue" ng-model="App.averageTransactionValue" onClick="this.setSelectionRange(0, this.value.length)" ui-money-mask="0" currency-symbol="£" placeholder="{{ averagePlaceholder }}">
+							<br>
+							<p>% of transactions declined:</p>
+							<input type="text" max="1.0" ng-model="App.percentageDeclined" ui-percentage-mask="1" onClick="this.setSelectionRange(0, this.value.length)" placeholder="{{ percentagePlaceholder }}">
+							<br>
+							<p>Potential monthly value of false declines:</p>
+							<input style="border:0" ng-style="{'color' : transactionForm.$dirty ? '' : '#a7a7a7'}" class="ng-invalid" type="text" value="{{App.potentialMonthlyLoss() | currency: '£ ' : 0 }}" placeholder="{{ monthlyLossPlaceholder }}" readonly>
+						</form> 
+					</div>
+				</div>
+				<div class="item-flex white-bg box stretch-bigger">
+					<div class="box-padding">
+						<img class="logo-white" src="./svg/data.svg" style="height: 80px;">	
+						<h3 class="darkblue">
+							What you could recover with Veridu:
+						</h3>
+						<div style="font-weight: 600; font-size: 2em; color: #1a5aa2;">
+							<span>
+								£ {{ App.potentialYearlyLoss() | currency: '' : 0}}<span class="label-number">/ year</span></span>
+						</div>
+						<br>
+						<p>
+							Can you afford not to get in touch?<br>
+							Please provide your email and we’ll<br> be in touch to schedule a demo.
+						</p>
+					<form action="">
+						<h3 ng-show="App.sent">
+							<!-- Carl edit here -->
+							Thank you! We'll be in touch soon.
+						</h3>
+						<input ng-show="! App.sent" type="text" name="email" ng-model="App.email" placeholder="your@email.com" onClick="this.setSelectionRange(0, this.value.length)" style="font-size: 1.1em; color: #666; line-height: 40px;">
+						<br>
+						<button ng-show="! App.sent" type="button" ng-click="App.addToDrip()" class="button">Schedule a demo</button>
+					</form> 
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row"><br><br>
+				<div class="col-xs-6 col-sm-4 col-md-2 footer">
+					<p class="footer">
+						Solutions<br><br>
+						<a class="footer" href="./onboarding.html">Onboarding</a><br>
+						<a class="footer" href="./transactions.html">Transactions</a><br>
+						<a class="footer" href="./activity.html">Internet Life</a><br>
+					</p>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-2 footer">
+					<p class="footer">
+						Contact<br><br>
+						<a class="footer" href="http://veridu.com/contact.html">Get in Touch</a><br>
+						<a class="footer" target="_blank" href="http://www.mynewsdesk.com/uk/veridu-com">Press Room</a><br>
+						<a class="footer" href="mailto:support@veridu.com" target="_top" target="_top">Support</a><br>
+						<a class="footer" href="mailto:sales@veridu.com" target="_top" target="_top">Sales</a><br>
+						<a class="footer" href="mailto:jobs@veridu.com" target="_top" target="_top">Careers</a><br>
+					</p>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-2 footer">
+					<p class="footer">
+						Demos<br><br>
+						<a class="footer" target="_blank" href="http://demo.veridu.com/onboarding/">Onboarding</a><br>
+						<a class="footer" target="_blank" href="http://demo.veridu.com/payments/">Transactions</a><br>
+						<a class="footer" target="_blank" href="http://demo.veridu.com/popup-widget/">Pop-up Widget</a><br>
+					</p>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-2 footer">
+					<p class="footer">
+						Integration<br><br>
+						<a class="footer" target="_blank" href="https://veridu.com/wiki/Widget_Library">Getting Started</a><br>
+						<!--<a class="footer" href="https://veridu.com/wiki/Widget_Library">Widgets</a><br>
+						<a class="footer" href="https://veridu.com/wiki/Category:SDK">SDKs</a><br>
+						<a class="footer" href="https://veridu.com/wiki/Category:Endpoint">APIs</a><br>
+						<a class="footer" href="https://veridu.com/wiki/Veridu_ID_Gateway">Gateways</a><br>-->
+					</p>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-2 footer">
+					<p class="footer">
+						Legal<br><br>
+						<a class="footer" target="_blank" href="https://veridu.com/wiki/Terms_%26_Conditions">Terms & Conditions</a><br>
+						<a class="footer" target="_blank" href="https://veridu.com/wiki/Veridu:Privacy_policy">Privacy Policy</a><br>
+						<a class="footer" target="_blank" href="https://veridu.com/wiki/Service_Level_Agreement">Service Level Agreement</a><br>
+						<a class="footer" target="_blank" href="https://veridu.com/wiki/Security_Procedures">Security Procedures</a><br>
+					</p>
+				</div>
+				<div class="col-xs-6 col-sm-4 col-md-2 footer">
+					<p class="footer">
+						Follow<br><br>
+						<a class="footer" target="_blank" href="https://www.linkedin.com/company/2719895?trk=vsrp_companies_cluster_name&trkInfo=VSRPsearchId%3A264505601473850220715%2CVSRPtargetId%3A2719895%2CVSRPcmpt%3Acompanies_cluster">
+							LinkedIn
+						</a><br>
+						<a class="footer" target="_blank" href="https://medium.com/@VeriduHQ">
+							Medium
+						</a><br>
+						<a class="footer" target="_blank" href="https://www.facebook.com/VeriduHQ/?fref=ts">
+							Facebook
+						</a><br>
+						<a class="footer" target="_blank" href="https://twitter.com/VeriduHQ">
+							Twitter
+						</a><br>
+						<a class="footer" target="_blank" href="https://www.youtube.com/channel/UC71f4rr0XBjx6df2eIooM2w">
+							YouTube
+						</a><br>
+						<a class="footer" target="_blank" href=" https://angel.co/veridu">
+							AngelList
+						</a><br>
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+	<script type="text/javascript" src="./node_modules/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>
+	<script>
+		var app = angular.module('app', [
+			'ui.utils.masks'
+		]);
+		app.controller('AppController', AppController);
+
+		AppController.$inject = ['$scope'];
+		function AppController($scope) {
+			var vm = this;
+			vm.loaded = true;
+
+			// props
+			// vm.numMonthlyTransactions = 100000;
+			// vm.averageTransactionValue = 100;
+			// vm.percentageDeclined = 0.05;
+
+			$scope.monthlyPlaceholder = '100,000';
+			$scope.averagePlaceholder = '£ 100';
+			$scope.percentagePlaceholder = '5.0 %';
+			$scope.monthlyLossPlaceholder = '£ 500,000';
+
+			// functions
+			vm.potentialMonthlyLoss = potentialMonthlyLoss;
+			vm.potentialYearlyLoss = potentialYearlyLoss;
+			vm.addToDrip = addToDrip;
+
+			function potentialMonthlyLoss() {
+				return (vm.numMonthlyTransactions || 100000) * (vm.percentageDeclined || 0.05) * (vm.averageTransactionValue || 100);
+			}
+
+			function potentialYearlyLoss() {
+				if ($scope.transactionForm.$dirty) {
+					return (potentialMonthlyLoss() * 12 * 0.52);
+				}
+				return '3120000';
+			}
+			function validateEmail(email) {
+			    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+			    return re.test(email);
+			}
+
+			function addToDrip() {
+				if (! validateEmail(vm.email)) {
+					window.alert('Invalid email');
+					return;
+				}
+
+	            _dcq.push(["identify", {
+  					email: vm.email,
+  					calculator_num_monthly_transactions: vm.numMonthlyTransactions,
+  					calculator_average_transaction_value: vm.averageTransactionValue,
+  					calculator_percentage_declined: vm.percentageDeclined,
+  					calculator_potential_monthly_loss: potentialMonthlyLoss(),
+  					calculator_potential_yearly_loss: potentialYearlyLoss(),
+	                tags: [
+	                	'Calculator'
+	                ]
+	            }]);
+
+	            vm.sent = true;
+			}
+		}
+
+		// Google Analytics
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-47899661-1', 'auto');
+		ga('send', 'pageview');
+		// getDrip
+		var _dcq = _dcq || [];
+		var _dcs = _dcs || {};
+		_dcs.account = '6038086';
+		(function() {
+			var dc = document.createElement('script');
+			dc.type = 'text/javascript'; dc.async = true;
+			dc.src = '//tag.getdrip.com/6038086.js';
+			var s = document.getElementsByTagName('script')[0];
+			s.parentNode.insertBefore(dc, s);
+		})();
+	</script>
+</html>

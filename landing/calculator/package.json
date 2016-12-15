@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "angular-input-masks": "^2.5.0",
+    "v-mask": "^1.0.2"
+  }
+}
