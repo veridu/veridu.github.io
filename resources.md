@@ -461,7 +461,7 @@ title: Resources
                 </p>
             </div>
         </a>
-        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="http://oixuk.org/wp-content/uploads/2016/07/UseofonlineactivityaspartoftheidentityverificationFINAL-1.pdf">
+        <a onclick="trackOutboundLink(this); return true;" target="_blank"  href="./pdf/UseofonlineactivityaspartoftheidentityverificationFINAL-1-1.pdf">
             <div class="col-xs-12 col-sm-4 col-lg-5 box story-thought-leadership-2">
                 <div class="thought-leadership-line-2">
                     <div class="newsline-2-text">
