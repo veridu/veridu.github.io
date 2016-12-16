@@ -227,12 +227,12 @@
 			vm.addToDrip = addToDrip;
 
 			function potentialMonthlyLoss() {
-				return (vm.numMonthlyTransactions || 100000) * (vm.percentageDeclined || 0.05) * (vm.averageTransactionValue || 100);
+				return (vm.numMonthlyTransactions || 100000) * (vm.percentageDeclined || 0.05) * (vm.averageTransactionValue || 100) * 0.52;
 			}
 
 			function potentialYearlyLoss() {
 				if ($scope.transactionForm.$dirty) {
-					return (potentialMonthlyLoss() * 12 * 0.52);
+					return (potentialMonthlyLoss() * 12);
 				}
 				return '3120000';
 			}
