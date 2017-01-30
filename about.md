@@ -60,7 +60,7 @@ title: About
         <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
             <img src="./img/rasmus.jpg" class="onehoundredwidth img-box-about">
             <h3 class="about-text">RASMUS GROTH</h3>
-            <p class="light italic">Founding</p>
+            <p class="light italic">Founder</p>
             <p class="light">
                 Rasmus is a passionate innovator and full stack entrepreneur with a number of successful exits behind him. Veridu was born out of Nuffly, one of Rasmus's previous startups, that aimed to create an automatic backup of a user's social media accounts.
             </p>
