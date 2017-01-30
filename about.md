@@ -60,7 +60,7 @@ title: About
         <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
             <img src="./img/rasmus.jpg" class="onehoundredwidth img-box-about">
             <h3 class="about-text">RASMUS GROTH</h3>
-            <p class="light italic">Founding CEO</p>
+            <p class="light italic">Founding</p>
             <p class="light">
                 Rasmus is a passionate innovator and full stack entrepreneur with a number of successful exits behind him. Veridu was born out of Nuffly, one of Rasmus's previous startups, that aimed to create an automatic backup of a user's social media accounts.
             </p>
@@ -85,39 +85,6 @@ title: About
             <p class="light italic">Co-founder & CTO</p>
             <p class="light">
                 Flavio leads Veridu's technology team, based in Brazil. With experience of both working in startups and consulting for a number of large Brazilian organisations, Flavio brings a unique perspective to our product development strategy.
-            </p>
-            <br>
-            <div class="tl-line">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
-            <img src="./img/cassie.jpg" class="onehoundredwidth img-box-about">
-            <h3 class="about-text">CASSIE CRADDOCK</h3>
-            <p class="light italic">Head of Sales</p>
-            <p class="light">
-                Cassie is our payments expert, joining Veridu from MangoPay. With deep understanding of the workings of online payments, Cassie is responsible for driving our business forward with a focus on payment service providers and eCommerce.
-            </p>
-            <br>
-            <div class="tl-line">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
-            <img src="./img/ronald.jpg" class="onehoundredwidth img-box-about">
-            <h3 class="about-text">RONALD VAN SPRONSEN</h3>
-            <p class="light italic">Head of Operations</p>
-            <p class="light">
-                Ronald joined Veridu at a critical stage of the company's growth. With a wealth of project management experience gained at large enterprises, Ronald is responsible for implementing internal processes and procedures to allow Veridu to scale up as the business grows.
-            </p>
-            <br>
-            <div class="tl-line">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
-            <img src="./img/magalie.jpg" class="onehoundredwidth img-box-about">
-            <h3 class="about-text">MAGALIE PIMENTEL</h3>
-            <p class="light italic">Head of Marketing</p>
-            <p class="light">
-                Magalie is responsible for driving brand awareness and lead generation for Veridu globally. Having spent many years working for financial crime solution providers, Magalie has a deep understanding of the issues facing Veridu's customers.
             </p>
             <br>
             <div class="tl-line">
@@ -154,16 +121,6 @@ title: About
                 Alvaro has the task of keeping our technology team working to schedule - no easy feat given the pace of innovation at Veridu.
             </p>
             <br>
-            <div class="tl-line">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
-            <img src="./img/caue.jpg" class="onehoundredwidth img-box-about">
-            <h3 class="about-text">CAUE GERALDO LORENZATO</h3>
-            <p class="light italic">Software Developer</p>
-            <p class="light">
-                Caue maintains our key SDKs, and does an amazing job of making sure they're always up-to-date with the latest API features, fully documented and thoroughly tested. 
-            </p>
             <div class="tl-line">
             </div>
         </div>
