@@ -124,17 +124,6 @@ title: About
             </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
-            <img src="./img/carl.jpg" class="onehoundredwidth img-box-about">
-            <h3 class="about-text">CARL EJLERS</h3>
-            <p class="light italic">Head of Creative</p>
-            <p class="light">
-                Carl is passionate about design. He joined Veridu having spent time working in advertising agencies around the world and brings vast knowledge of how to design for the ultimate customer experience.
-            </p>
-            <br>
-            <div class="tl-line">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
             <img src="./img/cassio.jpg" class="onehoundredwidth img-box-about">
             <h3 class="about-text">CASSIO PEREIRA</h3>
             <p class="light italic">Head of Data Science</p>
