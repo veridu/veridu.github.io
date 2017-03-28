@@ -259,8 +259,9 @@ description: Speak to us about Veridu for your business
                     <p class="light">
                         Veridu LTD<br>
                         Co. No. 8885008<br>
-                        9th floor, 107 Cheapside<br>
-                        London, EC2V 6DN<br>
+                        2nd Floor, Block A Stapleton House<br>
+                        110 Clifton Street<br>
+                        London, EC2A 4HT<br>
                         United Kingdom
                     </p>
                     <br>
