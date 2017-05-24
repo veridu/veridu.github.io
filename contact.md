@@ -19,18 +19,14 @@ description: Speak to us about Veridu for your business
                 <noscript>
                     <a href="https://podio.com/webforms/18343416/1233331" target="_blank">Please fill out the form</a>
                 </noscript>
-                <div class="podio-webform-container">
-                    Get your <a href="https://podio.com" class="podio-webform-inner" rel="nofollow">free webform</a> with Podio
-                </div>
+                <div class="podio-webform-container"></div>
                 <br>
             </div>
             <div class="newsletter-box-contact-big hidden-xs">
                 <noscript>
                     <a href="https://podio.com/webforms/18343416/1233331" target="_blank">Please fill out the form</a>
                 </noscript>
-                <div class="podio-webform-container">
-                    Get your <a href="https://podio.com" class="podio-webform-inner" rel="nofollow">free webform</a> with Podio
-                </div>
+                <div class="podio-webform-container"></div>
             </div>
         </div>
     </div>
