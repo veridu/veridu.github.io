@@ -19,14 +19,22 @@ description: Speak to us about Veridu for your business
                 <noscript>
                     <a href="https://podio.com/webforms/18343416/1233331" target="_blank">Please fill out the form</a>
                 </noscript>
-                <div class="podio-webform-container"></div>
+                <div class="podio-webform-container">
+                    <script type="text/javascript">
+                        _podioWebForm.render("1233331")
+                    </script>
+                </div>
                 <br>
             </div>
             <div class="newsletter-box-contact-big hidden-xs">
                 <noscript>
                     <a href="https://podio.com/webforms/18343416/1233331" target="_blank">Please fill out the form</a>
                 </noscript>
-                <div class="podio-webform-container"></div>
+                <div class="podio-webform-container">
+                    <script type="text/javascript">
+                        _podioWebForm.render("1233331")
+                    </script>
+                </div>
             </div>
         </div>
     </div>
@@ -72,30 +80,6 @@ description: Speak to us about Veridu for your business
                         <a href="mailto:name@email.com">marketing@veridu.com</a>
                     </p>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container-fluid divider">
-    <div class="row">
-        <div class="col-xs-12 col-sm-12 col-lg-12 box box-newsletter2 wow animate fadeIn">
-            <div class="tl-line">
-            </div>
-            <h2 class="center thin">Subscribe to newsletter</h2>
-            <div class="divider-header-3"></div>
-            <div class="newsletter-box">
-                <form action="https://www.getdrip.com/forms/8939167/submissions" id="fixed-contact-form" method="post" data-drip-embedded-form="8939167" target="_blank">
-                    <div class="group">      
-                        <input type="text" class="" required>
-                        <span class="highlight"></span>
-                        <span class="bar"></span>
-                        <label>Provide your email to get monthly updates...</label>
-                    </div>
-                    <br>
-                    <input type="submit" name="Submit" value="Subscribe" class="secondary-button send-button-maxwidth center">
-                    <br class="visible-xs">
-                </form>
             </div>
         </div>
     </div>
@@ -168,6 +152,3 @@ description: Speak to us about Veridu for your business
     </div>
 </div>
 <script src="https://podio.com/webforms/18343416/1233331.js"></script>
-<script type="text/javascript">
-    _podioWebForm.render("1233331")
-</script>
