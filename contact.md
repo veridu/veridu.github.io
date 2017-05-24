@@ -3,6 +3,7 @@ layout: page
 title: Contact
 description: Speak to us about Veridu for your business
 ---
+<script src="https://podio.com/webforms/18343416/1233331.js"></script>
 <div class="container-fluid">
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-lg-12 box box-newsletter2 wow animate fadeIn bridge">
@@ -151,4 +152,3 @@ description: Speak to us about Veridu for your business
         </div>
     </div>
 </div>
-<script src="https://podio.com/webforms/18343416/1233331.js"></script>
