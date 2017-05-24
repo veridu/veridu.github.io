@@ -16,7 +16,7 @@ description: Speak to us about Veridu for your business
                 Speak to us about Veridu for your business
             </p>
             <div class="divider-header-3"></div>
-            <div class="newsletter-box-contact-small visible-xs">
+            <div class="container">
                 <noscript>
                     <a href="https://podio.com/webforms/18343416/1233331" target="_blank">Please fill out the form</a>
                 </noscript>
@@ -26,16 +26,6 @@ description: Speak to us about Veridu for your business
                     </script>
                 </div>
                 <br>
-            </div>
-            <div class="newsletter-box-contact-big hidden-xs">
-                <noscript>
-                    <a href="https://podio.com/webforms/18343416/1233331" target="_blank">Please fill out the form</a>
-                </noscript>
-                <div class="podio-webform-container">
-                    <script type="text/javascript">
-                        _podioWebForm.render("1233331")
-                    </script>
-                </div>
             </div>
         </div>
     </div>
