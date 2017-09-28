@@ -34,12 +34,12 @@ title: About
                     <div class="row">
                         <div class="col-xs-12 col-sm-4 col-lg-4">
                             <p class="light">
-                                Veridu was founded in 2014 by serial entrepreneur, Rasmus Groth; identity industry veteran, Ian Green; and technologist Flavio Heleno. Our mission is to bring trust to the internet with global and cost-effective digital identity solutions.
+                                Veridu was founded in 2014 by serial entrepreneur, <a href="https://www.linkedin.com/in/rasmusgroth/" target="_blank">Rasmus Groth</a>; identity industry veteran, <a href="https://www.linkedin.com/in/ian-green-29783/" target="_blank">Ian Green</a>; and technologist <a href="https://www.linkedin.com/in/flavioheleno/" target="_blank">Flavio Heleno</a>. Our mission is to bring trust to the internet with global and cost-effective digital identity solutions.
                             </p>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-lg-4">
                             <p class="light">
-                                Originally established in Copenhagen (Rasmus's home city), Veridu is now headquartered in London with a further office in Sao Carlos, Brazil, where our technical team is based.
+                                Originally established in Copenhagen (Rasmus's home city), Veridu is now headquartered in London.
                             </p>
                         </div>
                         <div class="col-xs-12 col-sm-4 col-lg-4">
@@ -63,39 +63,6 @@ title: About
             <p class="light italic">Founder</p>
             <p class="light">
                 Rasmus is a passionate innovator and full stack entrepreneur with a number of successful exits behind him. Veridu was born out of Nuffly, one of Rasmus's previous startups, that aimed to create an automatic backup of a user's social media accounts.
-            </p>
-            <br>
-            <div class="tl-line">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
-            <img src="./img/flavio.jpg" class="onehoundredwidth img-box-about">
-            <h3 class="about-text">FLAVIO HELENO</h3>
-            <p class="light italic">Co-founder & CTO</p>
-            <p class="light">
-                Flavio leads Veridu's technology team, based in Brazil. With experience of both working in startups and consulting for a number of large Brazilian organisations, Flavio brings a unique perspective to our product development strategy.
-            </p>
-            <br>
-            <div class="tl-line">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
-            <img src="./img/cassio.jpg" class="onehoundredwidth img-box-about">
-            <h3 class="about-text">CASSIO PEREIRA</h3>
-            <p class="light italic">Head of Data Science</p>
-            <p class="light">
-                Cassio is the brains behind Veridu's machine learning programme. As a mathematics wizard with a PhD in artificial intelligence, Cassio is responsible for developing and training the models we use to determine the credibility of a user's digital footprint.
-            </p>
-            <br>
-            <div class="tl-line">
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-lg-4 box-card-about white-bg wow animate fadeIn">
-            <img src="./img/alvaro.jpg" class="onehoundredwidth img-box-about">
-            <h3 class="about-text">ALVARO MELLO</h3>
-            <p class="light italic">Project Manager</p>
-            <p class="light">
-                Alvaro has the task of keeping our technology team working to schedule - no easy feat given the pace of innovation at Veridu.
             </p>
             <br>
             <div class="tl-line">
