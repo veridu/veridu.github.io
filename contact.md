@@ -78,7 +78,7 @@ description: Speak to us about Veridu for your business
 
 <div class="container-fluid divider">
     <div class="row">
-        <div class="col-xs-12 col-sm-4 col-lg-4 box box-text-contact white-bg wow animate fadeIn london contact-city">
+        <div class="col-xs-12 col-sm-6 col-lg-6 box box-text-contact white-bg wow animate fadeIn london contact-city">
             <div class="tl-line">
             </div>
             <div class="row">
@@ -99,28 +99,7 @@ description: Speak to us about Veridu for your business
                 </div>
             </div>
         </div>
-        <div class="col-xs-12 col-sm-4 col-lg-4 box box-text-contact white-bg wow animate fadeIn brazil contact-city">
-            <div class="tl-line">
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-12 col-lg-12 center">
-                    <br class="visible-xs">
-                    <img class="contact-item" src="./svg/contact/brazil.svg">
-                    <h3>Brazilian Office</h3>
-                    <p class="light">
-                        Bridge Coworking<br>
-                        Av. Dr. Carlos Botelho, 1863<br>
-                        Centro - Sao Carlos - Sao Paulo<br>
-                        13560-250 Brazil
-                    </p>
-                    <p class="light">
-                        <a target="_blank" href="https://goo.gl/maps/EPk3gXcJkW82">Google maps</a>
-                    </p>
-                    <br>
-                </div>
-            </div>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-lg-4 box box-text-contact white-bg wow animate fadeIn contact-city">
+        <div class="col-xs-12 col-sm-6 col-lg-6 box box-text-contact white-bg wow animate fadeIn contact-city">
             <div class="tl-line">
             </div>
             <div class="row">
